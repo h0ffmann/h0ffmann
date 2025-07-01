@@ -69,9 +69,9 @@
 ## 🏆 Professional Experience
 
 ### 💼 Career Highlights
-- **Wabee AI** - Founder Software Engineer 
-- **Legiti | Signifyd** - Senior Software Engineer L5 | Won "Tenacious" Award
-- **Elemeno AI** - MLOps Engineer | AI/ML Pipeline Specialist
+- **Wabee AI** - Lead Software Engineer | MLOps pipelines on k8s
+- **Legiti | Signifyd** - Senior Software/ML Engineer L5 | Won "Tenacious" Award
+- **Elemeno AI** - MLOps Engineer | ML Pipeline Specialist
 - **Broad** - Senior SWE | Digital bank overseas (YC 2021 Winter batch)
 - **IU Pay | Guiabolso** - Senior SWE | Brazil's First Instant Cross-Bank Transaction Engine
 - **Stone** - Software Engineer | Fintech Platform Development
