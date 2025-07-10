@@ -11,11 +11,11 @@
 
 **Senior Software Engineer** with **7+ years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems. Previously **Senior SWE at Signifyd** (won "Tenacious" award). 
 
-- 🔭 Currently working on **fintech solutions** and **real-time data processing systems**
+- 🔭 Currently working on **fintech solutions** and **data processing systems**
 - 🌱 Exploring **Haskell, Rust, and advanced MLOps** techniques
 - 💡 Passionate about **functional programming, clean architecture, and distributed systems**
 - 🏆 **Notable Achievement**: Worked on Brazil's first instant cross-bank transaction engine before PIX launch at IU PAY
-- 💬 Ask me about **fintech architecture, real-time fraud detection, and data engineering at scale**
+- 💬 Ask me about **fintech architecture, fraud detection, and data engineering at scale**
 - 📫 Reach me at **[hoffmann@poli.ufrj.br]** | 🔗 [LinkedIn](https://www.linkedin.com/in/mhoffmannbr/)
 
 ---
