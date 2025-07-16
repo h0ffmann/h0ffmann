@@ -68,7 +68,7 @@
 
 ### 🎯 Specializations
 - **Payment Processing**: Real-time transaction processing, fraud detection systems
-- **Machine Learning**: ML pipelines, MLOps, Databricks platform
+- **Machine Learning**: ML pipelines, MLOps, reasoning systems
 - **Data Engineering**: Large-scale ETL/ELT, real-time streaming, feature stores
 - **Cloud Architecture**: AWS-native solutions, Kubernetes orchestration, serverless computing
 
