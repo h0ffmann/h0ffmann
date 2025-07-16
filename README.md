@@ -1,5 +1,4 @@
 <h1 align="center">Hi 👋, I'm Matheus Hoffmann</h1>
-<h3 align="center">Senior Software Engineer | Fintech Specialist | ML/Data Engineer</h3>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=h0ffmann&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
@@ -9,15 +8,7 @@
 
 ## 🚀 About Me
 
-**Senior Software Engineer** with **7+ years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems. Previously **Senior SWE at Signifyd** (won "Tenacious" award). 
-
-- 🔭 Currently working on **ml** and **data processing systems**
-- 🌱 Exploring **Haskell, Rust, and advanced MLOps** techniques
-- 💡 Passionate about **functional programming, clean architecture, and distributed systems**
-- 🏆 **Notable Achievement**: Worked on Brazil's first instant cross-bank transaction engine before the PIX launch at Guiabolso
-- 📫 Reach me at **[hoffmann@poli.ufrj.br]** | 🔗 [LinkedIn](https://www.linkedin.com/in/mhoffmannbr/)
-
----
+**Senior Software/ML Engineer** with **7 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems. Previously **Senior SWE/ML at Signifyd**. 
 
 ## 🛠️ Tech Stack
 
