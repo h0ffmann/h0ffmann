@@ -8,7 +8,7 @@
 
 ## 🚀 About Me
 
-**Senior Software/ML Engineer** with **7 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems. Previously **Senior SWE/ML at Signifyd**. 
+**Senior Software/ML Engineer** with **7 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems. Previously **Senior SWE/MLE at Signifyd**. 
 
 ## 🛠️ Tech Stack
 
