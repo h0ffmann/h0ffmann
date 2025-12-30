@@ -79,10 +79,5 @@
 <img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" />
 <img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
 
-<style>
-  .strava-badge- { display: inline-block; height: 48px; }
-  .strava-badge- img { visibility: hidden; height: 48px; }
-  .strava-badge-:hover { background-position: 0 -63px; }
-  .strava-badge-follow { height: 48px; width: 48px; background: url(//badges.strava.com/echelon-sprite-48.png) no-repeat 0 0; }
-</style>
+
 <a href="https://strava.com/athletes/144282698" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-48.png" alt="Strava" /></a>
