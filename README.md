@@ -65,7 +65,7 @@ sr. swe engineer with **7 years** of experience building scalable fintech soluti
 - **elemeno AI (us - br client bvmf: AMER3)** - mlops engineer
 - **broad (uk)** - sr. software engineer with Scala
 - **guiabolso (br)** - sr. software engineer with Scala
-- **stone (br: nasdaq: STONECO)** - software engineer with Scala
+- **stone (br: nasdaq: STNE)** - software engineer with Scala
 
 
 ## certs
