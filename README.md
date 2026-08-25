@@ -4,8 +4,6 @@
   <img src="https://komarev.com/ghpvc/?username=h0ffmann&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
 </p>
 
----
-
 ## me
 
 sr. swe engineer with **8 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems
@@ -54,11 +52,8 @@ sr. swe engineer with **8 years** of experience building scalable fintech soluti
 <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white" alt="RabbitMQ" />
 </p>
 
----
+## exp-highlights
 
-## exp
-
-### highlights
 - **itv (uk)** - ml/mlops on AWS for channel audience forecasting
 - **signifyd (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis
 - **elemeno AI (us - br client bvmf: AMER3)** - mlops engineer
