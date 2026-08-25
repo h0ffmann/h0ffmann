@@ -8,7 +8,7 @@
 
 ## me
 
-**Senior Software/ML Engineer** with **7 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems. Previously **Senior SWE/MLE at Signifyd**. 
+sr. swe engineer with **7 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems
 
 ## tech stech
 
@@ -59,18 +59,14 @@
 ## exp
 
 ### highlights
-- **Wabee AI** - Lead Software Engineer | MLOps pipelines on k8s
-- **Legiti | Signifyd** - Senior Software/ML Engineer L5 | Won "Tenacious" Award
-- **Elemeno AI** - MLOps Engineer | ML Pipeline Specialist
-- **Broad** - Senior SWE | Digital bank overseas (YC 2021 Winter batch)
-- **IU Pay | Guiabolso** - Senior SWE | Brazil's First Instant Cross-Bank Transaction Engine
-- **Stone** - Software Engineer | Fintech Platform Development
+- **itv (uk)** - ml/mlops on AWS for channel audience forecasting
+- **wabee AI (us)** - mlops on k8s
+- **signifyd (us)** - ml eng. for loss forecasting & risk-analysis
+- **elemeno AI (us - br client bvmf: AMER3)** - mlops engineer
+- **broad (uk)** - sr. software engineer with Scala
+- **guiabolso (br)** - sr. software engineer with Scala
+- **stone (br: nasdaq: STONECO)** -
 
-### spec
-- **Payment Processing**: Real-time transaction processing, fraud detection systems
-- **Machine Learning**: ML pipelines, MLOps, reasoning systems
-- **Data Engineering**: Large-scale ETL/ELT, real-time streaming, feature stores
-- **Cloud Architecture**: AWS-native solutions, Kubernetes orchestration, serverless computing
 
 ## certs
 
