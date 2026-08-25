@@ -8,7 +8,7 @@
 
 ## me
 
-sr. swe engineer with **7 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems
+sr. swe engineer with **8 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems
 
 ## tech stech
 
@@ -60,11 +60,9 @@ sr. swe engineer with **7 years** of experience building scalable fintech soluti
 
 ### highlights
 - **itv (uk)** - ml/mlops on AWS for channel audience forecasting
-- **wabee AI (us)** - mlops on k8s
 - **signifyd (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis
 - **elemeno AI (us - br client bvmf: AMER3)** - mlops engineer
 - **broad (uk)** - sr. software engineer with Scala
-- **guiabolso (br)** - sr. software engineer with Scala
 - **stone (br: nasdaq: STNE)** - software engineer with Scala
 
 
