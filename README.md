@@ -8,8 +8,6 @@
 
 sr. swe engineer with **8 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems
 
-## tech stech
-
 ### core
 <p align="left">
 <img src="https://img.shields.io/badge/Scala-DC322F?style=flat-square&logo=scala&logoColor=white" alt="Scala" />
