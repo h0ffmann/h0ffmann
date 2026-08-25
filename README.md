@@ -76,4 +76,4 @@ sr. swe engineer with **8 years** of experience building scalable fintech soluti
 <img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
 
 ## misc
-<a href="https://strava.com/athletes/144282698" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-48.png" alt="Strava" /></a>
+<a href="https://strava.com/athletes/144282698" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-48.png" alt="strava (open water swimming)" /></a>
