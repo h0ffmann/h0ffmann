@@ -19,6 +19,14 @@ sr. swe engineer with **8 years** of experience building scalable fintech soluti
 <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" alt="Apache Kafka" />
 <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL" />
 <img src="https://img.shields.io/badge/Delta_Lake-00ADD8?style=flat-square&logo=databricks&logoColor=white" alt="Delta Lake" />
+<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
+</p>
+
+### 🤖 ml & orchestration
+<p align="left">
+<img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" alt="Apache Airflow" />
+<img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white" alt="MLflow" />
+<img src="https://img.shields.io/badge/Amazon_SageMaker-FF9900?style=flat-square&logo=amazonsagemaker&logoColor=white" alt="Amazon SageMaker" />
 </p>
 
 ### cloud & infra
@@ -30,6 +38,7 @@ sr. swe engineer with **8 years** of experience building scalable fintech soluti
 <img src="https://img.shields.io/badge/Amazon_EMR-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="Amazon EMR" />
 <img src="https://img.shields.io/badge/Amazon_Kinesis-FF9900?style=flat-square&logo=amazon-kinesis&logoColor=white" alt="Amazon Kinesis" />
 <img src="https://img.shields.io/badge/Amazon_Redshift-FF9900?style=flat-square&logo=amazon-redshift&logoColor=white" alt="Amazon Redshift" />
+<img src="https://img.shields.io/badge/AWS_Glue-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS Glue" />
 <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 </p>
