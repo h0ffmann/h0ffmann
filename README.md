@@ -4,7 +4,7 @@
   <img src="https://komarev.com/ghpvc/?username=h0ffmann&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
 </p>
 
-## me
+## 👋 me
 
 sr. swe engineer with **8 years** of experience building scalable solutions mainly for payment processing & fraud-fighting
 
@@ -27,7 +27,7 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 <img src="https://img.shields.io/badge/Amazon_SageMaker-FF9900?style=flat-square&logo=amazonsagemaker&logoColor=white" alt="Amazon SageMaker" />
 </p>
 
-### cloud & infra
+### ☁️ cloud & infra
 <p align="left">
 <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-web-services&logoColor=white" alt="AWS" />
 <img src="https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazon-s3&logoColor=white" alt="Amazon S3" />
@@ -59,7 +59,7 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white" alt="RabbitMQ" />
 </p>
 
-## exp-highlights
+## 💼 exp-highlights
 
 - **itv (uk)** - ml/mlops on AWS for channel audience forecasting
 - **signifyd (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis
@@ -68,12 +68,12 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 - **stone (br: nasdaq: STNE)** - software engineer with Scala
 
 
-## certs
+## 🏅 certs
 
 <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" />
 <img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" />
 <img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" />
 <img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
 
-## misc
+## 🏊 misc
 <a href="https://strava.com/athletes/144282698" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-48.png" alt="strava (open water swimming)" /></a>
