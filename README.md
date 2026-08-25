@@ -6,7 +6,7 @@
 
 ## me
 
-sr. swe engineer with **8 years** of experience building scalable fintech solutions for payment processing, digital banking, and fraud prevention systems
+sr. swe engineer with **8 years** of experience building scalable solutions mainly for payment processing & fraud-fighting
 
 ### 🫀 core
 <p align="left">
