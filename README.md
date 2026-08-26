@@ -17,13 +17,13 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" alt="Apache Kafka" />
 <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL" />
 <img src="https://img.shields.io/badge/Delta_Lake-00ADD8?style=flat-square&logo=databricks&logoColor=white" alt="Delta Lake" />
+<img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" alt="Apache Airflow" />
 
 </p>
 
 ### 🤖 machine learning
 <p align="left">
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-<img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" alt="Apache Airflow" />
 <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white" alt="MLflow" />
 <img src="https://img.shields.io/badge/Amazon_SageMaker-FF9900?style=flat-square&logo=amazonsagemaker&logoColor=white" alt="Amazon SageMaker" />
 <img src="https://img.shields.io/badge/XGBoost-006ACC?style=flat-square&logo=xgboost&logoColor=white" alt="XGBoost" /> 
