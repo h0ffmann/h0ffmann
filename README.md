@@ -66,10 +66,10 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 ## 💼 exp-highlights
 
 - **itv (uk)** - ml/mlops on AWS for channel audience forecasting
-- **signifyd (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis
+- **signifyd (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis on databricks
 - **elemeno AI (us - br client bvmf: AMER3)** - mlops engineer with k8s on gcp
-- **broad (uk)** - sr. software engineer with scala for digital banking
-- **stone (br: nasdaq: STNE)** - software engineer with scala for ML/data intensive apps
+- **broad (uk)** - sr. software engineer with scala for digital banking on gcp
+- **stone (br: nasdaq: STNE)** - ml & software engineer with scala on aws
 
 
 ## 🏅 certs
