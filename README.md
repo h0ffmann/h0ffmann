@@ -1,3 +1,4 @@
+<!-- TODO add more appealing techs, add LLM, ai 103, ai 108, GCP ML cert? - add marola highligh -->
 <h1 align="center">hi, i'm matheus hoffmann</h1>
 
 <p align="center">
