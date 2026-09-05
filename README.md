@@ -42,7 +42,6 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 <img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square&logo=openai&logoColor=white" alt="Azure OpenAI" />
 <img src="https://img.shields.io/badge/Azure_AI_Vision-0078D4?style=flat-square" alt="Azure AI Vision" />
 <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
-<img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
 </p>
 
 ### ☁️ cloud & infra
