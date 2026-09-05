@@ -32,6 +32,19 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 <img src="https://img.shields.io/badge/Optuna-2FA7BB?style=flat-square&logo=optuna&logoColor=white" alt="Optuna" />
 </p>
 
+### 🧠 llm & agents
+<p align="left">
+<img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code" />
+<img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
+<img src="https://img.shields.io/badge/DSPy-B5121B?style=flat-square" alt="DSPy" />
+<img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
+<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square" alt="Azure AI Foundry" />
+<img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square&logo=openai&logoColor=white" alt="Azure OpenAI" />
+<img src="https://img.shields.io/badge/Azure_AI_Vision-0078D4?style=flat-square" alt="Azure AI Vision" />
+<img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
+<img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
+</p>
+
 ### ☁️ cloud & infra
 <p align="left">
 <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-web-services&logoColor=white" alt="AWS" />
