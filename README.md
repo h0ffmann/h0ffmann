@@ -94,4 +94,4 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 ## 🏊 misc
 <a href="https://strava.com/athletes/144282698" class="strava-badge- strava-badge-follow" target="_blank"><img src="https//badges.strava.com/echelon-sprite-48.png" alt="strava (open water swimming)" /></a>
 
-
+![Fetch-limited growth vs the empirical law](https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939)
