@@ -9,6 +9,16 @@
 
 sr. swe engineer with **8 years** of experience building scalable solutions mainly for payment processing & fraud-fighting
 
+## 🌊 building
+
+### [marola](https://marola.dev) — the ocean intelligence layer
+
+forecasting and intelligence for the sea: swell, wind, tide and surf conditions,
+turned into signals you can actually act on.
+
+<p align="left">
+<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/marola.dev-0077BE?style=for-the-badge&logo=googlechrome&logoColor=white" alt="marola.dev" /></a>
+</p>
 ### 🫀 core
 <p align="left">
 <img src="https://img.shields.io/badge/Scala-DC322F?style=flat-square&logo=scala&logoColor=white" alt="Scala" />
