@@ -16,9 +16,7 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 forecasting and intelligence for the sea: swell, wind, tide, hazards and surf conditions,
 turned into signals you can actually act on.
 
-<p align="left">
-<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/marola.dev-0077BE?style=for-the-badge&logo=googlechrome&logoColor=white" alt="marola.dev" /></a>
-</p>
+<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
 
 ### 🫀 core
 <p align="left">
