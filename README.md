@@ -13,7 +13,7 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 
 ### [marola](https://marola.dev) — the ocean intelligence layer
 
-forecasting and intelligence for the sea: swell, wind, tide and surf conditions,
+forecasting and intelligence for the sea: swell, wind, tide, hazards and surf conditions,
 turned into signals you can actually act on.
 
 <p align="left">
