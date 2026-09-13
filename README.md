@@ -1,14 +1,9 @@
-<!-- TODO add more appealing techs, add LLM, ai 103, ai 108, GCP ML cert? - add marola highligh -->
-<h1 align="center">hi, i'm matheus hoffmann</h1>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=h0ffmann&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
-</p>
-
 ## 👋 me
 
 sr. swe engineer with **8 years** of experience building scalable solutions mainly for payment processing & fraud-fighting
-
+<p align="left">
+<a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+</p>
 ## 🌊 building
 
 ### [marola](https://marola.dev) — the ocean intelligence layer
