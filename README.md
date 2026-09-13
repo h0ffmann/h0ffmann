@@ -114,7 +114,7 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
 
 ## 🏊 misc
-<a href="https://strava.com/athletes/144282698" class="strava-badge- strava-badge-follow" target="_blank"><img src="https://badges.strava.com/echelon-sprite-48.png" alt="strava (open water swimming)" /></a>
+<a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-open_water_swimming-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (open water swimming)" /></a>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="600">
