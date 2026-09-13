@@ -81,6 +81,22 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" alt="dbt" />
 </p>
 
+## 📊 stats
+
+<!-- generated daily by .github/workflows/metrics.yml (lowlighter/metrics) -->
+
+<p align="left">
+  <img src="metrics.base.svg" alt="all-time contributions" />
+</p>
+
+<p align="left">
+  <img src="metrics.languages.svg" alt="most used languages (all time)" />
+</p>
+
+<p align="left">
+  <img src="metrics.calendar.svg" alt="git activity per year" />
+</p>
+
 ## 💼 exp-highlights
 
 - **itv (uk)** - ml/mlops on aws for channel audience forecasting 
@@ -98,7 +114,7 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
 
 ## 🏊 misc
-<a href="https://strava.com/athletes/144282698" class="strava-badge- strava-badge-follow" target="_blank"><img src="https//badges.strava.com/echelon-sprite-48.png" alt="strava (open water swimming)" /></a>
+<a href="https://strava.com/athletes/144282698" class="strava-badge- strava-badge-follow" target="_blank"><img src="https://badges.strava.com/echelon-sprite-48.png" alt="strava (open water swimming)" /></a>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="600">
