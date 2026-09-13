@@ -89,14 +89,6 @@ turned into signals you can actually act on.
   <img src="metrics.base.svg" alt="all-time contributions" />
 </p>
 
-<p align="left">
-  <img src="metrics.languages.svg" alt="most used languages (all time)" />
-</p>
-
-<p align="left">
-  <img src="metrics.calendar.svg" alt="git activity per year" />
-</p>
-
 ## 💼 exp-highlights
 
 - **itv (uk)** - ml/mlops on aws for channel audience forecasting 
