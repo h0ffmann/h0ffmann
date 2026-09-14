@@ -5,15 +5,17 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
-
-## 🌊 building
-
-### [marola](https://marola.dev) — the ocean intelligence layer
+### building [marola](https://marola.dev) — the ocean intelligence layer
 
 forecasting and intelligence for the sea: swell, wind, tide, hazards and surf conditions,
 turned into signals you can actually act on.
 
+<p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
+<img src="https://img.shields.io/badge/FOSS-soon-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS soon" />
+</p>
+
+> 🔓 going open source soon — want to contribute? mail me: **mhoffmannfs[at]gmail.com**
 
 ### 🫀 core
 <p align="left">
