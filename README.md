@@ -5,7 +5,7 @@ sr. swe engineer with **8 years** of experience building scalable solutions main
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
-### building [marola](https://marola.dev) — the ocean intelligence layer
+### building 🌊 [marola](https://marola.dev) — the ocean intelligence layer
 
 forecasting and intelligence for the sea: swell, wind, tide, hazards and surf conditions,
 turned into signals you can actually act on.
