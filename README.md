@@ -1,6 +1,6 @@
 ## 👋 me
 
-sr. swe engineer with **8 years** of experience building scalable solutions mainly for payment processing & fraud-fighting
+sr. software engineer with **8 years** of experience building scalable solutions mainly for payment processing & fraud-fighting
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
@@ -98,6 +98,12 @@ turned into signals you can actually act on.
 
 <p align="left">
   <img src="metrics.base.svg" alt="all-time contributions" />
+</p>
+<p align="left">
+  <img src="metrics.languages.svg" alt="most used languages" />
+</p>
+<p align="left">
+  <img src="metrics.calendar.svg" alt="git activity per year" />
 </p>
 
 ## 💼 exp-highlights
