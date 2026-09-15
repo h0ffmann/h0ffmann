@@ -53,9 +53,6 @@
 <img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white" alt="Databricks" />
 <img src="https://img.shields.io/badge/Akka_%2F_Pekko-15A9CE?style=flat-square" alt="Akka / Apache Pekko" />
 <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />
-<img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
-<img src="https://img.shields.io/badge/NetCDF-1F5F8B?style=flat-square" alt="NetCDF" />
-<img src="https://img.shields.io/badge/WAVEWATCH_III-0077BE?style=flat-square" alt="WAVEWATCH III" />
 </p>
 
 ### 🤖 機械学習
@@ -94,6 +91,7 @@
 <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
+<img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus" />
 </p>
 
 ## ❄️ nix labs
