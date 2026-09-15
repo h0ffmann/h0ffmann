@@ -113,5 +113,7 @@ edit or a change to the metrics workflow.
 - Commits made by the metrics bot carry `[Skip GitHub Action]`. Leave that
   suffix off human commits; it exists so the bot's own pushes do not retrigger
   the workflow.
-- After a merge, expect three bot commits on `main` within a day. Rebase
+- The three README bots (`metrics` excluded) share the `readme-bots`
+  concurrency group so their commit-backs queue instead of racing.
+- After a merge, expect several bot commits on `main` within a day. Rebase
   rather than merge if a branch falls behind because of them.

@@ -22,17 +22,16 @@
       },
       "locked": {
         "dir": "labs/publisher",
-        "lastModified": 1789482335,
+        "lastModified": 1789485693,
         "narHash": "sha256-NHoZhfi+GjhIJ3k7aUe++eL+ru1fAE/pkZTf+GG/PpY=",
         "owner": "h0ffmann",
         "repo": "nix-config",
-        "rev": "fc79e7f911a3d91c08f86a0da0349b2be7d189d7",
+        "rev": "09d7d6d4a71388db844884ff02746cec107101f9",
         "type": "github"
       },
       "original": {
         "dir": "labs/publisher",
         "owner": "h0ffmann",
-        "ref": "labs/publisher-badges",
         "repo": "nix-config",
         "type": "github"
       }
