@@ -15,7 +15,9 @@ edit or a change to the metrics workflow.
   Portuguese mirror; the two link to each other from a flag line at the
   top. **Every edit to one is made to the other in the same commit**: same
   sections, same badges, same markers, only the prose and alt texts differ.
-- `pdf/cv.pdf` – **generated** CV, built from `README.md` by
+- `pdf/cv.pdf` and `pdf/cv.pt-BR.pdf` – **generated** CVs, built from
+  `README.md` and `README.pt-BR.md` (headers `cv/header.md` /
+  `cv/header.pt-BR.md`, footer and PDF title per language in `cv/build.sh`) by
   `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
   (pandoc → lualatex; shields badges become colored pills, emoji stay in
   color). `cv/prepare.py` drops everything between `<!-- cv:skip -->` /
