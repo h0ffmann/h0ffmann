@@ -127,7 +127,7 @@
   <img src="metrics.languages.svg" alt="よく使う言語" />
 </p>
 
-<!-- .github/workflows/activity.yml が毎日生成 -->
+<!-- .github/workflows/activity.yml がマージごと（nix-config の profile-ping.yml からの push）と毎日生成 -->
 <!--START_SECTION:activity-->
 1. 💪 Opened PR [#12](https://github.com/h0ffmann/h0ffmann/pull/12) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
 2. ⬆️ Pushed to main in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)

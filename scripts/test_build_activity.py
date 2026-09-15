@@ -96,6 +96,31 @@ class Render(unittest.TestCase):
         self.assertEqual(ba.render([ev("WatchEvent", "x/y", action="started")], limit=5), [])
 
 
+class Dispatched(unittest.TestCase):
+    PAYLOAD = {"repo": "h0ffmann/nix-config", "number": 59, "private": False, "merged_at": "2026-09-15T12:00:00Z"}
+
+    def test_merge_not_yet_in_the_api_is_added_newest_first(self):
+        older = ev("PushEvent", "h0ffmann/marola", public=False, created="2026-09-15T10:00:00Z")
+        lines = ba.render(ba.with_dispatched([older], self.PAYLOAD), limit=10)
+        self.assertEqual(lines, [
+            "1. 🎉 Merged PR [#59](https://github.com/h0ffmann/nix-config/pull/59) in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)",
+            "2. ⬆️ Pushed to main in marola 🔒 FOSS soon",
+        ])
+
+    def test_merge_already_in_the_api_is_not_duplicated(self):
+        events = [ev("PullRequestEvent", "h0ffmann/nix-config", action="closed", number=59, created="2026-09-15T12:00:05Z")]
+        self.assertEqual(ba.with_dispatched(events, self.PAYLOAD), events)
+
+    def test_private_merge_has_no_number_or_link(self):
+        payload = {**self.PAYLOAD, "repo": "h0ffmann/marola", "private": True}
+        self.assertEqual(ba.render(ba.with_dispatched([], payload), limit=10), ["1. 🎉 Merged a PR in marola 🔒 FOSS soon"])
+
+    def test_malformed_payloads_are_ignored(self):
+        for payload in (None, "x", {}, {"repo": "h0ffmann/x", "number": "59"}, {"repo": "](evil)", "number": 1},
+                        {"repo": "h0ffmann/x", "number": 0}):
+            self.assertEqual(ba.with_dispatched([], payload), [], payload)
+
+
 class ReplaceSection(unittest.TestCase):
     def test_replaces_between_activity_markers(self):
         text = "a\n<!--START_SECTION:activity-->\nold\n<!--END_SECTION:activity-->\nb\n"
