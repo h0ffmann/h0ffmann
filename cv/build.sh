@@ -35,4 +35,4 @@ build README.pt-BR.md header.pt-BR.md cv.pt-BR.pdf pt-BR "Matheus Hoffmann — C
 # Japanese: luatexja for CJK line breaking, Harano Aji Gothic from publisher's TeX tree
 build README.ja.md    header.ja.md    cv.ja.pdf    ja    "Matheus Hoffmann — 履歴書" \
   "\\href{https://github.com/h0ffmann/h0ffmann}{github.com/h0ffmann} から生成 — README が原本です" \
-  '\usepackage{luatexja-fontspec}\setmainjfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]\setsansjfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]\ltjdefcharrange{9}{"1F1E6-"1F1FF}\ltjsetparameter{jacharrange={-9}}'
+  '\usepackage{luatexja-fontspec}\setmainjfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf,Scale=0.92]\setsansjfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf,Scale=0.92]\ltjdefcharrange{9}{"1F1E6-"1F1FF,"2600-"27BF}\ltjsetparameter{jacharrange={-9}}'
