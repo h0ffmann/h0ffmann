@@ -54,9 +54,6 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white" alt="Databricks" />
 <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />
 <img src="https://img.shields.io/badge/OpenMPI-2E7D32?style=flat-square" alt="OpenMPI" />
-<img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
-<img src="https://img.shields.io/badge/NetCDF-1F5F8B?style=flat-square" alt="NetCDF" />
-<img src="https://img.shields.io/badge/WAVEWATCH_III-0077BE?style=flat-square" alt="WAVEWATCH III" />
 </p>
 
 ### 🤖 machine learning
