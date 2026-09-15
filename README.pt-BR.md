@@ -1,22 +1,22 @@
-<p align="right"><a href="README.pt-BR.md">🇧🇷 português</a></p>
+<p align="right"><a href="README.md">🇬🇧 english</a></p>
 
-## 👋 me
+## 👋 eu
 
-sr. software engineer with **8 years** of experience building scalable solutions mainly for payment processing & fraud-fighting
+engenheiro de software sênior com **8 anos** de experiência construindo soluções escaláveis, principalmente para processamento de pagamentos e combate a fraudes
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
-### building 🌊 [marola](https://marola.dev) — the ocean intelligence layer
+### construindo 🌊 [marola](https://marola.dev) — a camada de inteligência do oceano
 
-<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code for marola.dev" title="scan for marola.dev" align="right" width="120" /></a>
+<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
 
-forecasting and intelligence for the sea: swell, wind, tide, hazards and surf conditions,
-turned into signals you can actually act on.
+previsão e inteligência para o mar: ondulação, vento, maré, perigos e condições de surf,
+transformados em sinais que você consegue de fato usar.
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
-<img src="https://img.shields.io/badge/FOSS-soon-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS soon" />
+<img src="https://img.shields.io/badge/FOSS-em_breve-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS em breve" />
 </p>
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
@@ -28,7 +28,7 @@ turned into signals you can actually act on.
 <a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
 </p>
 
-> 🔓 going open source soon — want to contribute? mail me: **mhoffmannfs[at]gmail.com**
+> 🔓 em breve open source — quer contribuir? me escreva: **mhoffmannfs[at]gmail.com**
 
 ### 🫀 core
 <p align="left">
@@ -53,7 +53,7 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/Optuna-2FA7BB?style=flat-square&logo=optuna&logoColor=white" alt="Optuna" />
 </p>
 
-### 🧠 llm & agents
+### 🧠 llm & agentes
 <p align="left">
 <img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code" />
 <img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
@@ -77,48 +77,43 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 </p>
 
-## 📊 stats
+## 📊 estatísticas
 
 <!-- generated daily by .github/workflows/metrics.yml (lowlighter/metrics) -->
 
 <p align="left">
-  <img src="metrics.base.svg" alt="all-time contributions" />
+  <img src="metrics.base.svg" alt="contribuições de todos os tempos" />
 </p>
 <p align="left">
-  <img src="metrics.languages.svg" alt="most used languages" />
+  <img src="metrics.languages.svg" alt="linguagens mais usadas" />
 </p>
 
 <!-- generated daily by .github/workflows/activity.yml (jamesgeorge007/github-activity-readme) -->
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
-2. 💪 Opened PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
-3. 🎉 Merged PR [#1](https://github.com/h0ffmann/h0ffmann/pull/1) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
-4. ❗ Opened issue [#4](https://github.com/h0ffmann/h0ffmann/issues/4) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
-5. ❗ Opened issue [#3](https://github.com/h0ffmann/h0ffmann/issues/3) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
 <!--END_SECTION:activity-->
 
-## 💼 exp-highlights
+## 💼 destaques de experiência
 
-- **itv (uk)** - ml/mlops on aws for channel audience forecasting 
-- **signifyd (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis on databricks
-- **elemeno AI (us - br client bvmf: AMER3)** - mlops engineer with k8s on gcp
-- **broad (uk)** - sr. software engineer with scala for digital banking on gcp
-- **stone (br: nasdaq: STNE)** - ml & software engineer with scala on aws
+- **itv (reino unido)** - ml/mlops na aws para previsão de audiência de canais
+- **signifyd (eua - prêmio tenacious fev/2024)** - eng. de ml para previsão de perdas e análise de risco no databricks
+- **elemeno AI (eua - cliente br bvmf: AMER3)** - engenheiro de mlops com k8s no gcp
+- **broad (reino unido)** - engenheiro de software sênior com scala para banco digital no gcp
+- **stone (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws
 
 
-## 🏅 certs
+## 🏅 certificações
 
 <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" />
 <img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" />
 <img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" />
 <img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
 
-## 📚 learning
+## 📚 estudando
 
-<a href="https://github.com/h0ffmann/gcp-agentic-architect" target="_blank"><img src="https://img.shields.io/badge/GCP-Professional_Agentic_Architect_(studying)-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="studying for Google Cloud Professional Agentic Architect" /></a>
+<a href="https://github.com/h0ffmann/gcp-agentic-architect" target="_blank"><img src="https://img.shields.io/badge/GCP-Professional_Agentic_Architect_(estudando)-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="estudando para Google Cloud Professional Agentic Architect" /></a>
 
-## 🏊 misc
-<a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-open_water_swimming-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (open water swimming)" /></a>
+## 🏊 outros
+<a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-natação_em_águas_abertas-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (natação em águas abertas)" /></a>
 <p align="left">
 <img src="https://img.shields.io/badge/PADI-Advanced_Open_Water_Diver-0B5FA5?style=for-the-badge" alt="PADI Advanced Open Water Diver" />
 <img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />

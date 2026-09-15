@@ -1,7 +1,7 @@
 name: activity
 
 # Recent public activity (issues, PRs, comments, releases) written between the
-# <!--START_SECTION:activity--> / <!--END_SECTION:activity--> markers in README.md.
+# <!--START_SECTION:activity--> / <!--END_SECTION:activity--> markers in README.md and README.pt-BR.md.
 # Replaces lowlighter/metrics' activity plugin, which crashes on today's events API payloads.
 on:
   schedule:
@@ -29,4 +29,12 @@ jobs:
         with:
           MAX_LINES: 5
           COMMIT_MSG: "Update recent activity - [Skip GitHub Action]"
+          EMPTY_COMMIT_MSG: "Keep activity workflow alive - [Skip GitHub Action]"
+      - uses: jamesgeorge007/github-activity-readme@v0.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          TARGET_FILE: README.pt-BR.md
+          MAX_LINES: 5
+          COMMIT_MSG: "Update recent activity (pt-BR) - [Skip GitHub Action]"
           EMPTY_COMMIT_MSG: "Keep activity workflow alive - [Skip GitHub Action]"

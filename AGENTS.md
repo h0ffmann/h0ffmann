@@ -11,16 +11,22 @@ edit or a change to the metrics workflow.
 
 ## Files
 
-- `README.md` – the profile page. The only file that is edited by hand
-  regularly.
+- `README.md` – the profile page, in English. `README.pt-BR.md` is its
+  Portuguese mirror; the two link to each other from a flag line at the
+  top. **Every edit to one is made to the other in the same commit**: same
+  sections, same badges, same markers, only the prose and alt texts differ.
+- `marola-qr.svg` – static QR code for https://marola.dev, generated once
+  with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
+  section. Regenerate only if the URL changes.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00
   UTC (and on manual dispatch, and on push to `main` when the workflow file
   itself changes). Each of its two steps writes one SVG and commits it back
   to `main` with a `[Skip GitHub Action]` suffix.
 - `.github/workflows/activity.yml` – runs jamesgeorge007/github-activity-readme
   daily at 07:00 UTC and rewrites the text between the
-  `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers in
-  `README.md`. Never edit inside the markers; keep the pair intact.
+  `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers,
+  once per README (two steps, `TARGET_FILE` selects the file). Never edit
+  inside the markers; keep the pair intact in both files.
 - `metrics.base.svg`, `metrics.languages.svg` – **generated**. Never edit these by hand; the next workflow run overwrites
   them. They are committed so the README can embed them by relative path.
 
@@ -32,7 +38,8 @@ edit or a change to the metrics workflow.
   use `style=for-the-badge`. Use `logo=<simpleicons-slug>` where a Simple
   Icons logo exists.
 - Badge groups live inside `<p align="left">` blocks, one `<img>` per line.
-- The stats section embeds the two generated SVGs and the activity markers. If you add a metrics
+- The stats section embeds the two generated SVGs and the activity markers,
+  in both READMEs. If you add a metrics
   step to the workflow, also add the matching `<img>` to the README, or it
   will be generated but never shown.
 - Preview: GitHub renders the README, so check the branch on github.com or

@@ -70,7 +70,9 @@ python3 scripts/build_readme.py [--nix-config PATH] [--readme PATH] [--dry-run] 
 
 - `--nix-config` default `../nix-config` (the sibling checkout on the
   workstation; the workflow passes `nix-config`).
-- `--readme` default `README.md`.
+- `--readme` default `README.md`. May be given twice; the workflow passes
+  `--readme README.md --readme README.pt-BR.md` so both language versions
+  get the same table (the table itself is language-neutral).
 - `--dry-run` prints the rendered section to stdout and does not touch the
   README.
 - `--today` overrides the date used for age calculation (tests, reproducible
