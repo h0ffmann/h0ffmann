@@ -34,6 +34,7 @@ jobs:
           user: ${{ github.repository_owner }}
           filename: metrics.languages.svg
           base: ""
+          debug: yes                        # temporary: print clone/analysis details
           plugin_languages: yes
           plugin_languages_indepth: yes
           # indepth matches commits with `git log --author=<identifier>`; the default identifier
