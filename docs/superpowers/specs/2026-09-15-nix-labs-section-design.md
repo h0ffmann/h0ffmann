@@ -14,7 +14,8 @@ in nix-config.
 ## Non-goals
 
 - No `update-flake-lock` or any change to nix-config.
-- No flake or `flake.lock` in this repo.
+- No flake or `flake.lock` in this repo. (Superseded on 2026-09-15 by the
+  CV PDF spec, which adds one to consume labs/publisher.)
 - No devShell builds on the runner; versions come from `nix eval` only.
 - No change to the existing `metrics.yml` workflow.
 

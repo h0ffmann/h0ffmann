@@ -15,6 +15,16 @@ edit or a change to the metrics workflow.
   Portuguese mirror; the two link to each other from a flag line at the
   top. **Every edit to one is made to the other in the same commit**: same
   sections, same badges, same markers, only the prose and alt texts differ.
+- `pdf/cv.pdf` – **generated** CV, built from `README.md` by
+  `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
+  (pandoc → lualatex; shields badges become colored pills, emoji stay in
+  color). `cv/prepare.py` drops everything between `<!-- cv:skip -->` /
+  `<!-- cv:end -->` (the language line, the stats section, the photo) and
+  prepends `cv/header.md` (name + contact). `cv/preamble.tex` is the look.
+  `flake.nix` pins publisher in `flake.lock`; bump with
+  `nix flake update publisher` when the lab changes. Build locally with
+  `nix build` (result/cv.pdf) and run `python3 -m unittest discover -s cv`.
+  Keep the skip-marker pairs balanced and identical in both READMEs.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.
