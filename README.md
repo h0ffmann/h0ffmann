@@ -49,6 +49,7 @@ turned into signals you can actually act on.
 <p align="left">
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
 <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white" alt="MLflow" />
+<img src="https://img.shields.io/badge/Kubeflow-326CE5?style=flat-square" alt="Kubeflow" />
 <img src="https://img.shields.io/badge/Amazon_SageMaker-FF9900?style=flat-square&logo=amazonsagemaker&logoColor=white" alt="Amazon SageMaker" />
 <img src="https://img.shields.io/badge/XGBoost-006ACC?style=flat-square&logo=xgboost&logoColor=white" alt="XGBoost" /> 
 <img src="https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="PySpark" /> 
@@ -60,6 +61,7 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code" />
 <img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
 <img src="https://img.shields.io/badge/DSPy-B5121B?style=flat-square" alt="DSPy" />
+<img src="https://img.shields.io/badge/RAG-6E40C9?style=flat-square" alt="RAG (retrieval-augmented generation)" />
 <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
 <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
 <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
