@@ -140,11 +140,12 @@ one directory per lab, consumed by other repos as a flake input, a sparse submod
 ## 💼 exp-highlights
 
 - **itv (uk)** - ml/mlops on aws for channel audience forecasting 
-- **signifyd (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis on databricks
-- **elemeno AI (us - br client bvmf: AMER3)** - mlops engineer with k8s on gcp
-- **broad (uk)** - sr. software engineer with scala for digital banking on gcp
-- **stone (br: nasdaq: STNE)** - ml & software engineer with scala on aws
-
+- **signifyd (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis on databricks(2023/2024)
+- **elemeno AI (us - br client bvmf: AMER3)** - mlops engineer with k8s on gcp(2021/2022)
+- **broad (uk)** - sr. software engineer with scala for digital banking on gcp(2020)
+- **stone (br: nasdaq: STNE)** - ml & software engineer with scala on aws (2017-2019)
+- **LIOC (br: UFRJ/COPPE) - ocean instrumentation lab ** - scientific research, ROV, microcontrollers (2015/2017)
+  
 ## 🏅 certs
 
 <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" />
