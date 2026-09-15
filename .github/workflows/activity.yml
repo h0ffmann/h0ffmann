@@ -1,15 +1,19 @@
 name: activity
 
-# Recent public activity (issues, PRs, comments, releases) written between the
-# <!--START_SECTION:activity--> / <!--END_SECTION:activity--> markers in README.md and README.pt-BR.md.
-# Replaces lowlighter/metrics' activity plugin, which crashes on today's events API payloads.
+# Recent activity (pushes, PRs, issues, comments, releases) written between the
+# <!--START_SECTION:activity--> / <!--END_SECTION:activity--> markers in README.md and
+# README.pt-BR.md by scripts/build_activity.py. Uses METRICS_TOKEN (not GITHUB_TOKEN) so the
+# user's own private events are included: private repositories show as a bare name with a lock
+# and no links.
 on:
   schedule:
     - cron: "0 7 * * *"          # daily, one hour after metrics.yml
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [".github/workflows/activity.yml"]
+    paths:
+      - ".github/workflows/activity.yml"
+      - "scripts/build_activity.py"
 
 permissions:
   contents: write
@@ -23,18 +27,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: jamesgeorge007/github-activity-readme@v0.5.0
+      - name: unit tests
+        run: python3 -m unittest discover -s scripts -p 'test_build_activity.py' -v
+      - name: rewrite the activity section
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          MAX_LINES: 5
-          COMMIT_MSG: "Update recent activity - [Skip GitHub Action]"
-          EMPTY_COMMIT_MSG: "Keep activity workflow alive - [Skip GitHub Action]"
-      - uses: jamesgeorge007/github-activity-readme@v0.5.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          TARGET_FILE: README.pt-BR.md
-          MAX_LINES: 5
-          COMMIT_MSG: "Update recent activity (pt-BR) - [Skip GitHub Action]"
-          EMPTY_COMMIT_MSG: "Keep activity workflow alive - [Skip GitHub Action]"
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: python3 scripts/build_activity.py --readme README.md --readme README.pt-BR.md
+      - name: commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet README.md README.pt-BR.md; then echo "no change"; exit 0; fi
+          git add README.md README.pt-BR.md
+          git commit -m "Update recent activity - [Skip GitHub Action]"
+          git pull --rebase origin main
+          git push
