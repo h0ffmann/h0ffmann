@@ -33,13 +33,13 @@ jobs:
       - name: rewrite the activity section
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
-        run: python3 scripts/build_activity.py --readme README.md --readme README.pt-BR.md
+        run: python3 scripts/build_activity.py --readme README.md --readme README.pt-BR.md --readme README.ja.md
       - name: commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet README.md README.pt-BR.md; then echo "no change"; exit 0; fi
-          git add README.md README.pt-BR.md
+          if git diff --quiet README.md README.pt-BR.md README.ja.md; then echo "no change"; exit 0; fi
+          git add README.md README.pt-BR.md README.ja.md
           git commit -m "Update recent activity - [Skip GitHub Action]"
           git pull --rebase origin main
           git push
