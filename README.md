@@ -86,6 +86,11 @@ turned into signals you can actually act on.
 
 <!-- generated daily by .github/workflows/activity.yml (jamesgeorge007/github-activity-readme) -->
 <!--START_SECTION:activity-->
+1. 🎉 Merged PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
+2. 💪 Opened PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
+3. 🎉 Merged PR [#1](https://github.com/h0ffmann/h0ffmann/pull/1) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
+4. ❗ Opened issue [#4](https://github.com/h0ffmann/h0ffmann/issues/4) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
+5. ❗ Opened issue [#3](https://github.com/h0ffmann/h0ffmann/issues/3) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
 <!--END_SECTION:activity-->
 
 ## 💼 exp-highlights
