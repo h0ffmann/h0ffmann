@@ -1,5 +1,5 @@
 <!-- cv:skip -->
-<p align="right"><a href="pdf/cv.pt-BR.pdf">📄 currículo (pdf)</a> · <a href="README.md">🇬🇧 english</a></p>
+<p align="right"><a href="pdf/cv.pt-BR.pdf">📄 currículo (pt-BR)</a> · <a href="pdf/cv.pdf">📄 cv (en)</a> · <a href="README.md">🇬🇧 english</a></p>
 <!-- cv:end -->
 
 ## 👋 eu
