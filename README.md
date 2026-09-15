@@ -55,9 +55,6 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
 <img src="https://img.shields.io/badge/DSPy-B5121B?style=flat-square" alt="DSPy" />
 <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
-<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square" alt="Azure AI Foundry" />
-<img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square&logo=openai&logoColor=white" alt="Azure OpenAI" />
-<img src="https://img.shields.io/badge/Azure_AI_Vision-0078D4?style=flat-square" alt="Azure AI Vision" />
 <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
 </p>
 
@@ -86,6 +83,10 @@ turned into signals you can actually act on.
   <img src="metrics.languages.svg" alt="most used languages" />
 </p>
 
+<!-- generated daily by .github/workflows/activity.yml (jamesgeorge007/github-activity-readme) -->
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
+
 ## 💼 exp-highlights
 
 - **itv (uk)** - ml/mlops on aws for channel audience forecasting 
@@ -101,6 +102,10 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" />
 <img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" />
 <img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
+
+## 📚 learning
+
+<a href="https://github.com/h0ffmann/gcp-agentic-architect" target="_blank"><img src="https://img.shields.io/badge/GCP-Professional_Agentic_Architect_(studying)-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="studying for Google Cloud Professional Agentic Architect" /></a>
 
 ## 🏊 misc
 <a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-open_water_swimming-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (open water swimming)" /></a>

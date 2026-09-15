@@ -17,6 +17,10 @@ edit or a change to the metrics workflow.
   UTC (and on manual dispatch, and on push to `main` when the workflow file
   itself changes). Each of its two steps writes one SVG and commits it back
   to `main` with a `[Skip GitHub Action]` suffix.
+- `.github/workflows/activity.yml` – runs jamesgeorge007/github-activity-readme
+  daily at 07:00 UTC and rewrites the text between the
+  `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers in
+  `README.md`. Never edit inside the markers; keep the pair intact.
 - `metrics.base.svg`, `metrics.languages.svg` – **generated**. Never edit these by hand; the next workflow run overwrites
   them. They are committed so the README can embed them by relative path.
 
@@ -28,7 +32,7 @@ edit or a change to the metrics workflow.
   use `style=for-the-badge`. Use `logo=<simpleicons-slug>` where a Simple
   Icons logo exists.
 - Badge groups live inside `<p align="left">` blocks, one `<img>` per line.
-- The stats section embeds the three generated SVGs. If you add a metrics
+- The stats section embeds the two generated SVGs and the activity markers. If you add a metrics
   step to the workflow, also add the matching `<img>` to the README, or it
   will be generated but never shown.
 - Preview: GitHub renders the README, so check the branch on github.com or
