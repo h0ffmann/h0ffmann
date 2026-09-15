@@ -90,6 +90,11 @@ transformados em sinais que você consegue de fato usar.
 
 <!-- generated daily by .github/workflows/activity.yml (jamesgeorge007/github-activity-readme) -->
 <!--START_SECTION:activity-->
+1. 🎉 Merged PR [#6](https://github.com/h0ffmann/h0ffmann/pull/6) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
+2. 💪 Opened PR [#6](https://github.com/h0ffmann/h0ffmann/pull/6) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
+3. 🎉 Merged PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
+4. 💪 Opened PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
+5. 🎉 Merged PR [#1](https://github.com/h0ffmann/h0ffmann/pull/1) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
 <!--END_SECTION:activity-->
 
 ## 💼 destaques de experiência
