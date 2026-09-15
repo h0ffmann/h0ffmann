@@ -55,9 +55,7 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
 <img src="https://img.shields.io/badge/DSPy-B5121B?style=flat-square" alt="DSPy" />
 <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
-<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square" alt="Azure AI Foundry" />
-<img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square&logo=openai&logoColor=white" alt="Azure OpenAI" />
-<img src="https://img.shields.io/badge/Azure_AI_Vision-0078D4?style=flat-square" alt="Azure AI Vision" />
+<img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
 <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
 </p>
 
@@ -75,23 +73,6 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 </p>
 
-### 🔄 devops & CICD
-<p align="left">
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="GitHub Actions" />
-<img src="https://img.shields.io/badge/GitLab_CI-FC6D26?style=flat-square&logo=gitlab&logoColor=white" alt="GitLab CI" />
-<img src="https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white" alt="Jenkins" />
-<img src="https://img.shields.io/badge/Terraform-623CE4?style=flat-square&logo=terraform&logoColor=white" alt="Terraform" />
-<img src="https://img.shields.io/badge/Pulumi-8A3391?style=flat-square&logo=pulumi&logoColor=white" alt="Pulumi" />
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-</p>
-
-### 🗄️ dbs & bi
-<p align="left">
-<img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
-<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" alt="dbt" />
-</p>
-
 ## 📊 stats
 
 <!-- generated daily by .github/workflows/metrics.yml (lowlighter/metrics) -->
@@ -102,12 +83,10 @@ turned into signals you can actually act on.
 <p align="left">
   <img src="metrics.languages.svg" alt="most used languages" />
 </p>
-<p align="left">
-  <img src="metrics.calendar.svg" alt="git activity per year" />
-</p>
-<p align="left">
-  <img src="metrics.activity.svg" alt="recent activity" />
-</p>
+
+<!-- generated daily by .github/workflows/activity.yml (jamesgeorge007/github-activity-readme) -->
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
 
 ## 💼 exp-highlights
 
@@ -125,8 +104,17 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" />
 <img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
 
+## 📚 learning
+
+<a href="https://github.com/h0ffmann/gcp-agentic-architect" target="_blank"><img src="https://img.shields.io/badge/GCP-Professional_Agentic_Architect_(studying)-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="studying for Google Cloud Professional Agentic Architect" /></a>
+
 ## 🏊 misc
 <a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-open_water_swimming-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (open water swimming)" /></a>
+<p align="left">
+<img src="https://img.shields.io/badge/PADI-Advanced_Open_Water_Diver-0B5FA5?style=for-the-badge" alt="PADI Advanced Open Water Diver" />
+<img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />
+<img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
+</p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="600">

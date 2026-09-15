@@ -15,10 +15,13 @@ edit or a change to the metrics workflow.
   regularly.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00
   UTC (and on manual dispatch, and on push to `main` when the workflow file
-  itself changes). Each of its four steps writes one SVG and commits it back
+  itself changes). Each of its two steps writes one SVG and commits it back
   to `main` with a `[Skip GitHub Action]` suffix.
-- `metrics.base.svg`, `metrics.languages.svg`, `metrics.calendar.svg`,
-  `metrics.activity.svg` – **generated**. Never edit these by hand; the next workflow run overwrites
+- `.github/workflows/activity.yml` – runs jamesgeorge007/github-activity-readme
+  daily at 07:00 UTC and rewrites the text between the
+  `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers in
+  `README.md`. Never edit inside the markers; keep the pair intact.
+- `metrics.base.svg`, `metrics.languages.svg` – **generated**. Never edit these by hand; the next workflow run overwrites
   them. They are committed so the README can embed them by relative path.
 
 ## Working on the README
@@ -29,7 +32,7 @@ edit or a change to the metrics workflow.
   use `style=for-the-badge`. Use `logo=<simpleicons-slug>` where a Simple
   Icons logo exists.
 - Badge groups live inside `<p align="left">` blocks, one `<img>` per line.
-- The stats section embeds the three generated SVGs. If you add a metrics
+- The stats section embeds the two generated SVGs and the activity markers. If you add a metrics
   step to the workflow, also add the matching `<img>` to the README, or it
   will be generated but never shown.
 - Preview: GitHub renders the README, so check the branch on github.com or
@@ -42,7 +45,17 @@ edit or a change to the metrics workflow.
   access to the user's repos). Without it every step fails; there is nothing
   to fix in the YAML for that case.
 - `lowlighter/metrics` is pinned to a release tag. Bump it deliberately
-  rather than reverting to `@latest`.
+  rather than reverting to `@latest`. Upstream is unmaintained (v3.34 is
+  from 2023); its activity plugin no longer works with GitHub's events API,
+  which is why `activity.yml` uses a different action.
+- The languages step runs the in-depth analyzer, which clones every owned
+  repository over plain https without a token. Private repositories fail to
+  clone silently, so the card covers **public repositories only**. It
+  matches commits with `commits_authoring` (login plus the commit email);
+  without the email it finds nothing. PostScript, XSLT and JavaScript are
+  ignored because they are generated figures and committed bundles, not
+  authored code. Back-to-back runs can be throttled and produce an empty
+  card; the next scheduled run recovers.
 - Validate YAML before pushing:
 
   ```sh
