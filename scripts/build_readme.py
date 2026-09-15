@@ -7,6 +7,9 @@ same rev (no lab flake is evaluated, no inputs fetched). Standard library only.
 
     python3 scripts/build_readme.py --nix-config ../nix-config --dry-run
     python3 scripts/build_readme.py --nix-config nix-config --readme README.md --readme README.pt-BR.md
+
+The table's own words (header row, "4 days ago") follow the README's language; lab summaries and
+tool names stay as nix-config writes them.
 """
 import argparse
 import json
@@ -20,9 +23,19 @@ TRIM_AT_DASH = {"texliveMedium"}       # "2025-r78234-final-env" -> "2025"
 STALE_DAYS = 90
 START, END = "<!-- nix-labs:start -->", "<!-- nix-labs:end -->"
 LAB_URL = "https://github.com/h0ffmann/nix-config/tree/main/labs/{name}"
+EN = {"header": ("lab", "what", "nixpkgs", "locked", "toolchain"), "today": "today",
+      "ago": lambda n: f"{n} day{'s' if n != 1 else ''} ago"}
+JA = {"header": ("ラボ", "概要", "nixpkgs", "更新日", "ツールチェーン"), "today": "本日",
+      "ago": lambda n: f"{n}日前"}
+PT = {"header": ("lab", "o que", "nixpkgs", "travado", "toolchain"), "today": "hoje",
+      "ago": lambda n: f"há {n} dia{'s' if n != 1 else ''}"}
+LOCALES = {"README.ja.md": JA, "README.pt-BR.md": PT}
+
+
 # The separator's dash counts are relative column widths for pandoc (the CV); GitHub ignores them.
-HEADER = ("| lab | what | nixpkgs | locked | toolchain |\n"
-          "| " + "-" * 9 + " | " + "-" * 40 + " | " + "-" * 8 + " | " + "-" * 17 + " | " + "-" * 26 + " |\n")
+def header(loc=EN) -> str:
+    return ("| " + " | ".join(loc["header"]) + " |\n"
+            "| " + "-" * 9 + " | " + "-" * 40 + " | " + "-" * 8 + " | " + "-" * 17 + " | " + "-" * 26 + " |\n")
 NIX_TIMEOUT = 120
 
 
@@ -57,11 +70,9 @@ def read_lab_json(lab_dir: Path) -> dict:
     return {"summary": data["summary"], "headline": data["headline"]}
 
 
-def age_text(locked: date, today: date) -> str:
+def age_text(locked: date, today: date, loc=EN) -> str:
     days = (today - locked).days
-    if days == 0:
-        return "today"
-    return f"{days} day{'s' if days != 1 else ''} ago"
+    return loc["today"] if days == 0 else loc["ago"](days)
 
 
 def nix_version(rev: str, attr: str):
@@ -82,8 +93,8 @@ def display_version(attr: str, version: str) -> str:
     return version.split("-", 1)[0] if attr in TRIM_AT_DASH else version
 
 
-def render_table(labs, today: date, evaluate=nix_version) -> str:
-    cache = {}
+def render_table(labs, today: date, evaluate=nix_version, loc=EN, cache=None) -> str:
+    cache = {} if cache is None else cache  # shared across languages: nix eval runs once per attr
 
     def version(rev, attr):
         if (rev, attr) not in cache:
@@ -101,14 +112,14 @@ def render_table(labs, today: date, evaluate=nix_version) -> str:
             rev, locked = pin
             rev_cell = f"`{rev[:7]}`"
             stale = "⚠️ " if (today - locked).days > STALE_DAYS else ""
-            locked_cell = f"{stale}{locked.isoformat()} ({age_text(locked, today)})"
+            locked_cell = f"{stale}{locked.isoformat()} ({age_text(locked, today, loc)})"
             pairs = []
             for attr in meta.get("headline", []):
                 v = version(rev, attr)
                 pairs.append(f"{LABELS.get(attr, attr)} {display_version(attr, v) if v else '?'}")
             toolchain = " · ".join(pairs) or "—"
         rows.append(f"| [{lab.name}]({LAB_URL.format(name=lab.name)}) | {what} | {rev_cell} | {locked_cell} | {toolchain} |\n")
-    return HEADER + "".join(rows)
+    return header(loc) + "".join(rows)
 
 
 def replace_section(text: str, section: str) -> str:
@@ -134,13 +145,14 @@ def main(argv=None) -> int:
     if not labs:
         print(f"error: no labs with flake.lock under {args.nix_config}/labs", file=sys.stderr)
         return 2
-    section = render_table(labs, args.today)
     if args.dry_run:
-        print(section, end="")
+        print(render_table(labs, args.today), end="")
         return 0
+    cache = {}
     for readme in readmes:
         try:
             before = readme.read_text()
+            section = render_table(labs, args.today, loc=LOCALES.get(readme.name, EN), cache=cache)
             after = replace_section(before, section)
         except (OSError, ValueError) as error:
             print(f"error: {readme}: {error}", file=sys.stderr)

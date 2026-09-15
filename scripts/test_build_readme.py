@@ -155,6 +155,27 @@ class RenderTable(unittest.TestCase):
             self.assertIn("| — | ? | ? | — |", out)
 
 
+class Locales(unittest.TestCase):
+    TODAY = date(2026, 9, 15)
+
+    def test_japanese_header_and_age(self):
+        self.assertEqual(br.age_text(date(2026, 9, 11), self.TODAY, br.JA), "4日前")
+        self.assertEqual(br.age_text(self.TODAY, self.TODAY, br.JA), "本日")
+        self.assertIn("| ラボ | 概要 | nixpkgs | 更新日 | ツールチェーン |", br.header(br.JA))
+
+    def test_portuguese_header_and_age(self):
+        self.assertEqual(br.age_text(date(2026, 9, 14), self.TODAY, br.PT), "há 1 dia")
+        self.assertEqual(br.age_text(date(2026, 9, 1), self.TODAY, br.PT), "há 14 dias")
+        self.assertIn("| lab | o que | nixpkgs | travado | toolchain |", br.header(br.PT))
+
+    def test_english_is_the_default(self):
+        self.assertIn("| lab | what | nixpkgs | locked | toolchain |", br.header())
+        self.assertEqual(br.age_text(date(2026, 9, 14), self.TODAY), "1 day ago")
+
+    def test_locale_map_covers_translated_readmes(self):
+        self.assertEqual(sorted(br.LOCALES), ["README.ja.md", "README.pt-BR.md"])
+
+
 class ReplaceSection(unittest.TestCase):
     def test_replaces_only_between_markers(self):
         text = "before\n<!-- nix-labs:start -->\nold\n<!-- nix-labs:end -->\nafter\n"
