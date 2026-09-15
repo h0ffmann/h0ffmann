@@ -4,7 +4,7 @@
 
 ## 👋 me
 
-sr. software engineer with **8 years** of experience building scalable solutions mainly for payment processing & fraud-fighting
+sr. software engineer with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
