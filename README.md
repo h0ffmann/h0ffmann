@@ -105,6 +105,9 @@ turned into signals you can actually act on.
 <p align="left">
   <img src="metrics.calendar.svg" alt="git activity per year" />
 </p>
+<p align="left">
+  <img src="metrics.activity.svg" alt="recent activity" />
+</p>
 
 ## 💼 exp-highlights
 

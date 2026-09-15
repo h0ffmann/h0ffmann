@@ -53,3 +53,18 @@ jobs:
           config_timezone: America/Sao_Paulo
           plugin_calendar: yes
           plugin_calendar_limit: 3
+
+      # 4) recent activity — public events of the last 14 days
+      - name: recent activity
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: metrics.activity.svg
+          base: ""
+          config_timezone: America/Sao_Paulo
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_days: 14
+          plugin_activity_visibility: public
+          plugin_activity_filter: push, pr, issue, release
