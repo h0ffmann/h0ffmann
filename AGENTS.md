@@ -45,7 +45,17 @@ edit or a change to the metrics workflow.
   access to the user's repos). Without it every step fails; there is nothing
   to fix in the YAML for that case.
 - `lowlighter/metrics` is pinned to a release tag. Bump it deliberately
-  rather than reverting to `@latest`.
+  rather than reverting to `@latest`. Upstream is unmaintained (v3.34 is
+  from 2023); its activity plugin no longer works with GitHub's events API,
+  which is why `activity.yml` uses a different action.
+- The languages step runs the in-depth analyzer, which clones every owned
+  repository over plain https without a token. Private repositories fail to
+  clone silently, so the card covers **public repositories only**. It
+  matches commits with `commits_authoring` (login plus the commit email);
+  without the email it finds nothing. PostScript, XSLT and JavaScript are
+  ignored because they are generated figures and committed bundles, not
+  authored code. Back-to-back runs can be throttled and produce an empty
+  card; the next scheduled run recovers.
 - Validate YAML before pushing:
 
   ```sh
