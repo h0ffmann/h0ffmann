@@ -13,7 +13,7 @@
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
 
-海のための予測とインテリジェンス：うねり、風、潮汐、危険、サーフコンディションを、
+海のための予測とインテリジェンス：うねり、風、潮汐、ハザード情報、サーフコンディションを、
 実際に行動につながるシグナルに変えます。
 
 <p align="left">
@@ -30,9 +30,9 @@
 <a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
 </p>
 
-> 🔓 近日オープンソース化予定 — 貢献したい方はメールを: **mhoffmannfs[at]gmail.com**
+> 🔓 近日オープンソース化予定 — コントリビュート希望の方はメールでご連絡ください：**mhoffmannfs[at]gmail.com**
 
-### 🫀 コア
+### 🫀 コアスキル
 <p align="left">
 <img src="https://img.shields.io/badge/Scala-DC322F?style=flat-square&logo=scala&logoColor=white" alt="Scala" />
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -44,7 +44,7 @@
 
 </p>
 
-### ⚡ ハイエンド
+### ⚡ 大規模データ処理
 <p align="left">
 <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" alt="Apache Kafka" />
 <img src="https://img.shields.io/badge/Apache_Spark-FFFFFF?style=flat-square&logo=apachespark&logoColor=E35A16" alt="Apache Spark" />
@@ -78,7 +78,7 @@
 <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
 </p>
 
-### ☁️ クラウド & インフラ など
+### ☁️ クラウド & インフラ
 <p align="left">
 <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-web-services&logoColor=white" alt="AWS" />
 <img src="https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazon-s3&logoColor=white" alt="Amazon S3" />
@@ -99,20 +99,20 @@
 
 ## ❄️ nix labs
 
-[nix-config](https://github.com/h0ffmann/nix-config) にある、私が使うツールチェーンのための自己完結型 nix flake：
+[nix-config](https://github.com/h0ffmann/nix-config) にある、使用しているツールチェーンのための自己完結型 nix flake：
 ラボごとに1ディレクトリで、他のリポジトリから flake input、sparse submodule、GitHub Action として利用されます。
 
 [![nix-config ci](https://github.com/h0ffmann/nix-config/actions/workflows/ci.yml/badge.svg)](https://github.com/h0ffmann/nix-config/actions/workflows/ci.yml)
 
 <!-- .github/workflows/nix-labs.yml が h0ffmann/nix-config から毎日生成 -->
 <!-- nix-labs:start -->
-| lab | what | nixpkgs | locked | toolchain |
+| ラボ | 概要 | nixpkgs | 更新日 | ツールチェーン |
 | --------- | ---------------------------------------- | -------- | ----------------- | -------------------------- |
-| [agentic](https://github.com/h0ffmann/nix-config/tree/main/labs/agentic) | ai-jail, OpenCode, gh, and jail-run / gh-token / clip / clip-relay | `eaad089` | 2026-09-11 (4 days ago) | gh 2.100.0 · opencode 1.18.30 · bubblewrap 0.12.0 |
-| [cuda](https://github.com/h0ffmann/nix-config/tree/main/labs/cuda) | nixos-cuda binary cache setup, torch venv with the driver libs on its path; x86_64-linux only | `eaad089` | 2026-09-11 (4 days ago) | python3 3.14.7 |
-| [lint](https://github.com/h0ffmann/nix-config/tree/main/labs/lint) | hadolint, actionlint, shellcheck, ruff, pyflakes, cloc, coverage, pdoc as one list | `eaad089` | 2026-09-11 (4 days ago) | hadolint 2.14.0 · actionlint 1.7.12 · shellcheck 0.11.0 · ruff 0.16.6 |
-| [pratico](https://github.com/h0ffmann/nix-config/tree/main/labs/pratico) | WAVEWATCH III toolchain (gfortran / OpenMPI / NetCDF), zsh-ai pilot, ai-jail recipes | `eaad089` | 2026-09-11 (4 days ago) | gfortran 15.3.0 · openmpi 5.0.10 · netcdf 4.10.1 · hdf5 1.14.6 · eccodes 2.48.0 |
-| [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf, a composite Action that builds and commits PDFs | `eaad089` | 2026-09-11 (4 days ago) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 · librsvg 2.62.3 |
+| [agentic](https://github.com/h0ffmann/nix-config/tree/main/labs/agentic) | ai-jail, OpenCode, gh, and jail-run / gh-token / clip / clip-relay | `eaad089` | 2026-09-11 (4日前) | gh 2.100.0 · opencode 1.18.30 · bubblewrap 0.12.0 |
+| [cuda](https://github.com/h0ffmann/nix-config/tree/main/labs/cuda) | nixos-cuda binary cache setup, torch venv with the driver libs on its path; x86_64-linux only | `eaad089` | 2026-09-11 (4日前) | python3 3.14.7 |
+| [lint](https://github.com/h0ffmann/nix-config/tree/main/labs/lint) | hadolint, actionlint, shellcheck, ruff, pyflakes, cloc, coverage, pdoc as one list | `eaad089` | 2026-09-11 (4日前) | hadolint 2.14.0 · actionlint 1.7.12 · shellcheck 0.11.0 · ruff 0.16.6 |
+| [pratico](https://github.com/h0ffmann/nix-config/tree/main/labs/pratico) | WAVEWATCH III toolchain (gfortran / OpenMPI / NetCDF), zsh-ai pilot, ai-jail recipes | `eaad089` | 2026-09-11 (4日前) | gfortran 15.3.0 · openmpi 5.0.10 · netcdf 4.10.1 · hdf5 1.14.6 · eccodes 2.48.0 |
+| [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf, a composite Action that builds and commits PDFs | `eaad089` | 2026-09-11 (4日前) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 · librsvg 2.62.3 |
 <!-- nix-labs:end -->
 
 <!-- cv:skip -->
@@ -144,11 +144,11 @@
 
 ## 💼 職務経歴ハイライト
 
-- **itv（英国）** - チャンネル視聴者予測のための AWS 上の ML/MLOps
-- **signifyd（米国 - 2024年2月 tenacious 賞受賞）** - Databricks 上の損失予測・リスク分析の ML エンジニア
-- **elemeno AI（米国 - ブラジル顧客 bvmf: AMER3）** - GCP 上の k8s による MLOps エンジニア
-- **broad（英国）** - GCP 上のデジタルバンキング向け Scala シニアソフトウェアエンジニア
-- **stone（ブラジル: nasdaq: STNE）** - AWS 上の Scala による ML・ソフトウェアエンジニア
+- **itv（英国）**：AWS 上の ML/MLOps（視聴者数予測）
+- **signifyd（米国・2024年2月 tenacious 賞受賞）**：Databricks 上の損失予測・リスク分析を担当する ML エンジニア
+- **elemeno AI（米国・ブラジル顧客 bvmf: AMER3）**：GCP 上の k8s による MLOps エンジニア
+- **broad（英国）**：GCP 上のデジタルバンキング向け Scala シニアソフトウェアエンジニア
+- **stone（ブラジル・nasdaq: STNE）**：AWS 上の Scala による ML・ソフトウェアエンジニア
 
 ## 🏅 資格
 
