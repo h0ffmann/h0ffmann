@@ -17,7 +17,7 @@ jobs:
     steps:
       # 1) base stats — account age, followers, all-time commits
       - name: all-time contributions
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: ${{ github.repository_owner }}
@@ -28,7 +28,7 @@ jobs:
 
       # 2) most used languages — clones and analyses every repo you committed to
       - name: languages (all time)
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: ${{ github.repository_owner }}
@@ -44,7 +44,7 @@ jobs:
 
       # 3) git activity per year — last 3 years
       - name: activity per year
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: ${{ github.repository_owner }}
@@ -53,3 +53,18 @@ jobs:
           config_timezone: America/Sao_Paulo
           plugin_calendar: yes
           plugin_calendar_limit: 3
+
+      # 4) recent activity — public events of the last 14 days
+      - name: recent activity
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: metrics.activity.svg
+          base: ""
+          config_timezone: America/Sao_Paulo
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_days: 14
+          plugin_activity_visibility: public
+          plugin_activity_filter: push, pr, issue, release
