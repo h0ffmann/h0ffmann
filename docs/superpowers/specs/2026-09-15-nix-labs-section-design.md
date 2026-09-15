@@ -49,9 +49,10 @@ Rules:
 - `locked` is `nodes.nixpkgs.locked.lastModified` as `YYYY-MM-DD` plus a
   relative age: `today`, `1 day ago`, `N days ago`. If the age exceeds
   90 days the cell is prefixed with `⚠️ `.
-- `toolchain` is `name version` pairs joined by ` · `. The pairs come from a
-  per-lab attribute list (see script). A lab with no entry in that list
-  renders `—` in this cell.
+- `toolchain` is `name version` pairs joined by ` · `. The attribute list
+  comes from the lab's own `labs/<lab>/lab.json` in nix-config
+  (`"headline": ["gfortran", ...]`, see h0ffmann/nix-config PR "lab.json per
+  lab"). A lab without `lab.json`, or with an empty list, renders `—`.
 - Version numbers are shown verbatim from nixpkgs except TeX Live, whose
   `texliveMedium.version` string (`2025-r78234-final-env`) is cut at the first
   `-`.
@@ -82,16 +83,13 @@ or the README lacks either marker.
 ### Structure
 
 ```python
-LAB_ATTRS = {
-    "pratico":   ["gfortran", "openmpi", "netcdf", "hdf5", "eccodes"],
-    "publisher": ["pandoc", "texliveMedium", "python3"],
-}
 LABELS = {"texliveMedium": "texlive"}       # display name when it differs from the attr
 STALE_DAYS = 90
 START, END = "<!-- nix-labs:start -->", "<!-- nix-labs:end -->"
 
 def discover_labs(nix_config: Path) -> list[Path]            # sorted labs/*/ dirs that hold flake.lock
 def read_nixpkgs_pin(lock_path: Path) -> tuple[str, date] | None
+def read_headline(lab_dir: Path) -> list[str]                # lab.json "headline"; [] if absent or malformed (warning)
 def age_text(locked: date, today: date) -> str
 def nix_version(rev: str, attr: str) -> str | None           # subprocess nix eval --raw; None on failure
 def render_table(labs, today, evaluate=nix_version) -> str  # evaluate is injectable for tests
@@ -170,6 +168,7 @@ Notes:
 | --- | --- |
 | nix-config checkout fails | Job fails, README untouched |
 | Lab has no `nixpkgs` lock node | Row rendered with `?` for rev and locked |
+| Lab has no `lab.json`, or it is malformed | `—` in toolchain, warning on stderr, run succeeds |
 | `nix eval` fails / times out for an attr | `?` for that pair, warning on stderr, run succeeds |
 | README markers missing | Exit 2, nothing written |
 | No labs found | Exit 2 |
@@ -189,6 +188,8 @@ Notes:
    `flake.lock`, sorted.
 5. `read_nixpkgs_pin`: parses a fixture lock; returns `None` without a
    nixpkgs node.
+6. `read_headline`: parses a fixture `lab.json`; returns `[]` when the file
+   is missing or not the expected shape.
 
 Manual check: `python3 scripts/build_readme.py --nix-config ../nix-config --dry-run`
 on the workstation, then one `workflow_dispatch` run after merge.
@@ -196,7 +197,7 @@ on the workstation, then one `workflow_dispatch` run after merge.
 ## Documentation
 
 AGENTS.md gains a "nix labs section" paragraph: what is generated, that the
-attribute list lives in `scripts/build_readme.py`, that `nix-config/` is a
+per-lab attribute list lives in nix-config's `labs/<lab>/lab.json`, that `nix-config/` is a
 gitignored checkout path, and the local dry-run and test commands.
 
 ## Files touched
