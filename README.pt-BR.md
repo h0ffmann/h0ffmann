@@ -39,7 +39,6 @@ transformados em sinais que você consegue de fato usar.
 <img src="https://img.shields.io/badge/Machine_Learning-5C2D91?style=flat-square" alt="Machine Learning" />
 <img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code" />
 <img src="https://img.shields.io/badge/Nix-5277C3?style=flat-square&logo=nixos&logoColor=white" alt="Nix" />
-<img src="https://img.shields.io/badge/Kyo-DC322F?style=flat-square" alt="Kyo (Scala effects)" />
 <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL" />
 <img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" alt="Apache Airflow" />
 
@@ -52,8 +51,8 @@ transformados em sinais que você consegue de fato usar.
 <img src="https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="PySpark" /> 
 <img src="https://img.shields.io/badge/Delta_Lake-00ADD8?style=flat-square&logo=databricks&logoColor=white" alt="Delta Lake" />
 <img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white" alt="Databricks" />
+<img src="https://img.shields.io/badge/Akka_%2F_Pekko-15A9CE?style=flat-square" alt="Akka / Apache Pekko" />
 <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />
-<img src="https://img.shields.io/badge/OpenMPI-2E7D32?style=flat-square" alt="OpenMPI" />
 <img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
 <img src="https://img.shields.io/badge/NetCDF-1F5F8B?style=flat-square" alt="NetCDF" />
 <img src="https://img.shields.io/badge/WAVEWATCH_III-0077BE?style=flat-square" alt="WAVEWATCH III" />
@@ -78,6 +77,7 @@ transformados em sinais que você consegue de fato usar.
 <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
 <img src="https://img.shields.io/badge/OpenCode-000000?style=flat-square" alt="OpenCode" />
 <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
+<img src="https://img.shields.io/badge/LoRA_%2F_DPO_fine--tuning-8E44AD?style=flat-square" alt="LoRA / DPO fine-tuning (PEFT, GGUF export)" />
 <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
 </p>
 
