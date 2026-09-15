@@ -41,11 +41,16 @@ edit or a change to the metrics workflow.
   per-lab knowledge lives in nix-config, not here. Never edit inside the
   markers. Locally: `python3 scripts/build_readme.py --nix-config ../nix-config --dry-run`
   and `python3 -m unittest discover -s scripts`.
-- `.github/workflows/activity.yml` – runs jamesgeorge007/github-activity-readme
-  daily at 07:00 UTC and rewrites the text between the
-  `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers,
-  once per README (two steps, `TARGET_FILE` selects the file). Never edit
-  inside the markers; keep the pair intact in both files.
+- `.github/workflows/activity.yml` – daily at 07:00 UTC, runs
+  `scripts/build_activity.py` with `METRICS_TOKEN`, which reads the user's
+  own events (private ones included) and rewrites the list between the
+  `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers
+  in both READMEs. Private repositories render as a bare name with 🔒 and
+  no links; `PRIVATE_LABELS` in the script adds a label (marola: "FOSS
+  soon"). Consecutive identical lines collapse. Never edit inside the
+  markers; keep the pair intact in both files. Locally:
+  `GITHUB_TOKEN=$(gh auth token) python3 scripts/build_activity.py --dry-run`
+  and `python3 -m unittest discover -s scripts`.
 - `metrics.base.svg`, `metrics.languages.svg` – **generated**. Never edit these by hand; the next workflow run overwrites
   them. They are committed so the README can embed them by relative path.
 
@@ -73,7 +78,7 @@ edit or a change to the metrics workflow.
 - `lowlighter/metrics` is pinned to a release tag. Bump it deliberately
   rather than reverting to `@latest`. Upstream is unmaintained (v3.34 is
   from 2023); its activity plugin no longer works with GitHub's events API,
-  which is why `activity.yml` uses a different action.
+  which is why `activity.yml` uses our own script.
 - The languages step runs the in-depth analyzer, which clones every owned
   repository over plain https without a token. Private repositories fail to
   clone silently, so the card covers **public repositories only**. It
