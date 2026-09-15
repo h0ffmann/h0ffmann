@@ -5,9 +5,15 @@ name: activity
 # README.pt-BR.md by scripts/build_activity.py. Uses METRICS_TOKEN (not GITHUB_TOKEN) so the
 # user's own private events are included: private repositories show as a bare name with a lock
 # and no links.
+#
+# Push, not only poll: nix-config's profile-ping.yml sends a repository_dispatch (`activity`) after
+# every merged PR in nix-config, marola, ww3-gpu and gcp-agentic-architect; its payload names the
+# merge, so it shows even while the events API lags. The daily cron stays as the fallback.
 on:
   schedule:
     - cron: "0 7 * * *"          # daily, one hour after metrics.yml
+  repository_dispatch:
+    types: [activity]
   workflow_dispatch:
   push:
     branches: [main]
@@ -33,7 +39,8 @@ jobs:
       - name: rewrite the activity section
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
-        run: python3 scripts/build_activity.py --readme README.md --readme README.pt-BR.md --readme README.ja.md
+          DISPATCH: ${{ github.event_name == 'repository_dispatch' && toJSON(github.event.client_payload) || '' }}
+        run: python3 scripts/build_activity.py --limit 10 --dispatch-json "$DISPATCH" --readme README.md --readme README.pt-BR.md --readme README.ja.md
       - name: commit if changed
         run: |
           git config user.name  "github-actions[bot]"

@@ -6,6 +6,8 @@ name: nix-labs
 on:
   schedule:
     - cron: "30 6 * * *"          # daily, 30 min after metrics.yml
+  repository_dispatch:
+    types: [activity]             # profile-ping.yml; acted on only when the merge was in nix-config
   workflow_dispatch:
   push:
     branches: [main]
@@ -23,6 +25,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'repository_dispatch' || github.event.client_payload.repo == 'h0ffmann/nix-config'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

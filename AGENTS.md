@@ -39,17 +39,25 @@ edit or a change to the metrics workflow.
 - `.github/workflows/nix-labs.yml` – daily at 06:30 UTC, checks out
   h0ffmann/nix-config into the gitignored `nix-config/` path and runs
   `scripts/build_readme.py`, which rewrites the table between
-  `<!-- nix-labs:start -->` / `<!-- nix-labs:end -->` in both READMEs: per
+  `<!-- nix-labs:start -->` / `<!-- nix-labs:end -->` in both READMEs (also
+  on an `activity` dispatch whose payload names h0ffmann/nix-config): per
   lab, the pinned nixpkgs rev and date, and the versions of the attributes
   that lab's `lab.json` lists, read with `nix eval` at that rev. The
   per-lab knowledge lives in nix-config, not here. Never edit inside the
   markers. Locally: `python3 scripts/build_readme.py --nix-config ../nix-config --dry-run`
   and `python3 -m unittest discover -s scripts`.
-- `.github/workflows/activity.yml` – daily at 07:00 UTC, runs
+- `.github/workflows/activity.yml` – daily at 07:00 UTC **and** on every
+  `repository_dispatch` of type `activity` (sent by nix-config's reusable
+  `profile-ping.yml` after a merged PR in nix-config, marola, ww3-gpu or
+  gcp-agentic-architect; each of those holds a `PROFILE_DISPATCH_TOKEN`
+  secret), runs
   `scripts/build_activity.py` with `METRICS_TOKEN`, which reads the user's
   own events (private ones included) and rewrites the list between the
   `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers
-  in both READMEs. Private repositories render as a bare name with 🔒 and
+  in all three READMEs, 10 lines. The dispatch payload (repo, PR number,
+  visibility, merge time — nothing else, these logs are public) is passed
+  as `--dispatch-json`, and that merge is added when the events API has
+  not caught up yet. Private repositories render as a bare name with 🔒 and
   no links; `PRIVATE_LABELS` in the script adds a label (marola: "FOSS
   soon"). Consecutive identical lines collapse. Never edit inside the
   markers; keep the pair intact in both files. Locally:
