@@ -22,6 +22,15 @@ edit or a change to the metrics workflow.
   UTC (and on manual dispatch, and on push to `main` when the workflow file
   itself changes). Each of its two steps writes one SVG and commits it back
   to `main` with a `[Skip GitHub Action]` suffix.
+- `.github/workflows/nix-labs.yml` – daily at 06:30 UTC, checks out
+  h0ffmann/nix-config into the gitignored `nix-config/` path and runs
+  `scripts/build_readme.py`, which rewrites the table between
+  `<!-- nix-labs:start -->` / `<!-- nix-labs:end -->` in both READMEs: per
+  lab, the pinned nixpkgs rev and date, and the versions of the attributes
+  that lab's `lab.json` lists, read with `nix eval` at that rev. The
+  per-lab knowledge lives in nix-config, not here. Never edit inside the
+  markers. Locally: `python3 scripts/build_readme.py --nix-config ../nix-config --dry-run`
+  and `python3 -m unittest discover -s scripts`.
 - `.github/workflows/activity.yml` – runs jamesgeorge007/github-activity-readme
   daily at 07:00 UTC and rewrites the text between the
   `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers,
@@ -39,7 +48,7 @@ edit or a change to the metrics workflow.
   Icons logo exists.
 - Badge groups live inside `<p align="left">` blocks, one `<img>` per line.
 - The stats section embeds the two generated SVGs and the activity markers,
-  in both READMEs. If you add a metrics
+  and the nix labs section holds the nix-labs markers, in both READMEs. If you add a metrics
   step to the workflow, also add the matching `<img>` to the README, or it
   will be generated but never shown.
 - Preview: GitHub renders the README, so check the branch on github.com or

@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-15
 **Repo:** h0ffmann/h0ffmann (GitHub profile README)
-**Status:** approved in chat, awaiting written-spec review
+**Status:** implemented (PR "Add the generated nix labs section")
 
 ## Goal
 

@@ -1,0 +1,45 @@
+name: nix-labs
+
+# Rewrites the "nix labs" table in README.md and README.pt-BR.md from h0ffmann/nix-config:
+# each lab's pinned nixpkgs (rev, date, age) and the headline tool versions its lab.json names,
+# read with `nix eval` against that rev. Nothing is built; no lab flake is evaluated.
+on:
+  schedule:
+    - cron: "30 6 * * *"          # daily, 30 min after metrics.yml
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/nix-labs.yml"
+      - "scripts/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nix-labs
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: h0ffmann/nix-config
+          path: nix-config
+      - uses: DeterminateSystems/nix-installer-action@v23
+      - name: unit tests
+        run: python3 -m unittest discover -s scripts -v
+      - name: rewrite the nix labs section
+        run: python3 scripts/build_readme.py --nix-config nix-config --readme README.md --readme README.pt-BR.md
+      - name: commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet README.md README.pt-BR.md; then echo "no change"; exit 0; fi
+          git add README.md README.pt-BR.md
+          git commit -m "Update nix labs section - [Skip GitHub Action]"
+          git pull --rebase origin main
+          git push

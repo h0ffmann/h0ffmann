@@ -77,6 +77,24 @@ turned into signals you can actually act on.
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 </p>
 
+## ❄️ nix labs
+
+self-contained nix flakes for the toolchains i work in, at [nix-config](https://github.com/h0ffmann/nix-config):
+one directory per lab, consumed by other repos as a flake input, a sparse submodule or a github action.
+
+[![nix-config ci](https://github.com/h0ffmann/nix-config/actions/workflows/ci.yml/badge.svg)](https://github.com/h0ffmann/nix-config/actions/workflows/ci.yml)
+
+<!-- generated daily by .github/workflows/nix-labs.yml from h0ffmann/nix-config -->
+<!-- nix-labs:start -->
+| lab | what | nixpkgs | locked | toolchain |
+| --- | --- | --- | --- | --- |
+| [agentic](https://github.com/h0ffmann/nix-config/tree/main/labs/agentic) | ai-jail, OpenCode, gh, and jail-run / gh-token / clip / clip-relay | `eaad089` | 2026-09-11 (4 days ago) | gh 2.100.0 · opencode 1.18.30 · bubblewrap 0.12.0 |
+| [cuda](https://github.com/h0ffmann/nix-config/tree/main/labs/cuda) | nixos-cuda binary cache setup, torch venv with the driver libs on its path; x86_64-linux only | `eaad089` | 2026-09-11 (4 days ago) | python3 3.14.7 |
+| [lint](https://github.com/h0ffmann/nix-config/tree/main/labs/lint) | hadolint, actionlint, shellcheck, ruff, pyflakes, cloc, coverage, pdoc as one list | `eaad089` | 2026-09-11 (4 days ago) | hadolint 2.14.0 · actionlint 1.7.12 · shellcheck 0.11.0 · ruff 0.16.6 |
+| [pratico](https://github.com/h0ffmann/nix-config/tree/main/labs/pratico) | WAVEWATCH III toolchain (gfortran / OpenMPI / NetCDF), zsh-ai pilot, ai-jail recipes | `eaad089` | 2026-09-11 (4 days ago) | gfortran 15.3.0 · openmpi 5.0.10 · netcdf 4.10.1 · hdf5 1.14.6 · eccodes 2.48.0 |
+| [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf, a composite Action that builds and commits PDFs | `eaad089` | 2026-09-11 (4 days ago) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 |
+<!-- nix-labs:end -->
+
 ## 📊 stats
 
 <!-- generated daily by .github/workflows/metrics.yml (lowlighter/metrics) -->
