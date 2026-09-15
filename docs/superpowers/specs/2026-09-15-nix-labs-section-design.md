@@ -36,6 +36,8 @@ A new section is inserted between `## 📊 stats` and `## 💼 exp-highlights`:
 <!-- nix-labs:end -->
 ```
 
+Version numbers in the example rows are illustrative; the script renders the real ones.
+
 Rules:
 
 - The badge line and the "generated daily" comment are static; only the text
