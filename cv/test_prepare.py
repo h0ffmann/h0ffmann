@@ -36,6 +36,11 @@ class QrLine(unittest.TestCase):
     def test_floated_qr_line_is_removed(self):
         self.assertEqual(p.drop_qr("x\n" + QR + "y\n"), "x\ny\n")
 
+    def test_portuguese_qr_line_is_removed_too(self):
+        qr_pt = ('<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" '
+                 'title="escaneie para abrir marola.dev" align="right" width="120" /></a>\n')
+        self.assertEqual(p.drop_qr("x\n" + qr_pt + "y\n"), "x\ny\n")
+
     def test_no_qr_is_unchanged(self):
         self.assertEqual(p.drop_qr("nothing here\n"), "nothing here\n")
 
