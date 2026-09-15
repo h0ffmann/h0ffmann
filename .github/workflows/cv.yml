@@ -9,6 +9,7 @@ on:
     paths:
       - README.md
       - README.pt-BR.md
+      - README.ja.md
       - cv/**
       - flake.nix
       - flake.lock

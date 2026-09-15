@@ -11,13 +11,15 @@ edit or a change to the metrics workflow.
 
 ## Files
 
-- `README.md` – the profile page, in English. `README.pt-BR.md` is its
-  Portuguese mirror; the two link to each other from a flag line at the
-  top. **Every edit to one is made to the other in the same commit**: same
-  sections, same badges, same markers, only the prose and alt texts differ.
-- `pdf/cv.pdf` and `pdf/cv.pt-BR.pdf` – **generated** CVs, built from
-  `README.md` and `README.pt-BR.md` (headers `cv/header.md` /
-  `cv/header.pt-BR.md`, footer and PDF title per language in `cv/build.sh`) by
+- `README.md` – the profile page, in English. `README.pt-BR.md` and
+  `README.ja.md` are its Portuguese and Japanese mirrors; the three link to
+  each other from a flag line at the top. **Every edit to one is made to
+  all three in the same commit**: same sections, same badges, same markers,
+  only the prose and alt texts differ.
+- `pdf/cv.pdf`, `pdf/cv.pt-BR.pdf` and `pdf/cv.ja.pdf` – **generated** CVs,
+  built from the three READMEs (headers `cv/header*.md`, footer, PDF title
+  and, for Japanese, the luatexja preamble lines per language in
+  `cv/build.sh`) by
   `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
   (pandoc → lualatex; shields badges become colored pills, emoji stay in
   color). `cv/prepare.py` drops everything between `<!-- cv:skip -->` /
@@ -26,7 +28,7 @@ edit or a change to the metrics workflow.
   `flake.nix` pins publisher in `flake.lock`; bump with
   `nix flake update publisher` when the lab changes. Build locally with
   `nix build` (result/cv.pdf) and run `python3 -m unittest discover -s cv`.
-  Keep the skip-marker pairs balanced and identical in both READMEs.
+  Keep the skip-marker pairs balanced and identical in all READMEs.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.
