@@ -15,10 +15,9 @@ edit or a change to the metrics workflow.
   regularly.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00
   UTC (and on manual dispatch, and on push to `main` when the workflow file
-  itself changes). Each of its four steps writes one SVG and commits it back
+  itself changes). Each of its two steps writes one SVG and commits it back
   to `main` with a `[Skip GitHub Action]` suffix.
-- `metrics.base.svg`, `metrics.languages.svg`, `metrics.calendar.svg`,
-  `metrics.activity.svg` – **generated**. Never edit these by hand; the next workflow run overwrites
+- `metrics.base.svg`, `metrics.languages.svg` – **generated**. Never edit these by hand; the next workflow run overwrites
   them. They are committed so the README can embed them by relative path.
 
 ## Working on the README
