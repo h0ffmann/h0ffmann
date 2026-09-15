@@ -18,8 +18,9 @@ on:
 permissions:
   contents: write
 
+# One group for every workflow that commits to main, so their pushes never race.
 concurrency:
-  group: activity
+  group: readme-bots
   cancel-in-progress: false
 
 jobs:
