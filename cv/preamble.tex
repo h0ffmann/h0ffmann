@@ -1,9 +1,10 @@
 % CV preamble — lualatex. Fonts, colors and spacing for the README-as-CV; badges and emoji come
 % from labs/publisher (publisher-badges.sty via TEXINPUTS, Noto Color Emoji via OSFONTDIR).
-\usepackage[a4paper,margin=13mm,top=11mm,bottom=13mm]{geometry}
+% \cvtitle and \cvfooter are defined per language by cv/build.sh (vars.tex, included first).
+\usepackage[a4paper,margin=13mm,top=10mm,bottom=12mm]{geometry}
 \usepackage{fontspec}
 \directlua{luaotfload.add_fallback("emojifb", {"Noto Color Emoji:mode=harf;"})}
-\setmainfont{DejaVu Sans}[RawFeature={fallback=emojifb}, Scale=0.86]
+\setmainfont{DejaVu Sans}[RawFeature={fallback=emojifb}, Scale=0.85]
 \setmonofont{DejaVu Sans Mono}[Scale=0.85]
 \usepackage{xcolor}
 \definecolor{marola}{HTML}{0077BE}
@@ -22,7 +23,7 @@
 \usepackage{enumitem}
 \setlist[itemize]{nosep, leftmargin=1.2em, itemsep=1pt}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=marola, urlcolor=marola, pdftitle={Matheus Hoffmann — CV}, pdfauthor={Matheus Hoffmann}}
+\hypersetup{colorlinks=true, linkcolor=marola, urlcolor=marola, pdftitle={\cvtitle}, pdfauthor={Matheus Hoffmann}}
 % blockquotes ("going open source soon") as a left marola bar, muted text
 \usepackage{framed}
 \renewenvironment{quote}{\def\FrameCommand{{\color{marola}\vrule width 2pt}\hspace{6pt}}\MakeFramed{\advance\hsize-\width\FrameRestore}\color{muted}\small}{\endMakeFramed}
@@ -31,7 +32,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[L]{\footnotesize\color{muted}generated from \href{https://github.com/h0ffmann/h0ffmann}{github.com/h0ffmann} — the README is the source}
+\fancyfoot[L]{\footnotesize\color{muted}\cvfooter}
 \fancyfoot[R]{\footnotesize\color{muted}\thepage}
 \setlength{\parskip}{2pt}
 \setlength{\parindent}{0pt}

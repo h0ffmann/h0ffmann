@@ -1,6 +1,6 @@
 name: cv
 
-# pdf/cv.pdf from README.md, built in the Nix sandbox by nix-config's labs/publisher (pandoc →
+# pdf/cv.pdf from README.md and pdf/cv.pt-BR.pdf from README.pt-BR.md, built in the Nix sandbox by nix-config's labs/publisher (pandoc →
 # lualatex, badges as colored pills, color emoji) and committed back. Bot pushes use the Actions
 # token and never trigger this; only hand edits to the README, cv/ or the flake do.
 on:
@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - README.md
+      - README.pt-BR.md
       - cv/**
       - flake.nix
       - flake.lock
