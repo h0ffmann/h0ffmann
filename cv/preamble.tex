@@ -1,0 +1,44 @@
+% CV preamble — lualatex. Fonts, colors and spacing for the README-as-CV; badges and emoji come
+% from labs/publisher (publisher-badges.sty via TEXINPUTS, Noto Color Emoji via OSFONTDIR).
+\usepackage[a4paper,margin=13mm,top=11mm,bottom=13mm]{geometry}
+\usepackage{fontspec}
+\directlua{luaotfload.add_fallback("emojifb", {"Noto Color Emoji:mode=harf;"})}
+\setmainfont{DejaVu Sans}[RawFeature={fallback=emojifb}, Scale=0.86]
+\setmonofont{DejaVu Sans Mono}[Scale=0.85]
+\usepackage{xcolor}
+\definecolor{marola}{HTML}{0077BE}
+\definecolor{ink}{HTML}{24292F}
+\definecolor{muted}{HTML}{57606A}
+\color{ink}
+\usepackage{publisher-badges}
+\usepackage{titlesec}
+% "# Matheus Hoffmann" (the only level-1 heading) is the name; sections keep their emoji.
+\titleformat{\section}{\Large\bfseries\color{marola}}{}{0pt}{}[{\color{marola}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\titleformat{\subsection}{\normalsize\bfseries\color{ink}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{5pt}{2pt}
+\titleformat{\subsubsection}{\small\bfseries\color{muted}}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{5pt}{2pt}
+\usepackage{enumitem}
+\setlist[itemize]{nosep, leftmargin=1.2em, itemsep=1pt}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=marola, urlcolor=marola, pdftitle={Matheus Hoffmann — CV}, pdfauthor={Matheus Hoffmann}}
+% blockquotes ("going open source soon") as a left marola bar, muted text
+\usepackage{framed}
+\renewenvironment{quote}{\def\FrameCommand{{\color{marola}\vrule width 2pt}\hspace{6pt}}\MakeFramed{\advance\hsize-\width\FrameRestore}\color{muted}\small}{\endMakeFramed}
+% footer: source and build date; no page numbers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{muted}generated from \href{https://github.com/h0ffmann/h0ffmann}{github.com/h0ffmann} — the README is the source}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{0pt}
+% pandoc: keep tables compact
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\footnotesize}
+\setlength{\LTpre}{2pt}\setlength{\LTpost}{2pt}\setlength{\tabcolsep}{4pt}
+\usepackage{graphicx}

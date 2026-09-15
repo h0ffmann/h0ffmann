@@ -1,2 +1,4 @@
 nix-config/
 __pycache__/
+result
+result-*

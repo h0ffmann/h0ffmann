@@ -1,0 +1,34 @@
+name: cv
+
+# pdf/cv.pdf from README.md, built in the Nix sandbox by nix-config's labs/publisher (pandoc →
+# lualatex, badges as colored pills, color emoji) and committed back. Bot pushes use the Actions
+# token and never trigger this; only hand edits to the README, cv/ or the flake do.
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - cv/**
+      - flake.nix
+      - flake.lock
+      - .github/workflows/cv.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cv
+  cancel-in-progress: false
+
+jobs:
+  cv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: h0ffmann/nix-config/labs/publisher@main
+        with:
+          pdf-dir: pdf
+          artifact-name: cv
+          commit: "true"
+          commit-message: "Update cv.pdf - [Skip GitHub Action]"

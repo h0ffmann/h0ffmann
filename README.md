@@ -1,4 +1,6 @@
-<p align="right"><a href="README.pt-BR.md">🇧🇷 português</a></p>
+<!-- cv:skip -->
+<p align="right"><a href="pdf/cv.pdf">📄 cv (pdf)</a> · <a href="README.pt-BR.md">🇧🇷 português</a></p>
+<!-- cv:end -->
 
 ## 👋 me
 
@@ -95,6 +97,7 @@ one directory per lab, consumed by other repos as a flake input, a sparse submod
 | [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf, a composite Action that builds and commits PDFs | `eaad089` | 2026-09-11 (4 days ago) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 |
 <!-- nix-labs:end -->
 
+<!-- cv:skip -->
 ## 📊 stats
 
 <!-- generated daily by .github/workflows/metrics.yml (lowlighter/metrics) -->
@@ -114,6 +117,7 @@ one directory per lab, consumed by other repos as a flake input, a sparse submod
 4. 💪 Opened PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
 5. 🎉 Merged PR [#1](https://github.com/h0ffmann/h0ffmann/pull/1) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)
 <!--END_SECTION:activity-->
+<!-- cv:end -->
 
 ## 💼 exp-highlights
 
@@ -143,6 +147,8 @@ one directory per lab, consumed by other repos as a flake input, a sparse submod
 <img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
 </p>
 
+<!-- cv:skip -->
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="600">
 </p>
+<!-- cv:end -->
