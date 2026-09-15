@@ -78,7 +78,7 @@
 <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
 </p>
 
-### ☁️ クラウド & インフラ
+### ☁️ クラウド & インフラ など
 <p align="left">
 <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-web-services&logoColor=white" alt="AWS" />
 <img src="https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazon-s3&logoColor=white" alt="Amazon S3" />
@@ -87,11 +87,14 @@
 <img src="https://img.shields.io/badge/Amazon_EMR-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="Amazon EMR" />
 <img src="https://img.shields.io/badge/Amazon_Kinesis-FF9900?style=flat-square&logo=amazon-kinesis&logoColor=white" alt="Amazon Kinesis" />
 <img src="https://img.shields.io/badge/Amazon_Redshift-FF9900?style=flat-square&logo=amazon-redshift&logoColor=white" alt="Amazon Redshift" />
+<img src="https://img.shields.io/badge/Amazon_DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white" alt="Amazon DynamoDB" />
 <img src="https://img.shields.io/badge/AWS_Glue-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS Glue" />
 <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
 <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus" />
+<img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Grafana" />
+<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" alt="dbt" />
 </p>
 
 ## ❄️ nix labs
