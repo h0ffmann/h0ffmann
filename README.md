@@ -1,5 +1,5 @@
 <!-- cv:skip -->
-<p align="right"><a href="pdf/cv.pdf">📄 cv (en)</a> · <a href="pdf/cv.pt-BR.pdf">📄 cv (pt-BR)</a> · <a href="README.pt-BR.md">🇧🇷 português</a></p>
+<p align="right"><a href="pdf/cv.pdf">📄 cv (en)</a> · <a href="pdf/cv.pt-BR.pdf">📄 cv (pt-BR)</a> · <a href="pdf/cv.ja.pdf">📄 cv (ja)</a> · <a href="README.pt-BR.md">🇧🇷 português</a> · <a href="README.ja.md">🇯🇵 日本語</a></p>
 <!-- cv:end -->
 
 ## 👋 me

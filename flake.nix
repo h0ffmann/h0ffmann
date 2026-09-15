@@ -1,7 +1,7 @@
 {
   description = "h0ffmann profile — builds pdf/cv.pdf from README.md with nix-config's labs/publisher";
 
-  inputs.publisher.url = "github:h0ffmann/nix-config?dir=labs/publisher";
+  inputs.publisher.url = "github:h0ffmann/nix-config/labs/publisher-cjk?dir=labs/publisher";
 
   outputs = { self, publisher }:
     let
