@@ -20,7 +20,9 @@ TRIM_AT_DASH = {"texliveMedium"}       # "2025-r78234-final-env" -> "2025"
 STALE_DAYS = 90
 START, END = "<!-- nix-labs:start -->", "<!-- nix-labs:end -->"
 LAB_URL = "https://github.com/h0ffmann/nix-config/tree/main/labs/{name}"
-HEADER = "| lab | what | nixpkgs | locked | toolchain |\n| --- | --- | --- | --- | --- |\n"
+# The separator's dash counts are relative column widths for pandoc (the CV); GitHub ignores them.
+HEADER = ("| lab | what | nixpkgs | locked | toolchain |\n"
+          "| " + "-" * 9 + " | " + "-" * 40 + " | " + "-" * 8 + " | " + "-" * 17 + " | " + "-" * 26 + " |\n")
 NIX_TIMEOUT = 120
 
 

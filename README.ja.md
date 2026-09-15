@@ -36,13 +36,27 @@
 <p align="left">
 <img src="https://img.shields.io/badge/Scala-DC322F?style=flat-square&logo=scala&logoColor=white" alt="Scala" />
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/Apache_Spark-FFFFFF?style=flat-square&logo=apachespark&logoColor=E35A16" alt="Apache Spark" />
-<img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white" alt="Databricks" />
-<img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" alt="Apache Kafka" />
+<img src="https://img.shields.io/badge/Machine_Learning-5C2D91?style=flat-square" alt="Machine Learning" />
+<img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code" />
+<img src="https://img.shields.io/badge/Nix-5277C3?style=flat-square&logo=nixos&logoColor=white" alt="Nix" />
+<img src="https://img.shields.io/badge/Kyo-DC322F?style=flat-square" alt="Kyo (Scala effects)" />
 <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL" />
-<img src="https://img.shields.io/badge/Delta_Lake-00ADD8?style=flat-square&logo=databricks&logoColor=white" alt="Delta Lake" />
 <img src="https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" alt="Apache Airflow" />
 
+</p>
+
+### ⚡ ハイエンド
+<p align="left">
+<img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" alt="Apache Kafka" />
+<img src="https://img.shields.io/badge/Apache_Spark-FFFFFF?style=flat-square&logo=apachespark&logoColor=E35A16" alt="Apache Spark" />
+<img src="https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="PySpark" /> 
+<img src="https://img.shields.io/badge/Delta_Lake-00ADD8?style=flat-square&logo=databricks&logoColor=white" alt="Delta Lake" />
+<img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white" alt="Databricks" />
+<img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />
+<img src="https://img.shields.io/badge/OpenMPI-2E7D32?style=flat-square" alt="OpenMPI" />
+<img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white" alt="Fortran" />
+<img src="https://img.shields.io/badge/NetCDF-1F5F8B?style=flat-square" alt="NetCDF" />
+<img src="https://img.shields.io/badge/WAVEWATCH_III-0077BE?style=flat-square" alt="WAVEWATCH III" />
 </p>
 
 ### 🤖 機械学習
@@ -52,17 +66,17 @@
 <img src="https://img.shields.io/badge/Kubeflow-326CE5?style=flat-square" alt="Kubeflow" />
 <img src="https://img.shields.io/badge/Amazon_SageMaker-FF9900?style=flat-square&logo=amazonsagemaker&logoColor=white" alt="Amazon SageMaker" />
 <img src="https://img.shields.io/badge/XGBoost-006ACC?style=flat-square&logo=xgboost&logoColor=white" alt="XGBoost" /> 
-<img src="https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="PySpark" /> 
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
 <img src="https://img.shields.io/badge/Optuna-2FA7BB?style=flat-square&logo=optuna&logoColor=white" alt="Optuna" />
 </p>
 
 ### 🧠 LLM & エージェント
 <p align="left">
-<img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code" />
 <img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
 <img src="https://img.shields.io/badge/DSPy-B5121B?style=flat-square" alt="DSPy" />
 <img src="https://img.shields.io/badge/RAG-6E40C9?style=flat-square" alt="RAG (retrieval-augmented generation)" />
 <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
+<img src="https://img.shields.io/badge/OpenCode-000000?style=flat-square" alt="OpenCode" />
 <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
 <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse" />
 </p>
@@ -79,6 +93,7 @@
 <img src="https://img.shields.io/badge/AWS_Glue-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS Glue" />
 <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+<img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
 </p>
 
 ## ❄️ nix labs
@@ -91,7 +106,7 @@
 <!-- .github/workflows/nix-labs.yml が h0ffmann/nix-config から毎日生成 -->
 <!-- nix-labs:start -->
 | lab | what | nixpkgs | locked | toolchain |
-| --- | --- | --- | --- | --- |
+| --------- | ---------------------------------------- | -------- | ----------------- | -------------------------- |
 | [agentic](https://github.com/h0ffmann/nix-config/tree/main/labs/agentic) | ai-jail, OpenCode, gh, and jail-run / gh-token / clip / clip-relay | `eaad089` | 2026-09-11 (4 days ago) | gh 2.100.0 · opencode 1.18.30 · bubblewrap 0.12.0 |
 | [cuda](https://github.com/h0ffmann/nix-config/tree/main/labs/cuda) | nixos-cuda binary cache setup, torch venv with the driver libs on its path; x86_64-linux only | `eaad089` | 2026-09-11 (4 days ago) | python3 3.14.7 |
 | [lint](https://github.com/h0ffmann/nix-config/tree/main/labs/lint) | hadolint, actionlint, shellcheck, ruff, pyflakes, cloc, coverage, pdoc as one list | `eaad089` | 2026-09-11 (4 days ago) | hadolint 2.14.0 · actionlint 1.7.12 · shellcheck 0.11.0 · ruff 0.16.6 |
@@ -128,7 +143,6 @@
 - **elemeno AI（米国 - ブラジル顧客 bvmf: AMER3）** - GCP 上の k8s による MLOps エンジニア
 - **broad（英国）** - GCP 上のデジタルバンキング向け Scala シニアソフトウェアエンジニア
 - **stone（ブラジル: nasdaq: STNE）** - AWS 上の Scala による ML・ソフトウェアエンジニア
-
 
 ## 🏅 資格
 
