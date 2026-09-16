@@ -121,6 +121,25 @@ class Dispatched(unittest.TestCase):
             self.assertEqual(ba.with_dispatched([], payload), [], payload)
 
 
+class SkipRepos(unittest.TestCase):
+    def test_profile_repo_events_are_dropped(self):
+        events = [ev("PushEvent", "h0ffmann/h0ffmann"),
+                  ev("PullRequestEvent", "h0ffmann/h0ffmann", action="opened", number=7),
+                  ev("PushEvent", "h0ffmann/nix-config")]
+        lines = ba.render(events, limit=10, skip=["h0ffmann/h0ffmann"])
+        self.assertEqual(lines, ["1. ↑ Pushed to main in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)"])
+
+    def test_limit_still_fills_from_other_repos(self):
+        events = [ev("PushEvent", "h0ffmann/h0ffmann")] * 5 + [
+            ev("PushEvent", "h0ffmann/nix-config"), ev("PushEvent", "h0ffmann/ww3-gpu")]
+        self.assertEqual(len(ba.render(events, limit=2, skip=["h0ffmann/h0ffmann"])), 2)
+
+    def test_empty_skip_keeps_everything(self):
+        events = [ev("PushEvent", "h0ffmann/h0ffmann")]
+        self.assertEqual(len(ba.render(events, limit=10, skip=[""])), 1)
+        self.assertEqual(len(ba.render(events, limit=10)), 1)
+
+
 class ReplaceSection(unittest.TestCase):
     def test_replaces_between_activity_markers(self):
         text = "a\n<!--START_SECTION:activity-->\nold\n<!--END_SECTION:activity-->\nb\n"
