@@ -29,6 +29,10 @@ edit or a change to the metrics workflow.
   `nix flake update publisher` when the lab changes. Build locally with
   `nix build` (result/cv.pdf) and run `python3 -m unittest discover -s cv`.
   Keep the skip-marker pairs balanced and identical in all READMEs.
+- `LICENSE` – MIT, plain text with nothing appended: GitHub's licence
+  detection reports NOASSERTION when a scope note follows the licence body.
+  It covers the scripts and the prose here; the metrics cards are generated
+  by a third-party action and the CV PDFs are built from these READMEs.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.
