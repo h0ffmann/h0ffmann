@@ -36,37 +36,37 @@ class RepoText(unittest.TestCase):
 class EventLines(unittest.TestCase):
     def test_public_pr_merged_links_number(self):
         line = ba.event_line(ev("PullRequestEvent", "h0ffmann/h0ffmann", action="closed", number=5, extra={"merged": True}))
-        self.assertEqual(line, "🎉 Merged PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)")
+        self.assertEqual(line, "✔ Merged PR [#5](https://github.com/h0ffmann/h0ffmann/pull/5) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)")
 
     def test_public_pr_opened(self):
         line = ba.event_line(ev("PullRequestEvent", "h0ffmann/h0ffmann", action="opened", number=9))
-        self.assertEqual(line, "💪 Opened PR [#9](https://github.com/h0ffmann/h0ffmann/pull/9) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)")
+        self.assertEqual(line, "◆ Opened PR [#9](https://github.com/h0ffmann/h0ffmann/pull/9) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)")
 
     def test_private_pr_has_no_number_or_link(self):
         line = ba.event_line(ev("PullRequestEvent", "h0ffmann/marola", public=False, action="closed", number=88, extra={"merged": True}))
-        self.assertEqual(line, "🎉 Merged a PR in marola 🔒 FOSS soon")
+        self.assertEqual(line, "✔ Merged a PR in marola 🔒 FOSS soon")
 
     def test_pr_closed_without_merge(self):
         line = ba.event_line(ev("PullRequestEvent", "h0ffmann/x", action="closed", number=1, extra={"merged": False}))
-        self.assertTrue(line.startswith("❌ Closed PR [#1]"))
+        self.assertTrue(line.startswith("✕ Closed PR [#1]"))
 
     def test_issue_opened_public_and_private(self):
         self.assertEqual(ba.event_line(ev("IssuesEvent", "h0ffmann/h0ffmann", action="opened", number=4)),
-                         "❗ Opened issue [#4](https://github.com/h0ffmann/h0ffmann/issues/4) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)")
+                         "◇ Opened issue [#4](https://github.com/h0ffmann/h0ffmann/issues/4) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)")
         self.assertEqual(ba.event_line(ev("IssuesEvent", "h0ffmann/marola", public=False, action="opened", number=4)),
-                         "❗ Opened an issue in marola 🔒 FOSS soon")
+                         "◇ Opened an issue in marola 🔒 FOSS soon")
 
     def test_comment(self):
         self.assertEqual(ba.event_line(ev("IssueCommentEvent", "h0ffmann/h0ffmann", action="created", number=3)),
-                         "🗣 Commented on [#3](https://github.com/h0ffmann/h0ffmann/issues/3#issuecomment-1) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)")
+                         "✎ Commented on [#3](https://github.com/h0ffmann/h0ffmann/issues/3#issuecomment-1) in [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann)")
 
     def test_push_names_branch(self):
         self.assertEqual(ba.event_line(ev("PushEvent", "h0ffmann/marola", public=False, ref="refs/heads/feat/x")),
-                         "⬆️ Pushed to feat/x in marola 🔒 FOSS soon")
+                         "↑ Pushed to feat/x in marola 🔒 FOSS soon")
 
     def test_release_published(self):
         self.assertEqual(ba.event_line(ev("ReleaseEvent", "h0ffmann/ww-lab", action="published", extra={"tag": "v1.2"})),
-                         "🚀 Published release [v1.2](https://github.com/h0ffmann/ww-lab/releases/tag/v1.2) in [h0ffmann/ww-lab](https://github.com/h0ffmann/ww-lab)")
+                         "▲ Published release [v1.2](https://github.com/h0ffmann/ww-lab/releases/tag/v1.2) in [h0ffmann/ww-lab](https://github.com/h0ffmann/ww-lab)")
 
     def test_unknown_or_uninteresting_events_are_skipped(self):
         self.assertIsNone(ba.event_line(ev("WatchEvent", "x/y", action="started")))
@@ -86,11 +86,11 @@ class Render(unittest.TestCase):
         ]
         lines = ba.render(events, limit=5)
         self.assertEqual(len(lines), 5)
-        self.assertEqual(lines[0], "1. ⬆️ Pushed to main in marola 🔒 FOSS soon")
-        self.assertTrue(lines[1].startswith("2. 💪 Opened PR [#9]"))
-        self.assertEqual(lines[2], "3. ⬆️ Pushed to main in marola 🔒 FOSS soon")
-        self.assertTrue(lines[3].startswith("4. ❗ Opened issue [#4]"))
-        self.assertTrue(lines[4].startswith("5. ❗ Opened issue [#3]"))
+        self.assertEqual(lines[0], "1. ↑ Pushed to main in marola 🔒 FOSS soon")
+        self.assertTrue(lines[1].startswith("2. ◆ Opened PR [#9]"))
+        self.assertEqual(lines[2], "3. ↑ Pushed to main in marola 🔒 FOSS soon")
+        self.assertTrue(lines[3].startswith("4. ◇ Opened issue [#4]"))
+        self.assertTrue(lines[4].startswith("5. ◇ Opened issue [#3]"))
 
     def test_empty_when_nothing_interesting(self):
         self.assertEqual(ba.render([ev("WatchEvent", "x/y", action="started")], limit=5), [])
@@ -103,8 +103,8 @@ class Dispatched(unittest.TestCase):
         older = ev("PushEvent", "h0ffmann/marola", public=False, created="2026-09-15T10:00:00Z")
         lines = ba.render(ba.with_dispatched([older], self.PAYLOAD), limit=10)
         self.assertEqual(lines, [
-            "1. 🎉 Merged PR [#59](https://github.com/h0ffmann/nix-config/pull/59) in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)",
-            "2. ⬆️ Pushed to main in marola 🔒 FOSS soon",
+            "1. ✔ Merged PR [#59](https://github.com/h0ffmann/nix-config/pull/59) in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)",
+            "2. ↑ Pushed to main in marola 🔒 FOSS soon",
         ])
 
     def test_merge_already_in_the_api_is_not_duplicated(self):
@@ -113,7 +113,7 @@ class Dispatched(unittest.TestCase):
 
     def test_private_merge_has_no_number_or_link(self):
         payload = {**self.PAYLOAD, "repo": "h0ffmann/marola", "private": True}
-        self.assertEqual(ba.render(ba.with_dispatched([], payload), limit=10), ["1. 🎉 Merged a PR in marola 🔒 FOSS soon"])
+        self.assertEqual(ba.render(ba.with_dispatched([], payload), limit=10), ["1. ✔ Merged a PR in marola 🔒 FOSS soon"])
 
     def test_malformed_payloads_are_ignored(self):
         for payload in (None, "x", {}, {"repo": "h0ffmann/x", "number": "59"}, {"repo": "](evil)", "number": 1},
