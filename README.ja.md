@@ -112,7 +112,7 @@
 | [cuda](https://github.com/h0ffmann/nix-config/tree/main/labs/cuda) | nixos-cuda binary cache setup, torch venv with the driver libs on its path; x86_64-linux only | `eaad089` | 2026-09-11 (5日前) | python3 3.14.7 |
 | [lint](https://github.com/h0ffmann/nix-config/tree/main/labs/lint) | hadolint, actionlint, shellcheck, ruff, pyflakes, cloc, coverage, pdoc as one list | `eaad089` | 2026-09-11 (5日前) | hadolint 2.14.0 · actionlint 1.7.12 · shellcheck 0.11.0 · ruff 0.16.6 |
 | [pratico](https://github.com/h0ffmann/nix-config/tree/main/labs/pratico) | WAVEWATCH III toolchain (gfortran / OpenMPI / NetCDF), zsh-ai pilot, ai-jail recipes | `eaad089` | 2026-09-11 (5日前) | gfortran 15.3.0 · openmpi 5.0.10 · netcdf 4.10.1 · hdf5 1.14.6 · eccodes 2.48.0 · kokkos 5.2.0 · gtest 1.18.0 · cmake 4.4.2 |
-| [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf, a composite Action that builds and commits PDFs | `eaad089` | 2026-09-11 (5日前) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 · librsvg 2.62.3 |
+| [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf and mkDocx, a composite Action that builds and commits documents | `eaad089` | 2026-09-11 (5日前) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 · librsvg 2.62.3 |
 <!-- nix-labs:end -->
 
 <!-- cv:skip -->
