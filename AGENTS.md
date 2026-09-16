@@ -54,7 +54,10 @@ edit or a change to the metrics workflow.
   `scripts/build_activity.py` with `METRICS_TOKEN`, which reads the user's
   own events (private ones included) and rewrites the list between the
   `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers
-  in all three READMEs, 10 lines. The dispatch payload (repo, PR number,
+  in all three READMEs, 10 lines. Events in the profile repository itself
+  are skipped — its history is README and CV regeneration, which says
+  nothing about what the user is working on; `--skip-repo` overrides the
+  list and `--skip-repo ""` keeps everything. The dispatch payload (repo, PR number,
   visibility, merge time — nothing else, these logs are public) is passed
   as `--dispatch-json`, and that merge is added when the events API has
   not caught up yet. Private repositories render as a bare name with 🔒 and
