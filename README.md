@@ -23,7 +23,6 @@ turned into signals you can actually act on.
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
 <a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
-<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
 <a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
 <a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
 <a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
