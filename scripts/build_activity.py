@@ -55,11 +55,11 @@ def event_line(event, fetch=None):
     if t == "PullRequestEvent":
         n = p.get("number") or p.get("pull_request", {}).get("number")
         if action == "opened":
-            emoji, verb = "💪", "Opened"
+            emoji, verb = "◆", "Opened"
         elif action == "reopened":
-            emoji, verb = "🔁", "Reopened"
+            emoji, verb = "↻", "Reopened"
         elif action == "closed":
-            emoji, verb = ("🎉", "Merged") if _pr_merged(event, fetch) else ("❌", "Closed")
+            emoji, verb = ("✔", "Merged") if _pr_merged(event, fetch) else ("✕", "Closed")
         else:
             return None
         what = f"PR [#{n}](https://github.com/{repo}/pull/{n})" if public else "a PR"
@@ -67,7 +67,7 @@ def event_line(event, fetch=None):
     if t == "IssuesEvent":
         if action not in ("opened", "closed", "reopened"):
             return None
-        emoji = {"opened": "❗", "closed": "✅", "reopened": "🔁"}[action]
+        emoji = {"opened": "◇", "closed": "✔", "reopened": "↻"}[action]
         issue = p.get("issue", {})
         what = f"issue [#{issue.get('number')}]({issue.get('html_url')})" if public else "an issue"
         return f"{emoji} {action.capitalize()} {what} in {where}"
@@ -76,16 +76,16 @@ def event_line(event, fetch=None):
             return None
         issue, comment = p.get("issue", {}), p.get("comment", {})
         what = f"[#{issue.get('number')}]({comment.get('html_url')})" if public else "an issue"
-        return f"🗣 Commented on {what} in {where}"
+        return f"✎ Commented on {what} in {where}"
     if t == "PushEvent":
         branch = (p.get("ref") or "").removeprefix("refs/heads/")
-        return f"⬆️ Pushed to {branch} in {where}"
+        return f"↑ Pushed to {branch} in {where}"
     if t == "ReleaseEvent":
         if action != "published":
             return None
         rel = p.get("release", {})
         what = f"release [{rel.get('tag_name')}]({rel.get('html_url')})" if public else "a release"
-        return f"🚀 Published {what} in {where}"
+        return f"▲ Published {what} in {where}"
     return None
 
 
