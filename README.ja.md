@@ -129,16 +129,16 @@
 
 <!-- .github/workflows/activity.yml がマージごと（nix-config の profile-ping.yml からの push）と毎日生成 -->
 <!--START_SECTION:activity-->
-1. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-2. ◆ Opened PR [#60](https://github.com/h0ffmann/nix-config/pull/60) in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)
-3. ◆ Opened PR [#23](https://github.com/h0ffmann/ww3-gpu/pull/23) in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-4. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-5. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-6. ↑ Pushed to main in marola 🔒 FOSS soon
-7. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-8. ◆ Opened PR [#4](https://github.com/h0ffmann/gcp-agentic-architect/pull/4) in [h0ffmann/gcp-agentic-architect](https://github.com/h0ffmann/gcp-agentic-architect)
-9. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-10. ↑ Pushed to main in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)
+1. ↑ Pushed to main in marola 🔒 FOSS soon
+2. ↑ Pushed to mip-0056/5-ingest-workflow in marola 🔒 FOSS soon
+3. ↑ Pushed to docs/proposal-advisor in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+4. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+5. ↑ Pushed to mip-0056/5-ingest-workflow in marola 🔒 FOSS soon
+6. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+7. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+8. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+9. ↑ Pushed to main in [h0ffmann/gcp-agentic-architect](https://github.com/h0ffmann/gcp-agentic-architect)
+10. ↑ Pushed to docs/proposal-pt-tests-ww4 in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 <!--END_SECTION:activity-->
 <!-- cv:end -->
 
