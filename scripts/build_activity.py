@@ -5,6 +5,9 @@
     python3 scripts/build_activity.py --events-json events.json --dry-run
     ... --dispatch-json '{"repo": "h0ffmann/nix-config", "number": 59, "private": false, "merged_at": "..."}'
 
+The profile repository itself is skipped: its history is README and CV regeneration, which says
+nothing about what the user is working on. --skip-repo adds more, --skip-repo "" keeps everything.
+
 Reads the authenticated user's own events (private ones included when the token can see them)
 and writes the newest interesting ones between <!--START_SECTION:activity--> and
 <!--END_SECTION:activity-->. Public repositories and items are linked; a private repository is
@@ -112,9 +115,12 @@ def with_dispatched(events, payload):
     return sorted([merged, *events], key=lambda e: e.get("created_at") or "", reverse=True)
 
 
-def render(events, limit: int, fetch=None) -> list:
+def render(events, limit: int, fetch=None, skip=()) -> list:
     lines, last = [], None
+    skip = {r for r in skip if r}
     for event in events:
+        if event.get("repo", {}).get("name") in skip:
+            continue
         line = event_line(event, fetch)
         if line and line != last:
             lines.append(line)
@@ -153,6 +159,8 @@ def main(argv=None) -> int:
     ap.add_argument("--readme", type=Path, action="append", help="may repeat; default README.md")
     ap.add_argument("--events-json", type=Path, help="read events from a file instead of the API")
     ap.add_argument("--dispatch-json", default="", help="client_payload of an `activity` repository_dispatch")
+    ap.add_argument("--skip-repo", action="append",
+                    help="repo to leave out (may repeat); defaults to the profile repository")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
     token = os.environ.get("GITHUB_TOKEN", "")
@@ -171,7 +179,8 @@ def main(argv=None) -> int:
     except ValueError:
         print("warning: --dispatch-json is not JSON; ignored", file=sys.stderr)
         payload = None
-    lines = render(with_dispatched(events, payload), args.limit, fetch)
+    skip = args.skip_repo if args.skip_repo is not None else [f"{args.login}/{args.login}"]
+    lines = render(with_dispatched(events, payload), args.limit, fetch, skip)
     if args.dry_run:
         print("\n".join(lines))
         return 0
