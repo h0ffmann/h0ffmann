@@ -129,16 +129,16 @@
 
 <!-- .github/workflows/activity.yml がマージごと（nix-config の profile-ping.yml からの push）と毎日生成 -->
 <!--START_SECTION:activity-->
-1. ↑ Pushed to main in marola 🔒 FOSS soon
-2. ↑ Pushed to mip-0056/5-ingest-workflow in marola 🔒 FOSS soon
-3. ↑ Pushed to docs/proposal-advisor in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-4. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-5. ↑ Pushed to mip-0056/5-ingest-workflow in marola 🔒 FOSS soon
-6. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-7. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-8. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-9. ↑ Pushed to main in [h0ffmann/gcp-agentic-architect](https://github.com/h0ffmann/gcp-agentic-architect)
-10. ↑ Pushed to docs/proposal-pt-tests-ww4 in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+1. ↑ Pushed to main in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)
+2. ↑ Pushed to main in [h0ffmann/gcp-agentic-architect](https://github.com/h0ffmann/gcp-agentic-architect)
+3. ↑ Pushed to feat/cpp-kokkos-course in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+4. ◆ Opened PR [#31](https://github.com/h0ffmann/ww3-gpu/pull/31) in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+5. ◆ Opened PR [#30](https://github.com/h0ffmann/ww3-gpu/pull/30) in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+6. ◆ Opened PR [#29](https://github.com/h0ffmann/ww3-gpu/pull/29) in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+7. ↑ Pushed to fix/stray-result-symlink in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)
+8. ◆ Opened PR [#28](https://github.com/h0ffmann/ww3-gpu/pull/28) in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+9. ↑ Pushed to fix/stray-result-symlink in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)
+10. ◆ Opened PR [#63](https://github.com/h0ffmann/nix-config/pull/63) in [h0ffmann/nix-config](https://github.com/h0ffmann/nix-config)
 <!--END_SECTION:activity-->
 <!-- cv:end -->
 
