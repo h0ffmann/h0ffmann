@@ -5,10 +5,13 @@
 ## 👋 自己紹介
 
 決済処理と不正対策を中心に、スケーラブルなソリューションを構築してきた**8年**の経験を持つシニアソフトウェアエンジニア
+<!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
+<!-- cv:end -->
 
+<!-- cv:bottom -->
 ### 開発中 🌊 [marola](https://marola.dev) — 海のインテリジェンスレイヤー
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
@@ -31,6 +34,7 @@
 </p>
 
 > 🔓 近日オープンソース化予定 — コントリビュート希望の方はメールでご連絡ください：**mhoffmannfs[at]gmail.com**
+<!-- cv:end -->
 
 ### 🫀 コアスキル
 <p align="left">
@@ -69,6 +73,7 @@
 ### 🧠 LLM & エージェント
 <p align="left">
 <img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
+<img src="https://img.shields.io/badge/A2A-4285F4?style=flat-square" alt="Agent2Agent プロトコル (A2A)" />
 <img src="https://img.shields.io/badge/DSPy-B5121B?style=flat-square" alt="DSPy" />
 <img src="https://img.shields.io/badge/RAG-6E40C9?style=flat-square" alt="RAG (retrieval-augmented generation)" />
 <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />

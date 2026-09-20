@@ -1,7 +1,7 @@
 % CV preamble — lualatex. Fonts, colors and spacing for the README-as-CV; badges and emoji come
 % from labs/publisher (publisher-badges.sty via TEXINPUTS, Noto Color Emoji via OSFONTDIR).
 % \cvtitle and \cvfooter are defined per language by cv/build.sh (vars.tex, included first).
-\usepackage[a4paper,margin=13mm,top=10mm,bottom=12mm]{geometry}
+\usepackage[a4paper,margin=13mm,top=8mm,bottom=12mm]{geometry}
 \usepackage{fontspec}
 \directlua{luaotfload.add_fallback("emojifb", {"Noto Color Emoji:mode=harf;"})}
 \setmainfont{DejaVu Sans}[RawFeature={fallback=emojifb}, Scale=0.85]
@@ -17,9 +17,9 @@
 \titleformat{\section}{\Large\bfseries\color{marola}}{}{0pt}{}[{\color{marola}\titlerule[0.6pt]}]
 \titlespacing*{\section}{0pt}{6pt}{3pt}
 \titleformat{\subsection}{\normalsize\bfseries\color{ink}}{}{0pt}{}
-\titlespacing*{\subsection}{0pt}{5pt}{2pt}
+\titlespacing*{\subsection}{0pt}{4pt}{2pt}
 \titleformat{\subsubsection}{\small\bfseries\color{muted}}{}{0pt}{}
-\titlespacing*{\subsubsection}{0pt}{5pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{4pt}{2pt}
 \usepackage{enumitem}
 \setlist[itemize]{nosep, leftmargin=1.2em, itemsep=1pt}
 \usepackage{hyperref}
@@ -43,3 +43,7 @@
 \AtBeginEnvironment{longtable}{\footnotesize}
 \setlength{\LTpre}{2pt}\setlength{\LTpost}{2pt}\setlength{\tabcolsep}{4pt}
 \usepackage{graphicx}
+% emoji: cv/emoji.lua turns each one into \cvemoji{file} — vector Noto artwork, sized and sunk
+% like a glyph of the surrounding font; smashed, so a line with emoji is no taller than one
+% without (\leavevmode: a heading starts with one, and a bare box would not start the paragraph). The font fallback above only catches what the filter missed.
+\newcommand{\cvemoji}[1]{\leavevmode\smash{\raisebox{-0.2em}{\includegraphics[height=1.15em]{#1}}}}

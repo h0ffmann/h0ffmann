@@ -63,7 +63,40 @@ class RemoteImages(unittest.TestCase):
         self.assertEqual(p.unremote_images(text), text)
 
 
+class BottomBlocks(unittest.TestCase):
+    def test_block_moves_to_the_end_and_its_heading_is_promoted(self):
+        text = "## me\n\nbio\n<!-- cv:bottom -->\n### building marola\n\npitch\n<!-- cv:end -->\n\n## certs\n\nlist\n"
+        self.assertEqual(p.move_bottom(text), "## me\n\nbio\n\n## certs\n\nlist\n\n## building marola\n\npitch\n")
+
+    def test_only_the_first_heading_of_the_block_is_promoted(self):
+        text = "<!-- cv:bottom -->\n### a\n### b\n<!-- cv:end -->\nrest\n"
+        self.assertEqual(p.move_bottom(text), "rest\n\n## a\n### b\n")
+
+    def test_several_blocks_keep_their_order(self):
+        text = "<!-- cv:bottom -->\nx\n<!-- cv:end -->\nmid\n<!-- cv:bottom -->\ny\n<!-- cv:end -->\n"
+        self.assertEqual(p.move_bottom(text), "mid\n\nx\n\ny\n")
+
+    def test_text_without_markers_is_unchanged(self):
+        self.assertEqual(p.move_bottom("## me\n\nbio\n"), "## me\n\nbio\n")
+
+    def test_unmatched_start_raises(self):
+        with self.assertRaises(ValueError):
+            p.move_bottom("<!-- cv:bottom -->\nx\n")
+
+    def test_skip_inside_bottom_raises(self):
+        with self.assertRaises(ValueError):
+            p.strip_skipped("<!-- cv:bottom -->\n<!-- cv:skip -->\nx\n<!-- cv:end -->\n<!-- cv:end -->\n")
+
+    def test_skip_leaves_bottom_blocks_alone(self):
+        text = "<!-- cv:bottom -->\nx\n<!-- cv:end -->\n"
+        self.assertEqual(p.strip_skipped(text), text)
+
+
 class Prepare(unittest.TestCase):
+    def test_bottom_block_lands_after_everything_else(self):
+        readme = "## me\n<!-- cv:bottom -->\n### marola\n" + QR + "pitch\n<!-- cv:end -->\n## misc\n<!-- cv:skip -->\nphoto\n<!-- cv:end -->\n"
+        self.assertEqual(p.prepare(readme, ""), "## me\n## misc\n\n## marola\npitch\n")
+
     def test_header_first_then_body_with_skips_and_qr_removed(self):
         header = "# Matheus Hoffmann\n\ncontact\n"
         readme = "<!-- cv:skip -->\nswitch line\n<!-- cv:end -->\n\n## 👋 me\n\n" + QR + "bio\n"

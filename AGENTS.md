@@ -21,18 +21,31 @@ edit or a change to the metrics workflow.
   and, for Japanese, the luatexja preamble lines per language in
   `cv/build.sh`) by
   `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
-  (pandoc → lualatex; shields badges become colored pills, emoji stay in
-  color). `cv/prepare.py` drops everything between `<!-- cv:skip -->` /
-  `<!-- cv:end -->` (the language line, the stats section, the photo) and
-  prepends `cv/header.md` (name + contact). `cv/preamble.tex` is the look.
+  (pandoc → lualatex; shields badges become colored pills). `cv/prepare.py`
+  drops everything between `<!-- cv:skip -->` / `<!-- cv:end -->` (the
+  language line, the LinkedIn badge the CV header already has, the stats
+  section, the photo), moves everything between `<!-- cv:bottom -->` /
+  `<!-- cv:end -->` (the marola section) to the end of the CV with its
+  heading one level up — the profile keeps it where it is — and prepends
+  `cv/header.md` (name + contact). `cv/preamble.tex` is the look. The CV is
+  one page per language and close to full: check the page count in the
+  build output after adding content.
+  Emoji are not drawn from a font: `cv/emoji.lua` replaces each one with
+  the vector Noto artwork vendored in `cv/emoji/` (Apache-2.0, see its
+  README), because lualatex only gets 136 px bitmaps from Noto Color Emoji
+  and DejaVu Sans shadows ⚡ ☁ ❄ with black-and-white glyphs. A new emoji
+  in a README fails the unit tests until `python3 cv/cvemoji.py --fetch`
+  has downloaded its SVG. Apple's emoji (what macOS shows on github.com)
+  are proprietary and cannot be used.
   `flake.nix` pins publisher in `flake.lock`; bump with
   `nix flake update publisher` when the lab changes. Build locally with
   `nix build` (result/cv.pdf) and run `python3 -m unittest discover -s cv`.
-  Keep the skip-marker pairs balanced and identical in all READMEs.
+  Keep the skip and bottom marker pairs balanced and identical in all READMEs.
 - `LICENSE` – MIT, plain text with nothing appended: GitHub's licence
   detection reports NOASSERTION when a scope note follows the licence body.
   It covers the scripts and the prose here; the metrics cards are generated
-  by a third-party action and the CV PDFs are built from these READMEs.
+  by a third-party action, the CV PDFs are built from these READMEs and
+  `cv/emoji/` is Google's Noto Emoji artwork under Apache-2.0.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.

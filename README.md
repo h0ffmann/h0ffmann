@@ -5,10 +5,13 @@
 ## 👋 me
 
 sr. software engineer with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting
+<!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
+<!-- cv:end -->
 
+<!-- cv:bottom -->
 ### building 🌊 [marola](https://marola.dev) — the ocean intelligence layer
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code for marola.dev" title="scan for marola.dev" align="right" width="120" /></a>
@@ -30,6 +33,7 @@ turned into signals you can actually act on.
 </p>
 
 > 🔓 going open source soon — want to contribute? mail me: **mhoffmannfs[at]gmail.com**
+<!-- cv:end -->
 
 ### 🫀 core
 <p align="left">
@@ -68,6 +72,7 @@ turned into signals you can actually act on.
 ### 🧠 llm & agents
 <p align="left">
 <img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
+<img src="https://img.shields.io/badge/A2A-4285F4?style=flat-square" alt="Agent2Agent protocol (A2A)" />
 <img src="https://img.shields.io/badge/DSPy-B5121B?style=flat-square" alt="DSPy" />
 <img src="https://img.shields.io/badge/RAG-6E40C9?style=flat-square" alt="RAG (retrieval-augmented generation)" />
 <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
