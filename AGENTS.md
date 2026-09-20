@@ -92,8 +92,11 @@ edit or a change to the metrics workflow.
 - Section order is deliberate: experience comes right after the intro, the
   skill groups sit under `## 🧰 stack`, and marola is a `###` inside misc
   while it is closed source. Move it back up when it goes open source.
-- The four AWS cert badges carry `height="24"`: at the native 28 px they
-  are ~919 px wide together and the fourth wraps in GitHub's ~880 px column.
+- Never leave badge `<img>` lines bare: outside a `<p align="left">` block
+  GitHub renders every line as its own paragraph and the badges stack
+  vertically (check with `gh api markdown -f mode=gfm -f text=...`). The
+  four AWS cert badges also carry `height="24"`: at the native 28 px the
+  row is ~919 px, wider than the README column, and the fourth would wrap.
 - Headings are lowercase with a leading emoji (`### 🫀 core`, `## 📊 stats`).
   Keep that style for new sections.
 - Tech badges use shields.io with `style=flat-square`. Link and cert badges
