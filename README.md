@@ -13,7 +13,7 @@ sr. software engineer with **8 years** of experience building scalable (and occa
 
 ## 💼 exp-highlights
 
-- **[itv](https://www.itvplc.com) (uk)** - ml/mlops on aws for channel audience forecasting (2025/2026)
+- **[itv](https://www.itvplc.com) (uk)** - ml/mlops on aws for channel audience forecasting (2025/aug 2026)
 - **[signifyd](https://www.signifyd.com) (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis on databricks (2023/2024)
 - **[elemeno AI](https://github.com/elemeno-ai) (us - br client bvmf: AMER3)** - mlops engineer with k8s on gcp (2021/2022)
 - **[broad](https://broad.app) (uk - [YC W21](https://www.ycombinator.com/companies/broad))** - sr. software engineer with scala for digital banking on gcp (2020)
