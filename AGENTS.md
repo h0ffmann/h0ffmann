@@ -24,10 +24,11 @@ edit or a change to the metrics workflow.
   (pandoc → lualatex; shields badges become colored pills). `cv/prepare.py`
   drops everything between `<!-- cv:skip -->` / `<!-- cv:end -->` (the
   language line, the LinkedIn badge the CV header already has, the stats
-  section, the photo), moves everything between `<!-- cv:bottom -->` /
-  `<!-- cv:end -->` (the marola section) to the end of the CV with its
-  heading one level up — the profile keeps it where it is — and prepends
-  `cv/header.md` (name + contact). `cv/preamble.tex` is the look. The CV is
+  section, the photo) and prepends `cv/header.md` (name + contact). The CV
+  follows the README's section order — me, exp-highlights, the skill
+  groups, nix labs, certs, learning, misc — so reordering the profile
+  reorders the CV. The `## 🧰 stack` heading is skipped: the profile's
+  outline needs it, the one-page CV has no room for it. `cv/preamble.tex` is the look. The CV is
   one page per language and close to full: check the page count in the
   build output after adding content.
   Emoji are not drawn from a font: `cv/emoji.lua` replaces each one with
@@ -40,7 +41,7 @@ edit or a change to the metrics workflow.
   `flake.nix` pins publisher in `flake.lock`; bump with
   `nix flake update publisher` when the lab changes. Build locally with
   `nix build` (result/cv.pdf) and run `python3 -m unittest discover -s cv`.
-  Keep the skip and bottom marker pairs balanced and identical in all READMEs.
+  Keep the skip-marker pairs balanced and identical in all READMEs.
 - `LICENSE` – MIT, plain text with nothing appended: GitHub's licence
   detection reports NOASSERTION when a scope note follows the licence body.
   It covers the scripts and the prose here; the metrics cards are generated
@@ -88,6 +89,11 @@ edit or a change to the metrics workflow.
 
 ## Working on the README
 
+- Section order is deliberate: experience comes right after the intro, the
+  skill groups sit under `## 🧰 stack`, and marola is a `###` inside misc
+  while it is closed source. Move it back up when it goes open source.
+- The four AWS cert badges carry `height="24"`: at the native 28 px they
+  are ~919 px wide together and the fourth wraps in GitHub's ~880 px column.
 - Headings are lowercase with a leading emoji (`### 🫀 core`, `## 📊 stats`).
   Keep that style for new sections.
 - Tech badges use shields.io with `style=flat-square`. Link and cert badges
