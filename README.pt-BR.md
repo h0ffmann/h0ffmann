@@ -5,10 +5,13 @@
 ## 👋 eu
 
 engenheiro de software sênior com **8 anos** de experiência construindo soluções escaláveis, principalmente para processamento de pagamentos e combate a fraudes
+<!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
+<!-- cv:end -->
 
+<!-- cv:bottom -->
 ### construindo 🌊 [marola](https://marola.dev) — a camada de inteligência do oceano
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
@@ -31,6 +34,7 @@ transformados em sinais que você consegue de fato usar.
 </p>
 
 > 🔓 em breve open source — quer contribuir? me escreva: **mhoffmannfs[at]gmail.com**
+<!-- cv:end -->
 
 ### 🫀 core
 <p align="left">
@@ -69,6 +73,7 @@ transformados em sinais que você consegue de fato usar.
 ### 🧠 llm & agentes
 <p align="left">
 <img src="https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white" alt="Model Context Protocol" />
+<img src="https://img.shields.io/badge/A2A-4285F4?style=flat-square" alt="protocolo Agent2Agent (A2A)" />
 <img src="https://img.shields.io/badge/DSPy-B5121B?style=flat-square" alt="DSPy" />
 <img src="https://img.shields.io/badge/RAG-6E40C9?style=flat-square" alt="RAG (retrieval-augmented generation)" />
 <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
@@ -144,11 +149,12 @@ um diretório por lab, consumido por outros repositórios como flake input, subm
 
 ## 💼 destaques de experiência
 
-- **itv (reino unido)** - ml/mlops na aws para previsão de audiência de canais
-- **signifyd (eua - prêmio tenacious fev/2024)** - eng. de ml para previsão de perdas e análise de risco no databricks
-- **elemeno AI (eua - cliente br bvmf: AMER3)** - engenheiro de mlops com k8s no gcp
-- **broad (reino unido)** - engenheiro de software sênior com scala para banco digital no gcp
-- **stone (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws
+- **itv (reino unido)** - ml/mlops na aws para previsão de audiência de canais (2025/2026)
+- **signifyd (eua - prêmio tenacious fev/2024)** - eng. de ml para previsão de perdas e análise de risco no databricks (2023/2024)
+- **elemeno AI (eua - cliente br bvmf: AMER3)** - engenheiro de mlops com k8s no gcp (2021/2022)
+- **broad (reino unido)** - engenheiro de software sênior com scala para banco digital no gcp (2020)
+- **stone (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws (2017-2019)
+- **LIOC (br: UFRJ/COPPE)** - lab. de instrumentação oceanográfica - pesquisa científica, ROV, microcontroladores (2016/2017)
 
 ## 🏅 certificações
 

@@ -10,19 +10,24 @@ mkdir -p "$out"
 python3 -m unittest discover -s "$here/cv"
 # the QR goes into the header as a PDF (raw \includegraphics; pandoc only converts SVG in image nodes)
 rsvg-convert -f pdf -o "$tmp/marola-qr.pdf" "$here/marola-qr.svg"
+# emoji are drawn from vector artwork, not from a font (cv/cvemoji.py, cv/emoji.lua)
+mkdir -p "$tmp/emoji"
+for svg in "$here"/cv/emoji/*.svg; do
+  rsvg-convert -f pdf -o "$tmp/emoji/$(basename "$svg" .svg).pdf" "$svg"
+done
 
 # build <readme> <header> <output> <lang> <pdftitle> <footer> [extra preamble lines]
 build() {
   local readme="$1" header="$2" output="$3" lang="$4" title="$5" footer="$6" extra="${7:-}"
   python3 "$here/cv/prepare.py" "$here/$readme" "$here/cv/$header" > "$tmp/$output.md"
   {
-    printf '\\usepackage{graphicx}\\graphicspath{{%s/}}\n' "$tmp"
+    printf '\\usepackage{graphicx}\\graphicspath{{%s/}{%s/emoji/}}\n' "$tmp" "$tmp"
     printf '\\newcommand{\\cvtitle}{%s}\n' "$title"
     printf '\\newcommand{\\cvfooter}{%s}\n' "$footer"
     printf '%s\n' "$extra"
   } > "$tmp/$output.vars.tex"
   pandoc "$tmp/$output.md" --from markdown+raw_html+emoji --to pdf --pdf-engine=lualatex \
-    --lua-filter "$PUBLISHER_FILTERS/shields-badges.lua" -H "$tmp/$output.vars.tex" -H "$here/cv/preamble.tex" \
+    --lua-filter "$PUBLISHER_FILTERS/shields-badges.lua" --lua-filter "$here/cv/emoji.lua" -H "$tmp/$output.vars.tex" -H "$here/cv/preamble.tex" \
     --resource-path="$here" -V documentclass=article -V fontsize=10pt -V "lang=$lang" \
     -o "$out/$output"
   echo "cv: $out/$output ($(pdfinfo "$out/$output" | awk '/^Pages/ {print $2}') pages)"
