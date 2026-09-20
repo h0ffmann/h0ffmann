@@ -11,29 +11,17 @@ engenheiro de software sênior com **8 anos** de experiência construindo soluç
 </p>
 <!-- cv:end -->
 
-<!-- cv:bottom -->
-### construindo 🌊 [marola](https://marola.dev) — a camada de inteligência do oceano
+## 💼 destaques de experiência
 
-<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
+- **[itv](https://www.itvplc.com) (reino unido)** - ml/mlops na aws para previsão de audiência de canais (2025/2026)
+- **[signifyd](https://www.signifyd.com) (eua - prêmio tenacious fev/2024)** - eng. de ml para previsão de perdas e análise de risco no databricks (2023/2024)
+- **[elemeno AI](https://github.com/elemeno-ai) (eua - cliente br bvmf: AMER3)** - engenheiro de mlops com k8s no gcp (2021/2022)
+- **[broad](https://broad.app) (reino unido - [YC W21](https://www.ycombinator.com/companies/broad))** - engenheiro de software sênior com scala para banco digital no gcp (2020)
+- **[stone](https://www.stone.com.br) (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws (2017-2019)
+- **[LIOC](http://www.lioc.oceanica.ufrj.br) (br: UFRJ/COPPE)** - lab. de instrumentação oceanográfica - pesquisa científica, ROV, microcontroladores (2016/2017)
 
-previsão e inteligência para o mar: ondulação, vento, maré, perigos e condições de surf,
-transformados em sinais que você consegue de fato usar.
-
-<p align="left">
-<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
-<img src="https://img.shields.io/badge/FOSS-em_breve-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS em breve" />
-</p>
-<p align="left">
-<a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
-<a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
-<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
-<a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
-<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
-<a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
-<a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
-</p>
-
-> 🔓 em breve open source — quer contribuir? me escreva: **mhoffmannfs[at]gmail.com**
+<!-- cv:skip -->
+## 🧰 stack
 <!-- cv:end -->
 
 ### 🫀 core
@@ -147,21 +135,12 @@ um diretório por lab, consumido por outros repositórios como flake input, subm
 <!--END_SECTION:activity-->
 <!-- cv:end -->
 
-## 💼 destaques de experiência
-
-- **[itv](https://www.itvplc.com) (reino unido)** - ml/mlops na aws para previsão de audiência de canais (2025/2026)
-- **[signifyd](https://www.signifyd.com) (eua - prêmio tenacious fev/2024)** - eng. de ml para previsão de perdas e análise de risco no databricks (2023/2024)
-- **[elemeno AI](https://github.com/elemeno-ai) (eua - cliente br bvmf: AMER3)** - engenheiro de mlops com k8s no gcp (2021/2022)
-- **[broad](https://broad.app) (reino unido - [yc w21](https://www.ycombinator.com/companies/broad))** - engenheiro de software sênior com scala para banco digital no gcp (2020)
-- **[stone](https://www.stone.com.br) (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws (2017-2019)
-- **[LIOC](http://www.lioc.oceanica.ufrj.br) (br: UFRJ/COPPE)** - lab. de instrumentação oceanográfica - pesquisa científica, ROV, microcontroladores (2016/2017)
-
 ## 🏅 certificações
 
-<img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" />
-<img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" />
-<img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" />
-<img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
+<img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" height="24" />
+<img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" height="24" />
+<img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" height="24" />
+<img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" height="24" />
 
 ## 📚 estudando
 
@@ -174,6 +153,29 @@ um diretório por lab, consumido por outros repositórios como flake input, subm
 <img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />
 <img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
 </p>
+
+### construindo 🌊 [marola](https://marola.dev) — a camada de inteligência do oceano
+
+<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
+
+previsão e inteligência para o mar: ondulação, vento, maré, perigos e condições de surf,
+transformados em sinais que você consegue de fato usar.
+
+<p align="left">
+<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
+<img src="https://img.shields.io/badge/FOSS-em_breve-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS em breve" />
+</p>
+<p align="left">
+<a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
+<a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
+<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
+<a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
+<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
+<a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
+<a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
+</p>
+
+> 🔓 em breve open source — quer contribuir? me escreva: **mhoffmannfs[at]gmail.com**
 
 <!-- cv:skip -->
 <p align="center">

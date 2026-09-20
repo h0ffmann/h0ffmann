@@ -11,29 +11,17 @@
 </p>
 <!-- cv:end -->
 
-<!-- cv:bottom -->
-### 開発中 🌊 [marola](https://marola.dev) — 海のインテリジェンスレイヤー
+## 💼 職務経歴ハイライト
 
-<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
+- **[itv](https://www.itvplc.com)（英国）**：AWS 上の ML/MLOps（視聴者数予測）（2025〜2026年）
+- **[signifyd](https://www.signifyd.com)（米国・2024年2月 tenacious 賞受賞）**：Databricks 上の損失予測・リスク分析を担当する ML エンジニア（2023〜2024年）
+- **[elemeno AI](https://github.com/elemeno-ai)（米国・ブラジル顧客 bvmf: AMER3）**：GCP 上の k8s による MLOps エンジニア（2021〜2022年）
+- **[broad](https://broad.app)（英国・[YC W21](https://www.ycombinator.com/companies/broad)）**：GCP 上のデジタルバンキング向け Scala シニアソフトウェアエンジニア（2020年）
+- **[stone](https://www.stone.com.br)（ブラジル・nasdaq: STNE）**：AWS 上の Scala による ML・ソフトウェアエンジニア（2017〜2019年）
+- **[LIOC](http://www.lioc.oceanica.ufrj.br)（ブラジル・UFRJ/COPPE）**：海洋計測ラボでの学術研究、ROV、マイコン開発（2016〜2017年）
 
-海のための予測とインテリジェンス：うねり、風、潮汐、ハザード情報、サーフコンディションを、
-実際に行動につながるシグナルに変えます。
-
-<p align="left">
-<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
-<img src="https://img.shields.io/badge/FOSS-近日公開-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS 近日公開" />
-</p>
-<p align="left">
-<a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
-<a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
-<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
-<a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
-<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
-<a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
-<a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
-</p>
-
-> 🔓 近日オープンソース化予定 — コントリビュート希望の方はメールでご連絡ください：**mhoffmannfs[at]gmail.com**
+<!-- cv:skip -->
+## 🧰 技術スタック
 <!-- cv:end -->
 
 ### 🫀 コアスキル
@@ -147,21 +135,12 @@
 <!--END_SECTION:activity-->
 <!-- cv:end -->
 
-## 💼 職務経歴ハイライト
-
-- **[itv](https://www.itvplc.com)（英国）**：AWS 上の ML/MLOps（視聴者数予測）（2025〜2026年）
-- **[signifyd](https://www.signifyd.com)（米国・2024年2月 tenacious 賞受賞）**：Databricks 上の損失予測・リスク分析を担当する ML エンジニア（2023〜2024年）
-- **[elemeno AI](https://github.com/elemeno-ai)（米国・ブラジル顧客 bvmf: AMER3）**：GCP 上の k8s による MLOps エンジニア（2021〜2022年）
-- **[broad](https://broad.app)（英国・[YC W21](https://www.ycombinator.com/companies/broad)）**：GCP 上のデジタルバンキング向け Scala シニアソフトウェアエンジニア（2020年）
-- **[stone](https://www.stone.com.br)（ブラジル・nasdaq: STNE）**：AWS 上の Scala による ML・ソフトウェアエンジニア（2017〜2019年）
-- **[LIOC](http://www.lioc.oceanica.ufrj.br)（ブラジル・UFRJ/COPPE）**：海洋計測ラボでの学術研究、ROV、マイコン開発（2016〜2017年）
-
 ## 🏅 資格
 
-<img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" />
-<img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" />
-<img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" />
-<img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" />
+<img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" height="24" />
+<img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" height="24" />
+<img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" height="24" />
+<img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" height="24" />
 
 ## 📚 学習中
 
@@ -174,6 +153,29 @@
 <img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />
 <img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
 </p>
+
+### 開発中 🌊 [marola](https://marola.dev) — 海のインテリジェンスレイヤー
+
+<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
+
+海のための予測とインテリジェンス：うねり、風、潮汐、ハザード情報、サーフコンディションを、
+実際に行動につながるシグナルに変えます。
+
+<p align="left">
+<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
+<img src="https://img.shields.io/badge/FOSS-近日公開-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS 近日公開" />
+</p>
+<p align="left">
+<a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
+<a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
+<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
+<a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
+<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
+<a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
+<a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
+</p>
+
+> 🔓 近日オープンソース化予定 — コントリビュート希望の方はメールでご連絡ください：**mhoffmannfs[at]gmail.com**
 
 <!-- cv:skip -->
 <p align="center">
