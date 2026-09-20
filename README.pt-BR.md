@@ -149,12 +149,12 @@ um diretório por lab, consumido por outros repositórios como flake input, subm
 
 ## 💼 destaques de experiência
 
-- **itv (reino unido)** - ml/mlops na aws para previsão de audiência de canais (2025/2026)
-- **signifyd (eua - prêmio tenacious fev/2024)** - eng. de ml para previsão de perdas e análise de risco no databricks (2023/2024)
-- **elemeno AI (eua - cliente br bvmf: AMER3)** - engenheiro de mlops com k8s no gcp (2021/2022)
-- **broad (reino unido)** - engenheiro de software sênior com scala para banco digital no gcp (2020)
-- **stone (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws (2017-2019)
-- **LIOC (br: UFRJ/COPPE)** - lab. de instrumentação oceanográfica - pesquisa científica, ROV, microcontroladores (2016/2017)
+- **[itv](https://www.itvplc.com) (reino unido)** - ml/mlops na aws para previsão de audiência de canais (2025/2026)
+- **[signifyd](https://www.signifyd.com) (eua - prêmio tenacious fev/2024)** - eng. de ml para previsão de perdas e análise de risco no databricks (2023/2024)
+- **[elemeno AI](https://github.com/elemeno-ai) (eua - cliente br bvmf: AMER3)** - engenheiro de mlops com k8s no gcp (2021/2022)
+- **[broad](https://broad.app) (reino unido - [yc w21](https://www.ycombinator.com/companies/broad))** - engenheiro de software sênior com scala para banco digital no gcp (2020)
+- **[stone](https://www.stone.com.br) (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws (2017-2019)
+- **[LIOC](http://www.lioc.oceanica.ufrj.br) (br: UFRJ/COPPE)** - lab. de instrumentação oceanográfica - pesquisa científica, ROV, microcontroladores (2016/2017)
 
 ## 🏅 certificações
 
