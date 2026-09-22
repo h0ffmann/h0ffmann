@@ -105,6 +105,7 @@ one directory per lab, consumed by other repos as a flake input, a sparse submod
 | [cuda](https://github.com/h0ffmann/nix-config/tree/main/labs/cuda) | nixos-cuda binary cache setup, torch venv with the driver libs on its path; x86_64-linux only | `eaad089` | 2026-09-11 (11 days ago) | python3 3.14.7 |
 | [lint](https://github.com/h0ffmann/nix-config/tree/main/labs/lint) | hadolint, actionlint, shellcheck, ruff, pyflakes, cloc, coverage, pdoc as one list | `eaad089` | 2026-09-11 (11 days ago) | hadolint 2.14.0 · actionlint 1.7.12 · shellcheck 0.11.0 · ruff 0.16.6 |
 | [pratico](https://github.com/h0ffmann/nix-config/tree/main/labs/pratico) | WAVEWATCH III toolchain (gfortran / OpenMPI / NetCDF), zsh-ai pilot, ai-jail recipes | `eaad089` | 2026-09-11 (11 days ago) | gfortran 15.3.0 · openmpi 5.0.10 · netcdf 4.10.1 · hdf5 1.14.6 · eccodes 2.48.0 · kokkos 5.2.0 · gtest 1.18.0 · cmake 4.4.2 |
+| [present](https://github.com/h0ffmann/nix-config/tree/main/labs/present) | annotate, capture and record the screen; webcam profiles (cam); pdfpc, presenterm | `6774f7b` | 2026-09-22 (today) | gromit-mpx 1.9.0 · obs-studio 32.2.2 · v4l-utils 1.32.0 · presenterm 0.16.1 |
 | [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf and mkDocx, a composite Action that builds and commits documents | `eaad089` | 2026-09-11 (11 days ago) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 · librsvg 2.62.3 |
 <!-- nix-labs:end -->
 
