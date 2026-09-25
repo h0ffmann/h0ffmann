@@ -123,16 +123,16 @@
 
 <!-- .github/workflows/activity.yml がマージごと（nix-config の profile-ping.yml からの push）と毎日生成 -->
 <!--START_SECTION:activity-->
-1. ◇ Opened an issue in marola 🔒 FOSS soon
-2. ↑ Pushed to main in marola 🔒 FOSS soon
-3. ◆ Opened a PR in marola 🔒 FOSS soon
-4. ✔ Closed an issue in marola 🔒 FOSS soon
-5. ◇ Opened an issue in marola 🔒 FOSS soon
-6. ↑ Pushed to cleanup/3-ponytail-pass in marola 🔒 FOSS soon
-7. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-8. ↑ Pushed to cleanup/4-remove-azure in marola 🔒 FOSS soon
-9. ↑ Pushed to main in marola 🔒 FOSS soon
-10. ↑ Pushed to cleanup/4-remove-azure in marola 🔒 FOSS soon
+1. ↑ Pushed to main in marola 🔒 FOSS soon
+2. ◇ Opened an issue in marola 🔒 FOSS soon
+3. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+4. ◆ Opened PR [#40](https://github.com/h0ffmann/ww3-gpu/pull/40) in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+5. ◆ Opened a PR in marola 🔒 FOSS soon
+6. ◇ Opened an issue in marola 🔒 FOSS soon
+7. ↑ Pushed to main in marola 🔒 FOSS soon
+8. ◆ Opened a PR in marola 🔒 FOSS soon
+9. ✔ Closed an issue in marola 🔒 FOSS soon
+10. ◇ Opened an issue in marola 🔒 FOSS soon
 <!--END_SECTION:activity-->
 <!-- cv:end -->
 
