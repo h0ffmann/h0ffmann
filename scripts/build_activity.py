@@ -27,7 +27,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-PRIVATE_LABELS = {"h0ffmann/marola": "FOSS soon"}
+PRIVATE_LABELS: dict = {}
 START, END = "<!--START_SECTION:activity-->", "<!--END_SECTION:activity-->"
 API = "https://api.github.com"
 REPO_NAME = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
