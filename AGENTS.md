@@ -79,9 +79,9 @@ edit or a change to the metrics workflow.
   visibility, merge time — nothing else, these logs are public) is passed
   as `--dispatch-json`, and that merge is added when the events API has
   not caught up yet. Private repositories render as a bare name with 🔒 and
-  no links; `PRIVATE_LABELS` in the script adds a label (marola: "FOSS
-  soon"). Consecutive identical lines collapse. Never edit inside the
-  markers; keep the pair intact in both files. Locally:
+  no links; `PRIVATE_LABELS` in the script adds a label (empty now that
+  marola is open source at marola-dev/marola). Consecutive identical lines
+  collapse. Never edit inside the markers; keep the pair intact in both files. Locally:
   `GITHUB_TOKEN=$(gh auth token) python3 scripts/build_activity.py --dry-run`
   and `python3 -m unittest discover -s scripts`.
 - `metrics.base.svg`, `metrics.languages.svg` – **generated**. Never edit these by hand; the next workflow run overwrites

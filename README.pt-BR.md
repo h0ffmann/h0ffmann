@@ -165,7 +165,7 @@ transformados em sinais que você consegue de fato usar.
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
-<img src="https://img.shields.io/badge/FOSS-em_breve-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS em breve" />
+<a href="https://github.com/marola-dev/marola" target="_blank"><img src="https://img.shields.io/badge/FOSS-marola--dev%2Fmarola-2EA043?style=for-the-badge&logo=github&logoColor=white" alt="código aberto: marola-dev/marola" /></a>
 </p>
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
@@ -177,7 +177,7 @@ transformados em sinais que você consegue de fato usar.
 <a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
 </p>
 
-> 🔓 em breve open source — quer contribuir? me escreva: **mhoffmannfs[at]gmail.com**
+> 🔓 código aberto em **[marola-dev/marola](https://github.com/marola-dev/marola)** — quer contribuir? abra uma issue ou um PR, ou me escreva: **mhoffmannfs[at]gmail.com**
 
 <!-- cv:skip -->
 <p align="center">

@@ -166,7 +166,7 @@ turned into signals you can actually act on.
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
-<img src="https://img.shields.io/badge/FOSS-soon-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS soon" />
+<a href="https://github.com/marola-dev/marola" target="_blank"><img src="https://img.shields.io/badge/FOSS-marola--dev%2Fmarola-2EA043?style=for-the-badge&logo=github&logoColor=white" alt="open source: marola-dev/marola" /></a>
 </p>
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
@@ -177,7 +177,7 @@ turned into signals you can actually act on.
 <a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
 </p>
 
-> 🔓 going open source soon — want to contribute? mail me: **mhoffmannfs[at]gmail.com**
+> 🔓 open source at **[marola-dev/marola](https://github.com/marola-dev/marola)** — want to contribute? open an issue or a PR, or mail me: **mhoffmannfs[at]gmail.com**
 
 <!-- cv:skip -->
 <p align="center">

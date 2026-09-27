@@ -166,7 +166,7 @@
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
-<img src="https://img.shields.io/badge/FOSS-近日公開-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="FOSS 近日公開" />
+<a href="https://github.com/marola-dev/marola" target="_blank"><img src="https://img.shields.io/badge/FOSS-marola--dev%2Fmarola-2EA043?style=for-the-badge&logo=github&logoColor=white" alt="オープンソース：marola-dev/marola" /></a>
 </p>
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
@@ -178,7 +178,7 @@
 <a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
 </p>
 
-> 🔓 近日オープンソース化予定 — コントリビュート希望の方はメールでご連絡ください：**mhoffmannfs[at]gmail.com**
+> 🔓 **[marola-dev/marola](https://github.com/marola-dev/marola)** でオープンソース公開中 — コントリビュート希望の方は issue や PR、またはメールでご連絡ください：**mhoffmannfs[at]gmail.com**
 
 <!-- cv:skip -->
 <p align="center">
