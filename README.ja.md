@@ -123,16 +123,16 @@
 
 <!-- .github/workflows/activity.yml がマージごと（nix-config の profile-ping.yml からの push）と毎日生成 -->
 <!--START_SECTION:activity-->
-1. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
-2. ◆ Opened PR [#425](https://github.com/marola-dev/marola/pull/425) in [marola-dev/marola](https://github.com/marola-dev/marola)
-3. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
-4. ◇ Opened issue [#412](https://github.com/marola-dev/marola/issues/412) in [marola-dev/marola](https://github.com/marola-dev/marola)
-5. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
-6. ◇ Opened issue [#411](https://github.com/marola-dev/marola/issues/411) in [marola-dev/marola](https://github.com/marola-dev/marola)
-7. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-8. ◆ Opened PR [#40](https://github.com/h0ffmann/ww3-gpu/pull/40) in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
-9. ◆ Opened PR [#410](https://github.com/marola-dev/marola/pull/410) in [marola-dev/marola](https://github.com/marola-dev/marola)
-10. ◇ Opened issue [#409](https://github.com/marola-dev/marola/issues/409) in [marola-dev/marola](https://github.com/marola-dev/marola)
+1. ↑ Pushed to main in [piabrota/ihoje](https://github.com/piabrota/ihoje)
+2. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
+3. ◆ Opened PR [#425](https://github.com/marola-dev/marola/pull/425) in [marola-dev/marola](https://github.com/marola-dev/marola)
+4. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
+5. ◇ Opened issue [#412](https://github.com/marola-dev/marola/issues/412) in [marola-dev/marola](https://github.com/marola-dev/marola)
+6. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
+7. ◇ Opened issue [#411](https://github.com/marola-dev/marola/issues/411) in [marola-dev/marola](https://github.com/marola-dev/marola)
+8. ↑ Pushed to main in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+9. ◆ Opened PR [#40](https://github.com/h0ffmann/ww3-gpu/pull/40) in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+10. ◆ Opened PR [#410](https://github.com/marola-dev/marola/pull/410) in [marola-dev/marola](https://github.com/marola-dev/marola)
 <!--END_SECTION:activity-->
 <!-- cv:end -->
 
