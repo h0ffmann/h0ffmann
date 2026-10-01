@@ -123,16 +123,16 @@
 
 <!-- .github/workflows/activity.yml がマージごと（nix-config の profile-ping.yml からの push）と毎日生成 -->
 <!--START_SECTION:activity-->
-1. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
-2. ✎ Commented on [#496](https://github.com/marola-dev/marola/issues/496#issuecomment-5892207893) in [marola-dev/marola](https://github.com/marola-dev/marola)
-3. ✔ Closed issue [#496](https://github.com/marola-dev/marola/issues/496) in [marola-dev/marola](https://github.com/marola-dev/marola)
-4. ◇ Opened issue [#498](https://github.com/marola-dev/marola/issues/498) in [marola-dev/marola](https://github.com/marola-dev/marola)
-5. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
-6. ↑ Pushed to main in [h0ffmann/marola](https://github.com/h0ffmann/marola)
-7. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
-8. ✔ Closed issue [#487](https://github.com/marola-dev/marola/issues/487) in [marola-dev/marola](https://github.com/marola-dev/marola)
-9. ↑ Pushed to main in [h0ffmann/marola](https://github.com/h0ffmann/marola)
-10. ✔ Closed issue [#460](https://github.com/marola-dev/marola/issues/460) in [marola-dev/marola](https://github.com/marola-dev/marola)
+1. ✎ Commented on [#531](https://github.com/marola-dev/marola/issues/531#issuecomment-5929136209) in [marola-dev/marola](https://github.com/marola-dev/marola)
+2. ✎ Commented on [#588](https://github.com/marola-dev/marola/pull/588#issuecomment-5931903336) in [marola-dev/marola](https://github.com/marola-dev/marola)
+3. ↑ Pushed to mip-0054/3-note-codes in [marola-dev/marola](https://github.com/marola-dev/marola)
+4. ✎ Commented on [#531](https://github.com/marola-dev/marola/issues/531#issuecomment-5929161486) in [marola-dev/marola](https://github.com/marola-dev/marola)
+5. ↑ Pushed to mip-0054/2-i18n-app in [marola-dev/marola](https://github.com/marola-dev/marola)
+6. ↑ Pushed to mip-0054/1-i18n-chrome in [marola-dev/marola](https://github.com/marola-dev/marola)
+7. ↑ Pushed to docs/proposal-pedro-review-2 in [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
+8. ↑ Pushed to mip-0054/1-i18n-chrome in [marola-dev/marola](https://github.com/marola-dev/marola)
+9. ↑ Pushed to mip-0054/3-note-codes in [marola-dev/marola](https://github.com/marola-dev/marola)
+10. ↑ Pushed to docs/mip-0072-gemini-review-on-request in [marola-dev/marola](https://github.com/marola-dev/marola)
 <!--END_SECTION:activity-->
 <!-- cv:end -->
 
