@@ -4,12 +4,62 @@
 
 ## 👋 自己紹介
 
-決済処理と不正対策を中心に、スケーラブルなソリューションを構築してきた**8年**の経験を持つシニアソフトウェアエンジニア
+決済処理と不正対策を中心に、スケーラブルなソリューションを構築してきた**8年**の経験を持つシニアソフトウェアエンジニア。現在は **[marola-dev](https://github.com/marola-dev)** でオープンソースの海洋テックを開発中
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 <!-- cv:end -->
+
+## 🌊 オープンソース — [marola-dev](https://github.com/marola-dev)
+
+<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
+
+ブラジル沿岸のための市民科学による**海のインテリジェンスレイヤー**、**[marola](https://github.com/marola-dev/marola)** をオープンに開発しています。各ビーチをうねり・風・潮汐・UV・公式の海水浴場水質で1時間ごとにランク付けし、その*理由*をわかりやすい言葉で説明します。フロリアノポリス、リオデジャネイロ、サルバドールを対象に **[marola.dev](https://marola.dev)** で公開中です。
+
+- **安全性はプロンプトではなくコードで**：Scala 3（[Kyo](https://getkyo.io)）による決定論的なスコアと安全拒否権。LLM は説明するだけで、判定を覆すことはありません
+- **ローカルファーストの AI**：アカウントや API キー不要で Ollama 上で動作。MCP ツールサーバー、引用付き RAG、DSPy でコンパイルしたプロンプト、独自の小型モデル [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF)
+- **公開の場で設計**：重要な変更はすべて公開設計書（[MIP](https://github.com/marola-dev/marola/tree/main/docs/MIPs)）から始まります。次は *ressaca*（高波）警報、WAVEWATCH III を含む波浪モデルのアンサンブル、ブラジルの海水浴場水質のオープンアーカイブ
+
+<p align="left">
+<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
+<a href="https://github.com/marola-dev" target="_blank"><img src="https://img.shields.io/badge/FOSS-marola--dev-2EA043?style=for-the-badge&logo=github&logoColor=white" alt="github: marola-dev" /></a>
+<a href="https://docs.marola.dev" target="_blank"><img src="https://img.shields.io/badge/docs-docs.marola.dev-0077BE?style=for-the-badge&logo=materialformkdocs&logoColor=white" alt="docs.marola.dev" /></a>
+<a href="https://github.com/marola-dev/marola/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-2EA043?style=for-the-badge" alt="MIT ライセンス" /></a>
+</p>
+<!-- cv:skip -->
+<p align="left">
+<a href="https://github.com/marola-dev/marola/commits/main"><img src="https://img.shields.io/github/last-commit/marola-dev/marola?style=flat-square&logo=github&label=%E6%9C%80%E7%B5%82%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88" alt="marola-dev/marola の最終コミット" /></a>
+<a href="https://github.com/marola-dev/marola/graphs/commit-activity"><img src="https://img.shields.io/github/commit-activity/m/marola-dev/marola?style=flat-square&logo=github&label=%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E6%95%B0" alt="marola-dev/marola の月間コミット数" /></a>
+<a href="https://github.com/marola-dev/marola/actions/workflows/ci.yml"><img src="https://github.com/marola-dev/marola/actions/workflows/ci.yml/badge.svg" alt="marola CI" /></a>
+<a href="https://github.com/marola-dev/marola-site/actions/workflows/site.yml"><img src="https://github.com/marola-dev/marola-site/actions/workflows/site.yml/badge.svg" alt="marola.dev のビルドとデプロイ" /></a>
+</p>
+<!-- cv:end -->
+
+<!-- cv:skip -->
+| リポジトリ | 内容 |
+| --- | --- |
+| [marola](https://github.com/marola-dev/marola) | 全体の取りまとめ：設計書、ロードマップ、[docs.marola.dev](https://docs.marola.dev)、以下の各リポジトリをサブモジュールとして収録 |
+| [marola-app](https://github.com/marola-dev/marola-app) | 本体：Scala 3 + Kyo のパイプライン、スコアと安全拒否権、CLI、MCP ツールサーバー |
+| [marola-site](https://github.com/marola-dev/marola-site) | [marola.dev](https://marola.dev) の地図、3時間ごとに再構築 |
+| [marola-corpus](https://github.com/marola-dev/marola-corpus) | すべての回答が引用する、出典付きの海洋知識 |
+| [marola-ml](https://github.com/marola-dev/marola-ml) | オフラインの Python：DSPy によるプロンプトのコンパイル、ベンチマークゲート、marola-sea モデル |
+| [marola-oods](https://github.com/marola-dev/marola-oods) | Open Ocean Data Store：ブラジルの海水浴場水質のバージョン管理されたアーカイブ |
+| [marola-devkit](https://github.com/marola-dev/marola-devkit) | 共通の開発基盤：nix ツール、フック、Claude Code スキル、CI ワークフロー |
+| [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | オープンな海洋モデル、データ、ツール、研究機関の厳選リスト |
+<!-- cv:end -->
+
+<p align="left">
+<a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
+<a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
+<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
+<a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
+<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
+<a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
+<a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
+</p>
+
+> 🔓 人間も AI エージェントも、コントリビューター歓迎 — コードは不要です：地図を使って間違いを教えてください、海の地域知識を共有してください、または **[marola-dev/marola](https://github.com/marola-dev/marola)** で issue や PR を。メールでも：**mhoffmannfs[at]gmail.com**
 
 ## 💼 職務経歴ハイライト
 
@@ -90,25 +140,6 @@
 <img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" alt="dbt" />
 </p>
 
-## ❄️ nix labs
-
-[nix-config](https://github.com/h0ffmann/nix-config) にある、使用しているツールチェーンのための自己完結型 nix flake：
-ラボごとに1ディレクトリで、他のリポジトリから flake input、sparse submodule、GitHub Action として利用されます。
-
-[![nix-config ci](https://github.com/h0ffmann/nix-config/actions/workflows/ci.yml/badge.svg)](https://github.com/h0ffmann/nix-config/actions/workflows/ci.yml)
-
-<!-- .github/workflows/nix-labs.yml が h0ffmann/nix-config から毎日生成 -->
-<!-- nix-labs:start -->
-| ラボ | 概要 | nixpkgs | 更新日 | ツールチェーン |
-| --------- | ---------------------------------------- | -------- | ----------------- | -------------------------- |
-| [agentic](https://github.com/h0ffmann/nix-config/tree/main/labs/agentic) | ai-jail, OpenCode, Open Code Review, gh, and jail-run / gh-token / clip / clip-relay | `eaad089` | 2026-09-11 (22日前) | gh 2.100.0 · opencode 1.18.30 · bubblewrap 0.12.0 |
-| [cuda](https://github.com/h0ffmann/nix-config/tree/main/labs/cuda) | nixos-cuda binary cache setup, torch venv with the driver libs on its path; x86_64-linux only | `eaad089` | 2026-09-11 (22日前) | python3 3.14.7 |
-| [lint](https://github.com/h0ffmann/nix-config/tree/main/labs/lint) | hadolint, actionlint, shellcheck, ruff, pyflakes, cloc, coverage, pdoc as one list | `eaad089` | 2026-09-11 (22日前) | hadolint 2.14.0 · actionlint 1.7.12 · shellcheck 0.11.0 · ruff 0.16.6 |
-| [pratico](https://github.com/h0ffmann/nix-config/tree/main/labs/pratico) | WAVEWATCH III toolchain (gfortran / OpenMPI / NetCDF), zsh-ai pilot, ai-jail recipes | `eaad089` | 2026-09-11 (22日前) | gfortran 15.3.0 · openmpi 5.0.10 · netcdf 4.10.1 · hdf5 1.14.6 · eccodes 2.48.0 · kokkos 5.2.0 · gtest 1.18.0 · cmake 4.4.2 |
-| [present](https://github.com/h0ffmann/nix-config/tree/main/labs/present) | gromit-mpx, flameshot, grim/slurp/satty, wf-recorder, OBS, v4l2 + cam profiles, pdfpc, presenterm | `6774f7b` | 2026-09-22 (11日前) | gromit-mpx 1.9.0 · obs-studio 32.2.2 · v4l-utils 1.32.0 · presenterm 0.16.1 |
-| [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf and mkDocx, a composite Action that builds and commits documents | `eaad089` | 2026-09-11 (22日前) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 · librsvg 2.62.3 |
-<!-- nix-labs:end -->
-
 <!-- cv:skip -->
 ## 📊 統計
 
@@ -120,20 +151,6 @@
 <p align="left">
   <img src="metrics.languages.svg" alt="よく使う言語" />
 </p>
-
-<!-- .github/workflows/activity.yml がマージごと（nix-config の profile-ping.yml からの push）と毎日生成 -->
-<!--START_SECTION:activity-->
-1. ↑ Pushed to claude/friendly-ptolemy-g8vrej in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-2. ↑ Pushed to docs/mip-0072-gemini-review-on-request in [marola-dev/marola](https://github.com/marola-dev/marola)
-3. ↑ Pushed to docs/mip-0073-open-system-one-models in [marola-dev/marola](https://github.com/marola-dev/marola)
-4. ↑ Pushed to docs/mip-0071-official-alerts in [marola-dev/marola](https://github.com/marola-dev/marola)
-5. ↑ Pushed to docs/mip-0072-gemini-review-on-request in [marola-dev/marola](https://github.com/marola-dev/marola)
-6. ✎ Commented on [#45](https://github.com/marola-dev/marola-site/issues/45#issuecomment-5965412887) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-7. ◇ Opened issue [#46](https://github.com/marola-dev/marola-site/issues/46) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-8. ◇ Opened issue [#45](https://github.com/marola-dev/marola-site/issues/45) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-9. ↑ Pushed to claude/mapbox-webgl-map-yn9h9t in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-10. ◆ Opened PR [#44](https://github.com/marola-dev/marola-site/pull/44) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-<!--END_SECTION:activity-->
 <!-- cv:end -->
 
 ## 🏅 資格
@@ -156,29 +173,6 @@
 <img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />
 <img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
 </p>
-
-### 開発中 🌊 [marola](https://marola.dev) — 海のインテリジェンスレイヤー
-
-<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
-
-海のための予測とインテリジェンス：うねり、風、潮汐、ハザード情報、サーフコンディションを、
-実際に行動につながるシグナルに変えます。
-
-<p align="left">
-<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
-<a href="https://github.com/marola-dev/marola" target="_blank"><img src="https://img.shields.io/badge/FOSS-marola--dev%2Fmarola-2EA043?style=for-the-badge&logo=github&logoColor=white" alt="オープンソース：marola-dev/marola" /></a>
-</p>
-<p align="left">
-<a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
-<a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
-<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
-<a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
-<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
-<a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
-<a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
-</p>
-
-> 🔓 **[marola-dev/marola](https://github.com/marola-dev/marola)** でオープンソース公開中 — コントリビュート希望の方は issue や PR、またはメールでご連絡ください：**mhoffmannfs[at]gmail.com**
 
 <!-- cv:skip -->
 <p align="center">

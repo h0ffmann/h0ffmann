@@ -24,9 +24,10 @@ edit or a change to the metrics workflow.
   (pandoc → lualatex; shields badges become colored pills). `cv/prepare.py`
   drops everything between `<!-- cv:skip -->` / `<!-- cv:end -->` (the
   language line, the LinkedIn badge the CV header already has, the stats
-  section, the photo) and prepends `cv/header.md` (name + contact). The CV
-  follows the README's section order — me, exp-highlights, the skill
-  groups, nix labs, certs, learning, misc — so reordering the profile
+  section, the live marola badges and the marola-dev repo table, the photo) and prepends `cv/header.md`
+  (name + contact). The CV follows the README's section order — me,
+  open source (marola-dev), exp-highlights, the skill groups, certs,
+  learning, misc — so reordering the profile
   reorders the CV. The `## 🧰 stack` heading is skipped: the profile's
   outline needs it, the one-page CV has no room for it. `cv/preamble.tex` is the look. The CV is
   one page per language and close to full: check the page count in the
@@ -54,44 +55,18 @@ edit or a change to the metrics workflow.
   UTC (and on manual dispatch, and on push to `main` when the workflow file
   itself changes). Each of its two steps writes one SVG and commits it back
   to `main` with a `[Skip GitHub Action]` suffix.
-- `.github/workflows/nix-labs.yml` – daily at 06:30 UTC, checks out
-  h0ffmann/nix-config into the gitignored `nix-config/` path and runs
-  `scripts/build_readme.py`, which rewrites the table between
-  `<!-- nix-labs:start -->` / `<!-- nix-labs:end -->` in both READMEs (also
-  on an `activity` dispatch whose payload names h0ffmann/nix-config): per
-  lab, the pinned nixpkgs rev and date, and the versions of the attributes
-  that lab's `lab.json` lists, read with `nix eval` at that rev. The
-  per-lab knowledge lives in nix-config, not here. Never edit inside the
-  markers. Locally: `python3 scripts/build_readme.py --nix-config ../nix-config --dry-run`
-  and `python3 -m unittest discover -s scripts`.
-- `.github/workflows/activity.yml` – daily at 07:00 UTC **and** on every
-  `repository_dispatch` of type `activity` (sent by nix-config's reusable
-  `profile-ping.yml` after a merged PR in nix-config, marola, ww3-gpu or
-  gcp-agentic-architect; each of those holds a `PROFILE_DISPATCH_TOKEN`
-  secret), runs
-  `scripts/build_activity.py` with `METRICS_TOKEN`, which reads the user's
-  own events (private ones included) and rewrites the list between the
-  `<!--START_SECTION:activity-->` / `<!--END_SECTION:activity-->` markers
-  in all three READMEs, 10 lines. Events in the profile repository itself
-  are skipped — its history is README and CV regeneration, which says
-  nothing about what the user is working on; `--skip-repo` overrides the
-  list and `--skip-repo ""` keeps everything. The dispatch payload (repo, PR number,
-  visibility, merge time — nothing else, these logs are public) is passed
-  as `--dispatch-json`, and that merge is added when the events API has
-  not caught up yet. Private repositories render as a bare name with 🔒 and
-  no links; `PRIVATE_LABELS` in the script adds a label (empty now that
-  marola is open source at marola-dev/marola). Consecutive identical lines
-  collapse. Never edit inside the markers; keep the pair intact in both files. Locally:
-  `GITHUB_TOKEN=$(gh auth token) python3 scripts/build_activity.py --dry-run`
-  and `python3 -m unittest discover -s scripts`.
 - `metrics.base.svg`, `metrics.languages.svg` – **generated**. Never edit these by hand; the next workflow run overwrites
   them. They are committed so the README can embed them by relative path.
 
 ## Working on the README
 
-- Section order is deliberate: experience comes right after the intro, the
-  skill groups sit under `## 🧰 stack`, and marola is a `###` inside misc
-  while it is closed source. Move it back up when it goes open source.
+- Section order is deliberate: the open-source work at
+  [marola-dev](https://github.com/marola-dev) comes right after the intro —
+  it is what the user is actively working on and the profile leads with
+  it — then experience, then the skill groups under `## 🧰 stack`. The
+  marola-dev repo table lists every public repo of the org; add a row when
+  the org gains one. Live badges (last commit, commit activity, CI) sit in a
+  `cv:skip` block: they only render on github.com.
 - Never leave badge `<img>` lines bare: outside a `<p align="left">` block
   GitHub renders every line as its own paragraph and the badges stack
   vertically (check with `gh api markdown -f mode=gfm -f text=...`). The
@@ -103,8 +78,7 @@ edit or a change to the metrics workflow.
   use `style=for-the-badge`. Use `logo=<simpleicons-slug>` where a Simple
   Icons logo exists.
 - Badge groups live inside `<p align="left">` blocks, one `<img>` per line.
-- The stats section embeds the two generated SVGs and the activity markers,
-  and the nix labs section holds the nix-labs markers, in both READMEs. If you add a metrics
+- The stats section embeds the two generated SVGs. If you add a metrics
   step to the workflow, also add the matching `<img>` to the README, or it
   will be generated but never shown.
 - Preview: GitHub renders the README, so check the branch on github.com or
@@ -118,8 +92,10 @@ edit or a change to the metrics workflow.
   to fix in the YAML for that case.
 - `lowlighter/metrics` is pinned to a release tag. Bump it deliberately
   rather than reverting to `@latest`. Upstream is unmaintained (v3.34 is
-  from 2023); its activity plugin no longer works with GitHub's events API,
-  which is why `activity.yml` uses our own script.
+  from 2023); its activity plugin no longer works with GitHub's events API.
+  The profile used to carry a recent-activity list and a nix labs table,
+  each rewritten by its own bot; both were removed, so the marola-dev
+  section is the place that says what the user is working on.
 - The languages step runs the in-depth analyzer, which clones every owned
   repository over plain https without a token. Private repositories fail to
   clone silently, so the card covers **public repositories only**. It
@@ -154,7 +130,8 @@ edit or a change to the metrics workflow.
 - Commits made by the metrics bot carry `[Skip GitHub Action]`. Leave that
   suffix off human commits; it exists so the bot's own pushes do not retrigger
   the workflow.
-- The three README bots (`metrics` excluded) share the `readme-bots`
-  concurrency group so their commit-backs queue instead of racing.
+- The `cv` workflow runs in the `readme-bots` concurrency group; give any
+  new workflow that commits to `main` the same group so their commit-backs
+  queue instead of racing.
 - After a merge, expect several bot commits on `main` within a day. Rebase
   rather than merge if a branch falls behind because of them.
