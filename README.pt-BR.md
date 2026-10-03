@@ -4,12 +4,64 @@
 
 ## 👋 eu
 
-engenheiro de software sênior com **8 anos** de experiência construindo soluções escaláveis, principalmente para processamento de pagamentos e combate a fraudes
+engenheiro de software sênior com **8 anos** de experiência construindo soluções escaláveis, principalmente para processamento de pagamentos e combate a fraudes, hoje construindo tecnologia oceânica de código aberto na **[marola-dev](https://github.com/marola-dev)**
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 <!-- cv:end -->
+
+## 🌊 código aberto — [marola-dev](https://github.com/marola-dev)
+
+<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
+
+estou construindo ativamente o **[marola](https://github.com/marola-dev/marola)** de forma aberta: uma **camada de inteligência do oceano**
+para o litoral brasileiro, feita como ciência cidadã. ele ranqueia cada praia hora a hora por ondulação, vento, maré, uv e balneabilidade oficial,
+explica o *porquê* em linguagem simples e está no ar em **[marola.dev](https://marola.dev)** para florianópolis, rio de janeiro e salvador.
+
+- **segurança no código, não no prompt** - um score determinístico em scala 3 ([kyo](https://getkyo.io)) com veto de segurança; o llm explica, nunca anula
+- **ia local primeiro** - roda no ollama sem conta nem chave de api: servidor de ferramentas mcp, rag com citações, prompts compilados com dspy e um modelo próprio, o [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF)
+- **projetado em público** - toda mudança relevante começa como um documento de design público ([MIPs](https://github.com/marola-dev/marola/tree/main/docs/MIPs)); a seguir: alertas de ressaca, ensembles de modelos de onda com WAVEWATCH III e um arquivo aberto da balneabilidade das praias do brasil
+
+<p align="left">
+<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
+<a href="https://github.com/marola-dev" target="_blank"><img src="https://img.shields.io/badge/FOSS-marola--dev-2EA043?style=for-the-badge&logo=github&logoColor=white" alt="github: marola-dev" /></a>
+<a href="https://docs.marola.dev" target="_blank"><img src="https://img.shields.io/badge/docs-docs.marola.dev-0077BE?style=for-the-badge&logo=materialformkdocs&logoColor=white" alt="docs.marola.dev" /></a>
+<a href="https://github.com/marola-dev/marola/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-2EA043?style=for-the-badge" alt="licença MIT" /></a>
+</p>
+<!-- cv:skip -->
+<p align="left">
+<a href="https://github.com/marola-dev/marola/commits/main"><img src="https://img.shields.io/github/last-commit/marola-dev/marola?style=flat-square&logo=github&label=%C3%BAltimo%20commit" alt="último commit em marola-dev/marola" /></a>
+<a href="https://github.com/marola-dev/marola/graphs/commit-activity"><img src="https://img.shields.io/github/commit-activity/m/marola-dev/marola?style=flat-square&logo=github&label=commits" alt="commits por mês em marola-dev/marola" /></a>
+<a href="https://github.com/marola-dev/marola/actions/workflows/ci.yml"><img src="https://github.com/marola-dev/marola/actions/workflows/ci.yml/badge.svg" alt="marola CI" /></a>
+<a href="https://github.com/marola-dev/marola-site/actions/workflows/site.yml"><img src="https://github.com/marola-dev/marola-site/actions/workflows/site.yml/badge.svg" alt="build + deploy de marola.dev" /></a>
+</p>
+<!-- cv:end -->
+
+<!-- cv:skip -->
+| repo | o quê |
+| --- | --- |
+| [marola](https://github.com/marola-dev/marola) | o guarda-chuva: documentos de design, roadmap e [docs.marola.dev](https://docs.marola.dev), com cada repo abaixo como submódulo |
+| [marola-app](https://github.com/marola-dev/marola-app) | o produto: pipeline em scala 3 + kyo, score e veto de segurança, cli, servidor de ferramentas mcp |
+| [marola-site](https://github.com/marola-dev/marola-site) | o mapa em [marola.dev](https://marola.dev), reconstruído a cada 3 horas |
+| [marola-corpus](https://github.com/marola-dev/marola-corpus) | o conhecimento oceânico com fontes que toda resposta cita |
+| [marola-ml](https://github.com/marola-dev/marola-ml) | python offline: compilação de prompts com dspy, gate de benchmark, o modelo marola-sea |
+| [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: um arquivo versionado da balneabilidade do brasil |
+| [marola-devkit](https://github.com/marola-dev/marola-devkit) | harness de desenvolvimento compartilhado: ferramentas nix, hooks, skills do claude code, workflows de ci |
+| [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | lista curada de modelos, dados, ferramentas e institutos abertos sobre o oceano |
+<!-- cv:end -->
+
+<p align="left">
+<a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
+<a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
+<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
+<a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
+<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
+<a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
+<a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
+</p>
+
+> 🔓 contribuições são bem-vindas, de pessoas e de agentes de ia — nem precisa programar: use o mapa e diga onde ele erra, compartilhe conhecimento local sobre o mar, ou abra uma issue ou um PR em **[marola-dev/marola](https://github.com/marola-dev/marola)**. ou me escreva: **mhoffmannfs[at]gmail.com**
 
 ## 💼 destaques de experiência
 
@@ -90,24 +142,6 @@ engenheiro de software sênior com **8 anos** de experiência construindo soluç
 <img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" alt="dbt" />
 </p>
 
-## ❄️ nix labs
-
-flakes nix auto-contidos para minhas toolchains, em [nix-config](https://github.com/h0ffmann/nix-config): um diretório por lab, usado como flake input ou submódulo.
-
-[![nix-config ci](https://github.com/h0ffmann/nix-config/actions/workflows/ci.yml/badge.svg)](https://github.com/h0ffmann/nix-config/actions/workflows/ci.yml)
-
-<!-- gerado diariamente por .github/workflows/nix-labs.yml a partir de h0ffmann/nix-config -->
-<!-- nix-labs:start -->
-| lab | o que | nixpkgs | travado | toolchain |
-| --------- | ---------------------------------------- | -------- | ----------------- | -------------------------- |
-| [agentic](https://github.com/h0ffmann/nix-config/tree/main/labs/agentic) | ai-jail, OpenCode, Open Code Review, gh, and jail-run / gh-token / clip / clip-relay | `eaad089` | 2026-09-11 (há 22 dias) | gh 2.100.0 · opencode 1.18.30 · bubblewrap 0.12.0 |
-| [cuda](https://github.com/h0ffmann/nix-config/tree/main/labs/cuda) | nixos-cuda binary cache setup, torch venv with the driver libs on its path; x86_64-linux only | `eaad089` | 2026-09-11 (há 22 dias) | python3 3.14.7 |
-| [lint](https://github.com/h0ffmann/nix-config/tree/main/labs/lint) | hadolint, actionlint, shellcheck, ruff, pyflakes, cloc, coverage, pdoc as one list | `eaad089` | 2026-09-11 (há 22 dias) | hadolint 2.14.0 · actionlint 1.7.12 · shellcheck 0.11.0 · ruff 0.16.6 |
-| [pratico](https://github.com/h0ffmann/nix-config/tree/main/labs/pratico) | WAVEWATCH III toolchain (gfortran / OpenMPI / NetCDF), zsh-ai pilot, ai-jail recipes | `eaad089` | 2026-09-11 (há 22 dias) | gfortran 15.3.0 · openmpi 5.0.10 · netcdf 4.10.1 · hdf5 1.14.6 · eccodes 2.48.0 · kokkos 5.2.0 · gtest 1.18.0 · cmake 4.4.2 |
-| [present](https://github.com/h0ffmann/nix-config/tree/main/labs/present) | gromit-mpx, flameshot, grim/slurp/satty, wf-recorder, OBS, v4l2 + cam profiles, pdfpc, presenterm | `6774f7b` | 2026-09-22 (há 11 dias) | gromit-mpx 1.9.0 · obs-studio 32.2.2 · v4l-utils 1.32.0 · presenterm 0.16.1 |
-| [publisher](https://github.com/h0ffmann/nix-config/tree/main/labs/publisher) | pandoc + TeX Live, mkPdf and mkDocx, a composite Action that builds and commits documents | `eaad089` | 2026-09-11 (há 22 dias) | pandoc 3.7.0.2 · texlive 2025 · python3 3.14.7 · librsvg 2.62.3 |
-<!-- nix-labs:end -->
-
 <!-- cv:skip -->
 ## 📊 estatísticas
 
@@ -119,20 +153,6 @@ flakes nix auto-contidos para minhas toolchains, em [nix-config](https://github.
 <p align="left">
   <img src="metrics.languages.svg" alt="linguagens mais usadas" />
 </p>
-
-<!-- generated by .github/workflows/activity.yml after each merge (push from nix-config's profile-ping.yml) and daily -->
-<!--START_SECTION:activity-->
-1. ↑ Pushed to claude/friendly-ptolemy-g8vrej in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-2. ↑ Pushed to docs/mip-0072-gemini-review-on-request in [marola-dev/marola](https://github.com/marola-dev/marola)
-3. ↑ Pushed to docs/mip-0073-open-system-one-models in [marola-dev/marola](https://github.com/marola-dev/marola)
-4. ↑ Pushed to docs/mip-0071-official-alerts in [marola-dev/marola](https://github.com/marola-dev/marola)
-5. ↑ Pushed to docs/mip-0072-gemini-review-on-request in [marola-dev/marola](https://github.com/marola-dev/marola)
-6. ✎ Commented on [#45](https://github.com/marola-dev/marola-site/issues/45#issuecomment-5965412887) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-7. ◇ Opened issue [#46](https://github.com/marola-dev/marola-site/issues/46) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-8. ◇ Opened issue [#45](https://github.com/marola-dev/marola-site/issues/45) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-9. ↑ Pushed to claude/mapbox-webgl-map-yn9h9t in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-10. ◆ Opened PR [#44](https://github.com/marola-dev/marola-site/pull/44) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-<!--END_SECTION:activity-->
 <!-- cv:end -->
 
 ## 🏅 certificações
@@ -155,29 +175,6 @@ flakes nix auto-contidos para minhas toolchains, em [nix-config](https://github.
 <img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />
 <img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
 </p>
-
-### construindo 🌊 [marola](https://marola.dev) — a camada de inteligência do oceano
-
-<a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
-
-previsão e inteligência para o mar: ondulação, vento, maré, perigos e condições de surf,
-transformados em sinais que você consegue de fato usar.
-
-<p align="left">
-<a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
-<a href="https://github.com/marola-dev/marola" target="_blank"><img src="https://img.shields.io/badge/FOSS-marola--dev%2Fmarola-2EA043?style=for-the-badge&logo=github&logoColor=white" alt="código aberto: marola-dev/marola" /></a>
-</p>
-<p align="left">
-<a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-0077BE?style=flat-square" alt="civic-tech" /></a>
-<a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-0077BE?style=flat-square" alt="disaster-risk-management" /></a>
-<a href="https://github.com/topics/forecasting"><img src="https://img.shields.io/badge/forecasting-0077BE?style=flat-square" alt="forecasting" /></a>
-<a href="https://github.com/topics/meteorology"><img src="https://img.shields.io/badge/meteorology-0077BE?style=flat-square" alt="meteorology" /></a>
-<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-0077BE?style=flat-square" alt="non-profit" /></a>
-<a href="https://github.com/topics/oceanography"><img src="https://img.shields.io/badge/oceanography-0077BE?style=flat-square" alt="oceanography" /></a>
-<a href="https://github.com/topics/water-quality"><img src="https://img.shields.io/badge/water--quality-0077BE?style=flat-square" alt="water-quality" /></a>
-</p>
-
-> 🔓 código aberto em **[marola-dev/marola](https://github.com/marola-dev/marola)** — quer contribuir? abra uma issue ou um PR, ou me escreva: **mhoffmannfs[at]gmail.com**
 
 <!-- cv:skip -->
 <p align="center">
