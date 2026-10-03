@@ -123,16 +123,16 @@
 
 <!-- .github/workflows/activity.yml がマージごと（nix-config の profile-ping.yml からの push）と毎日生成 -->
 <!--START_SECTION:activity-->
-1. ✎ Commented on [#412](https://github.com/marola-dev/marola/issues/412#issuecomment-5952539208) in [marola-dev/marola](https://github.com/marola-dev/marola)
-2. ✔ Closed issue [#412](https://github.com/marola-dev/marola/issues/412) in [marola-dev/marola](https://github.com/marola-dev/marola)
-3. ↑ Pushed to main in [marola-dev/awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science)
-4. ↑ Pushed to claude/great-hamilton-cptyy7 in [marola-dev/awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science)
-5. ◆ Opened PR [#1](https://github.com/marola-dev/awesome-ocean-science/pull/1) in [marola-dev/awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science)
-6. ↑ Pushed to claude/great-hamilton-cptyy7 in [marola-dev/marola](https://github.com/marola-dev/marola)
-7. ↑ Pushed to main in [marola-dev/marola](https://github.com/marola-dev/marola)
-8. ↑ Pushed to mip-0054/2-i18n-app in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
-9. ↑ Pushed to docs/mip-0072-gemini-review-on-request in [marola-dev/marola](https://github.com/marola-dev/marola)
-10. ↑ Pushed to docs/mip-0071-official-alerts in [marola-dev/marola](https://github.com/marola-dev/marola)
+1. ↑ Pushed to claude/friendly-ptolemy-g8vrej in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
+2. ↑ Pushed to docs/mip-0072-gemini-review-on-request in [marola-dev/marola](https://github.com/marola-dev/marola)
+3. ↑ Pushed to docs/mip-0073-open-system-one-models in [marola-dev/marola](https://github.com/marola-dev/marola)
+4. ↑ Pushed to docs/mip-0071-official-alerts in [marola-dev/marola](https://github.com/marola-dev/marola)
+5. ↑ Pushed to docs/mip-0072-gemini-review-on-request in [marola-dev/marola](https://github.com/marola-dev/marola)
+6. ✎ Commented on [#45](https://github.com/marola-dev/marola-site/issues/45#issuecomment-5965412887) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
+7. ◇ Opened issue [#46](https://github.com/marola-dev/marola-site/issues/46) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
+8. ◇ Opened issue [#45](https://github.com/marola-dev/marola-site/issues/45) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
+9. ↑ Pushed to claude/mapbox-webgl-map-yn9h9t in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
+10. ◆ Opened PR [#44](https://github.com/marola-dev/marola-site/pull/44) in [marola-dev/marola-site](https://github.com/marola-dev/marola-site)
 <!--END_SECTION:activity-->
 <!-- cv:end -->
 
