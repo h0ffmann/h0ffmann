@@ -4,7 +4,7 @@
 
 ## 👋 me
 
-sr. software engineer with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting, now building open-source ocean tech at **[marola-dev](https://github.com/marola-dev)**
+sr. software engineer & jr. researcher with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting, now building open-source ocean tech at **[marola-dev](https://github.com/marola-dev)**
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
