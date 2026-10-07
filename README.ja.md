@@ -15,11 +15,11 @@
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
 
-ブラジル沿岸のための市民科学による**海のインテリジェンスレイヤー**、**[marola](https://github.com/marola-dev/marola)** をオープンに開発しています。各ビーチをうねり・風・潮汐・UV・公式の海水浴場水質で1時間ごとにランク付けし、その*理由*をわかりやすい言葉で説明します。フロリアノポリス、リオデジャネイロ、サルバドールを対象に **[marola.dev](https://marola.dev)** で公開中です。
+ブラジル沿岸のための市民科学による**海のインテリジェンスレイヤー**、**[marola](https://github.com/marola-dev/marola)** をオープンに開発しています。フロリアノポリス、リオデジャネイロ、サルバドールの各ビーチについて「明日泳げる？何時がいい？」に答え、うねり・風・潮汐・UV・公式の海水浴場水質速報から最適な時間を選び、その*理由*をわかりやすい言葉で説明します。**[marola.dev](https://marola.dev)** で公開中です。
 
-- **安全性はプロンプトではなくコードで**：Scala 3（[Kyo](https://getkyo.io)）による決定論的なスコアと安全拒否権。LLM は説明するだけで、判定を覆すことはありません
-- **ローカルファーストの AI**：アカウントや API キー不要で Ollama 上で動作。MCP ツールサーバー、引用付き RAG、DSPy でコンパイルしたプロンプト、独自の小型モデル [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF)
-- **公開の場で設計**：重要な変更はすべて公開設計書（[MIP](https://github.com/marola-dev/marola/tree/main/docs/MIPs)）から始まります。次は *ressaca*（高波）警報、WAVEWATCH III を含む波浪モデルのアンサンブル、ブラジルの海水浴場水質のオープンアーカイブ
+- **水質を最優先に**：公式の採水地点（IMA/SC、INEA、INEMA）をすべて地図に載せ、最新の速報で色分け。不適な水質は Scala 3（[Kyo](https://getkyo.io)）の決定論的なコードでスコアをゼロにし、LLM は説明するだけで判定を覆すことはありません
+- **目の前の海**：ビーチごとの潮汐・うねり・風・UV・クラゲとクジラの出現可能性、出典付きの「ご存じですか？」、そして「海に聞く」：Ollama 上の引用付き RAG、MCP ツールサーバー、独自の小型モデル [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF)。アカウントや API キーは不要
+- **公開の場で設計**：重要な変更はすべて公開設計書（[MIP](https://github.com/marola-dev/marola/tree/main/docs/MIPs)）から始まります。次は風・波・衛星・海水温の地図レイヤー、*ressaca*（高波）警報、WAVEWATCH III を含む波浪モデルのアンサンブル、ビーチと水質のオープンなデータレイク
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
@@ -44,9 +44,11 @@
 | [marola-site](https://github.com/marola-dev/marola-site) | [marola.dev](https://marola.dev) の地図、3時間ごとに再構築 |
 | [marola-corpus](https://github.com/marola-dev/marola-corpus) | すべての回答が引用する、出典付きの海洋知識 |
 | [marola-ml](https://github.com/marola-dev/marola-ml) | オフラインの Python：DSPy によるプロンプトのコンパイル、ベンチマークゲート、marola-sea モデル |
-| [marola-oods](https://github.com/marola-dev/marola-oods) | Open Ocean Data Store：ブラジルの海水浴場水質のバージョン管理されたアーカイブ |
+| [marola-oods](https://github.com/marola-dev/marola-oods) | Open Ocean Data Store：ビーチと海水浴場水質サンプルのオープンなデータレイク（開発中） |
 | [marola-devkit](https://github.com/marola-dev/marola-devkit) | 共通の開発基盤：nix ツール、フック、Claude Code スキル、CI ワークフロー |
 | [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | オープンな海洋モデル、データ、ツール、研究機関の厳選リスト |
+| [open-sustainable-technology](https://github.com/marola-dev/open-sustainable-technology) | オープンなサステナビリティ技術のコミュニティリストのフォーク |
+| [awesome-open-climate-science](https://github.com/marola-dev/awesome-open-climate-science) | オープンな気候科学のコミュニティリストのフォーク |
 <!-- cv:end -->
 
 <p align="left">

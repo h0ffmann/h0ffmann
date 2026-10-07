@@ -16,12 +16,12 @@ sr. software engineer with **8 years** of experience building scalable (and occa
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code for marola.dev" title="scan for marola.dev" align="right" width="120" /></a>
 
 i'm actively building **[marola](https://github.com/marola-dev/marola)** in the open: a citizen-science **ocean intelligence layer**
-for the brazilian coast. it ranks every beach hour by hour for swell, wind, tide, uv and official bathing-water quality,
-explains the *why* in plain language, and is live at **[marola.dev](https://marola.dev)** for florianópolis, rio de janeiro and salvador.
+for the brazilian coast. it answers *"can i swim tomorrow, and when?"* for every beach around florianópolis, rio de janeiro and salvador:
+the best hour from swell, wind, tide, uv and the official bathing-water bulletins, with the *why* in plain language, live at **[marola.dev](https://marola.dev)**.
 
-- **safety in code, not in prompts** - a deterministic scala 3 ([kyo](https://getkyo.io)) score with a hard safety veto; the llm explains, never overrules
-- **local-first ai** - runs on ollama with no account or api key: an mcp tool server, rag with citations, dspy-compiled prompts and its own small model, [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF)
-- **designed in public** - every non-trivial change starts as a public design doc ([MIPs](https://github.com/marola-dev/marola/tree/main/docs/MIPs)); next up: *ressaca* (storm surf) warnings, wave-model ensembles with WAVEWATCH III, an open archive of brazil's beach water quality
+- **water quality first** - every official sampling point (ima/sc, inea, inema) is on the map, coloured by its last bulletin; unfit water zeroes the score in deterministic scala 3 ([kyo](https://getkyo.io)) code, and the llm explains but never overrules
+- **the sea in front of you** - tide, swell, wind, uv, jellyfish and whale odds per beach, a sourced *did you know?* about the local sea, and *ask the ocean*: rag with citations on ollama, an mcp tool server and its own small model, [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF), no account or api key
+- **designed in public** - every non-trivial change starts as a public design doc ([MIPs](https://github.com/marola-dev/marola/tree/main/docs/MIPs)); next up: wind, wave, satellite and sea-heat map layers, *ressaca* (storm surf) warnings, wave-model ensembles with WAVEWATCH III and an open data lake of beaches and water quality
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
@@ -46,9 +46,11 @@ explains the *why* in plain language, and is live at **[marola.dev](https://maro
 | [marola-site](https://github.com/marola-dev/marola-site) | the map at [marola.dev](https://marola.dev), rebuilt every 3 hours |
 | [marola-corpus](https://github.com/marola-dev/marola-corpus) | the sourced ocean knowledge every answer cites |
 | [marola-ml](https://github.com/marola-dev/marola-ml) | offline python: dspy prompt compile, benchmark gate, the marola-sea model |
-| [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: a versioned archive of brazil's bathing-water quality |
+| [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: an open data lake of beaches and bathing-water samples (in progress) |
 | [marola-devkit](https://github.com/marola-dev/marola-devkit) | shared dev harness: nix tools, hooks, claude code skills, ci workflows |
 | [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | curated list of open ocean models, data, tools and institutes |
+| [open-sustainable-technology](https://github.com/marola-dev/open-sustainable-technology) | fork of the community list of open sustainability projects |
+| [awesome-open-climate-science](https://github.com/marola-dev/awesome-open-climate-science) | fork of the community list of open climate science |
 <!-- cv:end -->
 
 <p align="left">
