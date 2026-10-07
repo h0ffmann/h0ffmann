@@ -16,12 +16,12 @@ engenheiro de software sênior com **8 anos** de experiência construindo soluç
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
 
 estou construindo ativamente o **[marola](https://github.com/marola-dev/marola)** de forma aberta: uma **camada de inteligência do oceano**
-para o litoral brasileiro, feita como ciência cidadã. ele ranqueia cada praia hora a hora por ondulação, vento, maré, uv e balneabilidade oficial,
-explica o *porquê* em linguagem simples e está no ar em **[marola.dev](https://marola.dev)** para florianópolis, rio de janeiro e salvador.
+para o litoral brasileiro, feita como ciência cidadã. ele responde *"posso nadar amanhã, e quando?"* para cada praia de florianópolis, rio de janeiro e salvador:
+a melhor hora por ondulação, vento, maré, uv e os boletins oficiais de balneabilidade, com o *porquê* em linguagem simples, no ar em **[marola.dev](https://marola.dev)**.
 
-- **segurança no código, não no prompt** - um score determinístico em scala 3 ([kyo](https://getkyo.io)) com veto de segurança; o llm explica, nunca anula
-- **ia local primeiro** - roda no ollama sem conta nem chave de api: servidor de ferramentas mcp, rag com citações, prompts compilados com dspy e um modelo próprio, o [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF)
-- **projetado em público** - toda mudança relevante começa como um documento de design público ([MIPs](https://github.com/marola-dev/marola/tree/main/docs/MIPs)); a seguir: alertas de ressaca, ensembles de modelos de onda com WAVEWATCH III e um arquivo aberto da balneabilidade das praias do brasil
+- **balneabilidade em primeiro lugar** - cada ponto oficial de coleta (ima/sc, inea, inema) está no mapa, colorido pelo último boletim; água imprópria zera o score em código determinístico scala 3 ([kyo](https://getkyo.io)), e o llm explica mas nunca anula
+- **o mar à sua frente** - maré, ondulação, vento, uv e chance de águas-vivas e baleias por praia, um *você sabia?* com fonte sobre o mar local e o *pergunte ao oceano*: rag com citações no ollama, servidor de ferramentas mcp e um modelo próprio, o [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF), sem conta nem chave de api
+- **projetado em público** - toda mudança relevante começa como um documento de design público ([MIPs](https://github.com/marola-dev/marola/tree/main/docs/MIPs)); a seguir: camadas de vento, ondas, satélite e calor do mar no mapa, alertas de ressaca, ensembles de modelos de onda com WAVEWATCH III e um data lake aberto de praias e balneabilidade
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
@@ -46,9 +46,11 @@ explica o *porquê* em linguagem simples e está no ar em **[marola.dev](https:/
 | [marola-site](https://github.com/marola-dev/marola-site) | o mapa em [marola.dev](https://marola.dev), reconstruído a cada 3 horas |
 | [marola-corpus](https://github.com/marola-dev/marola-corpus) | o conhecimento oceânico com fontes que toda resposta cita |
 | [marola-ml](https://github.com/marola-dev/marola-ml) | python offline: compilação de prompts com dspy, gate de benchmark, o modelo marola-sea |
-| [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: um arquivo versionado da balneabilidade do brasil |
+| [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: um data lake aberto de praias e amostras de balneabilidade (em andamento) |
 | [marola-devkit](https://github.com/marola-dev/marola-devkit) | harness de desenvolvimento compartilhado: ferramentas nix, hooks, skills do claude code, workflows de ci |
 | [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | lista curada de modelos, dados, ferramentas e institutos abertos sobre o oceano |
+| [open-sustainable-technology](https://github.com/marola-dev/open-sustainable-technology) | fork da lista comunitária de projetos abertos de sustentabilidade |
+| [awesome-open-climate-science](https://github.com/marola-dev/awesome-open-climate-science) | fork da lista comunitária de ciência aberta do clima |
 <!-- cv:end -->
 
 <p align="left">
