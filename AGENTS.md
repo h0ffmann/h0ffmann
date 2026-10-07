@@ -23,13 +23,11 @@ edit or a change to the metrics workflow.
   `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
   (pandoc → lualatex; shields badges become colored pills). `cv/prepare.py`
   drops everything between `<!-- cv:skip -->` / `<!-- cv:end -->` (the
-  language line, the LinkedIn badge the CV header already has, the stats
-  section, the live marola badges and the marola-dev repo table, the photo) and prepends `cv/header.md`
+  language line, the LinkedIn badge the CV header already has, the live marola badges and the marola-dev repo table, the photo) and prepends `cv/header.md`
   (name + contact). The CV follows the README's section order — me,
-  open source (marola-dev), exp-highlights, the skill groups, certs,
+  open source (marola-dev), research (ww3-gpu), exp-highlights, certs,
   learning, misc — so reordering the profile
-  reorders the CV. The `## 🧰 stack` heading is skipped: the profile's
-  outline needs it, the one-page CV has no room for it. `cv/preamble.tex` is the look. The CV is
+  reorders the CV. `cv/preamble.tex` is the look. The CV is
   one page per language and close to full: check the page count in the
   build output after adding content.
   Emoji are not drawn from a font: `cv/emoji.lua` replaces each one with
@@ -63,7 +61,8 @@ edit or a change to the metrics workflow.
 - Section order is deliberate: the open-source work at
   [marola-dev](https://github.com/marola-dev) comes right after the intro —
   it is what the user is actively working on and the profile leads with
-  it — then experience, then the skill groups under `## 🧰 stack`. The
+  it — then the ww3-gpu research project, then experience. The profile has
+  no tech-stack or stats section; the user removed both. The
   marola-dev repo table lists every public repo of the org; add a row when
   the org gains one. Live badges (last commit, commit activity, CI) sit in a
   `cv:skip` block: they only render on github.com.
@@ -72,15 +71,15 @@ edit or a change to the metrics workflow.
   vertically (check with `gh api markdown -f mode=gfm -f text=...`). The
   four AWS cert badges also carry `height="24"`: at the native 28 px the
   row is ~919 px, wider than the README column, and the fourth would wrap.
-- Headings are lowercase with a leading emoji (`### 🫀 core`, `## 📊 stats`).
+- Headings are lowercase with a leading emoji (`## 👋 me`, `## 💼 exp-highlights`).
   Keep that style for new sections.
-- Tech badges use shields.io with `style=flat-square`. Link and cert badges
-  use `style=for-the-badge`. Use `logo=<simpleicons-slug>` where a Simple
+- Topic badges use shields.io with `style=flat-square`. Link, DOI and cert
+  badges use `style=for-the-badge`. Use `logo=<simpleicons-slug>` where a Simple
   Icons logo exists.
 - Badge groups live inside `<p align="left">` blocks, one `<img>` per line.
-- The stats section embeds the two generated SVGs. If you add a metrics
-  step to the workflow, also add the matching `<img>` to the README, or it
-  will be generated but never shown.
+- The README no longer embeds the two generated metrics SVGs; the metrics
+  workflow still refreshes them. Add their `<img>` back to bring the stats
+  section back.
 - Preview: GitHub renders the README, so check the branch on github.com or
   use `gh repo view --web` for the merged result. Relative SVG paths only
   resolve once the SVGs exist on the branch being viewed.
