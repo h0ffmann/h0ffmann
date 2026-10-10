@@ -8,6 +8,10 @@ how i work, one item per heading so each can be shared on its own: every heading
 
 i only work with people who know how to read.
 
+### open source platform
+
+i manage an open source platform: **[marola.dev](https://marola.dev)** ([github.com/marola-dev](https://github.com/marola-dev)).
+
 ## hiring
 
 ### no live coding
@@ -17,10 +21,6 @@ i don't do live coding. i'm open to a code interview, or to discussing past proj
 ### money first
 
 i won't do a single interview without talking money first.
-
-### open source platform
-
-i manage an open source platform: **[marola.dev](https://marola.dev)** ([github.com/marola-dev](https://github.com/marola-dev)).
 
 ## time and place
 
