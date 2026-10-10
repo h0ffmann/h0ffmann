@@ -6,7 +6,7 @@ how i work, one item per heading so each can be shared on its own: every heading
 
 ### people who read
 
-i only work with people who know how to read: the docs, the issue, the thread, before asking.
+i only work with people who know how to read.
 
 ### no code reviews
 
