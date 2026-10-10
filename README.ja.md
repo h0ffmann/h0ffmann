@@ -8,6 +8,7 @@
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="me/ways-of-working.md"><img src="https://img.shields.io/badge/%E5%83%8D%E3%81%8D%E6%96%B9-2EA043?style=for-the-badge" alt="働き方" /></a>
 </p>
 <!-- cv:end -->
 
