@@ -8,9 +8,9 @@ how i work, one item per heading so each can be shared on its own: every heading
 
 i only work with people who know how to read.
 
-### no code reviews
+### no live coding
 
-i don't do code reviews. i'm open to discussing my open source projects, and a few closed source ones.
+i don't do live coding. i'm open to a code interview, or to discussing past projects: my open source ones, and a few closed source ones.
 
 ## hiring
 
