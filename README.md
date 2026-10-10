@@ -8,6 +8,7 @@ sr. software engineer & jr. researcher with **8 years** of experience building s
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="me/ways-of-working.md"><img src="https://img.shields.io/badge/ways%20of%20working-2EA043?style=for-the-badge" alt="ways of working" /></a>
 </p>
 <!-- cv:end -->
 
