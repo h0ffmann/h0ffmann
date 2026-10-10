@@ -15,6 +15,9 @@ sr. software engineer & jr. researcher with **8 years** of experience building s
 ## 🌊 open source — [marola-dev](https://github.com/marola-dev)
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code for marola.dev" title="scan for marola.dev" align="right" width="120" /></a>
+<!-- cv:skip -->
+<a href="https://lnt.org" target="_blank"><img src="https://img.shields.io/badge/Leave_No_Trace-affiliate-4B7F3A?style=for-the-badge" alt="Leave No Trace affiliate" title="Leave No Trace: outdoor ethics" align="right" /></a>
+<!-- cv:end -->
 
 i'm actively building **[marola](https://github.com/marola-dev/marola)** in the open: a citizen-science **ocean intelligence layer**
 for the brazilian coast. it answers *"can i swim tomorrow, and when?"* for every beach around florianópolis, rio de janeiro and salvador:
