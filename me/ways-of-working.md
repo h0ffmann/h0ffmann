@@ -11,6 +11,14 @@ i only work with people who know how to read.
 ### open source platform
 
 i manage an open source platform: **[marola.dev](https://marola.dev)** ([github.com/marola-dev](https://github.com/marola-dev)).
+marola is a nonprofit, and i do serious work with other non-profit institutions, such as [Leave No Trace](https://lnt.org).
+
+### dois
+
+my work is citable:
+
+- marola: [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
+- ww3-gpu, the wavewatch iii gpu port: [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)
 
 ## hiring
 
