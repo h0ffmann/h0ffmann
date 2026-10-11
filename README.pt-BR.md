@@ -116,7 +116,12 @@ as 17 lições, do espectro de ondas ao port de kernels com agentes de código, 
 </p>
 
 <!-- cv:skip -->
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="600">
-</p>
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="photos/swim-2007.svg" width="400" alt="2007: um menino segurando suas medalhas de natação em frente à bandeira do brasil" /><br /><sub>2007</sub></td>
+<td align="center"><img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="400" alt="2025: três medalhas do oceanman rio de janeiro" /><br /><sub>2025</sub></td>
+</tr>
+</table>
+</div>
 <!-- cv:end -->

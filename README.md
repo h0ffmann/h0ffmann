@@ -116,8 +116,13 @@ its 17 lessons, from the wave spectrum to porting kernels with coding agents, ar
 </p>
 
 <!-- cv:skip -->
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="600">
-</p>
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="photos/swim-2007.svg" width="400" alt="2007: a boy holding up his swimming medals in front of the brazilian flag" /><br /><sub>2007</sub></td>
+<td align="center"><img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="400" alt="2025: three medals from oceanman rio de janeiro" /><br /><sub>2025</sub></td>
+</tr>
+</table>
+</div>
 <!-- cv:end -->
 

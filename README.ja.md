@@ -112,7 +112,12 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 </p>
 
 <!-- cv:skip -->
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="600">
-</p>
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="photos/swim-2007.svg" width="400" alt="2007年：ブラジル国旗の前で水泳のメダルを掲げる少年" /><br /><sub>2007</sub></td>
+<td align="center"><img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="400" alt="2025年：オーシャンマン・リオデジャネイロの3つのメダル" /><br /><sub>2025</sub></td>
+</tr>
+</table>
+</div>
 <!-- cv:end -->
