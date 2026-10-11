@@ -13,7 +13,7 @@ i only work with people who know how to read.
 i manage an open source platform: **[marola.dev](https://marola.dev)** ([github.com/marola-dev](https://github.com/marola-dev)).
 marola is a nonprofit, and i do serious work with other non-profit institutions, such as [Leave No Trace](https://lnt.org).
 
-### dois
+### DOI's
 
 my work is citable:
 
