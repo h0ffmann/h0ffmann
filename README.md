@@ -23,6 +23,7 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 - **water quality first** - every official sampling point (ima/sc, inea, inema) is on the map, coloured by its last bulletin; unfit water zeroes the score in deterministic scala 3 ([kyo](https://getkyo.io)) code, and the llm explains but never overrules
 - **the sea in front of you** - tide, swell, wind, uv, jellyfish and whale odds per beach, a sourced *did you know?* about the local sea, and *ask the ocean*: rag with citations on ollama, an mcp tool server and its own small model, [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF), no account or api key
 - **designed in public** - every non-trivial change starts as a public design doc ([MIPs](https://github.com/marola-dev/marola/tree/main/docs/MIPs)); next up: wind, wave, satellite and sea-heat map layers, *ressaca* (storm surf) warnings, wave-model ensembles with WAVEWATCH III and an open data lake of beaches and water quality
+- **one umbrella, many repos** - [marola](https://github.com/marola-dev/marola) holds no code, only the plans, the shared rules for people and coding agents, and every other repo as a submodule; each repo builds and releases alone. every claude code skill and agent marola runs is listed in [marola-skills](https://github.com/marola-dev/marola-skills) and [marola-agents](https://github.com/marola-dev/marola-agents)
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
@@ -50,6 +51,9 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 | [marola-ml](https://github.com/marola-dev/marola-ml) | offline python: dspy prompt compile, benchmark gate, the marola-sea model |
 | [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: an open data lake of beaches and bathing-water samples (in progress) |
 | [marola-devkit](https://github.com/marola-dev/marola-devkit) | shared dev harness: nix tools, hooks, claude code skills, ci workflows |
+| [marola-skills](https://github.com/marola-dev/marola-skills) | catalogue of every claude code skill and subagent across the repos and where each came from, refreshed daily |
+| [marola-agents](https://github.com/marola-dev/marola-agents) | inventory of every agent marola uses or plans: subagents, claude projects and their routines, the product's llm roles |
+| [marola-research](https://github.com/marola-dev/marola-research) | science: the research behind marola (just started) |
 | [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | curated list of open ocean models, data, tools and institutes |
 | [open-sustainable-technology](https://github.com/marola-dev/open-sustainable-technology) | fork of the community list of open sustainability projects |
 | [awesome-open-climate-science](https://github.com/marola-dev/awesome-open-climate-science) | fork of the community list of open climate science |
@@ -69,9 +73,9 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 
 ## ⚡ research — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
-my undergraduate project at ufrj (escola politécnica), co-advised at labeco/ufsc: **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, an open lab for running noaa's **WAVEWATCH III** wave model and moving its expensive kernels to gpus *without changing the answer*.
+my undergraduate project at ufrj (escola politécnica), co-advised at labeco/ufsc: **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, an open lab and a book in progress on agentic coding and agentic research, around one problem: moving the expensive kernels of noaa's **WAVEWATCH III** wave model to gpus *without changing the answer*.
 a nix-pinned fortran/mpi/netcdf toolchain builds ww3 and runs a regression test in one command. the dia nonlinear-interaction kernel (`W3SNL1`), ported to c++/**kokkos**, matches the fortran bit for bit on serial, openmp and cuda, and runs 1,000 sea points in 0.047 ms on an rtx 4090 against 24.96 ms serial.
-it also holds a 16-lesson course, from the wave spectrum to porting kernels with coding agents.
+its 17 lessons, from the wave spectrum to porting kernels with coding agents, are the book's chapters, built into a pdf and a [website](https://h0ffmann.github.io/ww3-gpu/) on every merge.
 
 <p align="left">
 <a href="https://github.com/h0ffmann/ww3-gpu" target="_blank"><img src="https://img.shields.io/badge/research-ww3--gpu-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: ww3-gpu" /></a>

@@ -23,6 +23,7 @@ a melhor hora por ondulação, vento, maré, uv e os boletins oficiais de balnea
 - **balneabilidade em primeiro lugar** - cada ponto oficial de coleta (ima/sc, inea, inema) está no mapa, colorido pelo último boletim; água imprópria zera o score em código determinístico scala 3 ([kyo](https://getkyo.io)), e o llm explica mas nunca anula
 - **o mar à sua frente** - maré, ondulação, vento, uv e chance de águas-vivas e baleias por praia, um *você sabia?* com fonte sobre o mar local e o *pergunte ao oceano*: rag com citações no ollama, servidor de ferramentas mcp e um modelo próprio, o [marola-sea](https://huggingface.co/h0ffmann/marola-sea-tiny-GGUF), sem conta nem chave de api
 - **projetado em público** - toda mudança relevante começa como um documento de design público ([MIPs](https://github.com/marola-dev/marola/tree/main/docs/MIPs)); a seguir: camadas de vento, ondas, satélite e calor do mar no mapa, alertas de ressaca, ensembles de modelos de onda com WAVEWATCH III e um data lake aberto de praias e balneabilidade
+- **um guarda-chuva, vários repos** - o [marola](https://github.com/marola-dev/marola) não tem código, só os planos, as regras comuns para pessoas e agentes de código e cada outro repo como submódulo; cada repo compila e publica sozinho. toda skill e todo agente do claude code que o marola usa estão listados em [marola-skills](https://github.com/marola-dev/marola-skills) e [marola-agents](https://github.com/marola-dev/marola-agents)
 
 <p align="left">
 <a href="https://marola.dev" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%8A_marola.dev-0077BE?style=for-the-badge" alt="marola.dev" /></a>
@@ -50,6 +51,9 @@ a melhor hora por ondulação, vento, maré, uv e os boletins oficiais de balnea
 | [marola-ml](https://github.com/marola-dev/marola-ml) | python offline: compilação de prompts com dspy, gate de benchmark, o modelo marola-sea |
 | [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: um data lake aberto de praias e amostras de balneabilidade (em andamento) |
 | [marola-devkit](https://github.com/marola-dev/marola-devkit) | harness de desenvolvimento compartilhado: ferramentas nix, hooks, skills do claude code, workflows de ci |
+| [marola-skills](https://github.com/marola-dev/marola-skills) | catálogo de cada skill e subagente do claude code nos repos e de onde cada um veio, atualizado todo dia |
+| [marola-agents](https://github.com/marola-dev/marola-agents) | inventário de cada agente que o marola usa ou planeja: subagentes, projetos do claude e suas rotinas, os papéis de llm do produto |
+| [marola-research](https://github.com/marola-dev/marola-research) | ciência: a pesquisa por trás do marola (recém-criado) |
 | [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | lista curada de modelos, dados, ferramentas e institutos abertos sobre o oceano |
 | [open-sustainable-technology](https://github.com/marola-dev/open-sustainable-technology) | fork da lista comunitária de projetos abertos de sustentabilidade |
 | [awesome-open-climate-science](https://github.com/marola-dev/awesome-open-climate-science) | fork da lista comunitária de ciência aberta do clima |
@@ -69,9 +73,9 @@ a melhor hora por ondulação, vento, maré, uv e os boletins oficiais de balnea
 
 ## ⚡ pesquisa — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
-meu projeto de graduação na ufrj (escola politécnica), coorientado no labeco/ufsc: o **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, um laboratório aberto para rodar o modelo de ondas **WAVEWATCH III** da noaa e levar seus kernels mais caros para gpus *sem mudar a resposta*.
+meu projeto de graduação na ufrj (escola politécnica), coorientado no labeco/ufsc: o **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, um laboratório aberto e um livro em andamento sobre programação agêntica e pesquisa agêntica, em torno de um problema: levar os kernels mais caros do modelo de ondas **WAVEWATCH III** da noaa para gpus *sem mudar a resposta*.
 um toolchain fortran/mpi/netcdf fixado com nix compila o ww3 e roda um teste de regressão em um comando. o kernel de interação não linear dia (`W3SNL1`), portado para c++/**kokkos**, reproduz o fortran bit a bit em serial, openmp e cuda, e roda 1.000 pontos de mar em 0,047 ms numa rtx 4090 contra 24,96 ms em serial.
-também traz um curso de 16 lições, do espectro de ondas ao port de kernels com agentes de código.
+as 17 lições, do espectro de ondas ao port de kernels com agentes de código, são os capítulos do livro, gerados em pdf e num [site](https://h0ffmann.github.io/ww3-gpu/) a cada merge.
 
 <p align="left">
 <a href="https://github.com/h0ffmann/ww3-gpu" target="_blank"><img src="https://img.shields.io/badge/research-ww3--gpu-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: ww3-gpu" /></a>
