@@ -23,7 +23,7 @@ edit or a change to the metrics workflow.
   `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
   (pandoc → lualatex; shields badges become colored pills). `cv/prepare.py`
   drops everything between `<!-- cv:skip -->` / `<!-- cv:end -->` (the
-  language line, the LinkedIn badge the CV header already has, the live marola badges and the marola-dev repo table, the photo) and prepends `cv/header.md`
+  language line, the LinkedIn badge the CV header already has, the live marola badges, the Leave No Trace badge beside the QR and the marola-dev repo table, the photo) and prepends `cv/header.md`
   (name + contact). The CV follows the README's section order — me,
   open source (marola-dev), research (ww3-gpu), exp-highlights, certs,
   learning, misc — so reordering the profile

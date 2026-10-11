@@ -15,6 +15,9 @@
 ## 🌊 オープンソース — [marola-dev](https://github.com/marola-dev)
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
+<!-- cv:skip -->
+<a href="https://lnt.org" target="_blank"><img src="https://img.shields.io/badge/Leave_No_Trace-affiliate-4B7F3A?style=for-the-badge" alt="Leave No Trace 加盟" title="Leave No Trace: アウトドア倫理" align="right" /></a>
+<!-- cv:end -->
 
 ブラジル沿岸のための市民科学による**海のインテリジェンスレイヤー**、**[marola](https://github.com/marola-dev/marola)** をオープンに開発しています。フロリアノポリス、リオデジャネイロ、サルバドールの各ビーチについて「明日泳げる？何時がいい？」に答え、うねり・風・潮汐・UV・公式の海水浴場水質速報から最適な時間を選び、その*理由*をわかりやすい言葉で説明します。**[marola.dev](https://marola.dev)** で公開中です。
 

@@ -15,6 +15,9 @@ engenheiro de software sênior com **8 anos** de experiência construindo soluç
 ## 🌊 código aberto — [marola-dev](https://github.com/marola-dev)
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
+<!-- cv:skip -->
+<a href="https://lnt.org" target="_blank"><img src="https://img.shields.io/badge/Leave_No_Trace-affiliate-4B7F3A?style=for-the-badge" alt="filiado ao Leave No Trace" title="Leave No Trace: ética ao ar livre" align="right" /></a>
+<!-- cv:end -->
 
 estou construindo ativamente o **[marola](https://github.com/marola-dev/marola)** de forma aberta: uma **camada de inteligência do oceano**
 para o litoral brasileiro, feita como ciência cidadã. ele responde *"posso nadar amanhã, e quando?"* para cada praia de florianópolis, rio de janeiro e salvador:
