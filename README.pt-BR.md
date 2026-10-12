@@ -77,12 +77,14 @@ a melhor hora por ondulação, vento, maré, uv e os boletins oficiais de balnea
 ## ⚡ pesquisa — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
 meu projeto de graduação na ufrj (escola politécnica), coorientado no labeco/ufsc: o **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, um laboratório aberto e um livro em andamento sobre programação agêntica e pesquisa agêntica, em torno de um problema: levar os kernels mais caros do modelo de ondas **WAVEWATCH III** da noaa para gpus *sem mudar a resposta*.
-um toolchain fortran/mpi/netcdf fixado com nix compila o ww3 e roda um teste de regressão em um comando. o kernel de interação não linear dia (`W3SNL1`), portado para c++/**kokkos**, reproduz o fortran bit a bit em serial, openmp e cuda, e roda 1.000 pontos de mar em 0,047 ms numa rtx 4090 contra 24,96 ms em serial.
+um toolchain fortran/mpi/netcdf fixado com nix, do **[picasso](https://github.com/h0ffmann/picasso)** (meus labs nix), compila o ww3 e roda um teste de regressão em um comando. o kernel de interação não linear dia (`W3SNL1`), portado para c++/**kokkos**, reproduz o fortran bit a bit em serial, openmp e cuda, e roda 1.000 pontos de mar em 0,047 ms numa rtx 4090 contra 24,96 ms em serial.
 as 17 lições, do espectro de ondas ao port de kernels com agentes de código, são os capítulos do livro, gerados em pdf e num [site](https://h0ffmann.github.io/ww3-gpu/) a cada merge.
 
 <p align="left">
 <a href="https://github.com/h0ffmann/ww3-gpu" target="_blank"><img src="https://img.shields.io/badge/research-ww3--gpu-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: ww3-gpu" /></a>
 <a href="https://doi.org/10.5281/zenodo.23221351" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23221351-1682D4?style=for-the-badge" alt="DOI do ww3-gpu" /></a>
+<a href="https://github.com/h0ffmann/picasso" target="_blank"><img src="https://img.shields.io/badge/nix%20labs-picasso-5277C3?style=for-the-badge&logo=nixos&logoColor=white" alt="github: picasso" /></a>
+<a href="https://doi.org/10.5281/zenodo.23311208" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23311208-1682D4?style=for-the-badge" alt="DOI do picasso" /></a>
 </p>
 
 ## 💼 destaques de experiência
