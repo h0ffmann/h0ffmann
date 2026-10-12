@@ -4,7 +4,7 @@
 
 ## 👋 自己紹介
 
-決済処理と不正対策を中心に、スケーラブルなソリューションを構築してきた**8年**の経験を持つシニアソフトウェアエンジニア。現在は **[marola-dev](https://github.com/marola-dev)** でオープンソースの海洋テックを開発中
+決済処理と不正対策を中心に、スケーラブルなソリューションを構築してきた**8年**の経験を持つシニアソフトウェアエンジニア兼ジュニア研究者。研究テーマは波浪モデリング、ゲーム理論、自己改善するアプリ。現在は **[marola-dev](https://github.com/marola-dev)** と **ouroboric-dev** で執筆と研究を行っており、商用のご依頼も歓迎します。非公開のセカンドブレイン `h0ffmann/nagori`（近日 FOSS 化）に頻繁に書いています。将来は登壇者としても活動予定です。
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -42,24 +42,6 @@
 </p>
 <!-- cv:end -->
 
-<!-- cv:skip -->
-| リポジトリ | 内容 |
-| --- | --- |
-| [marola](https://github.com/marola-dev/marola) | 全体の取りまとめ：設計書、ロードマップ、[docs.marola.dev](https://docs.marola.dev)、以下の各リポジトリをサブモジュールとして収録 |
-| [marola-app](https://github.com/marola-dev/marola-app) | 本体：Scala 3 + Kyo のパイプライン、スコアと安全拒否権、CLI、MCP ツールサーバー |
-| [marola-site](https://github.com/marola-dev/marola-site) | [marola.dev](https://marola.dev) の地図、3時間ごとに再構築 |
-| [marola-corpus](https://github.com/marola-dev/marola-corpus) | すべての回答が引用する、出典付きの海洋知識 |
-| [marola-ml](https://github.com/marola-dev/marola-ml) | オフラインの Python：DSPy によるプロンプトのコンパイル、ベンチマークゲート、marola-sea モデル |
-| [marola-oods](https://github.com/marola-dev/marola-oods) | Open Ocean Data Store：ビーチと海水浴場水質サンプルのオープンなデータレイク（開発中） |
-| [marola-devkit](https://github.com/marola-dev/marola-devkit) | 共通の開発基盤：nix ツール、フック、Claude Code スキル、CI ワークフロー |
-| [marola-skills](https://github.com/marola-dev/marola-skills) | 各リポジトリの Claude Code スキルとサブエージェントの一覧と出所、毎日更新 |
-| [marola-agents](https://github.com/marola-dev/marola-agents) | marola が使う、または計画中のすべてのエージェントの一覧：サブエージェント、Claude Projects とそのルーティン、製品内の LLM の役割 |
-| [marola-research](https://github.com/marola-dev/marola-research) | 科学：marola を支える研究（始まったばかり） |
-| [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | オープンな海洋モデル、データ、ツール、研究機関の厳選リスト |
-| [open-sustainable-technology](https://github.com/marola-dev/open-sustainable-technology) | オープンなサステナビリティ技術のコミュニティリストのフォーク |
-| [awesome-open-climate-science](https://github.com/marola-dev/awesome-open-climate-science) | オープンな気候科学のコミュニティリストのフォーク |
-<!-- cv:end -->
-
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-6E7781?style=flat-square" alt="civic-tech" /></a>
 <a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-6E7781?style=flat-square" alt="disaster-risk-management" /></a>
@@ -85,21 +67,13 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 
 ## 💼 職務経歴ハイライト
 
-- **[itv](https://www.itvplc.com)（英国）**：AWS 上の ML/MLOps（視聴者数予測）（2025〜2026年）
-- **[signifyd](https://www.signifyd.com)（米国・2024年2月 tenacious 賞受賞）**：Databricks 上の損失予測・リスク分析を担当する ML エンジニア（2023〜2024年）
-- **[elemeno AI](https://github.com/elemeno-ai)（米国・ブラジル顧客 bvmf: AMER3）**：GCP 上の k8s による MLOps エンジニア（2021〜2022年）
-- **[broad](https://broad.app)（英国・[YC W21](https://www.ycombinator.com/companies/broad)）**：GCP 上のデジタルバンキング向け Scala シニアソフトウェアエンジニア（2020年）
-- **[stone](https://www.stone.com.br)（ブラジル・nasdaq: STNE）**：AWS 上の Scala による ML・ソフトウェアエンジニア（2017〜2019年）
-- **[LIOC](http://www.lioc.oceanica.ufrj.br)（ブラジル・UFRJ/COPPE）**：海洋計測ラボでの学術研究、ROV、マイコン開発（2016〜2017年）
+[LIOC](http://www.lioc.oceanica.ufrj.br) (UFRJ) · [Stone](https://www.stone.com.br) · [Broad](https://www.ycombinator.com/companies/broad) (YC W21) · [Elemeno AI](https://github.com/elemeno-ai) · [Signifyd](https://www.signifyd.com) (US) · TXP (UK, 旧 Vigil)
+
+推薦者はご要望に応じてご紹介します（[働き方](me/ways-of-working.md#references-on-request)）
 
 ## 🏅 資格
 
-<p align="left">
-<img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" height="24" />
-<img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" height="24" />
-<img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" height="24" />
-<img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" height="24" />
-</p>
+**AWS 認定 4件**（Cloud Practitioner、Machine Learning Specialty、Machine Learning Engineer Associate、Data Engineer Associate）・**PADI 認定 3件**（Advanced Open Water Diver、Enriched Air Nitrox Diver、Rescue Diver）
 
 ## 📚 学習中
 
@@ -107,11 +81,6 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 
 ## 🏊 その他
 <a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-オープンウォータースイミング-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava（オープンウォータースイミング）" /></a>
-<p align="left">
-<img src="https://img.shields.io/badge/PADI-Advanced_Open_Water_Diver-0B5FA5?style=for-the-badge" alt="PADI Advanced Open Water Diver" />
-<img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />
-<img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
-</p>
 
 <!-- cv:skip -->
 <div align="center">

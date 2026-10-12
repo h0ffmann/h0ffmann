@@ -4,7 +4,7 @@
 
 ## 👋 me
 
-sr. software engineer & jr. researcher with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting, now building open-source ocean tech at **[marola-dev](https://github.com/marola-dev)**
+sr. software engineer & jr. researcher with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting. my research topics are wave modelling, game theory and self-improving apps. i'm currently writing and doing research for **[marola-dev](https://github.com/marola-dev)** and **ouroboric-dev**, and i'm open to commercial offers. i write often to `h0ffmann/nagori`, my private second brain (foss soon), and i'm a future public speaker.
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -44,24 +44,6 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 </p>
 <!-- cv:end -->
 
-<!-- cv:skip -->
-| repo | what |
-| --- | --- |
-| [marola](https://github.com/marola-dev/marola) | the umbrella: design docs, roadmap and [docs.marola.dev](https://docs.marola.dev), every repo below as a submodule |
-| [marola-app](https://github.com/marola-dev/marola-app) | the product: scala 3 + kyo pipeline, score and safety veto, cli, mcp tool server |
-| [marola-site](https://github.com/marola-dev/marola-site) | the map at [marola.dev](https://marola.dev), rebuilt every 3 hours |
-| [marola-corpus](https://github.com/marola-dev/marola-corpus) | the sourced ocean knowledge every answer cites |
-| [marola-ml](https://github.com/marola-dev/marola-ml) | offline python: dspy prompt compile, benchmark gate, the marola-sea model |
-| [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: an open data lake of beaches and bathing-water samples (in progress) |
-| [marola-devkit](https://github.com/marola-dev/marola-devkit) | shared dev harness: nix tools, hooks, claude code skills, ci workflows |
-| [marola-skills](https://github.com/marola-dev/marola-skills) | catalogue of every claude code skill and subagent across the repos and where each came from, refreshed daily |
-| [marola-agents](https://github.com/marola-dev/marola-agents) | inventory of every agent marola uses or plans: subagents, claude projects and their routines, the product's llm roles |
-| [marola-research](https://github.com/marola-dev/marola-research) | science: the research behind marola (just started) |
-| [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | curated list of open ocean models, data, tools and institutes |
-| [open-sustainable-technology](https://github.com/marola-dev/open-sustainable-technology) | fork of the community list of open sustainability projects |
-| [awesome-open-climate-science](https://github.com/marola-dev/awesome-open-climate-science) | fork of the community list of open climate science |
-<!-- cv:end -->
-
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-6E7781?style=flat-square" alt="civic-tech" /></a>
 <a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-6E7781?style=flat-square" alt="disaster-risk-management" /></a>
@@ -89,21 +71,13 @@ its 17 lessons, from the wave spectrum to porting kernels with coding agents, ar
 
 ## 💼 exp-highlights
 
-- **[itv](https://www.itvplc.com) (uk)** - ml/mlops on aws for channel audience forecasting (2025/aug 2026)
-- **[signifyd](https://www.signifyd.com) (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis on databricks (2023/2024)
-- **[elemeno AI](https://github.com/elemeno-ai) (us - br client bvmf: AMER3)** - mlops engineer with k8s on gcp (2021/2022)
-- **[broad](https://broad.app) (uk - [YC W21](https://www.ycombinator.com/companies/broad))** - sr. software engineer with scala for digital banking on gcp (2020)
-- **[stone](https://www.stone.com.br) (br: nasdaq: STNE)** - ml & software engineer with scala on aws (2017-2019)
-- **[LIOC](http://www.lioc.oceanica.ufrj.br) (br: UFRJ/COPPE)** - ocean instrumentation lab - scientific research, ROV, microcontrollers (2016/2017)
+[LIOC](http://www.lioc.oceanica.ufrj.br) (UFRJ) · [Stone](https://www.stone.com.br) · [Broad](https://www.ycombinator.com/companies/broad) (YC W21) · [Elemeno AI](https://github.com/elemeno-ai) · [Signifyd](https://www.signifyd.com) (US) · TXP (UK, formerly Vigil)
+
+references available on request ([ways of working](me/ways-of-working.md#references-on-request))
 
 ## 🏅 certs
 
-<p align="left">
-<img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" height="24" />
-<img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" height="24" />
-<img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" height="24" />
-<img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" height="24" />
-</p>
+**aws certified 4x** (Cloud Practitioner, Machine Learning Specialty, Machine Learning Engineer Associate, Data Engineer Associate) · **padi certified 3x** (Advanced Open Water Diver, Enriched Air Nitrox Diver, Rescue Diver)
 
 ## 📚 learning
 
@@ -111,11 +85,6 @@ its 17 lessons, from the wave spectrum to porting kernels with coding agents, ar
 
 ## 🏊 misc
 <a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-open_water_swimming-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (open water swimming)" /></a>
-<p align="left">
-<img src="https://img.shields.io/badge/PADI-Advanced_Open_Water_Diver-0B5FA5?style=for-the-badge" alt="PADI Advanced Open Water Diver" />
-<img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />
-<img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
-</p>
 
 <!-- cv:skip -->
 <div align="center">
