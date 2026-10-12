@@ -77,12 +77,14 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 ## ⚡ research — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
 my undergraduate project at ufrj (escola politécnica), co-advised at labeco/ufsc: **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, an open lab and a book in progress on agentic coding and agentic research, around one problem: moving the expensive kernels of noaa's **WAVEWATCH III** wave model to gpus *without changing the answer*.
-a nix-pinned fortran/mpi/netcdf toolchain builds ww3 and runs a regression test in one command. the dia nonlinear-interaction kernel (`W3SNL1`), ported to c++/**kokkos**, matches the fortran bit for bit on serial, openmp and cuda, and runs 1,000 sea points in 0.047 ms on an rtx 4090 against 24.96 ms serial.
+a nix-pinned fortran/mpi/netcdf toolchain from **[picasso](https://github.com/h0ffmann/picasso)**, my nix labs, builds ww3 and runs a regression test in one command. the dia nonlinear-interaction kernel (`W3SNL1`), ported to c++/**kokkos**, matches the fortran bit for bit on serial, openmp and cuda, and runs 1,000 sea points in 0.047 ms on an rtx 4090 against 24.96 ms serial.
 its 17 lessons, from the wave spectrum to porting kernels with coding agents, are the book's chapters, built into a pdf and a [website](https://h0ffmann.github.io/ww3-gpu/) on every merge.
 
 <p align="left">
 <a href="https://github.com/h0ffmann/ww3-gpu" target="_blank"><img src="https://img.shields.io/badge/research-ww3--gpu-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: ww3-gpu" /></a>
 <a href="https://doi.org/10.5281/zenodo.23221351" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23221351-1682D4?style=for-the-badge" alt="DOI for ww3-gpu" /></a>
+<a href="https://github.com/h0ffmann/picasso" target="_blank"><img src="https://img.shields.io/badge/nix%20labs-picasso-5277C3?style=for-the-badge&logo=nixos&logoColor=white" alt="github: picasso" /></a>
+<a href="https://doi.org/10.5281/zenodo.23311208" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23311208-1682D4?style=for-the-badge" alt="DOI for picasso" /></a>
 </p>
 
 ## 💼 exp-highlights

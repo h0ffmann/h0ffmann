@@ -74,11 +74,13 @@
 
 ## ⚡ 研究 — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
-UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との共同指導です。**[WW3 GPU Lab](https://github.com/h0ffmann/ww3-gpu)** は、NOAA の波浪モデル **WAVEWATCH III** の計算コストの高いカーネルを*結果を変えずに* GPU へ移すという一つの問題を軸にした、オープンなラボであり、エージェント型コーディングとエージェント型研究についての執筆中の本です。Nix で固定した Fortran/MPI/NetCDF ツールチェーンが WW3 をビルドし、1コマンドで回帰テストを実行します。C++/**Kokkos** に移植した DIA 非線形相互作用カーネル（`W3SNL1`）は Serial・OpenMP・CUDA で Fortran とビット単位で一致し、RTX 4090 では 1,000 海洋点を 0.047 ms で処理します（シリアルでは 24.96 ms）。波スペクトルからコーディングエージェントによるカーネル移植までを扱う17回の講義が本の各章で、マージのたびに PDF と[ウェブサイト](https://h0ffmann.github.io/ww3-gpu/)に組まれます。
+UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との共同指導です。**[WW3 GPU Lab](https://github.com/h0ffmann/ww3-gpu)** は、NOAA の波浪モデル **WAVEWATCH III** の計算コストの高いカーネルを*結果を変えずに* GPU へ移すという一つの問題を軸にした、オープンなラボであり、エージェント型コーディングとエージェント型研究についての執筆中の本です。**[picasso](https://github.com/h0ffmann/picasso)**（私の Nix ラボ）で Nix 固定した Fortran/MPI/NetCDF ツールチェーンが WW3 をビルドし、1コマンドで回帰テストを実行します。C++/**Kokkos** に移植した DIA 非線形相互作用カーネル（`W3SNL1`）は Serial・OpenMP・CUDA で Fortran とビット単位で一致し、RTX 4090 では 1,000 海洋点を 0.047 ms で処理します（シリアルでは 24.96 ms）。波スペクトルからコーディングエージェントによるカーネル移植までを扱う17回の講義が本の各章で、マージのたびに PDF と[ウェブサイト](https://h0ffmann.github.io/ww3-gpu/)に組まれます。
 
 <p align="left">
 <a href="https://github.com/h0ffmann/ww3-gpu" target="_blank"><img src="https://img.shields.io/badge/research-ww3--gpu-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: ww3-gpu" /></a>
 <a href="https://doi.org/10.5281/zenodo.23221351" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23221351-1682D4?style=for-the-badge" alt="ww3-gpu の DOI" /></a>
+<a href="https://github.com/h0ffmann/picasso" target="_blank"><img src="https://img.shields.io/badge/nix%20labs-picasso-5277C3?style=for-the-badge&logo=nixos&logoColor=white" alt="github: picasso" /></a>
+<a href="https://doi.org/10.5281/zenodo.23311208" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23311208-1682D4?style=for-the-badge" alt="picasso の DOI" /></a>
 </p>
 
 ## 💼 職務経歴ハイライト
