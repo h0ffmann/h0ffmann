@@ -67,12 +67,7 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 
 ## 💼 職務経歴ハイライト
 
-- **[itv](https://www.itvplc.com)（英国）**：AWS 上の ML/MLOps（視聴者数予測）（2025〜2026年）
-- **[signifyd](https://www.signifyd.com)（米国・2024年2月 tenacious 賞受賞）**：Databricks 上の損失予測・リスク分析を担当する ML エンジニア（2023〜2024年）
-- **[elemeno AI](https://github.com/elemeno-ai)（米国・ブラジル顧客 bvmf: AMER3）**：GCP 上の k8s による MLOps エンジニア（2021〜2022年）
-- **[broad](https://broad.app)（英国・[YC W21](https://www.ycombinator.com/companies/broad)）**：GCP 上のデジタルバンキング向け Scala シニアソフトウェアエンジニア（2020年）
-- **[stone](https://www.stone.com.br)（ブラジル・nasdaq: STNE）**：AWS 上の Scala による ML・ソフトウェアエンジニア（2017〜2019年）
-- **[LIOC](http://www.lioc.oceanica.ufrj.br)（ブラジル・UFRJ/COPPE）**：海洋計測ラボでの学術研究、ROV、マイコン開発（2016〜2017年）
+[LIOC](http://www.lioc.oceanica.ufrj.br) (UFRJ) · [Stone](https://www.stone.com.br) · [Broad](https://www.ycombinator.com/companies/broad) (YC W21) · [Elemeno AI](https://github.com/elemeno-ai) · [Signifyd](https://www.signifyd.com) (US) · TXP (UK, 旧 Vigil)
 
 推薦者はご要望に応じてご紹介します（[働き方](me/ways-of-working.md#references-on-request)）
 

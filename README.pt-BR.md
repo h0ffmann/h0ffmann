@@ -71,12 +71,7 @@ as 17 lições, do espectro de ondas ao port de kernels com agentes de código, 
 
 ## 💼 destaques de experiência
 
-- **[itv](https://www.itvplc.com) (reino unido)** - ml/mlops na aws para previsão de audiência de canais (2025/2026)
-- **[signifyd](https://www.signifyd.com) (eua - prêmio tenacious fev/2024)** - eng. de ml para previsão de perdas e análise de risco no databricks (2023/2024)
-- **[elemeno AI](https://github.com/elemeno-ai) (eua - cliente br bvmf: AMER3)** - engenheiro de mlops com k8s no gcp (2021/2022)
-- **[broad](https://broad.app) (reino unido - [YC W21](https://www.ycombinator.com/companies/broad))** - engenheiro de software sênior com scala para banco digital no gcp (2020)
-- **[stone](https://www.stone.com.br) (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws (2017-2019)
-- **[LIOC](http://www.lioc.oceanica.ufrj.br) (br: UFRJ/COPPE)** - lab. de instrumentação oceanográfica - pesquisa científica, ROV, microcontroladores (2016/2017)
+[LIOC](http://www.lioc.oceanica.ufrj.br) (UFRJ) · [Stone](https://www.stone.com.br) · [Broad](https://www.ycombinator.com/companies/broad) (YC W21) · [Elemeno AI](https://github.com/elemeno-ai) · [Signifyd](https://www.signifyd.com) (US) · TXP (UK, ex-Vigil)
 
 referências disponíveis sob demanda ([como eu trabalho](me/ways-of-working.md#references-on-request))
 

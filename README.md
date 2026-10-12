@@ -71,12 +71,7 @@ its 17 lessons, from the wave spectrum to porting kernels with coding agents, ar
 
 ## 💼 exp-highlights
 
-- **[itv](https://www.itvplc.com) (uk)** - ml/mlops on aws for channel audience forecasting (2025/aug 2026)
-- **[signifyd](https://www.signifyd.com) (us - award winner tenacious feb/2024)** - ml eng. for loss forecasting & risk-analysis on databricks (2023/2024)
-- **[elemeno AI](https://github.com/elemeno-ai) (us - br client bvmf: AMER3)** - mlops engineer with k8s on gcp (2021/2022)
-- **[broad](https://broad.app) (uk - [YC W21](https://www.ycombinator.com/companies/broad))** - sr. software engineer with scala for digital banking on gcp (2020)
-- **[stone](https://www.stone.com.br) (br: nasdaq: STNE)** - ml & software engineer with scala on aws (2017-2019)
-- **[LIOC](http://www.lioc.oceanica.ufrj.br) (br: UFRJ/COPPE)** - ocean instrumentation lab - scientific research, ROV, microcontrollers (2016/2017)
+[LIOC](http://www.lioc.oceanica.ufrj.br) (UFRJ) · [Stone](https://www.stone.com.br) · [Broad](https://www.ycombinator.com/companies/broad) (YC W21) · [Elemeno AI](https://github.com/elemeno-ai) · [Signifyd](https://www.signifyd.com) (US) · TXP (UK, formerly Vigil)
 
 references available on request ([ways of working](me/ways-of-working.md#references-on-request))
 
