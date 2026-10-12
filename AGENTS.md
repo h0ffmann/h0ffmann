@@ -49,6 +49,8 @@ edit or a change to the metrics workflow.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.
+- `photos/` – the 2007 and 2025 swimming photos shown side by side, 400 px
+  wide each, in a `cv:skip` table at the end of every README.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00
   UTC (and on manual dispatch, and on push to `main` when the workflow file
   itself changes). Each of its two steps writes one SVG and commits it back

@@ -77,12 +77,14 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 ## ⚡ research — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
 my undergraduate project at ufrj (escola politécnica), co-advised at labeco/ufsc: **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, an open lab and a book in progress on agentic coding and agentic research, around one problem: moving the expensive kernels of noaa's **WAVEWATCH III** wave model to gpus *without changing the answer*.
-a nix-pinned fortran/mpi/netcdf toolchain builds ww3 and runs a regression test in one command. the dia nonlinear-interaction kernel (`W3SNL1`), ported to c++/**kokkos**, matches the fortran bit for bit on serial, openmp and cuda, and runs 1,000 sea points in 0.047 ms on an rtx 4090 against 24.96 ms serial.
+a nix-pinned fortran/mpi/netcdf toolchain from **[picasso](https://github.com/h0ffmann/picasso)**, my nix labs, builds ww3 and runs a regression test in one command. the dia nonlinear-interaction kernel (`W3SNL1`), ported to c++/**kokkos**, matches the fortran bit for bit on serial, openmp and cuda, and runs 1,000 sea points in 0.047 ms on an rtx 4090 against 24.96 ms serial.
 its 17 lessons, from the wave spectrum to porting kernels with coding agents, are the book's chapters, built into a pdf and a [website](https://h0ffmann.github.io/ww3-gpu/) on every merge.
 
 <p align="left">
 <a href="https://github.com/h0ffmann/ww3-gpu" target="_blank"><img src="https://img.shields.io/badge/research-ww3--gpu-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: ww3-gpu" /></a>
 <a href="https://doi.org/10.5281/zenodo.23221351" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23221351-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="DOI for ww3-gpu" /></a>
+<a href="https://github.com/h0ffmann/picasso" target="_blank"><img src="https://img.shields.io/badge/nix%20labs-picasso-24292F?style=for-the-badge&logo=nixos&logoColor=white" alt="github: picasso" /></a>
+<a href="https://doi.org/10.5281/zenodo.23311208" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23311208-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="DOI for picasso" /></a>
 </p>
 
 ## 💼 exp-highlights
@@ -116,8 +118,13 @@ its 17 lessons, from the wave spectrum to porting kernels with coding agents, ar
 </p>
 
 <!-- cv:skip -->
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="600">
-</p>
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="photos/swim-2007.svg" width="400" alt="2007: a boy holding up his swimming medals in front of the brazilian flag" /><br /><sub>2007</sub></td>
+<td align="center"><img src="https://github.com/user-attachments/assets/c466f2e5-3ace-41ee-8171-f825f00d6939" width="400" alt="2025: three medals from oceanman rio de janeiro" /><br /><sub>2025</sub></td>
+</tr>
+</table>
+</div>
 <!-- cv:end -->
 
