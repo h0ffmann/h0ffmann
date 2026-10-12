@@ -23,6 +23,10 @@ my work is citable:
 
 ## hiring
 
+### references on request
+
+references are available on request.
+
 ### no live coding
 
 i don't do live coding. i'm open to a code interview, or to discussing past projects: my open source ones, and a few closed source ones.

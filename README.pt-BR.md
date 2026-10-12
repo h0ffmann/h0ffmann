@@ -4,7 +4,7 @@
 
 ## 👋 eu
 
-engenheiro de software sênior com **8 anos** de experiência construindo soluções escaláveis, principalmente para processamento de pagamentos e combate a fraudes, hoje construindo tecnologia oceânica de código aberto na **[marola-dev](https://github.com/marola-dev)**
+engenheiro de software sênior e pesquisador júnior com **8 anos** de experiência construindo soluções escaláveis, principalmente para processamento de pagamentos e combate a fraudes. meus temas de pesquisa são modelagem de ondas, teoria dos jogos e apps que se autoaperfeiçoam. hoje escrevo e pesquiso para a **[marola-dev](https://github.com/marola-dev)** e a **ouroboric-dev**, e estou aberto a propostas comerciais. escrevo com frequência no `h0ffmann/nagori`, meu segundo cérebro privado (código aberto em breve), e serei palestrante.
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -44,24 +44,6 @@ a melhor hora por ondulação, vento, maré, uv e os boletins oficiais de balnea
 </p>
 <!-- cv:end -->
 
-<!-- cv:skip -->
-| repo | o quê |
-| --- | --- |
-| [marola](https://github.com/marola-dev/marola) | o guarda-chuva: documentos de design, roadmap e [docs.marola.dev](https://docs.marola.dev), com cada repo abaixo como submódulo |
-| [marola-app](https://github.com/marola-dev/marola-app) | o produto: pipeline em scala 3 + kyo, score e veto de segurança, cli, servidor de ferramentas mcp |
-| [marola-site](https://github.com/marola-dev/marola-site) | o mapa em [marola.dev](https://marola.dev), reconstruído a cada 3 horas |
-| [marola-corpus](https://github.com/marola-dev/marola-corpus) | o conhecimento oceânico com fontes que toda resposta cita |
-| [marola-ml](https://github.com/marola-dev/marola-ml) | python offline: compilação de prompts com dspy, gate de benchmark, o modelo marola-sea |
-| [marola-oods](https://github.com/marola-dev/marola-oods) | open ocean data store: um data lake aberto de praias e amostras de balneabilidade (em andamento) |
-| [marola-devkit](https://github.com/marola-dev/marola-devkit) | harness de desenvolvimento compartilhado: ferramentas nix, hooks, skills do claude code, workflows de ci |
-| [marola-skills](https://github.com/marola-dev/marola-skills) | catálogo de cada skill e subagente do claude code nos repos e de onde cada um veio, atualizado todo dia |
-| [marola-agents](https://github.com/marola-dev/marola-agents) | inventário de cada agente que o marola usa ou planeja: subagentes, projetos do claude e suas rotinas, os papéis de llm do produto |
-| [marola-research](https://github.com/marola-dev/marola-research) | ciência: a pesquisa por trás do marola (recém-criado) |
-| [awesome-ocean-science](https://github.com/marola-dev/awesome-ocean-science) | lista curada de modelos, dados, ferramentas e institutos abertos sobre o oceano |
-| [open-sustainable-technology](https://github.com/marola-dev/open-sustainable-technology) | fork da lista comunitária de projetos abertos de sustentabilidade |
-| [awesome-open-climate-science](https://github.com/marola-dev/awesome-open-climate-science) | fork da lista comunitária de ciência aberta do clima |
-<!-- cv:end -->
-
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-6E7781?style=flat-square" alt="civic-tech" /></a>
 <a href="https://github.com/topics/disaster-risk-management"><img src="https://img.shields.io/badge/disaster--risk--management-6E7781?style=flat-square" alt="disaster-risk-management" /></a>
@@ -96,14 +78,11 @@ as 17 lições, do espectro de ondas ao port de kernels com agentes de código, 
 - **[stone](https://www.stone.com.br) (br: nasdaq: STNE)** - engenheiro de ml e software com scala na aws (2017-2019)
 - **[LIOC](http://www.lioc.oceanica.ufrj.br) (br: UFRJ/COPPE)** - lab. de instrumentação oceanográfica - pesquisa científica, ROV, microcontroladores (2016/2017)
 
+referências disponíveis sob demanda ([como eu trabalho](me/ways-of-working.md#references-on-request))
+
 ## 🏅 certificações
 
-<p align="left">
-<img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Cloud Practitioner" height="24" />
-<img src="https://img.shields.io/badge/AWS-ML%20Specialty-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Specialty" height="24" />
-<img src="https://img.shields.io/badge/AWS-ML%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS ML Engineer Associate" height="24" />
-<img src="https://img.shields.io/badge/AWS-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Data Engineer Associate" height="24" />
-</p>
+**certificado aws 4x** (Cloud Practitioner, Machine Learning Specialty, Machine Learning Engineer Associate, Data Engineer Associate) · **certificado padi 3x** (Advanced Open Water Diver, Enriched Air Nitrox Diver, Rescue Diver)
 
 ## 📚 estudando
 
@@ -111,11 +90,6 @@ as 17 lições, do espectro de ondas ao port de kernels com agentes de código, 
 
 ## 🏊 outros
 <a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-natação_em_águas_abertas-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (natação em águas abertas)" /></a>
-<p align="left">
-<img src="https://img.shields.io/badge/PADI-Advanced_Open_Water_Diver-0B5FA5?style=for-the-badge" alt="PADI Advanced Open Water Diver" />
-<img src="https://img.shields.io/badge/PADI-Enriched_Air_Nitrox_Diver-0B5FA5?style=for-the-badge" alt="PADI Enriched Air (Nitrox) Diver" />
-<img src="https://img.shields.io/badge/PADI-Rescue_Diver-0B5FA5?style=for-the-badge" alt="PADI Rescue Diver" />
-</p>
 
 <!-- cv:skip -->
 <div align="center">

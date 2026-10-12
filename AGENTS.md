@@ -23,7 +23,7 @@ edit or a change to the metrics workflow.
   `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
   (pandoc → lualatex; shields badges become colored pills). `cv/prepare.py`
   drops everything between `<!-- cv:skip -->` / `<!-- cv:end -->` (the
-  language line, the LinkedIn badge the CV header already has, the live marola badges, the Leave No Trace badge beside the QR and the marola-dev repo table, the photo) and prepends `cv/header.md`
+  language line, the LinkedIn badge the CV header already has, the live marola badges, the Leave No Trace badge beside the QR, the photo) and prepends `cv/header.md`
   (name + contact). The CV follows the README's section order — me,
   open source (marola-dev), research (ww3-gpu), exp-highlights, certs,
   learning, misc — so reordering the profile
@@ -64,15 +64,14 @@ edit or a change to the metrics workflow.
   [marola-dev](https://github.com/marola-dev) comes right after the intro —
   it is what the user is actively working on and the profile leads with
   it — then the ww3-gpu research project, then experience. The profile has
-  no tech-stack or stats section; the user removed both. The
-  marola-dev repo table lists every public repo of the org; add a row when
-  the org gains one. Live badges (last commit, commit activity, CI) sit in a
+  no tech-stack or stats section and no marola-dev repo listing; the user
+  removed all three. Live badges (last commit, commit activity, CI) sit in a
   `cv:skip` block: they only render on github.com.
 - Never leave badge `<img>` lines bare: outside a `<p align="left">` block
   GitHub renders every line as its own paragraph and the badges stack
-  vertically (check with `gh api markdown -f mode=gfm -f text=...`). The
-  four AWS cert badges also carry `height="24"`: at the native 28 px the
-  row is ~919 px, wider than the README column, and the fourth would wrap.
+  vertically (check with `gh api markdown -f mode=gfm -f text=...`).
+- Certifications are one line of text, a count per issuer with the cert
+  names in parentheses (`aws certified 4x (...)`), not badges.
 - Headings are lowercase with a leading emoji (`## 👋 me`, `## 💼 exp-highlights`).
   Keep that style for new sections.
 - Topic badges use shields.io with `style=flat-square`. Link, DOI and cert
