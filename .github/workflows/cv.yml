@@ -1,7 +1,9 @@
 name: cv
 
-# pdf/cv.pdf from README.md and pdf/cv.pt-BR.pdf from README.pt-BR.md, built in the Nix sandbox by nix-config's labs/publisher (pandoc →
-# lualatex, badges as colored pills, color emoji) and committed back. Bot pushes use the Actions
+# The four CVs of pdf/, built again on main and committed back: the short CV names in its foot
+# the commit it was built from, and only a build on main knows the commit of main. A pull request
+# commits its own PDFs (`just cv`) and `pdf / build` checks them, so this job changes one line of
+# one PDF. Built in the Nix sandbox by nix-config's labs/publisher. Bot pushes use the Actions
 # token and never trigger this; only hand edits to the README, cv/ or the flake do.
 on:
   push:
@@ -10,6 +12,8 @@ on:
       - README.md
       - README.pt-BR.md
       - README.ja.md
+      - me/**
+      - site/data/**
       - cv/**
       - flake.nix
       - flake.lock

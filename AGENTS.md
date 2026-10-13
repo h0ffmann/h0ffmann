@@ -48,7 +48,9 @@ first. Run `just check` before you open one.
 | `just reuse` | every file has a licence and a copyright ([`REUSE.toml`](REUSE.toml)) | `.md / quality` |
 | `just md-quality --online` | every web link answers | `live links / alive`, also each Monday |
 | `just site`, `just logos` | the site builds and its tests pass; every logo still answers | `site / build` |
-| `python3 -m unittest discover -s cv`, `nix build` | the READMEs' markers and the three CVs | `cv` |
+| `python3 -m unittest discover -s cv` | the READMEs' markers, and that the short CV says nothing the profile does not | `pdf / build` |
+| `just current` | the four CVs build with the pinned toolchain, and the committed PDFs are the ones their sources make | `pdf / build` |
+| `just cv` | renders the four CVs into `pdf/`. Run it and commit the PDFs when a README, `cv/` or the flake changed | `cv`, on `main`, renders them again with the commit of `main` |
 
 - **Notes and journal.** When a change stands on an idea, write a note in `notes/`. When it met
   a challenge, or something went wrong, write an entry in `journal/`, in the same pull request.
@@ -66,8 +68,8 @@ first. Run `just check` before you open one.
 
 This is the GitHub profile repository for `h0ffmann`. `README.md` is rendered
 at https://github.com/h0ffmann as the profile page. There is no application
-code and no linter; the only build is the CV (`nix build`) and the only tests
-are its unit tests (`python3 -m unittest discover -s cv`). Every change here is
+code; the builds are the CVs (`just cv`) and the site (`just site`), and the unit tests
+are the CV's (`python3 -m unittest discover -s cv`). Every change here is
 a README edit, a CV-tooling edit or a change to the metrics workflow.
 
 ## Files
@@ -86,7 +88,18 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   CC BY 4.0 (picasso's README, "License"), loaded from raw.githubusercontent.com
   at a pinned commit; nothing is copied here. The whole header sits in a
   `cv:skip` block: the CV has its own header.
-- `pdf/cv.pdf`, `pdf/cv.pt-BR.pdf` and `pdf/cv.ja.pdf` – **generated** CVs,
+- `pdf/cv.pdf` – the **short CV in English**, one page, in the look of the site
+  ([`DESIGN.md`](DESIGN.md), "The CV"). Its source is `cv/summary.md`, written by hand; its
+  look is `cv/site.tex` and `cv/site.lua`. It is a summary for a recruiter: every web link in
+  it must already be in `README.md`, `cv/header.md`, `me/` or a table of `site/data/`, and
+  every work with a DOI must be in it (`cv/test_summary.py`). When a README changes a fact
+  that the summary carries, change the summary in the same pull request. A link to a file of
+  this repository is written as a relative link, so that lychee checks it, and the build
+  turns it into a link to github.com, because a PDF has no folder beside it. The foot of the
+  page says that the links are checked on each merge and names the commit that the PDF was
+  built from (`CV_COMMIT`, from `flake.nix`; there is none when the tree has changes that are
+  not committed). The typefaces are the site's three, from the flake; no font is a file here.
+- `pdf/cv.full.pdf`, `pdf/cv.pt-BR.pdf` and `pdf/cv.ja.pdf` – the **long, generated** CVs,
   built from the three READMEs (headers `cv/header*.md`, footer, PDF title
   and, for Japanese, the luatexja preamble lines per language in
   `cv/build.sh`) by
@@ -115,8 +128,10 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   has downloaded its SVG. Apple's emoji (what macOS shows on github.com)
   are proprietary and cannot be used.
   `flake.nix` pins publisher in `flake.lock`; bump with
-  `nix flake update publisher` when the lab changes. Build locally with
-  `nix build` (result/cv.pdf) and run `python3 -m unittest discover -s cv`.
+  `nix flake update publisher` when the lab changes. Build with `just cv`
+  (it runs the unit tests, builds in the Nix sandbox and writes `pdf/`), and
+  commit the PDFs with the change: `pdf / build` fails a pull request whose
+  committed PDFs are not the ones its sources make (`just current`).
   Keep the marker lines balanced and identical in all READMEs (a unit test
   checks it).
 - `5MINUTE.md` – the profile in five headings, one minute each, in English only. It is not

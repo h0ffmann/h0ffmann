@@ -10,3 +10,5 @@ site/src/h0ffmann_site/content.gleam
 
 # lychee's answers during `just md-quality --online`
 .lycheecache
+# What `just cv` and `just current` build, before it is copied to pdf/.
+build/

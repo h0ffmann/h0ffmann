@@ -9,14 +9,22 @@
     let
       systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
       forAll = f: publisher.inputs.nixpkgs.lib.genAttrs systems (s: f s publisher.inputs.nixpkgs.legacyPackages.${s});
+      # What the short CV needs beside the publisher's toolchain: the site's three typefaces
+      # (DESIGN.md), and the commit this flake was built from, which the PDF prints. The
+      # commit is empty when the tree has changes that are not committed.
+      cvEnv = self: pkgs: {
+        CV_FONTS = "${pkgs.google-fonts.override { fonts = [ "BricolageGrotesque" "Newsreader" ]; }}/share/fonts/truetype";
+        CV_MONO = "${pkgs.jetbrains-mono}/share/fonts";
+        CV_COMMIT = self.rev or "";
+      };
     in
     {
-      packages = forAll (system: _: {
-        default = publisher.lib.${system}.mkPdf {
+      packages = forAll (system: pkgs: {
+        default = (publisher.lib.${system}.mkPdf {
           name = "cv";
           src = ./.;
           command = "bash cv/build.sh";
-        };
+        }).overrideAttrs (_: cvEnv self pkgs);
       });
 
       checks = forAll (system: _: {
@@ -36,7 +44,7 @@
           name = "cv";
           packages = publisher.lib.${system}.tools;
           shellHook = pkgs.lib.concatStringsSep "\n"
-            (pkgs.lib.mapAttrsToList (k: v: "export ${k}=${pkgs.lib.escapeShellArg v}") publisher.lib.${system}.env);
+            (pkgs.lib.mapAttrsToList (k: v: "export ${k}=${pkgs.lib.escapeShellArg v}") (publisher.lib.${system}.env // cvEnv self pkgs));
         };
       });
     };
