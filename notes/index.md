@@ -6,6 +6,7 @@ The map of the slip box. Every note is linked here. [`NOTES.md`](../NOTES.md) ha
 
 - [[202610132301-the-aquatic-prometheus]]: the aquatic Prometheus (permanent, verified)
 - [[202610132303-the-arc-has-a-source-for-each-mark]]: the arc has a source for each mark (permanent, partial)
+- [[202610132356-the-first-scala]]: the first Scala (permanent, partial)
 
 ## The look
 
