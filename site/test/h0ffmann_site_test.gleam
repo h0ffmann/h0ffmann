@@ -4,6 +4,7 @@ import gleam/string
 import gleeunit
 import h0ffmann_site/app
 import h0ffmann_site/content
+import h0ffmann_site/page
 import lustre/element
 
 pub fn main() -> Nil {
@@ -130,4 +131,20 @@ pub fn the_three_areas_of_research_are_on_the_page_test() {
     "<li class=\"topic-ouroboric\"><h3>self-improving apps</h3>",
   )
   assert string.contains(html, "https://github.com/ouroboric-dev\"")
+}
+
+pub fn a_link_to_the_site_has_a_preview_test() {
+  let html =
+    app.initial() |> app.view |> page.document |> element.to_document_string
+  // LinkedIn needs a picture and an address, both as whole addresses.
+  assert string.contains(
+    html,
+    "content=\"" <> page.address <> "og.png\" property=\"og:image\"",
+  )
+  assert string.contains(
+    html,
+    "content=\"" <> page.address <> "\" property=\"og:url\"",
+  )
+  assert string.contains(html, "property=\"og:image:width\"")
+  assert string.contains(html, "summary_large_image")
 }

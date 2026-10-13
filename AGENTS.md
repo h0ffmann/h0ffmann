@@ -137,6 +137,9 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   source. Never write a date, an employer, a DOI or a count in `site/src` by hand. The
   sentences that tell the story are written in `site/src/h0ffmann_site/app.gleam`.
   `site/preview/` has pictures of the site and of the README for pull requests.
+  `site/static/og.png` is the link preview (LinkedIn, WhatsApp), made from `site/og/card.html`;
+  the page names it with whole addresses. Make it again when the cover changes
+  (`site/og/README.md`).
   **[`DESIGN.md`](DESIGN.md) has the rules of the look; read it before you change a colour, a
   face or a shape, and change it in the same commit.**
   The page is dark, with four lights that mean the same everywhere on it (the owner, 13 October

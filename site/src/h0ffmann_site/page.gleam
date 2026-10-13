@@ -4,6 +4,9 @@ import lustre/attribute
 import lustre/element.{type Element}
 import lustre/element/html
 
+/// Where the site is published. A link preview needs whole addresses, not relative ones.
+pub const address = "https://h0ffmann.github.io/h0ffmann/"
+
 pub fn document(body: Element(msg)) -> Element(msg) {
   let meta = fn(name, value) {
     html.meta([attribute.name(name), attribute.content(value)])
@@ -29,9 +32,28 @@ pub fn document(body: Element(msg)) -> Element(msg) {
         "rights",
         "© Matheus Hoffmann. All rights reserved. Cite it; do not copy it.",
       ),
+      // The link preview (LinkedIn, WhatsApp, Slack): without og:image and og:url, LinkedIn says
+      // "we couldn't load a preview for this link". The picture is site/static/og.png, 1200 by
+      // 627, made from site/og/card.html.
+      html.link([attribute.rel("canonical"), attribute.href(address)]),
       property("og:title", title),
       property("og:description", description),
-      property("og:type", "profile"),
+      property("og:type", "website"),
+      property("og:url", address),
+      property("og:site_name", "h0ffmann"),
+      property("og:image", address <> "og.png"),
+      property("og:image:secure_url", address <> "og.png"),
+      property("og:image:type", "image/png"),
+      property("og:image:width", "1200"),
+      property("og:image:height", "627"),
+      property(
+        "og:image:alt",
+        "h0ffmann, the aquatic prometheus: the art of the maintenance of apps. wave modelling, game theory, self-improving apps.",
+      ),
+      meta("twitter:card", "summary_large_image"),
+      meta("twitter:title", title),
+      meta("twitter:description", description),
+      meta("twitter:image", address <> "og.png"),
       html.link([
         attribute.rel("icon"),
         attribute.href("icons/favicon.svg"),
