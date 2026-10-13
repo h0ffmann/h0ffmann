@@ -87,6 +87,7 @@ pub fn view(model: Model) -> Element(Msg) {
       arc_section(),
       graph_section(model),
       index_section(model),
+      numbers_section(),
       history_section(),
       friends_section(),
       ways_section(),
@@ -142,6 +143,7 @@ fn cover() -> Element(msg) {
       link("#arc", "the arc"),
       link("#graph", "the works"),
       link("#index", "everything"),
+      link("#numbers", "numbers"),
       link("#history", "the readme"),
       link("#friends", "friends"),
       link("#ways", "how i work"),
@@ -489,6 +491,117 @@ fn index_section(model: Model) -> Element(msg) {
   ])
 }
 
+/// A workflow of this repository: its name as GitHub shows it, its file, and what it does.
+pub type Check {
+  Check(name: String, file: String, does: String)
+}
+
+/// The workflows of this repository. `just site` fails when a file named here is not one.
+pub const checks = [
+  Check(
+    "site",
+    "site.yml",
+    "builds this page from the repository's files, runs its tests, and publishes it.",
+  ),
+  Check("cv", "cv.yml", "builds the three CVs from the three READMEs."),
+  Check(
+    "metrics",
+    "metrics.yml",
+    "counts the commits and the languages each day.",
+  ),
+]
+
+fn counter(value: String, label: String, class: String) -> Element(msg) {
+  html.li([attribute.class(class)], [
+    html.b([], [html.text(value)]),
+    html.span([], [html.text(label)]),
+  ])
+}
+
+/// The numbers, and the state of what makes this page: counted by the metrics workflow each
+/// day, read from its two cards when the page is built.
+fn numbers_section() -> Element(msg) {
+  let owners = list.map(content.repos, fn(r: Repo) { r.owner }) |> list.unique
+  let badge = fn(c: Check) {
+    html.li([], [
+      html.a(
+        [
+          attribute.href(content.repo <> "/actions/workflows/" <> c.file),
+          attribute.rel("noopener"),
+        ],
+        [
+          html.img([
+            attribute.src(
+              "https://img.shields.io/github/actions/workflow/status/h0ffmann/h0ffmann/"
+              <> c.file
+              <> "?branch=main&label="
+              <> c.name
+              <> "&style=flat-square&labelColor=0A121B",
+            ),
+            attribute.alt(c.name <> ": the state of its last run"),
+            attribute.height(20),
+            a("loading", "lazy"),
+          ]),
+        ],
+      ),
+      html.span([], [html.text(c.does)]),
+    ])
+  }
+  html.section([], [
+    head(
+      "numbers",
+      "the numbers, live",
+      external(content.repo <> "/actions", "every run"),
+    ),
+    html.p([attribute.class("prose")], [
+      html.text(
+        "counted each day by a workflow of this repository, and read from its two cards when this page is built. the page is built again every morning, so a number here is at most a day old.",
+      ),
+    ]),
+    html.ul([attribute.class("counters")], [
+      counter(
+        int.to_string(list.length(owners)),
+        "accounts: " <> string.join(owners, " and "),
+        "topic-ideas",
+      ),
+      counter(
+        int.to_string(list.length(content.repos)),
+        "public repositories of his own",
+        "topic-water",
+      ),
+      counter(
+        int.to_string(content.contributed_to),
+        "repositories he contributed to",
+        "topic-water",
+      ),
+      counter(int.to_string(content.commits), "commits", "topic-ideas"),
+      counter(
+        int.to_string(content.pull_requests),
+        "pull requests reviewed",
+        "topic-ouroboric",
+      ),
+    ]),
+    html.ul(
+      [attribute.class("languages")],
+      list.map(content.languages, fn(l) {
+        html.li([], [
+          html.span([attribute.class("name")], [html.text(l.0)]),
+          html.span([attribute.class("bar")], [
+            html.span([attribute.style("width", l.1)], []),
+          ]),
+          html.span([attribute.class("share")], [html.text(l.1)]),
+        ])
+      }),
+    ),
+    html.p([attribute.class("note")], [
+      html.text(
+        "the languages are an estimate from the commits of the public repositories. the checks of this repository, as they stand now:",
+      ),
+    ]),
+    html.ul([attribute.class("checks")], list.map(checks, badge)),
+  ])
+}
+
 fn history_section() -> Element(msg) {
   let row = fn(s: Snapshot) {
     html.li([], [
@@ -617,7 +730,17 @@ fn footer() -> Element(msg) {
       html.p([], [
         html.text("© matheus hoffmann. all rights reserved ("),
         external(content.repo <> "/blob/main/LICENSE", "LICENSE"),
-        html.text("). built from "),
+        html.text(")."),
+        case content.doi {
+          "" -> element.none()
+          doi ->
+            html.span([], [
+              html.text(" cite this page as doi "),
+              external("https://doi.org/" <> doi, doi),
+              html.text("."),
+            ])
+        },
+        html.text(" built from "),
         external(
           content.repo <> "/commit/" <> content.revision,
           "commit " <> content.revision,

@@ -9,6 +9,10 @@ on:
   push:
     branches: [main]
     paths: ["site/**", "README.md", "me/**", "flake.nix", "flake.lock", "justfile", ".github/workflows/site.yml"]
+  # Each morning, after the metrics workflow wrote its two cards (06:00 UTC): the page reads its
+  # numbers from them, and that workflow's commits do not start this one.
+  schedule:
+    - cron: "40 6 * * *"
   workflow_dispatch:
 
 permissions:

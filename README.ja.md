@@ -13,6 +13,7 @@
 [![ww3-gpu の DOI 10.5281/zenodo.23221351](https://img.shields.io/badge/ww3--gpu-10.5281%2Fzenodo.23221351-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23221351)
 [![picasso の DOI 10.5281/zenodo.23311208](https://img.shields.io/badge/picasso-10.5281%2Fzenodo.23311208-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23311208)
 [![closed source の DOI 10.5281/zenodo.23333656](https://img.shields.io/badge/closed%20source-10.5281%2Fzenodo.23333656-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23333656)
+[![this profile: DOI 10.5281/zenodo.23352630](https://img.shields.io/badge/this%20profile-10.5281%2Fzenodo.23352630-111111?style=flat-square)](https://doi.org/10.5281/zenodo.23352630)
 
 </div>
 <!-- cv:end -->

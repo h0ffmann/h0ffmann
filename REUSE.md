@@ -52,6 +52,10 @@ assistant, a crawler that writes for a person.
 | picasso: Nix flakes for scientific and agentic toolchains | [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208) | AGPL-3.0-only for code, CC BY 4.0 for texts and drawings |
 | Closed Source: The God that Failed | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | CC BY 4.0 for the text |
 
+This profile has a DOI of its own, [10.5281/zenodo.23352630](https://doi.org/10.5281/zenodo.23352630)
+(first version, v0.1.0: [10.5281/zenodo.23352631](https://doi.org/10.5281/zenodo.23352631)). Cite
+it when you quote the profile itself. It does not replace the four above.
+
 Each DOI above is the one that always opens the latest version of its work. The licence of each
 work is the one its own repository states on the day you read it; the column is what DataCite's
 record or the repository said on 13 October 2026.

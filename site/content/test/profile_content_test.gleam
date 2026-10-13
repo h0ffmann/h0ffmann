@@ -30,3 +30,19 @@ pub fn headings_are_the_third_level_ones_test() {
     )
     == ["people who read", "money first"]
 }
+
+pub fn numbers_are_read_from_a_card_test() {
+  let card =
+    "mhoffmann Joined GitHub 10 years ago Followed by 85 users Contributed to 54 repositories Activity 4140 Commits 8 Pull requests reviewed"
+  assert generate.number_before(card, "Commits") == 4140
+  assert generate.number_before(card, "repositories") == 54
+  assert generate.number_before(card, "Stars") == 0
+}
+
+pub fn languages_are_read_from_a_card_test() {
+  let card =
+    "12 Languages Most used languages estimation from 14.2mb of code in 4069 edited files across 764 commits Nix 20.3 kB 0.71% Scala 1.27 MB 44.2% Jupyter Notebook 500 kB 17.38%"
+  assert generate.languages(card)
+    == [#("Scala", "44.2%"), #("Jupyter Notebook", "17.38%"), #("Nix", "0.71%")]
+  assert generate.languages("no card") == []
+}

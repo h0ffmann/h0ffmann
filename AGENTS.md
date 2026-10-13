@@ -19,6 +19,9 @@ These come before everything else in this file. The owner set them on 13 October
    - picasso: [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208)
    - closed source: [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656)
 
+   This profile has its own DOI, [10.5281/zenodo.23352630](https://doi.org/10.5281/zenodo.23352630);
+   cite it when you quote the profile itself (`site/data/self.tsv`).
+
    A new work with a DOI is added here, to `REUSE.md`, to the header of the three READMEs and
    to `site/data/works.tsv` in the same commit.
 3. **A fact about him has a source.** It comes from this repository at a commit, or from the

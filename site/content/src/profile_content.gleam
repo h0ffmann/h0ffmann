@@ -9,6 +9,7 @@
 //// It is its own package, because the site cannot compile before its content exists.
 //// The shape is that of marola-dev/marola-research's tools/content, by the same author.
 
+import gleam/float
 import gleam/int
 import gleam/io
 import gleam/list
@@ -26,6 +27,60 @@ fn revision() -> String
 
 @external(javascript, "./profile_content_ffi.mjs", "readme_commits")
 fn readme_commits() -> String
+
+/// The words of an SVG card (the metrics cards), tags out.
+@external(javascript, "./profile_content_ffi.mjs", "card_text")
+fn card_text(path: String) -> String
+
+/// The whole number just before `word` in a card's text: "4140 Commits" gives 4140. 0 when the
+/// word is not there.
+pub fn number_before(text: String, word: String) -> Int {
+  let words = string.split(text, " ")
+  list.window_by_2(words)
+  |> list.find_map(fn(pair) {
+    case pair.1 == word {
+      True -> int.parse(pair.0)
+      False -> Error(Nil)
+    }
+  })
+  |> result.unwrap(0)
+}
+
+/// The languages of the languages card, the largest share first: #(name, share). The card writes, after
+/// the word "commits", a name, a size, a unit and a share for each language.
+pub fn languages(text: String) -> List(#(String, String)) {
+  let after = case string.split_once(text, " commits ") {
+    Ok(#(_, rest)) -> rest
+    Error(_) -> ""
+  }
+  string.split(after, " ")
+  |> list.fold(#([], []), fn(acc, word) {
+    let #(done, current) = acc
+    case string.ends_with(word, "%") {
+      // current is the share's line in reverse: unit, size, then the name's words.
+      True ->
+        case current {
+          [_unit, _size, ..name] if name != [] -> #(
+            [#(string.join(list.reverse(name), " "), word), ..done],
+            [],
+          )
+          _ -> #(done, [])
+        }
+      False -> #(done, [word, ..current])
+    }
+  })
+  |> fn(acc) { list.reverse(acc.0) }
+  // The largest share first.
+  |> list.sort(fn(a, b) { float.compare(share(b.1), share(a.1)) })
+}
+
+fn share(percent: String) -> Float {
+  let digits = string.drop_end(percent, 1)
+  case float.parse(digits) {
+    Ok(f) -> f
+    Error(_) -> int.to_float(result.unwrap(int.parse(digits), 0))
+  }
+}
 
 /// The rows of a table of site/data: tab-separated, a line that starts with "#" is a comment.
 pub fn rows(tsv: String) -> List(List(String)) {
@@ -205,6 +260,20 @@ pub fn main() -> Nil {
         _ -> Error(Nil)
       }
     })
+  let base = card_text("../../metrics.base.svg")
+  let langs =
+    languages(card_text("../../metrics.languages.svg"))
+    |> list.map(fn(l) { "#(" <> lit(l.0) <> ", " <> lit(l.1) <> ")" })
+  let self = rows(read("../data/self.tsv"))
+  let own = fn(key: String) {
+    list.find_map(self, fn(r) {
+      case r {
+        [k, v] if k == key -> Ok(v)
+        _ -> Error(Nil)
+      }
+    })
+    |> result.unwrap("")
+  }
   let friends =
     rows(read("../data/friends.tsv"))
     |> list.filter_map(fn(r) {
@@ -289,6 +358,31 @@ pub const repo = \"https://github.com/h0ffmann/h0ffmann\"
 
 pub const revision = "
     <> lit(revision())
+    <> "
+
+/// This repository's own DOI (site/data/self.tsv): the one that always opens its latest
+/// release. Empty before the first release.
+pub const doi = "
+    <> lit(own("doi"))
+    <> "
+
+/// The numbers of metrics.base.svg, which the metrics workflow makes each day; 0 when the card
+/// was not there.
+pub const commits = "
+    <> int.to_string(number_before(base, "Commits"))
+    <> "
+
+pub const contributed_to = "
+    <> int.to_string(number_before(base, "repositories"))
+    <> "
+
+pub const pull_requests = "
+    <> int.to_string(number_before(base, "Pull"))
+    <> "
+
+/// The languages of metrics.languages.svg, the largest share first: #(name, share).
+pub const languages: List(#(String, String)) = "
+    <> lits(langs)
     <> "
 
 /// The README's own sentence about its owner (the section \"me\").

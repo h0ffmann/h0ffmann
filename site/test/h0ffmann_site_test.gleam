@@ -1,3 +1,4 @@
+import gleam/int
 import gleam/list
 import gleam/string
 import gleeunit
@@ -98,4 +99,21 @@ pub fn the_arc_has_its_kanji_its_medal_and_its_prophecy_test() {
   assert list.any(content.timeline, fn(e) {
     e.mark == "prophecy" && e.when == "2027"
   })
+}
+
+pub fn the_numbers_come_from_the_metrics_cards_test() {
+  let html = page()
+  assert content.commits > 0
+  assert content.contributed_to > 0
+  assert content.languages != []
+  assert string.contains(html, ">" <> int.to_string(content.commits) <> "<")
+  assert list.all(content.languages, fn(l) { string.contains(html, l.0) })
+  assert list.all(app.checks, fn(c: app.Check) {
+    string.contains(html, "/actions/workflows/" <> c.file <> "\"")
+  })
+}
+
+pub fn the_page_names_its_own_doi_test() {
+  assert string.starts_with(content.doi, "10.5281/zenodo.")
+  assert string.contains(page(), "https://doi.org/" <> content.doi)
 }

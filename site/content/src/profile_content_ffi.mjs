@@ -32,3 +32,13 @@ export function readme_commits() {
   const lines = dates.split("\n");
   return lines.length + " " + lines[lines.length - 1];
 }
+
+// The words of an SVG card, with its styles and tags taken out and its spaces made single.
+export function card_text(path) {
+  if (!existsSync(path)) return "";
+  return readFileSync(path, "utf8")
+    .replace(/<style[\s\S]*?<\/style>/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}

@@ -12,6 +12,8 @@ site:
     nix develop --extra-experimental-features 'nix-command flakes' --no-update-lock-file .#site --command just _site
 
 _site:
+    # The page names workflows: each one must be a file in .github/workflows/.
+    for f in $(grep -oE '"[a-z]+\.yml"' site/src/h0ffmann_site/app.gleam | tr -d '"' | sort -u); do [ -f ".github/workflows/$f" ] || { echo "site: the page names $f, which is not a workflow" >&2; exit 1; }; done
     cd site/content && gleam format --check src test && gleam test && gleam run --no-print-progress
     cd site && gleam format src/h0ffmann_site/content.gleam && gleam format --check src test
     cd site && gleam test
