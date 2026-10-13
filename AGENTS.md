@@ -6,8 +6,9 @@ Guidance for AI coding agents working in this repository.
 
 This is the GitHub profile repository for `h0ffmann`. `README.md` is rendered
 at https://github.com/h0ffmann as the profile page. There is no application
-code, no build, no tests, and no linter. Every change here is either a README
-edit or a change to the metrics workflow.
+code and no linter; the only build is the CV (`nix build`) and the only tests
+are its unit tests (`python3 -m unittest discover -s cv`). Every change here is
+a README edit, a CV-tooling edit or a change to the metrics workflow.
 
 ## Files
 
@@ -16,6 +17,15 @@ edit or a change to the metrics workflow.
   each other from a flag line at the top. **Every edit to one is made to
   all three in the same commit**: same sections, same badges, same markers,
   only the prose and alt texts differ.
+  The page opens with a centred header in the look of
+  [picasso's README](https://github.com/h0ffmann/picasso/blob/29eb385/README.md):
+  a one-line drawing, the `# h0ffmann` title, a `<sub>` line of links (the
+  three CVs and the other two languages) and a row of flat-square DOI badges,
+  one per citable work. The drawing is picasso's
+  `site/static/drawings/face.svg`, an original work by the owner under
+  CC BY 4.0 (picasso's README, "License"), loaded from raw.githubusercontent.com
+  at a pinned commit; nothing is copied here. The whole header sits in a
+  `cv:skip` block: the CV has its own header.
 - `pdf/cv.pdf`, `pdf/cv.pt-BR.pdf` and `pdf/cv.ja.pdf` – **generated** CVs,
   built from the three READMEs (headers `cv/header*.md`, footer, PDF title
   and, for Japanese, the luatexja preamble lines per language in
@@ -23,11 +33,18 @@ edit or a change to the metrics workflow.
   `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
   (pandoc → lualatex; shields badges become colored pills). `cv/prepare.py`
   drops everything between `<!-- cv:skip -->` / `<!-- cv:end -->` (the
-  language line, the LinkedIn badge the CV header already has, the live marola badges, the Leave No Trace badge beside the QR, the photo) and prepends `cv/header.md`
-  (name + contact). The CV follows the README's section order — me,
-  open source (marola-dev), research (ww3-gpu), exp-highlights, certs,
-  misc — so reordering the profile
-  reorders the CV. `cv/preamble.tex` is the look. The CV is
+  header, the badges under `me`, the Leave No Trace badge beside the QR, the
+  photos), unwraps everything between a line `<!-- cv:only` and a line
+  `cv:end -->` (on github.com that span is one HTML comment, so the profile
+  hides it and only the CV shows it; the two kinds of block cannot nest, and
+  no line inside a `cv:only` block may contain `-->`) and prepends
+  `cv/header.md` (name + contact). The CV follows the README's source order —
+  me, marola, research (ww3-gpu, `cv:only`), closed-source, exp-highlights
+  (`cv:only`), certs, misc — so moving a block in the profile moves it in the
+  CV. The research and experience sections left the profile in October 2026
+  and stay on the CV through `cv:only`; `cv/test_prepare.py` checks that the
+  profile shows five sections and the CV seven, in all three languages.
+  `cv/preamble.tex` is the look. The CV is
   one page per language and close to full: check the page count in the
   build output after adding content.
   Emoji are not drawn from a font: `cv/emoji.lua` replaces each one with
@@ -40,7 +57,8 @@ edit or a change to the metrics workflow.
   `flake.nix` pins publisher in `flake.lock`; bump with
   `nix flake update publisher` when the lab changes. Build locally with
   `nix build` (result/cv.pdf) and run `python3 -m unittest discover -s cv`.
-  Keep the skip-marker pairs balanced and identical in all READMEs.
+  Keep the marker lines balanced and identical in all READMEs (a unit test
+  checks it).
 - `5MINUTE.md` – the profile in five headings, one minute each, in English only. It is not
   built into the CV and no README links to it. Every fact in it comes from `README.md` or
   `me/ways-of-working.md`: change it when one of those changes.
@@ -63,24 +81,29 @@ edit or a change to the metrics workflow.
 
 ## Working on the README
 
-- Section order is deliberate: the open-source work at
-  [marola-dev](https://github.com/marola-dev) comes right after the intro —
-  it is what the user is actively working on and the profile leads with
-  it — then the ww3-gpu research project, then experience. The profile has
-  no tech-stack or stats section and no marola-dev repo listing; the user
-  removed all three. Live badges (last commit, commit activity, CI) sit in a
-  `cv:skip` block: they only render on github.com.
+- The profile has exactly five sections, in this order: me, marola,
+  closed-source, certs, misc. marola comes right after the intro because it
+  is what the user is actively working on. The ww3-gpu research block and the
+  experience line are `cv:only` — between marola and closed-source, and
+  between closed-source and certs — hidden on github.com, printed on the CV.
+  The profile has no tech-stack or stats section, no marola-dev repo listing
+  and no live badges (last commit, commit activity, CI); the user removed
+  them. The look follows picasso's README: say only what is already
+  established, few badges, no selling.
 - Never leave badge `<img>` lines bare: outside a `<p align="left">` block
   GitHub renders every line as its own paragraph and the badges stack
   vertically (check with `gh api markdown -f mode=gfm -f text=...`).
 - Certifications are one line of text, a count per issuer with the cert
   names in parentheses (`aws certified 4x (...)`), not badges.
-- Headings are lowercase with a leading emoji (`## 👋 me`, `## 💼 exp-highlights`).
+- Headings are lowercase with a leading emoji (`## 👋 me`, `## 📚 closed-source`).
   Keep that style for new sections.
 - Topic badges use shields.io with `style=flat-square`. Link, DOI and cert
-  badges use `style=for-the-badge`. Use `logo=<simpleicons-slug>` where a Simple
-  Icons logo exists.
-- Badge groups live inside `<p align="left">` blocks, one `<img>` per line.
+  badges in the sections use `style=for-the-badge`. Use `logo=<simpleicons-slug>`
+  where a Simple Icons logo exists. The header's DOI badges are flat-square,
+  written as Markdown images on consecutive lines inside the centred `<div>`,
+  as picasso does.
+- Badge groups live inside `<p align="left">` blocks, one `<img>` per line;
+  the header's row is the one exception.
 - The README no longer embeds the two generated metrics SVGs; the metrics
   workflow still refreshes them. Add their `<img>` back to bring the stats
   section back.
@@ -97,7 +120,7 @@ edit or a change to the metrics workflow.
   rather than reverting to `@latest`. Upstream is unmaintained (v3.34 is
   from 2023); its activity plugin no longer works with GitHub's events API.
   The profile used to carry a recent-activity list and a nix labs table,
-  each rewritten by its own bot; both were removed, so the marola-dev
+  each rewritten by its own bot; both were removed, so the marola
   section is the place that says what the user is working on.
 - The languages step runs the in-depth analyzer, which clones every owned
   repository over plain https without a token. Private repositories fail to
