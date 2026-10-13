@@ -107,6 +107,8 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   source. Never write a date, an employer, a DOI or a count in `site/src` by hand. The
   sentences that tell the story are written in `site/src/h0ffmann_site/app.gleam`.
   `site/preview/` has pictures of the site and of the README for pull requests.
+  **[`DESIGN.md`](DESIGN.md) has the rules of the look; read it before you change a colour, a
+  face or a shape, and change it in the same commit.**
   The page is dark, with four lights that mean the same everywhere on it (the owner, 13 October
   2026): **blue** is the sea and what is made for it, **green** is an idea, **yellow** is
   Ouroboric, **red** is closed source. The `topic` column of `site/data/works.tsv` and
