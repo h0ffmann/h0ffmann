@@ -145,9 +145,10 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   as picasso does.
 - Badge groups live inside `<p align="left">` blocks, one `<img>` per line;
   the header's row is the one exception.
-- The README no longer embeds the two generated metrics SVGs; the metrics
-  workflow still refreshes them. Add their `<img>` back to bring the stats
-  section back.
+- The header shows `metrics.base.svg` to the right of the drawing, on the same line and
+  smaller (280 px wide beside the drawing's 300), in the three READMEs; it is inside the
+  header's `cv:skip` block, so the CV does not show it. `metrics.languages.svg` is not embedded;
+  the metrics workflow still refreshes both. Add its `<img>` to bring the languages card back.
 - Preview: GitHub renders the README, so check the branch on github.com or
   use `gh repo view --web` for the merged result. Relative SVG paths only
   resolve once the SVGs exist on the branch being viewed.

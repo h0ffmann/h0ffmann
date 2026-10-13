@@ -1,7 +1,7 @@
 <!-- cv:skip -->
 <div align="center">
 
-<img alt="二つの側面から同時に見た顔、一筆書き：ピカソ風のオリジナル線画、h0ffmann/picasso より" src="https://raw.githubusercontent.com/h0ffmann/picasso/29eb3850fdb1e2e52e238963cb629590796e5c27/site/static/drawings/face.svg" width="300"/>
+<img alt="二つの側面から同時に見た顔、一筆書き：ピカソ風のオリジナル線画、h0ffmann/picasso より" src="https://raw.githubusercontent.com/h0ffmann/picasso/29eb3850fdb1e2e52e238963cb629590796e5c27/site/static/drawings/face.svg" width="300"/> <img alt="h0ffmann の github メトリクス：リポジトリ、コミット、コントリビューション（毎日 metrics ワークフローが生成）" src="metrics.base.svg" width="280"/>
 
 # h0ffmann
 

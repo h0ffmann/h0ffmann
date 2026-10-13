@@ -1,7 +1,7 @@
 <!-- cv:skip -->
 <div align="center">
 
-<img alt="um rosto visto de dois lados ao mesmo tempo, em uma só linha: um desenho original à maneira de Picasso, de h0ffmann/picasso" src="https://raw.githubusercontent.com/h0ffmann/picasso/29eb3850fdb1e2e52e238963cb629590796e5c27/site/static/drawings/face.svg" width="300"/>
+<img alt="um rosto visto de dois lados ao mesmo tempo, em uma só linha: um desenho original à maneira de Picasso, de h0ffmann/picasso" src="https://raw.githubusercontent.com/h0ffmann/picasso/29eb3850fdb1e2e52e238963cb629590796e5c27/site/static/drawings/face.svg" width="300"/> <img alt="métricas do github de h0ffmann: repositórios, commits e contribuições, geradas todo dia pelo workflow de métricas" src="metrics.base.svg" width="280"/>
 
 # h0ffmann
 
