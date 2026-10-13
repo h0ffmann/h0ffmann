@@ -1,0 +1,68 @@
+% The short CV's look: the site's (DESIGN.md). A dark sea at night and four lights on it.
+% lualatex. The three faces are the site's: Bricolage Grotesque, Newsreader, JetBrains Mono;
+% cv/build.sh copies them from the flake's fonts into \cvfonts. \cvtitle comes from vars.tex.
+\usepackage[a4paper,margin=15mm,top=12mm,bottom=20mm,footskip=11mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Newsreader.ttf}[Path=\cvfonts/, RawFeature={axis={wght=400,opsz=14}},
+  BoldFont=Newsreader.ttf, BoldFeatures={RawFeature={axis={wght=650,opsz=14}}},
+  ItalicFont=Newsreader-Italic.ttf, ItalicFeatures={RawFeature={axis={wght=400,opsz=14}}}]
+\newfontfamily\display{Bricolage.ttf}[Path=\cvfonts/, RawFeature={axis={wght=800,opsz=96,wdth=100}}]
+\newfontfamily\displaysemi{Bricolage.ttf}[Path=\cvfonts/, RawFeature={axis={wght=600,opsz=24,wdth=100}}]
+\newfontfamily\mono{JetBrainsMono-Regular.ttf}[Path=\cvfonts/, Scale=0.82]
+\setmonofont{JetBrainsMono-Regular.ttf}[Path=\cvfonts/, Scale=0.82]
+\usepackage{xcolor}
+% The ground and the four lights, the same tokens as site/static/style.css.
+\definecolor{night}{HTML}{05090E}
+\definecolor{rule}{HTML}{1C2B38}
+\definecolor{ink}{HTML}{E7F2EF}
+\definecolor{muted}{HTML}{8FA3AD}
+\definecolor{water}{HTML}{36B7FF}
+\definecolor{ideas}{HTML}{3DFF96}
+\definecolor{ouroboric}{HTML}{FF8A1F}
+\definecolor{closed}{HTML}{FF4D62}
+\pagecolor{night}\color{ink}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{luacolor}
+\usepackage{lua-ul}
+\usepackage{enumitem}
+\setlist[itemize]{nosep, leftmargin=1.2em}
+\usepackage{hyperref}
+\hypersetup{hidelinks, pdftitle={\cvtitle}, pdfauthor={Matheus Hoffmann}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\linespread{1.12}\raggedright
+\setlength{\columnsep}{9mm}
+% A link is the words, with a line under them: a light is for meaning, not for "press here".
+\newcommand{\cvlink}[1]{{\underLine[color=muted,top=-1.6pt,bottom=-2pt]{#1}}}
+\newcommand{\cvdata}{\mono\color{muted}\small}
+\newcommand{\cvdoi}[1]{{\mono\footnotesize\color{muted}\underLine[color=rule,top=-1.6pt,bottom=-2pt]{#1}}}
+% The name is green and the epithet is blue (DESIGN.md, rule 3).
+\newcommand{\cvname}[1]{{\display\fontsize{40}{40}\selectfont\color{ideas}#1\par}\vspace{-3pt}}
+\newenvironment{cvepithet}{\displaysemi\fontsize{15}{17}\selectfont\color{water}}{\par\vspace{5pt}}
+\newenvironment{cvlede}{\fontsize{12}{17.5}\selectfont}{\par\vspace{4pt}}
+\newcommand{\cvpill}[1]{\mbox{\setlength{\fboxsep}{0pt}\cvpillbox{\mono\footnotesize\color{ink}#1}}}
+% a pill: a round outline in the colour of a rule
+\usepackage{tikz}
+\newcommand{\cvpillbox}[1]{\tikz[baseline=(p.base)]\node[draw=muted, line width=0.5pt, rounded corners=7pt,
+  inner xsep=7pt, inner ysep=4pt, text=ink] (p) {#1};}
+\newenvironment{cvcontact}{\setlength{\parskip}{0pt}\spaceskip=5pt}{\par\vspace{2pt}}
+\newcommand{\cvsection}[1]{\vspace{9pt}{\displaysemi\fontsize{15}{17}\selectfont\color{white}#1\par}%
+  \vspace{-5pt}{\color{rule}\rule{\linewidth}{0.6pt}}\par\vspace{0pt}}
+\newlength{\cvwhen}\setlength{\cvwhen}{25mm}
+\newcommand{\cvrow}[2]{\makebox[\cvwhen][l]{\cvdata #1}\parbox[t]{\dimexpr\linewidth-\cvwhen}{\raggedright #2}\par\vspace{3pt}}
+% A work: a light on its left edge, not a card (DESIGN.md, shapes).
+\newsavebox{\cvworkbox}
+\newenvironment{cvwork}[1]{\def\cvlight{#1}\begin{lrbox}{\cvworkbox}\begin{minipage}[t]{\dimexpr\linewidth-10pt}%
+  \setlength{\parskip}{2pt}\raggedright}{\end{minipage}\end{lrbox}%
+  \par\noindent{\color{\cvlight}\vrule width 2pt}\hspace{8pt}\usebox{\cvworkbox}\par\vspace{7pt}}
+\newenvironment{cvworks}{\begin{multicols}{2}}{\end{multicols}\vspace{-8pt}}
+% Two short sections side by side.
+\newenvironment{cvpair}{\vspace{2pt}\begin{multicols}{2}\raggedcolumns}{\end{multicols}}
+% The tip is the foot of the page: it is set in a box and the page's foot shows the box.
+\newsavebox{\cvtipbox}
+\makeatletter
+\newenvironment{cvtip}{\begin{lrbox}{\cvtipbox}\begin{minipage}[b]{\linewidth}\setlength{\parskip}{0pt}%
+  {\color{rule}\rule{\linewidth}{0.6pt}}\par\vspace{2pt}\footnotesize\color{muted}\raggedright}%
+  {\end{minipage}\end{lrbox}\global\setbox\cvtipbox\copy\cvtipbox\gdef\@oddfoot{\usebox{\cvtipbox}}}
+\makeatother
