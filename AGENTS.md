@@ -110,7 +110,7 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   **[`DESIGN.md`](DESIGN.md) has the rules of the look; read it before you change a colour, a
   face or a shape, and change it in the same commit.**
   The page is dark, with four lights that mean the same everywhere on it (the owner, 13 October
-  2026): **blue** is the sea and what is made for it, **green** is an idea, **yellow** is
+  2026): **blue** is the sea and what is made for it, **green** is an idea, **orange** is
   Ouroboric, **red** is closed source. The `topic` column of `site/data/works.tsv` and
   `site/data/repos.tsv` is one of `water`, `ideas`, `ouroboric`, `closed`; do not add a fifth.
   `site/data/repos.tsv` lists every public source repository of h0ffmann and of marola-dev, as

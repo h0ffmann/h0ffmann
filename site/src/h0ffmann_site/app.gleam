@@ -41,7 +41,7 @@ pub fn update(model: Model, msg: Msg) -> #(Model, Effect(Msg)) {
 }
 
 /// The four colours of the page, as the owner set them: water is blue, ideas are green,
-/// Ouroboric is yellow and closed source is red. The key of each is the `topic` of site/data.
+/// Ouroboric is orange and closed source is red. The key of each is the `topic` of site/data.
 pub const topics = [
   #("water", "the sea"),
   #("ideas", "ideas"),
@@ -366,6 +366,50 @@ fn pressed(on: Bool) -> Attribute(msg) {
   })
 }
 
+/// One area of research, as the README names it: its light, what it asks, and where it lives.
+pub type Question {
+  Question(
+    topic: String,
+    name: String,
+    asks: String,
+    href: String,
+    where: String,
+  )
+}
+
+/// The three areas of research of the README's first sentence.
+pub const questions = [
+  Question(
+    "water",
+    "wave modelling",
+    "how the sea moves, and what it will do tomorrow at one beach.",
+    "https://github.com/marola-dev",
+    "github.com/marola-dev",
+  ),
+  Question(
+    "ideas",
+    "game theory",
+    "how people and programs choose, when each one watches the other.",
+    "https://github.com/h0ffmann/nashkell",
+    "github.com/h0ffmann/nashkell",
+  ),
+  Question(
+    "ouroboric",
+    "self-improving apps",
+    "how an app can mend itself, and write down how it did. this is Ouroboric, with bruno valério.",
+    "https://github.com/ouroboric-dev",
+    "github.com/ouroboric-dev",
+  ),
+]
+
+fn question_item(q: Question) -> Element(msg) {
+  html.li([attribute.class("topic-" <> q.topic)], [
+    html.h3([], [html.text(q.name)]),
+    html.p([], [html.text(q.asks)]),
+    external(q.href, q.where),
+  ])
+}
+
 fn graph_section(model: Model) -> Element(Msg) {
   let dois = list.count(content.works, fn(w: Work) { w.doi != "" })
   html.section([], [
@@ -383,9 +427,10 @@ fn graph_section(model: Model) -> Element(Msg) {
         <> int.to_string(list.length(content.works))
         <> " works, "
         <> int.to_string(dois)
-        <> " of them with a permanent DOI. an arrow is a tie that an index or a file states: this work cites, or needs, that one. the colours are the same on the whole page: blue is the sea, green is an idea, yellow is Ouroboric, red is closed source. press a colour to light its works.",
+        <> " of them with a permanent DOI. an arrow is a tie that an index or a file states: this work cites, or needs, that one. the colours are the same on the whole page: blue is the sea, green is an idea, orange is Ouroboric, red is closed source. press a colour to light its works.",
       ),
     ]),
+    html.ul([attribute.class("questions")], list.map(questions, question_item)),
     html.div(
       [attribute.class("filters")],
       list.map(topics, fn(t) {

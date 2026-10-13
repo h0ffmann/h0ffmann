@@ -117,3 +117,17 @@ pub fn the_page_names_its_own_doi_test() {
   assert string.starts_with(content.doi, "10.5281/zenodo.")
   assert string.contains(page(), "https://doi.org/" <> content.doi)
 }
+
+pub fn the_three_areas_of_research_are_on_the_page_test() {
+  let html = page()
+  // The README names them, and the page gives each its light and its home.
+  assert list.all(app.questions, fn(q: app.Question) {
+    string.contains(content.me, q.name)
+    && string.contains(html, "href=\"" <> q.href <> "\"")
+  })
+  assert string.contains(
+    html,
+    "<li class=\"topic-ouroboric\"><h3>self-improving apps</h3>",
+  )
+  assert string.contains(html, "https://github.com/ouroboric-dev\"")
+}

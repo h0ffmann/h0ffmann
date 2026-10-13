@@ -20,7 +20,7 @@ the same on every part of the page.
 |---|---|---|---|---|
 | **blue** | `--water` | `#36B7FF` | **water intuition**: the sea, and what is felt, measured or built for it. marola, ww3-gpu, marola-bench, a race in open water | `water` |
 | **green** | `--ideas` | `#3DFF96` | **knowledge**: an idea that was worked out and written down. game theory, tools, notes, a DOI | `ideas` |
-| **yellow** | `--ouro` | `#FFE44D` | **Ouroboric ideas**: work that improves itself, and what is made with those friends | `ouroboric` |
+| **orange** | `--ouro` | `#FF8A1F` | **Ouroboric ideas**: self-improving apps, work that improves itself, and what is made with those friends. Orange is Ouroboric's own colour | `ouroboric` |
 | **red** | `--closed` | `#FF4D62` | **closed source**: the book, the old closed thesis, and this page's own notice that it is not a template | `closed` |
 
 Rules:
@@ -32,7 +32,10 @@ Rules:
    prometheus" is water. Nothing else on the cover takes a light.
 4. **Red is rare.** It marks closed source and the notice. It is not an error colour and not an
    accent.
-5. **A light is not the only sign.** Where a colour tells something, words tell it too: the
+5. **Each area of research has its light and its home.** Wave modelling is blue and links to
+   marola-dev; game theory is green; self-improving apps is orange and links to the ouroboric-dev
+   organisation. The three stand together above the knowledge graph.
+6. **A light is not the only sign.** Where a colour tells something, words tell it too: the
    name of the topic on its button, the word "private", the era under a mark.
 
 ## The ground
@@ -85,6 +88,13 @@ A light may glow, like a tube of neon: a soft shadow of its own colour.
   caps, no fill. Each is drawn here, is a file in `site/static/drawings/`, and is used as a mask
   so that it takes a light. Never trace a drawing by Pablo Picasso.
 
+## The favicon
+
+A dark square with three small one-line drawings, one for each light that the name stands on: a
+green flame (the knowledge that Prometheus carries), an orange boat, and the blue sea under
+both. The boat is orange because the owner asked for it; it is the one place where orange is
+not Ouroboric.
+
 ## Logos
 
 - A logo is its owner's. It is never a file here, never recoloured and never given a glow.
@@ -132,4 +142,5 @@ Written for this repository.
   to the reader's action" are read from Anthropic's `frontend-design` skill (Apache-2.0).
 - The meaning of the four colours is the owner's: "ideas are in green, water related topics are
   in blue, and ouroboric ideas in yellow. Closed source ideas in red", and "Ouroboric ideas,
-  water intuition, green knowledge".
+  water intuition, green knowledge". Later the same day he asked for "the ouroboric orange", so
+  the Ouroboric light is orange and there is no yellow on the page.
