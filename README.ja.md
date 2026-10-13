@@ -1,5 +1,18 @@
 <!-- cv:skip -->
-<p align="right"><a href="pdf/cv.ja.pdf">📄 履歴書 (ja)</a> · <a href="pdf/cv.pdf">📄 cv (en)</a> · <a href="pdf/cv.pt-BR.pdf">📄 cv (pt-BR)</a> · <a href="README.md">🇬🇧 english</a> · <a href="README.pt-BR.md">🇧🇷 português</a></p>
+<div align="center">
+
+<img alt="二つの側面から同時に見た顔、一筆書き：ピカソ風のオリジナル線画、h0ffmann/picasso より" src="https://raw.githubusercontent.com/h0ffmann/picasso/29eb3850fdb1e2e52e238963cb629590796e5c27/site/static/drawings/face.svg" width="300"/>
+
+# h0ffmann
+
+<sub>matheus hoffmann · 履歴書: <a href="pdf/cv.ja.pdf">ja</a>, <a href="pdf/cv.pdf">en</a>, <a href="pdf/cv.pt-BR.pdf">pt-BR</a> · <a href="README.md">🇬🇧 english</a> · <a href="README.pt-BR.md">🇧🇷 português</a></sub>
+
+[![marola の DOI 10.5281/zenodo.23224155](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23224155)
+[![ww3-gpu の DOI 10.5281/zenodo.23221351](https://img.shields.io/badge/ww3--gpu-10.5281%2Fzenodo.23221351-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23221351)
+[![picasso の DOI 10.5281/zenodo.23311208](https://img.shields.io/badge/picasso-10.5281%2Fzenodo.23311208-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23311208)
+[![closed source の DOI 10.5281/zenodo.23333656](https://img.shields.io/badge/closed%20source-10.5281%2Fzenodo.23333656-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23333656)
+
+</div>
 <!-- cv:end -->
 
 ## 👋 自己紹介
@@ -9,10 +22,11 @@
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="me/ways-of-working.md"><img src="https://img.shields.io/badge/%E5%83%8D%E3%81%8D%E6%96%B9-555555?style=for-the-badge" alt="働き方" /></a>
+<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/%E6%B3%A8%E7%9B%AE-closed%20source%3A%20the%20god%20that%20failed-111111?style=for-the-badge&labelColor=A3201C" alt="注目：closed source: the god that failed のウェブサイト" /></a>
 </p>
 <!-- cv:end -->
 
-## 🌊 オープンソース — [marola-dev](https://github.com/marola-dev)
+## 🌊 marola
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
 <!-- cv:skip -->
@@ -33,14 +47,6 @@
 <a href="https://github.com/marola-dev/marola/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-555555?style=for-the-badge" alt="MIT ライセンス" /></a>
 <a href="https://doi.org/10.5281/zenodo.23224155" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23224155-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="marola の DOI" /></a>
 </p>
-<!-- cv:skip -->
-<p align="left">
-<a href="https://github.com/marola-dev/marola/commits/main"><img src="https://img.shields.io/github/last-commit/marola-dev/marola?style=flat-square&logo=github&label=%E6%9C%80%E7%B5%82%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88" alt="marola-dev/marola の最終コミット" /></a>
-<a href="https://github.com/marola-dev/marola/graphs/commit-activity"><img src="https://img.shields.io/github/commit-activity/m/marola-dev/marola?style=flat-square&logo=github&label=%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E6%95%B0" alt="marola-dev/marola の月間コミット数" /></a>
-<a href="https://github.com/marola-dev/marola/actions/workflows/ci.yml"><img src="https://github.com/marola-dev/marola/actions/workflows/ci.yml/badge.svg" alt="marola CI" /></a>
-<a href="https://github.com/marola-dev/marola-site/actions/workflows/site.yml"><img src="https://github.com/marola-dev/marola-site/actions/workflows/site.yml/badge.svg" alt="marola.dev のビルドとデプロイ" /></a>
-</p>
-<!-- cv:end -->
 
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-6E7781?style=flat-square" alt="civic-tech" /></a>
@@ -54,6 +60,7 @@
 
 > 🔓 人間も AI エージェントも、コントリビューター歓迎 — コードは不要です：地図を使って間違いを教えてください、海の地域知識を共有してください、または **[marola-dev/marola](https://github.com/marola-dev/marola)** で issue や PR を。メールでも：**mhoffmannfs[at]gmail.com**
 
+<!-- cv:only
 ## ⚡ 研究 — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
 UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との共同指導です。**[WW3 GPU Lab](https://github.com/h0ffmann/ww3-gpu)** は、NOAA の波浪モデル **WAVEWATCH III** の計算コストの高いカーネルを*結果を変えずに* GPU へ移すという一つの問題を軸にした、オープンなラボであり、エージェント型コーディングとエージェント型研究についての執筆中の本です。**[picasso](https://github.com/h0ffmann/picasso)**（私の Nix ラボ）で Nix 固定した Fortran/MPI/NetCDF ツールチェーンが WW3 をビルドし、1コマンドで回帰テストを実行します。C++/**Kokkos** に移植した DIA 非線形相互作用カーネル（`W3SNL1`）は Serial・OpenMP・CUDA で Fortran とビット単位で一致し、RTX 4090 では 1,000 海洋点を 0.047 ms で処理します（シリアルでは 24.96 ms）。波スペクトルからコーディングエージェントによるカーネル移植までを扱う17回の講義が本の各章で、マージのたびに PDF と[ウェブサイト](https://h0ffmann.github.io/ww3-gpu/)に組まれます。
@@ -64,11 +71,14 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 <a href="https://github.com/h0ffmann/picasso" target="_blank"><img src="https://img.shields.io/badge/nix%20labs-picasso-24292F?style=for-the-badge&logo=nixos&logoColor=white" alt="github: picasso" /></a>
 <a href="https://doi.org/10.5281/zenodo.23311208" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23311208-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="picasso の DOI" /></a>
 </p>
-<!-- cv:skip -->
+cv:end -->
 
-そして、ライセンスを研究している非営利のエッセイ：**[closed source: the god that failed](https://github.com/h0ffmann/closed-source)**。コーディングエージェントの時代における、リバースエンジニアリングと引用の倫理についてのポジションペーパーです。
+## 📚 closed-source
+
+ライセンスを研究している非営利のエッセイ：**[closed source: the god that failed](https://h0ffmann.github.io/closed-source/)**。コーディングエージェントの時代における、リバースエンジニアリングと引用の倫理についてのポジションペーパーです。v0 のプレプリントで、査読は受けていません。
 
 <p align="left">
+<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/site-h0ffmann.github.io%2Fclosed--source-A3201C?style=for-the-badge" alt="closed-source のウェブサイト" /></a>
 <a href="https://github.com/h0ffmann/closed-source" target="_blank"><img src="https://img.shields.io/badge/essay-closed--source-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: closed-source" /></a>
 <a href="https://doi.org/10.5281/zenodo.23333656" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23333656-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="closed-source の DOI" /></a>
 </p>
@@ -76,13 +86,14 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 <a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-6E7781?style=flat-square" alt="non-profit" /></a>
 <a href="https://github.com/h0ffmann/closed-source#licence"><img src="https://img.shields.io/badge/studying%20licenses-6E7781?style=flat-square" alt="studying licenses" /></a>
 </p>
-<!-- cv:end -->
 
+<!-- cv:only
 ## 💼 職務経歴ハイライト
 
 [LIOC](http://www.lioc.oceanica.ufrj.br) (UFRJ) · [Stone](https://www.stone.com.br) · [Broad](https://www.ycombinator.com/companies/broad) (YC W21) · [Elemeno AI](https://github.com/elemeno-ai) · [Signifyd](https://www.signifyd.com) (US) · TXP (UK, 旧 Vigil)
 
 推薦者はご要望に応じてご紹介します（[働き方](me/ways-of-working.md#references-on-request)）
+cv:end -->
 
 ## 🏅 資格
 

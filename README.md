@@ -1,5 +1,18 @@
 <!-- cv:skip -->
-<p align="right"><a href="pdf/cv.pdf">📄 cv (en)</a> · <a href="pdf/cv.pt-BR.pdf">📄 cv (pt-BR)</a> · <a href="pdf/cv.ja.pdf">📄 cv (ja)</a> · <a href="README.pt-BR.md">🇧🇷 português</a> · <a href="README.ja.md">🇯🇵 日本語</a></p>
+<div align="center">
+
+<img alt="a face seen from two sides at once, one line: an original drawing after Picasso, from h0ffmann/picasso" src="https://raw.githubusercontent.com/h0ffmann/picasso/29eb3850fdb1e2e52e238963cb629590796e5c27/site/static/drawings/face.svg" width="300"/>
+
+# h0ffmann
+
+<sub>matheus hoffmann · cv: <a href="pdf/cv.pdf">en</a>, <a href="pdf/cv.pt-BR.pdf">pt-BR</a>, <a href="pdf/cv.ja.pdf">ja</a> · <a href="README.pt-BR.md">🇧🇷 português</a> · <a href="README.ja.md">🇯🇵 日本語</a></sub>
+
+[![marola: DOI 10.5281/zenodo.23224155](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23224155)
+[![ww3-gpu: DOI 10.5281/zenodo.23221351](https://img.shields.io/badge/ww3--gpu-10.5281%2Fzenodo.23221351-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23221351)
+[![picasso: DOI 10.5281/zenodo.23311208](https://img.shields.io/badge/picasso-10.5281%2Fzenodo.23311208-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23311208)
+[![closed source: DOI 10.5281/zenodo.23333656](https://img.shields.io/badge/closed%20source-10.5281%2Fzenodo.23333656-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23333656)
+
+</div>
 <!-- cv:end -->
 
 ## 👋 me
@@ -9,10 +22,11 @@ sr. software engineer & jr. researcher with **8 years** of experience building s
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="me/ways-of-working.md"><img src="https://img.shields.io/badge/ways%20of%20working-555555?style=for-the-badge" alt="ways of working" /></a>
+<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/featured-closed%20source%3A%20the%20god%20that%20failed-111111?style=for-the-badge&labelColor=A3201C" alt="featured: closed source: the god that failed, the website" /></a>
 </p>
 <!-- cv:end -->
 
-## 🌊 open source — [marola-dev](https://github.com/marola-dev)
+## 🌊 marola
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code for marola.dev" title="scan for marola.dev" align="right" width="120" /></a>
 <!-- cv:skip -->
@@ -35,14 +49,6 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 <a href="https://github.com/marola-dev/marola/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-555555?style=for-the-badge" alt="MIT license" /></a>
 <a href="https://doi.org/10.5281/zenodo.23224155" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23224155-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="DOI for marola" /></a>
 </p>
-<!-- cv:skip -->
-<p align="left">
-<a href="https://github.com/marola-dev/marola/commits/main"><img src="https://img.shields.io/github/last-commit/marola-dev/marola?style=flat-square&logo=github&label=last%20commit" alt="last commit to marola-dev/marola" /></a>
-<a href="https://github.com/marola-dev/marola/graphs/commit-activity"><img src="https://img.shields.io/github/commit-activity/m/marola-dev/marola?style=flat-square&logo=github&label=commits" alt="monthly commits to marola-dev/marola" /></a>
-<a href="https://github.com/marola-dev/marola/actions/workflows/ci.yml"><img src="https://github.com/marola-dev/marola/actions/workflows/ci.yml/badge.svg" alt="marola CI" /></a>
-<a href="https://github.com/marola-dev/marola-site/actions/workflows/site.yml"><img src="https://github.com/marola-dev/marola-site/actions/workflows/site.yml/badge.svg" alt="marola.dev build + deploy" /></a>
-</p>
-<!-- cv:end -->
 
 <p align="left">
 <a href="https://github.com/topics/civic-tech"><img src="https://img.shields.io/badge/civic--tech-6E7781?style=flat-square" alt="civic-tech" /></a>
@@ -56,6 +62,7 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 
 > 🔓 contributors welcome, humans and ai agents alike — no code needed: use the map and tell us where it's wrong, share local sea knowledge, or open an issue or a PR at **[marola-dev/marola](https://github.com/marola-dev/marola)**. or mail me: **mhoffmannfs[at]gmail.com**
 
+<!-- cv:only
 ## ⚡ research — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
 my undergraduate project at ufrj (escola politécnica), co-advised at labeco/ufsc: **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, an open lab and a book in progress on agentic coding and agentic research, around one problem: moving the expensive kernels of noaa's **WAVEWATCH III** wave model to gpus *without changing the answer*.
@@ -68,11 +75,14 @@ its 17 lessons, from the wave spectrum to porting kernels with coding agents, ar
 <a href="https://github.com/h0ffmann/picasso" target="_blank"><img src="https://img.shields.io/badge/nix%20labs-picasso-24292F?style=for-the-badge&logo=nixos&logoColor=white" alt="github: picasso" /></a>
 <a href="https://doi.org/10.5281/zenodo.23311208" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23311208-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="DOI for picasso" /></a>
 </p>
-<!-- cv:skip -->
+cv:end -->
 
-and a non-profit essay, where i'm studying licenses: **[closed source: the god that failed](https://github.com/h0ffmann/closed-source)**, a position paper on reverse engineering and the ethics of citation in the age of coding agents.
+## 📚 closed-source
+
+a non-profit essay, where i'm studying licenses: **[closed source: the god that failed](https://h0ffmann.github.io/closed-source/)**, a position paper on reverse engineering and the ethics of citation in the age of coding agents. a v0 preprint, not peer reviewed.
 
 <p align="left">
+<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/site-h0ffmann.github.io%2Fclosed--source-A3201C?style=for-the-badge" alt="the closed-source website" /></a>
 <a href="https://github.com/h0ffmann/closed-source" target="_blank"><img src="https://img.shields.io/badge/essay-closed--source-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: closed-source" /></a>
 <a href="https://doi.org/10.5281/zenodo.23333656" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23333656-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="DOI for closed-source" /></a>
 </p>
@@ -80,13 +90,14 @@ and a non-profit essay, where i'm studying licenses: **[closed source: the god t
 <a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-6E7781?style=flat-square" alt="non-profit" /></a>
 <a href="https://github.com/h0ffmann/closed-source#licence"><img src="https://img.shields.io/badge/studying%20licenses-6E7781?style=flat-square" alt="studying licenses" /></a>
 </p>
-<!-- cv:end -->
 
+<!-- cv:only
 ## 💼 exp-highlights
 
 [LIOC](http://www.lioc.oceanica.ufrj.br) (UFRJ) · [Stone](https://www.stone.com.br) · [Broad](https://www.ycombinator.com/companies/broad) (YC W21) · [Elemeno AI](https://github.com/elemeno-ai) · [Signifyd](https://www.signifyd.com) (US) · TXP (UK, formerly Vigil)
 
 references available on request ([ways of working](me/ways-of-working.md#references-on-request))
+cv:end -->
 
 ## 🏅 certs
 
@@ -105,4 +116,3 @@ references available on request ([ways of working](me/ways-of-working.md#referen
 </table>
 </div>
 <!-- cv:end -->
-
