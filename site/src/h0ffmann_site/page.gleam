@@ -47,7 +47,7 @@ pub fn document(body: Element(msg)) -> Element(msg) {
         attribute.crossorigin(""),
       ]),
       stylesheet(
-        "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap",
+        "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+JP:wght@600&display=swap",
       ),
       stylesheet("style.css"),
       // A module script is deferred, so <body> is parsed before the app mounts on it.

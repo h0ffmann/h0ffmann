@@ -104,6 +104,16 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   source. Never write a date, an employer, a DOI or a count in `site/src` by hand. The
   sentences that tell the story are written in `site/src/h0ffmann_site/app.gleam`.
   `site/preview/` has pictures of the site and of the README for pull requests.
+  The page is dark, with four lights that mean the same everywhere on it (the owner, 13 October
+  2026): **blue** is the sea and what is made for it, **green** is an idea, **yellow** is
+  Ouroboric, **red** is closed source. The `topic` column of `site/data/works.tsv` and
+  `site/data/repos.tsv` is one of `water`, `ideas`, `ouroboric`, `closed`; do not add a fifth.
+  `site/data/repos.tsv` lists every public source repository of h0ffmann and of marola-dev, as
+  GitHub listed them on its date of record; refresh it with
+  `gh repo list <owner> --source --visibility public` and set the topic of a new one by hand.
+- `.zenodo.json` – the metadata of this repository's own Zenodo record: closed access, all
+  rights reserved. A release of this repository (a tag `vX.Y.Z` with a GitHub release) mints a
+  version DOI. Only the owner asks for one.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.

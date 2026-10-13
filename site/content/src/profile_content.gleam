@@ -1,7 +1,8 @@
 //// profile_content: write `site/src/h0ffmann_site/content.gleam` from the files of this
 //// repository, so the site never repeats a fact by hand. It reads README.md (the sentence about
 //// the owner, the certificates), me/ways-of-working.md (its headings) and the tables of
-//// site/data/ (the timeline, the works, their ties, the README's history, the friends).
+//// site/data/ (the timeline, the works, their ties, every repository, the README's history, the
+//// friends).
 ////
 ////     gleam run     # from site/content; `just site` does it
 ////
@@ -115,12 +116,13 @@ pub fn main() -> Nil {
     rows(read("../data/timeline.tsv"))
     |> list.filter_map(fn(r) {
       case r {
-        [when, era, mark, title, text, logo, href, source] ->
+        [when, era, mark, glyph, title, text, logo, href, source] ->
           Ok(
             record("Event", [
               #("when", lit(when)),
               #("era", lit(era)),
               #("mark", lit(mark)),
+              #("glyph", lit(glyph)),
               #("title", lit(title)),
               #("text", lit(text)),
               #("logo", lit(logo)),
@@ -185,6 +187,24 @@ pub fn main() -> Nil {
         _ -> Error(Nil)
       }
     })
+  let repos =
+    rows(read("../data/repos.tsv"))
+    |> list.filter_map(fn(r) {
+      case r {
+        [owner, name, topic, year, description, href] ->
+          Ok(
+            record("Repo", [
+              #("owner", lit(owner)),
+              #("name", lit(name)),
+              #("topic", lit(topic)),
+              #("year", lit(year)),
+              #("description", lit(description)),
+              #("href", lit(href)),
+            ]),
+          )
+        _ -> Error(Nil)
+      }
+    })
   let friends =
     rows(read("../data/friends.tsv"))
     |> list.filter_map(fn(r) {
@@ -214,6 +234,7 @@ pub type Event {
     when: String,
     era: String,
     mark: String,
+    glyph: String,
     title: String,
     text: String,
     logo: String,
@@ -250,6 +271,18 @@ pub type Snapshot {
 
 pub type Friend {
   Friend(name: String, what: String, href: String)
+}
+
+/// One public repository, as GitHub listed it on the date of record of site/data/repos.tsv.
+pub type Repo {
+  Repo(
+    owner: String,
+    name: String,
+    topic: String,
+    year: String,
+    description: String,
+    href: String,
+  )
 }
 
 pub const repo = \"https://github.com/h0ffmann/h0ffmann\"
@@ -301,6 +334,11 @@ pub const history = "
 
 pub const friends = "
     <> lits(friends)
+    <> "
+
+/// Every public source repository, newest first.
+pub const repos = "
+    <> lits(repos)
     <> "
 "
   write(out, text)

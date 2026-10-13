@@ -6,7 +6,7 @@ import gleam/int
 import gleam/list
 import gleam/string
 import h0ffmann_site/content.{
-  type Edge, type Event, type Friend, type Snapshot, type Work,
+  type Edge, type Event, type Friend, type Repo, type Snapshot, type Work,
 }
 import lustre/attribute.{type Attribute}
 import lustre/effect.{type Effect}
@@ -40,11 +40,13 @@ pub fn update(model: Model, msg: Msg) -> #(Model, Effect(Msg)) {
   }
 }
 
-/// The three research topics, as the README names them, and the key of each in site/data.
+/// The four colours of the page, as the owner set them: water is blue, ideas are green,
+/// Ouroboric is yellow and closed source is red. The key of each is the `topic` of site/data.
 pub const topics = [
-  #("waves", "wave modelling"),
-  #("game", "game theory"),
-  #("self", "self-improving apps"),
+  #("water", "the sea"),
+  #("ideas", "ideas"),
+  #("ouroboric", "ouroboric"),
+  #("closed", "closed source"),
 ]
 
 /// The arc, in the owner's words: the eras of site/data/timeline.tsv and the name of each.
@@ -56,6 +58,7 @@ pub const eras = [
   #("ml", "ML"),
   #("sea", "back to the sea"),
   #("research", "research & FOSS"),
+  #("prophecy", "a prophecy"),
 ]
 
 fn link(href: String, label: String) -> Element(msg) {
@@ -83,6 +86,7 @@ pub fn view(model: Model) -> Element(Msg) {
     html.main([attribute.class("wrap")], [
       arc_section(),
       graph_section(model),
+      index_section(model),
       history_section(),
       friends_section(),
       ways_section(),
@@ -137,6 +141,7 @@ fn cover() -> Element(msg) {
     html.nav([attribute.class("jump wrap")], [
       link("#arc", "the arc"),
       link("#graph", "the works"),
+      link("#index", "everything"),
       link("#history", "the readme"),
       link("#friends", "friends"),
       link("#ways", "how i work"),
@@ -153,13 +158,19 @@ fn era_name(key: String) -> String {
 }
 
 fn event_item(e: Event) -> Element(msg) {
-  let mark = case e.mark, e.logo {
-    "big", _ ->
+  let mark = case e.mark, e.glyph, e.logo {
+    // A glyph is a number or a word in its own script: the medal, the kanji, the question.
+    "big", glyph, _ ->
       html.span([attribute.class("medal"), a("aria-hidden", "true")], [
-        html.text("3"),
+        html.text(glyph),
       ])
-    _, "" -> html.span([attribute.class("dot"), a("aria-hidden", "true")], [])
-    _, logo ->
+    _, glyph, _ if glyph != "" ->
+      html.span([attribute.class("glyph"), a("aria-hidden", "true")], [
+        html.text(glyph),
+      ])
+    _, _, "" ->
+      html.span([attribute.class("dot"), a("aria-hidden", "true")], [])
+    _, _, logo ->
       html.span([attribute.class("logo")], [
         html.img([
           attribute.src(logo),
@@ -186,6 +197,11 @@ fn event_item(e: Event) -> Element(msg) {
   ])
 }
 
+/// The arc as one line: the last era is a look ahead, so it is not in it.
+fn era_line() -> List(#(String, String)) {
+  list.filter(eras, fn(e) { e.0 != "prophecy" })
+}
+
 fn arc_section() -> Element(msg) {
   html.section([], [
     head(
@@ -203,7 +219,7 @@ fn arc_section() -> Element(msg) {
     ]),
     html.ol(
       [attribute.class("eras")],
-      list.map(eras, fn(e) { html.li([], [html.text(e.1)]) }),
+      list.map(era_line(), fn(e) { html.li([], [html.text(e.1)]) }),
     ),
     html.ol(
       [attribute.class("timeline")],
@@ -361,11 +377,11 @@ fn graph_section(model: Model) -> Element(Msg) {
     ),
     html.p([attribute.class("prose")], [
       html.text(
-        "three questions run through all of it: how the sea moves, how people and programs choose, and how an app can mend itself. "
+        "three questions run through all of it: how the sea moves (wave modelling), how people and programs choose (game theory), and how an app can mend itself (self-improving apps). "
         <> int.to_string(list.length(content.works))
         <> " works, "
         <> int.to_string(dois)
-        <> " of them with a permanent DOI. an arrow is a tie that an index or a file states: this work cites, or needs, that one. press a question to light its works.",
+        <> " of them with a permanent DOI. an arrow is a tie that an index or a file states: this work cites, or needs, that one. the colours are the same on the whole page: blue is the sea, green is an idea, yellow is Ouroboric, red is closed source. press a colour to light its works.",
       ),
     ]),
     html.div(
@@ -417,6 +433,59 @@ fn graph_section(model: Model) -> Element(Msg) {
       ]),
     ]),
     html.ul([attribute.class("works")], list.map(content.works, work_item)),
+  ])
+}
+
+fn repo_item(model: Model, r: Repo) -> Element(msg) {
+  html.li(
+    [
+      attribute.class(
+        "topic-"
+        <> r.topic
+        <> case lit(model, r.topic) {
+          True -> ""
+          False -> " is-dim"
+        },
+      ),
+    ],
+    [
+      html.span([attribute.class("year")], [html.text(r.year)]),
+      html.a([attribute.href(r.href), attribute.rel("noopener")], [
+        html.span([attribute.class("owner")], [html.text(r.owner <> "/")]),
+        html.text(r.name),
+      ]),
+      html.span([attribute.class("says")], [html.text(r.description)]),
+    ],
+  )
+}
+
+/// Every public source repository, in the four colours.
+fn index_section(model: Model) -> Element(msg) {
+  let count = fn(owner: String) {
+    list.count(content.repos, fn(r: Repo) { r.owner == owner })
+  }
+  html.section([], [
+    head(
+      "index",
+      "everything, indexed",
+      external(
+        content.repo <> "/blob/main/site/data/repos.tsv",
+        "the list, with its date",
+      ),
+    ),
+    html.p([attribute.class("prose")], [
+      html.text(
+        "every public repository that is his own work, and not a fork: "
+        <> int.to_string(count("h0ffmann"))
+        <> " under his name and "
+        <> int.to_string(count("marola-dev"))
+        <> " under marola, newest first, each with the words its own page gives it. the old ones stay: a list that hides its first steps is a list that lies.",
+      ),
+    ]),
+    html.ul(
+      [attribute.class("index")],
+      list.map(content.repos, repo_item(model, _)),
+    ),
   ])
 }
 

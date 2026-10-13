@@ -61,13 +61,12 @@ pub fn every_work_is_a_node_and_a_line_of_the_list_test() {
 }
 
 pub fn a_topic_lights_its_works_and_dims_the_rest_test() {
-  let #(model, _) = app.update(app.initial(), app.Light("waves"))
+  let #(model, _) = app.update(app.initial(), app.Light("water"))
   let html = model |> app.view |> element.to_string
-  assert string.contains(html, "node topic-game kind-own is-dim")
-  assert string.contains(html, "node topic-waves kind-own\"")
-    || string.contains(html, "class=\"node topic-waves kind-own\"")
+  assert string.contains(html, "node topic-ideas kind-own is-dim")
+  assert string.contains(html, "class=\"node topic-water kind-own\"")
   // A second press lights every work again.
-  let #(again, _) = app.update(model, app.Light("waves"))
+  let #(again, _) = app.update(model, app.Light("water"))
   assert again == app.initial()
 }
 
@@ -75,4 +74,28 @@ pub fn the_notice_is_on_the_page_test() {
   let html = page()
   assert string.contains(html, "all rights are reserved")
   assert string.contains(html, "/blob/main/REUSE.md")
+}
+
+pub fn every_public_repository_is_indexed_test() {
+  let html = page()
+  assert list.length(content.repos) >= 40
+  assert list.all(content.repos, fn(r) {
+    string.contains(html, "href=\"" <> r.href <> "\"")
+  })
+  // Each one has one of the four colours of the page.
+  assert list.all(content.repos, fn(r) {
+    list.any(app.topics, fn(t) { t.0 == r.topic })
+  })
+  assert list.all(content.works, fn(w) {
+    list.any(app.topics, fn(t) { t.0 == w.topic })
+  })
+}
+
+pub fn the_arc_has_its_kanji_its_medal_and_its_prophecy_test() {
+  let html = page()
+  assert string.contains(html, ">名残</span>")
+  assert string.contains(html, "Oceanman 10 km")
+  assert list.any(content.timeline, fn(e) {
+    e.mark == "prophecy" && e.when == "2027"
+  })
 }
