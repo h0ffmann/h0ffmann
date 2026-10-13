@@ -550,6 +550,16 @@ pub const checks = [
   ),
   Check("cv", "cv.yml", "builds the three CVs from the three READMEs."),
   Check(
+    ".md",
+    "md.yml",
+    "reads every page: its structure, its words, its links, its notes, the source of each fact, the licences.",
+  ),
+  Check(
+    "live links",
+    "links.yml",
+    "fetches every web link. green means all of them answer.",
+  ),
+  Check(
     "metrics",
     "metrics.yml",
     "counts the commits and the languages each day.",
@@ -580,7 +590,7 @@ fn numbers_section() -> Element(msg) {
               "https://img.shields.io/github/actions/workflow/status/h0ffmann/h0ffmann/"
               <> c.file
               <> "?branch=main&label="
-              <> c.name
+              <> string.replace(c.name, " ", "%20")
               <> "&style=flat-square&labelColor=0A121B",
             ),
             attribute.alt(c.name <> ": the state of its last run"),

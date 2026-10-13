@@ -27,3 +27,36 @@ _site:
 logos:
     for u in $(grep -v '^#' site/data/timeline.tsv | cut -f6 | grep -E '^https://' | sort -u); do code="$(curl -s -o /dev/null -L --max-time 30 -A 'Mozilla/5.0' -w '%{http_code}' "$u")"; [ "$code" = 200 ] || { echo "logos: $code $u" >&2; exit 1; }; done
     @echo "logos: every logo answers"
+
+md := "nix develop --extra-experimental-features 'nix-command flakes' --no-update-lock-file .#md --command"
+
+# Three analysers over the Markdown files: markdownlint-cli2, Vale, lychee.
+# `just md-quality --online` also fetches every web link; `--self-test` gives each one a bad file.
+md-quality *args:
+    {{md}} scripts/md-quality.sh {{args}}
+
+# The slip box keeps its rules (NOTES.md).
+notes:
+    scripts/notes-check.sh
+
+# Every row of the site's tables has its cells and its source.
+sources:
+    scripts/sources-check.sh
+
+# Write CITATION.cff from .zenodo.json. `just citation --check` fails when it is stale.
+citation *args:
+    {{md}} python3 scripts/citation.py {{args}}
+
+# Licence and copyright for every file (REUSE.toml).
+reuse:
+    {{md}} reuse lint
+
+# What CI's `.md / quality` runs. Run it before a pull request.
+check:
+    just md-quality --self-test
+    just md-quality
+    just notes
+    just sources
+    just citation --check
+    just reuse
+

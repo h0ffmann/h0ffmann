@@ -1,0 +1,27 @@
+// markdownlint-cli2: the structure of every Markdown file (`just md-quality`).
+{
+  "config": {
+    "default": true,
+    // Line length is a wrap habit, not a defect: a badge, a table row and a long link cannot wrap.
+    "MD013": false,
+    // The READMEs are built from HTML blocks (the header, the badges, the photos), and a file may
+    // start with a comment or with front matter.
+    "MD033": false,
+    "MD041": false,
+    // A page with front matter keeps its `title:` and one heading.
+    "MD025": { "front_matter_title": "" },
+    // A citation and an address to copy stay bare.
+    "MD034": false,
+    // Tables are not padded into columns.
+    "MD060": false,
+    // The READMEs end a `cv:skip` line with a badge on the next line: a heading and a list are
+    // not always set apart by a blank line there, and the CV's build reads those lines.
+    "MD022": false,
+    "MD032": false,
+    // An emphasis used as a title is the READMEs' own style in two places.
+    "MD036": false
+  },
+  // The files are given by scripts/md-quality.sh (the tracked ones). No "globs" here: the tool
+  // would add them to that list and read the packages that a site's build downloads.
+  "ignores": ["site/build/**", "site/dist/**", "site/content/build/**"]
+}

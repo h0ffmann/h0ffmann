@@ -3,7 +3,8 @@
 **Nothing in this repository may be reused. All rights reserved.**
 
 This file says it in prose, for a person and for an agent. [`LICENSE`](LICENSE) is the legal
-text; if the two differ, `LICENSE` is right.
+text; if the two differ, `LICENSE` is right. [`REUSE.toml`](REUSE.toml) says the same for every
+file, for a program (`just reuse`), and [`LICENSES/`](LICENSES/) has the texts.
 
 ## What this repository is
 

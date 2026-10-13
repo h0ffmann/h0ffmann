@@ -1,0 +1,23 @@
+version = 1
+
+# Licence and copyright for every file, in one place, with no header in any file: the pattern of
+# the ouroboric-dev repositories, which marola-dev/marola, marola-dev/marola-research and
+# h0ffmann/closed-source follow too. Everything here is all rights reserved (LICENSE; REUSE.md
+# says it in prose), except what is listed below it as somebody else's. When several blocks match
+# a file, the last one wins. Check with `just reuse` (`reuse lint`).
+
+[[annotations]]
+path = ["**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2025-2026 Matheus Hoffmann"
+SPDX-License-Identifier = "LicenseRef-Hoffmann-All-Rights-Reserved"
+
+# Google's Noto Emoji artwork, vendored for the CV's build (cv/emoji/README.md).
+[[annotations]]
+path = ["cv/emoji/*.svg"]
+precedence = "override"
+SPDX-FileCopyrightText = "Google LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+# The logos that the site and the READMEs show are trademarks of their owners and are not
+# licensed here. No file of them is in this repository (AGENTS.md, hard rule 4).

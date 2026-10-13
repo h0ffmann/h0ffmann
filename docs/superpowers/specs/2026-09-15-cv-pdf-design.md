@@ -107,6 +107,7 @@ emoji and svg support`, with `Tested:` trailer per AGENTS.md.
 ### 2.2 `cv/`
 
 - `header.md`:
+
   ```markdown
   # Matheus Hoffmann
   <p align="left">
@@ -116,6 +117,7 @@ emoji and svg support`, with `Tested:` trailer per AGENTS.md.
   <a href="https://marola.dev"><img src="https://img.shields.io/badge/%F0%9F%8C%8A-marola.dev-0077BE?style=flat-square" /></a>
   </p>
   ```
+
   (same badge syntax as the README, so the one filter renders everything).
 - `prepare.py` (stdlib): `prepare(readme_text, header_text) -> str`:
   1. remove every `<!-- cv:skip -->`…`<!-- cv:end -->` span (multi-line);
@@ -138,6 +140,7 @@ emoji and svg support`, with `Tested:` trailer per AGENTS.md.
   "github.com/h0ffmann · built YYYY-MM-DD" (date from `SOURCE_DATE_EPOCH`
   or the build day); no page numbers on a one-pager, numbers from page 2.
 - `build.sh`:
+
   ```bash
   set -euo pipefail
   python3 -m unittest discover -s cv

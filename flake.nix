@@ -26,6 +26,12 @@
       devShells = forAll (system: pkgs: {
         # `just site`: the website of site/.
         site = gleam-website.devShells.${system}.default;
+        # `just md-quality`, `just reuse`: the analysers of the Markdown files and of the
+        # licences, from the same pinned nixpkgs as the site's toolchain.
+        md = gleam-website.inputs.nixpkgs.legacyPackages.${system}.mkShell {
+          packages = with gleam-website.inputs.nixpkgs.legacyPackages.${system};
+            [ markdownlint-cli2 vale lychee reuse git python3 ];
+        };
         default = pkgs.mkShell {
           name = "cv";
           packages = publisher.lib.${system}.tools;
