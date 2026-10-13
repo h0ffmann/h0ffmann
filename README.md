@@ -79,10 +79,6 @@ references available on request ([ways of working](me/ways-of-working.md#referen
 
 **aws certified 4x** (Cloud Practitioner, Machine Learning Specialty, Machine Learning Engineer Associate, Data Engineer Associate) · **padi certified 3x** (Advanced Open Water Diver, Enriched Air Nitrox Diver, Rescue Diver)
 
-## 📚 learning
-
-<a href="https://github.com/h0ffmann/gcp-agentic-architect" target="_blank"><img src="https://img.shields.io/badge/GCP-Professional_Agentic_Architect_(studying)-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="studying for Google Cloud Professional Agentic Architect" /></a>
-
 ## 🏊 misc
 <a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-open_water_swimming-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (open water swimming)" /></a>
 
