@@ -9,6 +9,7 @@
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="me/ways-of-working.md"><img src="https://img.shields.io/badge/%E5%83%8D%E3%81%8D%E6%96%B9-555555?style=for-the-badge" alt="働き方" /></a>
+<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/%E6%B3%A8%E7%9B%AE-closed%20source%3A%20the%20god%20that%20failed-111111?style=for-the-badge&labelColor=A3201C" alt="注目：closed source: the god that failed のウェブサイト" /></a>
 </p>
 <!-- cv:end -->
 
@@ -69,6 +70,7 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 そして、ライセンスを研究している非営利のエッセイ：**[closed source: the god that failed](https://github.com/h0ffmann/closed-source)**。コーディングエージェントの時代における、リバースエンジニアリングと引用の倫理についてのポジションペーパーです。
 
 <p align="left">
+<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/site-h0ffmann.github.io%2Fclosed--source-A3201C?style=for-the-badge" alt="closed-source のウェブサイト" /></a>
 <a href="https://github.com/h0ffmann/closed-source" target="_blank"><img src="https://img.shields.io/badge/essay-closed--source-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: closed-source" /></a>
 <a href="https://doi.org/10.5281/zenodo.23333656" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23333656-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="closed-source の DOI" /></a>
 </p>

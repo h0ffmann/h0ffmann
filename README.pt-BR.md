@@ -9,6 +9,7 @@ engenheiro de software sênior e pesquisador júnior com **8 anos** de experiên
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="me/ways-of-working.md"><img src="https://img.shields.io/badge/como%20eu%20trabalho-555555?style=for-the-badge" alt="como eu trabalho" /></a>
+<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/destaque-closed%20source%3A%20the%20god%20that%20failed-111111?style=for-the-badge&labelColor=A3201C" alt="destaque: closed source: the god that failed, o site" /></a>
 </p>
 <!-- cv:end -->
 
@@ -73,6 +74,7 @@ as 17 lições, do espectro de ondas ao port de kernels com agentes de código, 
 e um ensaio sem fins lucrativos, em que estudo licenças: **[closed source: the god that failed](https://github.com/h0ffmann/closed-source)**, um artigo de opinião sobre engenharia reversa e a ética da citação na era dos agentes de código.
 
 <p align="left">
+<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/site-h0ffmann.github.io%2Fclosed--source-A3201C?style=for-the-badge" alt="o site do closed-source" /></a>
 <a href="https://github.com/h0ffmann/closed-source" target="_blank"><img src="https://img.shields.io/badge/essay-closed--source-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: closed-source" /></a>
 <a href="https://doi.org/10.5281/zenodo.23333656" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23333656-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="DOI do closed-source" /></a>
 </p>

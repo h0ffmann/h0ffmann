@@ -31,7 +31,7 @@ and salvador.
   *without changing the answer*. the first ported kernel matches the fortran bit for bit.
 - **[picasso](https://github.com/h0ffmann/picasso)**: my nix labs, the pinned toolchains the
   research builds on.
-- **[closed source: the god that failed](https://github.com/h0ffmann/closed-source)**: a position
+- **[closed source: the god that failed](https://h0ffmann.github.io/closed-source/)** ([source](https://github.com/h0ffmann/closed-source)): a position
   paper on reverse engineering and the ethics of citation in the age of coding agents.
 
 ## minute 4 — 🔖 how to cite me
