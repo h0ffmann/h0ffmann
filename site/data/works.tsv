@@ -1,0 +1,12 @@
+# The works of the knowledge graph. topic: waves | game | self | tools | private.
+# kind: own | friend. x and y place the node on a 1000 by 620 canvas, by hand, so the picture never moves.
+# licence: the SPDX id that the work's own record or repository states; "private" when there is none to read.
+# id	name	topic	kind	doi	href	licence	x	y	text
+closed-source	closed source	self	own	10.5281/zenodo.23333656	https://h0ffmann.github.io/closed-source/	CC-BY-4.0	500	92	a book on reverse engineering and the ethics of citation, and the self-improving pipeline that makes it.
+nashkell	nashkell	game	own		https://github.com/h0ffmann/nashkell	none stated	160	180	game theory in haskell.
+ouroboric	ouroboric	self	friend		https://github.com/ouroboric-dev/ouroboric	CC-BY-4.0	840	180	open factories that improve themselves. bruno valério's.
+ww3-gpu	ww3-gpu	waves	own	10.5281/zenodo.23221351	https://h0ffmann.github.io/ww3-gpu/	MIT	150	420	a bit-for-bit GPU port of the WAVEWATCH III wave model.
+marola	marola	waves	own	10.5281/zenodo.23224155	https://marola.dev	MIT	430	310	sea conditions and bathing-water quality for brazilian beaches. with five friends.
+marola-bench	marola-bench	waves	own		https://github.com/marola-dev/marola-research/tree/main/marola-bench	CC-BY-4.0	850	420	a proposal: a WeatherBench for brazil, scored against buoys.
+picasso	picasso	tools	own	10.5281/zenodo.23311208	https://github.com/h0ffmann/picasso	AGPL-3.0-only	600	545	nix flakes that pin every toolchain the other works build with.
+nagori	nagori	private	own			private	870	560	the second brain. private, for now.

@@ -2,8 +2,10 @@
   description = "h0ffmann profile — builds pdf/cv.pdf from README.md with nix-config's labs/publisher";
 
   inputs.publisher.url = "github:h0ffmann/nix-config?dir=labs/publisher";
+  # The toolchain of site/ (Gleam, Node, esbuild): picasso's gleam-website lab.
+  inputs.gleam-website.url = "github:h0ffmann/picasso?dir=labs/gleam-website";
 
-  outputs = { self, publisher }:
+  outputs = { self, publisher, gleam-website }:
     let
       systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
       forAll = f: publisher.inputs.nixpkgs.lib.genAttrs systems (s: f s publisher.inputs.nixpkgs.legacyPackages.${s});
@@ -22,6 +24,8 @@
       });
 
       devShells = forAll (system: pkgs: {
+        # `just site`: the website of site/.
+        site = gleam-website.devShells.${system}.default;
         default = pkgs.mkShell {
           name = "cv";
           packages = publisher.lib.${system}.tools;

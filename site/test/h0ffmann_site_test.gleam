@@ -1,0 +1,78 @@
+import gleam/list
+import gleam/string
+import gleeunit
+import h0ffmann_site/app
+import h0ffmann_site/content
+import lustre/element
+
+pub fn main() -> Nil {
+  gleeunit.main()
+}
+
+fn page() -> String {
+  app.initial() |> app.view |> element.to_string
+}
+
+pub fn the_page_says_who_he_is_in_the_readmes_words_test() {
+  let html = page()
+  assert content.me != ""
+  assert string.contains(html, "the aquatic prometheus")
+  assert string.contains(html, "the art of the maintenance of apps")
+  assert string.contains(
+    content.me,
+    "wave modelling, game theory and self-improving apps",
+  )
+}
+
+pub fn every_mark_of_the_timeline_is_on_the_page_test() {
+  let html = page()
+  assert content.timeline != []
+  assert list.all(content.timeline, fn(e) { string.contains(html, e.when) })
+  // Every mark names where its fact was read, and every era has a name.
+  assert list.all(content.timeline, fn(e) { e.source != "" })
+  assert list.all(content.timeline, fn(e) {
+    list.any(app.eras, fn(era) { era.0 == e.era })
+  })
+  // One big mark, and a logo is never a file of this repository.
+  assert list.count(content.timeline, fn(e) { e.mark == "big" }) == 1
+  assert list.all(content.timeline, fn(e) {
+    e.logo == "" || string.starts_with(e.logo, "https://")
+  })
+}
+
+pub fn every_tie_joins_two_works_that_exist_test() {
+  let ids = list.map(content.works, fn(w) { w.id })
+  assert content.edges != []
+  assert list.all(content.edges, fn(e) {
+    list.contains(ids, e.from) && list.contains(ids, e.to) && e.source != ""
+  })
+}
+
+pub fn every_work_is_a_node_and_a_line_of_the_list_test() {
+  let html = page()
+  assert list.all(content.works, fn(w) {
+    string.contains(html, ">" <> w.name <> "<")
+    && string.contains(html, app.standing(w))
+  })
+  // Each DOI of a work opens doi.org.
+  assert list.all(content.works, fn(w) {
+    w.doi == "" || string.contains(html, "https://doi.org/" <> w.doi)
+  })
+}
+
+pub fn a_topic_lights_its_works_and_dims_the_rest_test() {
+  let #(model, _) = app.update(app.initial(), app.Light("waves"))
+  let html = model |> app.view |> element.to_string
+  assert string.contains(html, "node topic-game kind-own is-dim")
+  assert string.contains(html, "node topic-waves kind-own\"")
+    || string.contains(html, "class=\"node topic-waves kind-own\"")
+  // A second press lights every work again.
+  let #(again, _) = app.update(model, app.Light("waves"))
+  assert again == app.initial()
+}
+
+pub fn the_notice_is_on_the_page_test() {
+  let html = page()
+  assert string.contains(html, "all rights are reserved")
+  assert string.contains(html, "/blob/main/REUSE.md")
+}

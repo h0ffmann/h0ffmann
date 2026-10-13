@@ -1,0 +1,9 @@
+# How this README described its owner, at five of its commits. Read with `git show <sha>:README.md`.
+# stack: the technologies the README listed then, shortened to its first names; "none" when it listed none.
+# date	sha	headline	stack
+2025-06-25	3d6b402	Senior Software Engineer | Fintech Specialist | ML/Data Engineering enthusiast	Scala, Python, Apache Spark, Databricks, Apache Kafka, AWS, Kubernetes, Terraform
+2025-07-16	274d111	Senior Software/ML Engineer with 7 years of experience building scalable fintech solutions	the same, and "ML pipelines, MLOps, reasoning systems"
+2026-08-26	c9c2e71	sr. swe engineer with 8 years of experience building scalable solutions mainly for payment processing & fraud-fighting	adds scikit-learn, MLflow, Amazon SageMaker, XGBoost, PySpark, Apache Airflow
+2026-09-15	52db9cb	sr. software engineer with 8 years	adds Nix, Kyo, CUDA, OpenMPI, Fortran, WAVEWATCH III, Claude Code, Model Context Protocol, DSPy, Ollama
+2026-10-07	20263ca	sr. software engineer & jr. researcher with 8 years	none: the stack section left the page that day
+2026-10-12	26e5cba	my research topics are wave modelling, game theory and self-improving apps	none

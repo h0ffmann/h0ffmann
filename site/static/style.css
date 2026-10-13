@@ -1,0 +1,184 @@
+/* h0ffmann. Paper, ink, and two elements: the blue of water and the orange of a flame carried
+   through it. The manner is picasso's (h0ffmann/picasso): lower case, one-line drawings, few
+   things on the page, and nothing that moves by itself. The one bold thing is the knowledge
+   graph. Type: Bricolage Grotesque for the name and the headings, Newsreader for the story,
+   JetBrains Mono only for what is data (dates, hashes, DOIs, the labels of the graph). */
+:root {
+  --paper: #FBFAF6;
+  --surface: #F1EEE6;
+  --ink: #11161B;
+  --muted: #56616B;
+  --rule: #D6D2C6;
+  --water: #1463B0;
+  --water-soft: #DCE9F7;
+  --flame: #E0481A;
+  --flame-soft: #FBE3D8;
+  --moss: #2F6B4F;
+  --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+  --text: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --data: 'JetBrains Mono', ui-monospace, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E1318; --surface: #161D24; --ink: #EEF1F3; --muted: #A2ADB6; --rule: #2A343D;
+    --water: #6FB1F2; --water-soft: #14304D; --flame: #FF7A4D; --flame-soft: #46200F; --moss: #7FCBA5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E1318; --surface: #161D24; --ink: #EEF1F3; --muted: #A2ADB6; --rule: #2A343D;
+  --water: #6FB1F2; --water-soft: #14304D; --flame: #FF7A4D; --flame-soft: #46200F; --moss: #7FCBA5;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: auto; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 20px/1.55 var(--text); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--flame); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--water); }
+:focus-visible { outline: 3px solid var(--water); outline-offset: 3px; }
+
+/* The cover */
+.cover { padding: 36px 0 0; }
+.cover-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 40px; align-items: end; }
+.imprint { margin: 0 0 54px; font: 500 14px/1 var(--data); color: var(--muted); }
+.cover h1 { margin: 0; font: 800 clamp(64px, 14vw, 176px)/.86 var(--display); letter-spacing: -.03em; }
+.epithet { margin: 16px 0 0; font: 600 clamp(26px, 4.4vw, 50px)/1.02 var(--display); letter-spacing: -.02em; color: var(--water); }
+.motto { margin: 10px 0 0; font: italic 400 clamp(21px, 2.6vw, 28px)/1.2 var(--text); color: var(--flame); }
+.lede { margin: 28px 0 0; max-width: 34em; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 30px 0 0; }
+.button { display: inline-block; padding: 12px 18px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper); font: 600 16px/1 var(--display); text-decoration: none; border-radius: 999px; }
+.button:hover { background: var(--water); border-color: var(--water); }
+.button.quiet { background: transparent; color: var(--ink); }
+.button.quiet:hover { background: transparent; border-color: var(--water); color: var(--water); }
+/* A one-line drawing, used as a mask so that it takes the ink of the page (picasso's site). */
+.drawing { display: block; background: var(--ink); -webkit-mask: var(--src) no-repeat center / contain; mask: var(--src) no-repeat center / contain; }
+.drawing.prometheus { --src: url(drawings/prometheus.svg); aspect-ratio: 6 / 7; width: 100%; }
+.jump { display: flex; flex-wrap: wrap; gap: 6px 24px; margin-top: 44px; padding-top: 16px; padding-bottom: 16px; border-top: 2px solid var(--ink); }
+.jump a { font: 500 14px/1.4 var(--data); text-decoration: none; color: var(--muted); }
+.jump a:hover { color: var(--flame); }
+
+/* Sections */
+main section { padding: 72px 0 0; }
+main section:last-child { padding-bottom: 88px; }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; }
+.head h2 { margin: 0; font: 800 clamp(34px, 5.4vw, 64px)/.98 var(--display); letter-spacing: -.035em; max-width: 14em; }
+.head > a { font: 400 14px/1.4 var(--data); color: var(--muted); }
+.prose { max-width: 37em; margin: 20px 0 0; }
+.note { max-width: 44em; margin: 22px 0 0; font-size: 17px; color: var(--muted); }
+
+/* The arc: the names of the trade, then the marks */
+.eras { list-style: none; margin: 30px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 0; font: 600 clamp(16px, 2vw, 21px)/1.2 var(--display); }
+.eras li { padding: 8px 0; color: var(--muted); }
+.eras li:not(:last-child)::after { content: "→"; margin: 0 12px; color: var(--rule); }
+.eras li:last-child { color: var(--flame); }
+.timeline { list-style: none; margin: 34px 0 0; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 207px; top: 12px; bottom: 12px; width: 2px; background: var(--rule); }
+.event { display: grid; grid-template-columns: 150px 116px minmax(0, 1fr); gap: 0; align-items: start; padding: 0 0 30px; position: relative; }
+.when { font: 500 14px/1.6 var(--data); color: var(--muted); padding-top: 4px; }
+.dot, .logo, .medal { justify-self: center; position: relative; z-index: 1; }
+.dot { width: 14px; height: 14px; margin-top: 8px; border-radius: 50%; background: var(--paper); border: 3px solid var(--ink); }
+.logo { display: inline-flex; align-items: center; justify-content: center; width: 100px; height: 46px; padding: 7px 9px; background: #fff; border: 1px solid var(--rule); border-radius: 10px; }
+.logo img { display: block; max-width: 100%; max-height: 100%; height: auto; width: auto; }
+.medal { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 50%; background: var(--flame); color: #fff; font: 800 40px/1 var(--display); box-shadow: 0 0 0 6px var(--paper), 0 0 0 8px var(--flame); }
+.what h3 { margin: 0; font: 600 24px/1.2 var(--display); letter-spacing: -.015em; }
+.what h3 a { text-decoration-thickness: 2px; }
+.what p { margin: 4px 0 0; max-width: 32em; font-size: 18px; color: var(--muted); }
+.era { display: inline-block; margin-top: 8px; padding: 3px 8px; border: 1px solid var(--rule); border-radius: 999px; font: 500 12px/1.2 var(--data); color: var(--muted); }
+.event.is-big { padding: 14px 0 44px; }
+.event.is-big .what h3 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; letter-spacing: -.035em; line-height: 1; color: var(--flame); }
+.event.is-big .what p { font-size: 20px; color: var(--ink); }
+.event.is-big .when { font-size: 16px; color: var(--ink); padding-top: 26px; }
+.event.is-quiet .what h3 { font: italic 400 26px/1.2 var(--text); color: var(--water); }
+.event.is-quiet .dot { border-color: var(--water); border-style: dashed; }
+.event.era-research .dot { border-color: var(--flame); }
+.event.era-research .era { border-color: var(--flame); color: var(--flame); }
+
+/* The knowledge graph */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 0; }
+.filters button { padding: 10px 16px; border: 2px solid currentColor; border-radius: 999px; background: transparent; font: 600 16px/1 var(--display); cursor: pointer; }
+.filters .topic-waves { color: var(--water); }
+.filters .topic-game { color: var(--ink); }
+.filters .topic-self { color: var(--flame); }
+.filters button[aria-pressed="true"].topic-waves { background: var(--water); border-color: var(--water); color: var(--paper); }
+.filters button[aria-pressed="true"].topic-game { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.filters button[aria-pressed="true"].topic-self { background: var(--flame); border-color: var(--flame); color: var(--paper); }
+.graph { margin: 22px 0 0; padding: 12px; background: var(--surface); border-radius: 28px; }
+.graph svg { display: block; width: 100%; height: auto; }
+.graph figcaption { margin: 10px 12px 6px; font: 400 13px/1.5 var(--data); color: var(--muted); max-width: 60em; }
+.edge path { fill: none; stroke: var(--muted); stroke-width: 1.6; }
+.edge text { font: 500 12px var(--data); fill: var(--muted); paint-order: stroke; stroke: var(--surface); stroke-width: 5px; }
+#arrow path { fill: var(--muted); stroke: none; }
+.node rect { fill: var(--paper); stroke: var(--ink); stroke-width: 2.5; }
+.node .name { font: 700 19px var(--display); fill: var(--ink); }
+.node .standing { font: 400 11.5px var(--data); fill: var(--muted); }
+.node.topic-waves rect { stroke: var(--water); fill: var(--water-soft); }
+.node.topic-self rect { stroke: var(--flame); fill: var(--flame-soft); }
+.node.topic-tools rect { stroke: var(--moss); }
+.node.kind-friend rect, .node.topic-private rect { stroke-dasharray: 7 6; }
+.node.topic-private rect { stroke: var(--muted); }
+a.node { text-decoration: none; cursor: pointer; }
+a.node:hover rect, a.node:focus-visible rect { stroke-width: 4.5; }
+a.node:focus-visible { outline: none; }
+.is-dim { opacity: .18; }
+.works { list-style: none; margin: 34px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.works li { padding: 16px 0 16px 16px; border-left: 4px solid var(--ink); margin-bottom: 18px; }
+.works li.topic-waves { border-color: var(--water); }
+.works li.topic-self { border-color: var(--flame); }
+.works li.topic-tools { border-color: var(--moss); }
+.works li.topic-private { border-color: var(--rule); }
+.works h3 { margin: 0; font: 700 24px/1.15 var(--display); letter-spacing: -.02em; }
+.works p { margin: 4px 0 0; font-size: 18px; color: var(--muted); }
+.works .facts { font: 400 13px/1.5 var(--data); overflow-wrap: anywhere; }
+
+/* The README's history */
+.snapshots { list-style: none; margin: 30px 0 0; padding: 0; }
+.snapshots li { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 4px 24px; padding: 18px 0; border-top: 1px solid var(--rule); }
+.snapshots li:last-child { border-bottom: 1px solid var(--rule); }
+.snapshots .when { padding-top: 6px; }
+.snapshots p { margin: 0; }
+.said { font: 400 clamp(20px, 2.4vw, 26px)/1.25 var(--text); }
+.stack { margin-top: 6px !important; font: 400 14px/1.5 var(--data); color: var(--muted); }
+.stack b { font-weight: 500; color: var(--ink); }
+
+/* Friends, ways */
+.stamps { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 40px; margin: 28px 0 0; }
+.stamps a { display: inline-flex; padding: 8px 12px; background: #fff; border: 1px solid var(--rule); border-radius: 12px; text-decoration: none; }
+.stamps img { display: block; height: 44px; width: auto; }
+.friends { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.friends li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.friends a { font: 600 21px/1.2 var(--display); }
+.friends span { font: 400 13px/1.4 var(--data); color: var(--muted); }
+.ways { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ways li { padding: 10px 16px; border: 2px solid var(--ink); border-radius: 999px; font: 600 18px/1 var(--display); }
+
+/* The notice, and the foot */
+.notice .head h2 { color: var(--flame); }
+.foot { background: var(--ink); color: var(--paper); padding: 34px 0 44px; font: 400 16px/1.55 var(--text); }
+.foot p { margin: 0 0 10px; max-width: 54em; opacity: .9; }
+
+@media (max-width: 900px) {
+  .cover-grid { grid-template-columns: 1fr; }
+  .drawing.prometheus { max-width: 220px; margin: 8px 0 0; order: -1; }
+  .works, .friends { grid-template-columns: 1fr; }
+  .snapshots li { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  body { font-size: 18px; }
+  .wrap { padding: 0 16px; }
+  .imprint { margin-bottom: 30px; }
+  main section { padding-top: 56px; }
+  .timeline::before { left: 39px; }
+  .event { grid-template-columns: 80px minmax(0, 1fr); column-gap: 14px; }
+  .event .when { grid-column: 2; grid-row: 1; padding-top: 0; }
+  .event .dot, .event .logo, .event .medal { grid-column: 1; grid-row: 1 / span 2; }
+  .event .what { grid-column: 2; grid-row: 2; }
+  .logo { width: 78px; height: 40px; padding: 5px 6px; }
+  .medal { width: 60px; height: 60px; font-size: 32px; }
+  .event.is-big .when { padding-top: 0; }
+  .graph { padding: 6px; border-radius: 18px; margin-left: -8px; margin-right: -8px; }
+  .node .name { font-size: 24px; }
+  .node .standing { font-size: 15px; }
+  .edge text { font-size: 15px; }
+}
