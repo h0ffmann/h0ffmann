@@ -64,6 +64,19 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 <a href="https://github.com/h0ffmann/picasso" target="_blank"><img src="https://img.shields.io/badge/nix%20labs-picasso-24292F?style=for-the-badge&logo=nixos&logoColor=white" alt="github: picasso" /></a>
 <a href="https://doi.org/10.5281/zenodo.23311208" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23311208-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="picasso の DOI" /></a>
 </p>
+<!-- cv:skip -->
+
+そして、ライセンスを研究している非営利のエッセイ：**[closed source: the god that failed](https://github.com/h0ffmann/closed-source)**。コーディングエージェントの時代における、リバースエンジニアリングと引用の倫理についてのポジションペーパーです。
+
+<p align="left">
+<a href="https://github.com/h0ffmann/closed-source" target="_blank"><img src="https://img.shields.io/badge/essay-closed--source-24292F?style=for-the-badge&logo=github&logoColor=white" alt="github: closed-source" /></a>
+<a href="https://doi.org/10.5281/zenodo.23333656" target="_blank"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23333656-FAB70C?style=for-the-badge&logo=doi&logoColor=black" alt="closed-source の DOI" /></a>
+</p>
+<p align="left">
+<a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-6E7781?style=flat-square" alt="non-profit" /></a>
+<a href="https://github.com/h0ffmann/closed-source#licence"><img src="https://img.shields.io/badge/studying%20licenses-6E7781?style=flat-square" alt="studying licenses" /></a>
+</p>
+<!-- cv:end -->
 
 ## 💼 職務経歴ハイライト
 
