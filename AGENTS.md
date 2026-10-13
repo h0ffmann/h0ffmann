@@ -41,6 +41,9 @@ edit or a change to the metrics workflow.
   `nix flake update publisher` when the lab changes. Build locally with
   `nix build` (result/cv.pdf) and run `python3 -m unittest discover -s cv`.
   Keep the skip-marker pairs balanced and identical in all READMEs.
+- `5MINUTE.md` – the profile in five headings, one minute each, in English only. It is not
+  built into the CV and no README links to it. Every fact in it comes from `README.md` or
+  `me/ways-of-working.md`: change it when one of those changes.
 - `LICENSE` – MIT, plain text with nothing appended: GitHub's licence
   detection reports NOASSERTION when a scope note follows the licence body.
   It covers the scripts and the prose here; the metrics cards are generated
