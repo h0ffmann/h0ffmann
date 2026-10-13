@@ -75,10 +75,6 @@ UFRJ（Escola Politécnica）の卒業プロジェクトで、LabECO/UFSC との
 
 **AWS 認定 4件**（Cloud Practitioner、Machine Learning Specialty、Machine Learning Engineer Associate、Data Engineer Associate）・**PADI 認定 3件**（Advanced Open Water Diver、Enriched Air Nitrox Diver、Rescue Diver）
 
-## 📚 学習中
-
-<a href="https://github.com/h0ffmann/gcp-agentic-architect" target="_blank"><img src="https://img.shields.io/badge/GCP-Professional_Agentic_Architect_(学習中)-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud Professional Agentic Architect を学習中" /></a>
-
 ## 🏊 その他
 <a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-オープンウォータースイミング-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava（オープンウォータースイミング）" /></a>
 

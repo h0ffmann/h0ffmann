@@ -26,7 +26,7 @@ edit or a change to the metrics workflow.
   language line, the LinkedIn badge the CV header already has, the live marola badges, the Leave No Trace badge beside the QR, the photo) and prepends `cv/header.md`
   (name + contact). The CV follows the README's section order — me,
   open source (marola-dev), research (ww3-gpu), exp-highlights, certs,
-  learning, misc — so reordering the profile
+  misc — so reordering the profile
   reorders the CV. `cv/preamble.tex` is the look. The CV is
   one page per language and close to full: check the page count in the
   build output after adding content.
