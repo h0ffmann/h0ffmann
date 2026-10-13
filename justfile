@@ -31,7 +31,10 @@ nixb := "nix --extra-experimental-features 'nix-command flakes'"
 # Render the four CVs into pdf/.
 cv:
     python3 -m unittest discover -s cv
-    {{nixb}} build --no-update-lock-file --out-link build/cv
+    # Built from the last commit, not from the files on disk: the short CV names that commit in
+    # its foot, and the PDFs of pdf/ would make any tree look changed. Commit the sources first.
+    git diff --quiet HEAD -- . ':!pdf' || { echo "cv: commit the sources first; the CV is built from the last commit" >&2; exit 1; }
+    {{nixb}} build --no-update-lock-file --out-link build/cv "git+file://$PWD?rev=$(git rev-parse HEAD)"
     mkdir -p pdf && install -m 644 build/cv/*.pdf pdf/
     @for f in pdf/*.pdf; do echo "cv: $f ($(pdfinfo "$f" 2>/dev/null | awk '/^Pages/ {print $2}') pages)"; done
 
