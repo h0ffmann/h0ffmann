@@ -20,6 +20,7 @@ my work is citable:
 - marola: [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
 - ww3-gpu, the wavewatch iii gpu port: [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)
 - picasso, my nix labs: [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208)
+- closed source: the god that failed, a position paper: [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656)
 
 ## hiring
 
