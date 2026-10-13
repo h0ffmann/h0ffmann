@@ -1,0 +1,24 @@
+# AGENTS.md: "say only what is already established, few badges, no selling". A word that praises
+# and measures nothing. An error: delete it, or give the fact.
+extends: existence
+message: "'%s' praises and measures nothing. Delete it or give the fact."
+level: error
+ignorecase: true
+tokens:
+  - very
+  - extremely
+  - incredibly
+  - highly
+  - truly
+  - passionate
+  - state-of-the-art
+  - cutting-edge
+  - world-class
+  - revolutionary
+  - groundbreaking
+  - game-changing
+  - seamless
+  - seamlessly
+  - rockstar
+  - ninja
+  - guru

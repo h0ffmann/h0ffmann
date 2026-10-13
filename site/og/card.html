@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- The picture that a link to the site shows in a chat or a feed (LinkedIn, WhatsApp, Slack):
+     site/static/og.png, 1200 by 627, the size LinkedIn asks for. It follows DESIGN.md: the dark
+     ground, the name in green, the epithet in blue, the three areas of research in their lights.
+     Every word is inside the middle, so a square crop loses only the drawing.
+     Make it again as site/og/README.md says. -->
+<html lang="en">
+<meta charset="utf-8">
+<title>h0ffmann: the link preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@500&display=block">
+<style>
+  :root { --night: #05090E; --ink: #E7F2EF; --muted: #8FA3AD; --water: #36B7FF; --ideas: #3DFF96; --ouro: #FF8A1F; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 627px; overflow: hidden; background: var(--night); }
+  .card { position: relative; width: 1200px; height: 627px; padding: 70px 80px; background: radial-gradient(70rem 30rem at 82% -10%, rgba(54, 183, 255, .16), transparent 62%), radial-gradient(50rem 26rem at 0% 0%, rgba(61, 255, 150, .10), transparent 60%), var(--night); }
+  .imprint { font: 500 20px/1 'JetBrains Mono', monospace; color: var(--muted); }
+  h1 { margin-top: 44px; font: 800 168px/.86 'Bricolage Grotesque', sans-serif; letter-spacing: -.03em; color: var(--ideas); text-shadow: 0 0 22px rgba(61, 255, 150, .55), 0 0 70px rgba(61, 255, 150, .25); }
+  .epithet { margin-top: 20px; font: 600 54px/1 'Bricolage Grotesque', sans-serif; letter-spacing: -.02em; color: var(--water); text-shadow: 0 0 18px rgba(54, 183, 255, .5); }
+  .motto { margin-top: 14px; font: italic 400 32px/1.2 'Newsreader', serif; color: var(--ink); }
+  .areas { position: absolute; left: 80px; bottom: 62px; display: flex; gap: 14px; font: 600 22px/1 'Bricolage Grotesque', sans-serif; }
+  .areas span { padding: 11px 18px; border: 2px solid currentColor; border-radius: 999px; }
+  .w { color: var(--water); } .i { color: var(--ideas); } .o { color: var(--ouro); }
+  .drawing { position: absolute; right: 70px; top: 96px; width: 300px; aspect-ratio: 6 / 7; background: var(--water); filter: drop-shadow(0 0 12px rgba(54, 183, 255, .6));
+    -webkit-mask: url(../static/drawings/prometheus.svg) no-repeat center / contain; mask: url(../static/drawings/prometheus.svg) no-repeat center / contain; }
+</style>
+<div class="card">
+  <p class="imprint">matheus hoffmann / h0ffmann.github.io/h0ffmann</p>
+  <h1>h0ffmann</h1>
+  <p class="epithet">the aquatic prometheus</p>
+  <p class="motto">the art of the maintenance of apps</p>
+  <p class="areas"><span class="w">wave modelling</span><span class="i">game theory</span><span class="o">self-improving apps</span></p>
+  <div class="drawing"></div>
+</div>
+</html>

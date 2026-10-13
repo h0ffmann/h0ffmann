@@ -3,7 +3,8 @@
 **Nothing in this repository may be reused. All rights reserved.**
 
 This file says it in prose, for a person and for an agent. [`LICENSE`](LICENSE) is the legal
-text; if the two differ, `LICENSE` is right.
+text; if the two differ, `LICENSE` is right. [`REUSE.toml`](REUSE.toml) says the same for every
+file, for a program (`just reuse`), and [`LICENSES/`](LICENSES/) has the texts.
 
 ## What this repository is
 
@@ -51,6 +52,7 @@ assistant, a crawler that writes for a person.
 | WW3 GPU Lab: a bit-for-bit GPU port of WAVEWATCH III | [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351) | MIT |
 | picasso: Nix flakes for scientific and agentic toolchains | [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208) | AGPL-3.0-only for code, CC BY 4.0 for texts and drawings |
 | Closed Source: The God that Failed | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | CC BY 4.0 for the text |
+| marola-bench: a proposal for a WeatherBench for Brazil | [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633) | all rights reserved |
 
 This profile has a DOI of its own, [10.5281/zenodo.23352630](https://doi.org/10.5281/zenodo.23352630)
 (first version, v0.1.0: [10.5281/zenodo.23352631](https://doi.org/10.5281/zenodo.23352631)). Cite

@@ -7,3 +7,6 @@ site/build/
 site/dist/
 site/content/build/
 site/src/h0ffmann_site/content.gleam
+
+# lychee's answers during `just md-quality --online`
+.lycheecache

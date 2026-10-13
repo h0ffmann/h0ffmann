@@ -1,0 +1,7 @@
+# A warning, not an error: a long sentence is sometimes right.
+extends: occurrence
+message: "A sentence of more than 40 words. Split it if it holds two ideas."
+level: warning
+scope: sentence
+max: 40
+token: \b(\w+)\b
