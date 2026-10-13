@@ -1,21 +1,30 @@
-MIT License
+Copyright (c) 2025-2026 Matheus Hoffmann. All rights reserved.
 
-Copyright (c) 2026 Matheus Hoffmann
+This repository is the personal profile of Matheus Hoffmann: his story, his
+words, the structure of his pages, their design, their drawings and the code
+that builds them.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+No licence is granted. You may not copy, modify, translate, adapt, publish,
+distribute, sublicense or sell this repository or any part of it, and you may
+not use it, or any part of it, as a template, a starting point or source
+material for another person's profile, curriculum vitae, website or document.
+This applies to a person and to an automated system that acts for a person,
+such as a coding agent.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+What stays permitted, because the law or a service requires it:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+  1. to read these pages, and to link to them;
+  2. to quote a short passage, with the author's name and a link, as the law
+     of quotation allows;
+  3. what GitHub's Terms of Service give to every user for a public
+     repository: to view it and to fork it on GitHub. A fork is under these
+     same terms.
+
+Third-party material in this repository is not the author's and keeps its own
+terms; REUSE.md lists it.
+
+The author's open works are not in this repository. Each one is in its own
+repository, under its own licence, and has a DOI; REUSE.md lists them. To use
+or to cite the research, go there.
+
+THIS REPOSITORY IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

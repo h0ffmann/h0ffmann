@@ -1,0 +1,13 @@
+# The ties of the knowledge graph, each as an index or a file states it. Date of record: 13 October 2026.
+# from	to	relation	source
+closed-source	marola	cites	Zenodo, the record of closed-source v0.3.0 (10.5281/zenodo.23349831)
+closed-source	ww3-gpu	cites	Zenodo, the record of closed-source v0.3.0
+closed-source	picasso	requires	Zenodo, the record of closed-source v0.3.0
+closed-source	ouroboric	cites	Zenodo, the record of closed-source v0.3.0, by URL
+closed-source	nashkell	cites	Zenodo, the record of closed-source v0.3.0, by URL
+marola	ww3-gpu	references	Zenodo, the record of marola v0.2.2 (10.5281/zenodo.23266642)
+marola	picasso	requires	Zenodo, the record of picasso v0.1.1 (10.5281/zenodo.23311209), which says isRequiredBy
+ww3-gpu	picasso	requires	Zenodo, the record of picasso v0.1.1, which says isRequiredBy
+marola-bench	marola	cites	marola-dev/marola-research, marola-bench/paper/refs.bib
+marola-bench	ww3-gpu	cites	marola-dev/marola-research, marola-bench/paper/refs.bib
+marola-bench	closed-source	cites	marola-dev/marola-research, marola-bench/paper/refs.bib

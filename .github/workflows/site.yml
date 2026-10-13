@@ -1,0 +1,56 @@
+# site — build the website of site/ (Gleam and Lustre, `just site`) on each pull request and each
+# push to main, and publish site/dist to GitHub Pages from main.
+# Needs Settings → Pages → Source: GitHub Actions. The toolchain is picasso's gleam-website lab,
+# through flake.nix. It commits nothing, so it is not in the `readme-bots` group.
+name: site
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths: ["site/**", "README.md", "me/**", "flake.nix", "flake.lock", "justfile", ".github/workflows/site.yml"]
+  # Each morning, after the metrics workflow wrote its two cards (06:00 UTC): the page reads its
+  # numbers from them, and that workflow's commits do not start this one.
+  schedule:
+    - cron: "40 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The site counts the commits of README.md since its first one.
+          fetch-depth: 0
+      - uses: cachix/install-nix-action@v31
+      - name: just site (content, tests, bundle and first render)
+        run: nix develop --no-update-lock-file .#site --command just _site
+      - name: every logo still answers at its owner's address
+        run: nix develop --no-update-lock-file .#site --command just logos
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request'
+        with:
+          path: site/dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
