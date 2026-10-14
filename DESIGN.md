@@ -116,8 +116,13 @@ not Ouroboric.
 
 ## Motion
 
-None that starts by itself. A press on a colour lights its works and dims the rest; that is the
-only thing that changes, and it changes at once.
+None that starts by itself. Two things answer the reader:
+
+- A press on a colour lights its works and dims the rest, at once.
+- The arc runs sideways while the reader scrolls down (the owner, 14 October 2026, after
+  sheets.works' "holding up the internet"). Its stage stays on the screen, a pixel down is a pixel
+  sideways, the reader's mark is lit, the others are dimmed, and so is the name of its era. It
+  stops when the reader stops. With no JavaScript, or with reduced motion, the arc is a list.
 
 ## Facts
 
@@ -130,8 +135,9 @@ The look serves the facts and not the other way.
 
 ## A phone
 
-- One column. The timeline's marks go to the left edge; the graph keeps its shape and its
-  labels grow.
+- One column. The arc runs sideways as on a wide screen, one mark at a time; as a list (no
+  JavaScript, or reduced motion), its marks go to the left edge. The graph keeps its shape and
+  its labels grow.
 - No sideways scroll of the page. A word that is too long breaks.
 
 ## The CV

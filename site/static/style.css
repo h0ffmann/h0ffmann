@@ -90,6 +90,24 @@ main section:last-child { padding-bottom: 92px; }
 .event.is-prophecy .glyph { border-style: dashed; border-color: var(--water); color: var(--water); box-shadow: 0 0 0 4px var(--night), 0 0 18px rgba(54, 183, 255, .4); text-shadow: 0 0 10px rgba(54, 183, 255, .7); font-family: var(--display); }
 .event.is-prophecy .what h3 { color: var(--water); font-style: italic; }
 .event.is-prophecy .era { border-style: dashed; border-color: var(--water); color: var(--water); }
+/* The arc, sideways (app.gleam, arc_ffi.mjs): the section is as tall as the timeline is wide, its
+   stage stays on the screen, and scrolling down moves the timeline to the left. Only when the
+   script has said so; without it the arc is the list above. */
+.arc-scroll[data-flow="row"] { height: var(--len, auto); }
+.arc-scroll[data-flow="row"] .arc-stage { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+.arc-scroll[data-flow="row"] .eras li:last-child { color: var(--muted); text-shadow: none; }
+.arc-scroll[data-flow="row"] .eras li { transition: color .3s ease, text-shadow .3s ease; }
+.arc-scroll[data-flow="row"] .eras li[data-now] { color: var(--ideas); text-shadow: 0 0 12px rgba(61, 255, 150, .5); }
+.arc-scroll[data-flow="row"] .timeline { display: flex; width: max-content; padding: 0 48px 0 0; transform: translate3d(var(--x, 0px), 0, 0); will-change: transform; }
+.arc-scroll[data-flow="row"] .timeline::before { left: 0; right: 0; top: 68px; bottom: auto; width: auto; height: 2px; background: linear-gradient(90deg, var(--rule), var(--water) 55%, var(--ideas)); }
+/* Every mark is as wide as the others: app.gleam finds the reader's mark from that width. */
+.arc-scroll[data-flow="row"] .event { grid-template-columns: none; grid-template-rows: 28px 80px auto; box-sizing: border-box; width: min(72vw, 320px); padding: 0 32px 0 0; opacity: .45; transition: opacity .4s ease; }
+.arc-scroll[data-flow="row"] .event[data-now] { opacity: 1; }
+.arc-scroll[data-flow="row"] .event.is-big { padding: 0 32px 0 0; }
+.arc-scroll[data-flow="row"] .event > * { grid-column: 1; grid-row: auto; }
+.arc-scroll[data-flow="row"] .event .when { padding-top: 0; }
+.arc-scroll[data-flow="row"] .event .dot, .arc-scroll[data-flow="row"] .event .logo, .arc-scroll[data-flow="row"] .event .medal, .arc-scroll[data-flow="row"] .event .glyph { justify-self: start; align-self: center; margin-top: 0; }
+.arc-scroll[data-flow="row"] .what p { max-width: none; }
 
 /* The four colours, as buttons */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 0; }

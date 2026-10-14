@@ -9,3 +9,4 @@ Decision, Result, Lessons. [`NOTES.md`](../NOTES.md) has the rules.
 | 2026-10-13 | [the record came out open](2026-10-13-the-record-came-out-open.md) | zenodo, licence, release | open |
 | 2026-10-13 | [a story with years that nobody gave](2026-10-13-a-story-with-years-that-nobody-gave.md) | facts, timeline | closed |
 | 2026-10-14 | [a CV for a reader that is not named](2026-10-14-a-cv-for-a-reader-that-is-not-named.md) | cv, facts, tooling | open |
+| 2026-10-14 | [the lit mark was off the screen](2026-10-14-the-lit-mark-was-off-the-screen.md) | site, arc, motion | closed |

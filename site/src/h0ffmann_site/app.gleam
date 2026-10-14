@@ -2,6 +2,7 @@
 //// and their ties, the README's history) comes from `content.gleam`, which site/content writes
 //// from README.md, me/ and site/data/. The sentences that tell the story are written here.
 
+import gleam/float
 import gleam/int
 import gleam/list
 import gleam/string
@@ -62,7 +63,59 @@ pub fn initial() -> Model {
 }
 
 pub fn init(_: Nil) -> #(Model, Effect(Msg)) {
-  #(initial(), effect.none())
+  #(initial(), effect.from(fn(_) { watch(arc_frame) }))
+}
+
+/// The arc runs sideways while the reader scrolls down, as a pinned chapter of a data story
+/// does: the section is as tall as the timeline is wide, its stage stays on the screen, and how
+/// far the reader is through the section moves the timeline. arc_ffi.mjs only reads the page and
+/// writes what is decided here. With no JavaScript, or with reduced motion, the arc stays a list.
+@external(javascript, "./arc_ffi.mjs", "watch")
+fn watch(frame: fn(Float, Float, Float, Float, Float, Float) -> Nil) -> Nil
+
+@external(javascript, "./arc_ffi.mjs", "place")
+fn place(length: Float, x: Float, now: Int, era: String) -> Nil
+
+/// How far the reader is through the arc, from 0 to 1: the share of the section's extra height
+/// that has scrolled past the top of the screen.
+pub fn progress(top: Float, height: Float, viewport: Float) -> Float {
+  let run = height -. viewport
+  case run <=. 0.0 {
+    True -> 0.0
+    False -> float.clamp(0.0 -. top /. run, min: 0.0, max: 1.0)
+  }
+}
+
+/// The mark at the reader's place in the arc, and its era. Every mark is `step` wide, and the
+/// place crosses the stage from its left edge to its right one, so the first mark is the place at
+/// the start and the last one at the end.
+pub fn mark_at(p: Float, track: Float, step: Float) -> #(Int, String) {
+  let now = case step <=. 0.0 {
+    True -> 0
+    False ->
+      float.truncate(p *. track /. step)
+      |> int.clamp(min: 0, max: list.length(content.timeline) - 1)
+  }
+  case list.drop(content.timeline, now) {
+    [e, ..] -> #(now, e.era)
+    [] -> #(0, "")
+  }
+}
+
+/// One frame: the section is one screen plus the timeline's extra width, so a pixel down is a
+/// pixel sideways.
+fn arc_frame(
+  top: Float,
+  height: Float,
+  viewport: Float,
+  stage: Float,
+  track: Float,
+  step: Float,
+) -> Nil {
+  let travel = float.max(track -. stage, 0.0)
+  let p = progress(top, height, viewport)
+  let #(now, era) = mark_at(p, track, step)
+  place(viewport +. travel, 0.0 -. p *. travel, now, era)
 }
 
 pub fn update(model: Model, msg: Msg) -> #(Model, Effect(Msg)) {
@@ -291,14 +344,20 @@ fn arc_section() -> Element(msg) {
         "a boy who swam for medals went to the university in rio, wrote the code behind payments, learned to keep machine-learning systems alive, and then went back to the sea. the title of the trade changed four times. the work did not: keep a thing running, and leave it better than it was found.",
       ),
     ]),
-    html.ol(
-      [attribute.class("eras")],
-      list.map(era_line(), fn(e) { html.li([], [tx(e.1)]) }),
-    ),
-    html.ol(
-      [attribute.class("timeline")],
-      list.map(content.timeline, event_item),
-    ),
+    html.div([attribute.class("arc-scroll")], [
+      html.div([attribute.class("arc-stage")], [
+        html.ol(
+          [attribute.class("eras")],
+          list.map(era_line(), fn(e) {
+            html.li([a("data-era", e.0)], [tx(e.1)])
+          }),
+        ),
+        html.ol(
+          [attribute.class("timeline")],
+          list.map(content.timeline, event_item),
+        ),
+      ]),
+    ]),
   ])
 }
 
