@@ -850,7 +850,7 @@ fn footer() -> Element(msg) {
       ]),
       html.p([], [
         html.text(
-          "the names and logos of Zenodo, CEFET/RJ, UFRJ, LIOC, Scala, Stone, Broad, Americanas, Signifyd, ITV, Gleam, Claude Code, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
+          "the names and logos of Zenodo, CEFET/RJ, UFRJ, LIOC, Scala, Stone, iUPay, Broad, Americanas, Signifyd, ITV, Gleam, Claude Code, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
         ),
         external("https://github.com/h0ffmann/picasso", "picasso"),
         html.text("."),

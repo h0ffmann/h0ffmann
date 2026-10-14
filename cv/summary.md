@@ -30,7 +30,7 @@ offers.
 - [2021–2022]{.data} **[Elemeno AI](https://github.com/elemeno-ai)** (US): lead mlops, for
   Americanas (BR).
 - [2020]{.data} **[Broad](https://www.ycombinator.com/companies/broad)** (UK, YC W21): senior engineer, a digital bank.
-- [2019–2020]{.data} **iUPay and Guiabolso** (BR): a PIX engine, before the government's own.
+- [2019–2020]{.data} **[iUPay](https://www.iupay.com.br) and Guiabolso** (BR): a PIX engine, before the government's own.
 - [2017–2018]{.data} **[Stone](https://www.stone.com.br)** (BR, NASDAQ): engineer, payments, before the IPO.
 - [2010–2020]{.data} **[CEFET/RJ](https://www.cefet-rj.br)**, electronics technician; then
   **[UFRJ](https://ufrj.br)**, with **[LIOC](http://www.lioc.oceanica.ufrj.br)**, its ocean lab.
