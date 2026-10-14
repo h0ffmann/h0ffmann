@@ -189,3 +189,12 @@ pub fn the_stars_are_drawn_by_topic_test() {
   assert content.star_topics != []
   assert list.all(content.star_topics, fn(t) { string.contains(html, t.0) })
 }
+
+// A book has a star before its name, on the graph and in the list.
+pub fn a_book_has_a_star_test() {
+  let html = page()
+  assert list.any(content.works, fn(w) { w.book })
+  assert list.all(content.works, fn(w) {
+    !w.book || string.contains(html, "★ " <> w.name)
+  })
+}

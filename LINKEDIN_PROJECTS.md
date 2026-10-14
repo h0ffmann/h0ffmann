@@ -25,7 +25,7 @@ Description, 239 characters:
 
 ```text
 license research & rhizomatic notes. research area: licences and closed source.
-158 commits, 83 by h0ffmann; reviewed at commit 8a9c426 on 14 october 2026.
+162 commits, 87 by h0ffmann; reviewed at commit 9debea3 on 14 october 2026.
 licence: CC-BY-4.0. doi: 10.5281/zenodo.23333656.
 github.com/h0ffmann/closed-source
 ```
@@ -78,12 +78,12 @@ Name, 8 characters:
 nashkell
 ```
 
-Description, 184 characters:
+Description, 223 characters:
 
 ```text
 game theory + haskell. research area: game theory and tools.
-2 commits, 2 by h0ffmann; reviewed at commit 5a2d3cc on 14 october 2026.
-licence: none stated.
+18 commits, 18 by h0ffmann; reviewed at commit 4f44080 on 14 october 2026.
+licence: see the repository. doi: 10.5281/zenodo.23356739.
 github.com/h0ffmann/nashkell
 ```
 
@@ -101,7 +101,7 @@ Description, 185 characters:
 
 ```text
 r e a d m e. research area: game theory and tools.
-361 commits, 183 by h0ffmann; reviewed at commit 6d188ff on 14 october 2026.
+395 commits, 210 by h0ffmann; reviewed at commit f9fe695 on 14 october 2026.
 licence: see the repository.
 github.com/h0ffmann/h0ffmann
 ```
@@ -120,7 +120,7 @@ Description, 223 characters:
 
 ```text
 risk analysis using apache spark. research area: game theory and tools.
-49 commits, 16 by h0ffmann; reviewed at commit 75d09e0 on 14 october 2026.
+52 commits, 19 by h0ffmann; reviewed at commit 810a7d5 on 14 october 2026.
 with two friends. licence: Apache-2.0.
 github.com/h0ffmann/mdd-risk-analysis
 ```

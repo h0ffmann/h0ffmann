@@ -10,7 +10,7 @@ repository ([`REUSE.md`](REUSE.md)); each repository has its own licence, in its
 
 | Account | Repositories that this reading could see | Public | Public, not forks |
 |---|---:|---:|---:|
-| [h0ffmann](https://github.com/h0ffmann) | 97 | 71 | 36 |
+| [h0ffmann](https://github.com/h0ffmann) | 99 | 73 | 36 |
 | [marola-dev](https://github.com/marola-dev) | 15 | 14 | 12 |
 | [ouroboric-dev](https://github.com/ouroboric-dev) | 11 | 11 | 11 |
 
@@ -24,12 +24,12 @@ an organisation it may leave out a private repository that the sign-in cannot se
 
 | Repository | Area | Description (the repository's own) | Commits | His | Reviewed at | Licence | DOI | With |
 |---|---|---|---:|---:|---|---|---|---|
-| [h0ffmann/closed-source](https://github.com/h0ffmann/closed-source) | closed | license research & rhizomatic notes | 158 | 83 | [`8a9c426`](https://github.com/h0ffmann/closed-source/commit/8a9c426b39ca5b1b18b1ebe66a0bac5c409ad394) | CC-BY-4.0 | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | — |
+| [h0ffmann/closed-source](https://github.com/h0ffmann/closed-source) | closed | license research & rhizomatic notes | 162 | 87 | [`9debea3`](https://github.com/h0ffmann/closed-source/commit/9debea36153e77159101f65fac9347041115edb0) | CC-BY-4.0 | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | — |
 | [h0ffmann/picasso](https://github.com/h0ffmann/picasso) | ideas | me + nix + whitepaper | 99 | 97 | [`52c5772`](https://github.com/h0ffmann/picasso/commit/52c5772a292e38ac3966a0b7b4d3d337ee1ce1f0) | AGPL-3.0 | [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208) | — |
 | [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu) | water | WW3 GPU Lab: agentic coding and agentic research on a bit-for-bit GPU port of WAVEWATCH III | 307 | 179 | [`fe472ab`](https://github.com/h0ffmann/ww3-gpu/commit/fe472ab27d29b451949bcc2004712cbfad05c654) | see the repository | [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351) | — |
-| [h0ffmann/nashkell](https://github.com/h0ffmann/nashkell) | ideas | game theory + haskell | 2 | 2 | [`5a2d3cc`](https://github.com/h0ffmann/nashkell/commit/5a2d3ccd519f68eb9e9747f20bedc5a4680a0114) | none stated | — | — |
-| [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann) | ideas | R E A D M E | 361 | 183 | [`6d188ff`](https://github.com/h0ffmann/h0ffmann/commit/6d188ff2df483026d71ea83d9bdc6418af06d4df) | see the repository | — | — |
-| [h0ffmann/mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis) | ideas | Risk analysis using Apache Spark. | 49 | 16 | [`75d09e0`](https://github.com/h0ffmann/mdd-risk-analysis/commit/75d09e04070ebef471c66397ad10bf14a0a3e114) | Apache-2.0 | — | two friends |
+| [h0ffmann/nashkell](https://github.com/h0ffmann/nashkell) | ideas | game theory + haskell | 18 | 18 | [`4f44080`](https://github.com/h0ffmann/nashkell/commit/4f44080afa4faaac2c438d9a3dea47db47688ffb) | see the repository | [10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739) | — |
+| [h0ffmann/h0ffmann](https://github.com/h0ffmann/h0ffmann) | ideas | R E A D M E | 395 | 210 | [`f9fe695`](https://github.com/h0ffmann/h0ffmann/commit/f9fe695f61c972fd479a45a0a7052ddf8db30280) | see the repository | — | — |
+| [h0ffmann/mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis) | ideas | Risk analysis using Apache Spark. | 52 | 19 | [`810a7d5`](https://github.com/h0ffmann/mdd-risk-analysis/commit/810a7d556be308169e0cf3649402fec1a3837913) | Apache-2.0 | — | two friends |
 | [marola-dev/marola](https://github.com/marola-dev/marola) | water | ocean intelligence layer | 512 | 362 | [`f43f808`](https://github.com/marola-dev/marola/commit/f43f8087666583ab7832ee7692390b5d87d9fd69) | CC-BY-4.0 | [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155) | five friends |
 | [marola-dev/marola-app](https://github.com/marola-dev/marola-app) | water | marola backend | 171 | 119 | [`1271a7f`](https://github.com/marola-dev/marola-app/commit/1271a7fe56a31ca7d7a7595b815596460586ffad) | MIT | — | five friends |
 | [marola-dev/marola-site](https://github.com/marola-dev/marola-site) | water | marola.dev frontend | 106 | 76 | [`1733436`](https://github.com/marola-dev/marola-site/commit/17334364961f36b5c48d10d74afe4cf8f021fb52) | MIT | — | five friends |

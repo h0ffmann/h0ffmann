@@ -192,7 +192,7 @@ pub fn main() -> Nil {
     rows(read("../data/works.tsv"))
     |> list.filter_map(fn(r) {
       case r {
-        [id, name, topic, kind, doi, href, licence, x, y, text] ->
+        [id, name, topic, kind, doi, href, licence, x, y, text, form] ->
           Ok(
             record("Work", [
               #("id", lit(id)),
@@ -205,6 +205,10 @@ pub fn main() -> Nil {
               #("x", number(x)),
               #("y", number(y)),
               #("text", lit(text)),
+              #("book", case form {
+                "book" -> "True"
+                _ -> "False"
+              }),
             ]),
           )
         _ -> Error(Nil)
@@ -363,6 +367,7 @@ pub type Work {
     x: Int,
     y: Int,
     text: String,
+    book: Bool,
   )
 }
 

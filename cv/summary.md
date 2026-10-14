@@ -61,6 +61,12 @@ a proposal: a WeatherBench for brazil, scored against buoys.
 :::
 
 ::: {.work .ideas}
+**[nashkell](https://h0ffmann.github.io/nashkell/)** [10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739){.data}
+
+an open book in progress, on game theory.
+:::
+
+::: {.work .ideas}
 **[picasso](https://github.com/h0ffmann/picasso)** [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208){.data}
 
 my nix labs: flakes that pin every toolchain the other works build with.
@@ -73,11 +79,6 @@ a position paper on reverse engineering and the ethics of citation in the age of
 not peer reviewed.
 :::
 
-::: {.work .ouroboric}
-**[self-improving apps](https://github.com/ouroboric-dev)**
-
-writing and doing research for ouroboric-dev: open factories that improve themselves.
-:::
 ::::
 
 ## how i work
