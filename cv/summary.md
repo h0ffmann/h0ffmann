@@ -61,6 +61,12 @@ a proposal: a WeatherBench for brazil, scored against buoys.
 :::
 
 ::: {.work .ideas}
+**[nashkell](https://h0ffmann.github.io/nashkell/)** [10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739){.data}
+
+an open book in progress: game theory, pictures that are equations, a mask of Latin.
+:::
+
+::: {.work .ideas}
 **[picasso](https://github.com/h0ffmann/picasso)** [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208){.data}
 
 my nix labs: flakes that pin every toolchain the other works build with.

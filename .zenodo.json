@@ -63,6 +63,12 @@
       "relation": "references",
       "scheme": "doi",
       "resource_type": "publication-proposal"
+    },
+    {
+      "identifier": "10.5281/zenodo.23356739",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-book"
     }
   ]
 }

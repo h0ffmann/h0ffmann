@@ -4,7 +4,7 @@
 # form: book | work. A book has a star on the graph and in the list, as the owner asked on 14 October 2026.
 # id	name	topic	kind	doi	href	licence	x	y	text	form
 closed-source	closed source	closed	own	10.5281/zenodo.23333656	https://h0ffmann.github.io/closed-source/	CC-BY-4.0	500	92	a book on reverse engineering and the ethics of citation, and the self-improving pipeline that makes it.	book
-nashkell	nashkell	ideas	own		https://h0ffmann.github.io/nashkell/	CC-BY-4.0	160	180	an open book in progress, in the voice of Nash: game theory, pictures that are equations, and a mask of Latin.	book
+nashkell	nashkell	ideas	own	10.5281/zenodo.23356739	https://h0ffmann.github.io/nashkell/	CC-BY-4.0	160	180	an open book in progress, in the voice of Nash: game theory, pictures that are equations, and a mask of Latin.	book
 ouroboric	ouroboric	ouroboric	friend		https://github.com/ouroboric-dev/ouroboric	CC-BY-4.0	840	180	open factories that improve themselves. bruno valério's.	work
 ww3-gpu	ww3-gpu	water	own	10.5281/zenodo.23221351	https://h0ffmann.github.io/ww3-gpu/	MIT	150	400	a bit-for-bit GPU port of the WAVEWATCH III wave model.	work
 marola	marola	water	own	10.5281/zenodo.23224155	https://marola.dev	MIT	430	310	sea conditions and bathing-water quality for brazilian beaches. with five friends.	work

@@ -53,6 +53,7 @@ assistant, a crawler that writes for a person.
 | picasso: Nix flakes for scientific and agentic toolchains | [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208) | AGPL-3.0-only for code, CC BY 4.0 for texts and drawings |
 | Closed Source: The God that Failed | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | CC BY 4.0 for the text |
 | marola-bench: a proposal for a WeatherBench for Brazil | [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633) | all rights reserved |
+| Nashkell: Rhizomatic experiments, an open book | [10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739) | CC BY 4.0 for the book, all rights reserved for the code |
 
 This profile has a DOI of its own, [10.5281/zenodo.23352630](https://doi.org/10.5281/zenodo.23352630)
 (first version, v0.1.0: [10.5281/zenodo.23352631](https://doi.org/10.5281/zenodo.23352631)). Cite
