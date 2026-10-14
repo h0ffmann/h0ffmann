@@ -33,8 +33,8 @@ offers.
   engineer, a digital bank.
 - [2017–2019]{.data} **[Stone](https://www.stone.com.br)** (BR, NASDAQ): software engineer,
   payments. joined before the IPO.
-- [2016–2017]{.data} **[LIOC](http://www.lioc.oceanica.ufrj.br)**: the ocean instrumentation lab
-  of UFRJ.
+- [2010–2020]{.data} **[CEFET/RJ](https://www.cefet-rj.br)**, electronics technician; then
+  **[UFRJ](https://ufrj.br)**, with **[LIOC](http://www.lioc.oceanica.ufrj.br)**, its ocean lab.
 :::
 
 the whole story, with the knowledge graph of the works, is on

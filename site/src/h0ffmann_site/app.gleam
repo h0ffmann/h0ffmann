@@ -52,6 +52,7 @@ pub const topics = [
 /// The arc, in the owner's words: the eras of site/data/timeline.tsv and the name of each.
 pub const eras = [
   #("athlete", "a kid athlete"),
+  #("school", "the technical school"),
   #("university", "the university"),
   #("backend", "backend"),
   #("mlops", "MLOps"),
@@ -843,7 +844,7 @@ fn footer() -> Element(msg) {
       ]),
       html.p([], [
         html.text(
-          "the names and logos of LIOC, Scala, Stone, Broad, Americanas, Signifyd, ITV, Gleam, Claude Code, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
+          "the names and logos of CEFET/RJ, UFRJ, LIOC, Scala, Stone, Broad, Americanas, Signifyd, ITV, Gleam, Claude Code, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
         ),
         external("https://github.com/h0ffmann/picasso", "picasso"),
         html.text("."),
