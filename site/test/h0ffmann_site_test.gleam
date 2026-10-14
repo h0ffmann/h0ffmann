@@ -173,3 +173,19 @@ pub fn the_page_offers_its_languages_test() {
   assert string.contains(html, "aria-pressed=\"true\"")
   assert string.contains(html, "the aquatic prometheus")
 }
+
+// The forks: every one on the page, and PUBLIC in capitals, the one exception to lower case.
+pub fn every_fork_is_listed_as_public_test() {
+  let html = page()
+  assert content.forks != []
+  assert string.contains(html, "forks, a PUBLIC inventory")
+  assert list.all(content.forks, fn(f) { string.contains(html, f.href) })
+}
+
+// The topics of his stars are drawn, the most common first, with the date of their count.
+pub fn the_stars_are_drawn_by_topic_test() {
+  let html = page()
+  assert content.stars > 0
+  assert content.star_topics != []
+  assert list.all(content.star_topics, fn(t) { string.contains(html, t.0) })
+}

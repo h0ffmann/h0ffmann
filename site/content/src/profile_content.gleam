@@ -242,6 +242,33 @@ pub fn main() -> Nil {
         _ -> Error(Nil)
       }
     })
+  let stars_text = read("../data/stars.tsv")
+  let star_topics =
+    rows(stars_text)
+    |> list.filter_map(fn(r) {
+      case r {
+        [topic, count] -> Ok("#(" <> lit(topic) <> ", " <> count <> ")")
+        _ -> Error(Nil)
+      }
+    })
+  let forks =
+    rows(read("../data/forks.tsv"))
+    |> list.filter_map(fn(r) {
+      case r {
+        [name, parent, started, forked, description, href] ->
+          Ok(
+            record("Fork", [
+              #("name", lit(name)),
+              #("parent", lit(parent)),
+              #("started", lit(started)),
+              #("forked", lit(forked)),
+              #("description", lit(description)),
+              #("href", lit(href)),
+            ]),
+          )
+        _ -> Error(Nil)
+      }
+    })
   let repos =
     rows(read("../data/repos.tsv"))
     |> list.filter_map(fn(r) {
@@ -353,6 +380,18 @@ pub type Friend {
   Friend(name: String, what: String, href: String)
 }
 
+/// One fork under h0ffmann, as GitHub listed it on the date of record of site/data/forks.tsv.
+pub type Fork {
+  Fork(
+    name: String,
+    parent: String,
+    started: String,
+    forked: String,
+    description: String,
+    href: String,
+  )
+}
+
 /// One public repository, as GitHub listed it on the date of record of site/data/repos.tsv.
 pub type Repo {
   Repo(
@@ -450,6 +489,26 @@ pub const friends = "
 /// Every public source repository, newest first.
 pub const repos = "
     <> lits(repos)
+    <> "
+
+/// The repositories he starred, as site/data/stars.tsv counted them on its date of record.
+pub const stars = "
+    <> int.to_string(number_before(stars_text, "stars,"))
+    <> "
+
+/// How many of them carry at least one topic.
+pub const stars_with_topics = "
+    <> int.to_string(number_before(stars_text, "of"))
+    <> "
+
+/// The most common topics of the repositories he starred: #(topic, how many), the most common first.
+pub const star_topics: List(#(String, Int)) = "
+    <> lits(star_topics)
+    <> "
+
+/// Every fork under h0ffmann, the newest fork first. A fork of a public repository is public.
+pub const forks = "
+    <> lits(forks)
     <> "
 "
   write(out, text)

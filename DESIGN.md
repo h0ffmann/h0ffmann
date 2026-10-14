@@ -77,6 +77,8 @@ A light may glow, like a tube of neon: a soft shadow of its own colour.
 
 - **Lower case**, as in picasso's README: headings, buttons, the story. An acronym keeps its
   capitals (DOI, FOSS, MLOps, UFRJ), and so does a name that is written with one (Stone, Broad).
+  One word more keeps them: **PUBLIC**, in the section of forks, because the owner asked for it
+  (14 October 2026). A fork of a public repository is public, and the capitals say so.
 - A sentence is short, and it is the owner's voice or a plain fact. No selling.
 - Mono is for data only. A sentence is never in mono.
 - **Two languages, one page.** Two small pills on the cover name the languages, each in its

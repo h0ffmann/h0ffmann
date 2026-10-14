@@ -1,0 +1,42 @@
+# Every fork under h0ffmann, as GitHub listed them on 14 October 2026 (`gh repo list h0ffmann --fork`): 37, every one
+# PUBLIC, because GitHub keeps a fork of a public repository public. forked: the day the fork was made (GitHub's creation date
+# of the fork). started: the year its parent was created on GitHub, the closest record of when that project began.
+# parent: the repository it was forked from. The description is the fork's own, which GitHub usually copies from its parent.
+# name	parent	started	forked	description	href
+javelin	LaurentRDC/javelin	2023	2026-10-14	Haskell implementation of data structures for data science	https://github.com/h0ffmann/javelin
+distributed-process	haskell-distributed/distributed-process	2011	2026-10-14	Cloud Haskell core libraries	https://github.com/h0ffmann/distributed-process
+rea	morluto/rea	2026	2026-10-13	Reverse engineer anything with agents, from app behavior down to native binaries.	https://github.com/h0ffmann/rea
+ouroboric-packages	ouroboric-dev/ouroboric-packages	2026	2026-10-13	The official ouroboric packages on PyPI and crates.io: they identify the project and hold its name	https://github.com/h0ffmann/ouroboric-packages
+ouroboric	ouroboric-dev/ouroboric	2026	2026-10-13	Ouroboric: open factories that improve themselves. Charter, standards, journal and brand.	https://github.com/h0ffmann/ouroboric
+asgard	ouroboric-dev/asgard	2026	2026-10-13	Asgard: the company factory, running on Yggdrasil. (Design phase.)	https://github.com/h0ffmann/asgard
+.github	ouroboric-dev/.github	2026	2026-10-13	Organisation profile and defaults for Ouroboric.	https://github.com/h0ffmann/.github
+marola-research	marola-dev/marola-research	2026	2026-10-11	WIP	https://github.com/h0ffmann/marola-research
+marola-agents	marola-dev/marola-agents	2026	2026-10-11	marola way of living	https://github.com/h0ffmann/marola-agents
+WW4	NOAA-EMC/WW4	2025	2026-10-08	Home of the WAVEWATCH IV ™ (WW4 ™) third-generation wind wave modeling framework	https://github.com/h0ffmann/WW4
+agent-skills	marola-dev/marola-skills	2026	2026-10-07	common used skills by marola contributors	https://github.com/h0ffmann/agent-skills
+cert-machine	carlostoledo1891/cert-machine	2026	2026-10-06	Independent exact certification of machine-generated mathematics — exact arithmetic, no code shared with the claimant, refusal as a verdict.	https://github.com/h0ffmann/cert-machine
+marola-oods	marola-dev/marola-oods	2026	2026-10-02	marola's open ocean data store: Brazilian bathing-water data as versioned files (MIP-0056), empty until the ingest lands	https://github.com/h0ffmann/marola-oods
+marola-app	marola-dev/marola-app	2026	2026-10-02	marola's app: the Scala pipeline, CLI, MCP server and Telegram assistant — beaches, live sea conditions and a reviewed summary	https://github.com/h0ffmann/marola-app
+awesome-ocean-science	marola-dev/awesome-ocean-science	2026	2026-10-02		https://github.com/h0ffmann/awesome-ocean-science
+marola-site	marola-dev/marola-site	2026	2026-10-01	The static swim map at marola.dev — built from the pinned marola app image (MIP-0070)	https://github.com/h0ffmann/marola-site
+marola-ml	marola-dev/marola-ml	2026	2026-10-01	marola's ML side: the fine-tune, the DSPy prompt compile, the local model image and the benchmark gate	https://github.com/h0ffmann/marola-ml
+marola-devkit	marola-dev/marola-devkit	2026	2026-10-01	Shared dev-flow harness for the marola repos: scripts, a Claude Code plugin marketplace and reusable workflows (MIP-0070)	https://github.com/h0ffmann/marola-devkit
+marola-corpus	marola-dev/marola-corpus	2026	2026-10-01	marola's knowledge corpus: sourced ocean and marine-safety notes, released as a pinned tarball	https://github.com/h0ffmann/marola-corpus
+Ro-dou	gestaogovbr/Ro-dou	2021	2026-10-01	Gerador de DAGs no Apache Airflow para fazer clipping do Diário Oficial da União.	https://github.com/h0ffmann/Ro-dou
+marola	marola-dev/marola	2026	2026-09-27	ocean intelligence layer	https://github.com/h0ffmann/marola
+thc	ekmett/thc	2015	2026-09-24	The Turbo Haskell Compiler	https://github.com/h0ffmann/thc
+orca	VirtusLab/orca	2026	2026-09-22	Deterministic, AI-driven development flows.	https://github.com/h0ffmann/orca
+xbeach	openearth/xbeach	2017	2026-09-20	XBeach open-source numerical model to simulate hydrodynamic and morphodynamic processes and impacts on sandy coasts	https://github.com/h0ffmann/xbeach
+bend	bendlang/bend	2023	2026-09-18	Bend 2: a fast language that blocks AI mistakes via proof. Install: curl -fsSL https://bend-lang.com/install.sh | sh	https://github.com/h0ffmann/bend
+WW3	NOAA-EMC/WW3	2019	2026-09-09	WAVEWATCH III	https://github.com/h0ffmann/WW3
+OpenVoice	myshell-ai/OpenVoice	2023	2025-11-13	Instant voice cloning by MIT and MyShell. Audio foundation model.	https://github.com/h0ffmann/OpenVoice
+basic-memory	basicmachines-co/basic-memory	2024	2025-04-19	Basic Memory is a knowledge management system that allows you to build a persistent semantic graph from conversations with AI assistants. All knowledge is stored in standard Markdown files on your computer, giving you full control and ownership of your data. Integrates directly with Obsidan.md	https://github.com/h0ffmann/basic-memory
+aider-desk	hotovo/aider-desk	2025	2025-04-13	Desktop application for Aider AI assistant	https://github.com/h0ffmann/aider-desk
+aicode	zackees/aicode	2024	2024-11-18		https://github.com/h0ffmann/aicode
+kyo	getkyo/kyo	2022	2023-10-31	Toolkit for Scala Development	https://github.com/h0ffmann/kyo
+elyra	elyra-ai/elyra	2019	2021-11-04	Elyra extends JupyterLab Notebooks with an AI centric approach.	https://github.com/h0ffmann/elyra
+haskell-study-plan	soupi/haskell-study-plan	2018	2021-10-23	An opinionated list of resources for learning Haskell	https://github.com/h0ffmann/haskell-study-plan
+akka-persistence-cassandra	akka/akka-persistence-cassandra	2016	2020-03-12	A replicated Akka Persistence journal backed by Apache Cassandra	https://github.com/h0ffmann/akka-persistence-cassandra
+itauscraper	henriquebastos/itauscraper	2017	2020-02-27	Scraper para baixar seus extratos do Itaú com um comando.	https://github.com/h0ffmann/itauscraper
+pfps-shopping-cart	gvolpe/pfps-shopping-cart	2019	2019-12-10	:shopping_cart: The Shopping Cart application developed in the book "Practical FP in Scala: A hands-on approach"	https://github.com/h0ffmann/pfps-shopping-cart
+fpinscala	fpinscala/fpinscala	2012	2018-10-25	Code, exercises, answers, and hints to go along with the book "Functional Programming in Scala"	https://github.com/h0ffmann/fpinscala
