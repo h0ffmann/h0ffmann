@@ -79,6 +79,9 @@ A light may glow, like a tube of neon: a soft shadow of its own colour.
   capitals (DOI, FOSS, MLOps, UFRJ), and so does a name that is written with one (Stone, Broad).
 - A sentence is short, and it is the owner's voice or a plain fact. No selling.
 - Mono is for data only. A sentence is never in mono.
+- **Two languages, one page.** Two small pills on the cover name the languages, each in its
+  own language; the pressed one is white. The Portuguese keeps the lower case and the short
+  sentences. How a sentence is translated is in [`TRANSLATIONS.md`](TRANSLATIONS.md), not here.
 
 ## Shapes
 

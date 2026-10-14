@@ -54,6 +54,11 @@ featured *args:
 linkedin *args:
     python3 scripts/linkedin-projects.py {{args}}
 
+# The translations of the site: whole, current and marked (TRANSLATIONS.md).
+# `just translations --self-test` gives the check a bad table, which it must refuse.
+translations *args:
+    python3 scripts/translations-check.py {{args}}
+
 # Every logo of the timeline still answers at its owner's address. A logo is never a file here.
 logos:
     for u in $(grep -v '^#' site/data/timeline.tsv | cut -f6 | grep -E '^https://' | sort -u); do code="$(curl -s -o /dev/null -L --max-time 30 -A 'Mozilla/5.0' -w '%{http_code}' "$u")"; [ "$code" = 200 ] || { echo "logos: $code $u" >&2; exit 1; }; done
@@ -91,6 +96,8 @@ check:
     just citation --check
     just reuse
     python3 -m unittest discover -s cv
+    just translations --self-test
+    just translations
     just featured --check
     just linkedin --check
 

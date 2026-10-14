@@ -155,3 +155,21 @@ pub fn the_logos_of_marola_and_ouroboric_stand_with_the_friends_test() {
   assert string.contains(html, "alt=\"marola\"")
   assert string.contains(html, "alt=\"Ouroboric\"")
 }
+
+// One source, and a table for each other language: a sentence is looked up by its English.
+pub fn a_sentence_is_translated_by_its_source_test() {
+  assert app.translate("pt-BR", "the arc") == "a trajetória"
+  assert app.translate("en", "the arc") == "the arc"
+  // A sentence with no row is shown in English, and an unknown language is English.
+  assert app.translate("pt-BR", "a sentence with no row")
+    == "a sentence with no row"
+  assert app.translate("xx", "the arc") == "the arc"
+}
+
+// The page is rendered in English at build time, and offers the two languages.
+pub fn the_page_offers_its_languages_test() {
+  let html = page()
+  assert string.contains(html, ">português</button>")
+  assert string.contains(html, "aria-pressed=\"true\"")
+  assert string.contains(html, "the aquatic prometheus")
+}

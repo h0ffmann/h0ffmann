@@ -1,0 +1,16 @@
+# False friends between English and Brazilian Portuguese that this page can meet. `just translations` fails when a
+# source sentence has the English word and its translation has the wrong Portuguese word.
+# The pairs were written for this repository by the translator; they are the common ones, and each can be checked in a dictionary.
+# english	wrong	right	source
+trade	comércio	ofício	the translator, 14 October 2026; the sentence "the title of the trade changed"
+record	recorde	registro	the translator, 14 October 2026; the sentence "its record names all six"
+resume	resumo	currículo	the translator, 14 October 2026
+actually	atualmente	na verdade	the translator, 14 October 2026
+eventually	eventualmente	no fim	the translator, 14 October 2026
+library	livraria	biblioteca	the translator, 14 October 2026
+pretend	pretender	fingir	the translator, 14 October 2026
+support	suportar	apoiar	the translator, 14 October 2026
+realize	realizar	perceber	the translator, 14 October 2026
+port	porto	port	the translator, 14 October 2026; a port of a program
+solid	sólido	cheio	the translator, 14 October 2026; a solid line
+language	idioma	linguagem	the translator, 14 October 2026; a programming language

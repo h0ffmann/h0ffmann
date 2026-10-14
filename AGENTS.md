@@ -50,6 +50,7 @@ first. Run `just check` before you open one.
 | `just site`, `just logos` | the site builds and its tests pass; every logo still answers | `site / build` |
 | `python3 -m unittest discover -s cv` | the READMEs' markers, and that the short CV says nothing the profile does not | `pdf / build` |
 | `just current` | the four CVs build with the pinned toolchain, and the committed PDFs are the ones their sources make | `pdf / build` |
+| `just translations` | the site's translations ([`TRANSLATIONS.md`](TRANSLATIONS.md)): each row has its seven cells, no row is an orphan of a sentence that changed, no false friend. A sentence of the page that changes needs its row again: use the `translate-pt-br` skill. An agent never marks a row `reviewed` | `.md / quality` |
 | `just featured`, `just linkedin` | `FEATURED_REPO.md` is read again from GitHub (the counts, the commits, the commit each repository was reviewed at) and `LINKEDIN_PROJECTS.md` is derived from it ([`DERIVATION.md`](DERIVATION.md)). The list is `site/data/featured.tsv`; never edit the two generated files | `.md / quality` runs the two `--check`s |
 | `just cv` | renders the four CVs into `pdf/`. Run it and commit the PDFs when a README, `cv/` or the flake changed | `cv`, on `main`, renders them again with the commit of `main` |
 

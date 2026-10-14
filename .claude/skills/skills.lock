@@ -1,0 +1,5 @@
+# skills.lock: other people's skills that this repository uses BY LINK. No file of theirs is here.
+# Each row pins one skill: where it lives, the commit it was read at, its path, the Git blob of its SKILL.md at
+# that commit, and its licence. Read the skill at the link before a task that names it; never paste it here.
+# name	upstream	commit	path	skill_md_blob	licence
+humanizer-pt-br	mackswendhell/humanizer-pt-br	ada3599ae2732725585f1d93770eeae98c922ff0	SKILL.md	d66f4a0765	MIT

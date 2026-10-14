@@ -264,6 +264,17 @@ pub fn main() -> Nil {
   let langs =
     languages(card_text("../../metrics.languages.svg"))
     |> list.map(fn(l) { "#(" <> lit(l.0) <> ", " <> lit(l.1) <> ")" })
+  // One table for each language: the source sentence, and the same sentence in that language
+  // (site/data/translations/, TRANSLATIONS.md). The page looks a sentence up by its source.
+  let pt_br =
+    rows(read("../data/translations/pt-BR.tsv"))
+    |> list.filter_map(fn(r) {
+      case r {
+        [source, target, ..] if target != "" ->
+          Ok("#(" <> lit(source) <> ", " <> lit(target) <> ")")
+        _ -> Error(Nil)
+      }
+    })
   let self = rows(read("../data/self.tsv"))
   let own = fn(key: String) {
     list.find_map(self, fn(r) {
@@ -358,6 +369,12 @@ pub const repo = \"https://github.com/h0ffmann/h0ffmann\"
 
 pub const revision = "
     <> lit(revision())
+    <> "
+
+/// The page in Brazilian Portuguese: each source sentence with its translation
+/// (site/data/translations/pt-BR.tsv). A sentence that is not here is shown in English.
+pub const pt_br: List(#(String, String)) = "
+    <> lits(pt_br)
     <> "
 
 /// This repository's own DOI (site/data/self.tsv): the one that always opens its latest
