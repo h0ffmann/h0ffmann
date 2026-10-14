@@ -357,6 +357,14 @@ fn edge_shape(model: Model, e: Edge) -> Element(msg) {
   }
 }
 
+/// A book has a star before its name, on the graph and in the list (site/data/works.tsv, `form`).
+pub fn starred(w: Work) -> String {
+  case w.book {
+    True -> "★ " <> w.name
+    False -> w.name
+  }
+}
+
 /// The second line of a node: its DOI, or why it has none.
 pub fn standing(w: Work) -> String {
   case w.doi, w.licence {
@@ -391,7 +399,7 @@ fn node_shape(model: Model, w: Work) -> Element(msg) {
         a("y", int.to_string(w.y - 3)),
         a("text-anchor", "middle"),
       ],
-      w.name,
+      starred(w),
     ),
     svg.text(
       [
@@ -415,8 +423,8 @@ fn node_shape(model: Model, w: Work) -> Element(msg) {
 
 fn work_item(w: Work) -> Element(msg) {
   let name = case w.href {
-    "" -> tx(w.name)
-    href -> external(href, w.name)
+    "" -> tx(starred(w))
+    href -> external(href, starred(w))
   }
   html.li([attribute.class("topic-" <> w.topic)], [
     html.h3([], [name]),
@@ -547,7 +555,7 @@ fn graph_section(model: Model) -> Element(Msg) {
       ),
       html.figcaption([], [
         tx(
-          "round and solid: a work of his. dashed: a friend's work, or one that is still private. the place of each work is set by hand, so the picture does not move between two builds.",
+          "round and solid: a work of his. dashed: a friend's work, or one that is still private. a star: a book. the place of each work is set by hand, so the picture does not move between two builds.",
         ),
       ]),
     ]),
