@@ -39,6 +39,7 @@ um menino atleta → a universidade → backend → mlops → ml → de volta ao
 |---|---|---|
 | 2007 | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | um menino com medalhas de natação, na associação atlética portuguesa |
 | 2016–2017 |  | lioc, o laboratório de instrumentação oceânica da ufrj |
+| 2017 |  | o primeiro scala: [mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis), um trabalho de disciplina na ufrj |
 | 2017–2019 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone: engenheiro de software, pagamentos |
 | 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad (yc w21): engenheiro de software sênior, um banco digital |
 | 2021–2022 |  | elemeno ai: engenheiro de mlops |
