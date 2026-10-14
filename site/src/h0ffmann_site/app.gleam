@@ -56,6 +56,7 @@ pub const eras = [
   #("backend", "backend"),
   #("mlops", "MLOps"),
   #("ml", "ML"),
+  #("journey", "a journey"),
   #("sea", "back to the sea"),
   #("research", "research & FOSS"),
   #("prophecy", "a prophecy"),

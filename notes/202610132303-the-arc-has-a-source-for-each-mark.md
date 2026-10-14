@@ -20,8 +20,14 @@ Each row of the timeline names where its fact was read. There are three kinds of
 
 `just sources` fails when a row has no source.
 
-**Status: partial.** Two things on the arc are the reading of who filed them, and the rows say
-so: that the Associação Atlética Portuguesa is the club of Rio de Janeiro, and that it goes
-with the kid of 2007. New York, which the owner named, is not on the arc: no file names it.
+**Status: partial.** One thing on the arc is the reading of who filed it, and the row says so:
+that the Associação Atlética Portuguesa is the club of Rio de Janeiro.
+
+On 14 October 2026 the owner changed the arc, and each change has his word as its source in
+the row: the mark of 2007 with the medals is gone; a job has the flag of its company's
+country; Elemeno AI shows the logo of Americanas, the client he led MLOps for; a mark for
+2025 to 2026 shows only ITV's logo, for consulting services; and New York, which no file
+named before, is on the mark of Signifyd. A mark for 2024 is twenty days in Japan with Leo; its notes
+come later.
 
 The name over the arc: [[202610132301-the-aquatic-prometheus]].
