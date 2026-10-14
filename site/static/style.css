@@ -240,3 +240,6 @@ a.node:focus-visible { outline: none; }
 .made-with b { font: 500 14px/1.5 var(--data); color: var(--water); }
 .made-with a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
 .made-with img { vertical-align: -3px; background: #fff; border-radius: 5px; padding: 1px; }
+
+/* The owner's sentence under the epithet: orange, because it says what makes him Ouroboric. */
+.ouro-line { margin: 14px 0 0; max-width: 34ch; font: 600 clamp(18px, 2.3vw, 26px)/1.25 var(--display); letter-spacing: -.01em; color: var(--ouro); text-shadow: 0 0 14px rgba(255, 138, 31, .45); }

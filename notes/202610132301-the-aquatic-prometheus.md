@@ -18,6 +18,10 @@ research on the sea, the open-water races. The line under the name echoes Pirsig
 Art of Motorcycle Maintenance*, a book behind h0ffmann/closed-source: to keep a thing running is
 a craft.
 
+On 14 October 2026 the owner gave a third line for the cover: "i'm always reverse engineering
+my own interests", and "that what makes me ouroboric, in orange highlight". It stands under the
+epithet, in orange.
+
 The story it heads: [[202610132303-the-arc-has-a-source-for-each-mark]].
 
 **Status: verified** that the owner said both, on that date. That the line echoes Pirsig is the
