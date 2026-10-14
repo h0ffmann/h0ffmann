@@ -29,7 +29,10 @@ Rules:
 2. **One thing, one light.** A work, a repository or a mark has one `topic`. It is set in
    `site/data/`, by hand, never in the code and never by a guess of the build.
 3. **The name is green and the epithet is blue.** `h0ffmann` is knowledge; "the aquatic
-   prometheus" is water. Nothing else on the cover takes a light.
+   prometheus" is water. Under them one sentence is orange: "i'm always reverse engineering my
+   own interests. that is what makes me ouroboric." It is the owner's (14 October 2026), and
+   it is orange because it says what makes him Ouroboric. Nothing else on the cover takes a
+   light.
 4. **Red is rare.** It marks closed source and the notice. It is not an error colour and not an
    accent.
 5. **Each area of research has its light and its home.** Wave modelling is blue and links to
