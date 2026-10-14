@@ -79,11 +79,6 @@ a position paper on reverse engineering and the ethics of citation in the age of
 not peer reviewed.
 :::
 
-::: {.work .ouroboric}
-**[self-improving apps](https://github.com/ouroboric-dev)**
-
-research for ouroboric-dev: factories that improve themselves.
-:::
 ::::
 
 ## how i work
