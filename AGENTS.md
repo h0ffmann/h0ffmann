@@ -53,7 +53,7 @@ first. Run `just check` before you open one.
 | `just current` | the four CVs build with the pinned toolchain, and the committed PDFs are the ones their sources make | `pdf / build` |
 | `just translations` | the site's translations ([`TRANSLATIONS.md`](TRANSLATIONS.md)): each row has its seven cells, no row is an orphan of a sentence that changed, no false friend. A sentence of the page that changes needs its row again: use the `translate-pt-br` skill. An agent never marks a row `reviewed` | `.md / quality` |
 | `just featured`, `just linkedin` | `FEATURED_REPO.md` is read again from GitHub (the counts, the commits, the commit each repository was reviewed at) and `LINKEDIN_PROJECTS.md` is derived from it ([`DERIVATION.md`](DERIVATION.md)). The list is `site/data/featured.tsv`; never edit the two generated files | `.md / quality` runs the two `--check`s |
-| `just cv` | renders the four CVs into `pdf/`. Run it and commit the PDFs when a README, `cv/` or the flake changed | `cv`, on `main`, renders them again with the commit of `main` |
+| `just cv` | renders the CVs into `pdf/`: the four of the profile and the en.OCEAN pair. Run it and commit the PDFs when a README, `cv/` or the flake changed | `cv`, on `main`, renders them again with the commit of `main` |
 
 - **Notes and journal.** When a change stands on an idea, write a note in `notes/`. When it met
   a challenge, or something went wrong, write an entry in `journal/`, in the same pull request.
@@ -137,6 +137,16 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   committed PDFs are not the ones its sources make (`just current`).
   Keep the marker lines balanced and identical in all READMEs (a unit test
   checks it).
+- `pdf/cv.en.OCEAN.pdf` and `pdf/letter.en.OCEAN.pdf` – a **formal English CV** (two pages at
+  most) and a **one-page presentation letter** for an ocean-research audience, **generated** by
+  the same `cv/build.sh` and the look of `cv/preamble.tex`, but from Markdown written by hand:
+  `cv/cv.en.OCEAN.md`, `cv/letter.en.OCEAN.md`, and the letterhead `cv/header.en.OCEAN.md`
+  (the contact details of `cv/header.md`, no QR). No emoji; shields badges only for links and
+  certifications; the research works cited by author, title and DOI, all six (hard rule 2).
+  Every fact in them comes from the general CV of the owner's job-search workspace, from the
+  record of a DOI or from `README.md`; the pull request that made them lists each source. The
+  build fails when the CV passes two pages or the letter one. No README links them.
+  `cv/test_emoji.py` covers their emoji like the READMEs'.
 - `5MINUTE.md` – the profile in five headings, one minute each, in English only. It is not
   built into the CV and no README links to it. Every fact in it comes from `README.md` or
   `me/ways-of-working.md`: change it when one of those changes.

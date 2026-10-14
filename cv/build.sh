@@ -62,3 +62,17 @@ build README.pt-BR.md header.pt-BR.md cv.pt-BR.pdf pt-BR "Matheus Hoffmann — C
 build README.ja.md    header.ja.md    cv.ja.pdf    ja    "Matheus Hoffmann — 履歴書" \
   "\\href{https://github.com/h0ffmann/h0ffmann}{github.com/h0ffmann} から生成 — README が原本です" \
   '\usepackage{luatexja-fontspec}\setmainjfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf,Scale=0.92]\setsansjfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf,Scale=0.92]\ltjdefcharrange{9}{"1F1E6-"1F1FF,"2600-"27BF}\ltjsetparameter{jacharrange={-9}}'
+
+# en.OCEAN: a formal English CV (two pages at most) and a one-page presentation letter for an
+# ocean-research audience, written by hand in cv/*.en.OCEAN.md (not from a README), with the
+# letterhead cv/header.en.OCEAN.md and the look of cv/preamble.tex. The letter is set larger and
+# with wider margins than the CV: \AtBeginDocument runs after the preamble, so it overrides it.
+build cv/cv.en.OCEAN.md     header.en.OCEAN.md cv.en.OCEAN.pdf     en-US "Matheus Hoffmann — Curriculum Vitae" \
+  "Matheus Hoffmann — curriculum vitae — \\href{https://github.com/h0ffmann/h0ffmann}{github.com/h0ffmann}" \
+  '\AtBeginDocument{\newgeometry{margin=16mm,top=12mm,bottom=14mm}\setmainfont{DejaVu Sans}[Scale=0.92]\setlength{\parskip}{3pt}}'
+build cv/letter.en.OCEAN.md header.en.OCEAN.md letter.en.OCEAN.pdf en-US "Matheus Hoffmann — Presentation letter" \
+  "Matheus Hoffmann — presentation letter" \
+  '\AtBeginDocument{\newgeometry{margin=22mm,top=16mm,bottom=18mm}\setmainfont{DejaVu Sans}[Scale=1.0]\setlength{\parskip}{8pt}}'
+pages="$(pdfinfo "$out/cv.en.OCEAN.pdf" | awk '/^Pages/ {print $2}')"
+[ "$pages" -le 2 ] || { echo "cv: cv.en.OCEAN.pdf must be two pages at most; shorten cv/cv.en.OCEAN.md" >&2; exit 1; }
+[ "$(pdfinfo "$out/letter.en.OCEAN.pdf" | awk '/^Pages/ {print $2}')" = 1 ] || { echo "cv: letter.en.OCEAN.pdf must be one page; shorten cv/letter.en.OCEAN.md" >&2; exit 1; }

@@ -46,6 +46,15 @@ class Artwork(unittest.TestCase):
             missing |= {s for s in e.sequences(text) if not (ROOT / "cv/emoji" / f"{e.name(s)}.svg").exists()}
         self.assertFalse(missing, f"no artwork for {' '.join(sorted(missing))} — run: python3 cv/cvemoji.py --fetch")
 
+    def test_every_emoji_in_the_ocean_pair_has_vendored_artwork(self):
+        # cv/build.sh renders cv/cv.en.OCEAN.md and cv/letter.en.OCEAN.md through the same emoji filter
+        header = (ROOT / "cv/header.en.OCEAN.md").read_text()
+        missing = set()
+        for name in ("cv.en.OCEAN", "letter.en.OCEAN"):
+            text = p.prepare((ROOT / f"cv/{name}.md").read_text(), header)
+            missing |= {s for s in e.sequences(text) if not (ROOT / "cv/emoji" / f"{e.name(s)}.svg").exists()}
+        self.assertFalse(missing, f"no artwork for {' '.join(sorted(missing))} — run: python3 cv/cvemoji.py --fetch")
+
 
 if __name__ == "__main__":
     unittest.main()
