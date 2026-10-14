@@ -198,3 +198,20 @@ pub fn a_book_has_a_star_test() {
     !w.book || string.contains(html, "★ " <> w.name)
   })
 }
+
+pub fn the_arc_moves_with_the_reader_test() {
+  // Before the section: the start. Past it: the end. Halfway down its extra height: halfway.
+  assert app.progress(200.0, 3000.0, 1000.0) == 0.0
+  assert app.progress(-2500.0, 3000.0, 1000.0) == 1.0
+  assert app.progress(-1000.0, 3000.0, 1000.0) == 0.5
+  // A section no taller than the screen does not move.
+  assert app.progress(-50.0, 900.0, 1000.0) == 0.0
+  // The first mark at the start, the last at the end, each with its era.
+  let assert [first, ..] = content.timeline
+  let assert Ok(last) = list.last(content.timeline)
+  assert app.mark_at(0.0, 6000.0, 300.0) == #(0, first.era)
+  assert app.mark_at(1.0, 6000.0, 300.0)
+    == #(list.length(content.timeline) - 1, last.era)
+  // Halfway through a track of 20 marks of 300 px, the eleventh mark.
+  assert app.mark_at(0.5, 6000.0, 300.0).0 == 10
+}
