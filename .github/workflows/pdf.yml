@@ -1,0 +1,38 @@
+# pdf — on each pull request and each push to main: the CV's unit tests pass, the four CVs build
+# with the pinned toolchain (flake.lock) in the Nix sandbox, and the committed PDFs of pdf/ are
+# the ones their sources make (`just current`). The same shape as `pdf` of
+# marola-dev/marola-research and h0ffmann/closed-source: a fault in the CV fails the pull
+# request, and is not first seen on main. The PDFs are kept as an artifact.
+name: pdf
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths-ignore: ["metrics.*.svg"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pdf-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - name: the lock is current
+        run: nix flake metadata --no-update-lock-file >/dev/null
+      - name: the unit tests of the CV
+        run: python3 -m unittest discover -s cv
+      - name: the committed CVs are the ones their sources make
+        run: nix develop --no-update-lock-file --command just current
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv
+          path: build/cv/*.pdf
+          if-no-files-found: error

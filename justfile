@@ -1,5 +1,6 @@
-# h0ffmann. The CV is built by `nix build` (AGENTS.md). These recipes build the site of site/.
-# The tools come from picasso's gleam-website lab through flake.nix, pinned in flake.lock.
+# h0ffmann. Every check and every build has a recipe here, and CI runs the same recipes: the
+# shape of marola-dev/marola-research's and h0ffmann/closed-source's justfile. The tools come
+# from flake.nix, pinned in flake.lock.
 
 set shell := ["bash", "-euo", "pipefail", "-c"]
 
@@ -22,6 +23,25 @@ _site:
       && gleam run -m h0ffmann_site/prerender --no-print-progress > dist/index.html \
       && cp -R static/. dist/
     @echo "site: site/dist"
+
+nixb := "nix --extra-experimental-features 'nix-command flakes'"
+
+# The short CV in English (cv/summary.md, the look of the site) and the three long ones (the
+# READMEs). Commit them with the change, as marola-research commits a paper with its text.
+# Render the four CVs into pdf/.
+cv:
+    python3 -m unittest discover -s cv
+    # Built from the last commit, not from the files on disk: the short CV names that commit in
+    # its foot, and the PDFs of pdf/ would make any tree look changed. Commit the sources first.
+    git diff --quiet HEAD -- . ':!pdf' || { echo "cv: commit the sources first; the CV is built from the last commit" >&2; exit 1; }
+    {{nixb}} build --no-update-lock-file --out-link build/cv "git+file://$PWD?rev=$(git rev-parse HEAD)"
+    mkdir -p pdf && install -m 644 build/cv/*.pdf pdf/
+    @for f in pdf/*.pdf; do echo "cv: $f ($(pdfinfo "$f" 2>/dev/null | awk '/^Pages/ {print $2}') pages)"; done
+
+# The committed CVs are the ones their sources make. What CI's `pdf` runs.
+current:
+    {{nixb}} build --no-update-lock-file --out-link build/cv
+    {{nixb}} develop --no-update-lock-file --command python3 scripts/cv-current.py build/cv pdf
 
 # Every logo of the timeline still answers at its owner's address. A logo is never a file here.
 logos:
@@ -59,4 +79,5 @@ check:
     just sources
     just citation --check
     just reuse
+    python3 -m unittest discover -s cv
 

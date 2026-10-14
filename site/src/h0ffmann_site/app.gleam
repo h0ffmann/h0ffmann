@@ -56,6 +56,7 @@ pub const eras = [
   #("backend", "backend"),
   #("mlops", "MLOps"),
   #("ml", "ML"),
+  #("journey", "a journey"),
   #("sea", "back to the sea"),
   #("research", "research & FOSS"),
   #("prophecy", "a prophecy"),
@@ -804,7 +805,7 @@ fn footer() -> Element(msg) {
       ]),
       html.p([], [
         html.text(
-          "the names and logos of Stone, Broad, Signifyd, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
+          "the names and logos of LIOC, Stone, Broad, Americanas, Signifyd, ITV, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
         ),
         external("https://github.com/h0ffmann/picasso", "picasso"),
         html.text("."),

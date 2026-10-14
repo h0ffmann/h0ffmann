@@ -37,15 +37,18 @@
 
 | 時期 | | 内容 |
 |---|---|---|
-| 2007 | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | 水泳のメダルを持つ少年（associação atlética portuguesa） |
-| 2016–2017 |  | lioc（ufrj の海洋計測研究室） |
-| 2017–2019 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone：ソフトウェアエンジニア、決済 |
+| 子どもの頃 | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | associação atlética portuguesa、少年選手のクラブ |
+| 2016–2017 | <img src="https://web.archive.org/web/20250614041640im_/http://www.lioc.oceanica.ufrj.br/images/nav_logo.svg" alt="LIOC" height="24" /> | lioc（ufrj の海洋計測研究室） |
+| 2017 |  | 最初の scala：[mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis)、ufrj の授業の課題 |
+| 2017–2019 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone 🇧🇷：ソフトウェアエンジニア、決済。NASDAQ 上場、IPO の前に入社 |
 | 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad（yc w21）：シニアソフトウェアエンジニア、デジタルバンク |
-| 2021–2022 |  | elemeno ai：mlops エンジニア |
-| 2023–2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Signifyd_logo.png" alt="Signifyd" height="20" /> | signifyd：シニアソフトウェア／ml エンジニア、不正対策 |
+| 2021–2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Americanas.com_logo.svg" alt="Americanas" height="16" /> | elemeno ai 🇺🇸：mlops リード、americanas 🇧🇷（b2w）への mlops サービス |
+| 2023–2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Signifyd_logo.png" alt="Signifyd" height="20" /> | signifyd 🇺🇸：シニアソフトウェア／ml エンジニア、リスクチームと不正対策、ニューヨークへの出張も |
+| 2024 | **日本** | 日本 🇯🇵：leo と二十日間（ノートは後日） |
+| 2025–2026 | <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/ITV_logo_2013.svg" alt="ITV" height="18" /> | ITV 🇬🇧 へのコンサルティング |
 | **2025年9月** | **3** | **オーシャンマン 10 km・リオデジャネイロ 3位**（10 km は 2 回） |
 | 2025年10月 | **名残** | *nagori: sic mundus creatus est*（続報は近日） |
-| 2026 | <img src="https://raw.githubusercontent.com/marola-dev/marola/d0d576ea014335acbc190a09ce9fcbe0f89a391d/docs/assets/logo.svg" alt="marola" height="20" /> <img src="https://raw.githubusercontent.com/ouroboric-dev/ouroboric/4ab80ed2486a5e0ab0ade13e5089c2a4acdb4216/docs/7-branding/identity/logo/ouroboric-logo-horizontal.svg" alt="Ouroboric" height="16" /> | marola と ouroboric：仲間とのオープンな研究 |
+| 2026 | <img src="https://raw.githubusercontent.com/marola-dev/marola/d0d576ea014335acbc190a09ce9fcbe0f89a391d/docs/assets/logo.svg" alt="marola" height="20" /> <img src="https://raw.githubusercontent.com/ouroboric-dev/ouroboric/4ab80ed2486a5e0ab0ade13e5089c2a4acdb4216/docs/7-branding/identity/logo/ouroboric-logo-horizontal.svg" alt="Ouroboric" height="16" /> | marola 🇧🇷 と ouroboric 🇧🇷：仲間とのオープンな研究 |
 | 2027 | **?** | *ultra oceanman*：予言 |
 <!-- cv:end -->
 

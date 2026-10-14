@@ -8,7 +8,8 @@
 
 - [ ] `just check` passes (the Markdown files, the notes, the sources of the site's tables, the
       citation file, the licences).
-- [ ] `python3 -m unittest discover -s cv` passes, when a README or `cv/` changed.
+- [ ] `just cv` was run and the PDFs of `pdf/` are committed, when a README or `cv/` changed
+      (`just current` passes).
 - [ ] `just site` passes and the pictures of `site/preview/` are made again, when the site or
       the look changed.
 
