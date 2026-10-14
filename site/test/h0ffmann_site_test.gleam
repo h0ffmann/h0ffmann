@@ -215,3 +215,20 @@ pub fn the_arc_moves_with_the_reader_test() {
   // Halfway through a track of 20 marks of 300 px, the eleventh mark.
   assert app.mark_at(0.5, 6000.0, 300.0).0 == 10
 }
+
+pub fn mu_is_at_the_centre_and_tied_to_each_work_without_a_doi_test() {
+  let html = page()
+  assert string.contains(html, ">無</text>")
+  let none = app.without_doi()
+  assert none != []
+  assert list.all(none, fn(w) { w.doi == "" })
+  // one dashed tie from the centre of the graph to each work with no DOI
+  list.each(none, fn(w) {
+    assert string.contains(
+      html,
+      "M485 300 L" <> int.to_string(w.x) <> " " <> int.to_string(w.y),
+    )
+  })
+  assert list.length(string.split(html, "class=\"mu-tie")) - 1
+    == list.length(none)
+}

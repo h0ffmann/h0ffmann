@@ -442,6 +442,82 @@ pub fn standing(w: Work) -> String {
   }
 }
 
+/// 無 (mu, "nothing"), in kanji at the centre of the graph, drawn as the arc draws 名残 (nagori):
+/// the owner's word, 14 October 2026. Its tie to the DOIs: a dashed line goes from it to each
+/// work that has no DOI (site/data/works.tsv), so the works with none meet in the middle.
+pub const mu = "無"
+
+// The centre of the 1000 by 620 canvas, 15 px left and 10 px up, clear of the label of the tie
+// closed source -> picasso. marola and ww3-gpu were moved down to make room (site/data/works.tsv),
+// placed so that no tie crosses a work or 無.
+const mu_x = 485
+
+const mu_y = 300
+
+pub fn without_doi() -> List(Work) {
+  list.filter(content.works, fn(w: Work) { w.doi == "" })
+}
+
+fn mu_tie(model: Model, w: Work) -> Element(msg) {
+  // The label sits nearer the work than the middle, clear of the other ties' labels.
+  let mx = mu_x + { w.x - mu_x } * 62 / 100
+  let my = mu_y + { w.y - mu_y } * 62 / 100
+  svg.g(
+    [
+      attribute.class(case lit(model, w.topic) {
+        True -> "mu-tie"
+        False -> "mu-tie is-dim"
+      }),
+    ],
+    [
+      svg.path([
+        a(
+          "d",
+          "M"
+            <> int.to_string(mu_x)
+            <> " "
+            <> int.to_string(mu_y)
+            <> " L"
+            <> int.to_string(w.x)
+            <> " "
+            <> int.to_string(w.y),
+        ),
+      ]),
+      svg.text(
+        [
+          a("x", int.to_string(mx)),
+          a("y", int.to_string(my - 9)),
+          a("text-anchor", "middle"),
+        ],
+        t("no DOI"),
+      ),
+    ],
+  )
+}
+
+fn mu_mark() -> Element(msg) {
+  svg.g([attribute.class("mu")], [
+    svg.title([], [
+      html.text(t("無 (mu): nothing. the works with no DOI are tied to it.")),
+    ]),
+    svg.rect([
+      a("x", int.to_string(mu_x - 32)),
+      a("y", int.to_string(mu_y - 28)),
+      a("width", "64"),
+      a("height", "56"),
+      a("rx", "12"),
+    ]),
+    svg.text(
+      [
+        a("x", int.to_string(mu_x)),
+        a("y", int.to_string(mu_y + 11)),
+        a("text-anchor", "middle"),
+      ],
+      mu,
+    ),
+  ])
+}
+
 fn node_shape(model: Model, w: Work) -> Element(msg) {
   let class =
     "node topic-"
@@ -618,12 +694,18 @@ fn graph_section(model: Model) -> Element(Msg) {
             ),
           ]),
           svg.g([], list.map(content.edges, edge_shape(model, _))),
+          svg.g([], list.map(without_doi(), mu_tie(model, _))),
           svg.g([], list.map(content.works, node_shape(model, _))),
+          mu_mark(),
         ],
       ),
       html.figcaption([], [
         tx(
           "round and solid: a work of his. dashed: a friend's work, or one that is still private. a star: a book. the place of each work is set by hand, so the picture does not move between two builds.",
+        ),
+        html.text(" "),
+        tx(
+          "無 (mu), at the centre, is nothing: a dashed line goes from it to each work that has no DOI yet.",
         ),
       ]),
     ]),

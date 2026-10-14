@@ -73,7 +73,7 @@ A light may glow, like a tube of neon: a soft shadow of its own colour.
 | the name and the headings | Bricolage Grotesque, 800 or 600 | `h1`, `h2`, the name of a work, a counter |
 | the story | Newsreader | every sentence |
 | data | JetBrains Mono | a date, a hash, a DOI, a count's label, the labels of the graph |
-| a word in its own script | Noto Serif JP | 名残 |
+| a word in its own script | Noto Serif JP | 名残 in the arc, 無 at the centre of the graph |
 
 - **Lower case**, as in picasso's README: headings, buttons, the story. An acronym keeps its
   capitals (DOI, FOSS, MLOps, UFRJ), and so does a name that is written with one (Stone, Broad).
@@ -87,6 +87,10 @@ A light may glow, like a tube of neon: a soft shadow of its own colour.
 
 ## Shapes
 
+- **無 (mu, "nothing") is the centre of the graph** (the owner, 14 October 2026), in kanji and
+  drawn as the arc draws 名残: green, in a rounded square. A dashed muted line, labelled "no DOI",
+  goes from it to each work of `site/data/works.tsv` that has no DOI; when a work gets one, its
+  line goes away by itself.
 - **Round.** Buttons, the nodes of the graph and the chips of an era are pills. A panel has a
   large radius. There is no sharp card.
 - **A line, not a box.** A list is set apart by a rule or by a light on its left edge, not by a
