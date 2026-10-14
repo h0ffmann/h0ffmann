@@ -21,20 +21,18 @@ offers.
 
 ## the arc
 
-backend, then mlops, then ml, then back to the sea: research and foss.
-
 ::: arc
 - [2026]{.data} **[marola](https://marola.dev)** and
   **[Ouroboric](https://github.com/ouroboric-dev)** (BR): open research, with friends.
 - [2025–2026]{.data} **[ITV](https://www.itv.com)** (UK): consulting services, for one year.
 - [2023–2024]{.data} **[Signifyd](https://www.signifyd.com)** (US): senior software and ml
-  engineer, fraud-fighting with the risk team, in New York for the work.
-- [2021–2022]{.data} **[Elemeno AI](https://github.com/elemeno-ai)** (US): lead mlops, mlops
-  services to Americanas (BR).
+  engineer, fraud-fighting. in New York for the work.
+- [2021–2022]{.data} **[Elemeno AI](https://github.com/elemeno-ai)** (US): lead mlops, for
+  Americanas (BR).
 - [2020]{.data} **[Broad](https://www.ycombinator.com/companies/broad)** (YC W21): senior software
   engineer, a digital bank.
-- [2017–2019]{.data} **[Stone](https://www.stone.com.br)** (BR, listed on NASDAQ): software
-  engineer, payments. i joined before the IPO.
+- [2017–2019]{.data} **[Stone](https://www.stone.com.br)** (BR, NASDAQ): software engineer,
+  payments. joined before the IPO.
 - [2016–2017]{.data} **[LIOC](http://www.lioc.oceanica.ufrj.br)**: the ocean instrumentation lab
   of UFRJ.
 :::

@@ -50,6 +50,8 @@ pandoc "$here/cv/summary.md" --from markdown --to pdf --pdf-engine=lualatex \
   --lua-filter "$here/cv/site.lua" -H "$tmp/cv.vars.tex" -H "$here/cv/site.tex" \
   -V documentclass=article -V fontsize=10pt -V lang=en-US -o "$out/cv.pdf"
 echo "cv: $out/cv.pdf ($(pdfinfo "$out/cv.pdf" | awk '/^Pages/ {print $2}') pages)"
+# The short CV is one page (DESIGN.md, "The CV"). A second page is a fault of the summary.
+[ "$(pdfinfo "$out/cv.pdf" | awk '/^Pages/ {print $2}')" = 1 ] || { echo "cv: the short CV must be one page; shorten cv/summary.md" >&2; exit 1; }
 
 # The long CVs: each README, in the look of cv/preamble.tex.
 build README.md       header.md       cv.full.pdf  en-US "Matheus Hoffmann — CV, the long form" \
