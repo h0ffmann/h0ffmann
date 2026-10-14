@@ -63,7 +63,7 @@ a proposal: a WeatherBench for brazil, scored against buoys.
 ::: {.work .ideas}
 **[nashkell](https://h0ffmann.github.io/nashkell/)** [10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739){.data}
 
-an open book in progress: game theory, pictures that are equations, a mask of Latin.
+an open book in progress, on game theory.
 :::
 
 ::: {.work .ideas}
@@ -82,7 +82,7 @@ not peer reviewed.
 ::: {.work .ouroboric}
 **[self-improving apps](https://github.com/ouroboric-dev)**
 
-writing and doing research for ouroboric-dev: open factories that improve themselves.
+research for ouroboric-dev: factories that improve themselves.
 :::
 ::::
 
