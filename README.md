@@ -9,6 +9,8 @@
 
 <sub><b>the aquatic prometheus</b> · the art of the maintenance of apps · <a href="https://h0ffmann.github.io/h0ffmann/">the site</a></sub>
 
+<sub>the stack now: <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> and <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a></sub>
+
 [![marola: DOI 10.5281/zenodo.23224155](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23224155)
 [![ww3-gpu: DOI 10.5281/zenodo.23221351](https://img.shields.io/badge/ww3--gpu-10.5281%2Fzenodo.23221351-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23221351)
 [![picasso: DOI 10.5281/zenodo.23311208](https://img.shields.io/badge/picasso-10.5281%2Fzenodo.23311208-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23311208)
@@ -39,9 +41,9 @@ a kid athlete → the university → backend → mlops → ml → back to the se
 |---|---|---|
 | as a kid | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | the associação atlética portuguesa, the club of a kid athlete |
 | 2016–2017 | <img src="https://web.archive.org/web/20250614041640im_/http://www.lioc.oceanica.ufrj.br/images/nav_logo.svg" alt="LIOC" height="24" /> | lioc, the ocean instrumentation lab of ufrj |
-| 2017 |  | the first scala: [mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis), a course project at ufrj |
+| 2017 | <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Scala-full-color.svg" alt="Scala" height="18" /> | the first scala: [mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis), a course project at ufrj |
 | 2017–2019 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone 🇧🇷: software engineer, payments. listed on NASDAQ; i joined before the IPO |
-| 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad (yc w21): senior software engineer, a digital bank |
+| 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad 🇬🇧 (yc w21): senior software engineer, a digital bank. nine months, until the closed beta |
 | 2021–2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Americanas.com_logo.svg" alt="Americanas" height="16" /> | elemeno ai 🇺🇸: lead mlops, mlops services to americanas 🇧🇷 (b2w) |
 | 2023–2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Signifyd_logo.png" alt="Signifyd" height="20" /> | signifyd 🇺🇸: senior software and ml engineer, fraud-fighting with the risk team, and a trip to new york |
 | 2024 | **日本** | japan 🇯🇵: twenty days, with leo (notes later) |
@@ -49,7 +51,7 @@ a kid athlete → the university → backend → mlops → ml → back to the se
 | **sep 2025** | **3** | **3rd place, oceanman 10 km, rio de janeiro** (2× the 10 km) |
 | oct 2025 | **名残** | *nagori: sic mundus creatus est* (news soon) |
 | 2026 | <img src="https://raw.githubusercontent.com/marola-dev/marola/d0d576ea014335acbc190a09ce9fcbe0f89a391d/docs/assets/logo.svg" alt="marola" height="20" /> <img src="https://raw.githubusercontent.com/ouroboric-dev/ouroboric/4ab80ed2486a5e0ab0ade13e5089c2a4acdb4216/docs/7-branding/identity/logo/ouroboric-logo-horizontal.svg" alt="Ouroboric" height="16" /> | marola 🇧🇷 and ouroboric 🇧🇷: open research, with friends |
-| 2027 | **?** | *ultra oceanman*: a prophecy |
+| 2027 | **33?** | *ultra oceanman*: a prophecy |
 <!-- cv:end -->
 
 ## 🌊 marola

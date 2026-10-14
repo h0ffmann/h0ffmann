@@ -50,6 +50,7 @@ first. Run `just check` before you open one.
 | `just site`, `just logos` | the site builds and its tests pass; every logo still answers | `site / build` |
 | `python3 -m unittest discover -s cv` | the READMEs' markers, and that the short CV says nothing the profile does not | `pdf / build` |
 | `just current` | the four CVs build with the pinned toolchain, and the committed PDFs are the ones their sources make | `pdf / build` |
+| `just featured`, `just linkedin` | `FEATURED_REPO.md` is read again from GitHub (the counts, the commits, the commit each repository was reviewed at) and `LINKEDIN_PROJECTS.md` is derived from it ([`DERIVATION.md`](DERIVATION.md)). The list is `site/data/featured.tsv`; never edit the two generated files | `.md / quality` runs the two `--check`s |
 | `just cv` | renders the four CVs into `pdf/`. Run it and commit the PDFs when a README, `cv/` or the flake changed | `cv`, on `main`, renders them again with the commit of `main` |
 
 - **Notes and journal.** When a change stands on an idea, write a note in `notes/`. When it met

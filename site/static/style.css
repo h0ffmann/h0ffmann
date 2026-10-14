@@ -234,3 +234,9 @@ a.node:focus-visible { outline: none; }
 .questions a { display: inline-block; margin-top: 14px; font: 500 14px/1.3 var(--data); color: inherit; text-decoration-color: currentColor; overflow-wrap: anywhere; }
 .questions a:hover { color: #fff; }
 @media (max-width: 900px) { .questions { grid-template-columns: 1fr; } }
+
+/* The stack now: two names with their owners' icons, as on the site of closed source. */
+.made-with { margin-top: 22px; font: 400 16px/1.6 var(--text); color: var(--ink); }
+.made-with b { font: 500 14px/1.5 var(--data); color: var(--water); }
+.made-with a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+.made-with img { vertical-align: -3px; background: #fff; border-radius: 5px; padding: 1px; }

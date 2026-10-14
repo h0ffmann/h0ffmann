@@ -29,7 +29,7 @@ offers.
   engineer, fraud-fighting. in New York for the work.
 - [2021–2022]{.data} **[Elemeno AI](https://github.com/elemeno-ai)** (US): lead mlops, for
   Americanas (BR).
-- [2020]{.data} **[Broad](https://www.ycombinator.com/companies/broad)** (YC W21): senior software
+- [2020]{.data} **[Broad](https://www.ycombinator.com/companies/broad)** (UK, YC W21): senior software
   engineer, a digital bank.
 - [2017–2019]{.data} **[Stone](https://www.stone.com.br)** (BR, NASDAQ): software engineer,
   payments. joined before the IPO.
