@@ -696,11 +696,49 @@ fn history_section() -> Element(msg) {
       ),
     ]),
     html.ol([attribute.class("snapshots")], list.map(content.history, row)),
+    // The stack now, as the README's header says it since 14 October 2026, and as the site of
+    // h0ffmann/closed-source says it in its footer: the two names, each with its owner's icon.
+    html.p([attribute.class("made-with")], [
+      html.b([], [html.text("the stack now: ")]),
+      made_with("Gleam", gleam_icon, "https://gleam.run"),
+      html.text(" and "),
+      made_with(
+        "Claude Code",
+        claude_code_icon,
+        "https://claude.com/claude-code",
+      ),
+      html.text(". this page is made with both."),
+    ]),
+  ])
+}
+
+// Each project's own icon, loaded from where the project publishes it and never copied here:
+// the same two addresses as the footer of h0ffmann/closed-source's site.
+const gleam_icon =
+  "https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg"
+
+const claude_code_icon =
+  "https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png"
+
+fn made_with(name: String, icon: String, href: String) -> Element(msg) {
+  html.a([attribute.href(href), attribute.rel("noopener")], [
+    html.img([
+      attribute.src(icon),
+      attribute.alt(""),
+      attribute.width(18),
+      attribute.height(18),
+    ]),
+    html.text(" " <> name),
   ])
 }
 
 fn logo_of(title: String) -> Element(msg) {
-  case list.find(content.timeline, fn(e: Event) { e.title == title }) {
+  // A title may carry a flag after the name ("marola 🇧🇷"), so the name is its start.
+  case
+    list.find(content.timeline, fn(e: Event) {
+      e.title == title || string.starts_with(e.title, title <> " ")
+    })
+  {
     Ok(e) ->
       html.a([attribute.href(e.href), attribute.rel("noopener")], [
         html.img([
@@ -805,7 +843,7 @@ fn footer() -> Element(msg) {
       ]),
       html.p([], [
         html.text(
-          "the names and logos of LIOC, Scala, Stone, Broad, Americanas, Signifyd, ITV, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
+          "the names and logos of LIOC, Scala, Stone, Broad, Americanas, Signifyd, ITV, Gleam, Claude Code, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
         ),
         external("https://github.com/h0ffmann/picasso", "picasso"),
         html.text("."),

@@ -148,3 +148,10 @@ pub fn a_link_to_the_site_has_a_preview_test() {
   assert string.contains(html, "property=\"og:image:width\"")
   assert string.contains(html, "summary_large_image")
 }
+
+// The two friends' logos are found by name, and a name may have a flag after it on the arc.
+pub fn the_logos_of_marola_and_ouroboric_stand_with_the_friends_test() {
+  let html = page()
+  assert string.contains(html, "alt=\"marola\"")
+  assert string.contains(html, "alt=\"Ouroboric\"")
+}
