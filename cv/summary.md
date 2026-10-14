@@ -31,7 +31,8 @@ offers.
   Americanas (BR).
 - [2020]{.data} **[Broad](https://www.ycombinator.com/companies/broad)** (UK, YC W21): senior software
   engineer, a digital bank.
-- [2017–2019]{.data} **[Stone](https://www.stone.com.br)** (BR, NASDAQ): software engineer,
+- [2019–2020]{.data} **iUPay and Guiabolso** (BR): a PIX engine, before the government's own.
+- [2017–2018]{.data} **[Stone](https://www.stone.com.br)** (BR, NASDAQ): software engineer,
   payments. joined before the IPO.
 - [2010–2020]{.data} **[CEFET/RJ](https://www.cefet-rj.br)**, electronics technician; then
   **[UFRJ](https://ufrj.br)**, with **[LIOC](http://www.lioc.oceanica.ufrj.br)**, its ocean lab.
