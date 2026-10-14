@@ -250,3 +250,8 @@ a.node:focus-visible { outline: none; }
 .tongue:hover { color: var(--ink); border-color: var(--muted); }
 .tongue[aria-pressed="true"] { color: var(--night); background: var(--ink); border-color: var(--ink); }
 .tongue:focus-visible { outline: 2px solid var(--water); outline-offset: 3px; }
+
+/* The forks: the index's list, with the word PUBLIC in the heading kept in capitals. */
+.forks .says a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+.forks .mark { display: inline-block; margin: 0 8px 4px 0; padding: 1px 8px; border: 1px solid var(--rule); border-radius: 999px; font: 400 12px/1.6 var(--data); color: var(--muted); }
+.forks .says a { font: inherit; font-weight: 500; }

@@ -6,7 +6,8 @@ import gleam/int
 import gleam/list
 import gleam/string
 import h0ffmann_site/content.{
-  type Edge, type Event, type Friend, type Repo, type Snapshot, type Work,
+  type Edge, type Event, type Fork, type Friend, type Repo, type Snapshot,
+  type Work,
 }
 import lustre/attribute.{type Attribute}
 import lustre/effect.{type Effect}
@@ -125,7 +126,9 @@ pub fn view(model: Model) -> Element(Msg) {
       arc_section(),
       graph_section(model),
       index_section(model),
+      forks_section(),
       numbers_section(),
+      stars_section(),
       history_section(),
       friends_section(),
       ways_section(),
@@ -210,7 +213,9 @@ fn cover(model: Model) -> Element(Msg) {
       link("#arc", "the arc"),
       link("#graph", "the works"),
       link("#index", "everything"),
+      link("#forks", "forks"),
       link("#numbers", "numbers"),
+      link("#stars", "stars"),
       link("#history", "the readme"),
       link("#friends", "friends"),
       link("#ways", "how i work"),
@@ -603,6 +608,65 @@ fn index_section(model: Model) -> Element(msg) {
   ])
 }
 
+/// Every fork under his name. "PUBLIC" stays in capitals: the owner's word, 14 October 2026, and
+/// the one exception to the page's lower case (DESIGN.md, "Type").
+fn forks_section() -> Element(msg) {
+  html.section([], [
+    head(
+      "forks",
+      "forks, a PUBLIC inventory",
+      external(
+        content.repo <> "/blob/main/site/data/forks.tsv",
+        "the list, with its date",
+      ),
+    ),
+    html.p([attribute.class("prose")], [
+      tx("every fork under his name: "),
+      html.text(int.to_string(list.length(content.forks))),
+      tx(
+        ". each one is PUBLIC, because GitHub keeps a fork of a public repository public. a fork is a copy of somebody else's work, kept to read it, to study it, or to send something back. each line names where it came from, the day he forked it, and the year the project began.",
+      ),
+    ]),
+    html.ul(
+      [attribute.class("index forks")],
+      list.map(content.forks, fn(f: Fork) {
+        html.li([], [
+          // Two marks: the day he forked it, and the year the project itself began.
+          html.span([attribute.class("year")], [
+            html.text(string.slice(f.forked, 0, 4)),
+          ]),
+          html.a([attribute.href(f.href), attribute.rel("noopener")], [
+            html.span([attribute.class("owner")], [tx("h0ffmann/")]),
+            tx(f.name),
+          ]),
+          html.span([attribute.class("says")], [
+            html.span([attribute.class("mark")], [
+              tx("forked "),
+              html.text(f.forked),
+            ]),
+            html.span([attribute.class("mark")], [
+              tx("started "),
+              html.text(f.started),
+            ]),
+            tx("from "),
+            html.a(
+              [
+                attribute.href("https://github.com/" <> f.parent),
+                attribute.rel("noopener"),
+              ],
+              [html.text(f.parent)],
+            ),
+            case f.description {
+              "" -> element.none()
+              d -> html.text(". " <> d)
+            },
+          ]),
+        ])
+      }),
+    ),
+  ])
+}
+
 /// A workflow of this repository: its name as GitHub shows it, its file, and what it does.
 pub type Check {
   Check(name: String, file: String, does: String)
@@ -642,6 +706,46 @@ fn counter(value: String, label: String, class: String) -> Element(msg) {
 
 /// The numbers, and the state of what makes this page: counted by the metrics workflow each
 /// day, read from its two cards when the page is built.
+/// What he reads: the topics of the repositories he starred, drawn like the languages.
+fn stars_section() -> Element(msg) {
+  let top = case content.star_topics {
+    [#(_, n), ..] -> n
+    [] -> 1
+  }
+  html.section([], [
+    head(
+      "stars",
+      "stars, by topic",
+      external(
+        content.repo <> "/blob/main/site/data/stars.tsv",
+        "the count, with its date",
+      ),
+    ),
+    html.p([attribute.class("prose")], [
+      tx("the repositories he starred on GitHub: "),
+      html.text(int.to_string(content.stars)),
+      tx(". "),
+      html.text(int.to_string(content.stars_with_topics)),
+      tx(
+        " of them carry topics that their owners set. each bar is how many starred repositories carry that topic. a star is a bookmark, not a vote: it says what he keeps to read.",
+      ),
+    ]),
+    html.ul(
+      [attribute.class("languages stars")],
+      list.map(content.star_topics, fn(t) {
+        let share = int.to_string(t.1 * 100 / top) <> "%"
+        html.li([], [
+          html.span([attribute.class("name")], [html.text(t.0)]),
+          html.span([attribute.class("bar")], [
+            html.span([attribute.style("width", share)], []),
+          ]),
+          html.span([attribute.class("share")], [html.text(int.to_string(t.1))]),
+        ])
+      }),
+    ),
+  ])
+}
+
 fn numbers_section() -> Element(msg) {
   let owners = list.map(content.repos, fn(r: Repo) { r.owner }) |> list.unique
   let badge = fn(c: Check) {
