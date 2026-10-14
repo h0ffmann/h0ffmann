@@ -36,9 +36,6 @@ offers.
   **[UFRJ](https://ufrj.br)**, with **[LIOC](http://www.lioc.oceanica.ufrj.br)**, its ocean lab.
 :::
 
-the whole story, with the knowledge graph of the works, is on
-[the site](https://h0ffmann.github.io/h0ffmann/).
-
 ## the works, each with a DOI
 
 :::: works
