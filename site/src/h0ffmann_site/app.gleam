@@ -255,6 +255,15 @@ fn cover(model: Model) -> Element(Msg) {
             ],
             [tx("cv (PDF)")],
           ),
+          // The research CV for the ocean, in English (the owner, 14 October 2026).
+          html.a(
+            [
+              attribute.class("button quiet"),
+              attribute.href(content.repo <> "/blob/main/pdf/cv.en.OCEAN.pdf"),
+              attribute.rel("noopener"),
+            ],
+            [tx("cv-water (PDF)")],
+          ),
         ]),
       ]),
       html.span(
