@@ -39,9 +39,9 @@
 |---|---|---|
 | 子どもの頃 | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | associação atlética portuguesa、少年選手のクラブ |
 | 2016–2017 | <img src="https://web.archive.org/web/20250614041640im_/http://www.lioc.oceanica.ufrj.br/images/nav_logo.svg" alt="LIOC" height="24" /> | lioc（ufrj の海洋計測研究室） |
-| 2017 |  | 最初の scala：[mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis)、ufrj の授業の課題 |
+| 2017 | <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Scala-full-color.svg" alt="Scala" height="18" /> | 最初の scala：[mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis)、ufrj の授業の課題 |
 | 2017–2019 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone 🇧🇷：ソフトウェアエンジニア、決済。NASDAQ 上場、IPO の前に入社 |
-| 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad（yc w21）：シニアソフトウェアエンジニア、デジタルバンク |
+| 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad（yc w21）：シニアソフトウェアエンジニア、デジタルバンク。クローズドベータまでの九か月 |
 | 2021–2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Americanas.com_logo.svg" alt="Americanas" height="16" /> | elemeno ai 🇺🇸：mlops リード、americanas 🇧🇷（b2w）への mlops サービス |
 | 2023–2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Signifyd_logo.png" alt="Signifyd" height="20" /> | signifyd 🇺🇸：シニアソフトウェア／ml エンジニア、リスクチームと不正対策、ニューヨークへの出張も |
 | 2024 | **日本** | 日本 🇯🇵：leo と二十日間（ノートは後日） |

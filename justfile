@@ -43,6 +43,17 @@ current:
     {{nixb}} build --no-update-lock-file --out-link build/cv
     {{nixb}} develop --no-update-lock-file --command python3 scripts/cv-current.py build/cv pdf
 
+# Read the featured repositories again from GitHub: the counts, the commits and the commit each
+# one was reviewed at. The list is site/data/featured.tsv. It needs `gh`, signed in.
+# Write FEATURED_REPO.md. `just featured --check` only looks for each row.
+featured *args:
+    python3 scripts/featured.py {{args}}
+
+# One text for each featured repository, sized for LinkedIn's "Projects" (DERIVATION.md).
+# Write LINKEDIN_PROJECTS.md. `just linkedin --check` fails when it is stale.
+linkedin *args:
+    python3 scripts/linkedin-projects.py {{args}}
+
 # Every logo of the timeline still answers at its owner's address. A logo is never a file here.
 logos:
     for u in $(grep -v '^#' site/data/timeline.tsv | cut -f6 | grep -E '^https://' | sort -u); do code="$(curl -s -o /dev/null -L --max-time 30 -A 'Mozilla/5.0' -w '%{http_code}' "$u")"; [ "$code" = 200 ] || { echo "logos: $code $u" >&2; exit 1; }; done
@@ -80,4 +91,6 @@ check:
     just citation --check
     just reuse
     python3 -m unittest discover -s cv
+    just featured --check
+    just linkedin --check
 

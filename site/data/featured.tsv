@@ -1,0 +1,31 @@
+# The featured repositories: the curated list that FEATURED_REPO.md is made from (`just featured`).
+# The owner chooses the rows and their order. area: water | ideas | ouroboric | closed (DESIGN.md, the four lights).
+# with: who the work is made with, when it is not the owner's alone. source: who chose the row, and when.
+# owner	name	area	with	source
+h0ffmann	closed-source	closed		the owner's works (site/data/works.tsv)
+h0ffmann	picasso	ideas		the owner's works (site/data/works.tsv)
+h0ffmann	ww3-gpu	water		the owner's works (site/data/works.tsv)
+h0ffmann	nashkell	ideas		the owner's works (site/data/works.tsv)
+h0ffmann	h0ffmann	ideas		this repository; the owner, 14 October 2026: "a curated list of repositories"
+h0ffmann	mdd-risk-analysis	ideas	two friends	the arc, "the first scala" (site/data/timeline.tsv)
+marola-dev	marola	water	five friends	the owner, 14 October 2026: "All of h0ffmann + marola-dev + ouroboric-dev"
+marola-dev	marola-app	water	five friends	the owner, 14 October 2026
+marola-dev	marola-site	water	five friends	the owner, 14 October 2026
+marola-dev	marola-ml	water	five friends	the owner, 14 October 2026
+marola-dev	marola-research	water		the owner, 14 October 2026
+marola-dev	marola-corpus	water	five friends	the owner, 14 October 2026
+marola-dev	marola-oods	water	five friends	the owner, 14 October 2026
+marola-dev	marola-devkit	water	five friends	the owner, 14 October 2026
+marola-dev	marola-skills	water	five friends	the owner, 14 October 2026
+marola-dev	marola-agents	water	five friends	the owner, 14 October 2026
+marola-dev	awesome-ocean-science	water		the owner, 14 October 2026
+ouroboric-dev	ouroboric	ouroboric	Bruno Valério	the owner, 14 October 2026: "ouroboric-dev with Bruno Valerio"
+ouroboric-dev	yggdrasil	ouroboric	Bruno Valério	the owner, 14 October 2026
+ouroboric-dev	havamal	ouroboric	Bruno Valério	the owner, 14 October 2026
+ouroboric-dev	odin	ouroboric	Bruno Valério	the owner, 14 October 2026
+ouroboric-dev	gleipnir	ouroboric	Bruno Valério	the owner, 14 October 2026
+ouroboric-dev	jormungandr	ouroboric	Bruno Valério	the owner, 14 October 2026
+ouroboric-dev	gungnir	ouroboric	Bruno Valério	the owner, 14 October 2026
+ouroboric-dev	realm-web	ouroboric	Bruno Valério	the owner, 14 October 2026
+ouroboric-dev	asgard	ouroboric	Bruno Valério	the owner, 14 October 2026
+ouroboric-dev	ouroboric-packages	ouroboric	Bruno Valério	the owner, 14 October 2026
