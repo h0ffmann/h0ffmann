@@ -35,11 +35,13 @@ engenheiro de software sênior e pesquisador júnior com **8 anos** de experiên
 <!-- cv:skip -->
 ## 🧭 trajetória
 
-um menino atleta → a universidade → backend → mlops → ml → de volta ao mar → **pesquisa e foss**. a história inteira, com o grafo de conhecimento dos trabalhos, está **[no site](https://h0ffmann.github.io/h0ffmann/)**.
+um menino atleta → a escola técnica → a universidade → backend → mlops → ml → de volta ao mar → **pesquisa e foss**. a história inteira, com o grafo de conhecimento dos trabalhos, está **[no site](https://h0ffmann.github.io/h0ffmann/)**.
 
 | quando | | o quê |
 |---|---|---|
 | quando criança | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | a associação atlética portuguesa, o clube de um menino atleta |
+| 2010–2012 | <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Logotipo_cefet-rj.jpg" alt="CEFET/RJ" height="22" /> | cefet/rj: técnico em eletrônica. um matemático naqueles anos |
+| 2013–2020 | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Minerva_UFRJ_Oficial.png/250px-Minerva_UFRJ_Oficial.png" alt="UFRJ" height="26" /> | ufrj, a universidade federal do rio de janeiro (escola politécnica) |
 | 2016–2017 | <img src="https://web.archive.org/web/20250614041640im_/http://www.lioc.oceanica.ufrj.br/images/nav_logo.svg" alt="LIOC" height="24" /> | lioc, o laboratório de instrumentação oceânica da ufrj |
 | 2017 | <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Scala-full-color.svg" alt="Scala" height="18" /> | o primeiro scala: [mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis), um trabalho de disciplina na ufrj |
 | 2017–2019 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone 🇧🇷: engenheiro de software, pagamentos. listada na NASDAQ; entrei antes do IPO |
@@ -51,6 +53,7 @@ um menino atleta → a universidade → backend → mlops → ml → de volta ao
 | **set 2025** | **3** | **3º lugar, oceanman 10 km, rio de janeiro** (2× os 10 km) |
 | out 2025 | **名残** | *nagori: sic mundus creatus est* (novidades em breve) |
 | 2026 | <img src="https://raw.githubusercontent.com/marola-dev/marola/d0d576ea014335acbc190a09ce9fcbe0f89a391d/docs/assets/logo.svg" alt="marola" height="20" /> <img src="https://raw.githubusercontent.com/ouroboric-dev/ouroboric/4ab80ed2486a5e0ab0ade13e5089c2a4acdb4216/docs/7-branding/identity/logo/ouroboric-logo-horizontal.svg" alt="Ouroboric" height="16" /> | marola 🇧🇷 e ouroboric 🇧🇷: pesquisa aberta, com amigos |
+| 2026 | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Minerva_UFRJ_Oficial.png/250px-Minerva_UFRJ_Oficial.png" alt="UFRJ" height="26" /> | de volta à ufrj: [ww3-gpu](https://h0ffmann.github.io/ww3-gpu/), o projeto de graduação. o DOI final na UFRJ? |
 | 2027 | **33?** | *ultra oceanman*: uma profecia |
 <!-- cv:end -->
 
