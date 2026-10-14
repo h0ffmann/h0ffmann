@@ -45,7 +45,7 @@ um menino atleta → a escola técnica → a universidade → backend → mlops 
 | 2016–2017 | <img src="https://web.archive.org/web/20250614041640im_/http://www.lioc.oceanica.ufrj.br/images/nav_logo.svg" alt="LIOC" height="24" /> | lioc, o laboratório de instrumentação oceânica da ufrj |
 | 2017 | <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Scala-full-color.svg" alt="Scala" height="18" /> | o primeiro scala: [mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis), um trabalho de disciplina na ufrj |
 | 2017–2018 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone 🇧🇷: engenheiro de software, pagamentos. listada na NASDAQ; entrei antes do IPO |
-| 2019–2020 |  | iupay e guiabolso 🇧🇷: um motor de PIX, oito meses antes de o governo ter o seu; lançado no guiabolso (hoje picpay) |
+| 2019–2020 |  | [iupay](https://www.iupay.com.br) e guiabolso 🇧🇷: um motor de PIX, oito meses antes de o governo ter o seu; lançado no guiabolso (hoje picpay) |
 | 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad 🇬🇧 (yc w21): engenheiro de software sênior, um banco digital. nove meses, até o beta fechado |
 | 2021–2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Americanas.com_logo.svg" alt="Americanas" height="16" /> | elemeno ai 🇺🇸: líder de mlops, serviços de mlops para a americanas 🇧🇷 (b2w) |
 | 2023–2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Signifyd_logo.png" alt="Signifyd" height="20" /> | signifyd 🇺🇸: engenheiro sênior de software e ml, combate a fraudes com o time de risco, e uma viagem a nova york |
@@ -54,7 +54,6 @@ um menino atleta → a escola técnica → a universidade → backend → mlops 
 | **set 2025** | **3** | **3º lugar, oceanman 10 km, rio de janeiro** (2× os 10 km) |
 | out 2025 | **名残** | *nagori: sic mundus creatus est* (novidades em breve) |
 | 2026 | <img src="https://raw.githubusercontent.com/marola-dev/marola/d0d576ea014335acbc190a09ce9fcbe0f89a391d/docs/assets/logo.svg" alt="marola" height="20" /> <img src="https://raw.githubusercontent.com/ouroboric-dev/ouroboric/4ab80ed2486a5e0ab0ade13e5089c2a4acdb4216/docs/7-branding/identity/logo/ouroboric-logo-horizontal.svg" alt="Ouroboric" height="16" /> | marola 🇧🇷 e ouroboric 🇧🇷: pesquisa aberta, com amigos |
-| 2026 | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Minerva_UFRJ_Oficial.png/250px-Minerva_UFRJ_Oficial.png" alt="UFRJ" height="26" /> | de volta à ufrj: [ww3-gpu](https://h0ffmann.github.io/ww3-gpu/), o projeto de graduação. o DOI final na UFRJ? |
 | 2027 | **33?** | *ultra oceanman*: uma profecia |
 <!-- cv:end -->
 

@@ -63,7 +63,11 @@ pages='^https://h0ffmann\.github\.io/h0ffmann/'
 if [ "$online" = 1 ]; then
   echo "md-quality: links: lychee on ${#all[@]} files, web links too" >&2
   web() {
+    # Two requests at a time to one host, half a second apart: this repository has many links to
+    # github.com, and github.com answers 500 and 503 to a checker that asks too fast (14 October
+    # 2026: three runs failed that way, on links that were alive).
     lychee --no-progress --include-fragments --max-concurrency 6 --max-retries 4 --retry-wait-time 5 \
+      --host-concurrency 2 --host-request-interval 500ms \
       --timeout 30 --cache --max-cache-age 1h --accept 200,403,405,429,999 \
       --exclude "$pages" "${all[@]}" >&2
   }
