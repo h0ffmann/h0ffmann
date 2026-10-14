@@ -24,7 +24,7 @@ offers.
 ::: arc
 - [2026]{.data} **[marola](https://marola.dev)** and
   **[Ouroboric](https://github.com/ouroboric-dev)** (BR): open research, with friends.
-- [2025–2026]{.data} **[ITV](https://www.itv.com)** (UK): consulting services, for one year.
+- [2025–2026]{.data} **[ITV](https://www.itvplc.com)** (UK): consulting services, for one year.
 - [2023–2024]{.data} **[Signifyd](https://www.signifyd.com)** (US): senior software and ml
   engineer, fraud-fighting. in New York for the work.
 - [2021–2022]{.data} **[Elemeno AI](https://github.com/elemeno-ai)** (US): lead mlops, for
