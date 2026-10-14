@@ -100,8 +100,11 @@ not Ouroboric.
 - A logo is its owner's. It is never a file here, never recoloured and never given a glow.
 - It sits on a white chip with round corners, so that it keeps its own colours on the dark
   page.
-- Where an owner's page gives no file that a secure page can load, the row has no logo and
-  shows a plain mark. Do not draw a look-alike.
+- A logo that its owner drew in light colours, for a dark ground, sits on a dark chip with a
+  rule around it, and is larger (`mark: wide`). It is still not recoloured. LIOC's is the one.
+- Where an owner's page cannot be loaded by a secure page, the logo loads from the Internet
+  Archive's copy of the owner's own file, at a fixed date. Where there is no such copy, the
+  row has no logo and shows a plain mark. Do not draw a look-alike.
 
 ## Motion
 

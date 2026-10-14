@@ -38,7 +38,7 @@ um menino atleta → a universidade → backend → mlops → ml → de volta ao
 | quando | | o quê |
 |---|---|---|
 | quando criança | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | a associação atlética portuguesa, o clube de um menino atleta |
-| 2016–2017 |  | lioc, o laboratório de instrumentação oceânica da ufrj |
+| 2016–2017 | <img src="https://web.archive.org/web/20250614041640im_/http://www.lioc.oceanica.ufrj.br/images/nav_logo.svg" alt="LIOC" height="24" /> | lioc, o laboratório de instrumentação oceânica da ufrj |
 | 2017 |  | o primeiro scala: [mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis), um trabalho de disciplina na ufrj |
 | 2017–2019 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone 🇧🇷: engenheiro de software, pagamentos. listada na NASDAQ; entrei antes do IPO |
 | 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad (yc w21): engenheiro de software sênior, um banco digital |
