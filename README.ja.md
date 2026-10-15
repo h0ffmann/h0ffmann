@@ -17,7 +17,7 @@
 | ww3-gpu | [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351) | [h0ffmann.github.io/ww3-gpu](https://h0ffmann.github.io/ww3-gpu/) |
 | picasso | [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208) | [h0ffmann.github.io/picasso](https://h0ffmann.github.io/picasso/) |
 | closed source | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | [h0ffmann.github.io/closed-source](https://h0ffmann.github.io/closed-source/) |
-| marola-bench | [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633) | — |
+| marola-bench | [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633) | [marola-dev.github.io/marola-research/marola-bench](https://marola-dev.github.io/marola-research/marola-bench/) |
 | nashkell | [10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739) | [h0ffmann.github.io/nashkell](https://h0ffmann.github.io/nashkell/) |
 | ouroboric | — | — |
 | this profile | [10.5281/zenodo.23352630](https://doi.org/10.5281/zenodo.23352630) | [h0ffmann.github.io/h0ffmann](https://h0ffmann.github.io/h0ffmann/) |

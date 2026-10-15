@@ -55,7 +55,7 @@ bit for bit on serial, openmp and cuda.
 :::
 
 ::: {.work .water}
-**[marola-bench](https://github.com/marola-dev/marola-research/tree/main/marola-bench)** [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633){.data}
+**[marola-bench](https://marola-dev.github.io/marola-research/marola-bench/)** [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633){.data}
 
 a proposal: a WeatherBench for brazil, scored against buoys.
 :::
