@@ -88,9 +88,8 @@ A light may glow, like a tube of neon: a soft shadow of its own colour.
 ## Shapes
 
 - **無 (mu, "nothing") is the centre of the graph** (the owner, 14 October 2026), in kanji and
-  drawn as the arc draws 名残: green, in a rounded square. A dashed muted line, labelled "no DOI",
-  goes from it to each work of `site/data/works.tsv` that has no DOI; when a work gets one, its
-  line goes away by itself.
+  in a rounded square. It is orange and tied to no work: no line goes from it (the owner,
+  15 October 2026).
 - **Round.** Buttons, the nodes of the graph and the chips of an era are pills. A panel has a
   large radius. There is no sharp card.
 - **A line, not a box.** A list is set apart by a rule or by a light on its left edge, not by a
