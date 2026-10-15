@@ -8,6 +8,6 @@ nashkell	nashkell	ideas	own	10.5281/zenodo.23356739	https://h0ffmann.github.io/n
 ouroboric	ouroboric	ouroboric	friend		https://github.com/ouroboric-dev/ouroboric	CC-BY-4.0	840	180	open factories that improve themselves. bruno valério's.	work
 ww3-gpu	ww3-gpu	water	own	10.5281/zenodo.23221351	https://h0ffmann.github.io/ww3-gpu/	MIT	150	480	a bit-for-bit GPU port of the WAVEWATCH III wave model.	work
 marola	marola	water	own	10.5281/zenodo.23224155	https://marola.dev	MIT	420	380	sea conditions and bathing-water quality for brazilian beaches. with five friends.	work
-marola-bench	marola-bench	water	own	10.5281/zenodo.23352633	https://github.com/marola-dev/marola-research/tree/main/marola-bench	all rights reserved	850	400	a proposal: a WeatherBench for brazil, scored against buoys.	work
+marola-bench	marola-bench	water	own	10.5281/zenodo.23352633	https://marola-dev.github.io/marola-research/marola-bench/	all rights reserved	850	400	a proposal: a WeatherBench for brazil, scored against buoys.	work
 picasso	picasso	ideas	own	10.5281/zenodo.23311208	https://github.com/h0ffmann/picasso	AGPL-3.0-only	600	545	nix flakes that pin every toolchain the other works build with.	work
 nagori	nagori	ideas	private			private	870	560	the second brain. private, for now.	work
