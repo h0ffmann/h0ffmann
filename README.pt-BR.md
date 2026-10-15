@@ -11,13 +11,16 @@
 
 <sub>a stack agora: <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> e <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a></sub>
 
-[![marola: DOI 10.5281/zenodo.23224155](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23224155)
-[![ww3-gpu: DOI 10.5281/zenodo.23221351](https://img.shields.io/badge/ww3--gpu-10.5281%2Fzenodo.23221351-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23221351)
-[![picasso: DOI 10.5281/zenodo.23311208](https://img.shields.io/badge/picasso-10.5281%2Fzenodo.23311208-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23311208)
-[![closed source: DOI 10.5281/zenodo.23333656](https://img.shields.io/badge/closed%20source-10.5281%2Fzenodo.23333656-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23333656)
-[![marola-bench: DOI 10.5281/zenodo.23352633](https://img.shields.io/badge/marola--bench-10.5281%2Fzenodo.23352633-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23352633)
-[![nashkell: DOI 10.5281/zenodo.23356739](https://img.shields.io/badge/nashkell-10.5281%2Fzenodo.23356739-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.23356739)
-[![this profile: DOI 10.5281/zenodo.23352630](https://img.shields.io/badge/this%20profile-10.5281%2Fzenodo.23352630-111111?style=flat-square)](https://doi.org/10.5281/zenodo.23352630)
+| obra | DOI | site |
+|---|---|---|
+| **marola** | [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155) | [marola.dev](https://marola.dev) |
+| ww3-gpu | [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351) | [h0ffmann.github.io/ww3-gpu](https://h0ffmann.github.io/ww3-gpu/) |
+| picasso | [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208) | [h0ffmann.github.io/picasso](https://h0ffmann.github.io/picasso/) |
+| closed source | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | [h0ffmann.github.io/closed-source](https://h0ffmann.github.io/closed-source/) |
+| marola-bench | [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633) | — |
+| nashkell | [10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739) | [h0ffmann.github.io/nashkell](https://h0ffmann.github.io/nashkell/) |
+| ouroboric | — | — |
+| this profile | [10.5281/zenodo.23352630](https://doi.org/10.5281/zenodo.23352630) | [h0ffmann.github.io/h0ffmann](https://h0ffmann.github.io/h0ffmann/) |
 
 </div>
 <!-- cv:end -->
