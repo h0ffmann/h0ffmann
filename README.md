@@ -15,6 +15,7 @@
 |---|---|---|
 | **marola** | [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155) | [marola.dev](https://marola.dev) |
 | ww3-gpu | [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351) | [h0ffmann.github.io/ww3-gpu](https://h0ffmann.github.io/ww3-gpu/) |
+| [ww3-dia-gpu-v2](https://github.com/h0ffmann/ww3-dia-gpu-v2) | — | — |
 | picasso | [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208) | [h0ffmann.github.io/picasso](https://h0ffmann.github.io/picasso/) |
 | closed source | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | [h0ffmann.github.io/closed-source](https://h0ffmann.github.io/closed-source/) |
 | marola-bench | [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633) | [marola-dev.github.io/marola-research/marola-bench](https://marola-dev.github.io/marola-research/marola-bench/) |
