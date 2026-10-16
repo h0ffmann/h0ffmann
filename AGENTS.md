@@ -149,9 +149,10 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   `cv/test_emoji.py` covers their emoji like the READMEs'.
 - `pdf/cv.pt-BR.OCEAN.pdf` – the **formal CV in Portuguese** for the same audience, two pages at
   most, **generated** the same way from `cv/cv.pt-BR.OCEAN.md` and the letterhead
-  `cv/header.pt-BR.OCEAN.md`. Plain, formal pt-BR (the `humanizar` filter). Its research section
-  is ww3-gpu alone, in depth, each result with the ww3-gpu commit it was read at; the other five
-  DOIs are one line near the end (hard rule 2). Its LIOC entry carries the glider, the ROV and the
+  `cv/header.pt-BR.OCEAN.md`. Plain, formal pt-BR (humanizer-pt-br, the `translate-pt-br`
+  skill's pin). Its profile follows the English one's shape. Its research section is ww3-gpu and
+  marola, two bullets each, with the commit counts and the commits they were read at; the other
+  four DOIs are one line near the end (hard rule 2). Its LIOC entry carries the glider, the ROV and the
   GSM (2G) tracking of boats, the owner's word of 16 October 2026. No README links it.
 - `5MINUTE.md` – the profile in five headings, one minute each, in English only. It is not
   built into the CV and no README links to it. Every fact in it comes from `README.md` or

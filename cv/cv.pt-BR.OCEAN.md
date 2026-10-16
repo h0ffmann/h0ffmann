@@ -1,56 +1,54 @@
 ## Perfil
 
-Engenheiro de software e de machine learning com sistemas de previsão em produção desde 2017: previsão de perdas numa plataforma de
-prevenção a fraude, previsão de churn numa empresa de pagamentos e previsão de audiência numa
-emissora de TV. Desde 2026 essa prática se volta para o mar. A pesquisa atual é o porte do modelo
-de ondas WAVEWATCH III (WW3) para GPU sem mudar a resposta do modelo, bit a bit, como projeto final
-de graduação na Escola Politécnica da UFRJ, com coorientação no LabECO/UFSC. Antes da indústria,
-dois anos de iniciação científica no Laboratório de Instrumentação Oceanográfica (LIOC) da
-COPPE/UFRJ, com veículos submarinos e rastreamento de embarcações.
+Engenheiro de software e de machine learning. Desde 2017 construo sistemas de previsão que rodam
+em produção, junto com as plataformas de dados e de MLOps que os sustentam: previsão de perdas numa
+plataforma antifraude de e-commerce, de churn numa empresa de pagamentos e de audiência numa
+emissora de TV. Em 2026 levei esse trabalho para o mar: o porte bit a bit do modelo de ondas
+WAVEWATCH III para GPU, uma plataforma aberta que transforma dados públicos de mar, tempo e
+balneabilidade num sinal diário para três cidades do litoral brasileiro, e a proposta de um
+benchmark nacional que compara previsões de ondas com medições de instrumentos. Antes da
+indústria, passei dois anos no Laboratório de Instrumentação Oceanográfica da COPPE/UFRJ. Para um
+grupo de pesquisa em oceanografia, contribuo com modelagem numérica de ondas em GPU, pipelines
+operacionais de previsão com verificação embutida e infraestrutura que reúne e padroniza
+observações de várias fontes. Trabalho com ciência aberta: cada trabalho abaixo tem DOI,
+repositório público e ambiente de compilação fixado e reprodutível.
 
 ## Pesquisa
 
 **ww3-gpu** · Hoffmann, M. (2026). *WW3 GPU Lab: agentic coding and agentic research on a bit-for-bit
 GPU port of WAVEWATCH III.* Software, v0.1.3.
 DOI [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)
-<a href="https://github.com/h0ffmann/ww3-gpu"><img src="https://img.shields.io/badge/GitHub-h0ffmann%2Fww3--gpu-181717?style=flat-square" alt="GitHub: h0ffmann/ww3-gpu" /></a>\
-Os números abaixo foram lidos no repositório no commit
-[`1cb9f78`](https://github.com/h0ffmann/ww3-gpu/commit/1cb9f78) (16/10/2026).
+<a href="https://github.com/h0ffmann/ww3-gpu"><img src="https://img.shields.io/badge/GitHub-h0ffmann%2Fww3--gpu-181717?style=flat-square" alt="GitHub: h0ffmann/ww3-gpu" /></a>
 
-- **Problema.** Levar para GPU os núcleos mais caros do WW3, modelo espectral de terceira geração,
-  sem alterar a física. O ponto de partida é um perfil gprof medido no próprio repositório: no caso
-  `bench_small` (grade 120 x 80, 9 520 pontos de mar, 12 h de simulação, WW3 no commit `6d1bcdfe`),
-  o termo de interação não linear entre quatro ondas (W3SNL1, aproximação DIA) ocupa 48,4 % do
-  tempo próprio, a dissipação W3SDS4 ocupa 23,2 % e a entrada de vento W3SIN4, 12,7 %. A ordem do
-  porte segue esse tempo medido.
-- **Método.** Tradução literal do Fortran para C++/Kokkos (Serial, OpenMP e CUDA com o mesmo
-  código), sem reordenar somas, sem trocar limitadores e com contração desligada
-  (`-ffp-contract=off`, `--fmad=false`). O WW3 vem de um fork, `h0ffmann/WW3`, que só acrescenta
-  uma interface `bind(C)` e escolhe em tempo de execução entre o Fortran original e o Kokkos
-  (`WW_KOKKOS_SNL1`). A validação usa somente os regtests do próprio WW3, comparados com `test.comp`
-  e `nccmp-tol` (decisão ADR-0010, commit
-  [`a59625a`](https://github.com/h0ffmann/ww3-gpu/commit/a59625a)). A toolchain Fortran, MPI e
-  NetCDF é fixada em Nix.
-- **Resultado do W3SNL1.** Dentro do executável do WW3, na CPU (OpenMP), o DIA em Kokkos dá os
-  mesmos bytes que o Fortran: 0 arquivo diferente no `test.comp` nas 100 entradas da matriz de
-  regtests ([`7fd6bb2`](https://github.com/h0ffmann/ww3-gpu/commit/7fd6bb2)) e nas 25 entradas com
-  OpenMP de memória compartilhada ([`f32640c`](https://github.com/h0ffmann/ww3-gpu/commit/f32640c));
-  diferença relativa máxima de `hs` igual a 0 em 119 652 valores. A última diferença, de cerca de
-  1e-7 relativo em `hs`, vinha das tabelas do INSNL1: com `-O3`, o gfortran calcula `x**11` como
-  `x5*x6`, e o porte usava a cadeia de `-O0`, que termina em `x3*x8`. A correção está no commit
-  [`e305841`](https://github.com/h0ffmann/ww3-gpu/commit/e305841).
-- **Estado do porte.** Há tradução para Kokkos de 184 das 1 023 rotinas do WW3, que somam 99,3 %
-  do tempo de execução do perfil; o WW3 chama o código Kokkos em 10 rotinas (87,4 % do tempo); e
-  duas rotinas (W3SNL1 e INSNL1, 48,4 % do tempo) passaram nos regtests. O W3SRCE, com W3SLN1,
-  W3SBT1 e W3SDB1, foi traduzido no commit
-  [`a052f82`](https://github.com/h0ffmann/ww3-gpu/commit/a052f82) e ainda espera o seu regtest.
-- **Medidas.** O núcleo do DIA isolado, com 1 000 pontos por chamada (i9-14900 e RTX 4090, mediana
-  de três execuções), leva 25,88 ms em Serial, 5,95 ms em OpenMP com 32 threads e 0,75 ms em CUDA;
-  só o kernel CUDA leva 0,047 ms, e o resto é cópia de memória da fase 1. Dentro do WW3, com uma
-  thread, a fase 1 ainda é mais lenta que o Fortran (`bench_small`: 217,9 s contra 152,7 s), porque
-  copia o espectro a cada chamada. Nenhum ganho de velocidade é declarado antes da fase 2, com o
-  espectro residente na GPU, e nenhuma execução do WW3 na GPU foi feita ainda.
-- **Publicação.** Código aberto e livro em 17 lições sobre o porte; v0.1.0 a v0.1.3 no Zenodo.
+- 520 commits no `main` até [`febad48`](https://github.com/h0ffmann/ww3-gpu/commit/febad48)
+  (16/10/2026). Projeto final de graduação na Escola Politécnica da UFRJ, com coorientação no
+  LabECO/UFSC: porte do WW3 para C++/Kokkos que reproduz o Fortran bit a bit e é validado só pelos
+  regtests do próprio WW3. O termo de interação não linear DIA (W3SNL1), 48,4 % do tempo no perfil
+  medido, dá os mesmos bytes que o Fortran nas 100 entradas da matriz de regtests e nas 25 com
+  OpenMP (commits [`e305841`](https://github.com/h0ffmann/ww3-gpu/commit/e305841),
+  [`7fd6bb2`](https://github.com/h0ffmann/ww3-gpu/commit/7fd6bb2) e
+  [`f32640c`](https://github.com/h0ffmann/ww3-gpu/commit/f32640c)).
+- Estado em `febad48`: 269 das 1 023 rotinas do WW3 traduzidas (99,3 % do tempo de execução), 10
+  chamadas pelo WW3 (87,4 %) e 2 aprovadas nos regtests (48,4 %). O núcleo DIA isolado leva
+  25,88 ms em Serial, 5,95 ms em OpenMP e 0,75 ms em CUDA numa RTX 4090; dentro do WW3 ainda não há
+  ganho de tempo, e o modelo ainda não rodou em GPU.
+
+**marola** · Hoffmann, M., Valério, B., Soares da Silva Junior, R. K., Oliveira, E., Almeida, L. R. e
+Ribeiro, P. (2026). *marola: an open, non-profit platform for sea conditions and bathing-water quality
+at Brazilian beaches, built on public data.* Software, v0.2.2.
+DOI [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
+<a href="https://github.com/marola-dev/marola"><img src="https://img.shields.io/badge/GitHub-marola--dev%2Fmarola-181717?style=flat-square" alt="GitHub: marola-dev/marola" /></a>
+
+- Classifica as praias de Florianópolis, Rio de Janeiro e Salvador para hoje e amanhã, a partir de
+  previsões de mar, vento, ondas e maré e dos boletins oficiais de balneabilidade de três órgãos
+  estaduais; regras simples, e não um modelo, decidem o que envolve a segurança de quem nada. Seis
+  autores em três países; 545 commits no repositório principal até
+  [`09208c7`](https://github.com/marola-dev/marola/commit/09208c7) (16/10/2026).
+- Repositórios principais (commits em 14/10/2026): **marola-app**, o produto em Scala 3 e Kyo
+  (pipeline, servidor MCP, benchmark; 171); **marola-ml**, compilação de prompts com DSPy,
+  fine-tuning do modelo marola-sea e portão de benchmark (79); **marola-site**, o mapa em
+  marola.dev (106); **marola-corpus**, conhecimento oceânico com fontes (21); **marola-devkit**,
+  hooks, plugin do Claude Code e workflows (167); **marola-research**, onde está o marola-bench (16).
 
 ## Experiência
 
@@ -58,10 +56,7 @@ Os números abaixo foram lidos no repositório no commit
 
 *Setembro de 2026 – atual · Florianópolis, Brasil*
 
-- Plataforma aberta e sem fins lucrativos que classifica as praias de Florianópolis, Rio de Janeiro
-  e Salvador para hoje e amanhã, a partir de previsões de mar, vento, ondas e maré e dos boletins
-  oficiais de balneabilidade de três órgãos estaduais; regras simples, e não um modelo, decidem tudo
-  o que envolve a segurança de quem nada. Seis autores, em três países
+- Instituto oceanográfico sem fins lucrativos; mantenho a plataforma marola, descrita em Pesquisa
 
 ### Engenheiro Sênior de Machine Learning Operations (MLOps), TXP / ITV
 
@@ -170,5 +165,5 @@ Oceanman Rio de Janeiro: 3º lugar na faixa de 30 a 39 anos, 10 km em águas abe
 funcionários (fevereiro de 2024).
 
 ```{=latex}
-{\small\color{muted}Outras obras com DOI: \emph{marola} (\href{https://doi.org/10.5281/zenodo.23224155}{\mbox{10.5281/zenodo.23224155}}); \emph{marola-bench} (\href{https://doi.org/10.5281/zenodo.23352633}{\mbox{10.5281/zenodo.23352633}}); \emph{picasso} (\href{https://doi.org/10.5281/zenodo.23311208}{\mbox{10.5281/zenodo.23311208}}); \emph{Closed Source: The God that Failed} (\href{https://doi.org/10.5281/zenodo.23333656}{\mbox{10.5281/zenodo.23333656}}); \emph{Nashkell: Rhizomatic experiments} (\href{https://doi.org/10.5281/zenodo.23356739}{\mbox{10.5281/zenodo.23356739}}).\par}
+{\small\color{muted}Outras obras com DOI: \emph{marola-bench} (\href{https://doi.org/10.5281/zenodo.23352633}{\mbox{10.5281/zenodo.23352633}}); \emph{picasso} (\href{https://doi.org/10.5281/zenodo.23311208}{\mbox{10.5281/zenodo.23311208}}); \emph{Closed Source: The God that Failed} (\href{https://doi.org/10.5281/zenodo.23333656}{\mbox{10.5281/zenodo.23333656}}); \emph{Nashkell: Rhizomatic experiments} (\href{https://doi.org/10.5281/zenodo.23356739}{\mbox{10.5281/zenodo.23356739}}).\par}
 ```
