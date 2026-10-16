@@ -1,16 +1,14 @@
 ## Perfil
 
-Engenheiro de software e de machine learning, com sistemas de previsão em produção desde 2017 e as
-plataformas de dados e de MLOps que os sustentam: previsão de perdas numa plataforma antifraude de
-e-commerce, de churn numa empresa de pagamentos e de audiência numa emissora de TV. Em 2026 esse
-trabalho passou para o mar: o porte bit a bit do modelo de ondas WAVEWATCH III para GPU, uma
-plataforma aberta que transforma dados públicos de mar, tempo e balneabilidade num sinal diário
-para três cidades do litoral brasileiro, e a proposta de um benchmark nacional que compara
-previsões de ondas com medições de instrumentos. Antes da indústria, foram dois anos no
-Laboratório de Instrumentação Oceanográfica da COPPE/UFRJ. Para um grupo de pesquisa em
-oceanografia, a contribuição está em modelagem numérica de ondas em GPU, pipelines operacionais
-de previsão com verificação embutida e infraestrutura que reúne e padroniza observações de várias
-fontes. Prática de ciência aberta: cada trabalho abaixo tem DOI, repositório público e ambiente de
+Engenheiro de software e de machine learning, trabalhando com sistemas de previsão desde 2017:
+churn numa empresa de pagamentos, perdas numa plataforma antifraude de e-commerce e audiência numa
+emissora de TV, sempre com as plataformas de dados e de MLOps que mantêm esses sistemas em
+produção. Desde 2026, esse trabalho se volta para a previsão do mar: o porte bit a bit do modelo de
+ondas WAVEWATCH III para GPU, uma plataforma aberta que transforma dados públicos de mar, tempo e
+balneabilidade num sinal diário para três cidades do litoral brasileiro, e a proposta de um
+benchmark nacional que compara previsões de ondas com medições de instrumentos. A ligação com a
+oceanografia vem de antes, de dois anos de iniciação científica no Laboratório de Instrumentação
+Oceanográfica da COPPE/UFRJ. Cada trabalho abaixo tem DOI, repositório público e ambiente de
 compilação fixado e reprodutível.
 
 ## Pesquisa
@@ -38,8 +36,8 @@ DOI [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
   decidem o que envolve a segurança de quem nada. Seis autores em três países; 545 commits no
   repositório principal até [`09208c7`](https://github.com/marola-dev/marola/commit/09208c7)
   (16/10/2026). Repositórios principais (commits em 14/10/2026): **marola-app**, o produto em
-  Scala 3 e Kyo (171); **marola-ml**, DSPy e fine-tuning do marola-sea (79); **marola-site**, o
-  mapa em marola.dev (106); **marola-devkit**, hooks e plugin do Claude Code (167);
+  Scala 3 e Kyo (171); **marola-ml**, o marolaGPT, baseado no modelo brasileiro Tucano2
+  (79); **marola-site**, o mapa em marola.dev (106); **marola-devkit**, hooks e plugin do Claude Code (167);
   **marola-corpus** (21); **marola-research**, com o marola-bench (16).
 
 ## Experiência
