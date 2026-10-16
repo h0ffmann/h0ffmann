@@ -73,6 +73,12 @@ build cv/cv.en.OCEAN.md     header.en.OCEAN.md cv.en.OCEAN.pdf     en-US "Matheu
 build cv/letter.en.OCEAN.md header.en.OCEAN.md letter.en.OCEAN.pdf en-US "Matheus Hoffmann — Presentation letter" \
   "Matheus Hoffmann — presentation letter" \
   '\AtBeginDocument{\newgeometry{margin=22mm,top=16mm,bottom=18mm}\setmainfont{DejaVu Sans}[Scale=1.0]\setlength{\parskip}{8pt}}'
+# pt-BR.OCEAN: the same formal CV in Portuguese, written by hand in cv/cv.pt-BR.OCEAN.md, with its
+# own research section (ww3-gpu only) and the letterhead cv/header.pt-BR.OCEAN.md.
+build cv/cv.pt-BR.OCEAN.md  header.pt-BR.OCEAN.md cv.pt-BR.OCEAN.pdf  pt-BR "Matheus Hoffmann — Currículo" \
+  "Matheus Hoffmann — currículo — \\href{https://github.com/h0ffmann/h0ffmann}{github.com/h0ffmann}" \
+  '\AtBeginDocument{\newgeometry{margin=16mm,top=12mm,bottom=14mm}\setmainfont{DejaVu Sans}[Scale=0.92]\setlength{\parskip}{3pt}}'
 pages="$(pdfinfo "$out/cv.en.OCEAN.pdf" | awk '/^Pages/ {print $2}')"
 [ "$pages" -le 2 ] || { echo "cv: cv.en.OCEAN.pdf must be two pages at most; shorten cv/cv.en.OCEAN.md" >&2; exit 1; }
 [ "$(pdfinfo "$out/letter.en.OCEAN.pdf" | awk '/^Pages/ {print $2}')" = 1 ] || { echo "cv: letter.en.OCEAN.pdf must be one page; shorten cv/letter.en.OCEAN.md" >&2; exit 1; }
+[ "$(pdfinfo "$out/cv.pt-BR.OCEAN.pdf" | awk '/^Pages/ {print $2}')" -le 2 ] || { echo "cv: cv.pt-BR.OCEAN.pdf must be two pages at most; shorten cv/cv.pt-BR.OCEAN.md" >&2; exit 1; }
