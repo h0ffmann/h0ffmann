@@ -150,9 +150,10 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 - `pdf/cv.pt-BR.OCEAN.pdf` – the **formal CV in Portuguese** for the same audience, two pages at
   most, **generated** the same way from `cv/cv.pt-BR.OCEAN.md` and the letterhead
   `cv/header.pt-BR.OCEAN.md`. Plain, formal pt-BR (humanizer-pt-br, the `translate-pt-br`
-  skill's pin). Its profile follows the English one's shape. Its research section is ww3-gpu and
-  marola, two bullets each, with the commit counts and the commits they were read at; the other
-  four DOIs are one line near the end (hard rule 2). Its LIOC entry carries the glider, the ROV and the
+  skill's pin). Its profile follows the English one's shape, with no first person. Its research section is
+  ww3-gpu and marola, one bullet each, with the commit counts and the commits they were read at;
+  the final project is said there only, not again under education. The other four DOIs are one
+  line near the end (hard rule 2). Its LIOC entry carries the glider, the ROV and the
   GSM (2G) tracking of boats, the owner's word of 16 October 2026. No README links it.
 - `5MINUTE.md` – the profile in five headings, one minute each, in English only. It is not
   built into the CV and no README links to it. Every fact in it comes from `README.md` or

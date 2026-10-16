@@ -20,18 +20,12 @@ GPU port of WAVEWATCH III.* Software, v0.1.3.
 DOI [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)
 <a href="https://github.com/h0ffmann/ww3-gpu"><img src="https://img.shields.io/badge/GitHub-h0ffmann%2Fww3--gpu-181717?style=flat-square" alt="GitHub: h0ffmann/ww3-gpu" /></a>
 
-- 520 commits no `main` até [`febad48`](https://github.com/h0ffmann/ww3-gpu/commit/febad48)
+- 541 commits no `main` até [`f83aa0c`](https://github.com/h0ffmann/ww3-gpu/commit/f83aa0c)
   (16/10/2026). Projeto final de graduação na Escola Politécnica da UFRJ, com coorientação no
-  LabECO/UFSC: porte do WW3 para C++/Kokkos que reproduz o Fortran bit a bit e é validado só pelos
-  regtests do próprio WW3. O termo de interação não linear DIA (W3SNL1), 48,4 % do tempo no perfil
-  medido, dá os mesmos bytes que o Fortran nas 100 entradas da matriz de regtests e nas 25 com
-  OpenMP (commits [`e305841`](https://github.com/h0ffmann/ww3-gpu/commit/e305841),
-  [`7fd6bb2`](https://github.com/h0ffmann/ww3-gpu/commit/7fd6bb2) e
-  [`f32640c`](https://github.com/h0ffmann/ww3-gpu/commit/f32640c)).
-- Estado em `febad48`: 269 das 1 023 rotinas do WW3 traduzidas (99,3 % do tempo de execução), 10
-  chamadas pelo WW3 (87,4 %) e 2 aprovadas nos regtests (48,4 %). O núcleo DIA isolado leva
-  25,88 ms em Serial, 5,95 ms em OpenMP e 0,75 ms em CUDA numa RTX 4090; dentro do WW3 ainda não há
-  ganho de tempo, e o modelo ainda não rodou em GPU.
+  LabECO/UFSC: porte do WW3 para C++/Kokkos que reproduz o Fortran bit a bit, validado pelos
+  regtests do próprio WW3. Traduzidas: 293 de 1 023 rotinas (53 004 de 263 375 linhas de Fortran,
+  20,1 %). Chamadas pelo WW3: 10 rotinas (1,0 %), como prova de conceito. Porte concluído, com
+  regtest: 2 rotinas (W3SNL1 e INSNL1, 0,2 %), que respondem por 48,4 % do tempo de execução.
 
 **marola** · Hoffmann, M., Valério, B., Soares da Silva Junior, R. K., Oliveira, E., Almeida, L. R. e
 Ribeiro, P. (2026). *marola: an open, non-profit platform for sea conditions and bathing-water quality
@@ -39,24 +33,16 @@ at Brazilian beaches, built on public data.* Software, v0.2.2.
 DOI [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
 <a href="https://github.com/marola-dev/marola"><img src="https://img.shields.io/badge/GitHub-marola--dev%2Fmarola-181717?style=flat-square" alt="GitHub: marola-dev/marola" /></a>
 
-- Classifica as praias de Florianópolis, Rio de Janeiro e Salvador para hoje e amanhã, a partir de
-  previsões de mar, vento, ondas e maré e dos boletins oficiais de balneabilidade de três órgãos
-  estaduais; regras simples, e não um modelo, decidem o que envolve a segurança de quem nada. Seis
-  autores em três países; 545 commits no repositório principal até
-  [`09208c7`](https://github.com/marola-dev/marola/commit/09208c7) (16/10/2026).
-- Repositórios principais (commits em 14/10/2026): **marola-app**, o produto em Scala 3 e Kyo
-  (pipeline, servidor MCP, benchmark; 171); **marola-ml**, compilação de prompts com DSPy,
-  fine-tuning do modelo marola-sea e portão de benchmark (79); **marola-site**, o mapa em
-  marola.dev (106); **marola-corpus**, conhecimento oceânico com fontes (21); **marola-devkit**,
-  hooks, plugin do Claude Code e workflows (167); **marola-research**, onde está o marola-bench (16).
+- Classifica as praias de Florianópolis, Rio de Janeiro e Salvador a partir de previsões de mar,
+  vento, ondas e maré e dos boletins oficiais de balneabilidade; regras simples, e não um modelo,
+  decidem o que envolve a segurança de quem nada. Seis autores em três países; 545 commits no
+  repositório principal até [`09208c7`](https://github.com/marola-dev/marola/commit/09208c7)
+  (16/10/2026). Repositórios principais (commits em 14/10/2026): **marola-app**, o produto em
+  Scala 3 e Kyo (171); **marola-ml**, DSPy e fine-tuning do marola-sea (79); **marola-site**, o
+  mapa em marola.dev (106); **marola-devkit**, hooks e plugin do Claude Code (167);
+  **marola-corpus** (21); **marola-research**, com o marola-bench (16).
 
 ## Experiência
-
-### Fundador, marola.dev
-
-*Setembro de 2026 – atual · Florianópolis, Brasil*
-
-- Instituto oceanográfico sem fins lucrativos; responsável pela plataforma marola, descrita em Pesquisa
 
 ### Engenheiro Sênior de Machine Learning Operations (MLOps), TXP / ITV
 
@@ -138,9 +124,7 @@ DOI [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
 
 *2013 – atual · Rio de Janeiro, Brasil*
 
-Projeto final em andamento: otimização do modelo de ondas WAVEWATCH III em GPU, com o LabECO/UFSC
-([github.com/h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu)). Temas principais: engenharia
-de software, big data e HPC.
+Temas principais: engenharia de software, big data e HPC.
 
 ### Técnico em Eletrônica, Centro Federal de Educação Tecnológica CEFET/RJ
 
