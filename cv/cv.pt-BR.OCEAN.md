@@ -1,17 +1,17 @@
 ## Perfil
 
-Engenheiro de software e de machine learning. Desde 2017 construo sistemas de previsão que rodam
-em produção, junto com as plataformas de dados e de MLOps que os sustentam: previsão de perdas numa
-plataforma antifraude de e-commerce, de churn numa empresa de pagamentos e de audiência numa
-emissora de TV. Em 2026 levei esse trabalho para o mar: o porte bit a bit do modelo de ondas
-WAVEWATCH III para GPU, uma plataforma aberta que transforma dados públicos de mar, tempo e
-balneabilidade num sinal diário para três cidades do litoral brasileiro, e a proposta de um
-benchmark nacional que compara previsões de ondas com medições de instrumentos. Antes da
-indústria, passei dois anos no Laboratório de Instrumentação Oceanográfica da COPPE/UFRJ. Para um
-grupo de pesquisa em oceanografia, contribuo com modelagem numérica de ondas em GPU, pipelines
-operacionais de previsão com verificação embutida e infraestrutura que reúne e padroniza
-observações de várias fontes. Trabalho com ciência aberta: cada trabalho abaixo tem DOI,
-repositório público e ambiente de compilação fixado e reprodutível.
+Engenheiro de software e de machine learning, com sistemas de previsão em produção desde 2017 e as
+plataformas de dados e de MLOps que os sustentam: previsão de perdas numa plataforma antifraude de
+e-commerce, de churn numa empresa de pagamentos e de audiência numa emissora de TV. Em 2026 esse
+trabalho passou para o mar: o porte bit a bit do modelo de ondas WAVEWATCH III para GPU, uma
+plataforma aberta que transforma dados públicos de mar, tempo e balneabilidade num sinal diário
+para três cidades do litoral brasileiro, e a proposta de um benchmark nacional que compara
+previsões de ondas com medições de instrumentos. Antes da indústria, foram dois anos no
+Laboratório de Instrumentação Oceanográfica da COPPE/UFRJ. Para um grupo de pesquisa em
+oceanografia, a contribuição está em modelagem numérica de ondas em GPU, pipelines operacionais
+de previsão com verificação embutida e infraestrutura que reúne e padroniza observações de várias
+fontes. Prática de ciência aberta: cada trabalho abaixo tem DOI, repositório público e ambiente de
+compilação fixado e reprodutível.
 
 ## Pesquisa
 
@@ -56,24 +56,24 @@ DOI [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
 
 *Setembro de 2026 – atual · Florianópolis, Brasil*
 
-- Instituto oceanográfico sem fins lucrativos; mantenho a plataforma marola, descrita em Pesquisa
+- Instituto oceanográfico sem fins lucrativos; responsável pela plataforma marola, descrita em Pesquisa
 
 ### Engenheiro Sênior de Machine Learning Operations (MLOps), TXP / ITV
 
 *Julho de 2025 – agosto de 2026 · Londres, Reino Unido (remoto)*
 
-- Reestruturei um pipeline de previsão de audiência de um só canal numa plataforma de ML
-  multicanal, e estendi as previsões para ITV2, ITV3 e ITV Quiz
-- Fui responsável pelo pipeline de ponta a ponta, da ingestão à previsão publicada: AWS Glue,
+- Reestruturação de um pipeline de previsão de audiência de um só canal numa plataforma de ML
+  multicanal, com as previsões estendidas para ITV2, ITV3 e ITV Quiz
+- Responsável pelo pipeline de ponta a ponta, da ingestão à previsão publicada: AWS Glue,
   Amazon SageMaker e MLflow, orquestrados no Apache Airflow (MWAA), servidos pelo Amazon DynamoDB
 
 ### Engenheiro Sênior de ML II (L5), Signifyd (pela aquisição da Legiti, março de 2023)
 
 *Junho de 2022 – novembro de 2024 · San Jose, CA, EUA (remoto)*
 
-- Previsão de perdas: reduzi o tempo de experimentação do modelo em 93 % (de 16 horas para 1 hora),
+- Previsão de perdas: redução de 93 % no tempo de experimentação do modelo (de 16 horas para 1 hora),
   com a refatoração do código de simulação, multithreading e a troca de pandas por PySpark
-- Reduzi em 77 % o tempo e o custo do cálculo de features em lote, do PostgreSQL para PySpark no
+- Redução de 77 % no tempo e no custo do cálculo de features em lote, do PostgreSQL para PySpark no
   Databricks
 - Detecção de anomalias para análise de risco de fraude no Databricks (Unity Catalog, Delta Lake,
   MLflow, PySpark MLlib)
@@ -82,7 +82,7 @@ DOI [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
 
 *Junho de 2021 – julho de 2022 · San Francisco, CA, EUA (remoto)*
 
-- Projetei e construí uma plataforma de MLOps inteiramente de código aberto para as Americanas
+- Projeto e construção de uma plataforma de MLOps inteiramente de código aberto para as Americanas
   (BVMF: AMER3): Kubeflow (KServe, Katib), MinIO, ArgoCD e GitLab CI no Google Kubernetes Engine,
   provisionados com Terraform e Helm; três repositórios abertos em
   [github.com/elemeno-ai](https://github.com/elemeno-ai)
@@ -105,8 +105,8 @@ DOI [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)
 
 *Outubro de 2017 – abril de 2019 · Rio de Janeiro, Brasil (remoto)*
 
-- Previsão de churn: migrei modelos de redes bayesianas para XGBoost/LightGBM no Apache Spark
-- Reduzi em 35 % o custo logístico da troca de operadora móvel das maquininhas de cartão de crédito, com um
+- Previsão de churn: migração de modelos de redes bayesianas para XGBoost/LightGBM no Apache Spark
+- Redução de 35 % no custo logístico da troca de operadora móvel das maquininhas de cartão de crédito, com um
   sistema de recomendação baseado em qualidade de sinal e proximidade geográfica
 
 ### Iniciação científica, LIOC – Laboratório de Instrumentação Oceanográfica, COPPE/UFRJ
