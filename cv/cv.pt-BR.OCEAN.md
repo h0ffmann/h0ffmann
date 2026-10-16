@@ -145,7 +145,3 @@ Português (nativo), inglês (C1, fluente), espanhol (leitura).
 Oceanman Rio de Janeiro: 3º lugar na faixa de 30 a 39 anos, 10 km em águas abertas (setembro de
 2025). Prêmio "Values VIP: Tenacious" da Signifyd por excelência técnica, por votação dos
 funcionários (fevereiro de 2024).
-
-```{=latex}
-{\small\color{muted}Outras obras com DOI: \emph{marola-bench} (\href{https://doi.org/10.5281/zenodo.23352633}{\mbox{10.5281/zenodo.23352633}}); \emph{picasso} (\href{https://doi.org/10.5281/zenodo.23311208}{\mbox{10.5281/zenodo.23311208}}); \emph{Closed Source: The God that Failed} (\href{https://doi.org/10.5281/zenodo.23333656}{\mbox{10.5281/zenodo.23333656}}); \emph{Nashkell: Rhizomatic experiments} (\href{https://doi.org/10.5281/zenodo.23356739}{\mbox{10.5281/zenodo.23356739}}).\par}
-```
