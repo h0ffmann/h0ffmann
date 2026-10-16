@@ -1,14 +1,12 @@
 ## Perfil
 
-Engenheiro de software e de machine learning com experiência em sistemas de previsão em produção desde 2017 e nas
-plataformas de dados e de MLOps que os mantêm de pé: previsão de perdas numa plataforma de
+Engenheiro de software e de machine learning com sistemas de previsão em produção desde 2017: previsão de perdas numa plataforma de
 prevenção a fraude, previsão de churn numa empresa de pagamentos e previsão de audiência numa
 emissora de TV. Desde 2026 essa prática se volta para o mar. A pesquisa atual é o porte do modelo
 de ondas WAVEWATCH III (WW3) para GPU sem mudar a resposta do modelo, bit a bit, como projeto final
 de graduação na Escola Politécnica da UFRJ, com coorientação no LabECO/UFSC. Antes da indústria,
 dois anos de iniciação científica no Laboratório de Instrumentação Oceanográfica (LIOC) da
-COPPE/UFRJ, com veículos submarinos e rastreamento de embarcações. Trabalho com ciência aberta:
-código público, toolchain fixada e reprodutível, e DOI para cada versão publicada.
+COPPE/UFRJ, com veículos submarinos e rastreamento de embarcações.
 
 ## Pesquisa
 
@@ -52,9 +50,7 @@ Os números abaixo foram lidos no repositório no commit
   thread, a fase 1 ainda é mais lenta que o Fortran (`bench_small`: 217,9 s contra 152,7 s), porque
   copia o espectro a cada chamada. Nenhum ganho de velocidade é declarado antes da fase 2, com o
   espectro residente na GPU, e nenhuma execução do WW3 na GPU foi feita ainda.
-- **Publicação.** O repositório é também um livro em 17 lições sobre o porte, com decisões
-  registradas (ADRs) e propostas de mudança (WFIPs). Versões v0.1.0 a v0.1.3 no Zenodo (7 a 9 de
-  outubro de 2026).
+- **Publicação.** Código aberto e livro em 17 lições sobre o porte; v0.1.0 a v0.1.3 no Zenodo.
 
 ## Experiência
 
@@ -137,9 +133,8 @@ Os números abaixo foram lidos no repositório no commit
   SageMaker, Apache Spark, PySpark, Databricks, Delta Lake, Apache Airflow, dbt, SQL
 - **Nuvem e infraestrutura**: AWS (S3, EC2, EKS, EMR, Kinesis, Glue, DynamoDB, Redshift), Google
   Cloud (GKE), Kubernetes, Docker, Terraform, Helm, ArgoCD, CI/CD (GitHub Actions, GitLab CI)
-- **Backend e sistemas distribuídos**: Scala, Python, TypeScript, FastAPI, Apache Kafka, Event
-  Sourcing, ZIO, PostgreSQL, Apache Cassandra
-- **LLM e IA**: RAG, Model Context Protocol (MCP), DSPy, fine-tuning (QLoRA, DPO), Claude Code
+- **Backend e IA**: Scala, Python, TypeScript, Apache Kafka, PostgreSQL, Apache Cassandra, RAG,
+  MCP, DSPy, fine-tuning (QLoRA, DPO), Claude Code
 - **Instrumentação**: microcontroladores (TI MSP430), FPGA (NI cRIO-9068, LabVIEW), GPS, GSM
 
 ## Formação
@@ -175,7 +170,5 @@ Oceanman Rio de Janeiro: 3º lugar na faixa de 30 a 39 anos, 10 km em águas abe
 funcionários (fevereiro de 2024).
 
 ```{=latex}
-{\small\color{muted}Outras obras com DOI: \emph{marola} (\href{https://doi.org/10.5281/zenodo.23224155}{10.5281/zenodo.23224155}); \emph{marola-bench} (\href{https://doi.org/10.5281/zenodo.23352633}{10.5281/zenodo.23352633}); \emph{picasso} (\href{https://doi.org/10.5281/zenodo.23311208}{10.5281/zenodo.23311208}); \emph{Closed Source: The God that Failed} (\href{https://doi.org/10.5281/zenodo.23333656}{10.5281/zenodo.23333656}); \emph{Nashkell: Rhizomatic experiments} (\href{https://doi.org/10.5281/zenodo.23356739}{10.5281/zenodo.23356739}).\par}
+{\small\color{muted}Outras obras com DOI: \emph{marola} (\href{https://doi.org/10.5281/zenodo.23224155}{\mbox{10.5281/zenodo.23224155}}); \emph{marola-bench} (\href{https://doi.org/10.5281/zenodo.23352633}{\mbox{10.5281/zenodo.23352633}}); \emph{picasso} (\href{https://doi.org/10.5281/zenodo.23311208}{\mbox{10.5281/zenodo.23311208}}); \emph{Closed Source: The God that Failed} (\href{https://doi.org/10.5281/zenodo.23333656}{\mbox{10.5281/zenodo.23333656}}); \emph{Nashkell: Rhizomatic experiments} (\href{https://doi.org/10.5281/zenodo.23356739}{\mbox{10.5281/zenodo.23356739}}).\par}
 ```
-
-Referências disponíveis sob solicitação.
