@@ -37,31 +37,6 @@
 </p>
 <!-- cv:end -->
 
-<!-- cv:skip -->
-## 🧭 歩み
-
-少年アスリート → 技術学校 → 大学 → バックエンド → mlops → ml → 海へ戻る → **研究と foss**。作品のナレッジグラフを含む全体の物語は **[サイト](https://h0ffmann.github.io/h0ffmann/)** にあります。
-
-| 時期 | | 内容 |
-|---|---|---|
-| 子どもの頃 | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | associação atlética portuguesa、少年選手のクラブ |
-| 2010–2012 | <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Logotipo_cefet-rj.jpg" alt="CEFET/RJ" height="22" /> | cefet/rj：電子技術者。その頃は数学者だった |
-| 2013–2020 | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Minerva_UFRJ_Oficial.png/250px-Minerva_UFRJ_Oficial.png" alt="UFRJ" height="26" /> | ufrj（リオデジャネイロ連邦大学、escola politécnica） |
-| 2016–2017 | <img src="https://web.archive.org/web/20250614041640im_/http://www.lioc.oceanica.ufrj.br/images/nav_logo.svg" alt="LIOC" height="24" /> | lioc（ufrj の海洋計測研究室） |
-| 2017 | <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Scala-full-color.svg" alt="Scala" height="18" /> | 最初の scala：[mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis)、ufrj の授業の課題 |
-| 2017–2018 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone 🇧🇷：ソフトウェアエンジニア、決済。NASDAQ 上場、IPO の前に入社 |
-| 2019–2020 | <img src="https://cdn.prod.website-files.com/5f04eff1057f360cd534541a/5f0517f2cf344a3ccf530a85_logo_iu%201.svg#gh-dark-mode-only" alt="iUPay" height="20" /> | [iupay](https://www.iupay.com.br) と guiabolso 🇧🇷：政府の PIX より八か月早い PIX エンジン。guiabolso（現 picpay）で公開 |
-| 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad 🇬🇧（yc w21）：シニアソフトウェアエンジニア、デジタルバンク。クローズドベータまでの九か月 |
-| 2021–2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Americanas.com_logo.svg" alt="Americanas" height="16" /> | elemeno ai 🇺🇸：mlops リード、americanas 🇧🇷（b2w）への mlops サービス |
-| 2023–2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Signifyd_logo.png" alt="Signifyd" height="20" /> | signifyd 🇺🇸：シニアソフトウェア／ml エンジニア、リスクチームと不正対策、ニューヨークへの出張も |
-| 2024 | **日本** | 日本 🇯🇵：leo と二十日間（ノートは後日） |
-| 2025–2026 | <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/ITV_logo_2013.svg" alt="ITV" height="18" /> | ITV 🇬🇧 へのコンサルティング |
-| **2025年9月** | **3** | **オーシャンマン 10 km・リオデジャネイロ 3位**（10 km は 2 回） |
-| 2025年10月 | **名残** | *nagori: sic mundus creatus est*（続報は近日） |
-| 2026 | <img src="https://raw.githubusercontent.com/marola-dev/marola/d0d576ea014335acbc190a09ce9fcbe0f89a391d/docs/assets/logo.svg" alt="marola" height="20" /> <img src="https://raw.githubusercontent.com/ouroboric-dev/ouroboric/4ab80ed2486a5e0ab0ade13e5089c2a4acdb4216/docs/7-branding/identity/logo/ouroboric-logo-horizontal.svg" alt="Ouroboric" height="16" /> | marola 🇧🇷 と ouroboric 🇧🇷：仲間とのオープンな研究 |
-| 2027 | **33?** | *ultra oceanman*：予言 |
-<!-- cv:end -->
-
 ## 🌊 marola
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>

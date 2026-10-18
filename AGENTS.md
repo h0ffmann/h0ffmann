@@ -119,7 +119,7 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   (`cv:only`), certs, misc — so moving a block in the profile moves it in the
   CV. The research and experience sections left the profile in October 2026
   and stay on the CV through `cv:only`; `cv/test_prepare.py` checks that the
-  profile shows six sections and the CV seven, in all three languages.
+  profile shows five sections and the CV seven, in all three languages.
   `cv/preamble.tex` is the look. The CV is
   one page per language and close to full: check the page count in the
   build output after adding content.
@@ -198,12 +198,11 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 
 ## Working on the README
 
-- The profile has exactly six sections, in this order: me, arc, marola,
-  closed-source, certs, misc. The arc (the owner's path as a table, with the
-  logos of where he worked) is `cv:skip`: the CV has its own experience line.
-  Its rows are the rows of `site/data/timeline.tsv`, shortened; change both
-  together, in the three languages. marola comes right after it because it
-  is what the user is actively working on. The page ends with the notice
+- The profile has exactly five sections, in this order: me, marola,
+  closed-source, certs, misc. marola comes right after me because it is what
+  the user is actively working on. The arc (the owner's path, with the logos
+  of where he worked) is on the site only, from `site/data/timeline.tsv`; the
+  user removed it from the profile on 17 October 2026. The page ends with the notice
   "not a template" (`cv:skip`), which says the profile is all rights reserved. The ww3-gpu research block and the
   experience line are `cv:only` — between marola and closed-source, and
   between closed-source and certs — hidden on github.com, printed on the CV.
