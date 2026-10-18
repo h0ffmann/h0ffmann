@@ -37,31 +37,6 @@ engenheiro de software sênior e pesquisador júnior com **8 anos** de experiên
 </p>
 <!-- cv:end -->
 
-<!-- cv:skip -->
-## 🧭 trajetória
-
-um menino atleta → a escola técnica → a universidade → backend → mlops → ml → de volta ao mar → **pesquisa e foss**. a história inteira, com o grafo de conhecimento dos trabalhos, está **[no site](https://h0ffmann.github.io/h0ffmann/)**.
-
-| quando | | o quê |
-|---|---|---|
-| quando criança | <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/AA_Portuguesa_%28RJ%29.png" alt="Associação Atlética Portuguesa" height="22" /> | a associação atlética portuguesa, o clube de um menino atleta |
-| 2010–2012 | <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Logotipo_cefet-rj.jpg" alt="CEFET/RJ" height="22" /> | cefet/rj: técnico em eletrônica. um matemático naqueles anos |
-| 2013–2020 | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Minerva_UFRJ_Oficial.png/250px-Minerva_UFRJ_Oficial.png" alt="UFRJ" height="26" /> | ufrj, a universidade federal do rio de janeiro (escola politécnica) |
-| 2016–2017 | <img src="https://web.archive.org/web/20250614041640im_/http://www.lioc.oceanica.ufrj.br/images/nav_logo.svg" alt="LIOC" height="24" /> | lioc, o laboratório de instrumentação oceânica da ufrj |
-| 2017 | <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Scala-full-color.svg" alt="Scala" height="18" /> | o primeiro scala: [mdd-risk-analysis](https://github.com/h0ffmann/mdd-risk-analysis), um trabalho de disciplina na ufrj |
-| 2017–2018 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Stone_pagamentos.png" alt="Stone" height="20" /> | stone 🇧🇷: engenheiro de software, pagamentos. listada na NASDAQ; entrei antes do IPO |
-| 2019–2020 | <img src="https://cdn.prod.website-files.com/5f04eff1057f360cd534541a/5f0517f2cf344a3ccf530a85_logo_iu%201.svg#gh-dark-mode-only" alt="iUPay" height="20" /> | [iupay](https://www.iupay.com.br) e guiabolso 🇧🇷: um motor de PIX, oito meses antes de o governo ter o seu; lançado no guiabolso (hoje picpay) |
-| 2020 | <img src="https://bookface-images.s3.amazonaws.com/small_logos/4db2474262802865fe1aa9cf299865700280ea6e.png" alt="Broad" height="20" /> | broad 🇬🇧 (yc w21): engenheiro de software sênior, um banco digital. nove meses, até o beta fechado |
-| 2021–2022 | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Americanas.com_logo.svg" alt="Americanas" height="16" /> | elemeno ai 🇺🇸: líder de mlops, serviços de mlops para a americanas 🇧🇷 (b2w) |
-| 2023–2024 | <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Signifyd_logo.png" alt="Signifyd" height="20" /> | signifyd 🇺🇸: engenheiro sênior de software e ml, combate a fraudes com o time de risco, e uma viagem a nova york |
-| 2024 | **日本** | japão 🇯🇵: vinte dias, com o leo (notas depois) |
-| 2025–2026 | <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/ITV_logo_2013.svg" alt="ITV" height="18" /> | serviços de consultoria para a ITV 🇬🇧 |
-| **set 2025** | **3** | **3º lugar, oceanman 10 km, rio de janeiro** (2× os 10 km) |
-| out 2025 | **名残** | *nagori: sic mundus creatus est* (novidades em breve) |
-| 2026 | <img src="https://raw.githubusercontent.com/marola-dev/marola/d0d576ea014335acbc190a09ce9fcbe0f89a391d/docs/assets/logo.svg" alt="marola" height="20" /> <img src="https://raw.githubusercontent.com/ouroboric-dev/ouroboric/4ab80ed2486a5e0ab0ade13e5089c2a4acdb4216/docs/7-branding/identity/logo/ouroboric-logo-horizontal.svg" alt="Ouroboric" height="16" /> | marola 🇧🇷 e ouroboric 🇧🇷: pesquisa aberta, com amigos |
-| 2027 | **33?** | *ultra oceanman*: uma profecia |
-<!-- cv:end -->
-
 ## 🌊 marola
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
