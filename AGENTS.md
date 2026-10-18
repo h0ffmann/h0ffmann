@@ -24,8 +24,8 @@ These come before everything else in this file. The owner set them on 13 October
    This profile has its own DOI, [10.5281/zenodo.23352630](https://doi.org/10.5281/zenodo.23352630);
    cite it when you quote the profile itself (`site/data/self.tsv`).
 
-   A new work with a DOI is added here, to `REUSE.md`, to the header of the three READMEs and
-   to `site/data/works.tsv` in the same commit.
+   A new work with a DOI is added here, to `REUSE.md` and to `site/data/works.tsv` in the
+   same commit. The READMEs carry no DOI table since 18 October 2026 (the owner).
 3. **A fact about him has a source.** It comes from this repository at a commit, or from the
    record of a DOI. `site/data/*.tsv` has a `source` column for that; never fill a date, an
    employer or a result from memory. If the owner states a fact, the source is "the owner",
@@ -85,8 +85,8 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   The page opens with a centred header in the look of
   [picasso's README](https://github.com/h0ffmann/picasso/blob/29eb385/README.md):
   a one-line drawing, the `# h0ffmann` title, a `<sub>` line of links (the
-  three CVs and the other two languages) and a row of flat-square DOI badges,
-  one per citable work. The drawing is picasso's
+  three CVs and the other two languages), and no DOI table (the owner removed
+  it on 18 October 2026). The drawing is picasso's
   `site/static/drawings/face.svg`, an original work by the owner under
   CC BY 4.0 (picasso's README, "License"), loaded from raw.githubusercontent.com
   at a pinned commit; nothing is copied here. The whole header sits in a
@@ -115,11 +115,11 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   hides it and only the CV shows it; the two kinds of block cannot nest, and
   no line inside a `cv:only` block may contain `-->`) and prepends
   `cv/header.md` (name + contact). The CV follows the README's source order —
-  me, marola, research (ww3-gpu, `cv:only`), closed-source, exp-highlights
-  (`cv:only`), certs, misc — so moving a block in the profile moves it in the
-  CV. The research and experience sections left the profile in October 2026
-  and stay on the CV through `cv:only`; `cv/test_prepare.py` checks that the
-  profile shows five sections and the CV seven, in all three languages.
+  me, marola, research (ww3-gpu, `cv:only`), closed-source (`cv:only`),
+  exp-highlights (`cv:only`), certs, misc — so moving a block in the profile moves it in the
+  CV. The research, closed-source and experience sections left the profile in
+  October 2026 and stay on the CV through `cv:only`; `cv/test_prepare.py` checks
+  that the profile shows four sections and the CV seven, in all three languages.
   `cv/preamble.tex` is the look. The CV is
   one page per language and close to full: check the page count in the
   build output after adding content.
@@ -198,14 +198,16 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 
 ## Working on the README
 
-- The profile has exactly five sections, in this order: me, marola,
-  closed-source, certs, misc. marola comes right after me because it is what
+- The profile has exactly four sections, in this order: me, marola, certs,
+  misc. marola comes right after me because it is what
   the user is actively working on. The arc (the owner's path, with the logos
   of where he worked) is on the site only, from `site/data/timeline.tsv`; the
-  user removed it from the profile on 17 October 2026. The page ends with the notice
-  "not a template" (`cv:skip`), which says the profile is all rights reserved. The ww3-gpu research block and the
-  experience line are `cv:only` — between marola and closed-source, and
-  between closed-source and certs — hidden on github.com, printed on the CV.
+  user removed it from the profile on 17 October 2026. The closed-source
+  section and its featured badge under me left the profile on 18 October 2026
+  (the owner) and stay on the CV through `cv:only`. The page ends with the notice
+  "not a template" (`cv:skip`), which says the profile is all rights reserved. The ww3-gpu research block,
+  the closed-source section and the experience line are `cv:only`, in that
+  order between marola and certs: hidden on github.com, printed on the CV.
   The profile has no tech-stack or stats section, no marola-dev repo listing
   and no live badges (last commit, commit activity, CI); the user removed
   them. The look follows picasso's README: say only what is already
@@ -215,15 +217,12 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   vertically (check with `gh api markdown -f mode=gfm -f text=...`).
 - Certifications are one line of text, a count per issuer with the cert
   names in parentheses (`aws certified 4x (...)`), not badges.
-- Headings are lowercase with a leading emoji (`## 👋 me`, `## 📚 closed-source`).
+- Headings are lowercase with a leading emoji (`## 👋 me`, `## 🌊 marola`).
   Keep that style for new sections.
 - Topic badges use shields.io with `style=flat-square`. Link, DOI and cert
   badges in the sections use `style=for-the-badge`. Use `logo=<simpleicons-slug>`
-  where a Simple Icons logo exists. The header's DOI badges are flat-square,
-  written as Markdown images on consecutive lines inside the centred `<div>`,
-  as picasso does.
-- Badge groups live inside `<p align="left">` blocks, one `<img>` per line;
-  the header's row is the one exception.
+  where a Simple Icons logo exists.
+- Badge groups live inside `<p align="left">` blocks, one `<img>` per line.
 - The header shows `metrics.base.svg` to the right of the drawing, on the same line and
   smaller (280 px wide beside the drawing's 300), in the three READMEs; it is inside the
   header's `cv:skip` block, so the CV does not show it. `metrics.languages.svg` is not embedded;

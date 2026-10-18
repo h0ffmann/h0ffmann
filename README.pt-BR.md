@@ -11,18 +11,6 @@
 
 <sub>a stack agora: <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> e <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a></sub>
 
-| obra | DOI | site |
-|---|---|---|
-| **marola** | [10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155) | [marola.dev](https://marola.dev) |
-| ww3-gpu | [10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351) | [h0ffmann.github.io/ww3-gpu](https://h0ffmann.github.io/ww3-gpu/) |
-| [ww3-dia-gpu-v2](https://github.com/h0ffmann/ww3-dia-gpu-v2) | — | — |
-| picasso | [10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208) | [h0ffmann.github.io/picasso](https://h0ffmann.github.io/picasso/) |
-| closed source | [10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656) | [h0ffmann.github.io/closed-source](https://h0ffmann.github.io/closed-source/) |
-| marola-bench | [10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633) | [marola-dev.github.io/marola-research/marola-bench](https://marola-dev.github.io/marola-research/marola-bench/) |
-| nashkell | [10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739) | [h0ffmann.github.io/nashkell](https://h0ffmann.github.io/nashkell/) |
-| ouroboric | — | — |
-| this profile | [10.5281/zenodo.23352630](https://doi.org/10.5281/zenodo.23352630) | [h0ffmann.github.io/h0ffmann](https://h0ffmann.github.io/h0ffmann/) |
-
 </div>
 <!-- cv:end -->
 
@@ -33,7 +21,6 @@ engenheiro de software sênior e pesquisador júnior com **8 anos** de experiên
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="me/ways-of-working.md"><img src="https://img.shields.io/badge/como%20eu%20trabalho-555555?style=for-the-badge" alt="como eu trabalho" /></a>
-<a href="https://h0ffmann.github.io/closed-source/" target="_blank"><img src="https://img.shields.io/badge/destaque-closed%20source%3A%20the%20god%20that%20failed-111111?style=for-the-badge&labelColor=A3201C" alt="destaque: closed source: the god that failed, o site" /></a>
 </p>
 <!-- cv:end -->
 
@@ -88,6 +75,7 @@ as 17 lições, do espectro de ondas ao port de kernels com agentes de código, 
 </p>
 cv:end -->
 
+<!-- cv:only
 ## 📚 closed-source
 
 um ensaio sem fins lucrativos, em que estudo licenças: **[closed source: the god that failed](https://h0ffmann.github.io/closed-source/)**, um artigo de opinião sobre engenharia reversa e a ética da citação na era dos agentes de código. um preprint v0, sem revisão por pares.
@@ -101,6 +89,7 @@ um ensaio sem fins lucrativos, em que estudo licenças: **[closed source: the go
 <a href="https://github.com/topics/non-profit"><img src="https://img.shields.io/badge/non--profit-6E7781?style=flat-square" alt="non-profit" /></a>
 <a href="https://github.com/h0ffmann/closed-source#licence"><img src="https://img.shields.io/badge/studying%20licenses-6E7781?style=flat-square" alt="studying licenses" /></a>
 </p>
+cv:end -->
 
 <!-- cv:only
 ## 💼 destaques de experiência
