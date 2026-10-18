@@ -23,7 +23,10 @@ class Summary(unittest.TestCase):
         known = sources()
         for target in LINK.findall(SUMMARY):
             if target.startswith(("http://", "https://", "mailto:")):
-                self.assertTrue(target.rstrip("/") in known, f"{target} is in no README, CV header, me/ page or site table")
+                # a DOI link counts as known when site/data/works.tsv names its DOI
+                doi = target.removeprefix("https://doi.org/")
+                self.assertTrue(target.rstrip("/") in known or (doi != target and doi in known),
+                                f"{target} is in no README, CV header, me/ page or site table")
 
     def test_every_link_to_a_file_is_a_file(self):
         for target in LINK.findall(SUMMARY):
