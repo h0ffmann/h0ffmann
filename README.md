@@ -16,7 +16,7 @@
 
 ## 👋 me
 
-sr. software engineer & jr. researcher with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting. my research topics are wave modelling, game theory and self-improving apps. i'm currently writing and doing research for **[marola-dev](https://github.com/marola-dev)** and **ouroboric-dev**, and i'm open to commercial offers. i write often to `h0ffmann/nagori`, my private second brain (foss soon), and i'm a future public speaker.
+sr. software engineer & jr. researcher with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting. my research topics are wave modelling, game theory and self-improving apps. i'm currently writing and doing research for **[marola-dev](https://github.com/marola-dev)** and **ouroboric-dev**, and i'm open to commercial offers.
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
