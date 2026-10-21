@@ -6,36 +6,74 @@ use serde_json::{json, Value};
 use std::process::{exit, Command};
 use std::{env, fs};
 
-const QUERY: &str = "query($login: String!) { user(login: $login) { login name
+const QUERY: &str = "query($login: String!, $year: DateTime!, $month: DateTime!) { user(login: $login) { login name createdAt
+  thisYear: contributionsCollection(from: $year) { contributionCalendar { totalContributions } }
+  lastMonth: contributionsCollection(from: $month) { commitContributionsByRepository(maxRepositories: 100) {
+    repository { isPrivate primaryLanguage { name } } contributions { totalCount } } }
   pinnedItems(first: 6, types: REPOSITORY) { nodes { ... on Repository {
     nameWithOwner description url isPrivate stargazerCount
     licenseInfo { spdxId } primaryLanguage { name }
     repositoryTopics(first: 10) { nodes { topic { name } } } } } } } }";
 
-const NODE_W: i64 = 420;
+const NODE_W: i64 = 380;
 const NODE_H: i64 = 64;
 const ROW: i64 = 92;
-const USER_X: i64 = 40 + NODE_W + 110;
+const USER_X: i64 = 40 + NODE_W + 100;
+const USER_W: i64 = 300;
+const LANGUAGES: usize = 3;
 const SKILLS: usize = 5;
-const DESC: usize = 72;
+const TAG: usize = 66;
+const DESC: usize = 64;
 
 /// Every public pin, as GitHub lists it: a pin with no licence, or "NOASSERTION", is still drawn.
 fn public(repo: &Value) -> bool {
     !repo["isPrivate"].as_bool().unwrap_or(true)
 }
 
-/// The skills of a pin: its language, then its GitHub topics in GitHub's order, five at most.
+/// The skills of a pin: its language, then its GitHub topics in GitHub's order, five at most,
+/// and fewer when the line would pass TAG characters, the width of a box.
 fn skills(repo: &Value) -> Vec<String> {
     let topics = repo["repositoryTopics"]["nodes"].as_array().into_iter().flatten();
     repo["primaryLanguage"]["name"].as_str().into_iter().map(str::to_lowercase)
         .chain(topics.filter_map(|t| t["topic"]["name"].as_str().map(String::from)))
-        .take(SKILLS).collect()
+        .take(SKILLS)
+        .fold(vec![], |mut kept: Vec<String>, s| {
+            if kept.iter().map(|k| k.chars().count() + 3).sum::<usize>() + s.chars().count() <= TAG {
+                kept.push(s);
+            }
+            kept
+        })
 }
 
 /// shortcut: a description longer than DESC characters is cut with "…"; GitHub keeps it whole.
 fn short(text: &str) -> String {
     let text = text.trim();
     if text.chars().count() <= DESC { text.to_string() } else { text.chars().take(DESC - 1).collect::<String>() + "…" }
+}
+
+/// The languages of the last 30 days: the main language of each public repository committed to,
+/// weighed by its commits, the most first.
+fn languages(user: &Value) -> Vec<String> {
+    let mut count: Vec<(String, i64)> = vec![];
+    for c in user["lastMonth"]["commitContributionsByRepository"].as_array().into_iter().flatten() {
+        let Some(lang) = c["repository"]["primaryLanguage"]["name"].as_str() else { continue };
+        if c["repository"]["isPrivate"].as_bool().unwrap_or(true) {
+            continue;
+        }
+        let n = c["contributions"]["totalCount"].as_i64().unwrap_or(0);
+        match count.iter_mut().find(|(l, _)| l == lang) {
+            Some((_, total)) => *total += n,
+            None => count.push((lang.to_string(), n)),
+        }
+    }
+    count.sort_by(|a, b| b.1.cmp(&a.1));
+    count.into_iter().take(LANGUAGES).map(|(l, _)| l.to_lowercase()).collect()
+}
+
+/// Whole years from `since` to `today`, both "YYYY-MM-DD...".
+fn years(since: &str, today: &str) -> i64 {
+    let year = |d: &str| d.get(..4).and_then(|y| y.parse::<i64>().ok()).unwrap_or(0);
+    year(today) - year(since) - i64::from(today.get(5..10) < since.get(5..10))
 }
 
 /// The user in the middle, the pins in two columns of up to three: the first half on the left.
@@ -46,12 +84,15 @@ fn diagram(user: &Value, today: &str) -> Value {
     let rows = left.max(1) as i64;
     let mut components = vec![json!({
         "id": "user", "type": "external", "label": login,
-        "sublabel": user["name"].as_str().unwrap_or("github"),
-        "pos": [USER_X, 40 + (rows * ROW - ROW + NODE_H) / 2 - 40], "size": [180, 80],
+        "sublabel": format!("{} years on github · {} contributions in {}",
+            years(user["createdAt"].as_str().unwrap_or(today), today),
+            user["thisYear"]["contributionCalendar"]["totalContributions"].as_i64().unwrap_or(0), &today[..4]),
+        "tag": format!("last 30 days: {}", languages(user).join(" · ")),
+        "pos": [USER_X, 40 + (rows * ROW - ROW + NODE_H) / 2 - 40], "size": [USER_W, 80],
     })];
     let mut connections = vec![];
     for (i, r) in repos.iter().enumerate() {
-        let (side, x, row) = if i < left { ("left", 40, i) } else { ("right", USER_X + 180 + 110, i - left) };
+        let (side, x, row) = if i < left { ("left", 40, i) } else { ("right", USER_X + USER_W + 100, i - left) };
         let id = format!("repo-{i}");
         components.push(json!({
             "id": id, "type": "backend",
@@ -89,7 +130,11 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     match args.iter().map(String::as_str).collect::<Vec<_>>()[1..] {
         ["json", login, out] => {
-            let got = Command::new("gh").args(["api", "graphql", "-f", &format!("query={QUERY}"), "-F", &format!("login={login}")])
+            let date = |args: &[&str]| String::from_utf8(Command::new("date").args(args).output().unwrap().stdout).unwrap().trim().to_string();
+            let today = date(&["-u", "+%F"]);
+            let month = date(&["-u", "-d", "30 days ago", "+%FT%TZ"]);
+            let got = Command::new("gh").args(["api", "graphql", "-f", &format!("query={QUERY}"), "-F", &format!("login={login}"),
+                    "-F", &format!("year={}-01-01T00:00:00Z", &today[..4]), "-F", &format!("month={month}")])
                 .output().expect("cover: gh is not on PATH");
             if !got.status.success() {
                 eprintln!("cover: gh: {}", String::from_utf8_lossy(&got.stderr));
@@ -101,8 +146,7 @@ fn main() {
                 eprintln!("cover: no GitHub user {login}");
                 exit(1);
             }
-            let today = String::from_utf8(Command::new("date").arg("+%F").output().unwrap().stdout).unwrap();
-            let d = diagram(user, today.trim());
+            let d = diagram(user, &today);
             if d["connections"].as_array().map_or(true, |c| c.is_empty()) {
                 eprintln!("cover: {login} pins no public repository");
                 exit(1);
@@ -138,6 +182,30 @@ mod tests {
         assert_eq!(c[1]["tag"], "rust · t1 · t2 · t3 · t4");
         assert!(c[3].get("tag").is_none());
         assert_eq!(c[3]["pos"][0].as_i64().unwrap() > c[1]["pos"][0].as_i64().unwrap(), true);
+    }
+
+    #[test]
+    fn languages_of_public_commits_weighed_by_count() {
+        let repo = |lang: &str, private: bool, n: i64| json!({ "repository": { "isPrivate": private, "primaryLanguage": { "name": lang } }, "contributions": { "totalCount": n } });
+        let user = json!({ "lastMonth": { "commitContributionsByRepository": [
+            repo("Gleam", false, 5), repo("C++", false, 9), repo("Gleam", false, 6), repo("Scala", true, 99), repo("Nix", false, 1), repo("R", false, 2),
+        ] } });
+        assert_eq!(languages(&user), ["gleam", "c++", "r"]);
+    }
+
+    #[test]
+    fn whole_years() {
+        assert_eq!(years("2016-02-24T20:24:18Z", "2026-10-20"), 10);
+        assert_eq!(years("2016-10-21T00:00:00Z", "2026-10-20"), 9);
+    }
+
+    #[test]
+    fn skills_fit_the_box() {
+        let long = |n: &str| json!({ "topic": { "name": format!("{n}-{}", "x".repeat(20)) } });
+        let repo = json!({ "primaryLanguage": { "name": "Gleam" }, "repositoryTopics": { "nodes": [long("a"), long("b"), long("c"), long("d")] } });
+        let got = skills(&repo).join(" · ");
+        assert!(got.chars().count() <= TAG, "{got}");
+        assert_eq!(skills(&repo).len(), 3);
     }
 
     #[test]

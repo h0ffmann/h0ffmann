@@ -17,7 +17,12 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
      and keeps every public one, as GitHub lists them.
    - It writes Archify's input: the user in the middle, the pins in two columns, each with its
      description and five skills at most: its language, then its GitHub topics in GitHub's order.
-     A description longer than 72 characters is cut with "…".
+     fewer when the line would not fit its box. A description longer than 64 characters is cut
+     with "…".
+   - The middle box: the account's age in whole years, its contributions this year (GitHub's
+     calendar, which counts private ones only if the profile shows them), and the three languages
+     of the last 30 days: the main language of each public repository committed to, weighed by
+     its commits.
    - [`vendor/archify`](../archify/SKILL.md) draws it and checks it (`finalize`); Chrome takes the
      picture. The left quarter stays empty, because LinkedIn's profile photo covers it.
 2. **Look at** `build/cover/h0ffmann/cover.png` before you hand it over. A label cut short or a
@@ -27,7 +32,7 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
 
 ## Do not
 
-- Do not write a repository, a topic or a language by hand. The picture says what GitHub said.
+- Do not write a repository, a topic, a language or a count by hand. The picture says what GitHub said.
 - Do not edit the JSON that `cover/` writes to make it look better; change `cover/` and its tests
   (`just cover-test`).
 - Do not run it, test it or try `cover/` with another GitHub login. `just cover-test` uses
