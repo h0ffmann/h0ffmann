@@ -1,6 +1,6 @@
 ---
 name: linkedin-cover
-description: "Make the owner's LinkedIn cover (1584x396 PNG): the FOSS repositories that h0ffmann pins on GitHub, drawn with the vendored Archify. Use when asked for his LinkedIn cover, a banner of his pinned repositories, or to draw it again after his pins changed. For h0ffmann only."
+description: "Make the owner's LinkedIn cover (1584x396 PNG): the public repositories that h0ffmann pins on GitHub, drawn with the vendored Archify. Use when asked for his LinkedIn cover, a banner of his pinned repositories, or to draw it again after his pins changed. For h0ffmann only."
 ---
 
 # linkedin-cover
@@ -14,9 +14,10 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
 
 1. **Run** `just cover`. It needs `gh`, signed in, and Chrome (`CHROME` names another).
    - [`cover/`](../../../cover/src/main.rs), in Rust, reads his pins with `gh api graphql`
-     and keeps the FOSS ones: public, with a licence that GitHub names.
-   - It writes Archify's input: the user on top, one box per repository below, with its language
-     and its licence.
+     and keeps every public one, as GitHub lists them.
+   - It writes Archify's input: the user in the middle, the pins in two columns, each with its
+     description and five skills at most: its language, then its GitHub topics in GitHub's order.
+     A description longer than 72 characters is cut with "…".
    - [`vendor/archify`](../archify/SKILL.md) draws it and checks it (`finalize`); Chrome takes the
      picture. The left quarter stays empty, because LinkedIn's profile photo covers it.
 2. **Look at** `build/cover/h0ffmann/cover.png` before you hand it over. A label cut short or a
@@ -26,7 +27,7 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
 
 ## Do not
 
-- Do not write a repository, a licence or a language by hand. The picture says what GitHub said.
+- Do not write a repository, a topic or a language by hand. The picture says what GitHub said.
 - Do not edit the JSON that `cover/` writes to make it look better; change `cover/` and its tests
   (`just cover-test`).
 - Do not run it, test it or try `cover/` with another GitHub login. `just cover-test` uses

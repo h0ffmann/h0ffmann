@@ -54,7 +54,7 @@ featured *args:
 linkedin *args:
     python3 scripts/linkedin-projects.py {{args}}
 
-# The LinkedIn cover (1584x396) of the FOSS repositories that h0ffmann pins: cover/ (Rust) reads
+# The LinkedIn cover (1584x396) of the public repositories that h0ffmann pins: cover/ (Rust) reads
 # them with `gh` and writes Archify's input, vendor/archify draws it and checks it, Chrome takes the
 # picture. Write build/cover/h0ffmann/cover.png. Only for h0ffmann (AGENTS.md, hard rule 5).
 cover:

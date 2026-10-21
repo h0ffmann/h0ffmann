@@ -33,7 +33,7 @@ These come before everything else in this file. The owner set them on 13 October
 4. **A logo is never a file here.** The logos of his employers and of marola and Ouroboric are
    trademarks. They load from their owners' pages (`site/data/timeline.tsv`); `just logos`
    checks that each still answers.
-5. **The LinkedIn cover is for h0ffmann only.** `just cover` draws his pinned FOSS
+5. **The LinkedIn cover is for h0ffmann only.** `just cover` draws his pinned public
    repositories, and no other user's. Do not run it, test it or try `cover/` with any other
    GitHub login; `just cover-test` uses made-up data. The owner, 20 October 2026.
 
