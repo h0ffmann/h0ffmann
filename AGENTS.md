@@ -163,7 +163,8 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   tt-a1i/archify (MIT) as a submodule, pinned at v3.0.1 `2ab3cae` like h0ffmann/ww3-gpu's, shallow
   and sparse to `archify/`; `.claude/skills/archify` is a symlink into it, and `just cover`
   checks it out in a fresh clone. A commit that moves the pin is read by a person first, since an
-  agent loads its `SKILL.md` as instructions. The PNG is built into `build/cover/`, never committed.
+  agent loads its `SKILL.md` as instructions. The PNG is built into `build/cover/`; a copy for
+  pull requests is `site/preview/linkedin-cover.png`.
 - `site/` – the website, published to GitHub Pages by `.github/workflows/site.yml`
   (https://h0ffmann.github.io/h0ffmann/). Gleam and Lustre, the stack of h0ffmann/closed-source's
   site; `just site` builds it with picasso's gleam-website lab (`flake.nix`, `devShells.site`).
