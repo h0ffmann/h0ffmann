@@ -11,44 +11,41 @@ const QUERY: &str = "query($login: String!, $year: DateTime!, $month: DateTime!)
   lastMonth: contributionsCollection(from: $month) { commitContributionsByRepository(maxRepositories: 100) {
     repository { isPrivate primaryLanguage { name } } contributions { totalCount } } }
   pinnedItems(first: 6, types: REPOSITORY) { nodes { ... on Repository {
-    nameWithOwner description url isPrivate stargazerCount
-    licenseInfo { spdxId } primaryLanguage { name }
+    nameWithOwner isPrivate primaryLanguage { name }
     repositoryTopics(first: 10) { nodes { topic { name } } } } } } } }";
 
-const NODE_W: i64 = 360;
-const NODE_H: i64 = 64;
-const ROW: i64 = 92;
-const USER_X: i64 = 40 + NODE_W + 100;
-const USER_W: i64 = 360;
+// The canvas, in Archify's units: small, so that Archify's own type comes out about 2.6 times
+// larger when Chrome stretches it to 1584x396, and LinkedIn's profile page (about 800 px wide)
+// still shows the names at some 19 px. The pins take a grid of 3x2 on the right; the user's box
+// sits top left, above where LinkedIn puts the profile photo.
+const COLS: i64 = 3;
+const CELL_W: i64 = 128;
+const CELL_H: i64 = 60;
+const GAP: i64 = 10;
+const USER_W: i64 = 186;
+const GRID_X: i64 = USER_W + 2 * GAP;
 const LANGUAGES: usize = 3;
-const SKILLS: usize = 5;
-const TAG: usize = 66;
-const DESC: usize = 64;
+// The skills share the sublabel line of a box: 9px type, 5.4 units a character (Archify's
+// authoring defaults), less the box's padding.
+const SKILL_CHARS: usize = 20;
 
-/// Every public pin, as GitHub lists it: a pin with no licence, or "NOASSERTION", is still drawn.
+/// Every public pin, as GitHub lists it, with a licence or without.
 fn public(repo: &Value) -> bool {
     !repo["isPrivate"].as_bool().unwrap_or(true)
 }
 
-/// The skills of a pin: its language, then its GitHub topics in GitHub's order, five at most,
-/// and fewer when the line would pass TAG characters, the width of a box.
+/// The skills of a pin: its language, then its GitHub topics in GitHub's order, as many as fit in
+/// SKILL_CHARS characters.
 fn skills(repo: &Value) -> Vec<String> {
     let topics = repo["repositoryTopics"]["nodes"].as_array().into_iter().flatten();
     repo["primaryLanguage"]["name"].as_str().into_iter().map(str::to_lowercase)
         .chain(topics.filter_map(|t| t["topic"]["name"].as_str().map(String::from)))
-        .take(SKILLS)
         .fold(vec![], |mut kept: Vec<String>, s| {
-            if kept.iter().map(|k| k.chars().count() + 3).sum::<usize>() + s.chars().count() <= TAG {
+            if kept.iter().map(|k| k.chars().count() + 3).sum::<usize>() + s.chars().count() <= SKILL_CHARS {
                 kept.push(s);
             }
             kept
         })
-}
-
-/// shortcut: a description longer than DESC characters is cut with "…"; GitHub keeps it whole.
-fn short(text: &str) -> String {
-    let text = text.trim();
-    if text.chars().count() <= DESC { text.to_string() } else { text.chars().take(DESC - 1).collect::<String>() + "…" }
 }
 
 /// The languages of the last 30 days: the main language of each public repository committed to,
@@ -76,42 +73,34 @@ fn years(since: &str, today: &str) -> i64 {
     year(today) - year(since) - i64::from(today.get(5..10) < since.get(5..10))
 }
 
-/// The user in the middle, the pins in two columns of up to three: the first half on the left.
+/// The user's box top left, the pins in a grid of three columns to its right, in GitHub's order.
+/// No lines: on a cover every box is read on its own, and six lines from one box are noise.
 fn diagram(user: &Value, today: &str, claude: i64) -> Value {
     let login = user["login"].as_str().unwrap_or("");
     let repos: Vec<&Value> = user["pinnedItems"]["nodes"].as_array().into_iter().flatten().filter(|r| public(r)).collect();
-    let left = repos.len().div_ceil(2);
-    let rows = left.max(1) as i64;
     let mut components = vec![json!({
-        "id": "user", "type": "external", "label": login,
-        "sublabel": format!("{} years · {} contributions · {claude} commits with claude in {}",
-            years(user["createdAt"].as_str().unwrap_or(today), today),
-            user["thisYear"]["contributionCalendar"]["totalContributions"].as_i64().unwrap_or(0), &today[..4]),
-        "tag": format!("last 30 days: {}", languages(user).join(" · ")),
-        "pos": [USER_X, 40 + (rows * ROW - ROW + NODE_H) / 2 - 40], "size": [USER_W, 80],
+        "id": "user", "type": "external",
+        "label": format!("{login} · {} years", years(user["createdAt"].as_str().unwrap_or(today), today)),
+        "sublabel": format!("{} contribs · {claude} w/ claude",
+            user["thisYear"]["contributionCalendar"]["totalContributions"].as_i64().unwrap_or(0)),
+        "tag": format!("{} · 30d: {}", &today[..4], languages(user).join(" · ")),
+        "pos": [GAP, GAP], "size": [USER_W, CELL_H],
     })];
-    let mut connections = vec![];
     for (i, r) in repos.iter().enumerate() {
-        let (side, x, row) = if i < left { ("left", 40, i) } else { ("right", USER_X + USER_W + 100, i - left) };
-        let id = format!("repo-{i}");
+        let (col, row) = (i as i64 % COLS, i as i64 / COLS);
+        let name = r["nameWithOwner"].as_str().unwrap_or("");
         components.push(json!({
-            "id": id, "type": "backend",
-            "label": r["nameWithOwner"].as_str().unwrap_or(""),
-            "sublabel": short(r["description"].as_str().unwrap_or("")),
-            "pos": [x, 40 + row as i64 * ROW], "size": [NODE_W, NODE_H],
+            "id": format!("repo-{i}"), "type": "backend",
+            "label": name.rsplit('/').next(),
+            "sublabel": skills(r).join(" · "),
+            "pos": [GRID_X + col * (CELL_W + GAP), GAP + row * (CELL_H + GAP)], "size": [CELL_W, CELL_H],
         }));
-        let tag = skills(r).join(" · ");
-        if !tag.is_empty() {
-            components.last_mut().unwrap()["tag"] = json!(tag);
-        }
-        let to = if side == "left" { "right" } else { "left" };
-        connections.push(json!({ "id": format!("pins-{i}"), "from": "user", "to": id, "fromSide": side, "toSide": to }));
     }
     json!({
         "schema_version": 1, "diagram_type": "architecture",
         "meta": { "title": format!("{login}: pinned repositories, read from GitHub on {today}"),
                   "output": "cover.html", "quality_profile": "showcase" },
-        "components": components, "connections": connections,
+        "components": components,
     })
 }
 
@@ -129,15 +118,27 @@ fn claude(login: &str, year: &str) -> i64 {
     String::from_utf8_lossy(&got.stdout).trim().parse().expect("cover: gh search did not answer a count")
 }
 
-/// Hide everything but the drawing (and its legend), show every detail (the tags) and fit it to the viewport, leaving the left quarter empty:
-/// LinkedIn puts the profile photo over the bottom left of the cover.
+/// The drawing's own bounds, cut to 4:1: Archify will not draw a canvas under 240 units high,
+/// and leaves room for its legend below the boxes.
+const CROP: (i64, i64) = (GRID_X + COLS * (CELL_W + GAP) + GAP, (GRID_X + COLS * (CELL_W + GAP) + GAP) / 4);
+
+/// Hide everything but the drawing (and its legend), show every detail (the tags), crop it to
+/// CROP and fit it to the whole viewport; the layout keeps the photo's corner free.
 fn frame(html: &str) -> String {
     let css = "<style>body *{visibility:hidden!important}\
         .diagram-container svg,.diagram-container svg *{visibility:visible!important}\
         .diagram-container svg [data-legend],.diagram-container svg [data-legend] *{visibility:hidden!important}\
         .diagram-container svg [data-detail]{opacity:1!important}\
-        .diagram-container svg{position:fixed!important;left:25vw;top:4vh;width:72vw!important;height:92vh!important}</style>";
-    html.replacen("</head>", &format!("{css}</head>"), 1)
+        .diagram-container svg{position:fixed!important;left:0;top:0;width:100vw!important;height:100vh!important}</style>";
+    let html = html.replacen("</head>", &format!("{css}</head>"), 1);
+    match html.find("<svg viewBox=\"") {
+        Some(at) => {
+            let start = at + "<svg viewBox=\"".len();
+            let close = start + html[start..].find('"').unwrap();
+            format!("{}0 0 {} {}{}", &html[..start], CROP.0, CROP.1, &html[close..])
+        }
+        None => html,
+    }
 }
 
 fn main() {
@@ -161,7 +162,7 @@ fn main() {
                 exit(1);
             }
             let d = diagram(user, &today, claude(login, &today[..4]));
-            if d["connections"].as_array().map_or(true, |c| c.is_empty()) {
+            if d["components"].as_array().map_or(0, Vec::len) < 2 {
                 eprintln!("cover: {login} pins no public repository");
                 exit(1);
             }
@@ -180,22 +181,24 @@ mod tests {
     use super::*;
 
     #[test]
-    fn draws_every_public_pin_with_five_skills_at_most() {
-        let user = json!({ "login": "a", "pinnedItems": { "nodes": [
+    fn draws_every_public_pin_in_a_grid_with_the_skills_that_fit() {
+        let user = json!({ "login": "a", "createdAt": "2016-02-24T00:00:00Z", "pinnedItems": { "nodes": [
             { "nameWithOwner": "a/open", "isPrivate": false, "primaryLanguage": { "name": "Rust" }, "repositoryTopics": { "nodes": [
                 { "topic": { "name": "t1" } }, { "topic": { "name": "t2" } }, { "topic": { "name": "t3" } },
                 { "topic": { "name": "t4" } }, { "topic": { "name": "t5" } } ] } },
-            { "nameWithOwner": "a/none", "isPrivate": false, "licenseInfo": null },
-            { "nameWithOwner": "a/other", "isPrivate": false, "licenseInfo": { "spdxId": "NOASSERTION" } },
-            { "nameWithOwner": "a/hidden", "isPrivate": true, "licenseInfo": { "spdxId": "MIT" } },
+            { "nameWithOwner": "a/none", "isPrivate": false },
+            { "nameWithOwner": "a/other", "isPrivate": false },
+            { "nameWithOwner": "b/fourth", "isPrivate": false },
+            { "nameWithOwner": "a/hidden", "isPrivate": true },
         ] } });
-        let d = diagram(&user, "2026-10-20", 0);
+        let d = diagram(&user, "2026-10-20", 7);
         let c = d["components"].as_array().unwrap();
         let labels: Vec<_> = c.iter().map(|c| c["label"].as_str().unwrap()).collect();
-        assert_eq!(labels, ["a", "a/open", "a/none", "a/other"]);
-        assert_eq!(c[1]["tag"], "rust · t1 · t2 · t3 · t4");
-        assert!(c[3].get("tag").is_none());
-        assert_eq!(c[3]["pos"][0].as_i64().unwrap() > c[1]["pos"][0].as_i64().unwrap(), true);
+        assert_eq!(labels, ["a · 10 years", "open", "none", "other", "fourth"]);
+        assert_eq!(c[0]["sublabel"], "0 contribs · 7 w/ claude");
+        assert_eq!(c[1]["sublabel"], "rust · t1 · t2 · t3");
+        assert_eq!(c[4]["pos"], json!([GRID_X, GAP + CELL_H + GAP]));
+        assert!(d.get("connections").is_none());
     }
 
     #[test]
@@ -215,23 +218,18 @@ mod tests {
 
     #[test]
     fn skills_fit_the_box() {
-        let long = |n: &str| json!({ "topic": { "name": format!("{n}-{}", "x".repeat(20)) } });
-        let repo = json!({ "primaryLanguage": { "name": "Gleam" }, "repositoryTopics": { "nodes": [long("a"), long("b"), long("c"), long("d")] } });
+        let topic = |n: &str| json!({ "topic": { "name": n } });
+        let repo = json!({ "primaryLanguage": { "name": "Gleam" }, "repositoryTopics": { "nodes": [
+            topic("research"), topic("reasearch-data-management"), topic("agents")] } });
         let got = skills(&repo).join(" · ");
-        assert!(got.chars().count() <= TAG, "{got}");
-        assert_eq!(skills(&repo).len(), 3);
+        assert!(got.chars().count() <= SKILL_CHARS, "{got}");
+        assert_eq!(got, "gleam · research");
     }
 
     #[test]
-    fn a_long_description_is_cut() {
-        assert_eq!(short("ocean intelligence layer"), "ocean intelligence layer");
-        let cut = short(&"x".repeat(90));
-        assert_eq!(cut.chars().count(), DESC);
-        assert!(cut.ends_with('…'));
-    }
-
-    #[test]
-    fn frame_injects_once_before_head_end() {
-        assert_eq!(frame("<head></head><head></head>").matches("<style>").count(), 1);
+    fn frame_injects_once_and_crops_the_drawing() {
+        let got = frame("<head></head><head></head><svg viewBox=\"0 0 646 208\" role=\"img\">");
+        assert_eq!(got.matches("<style>").count(), 1);
+        assert!(got.ends_with(&format!("<svg viewBox=\"0 0 {} {}\" role=\"img\">", CROP.0, CROP.1)), "{got}");
     }
 }

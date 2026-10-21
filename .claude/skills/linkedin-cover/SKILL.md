@@ -15,20 +15,22 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
 1. **Run** `just cover`. It needs `gh`, signed in, and Chrome (`CHROME` names another).
    - [`cover/`](../../../cover/src/main.rs), in Rust, reads his pins with `gh api graphql`
      and keeps every public one, as GitHub lists them.
-   - It writes Archify's input: the user in the middle, the pins in two columns, each with its
-     description and five skills at most: its language, then its GitHub topics in GitHub's order.
-     fewer when the line would not fit its box. A description longer than 64 characters is cut
-     with "…".
-   - The middle box: the account's age in whole years, its contributions this year (GitHub's
+   - It writes Archify's input on a small canvas (about 626x156 units), so that Archify's own type
+     comes out about 2.5 times larger at 1584x396 and stays readable on LinkedIn's profile page
+     without opening the cover. The pins are a grid of 3x2, each with its name and the skills
+     that fit on one line: its language, then its GitHub topics in GitHub's order. There are no
+     lines between boxes.
+   - The top-left box: the account's age in whole years, its contributions this year (GitHub's
      calendar, which counts private ones only if the profile shows them), its commits this year
      with the official trailer "Co-Authored-By: Claude ... <noreply@anthropic.com>" (GitHub's
-     commit search: default branches of public repositories only), and the three languages
-     of the last 30 days: the main language of each public repository committed to, weighed by
-     its commits.
+     commit search: default branches of public repositories only), and the three languages of
+     the last 30 days (the main language of each public repository committed to, weighed by its
+     commits). The cell below it stays empty for the profile photo.
    - [`vendor/archify`](../archify/SKILL.md) draws it and checks it (`finalize`); Chrome takes the
-     picture. The left quarter stays empty, because LinkedIn's profile photo covers it.
-2. **Look at** `build/cover/h0ffmann/cover.png` before you hand it over. A label cut short or a
-   line through a box is a fault: say so.
+     picture of the drawing cropped to 4:1.
+2. **Look at** `build/cover/h0ffmann/cover.png` before you hand it over, and at a copy shrunk to
+   804 px wide, about the size of the profile page. Text that touches a box's edge, or that you
+   cannot read at 804 px, is a fault: say so.
 3. **Report** the path of the PNG, how many repositories it shows, and the day the pins were read.
    The title of the drawing names that day.
 
