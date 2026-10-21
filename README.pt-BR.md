@@ -9,14 +9,14 @@
 
 <sub><b>o prometeu aquático</b> · a arte da manutenção de apps · <a href="https://h0ffmann.github.io/h0ffmann/">o site</a></sub>
 
-<sub>a stack agora: <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> e <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a></sub>
+<sub>a stack agora: <a href="https://www.python.org"><img src="https://www.python.org/static/favicon.ico" alt="" width="16" height="16" /> python</a> para protótipos · <a href="https://www.scala-lang.org"><img src="https://www.scala-lang.org/resources/favicon.ico" alt="" width="16" height="16" /> scala</a> por diversão · <a href="https://www.rust-lang.org"><img src="https://www.rust-lang.org/static/images/favicon.svg" alt="" width="16" height="16" /> rust</a> para bibliotecas de baixo nível · <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> para hospedagem estática · <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a> (às vezes <a href="https://opencode.ai"><img src="https://opencode.ai/favicon-96x96.png" alt="" width="16" height="16" /> opencode</a>) · prs simples, tudo simples</sub>
 
 </div>
 <!-- cv:end -->
 
 ## 👋 eu
 
-engenheiro de software sênior e pesquisador júnior com **8 anos** de experiência construindo soluções escaláveis, principalmente para processamento de pagamentos e combate a fraudes. meus temas de pesquisa são modelagem de ondas, teoria dos jogos e apps que se autoaperfeiçoam. hoje escrevo e pesquiso para a **[marola-dev](https://github.com/marola-dev)** e a **ouroboric-dev**, e estou aberto a propostas comerciais. escrevo com frequência no `h0ffmann/nagori`, meu segundo cérebro privado (código aberto em breve), e serei palestrante.
+engenheiro de software sênior e pesquisador júnior com **8 anos** de experiência construindo soluções escaláveis, principalmente para processamento de pagamentos e combate a fraudes. meus temas de pesquisa são modelagem de ondas, teoria dos jogos e apps que se autoaperfeiçoam. hoje [escrevo](https://github.com/h0ffmann/ptbr-writter) e pesquiso para a **[marola-dev](https://github.com/marola-dev)** (voluntário), e estou aberto a propostas comerciais.
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -24,12 +24,10 @@ engenheiro de software sênior e pesquisador júnior com **8 anos** de experiên
 </p>
 <!-- cv:end -->
 
+<!-- cv:only
 ## 🌊 marola
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code para marola.dev" title="escaneie para abrir marola.dev" align="right" width="120" /></a>
-<!-- cv:skip -->
-<a href="https://lnt.org" target="_blank"><img src="https://img.shields.io/badge/Leave_No_Trace-affiliate-4B7F3A?style=for-the-badge" alt="filiado ao Leave No Trace" title="Leave No Trace: ética ao ar livre" align="right" /></a>
-<!-- cv:end -->
 
 estou construindo ativamente o **[marola](https://github.com/marola-dev/marola)** de forma aberta: uma **camada de inteligência do oceano**
 para o litoral brasileiro, feita como ciência cidadã. ele responde *"posso nadar amanhã, e quando?"* para cada praia de florianópolis, rio de janeiro e salvador:
@@ -59,6 +57,7 @@ a melhor hora por ondulação, vento, maré, uv e os boletins oficiais de balnea
 </p>
 
 > 🔓 contribuições são bem-vindas, de pessoas e de agentes de ia — nem precisa programar: use o mapa e diga onde ele erra, compartilhe conhecimento local sobre o mar, ou abra uma issue ou um PR em **[marola-dev/marola](https://github.com/marola-dev/marola)**. ou me escreva: **mhoffmannfs[at]gmail.com**
+cv:end -->
 
 <!-- cv:only
 ## ⚡ pesquisa — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
