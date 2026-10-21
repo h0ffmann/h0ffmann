@@ -14,29 +14,41 @@ const QUERY: &str = "query($login: String!, $year: DateTime!, $month: DateTime!)
     nameWithOwner isPrivate primaryLanguage { name }
     repositoryTopics(first: 10) { nodes { topic { name } } } } } } } }";
 
-// The canvas, in Archify's units: small, so that Archify's own type comes out about 2.6 times
+// The canvas, in Archify's units: small, so that Archify's own type comes out about 2.3 times
 // larger when Chrome stretches it to 1584x396, and LinkedIn's profile page (about 800 px wide)
 // still shows the names at some 19 px. The pins take a grid of 3x2 on the right; the user's box
 // sits top left, above where LinkedIn puts the profile photo.
 const COLS: i64 = 3;
-const CELL_W: i64 = 128;
+const CELL_W: i64 = 152;
 const CELL_H: i64 = 60;
 const GAP: i64 = 10;
-const USER_W: i64 = 186;
+const USER_W: i64 = 172;
 const GRID_X: i64 = USER_W + 2 * GAP;
 const LANGUAGES: usize = 3;
 // The skills share the sublabel line of a box: 9px type, 5.4 units a character (Archify's
 // authoring defaults), less the box's padding.
-const SKILL_CHARS: usize = 20;
+const SKILL_CHARS: usize = 24;
 
 /// Every public pin, as GitHub lists it, with a licence or without.
 fn public(repo: &Value) -> bool {
     !repo["isPrivate"].as_bool().unwrap_or(true)
 }
 
-/// The skills of a pin: its language, then its GitHub topics in GitHub's order, as many as fit in
-/// SKILL_CHARS characters.
+/// The skills the owner chose, by repository (site/data/cover.tsv).
+const CHOSEN: &str = include_str!("../../site/data/cover.tsv");
+
+fn chosen(table: &str, repo: &str) -> Option<Vec<String>> {
+    table.lines().filter(|l| !l.starts_with('#')).map(|l| l.split('\t').collect::<Vec<_>>())
+        .find(|cells| cells.first() == Some(&repo))
+        .map(|cells| cells.get(1).unwrap_or(&"").split(", ").map(String::from).collect())
+}
+
+/// The skills of a pin: the owner's choice when site/data/cover.tsv has one, all of it; otherwise
+/// its language, then its GitHub topics in GitHub's order, as many as fit in SKILL_CHARS characters.
 fn skills(repo: &Value) -> Vec<String> {
+    if let Some(mine) = chosen(CHOSEN, repo["nameWithOwner"].as_str().unwrap_or("")) {
+        return mine;
+    }
     let topics = repo["repositoryTopics"]["nodes"].as_array().into_iter().flatten();
     repo["primaryLanguage"]["name"].as_str().into_iter().map(str::to_lowercase)
         .chain(topics.filter_map(|t| t["topic"]["name"].as_str().map(String::from)))
@@ -152,7 +164,9 @@ fn frame(html: &str) -> String {
         Some(at) => {
             let start = at + "<svg viewBox=\"".len();
             let close = start + html[start..].find('"').unwrap();
-            format!("{}0 0 {} {}{}", &html[..start], CROP.0, CROP.1, &html[close..])
+            // The grid is 2 rows high; the 4:1 crop is taller, so the grid sits in its middle.
+            let top = (CROP.1 - (3 * GAP + 2 * CELL_H)) / 2;
+            format!("{}0 {} {} {}{}", &html[..start], -top, CROP.0, CROP.1, &html[close..])
         }
         None => html,
     }
@@ -213,7 +227,7 @@ mod tests {
         let labels: Vec<_> = c.iter().map(|c| c["label"].as_str().unwrap()).collect();
         assert_eq!(labels, ["a · 10 years", "open", "none", "other", "fourth"]);
         assert_eq!(c[0]["sublabel"], "0 contribs · 7 w/ claude");
-        assert_eq!(c[1]["sublabel"], "rust · t1 · t2 · t3");
+        assert_eq!(c[1]["sublabel"], "rust · t1 · t2 · t3 · t4");
         assert_eq!(c[4]["pos"], json!([GRID_X, GAP + CELL_H + GAP]));
         assert!(d.get("connections").is_none());
     }
@@ -244,9 +258,18 @@ mod tests {
     }
 
     #[test]
+    fn the_owners_choice_comes_first() {
+        let table = "# repository\tskills\tsource\nb/x\tnix, rust\tthe owner\n";
+        assert_eq!(chosen(table, "b/x"), Some(vec!["nix".to_string(), "rust".to_string()]));
+        assert_eq!(chosen(table, "b/y"), None);
+        assert_eq!(skills(&json!({ "nameWithOwner": "h0ffmann/picasso" })), ["nix", "rust"]);
+    }
+
+    #[test]
     fn frame_injects_once_and_crops_the_drawing() {
         let got = frame("<head></head><head></head><svg viewBox=\"0 0 646 208\" role=\"img\">");
         assert_eq!(got.matches("<style>").count(), 1);
-        assert!(got.ends_with(&format!("<svg viewBox=\"0 0 {} {}\" role=\"img\">", CROP.0, CROP.1)), "{got}");
+        let top = (CROP.1 - (3 * GAP + 2 * CELL_H)) / 2;
+        assert!(got.ends_with(&format!("<svg viewBox=\"0 {} {} {}\" role=\"img\">", -top, CROP.0, CROP.1)), "{got}");
     }
 }
