@@ -12,6 +12,7 @@ const QUERY: &str = "query($login: String!, $year: DateTime!, $month: DateTime!)
     repository { isPrivate primaryLanguage { name } } contributions { totalCount } } }
   pinnedItems(first: 6, types: REPOSITORY) { nodes { ... on Repository {
     nameWithOwner isPrivate primaryLanguage { name }
+    defaultBranchRef { target { ... on Commit { history { totalCount } } } }
     repositoryTopics(first: 10) { nodes { topic { name } } } } } } } }";
 
 // The canvas, in Archify's units: small, so that Archify's own type comes out about 2.3 times
@@ -85,7 +86,7 @@ fn years(since: &str, today: &str) -> i64 {
     year(today) - year(since) - i64::from(today.get(5..10) < since.get(5..10))
 }
 
-/// The user's box top left, the pins in a grid of three columns to its right, in GitHub's order.
+/// The user's box top left, the pins in a grid (each with its default branch's commits) of three columns to its right, in GitHub's order.
 /// No lines: on a cover every box is read on its own, and six lines from one box are noise.
 fn diagram(user: &Value, today: &str, claude: i64) -> Value {
     let login = user["login"].as_str().unwrap_or("");
@@ -105,6 +106,7 @@ fn diagram(user: &Value, today: &str, claude: i64) -> Value {
             "id": format!("repo-{i}"), "type": "backend",
             "label": name.rsplit('/').next(),
             "sublabel": skills(r).join(" · "),
+            "tag": format!("{} commits", r["defaultBranchRef"]["target"]["history"]["totalCount"].as_i64().unwrap_or(0)),
             "pos": [GRID_X + col * (CELL_W + GAP), GAP + row * (CELL_H + GAP)], "size": [CELL_W, CELL_H],
         }));
     }
@@ -150,6 +152,10 @@ const PICASSO: &str = "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.
     .diagram-container svg text.t-primary{font:400 17px 'Fjalla One',sans-serif!important;fill:#EDEFF3!important}\
     .diagram-container svg text.t-muted{font:400 10.5px Inter,sans-serif!important;fill:#9AA3B2!important}\
     .diagram-container svg text.t-external{font:600 8px Inter,sans-serif!important;fill:#FF4F00!important}\
+    .diagram-container svg text.t-backend{font:600 8px Inter,sans-serif!important;fill:#EDEFF3!important}\
+    .diagram-container svg text.t-primary{transform:translateY(-5px)}\
+    .diagram-container svg text.t-muted{transform:translateY(-3px)}\
+    .diagram-container svg text.t-backend,.diagram-container svg text.t-external{transform:translateY(2px)}\
     </style>";
 
 /// The drawing's own bounds, cut to 4:1: Archify will not draw a canvas under 240 units high,
@@ -217,7 +223,7 @@ mod tests {
             { "nameWithOwner": "a/open", "isPrivate": false, "primaryLanguage": { "name": "Rust" }, "repositoryTopics": { "nodes": [
                 { "topic": { "name": "t1" } }, { "topic": { "name": "t2" } }, { "topic": { "name": "t3" } },
                 { "topic": { "name": "t4" } }, { "topic": { "name": "t5" } } ] } },
-            { "nameWithOwner": "a/none", "isPrivate": false },
+            { "nameWithOwner": "a/none", "isPrivate": false, "defaultBranchRef": { "target": { "history": { "totalCount": 42 } } } },
             { "nameWithOwner": "a/other", "isPrivate": false },
             { "nameWithOwner": "b/fourth", "isPrivate": false },
             { "nameWithOwner": "a/hidden", "isPrivate": true },
@@ -228,6 +234,7 @@ mod tests {
         assert_eq!(labels, ["a · 10 years", "open", "none", "other", "fourth"]);
         assert_eq!(c[0]["sublabel"], "0 contribs · 7 w/ claude");
         assert_eq!(c[1]["sublabel"], "rust · t1 · t2 · t3 · t4");
+        assert_eq!(c[2]["tag"], "42 commits");
         assert_eq!(c[4]["pos"], json!([GRID_X, GAP + CELL_H + GAP]));
         assert!(d.get("connections").is_none());
     }

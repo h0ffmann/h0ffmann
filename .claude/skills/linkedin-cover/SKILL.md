@@ -20,7 +20,7 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
      without opening the cover. The pins are a grid of 3x2, each with its name and the skills
      that fit on one line: the owner's choice in
      [`site/data/cover.tsv`](../../../site/data/cover.tsv), or else its language, then its GitHub
-     topics in GitHub's order. There are no
+     topics in GitHub's order. Under them, the commits of its default branch, read by `just cover`. There are no
      lines between boxes.
    - The top-left box: the account's age in whole years, its contributions this year (GitHub's
      calendar, which counts private ones only if the profile shows them), its commits this year
