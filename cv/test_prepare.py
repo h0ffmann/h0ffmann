@@ -95,12 +95,12 @@ class Readmes(unittest.TestCase):
         self.assertEqual(lists[0], lists[1], "README.pt-BR.md markers differ from README.md")
         self.assertEqual(lists[0], lists[2], "README.ja.md markers differ from README.md")
 
-    def test_profile_shows_four_sections_and_cv_seven(self):
+    def test_profile_shows_three_sections_and_cv_seven(self):
         for path in READMES:
             text = path.read_text()
             with self.subTest(readme=path.name):
-                # me, marola, certs, misc. The arc is on the site only; closed-source is `cv:only`.
-                self.assertEqual(len(HEADING.findall(shown_on_github(text))), 4)
+                # me, certs, misc. The arc is on the site only; marola and closed-source are `cv:only`.
+                self.assertEqual(len(HEADING.findall(shown_on_github(text))), 3)
                 self.assertEqual(len(HEADING.findall(p.prepare(text, ""))), 7)
 
     def test_no_line_inside_an_only_block_closes_the_html_comment_early(self):

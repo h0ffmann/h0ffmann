@@ -9,14 +9,14 @@
 
 <sub><b>水のプロメテウス</b> · アプリを保守する技術 · <a href="https://h0ffmann.github.io/h0ffmann/">サイト</a></sub>
 
-<sub>いまのスタック： <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> と <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a></sub>
+<sub>いまのスタック： プロトタイプは <a href="https://www.python.org"><img src="https://www.python.org/static/favicon.ico" alt="" width="16" height="16" /> python</a> · 趣味で <a href="https://www.scala-lang.org"><img src="https://www.scala-lang.org/resources/favicon.ico" alt="" width="16" height="16" /> scala</a> · 低レベルのライブラリは <a href="https://www.rust-lang.org"><img src="https://www.rust-lang.org/static/images/favicon.svg" alt="" width="16" height="16" /> rust</a> · 静的ホスティングは <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> · <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a>（ときどき <a href="https://opencode.ai"><img src="https://opencode.ai/favicon-96x96.png" alt="" width="16" height="16" /> opencode</a>）· シンプルな PR、シンプルに</sub>
 
 </div>
 <!-- cv:end -->
 
 ## 👋 自己紹介
 
-決済処理と不正対策を中心に、スケーラブルなソリューションを構築してきた**8年**の経験を持つシニアソフトウェアエンジニア兼ジュニア研究者。研究テーマは波浪モデリング、ゲーム理論、自己改善するアプリ。現在は **[marola-dev](https://github.com/marola-dev)** と **ouroboric-dev** で執筆と研究を行っており、商用のご依頼も歓迎します。非公開のセカンドブレイン `h0ffmann/nagori`（近日 FOSS 化）に頻繁に書いています。将来は登壇者としても活動予定です。
+決済処理と不正対策を中心に、スケーラブルなソリューションを構築してきた**8年**の経験を持つシニアソフトウェアエンジニア兼ジュニア研究者。研究テーマは波浪モデリング、ゲーム理論、自己改善するアプリ。現在は **[marola-dev](https://github.com/marola-dev)**（ボランティア）で[執筆](https://github.com/h0ffmann/ptbr-writter)と研究を行っており、商用のご依頼も歓迎します。
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -24,12 +24,10 @@
 </p>
 <!-- cv:end -->
 
+<!-- cv:only
 ## 🌊 marola
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="marola.dev の QR コード" title="スキャンして marola.dev を開く" align="right" width="120" /></a>
-<!-- cv:skip -->
-<a href="https://lnt.org" target="_blank"><img src="https://img.shields.io/badge/Leave_No_Trace-affiliate-4B7F3A?style=for-the-badge" alt="Leave No Trace 加盟" title="Leave No Trace: アウトドア倫理" align="right" /></a>
-<!-- cv:end -->
 
 ブラジル沿岸のための市民科学による**海のインテリジェンスレイヤー**、**[marola](https://github.com/marola-dev/marola)** をオープンに開発しています。フロリアノポリス、リオデジャネイロ、サルバドールの各ビーチについて「明日泳げる？何時がいい？」に答え、うねり・風・潮汐・UV・公式の海水浴場水質速報から最適な時間を選び、その*理由*をわかりやすい言葉で説明します。**[marola.dev](https://marola.dev)** で公開中です。
 
@@ -57,6 +55,7 @@
 </p>
 
 > 🔓 人間も AI エージェントも、コントリビューター歓迎 — コードは不要です：地図を使って間違いを教えてください、海の地域知識を共有してください、または **[marola-dev/marola](https://github.com/marola-dev/marola)** で issue や PR を。メールでも：**mhoffmannfs[at]gmail.com**
+cv:end -->
 
 <!-- cv:only
 ## ⚡ 研究 — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)

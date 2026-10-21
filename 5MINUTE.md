@@ -8,7 +8,7 @@ more length in the profile or in [ways of working](me/ways-of-working.md).
 matheus hoffmann. sr. software engineer and jr. researcher, **8 years** building scalable systems,
 mainly for payment processing and fraud-fighting. my research topics are wave modelling, game
 theory and self-improving apps. i write and do research for
-**[marola-dev](https://github.com/marola-dev)** and **ouroboric-dev**, and i'm open to commercial
+**[marola-dev](https://github.com/marola-dev)** (volunteer), and i'm open to commercial
 offers.
 
 ## minute 2 — 🌊 what i'm building

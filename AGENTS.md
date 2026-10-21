@@ -109,17 +109,17 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   `.github/workflows/cv.yml` through nix-config's `labs/publisher` action
   (pandoc → lualatex; shields badges become colored pills). `cv/prepare.py`
   drops everything between `<!-- cv:skip -->` / `<!-- cv:end -->` (the
-  header, the badges under `me`, the Leave No Trace badge beside the QR, the
+  header, the badges under `me`, the
   photos), unwraps everything between a line `<!-- cv:only` and a line
   `cv:end -->` (on github.com that span is one HTML comment, so the profile
   hides it and only the CV shows it; the two kinds of block cannot nest, and
   no line inside a `cv:only` block may contain `-->`) and prepends
   `cv/header.md` (name + contact). The CV follows the README's source order —
-  me, marola, research (ww3-gpu, `cv:only`), closed-source (`cv:only`),
+  me, marola (`cv:only`), research (ww3-gpu, `cv:only`), closed-source (`cv:only`),
   exp-highlights (`cv:only`), certs, misc — so moving a block in the profile moves it in the
   CV. The research, closed-source and experience sections left the profile in
   October 2026 and stay on the CV through `cv:only`; `cv/test_prepare.py` checks
-  that the profile shows four sections and the CV seven, in all three languages.
+  that the profile shows three sections and the CV seven, in all three languages.
   `cv/preamble.tex` is the look. The CV is
   one page per language and close to full: check the page count in the
   build output after adding content.
@@ -198,16 +198,16 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 
 ## Working on the README
 
-- The profile has exactly four sections, in this order: me, marola, certs,
-  misc. marola comes right after me because it is what
-  the user is actively working on. The arc (the owner's path, with the logos
+- The profile has exactly three sections, in this order: me, certs, misc.
+  The marola section left the profile on 20 October 2026 (the owner) and
+  stays on the CV through `cv:only`, right after me. The arc (the owner's path, with the logos
   of where he worked) is on the site only, from `site/data/timeline.tsv`; the
   user removed it from the profile on 17 October 2026. The closed-source
   section and its featured badge under me left the profile on 18 October 2026
   (the owner) and stay on the CV through `cv:only`. The page ends with the notice
   "not a template" (`cv:skip`), which says the profile is all rights reserved. The ww3-gpu research block,
   the closed-source section and the experience line are `cv:only`, in that
-  order between marola and certs: hidden on github.com, printed on the CV.
+  order between marola and certs too: hidden on github.com, printed on the CV.
   The profile has no tech-stack or stats section, no marola-dev repo listing
   and no live badges (last commit, commit activity, CI); the user removed
   them. The look follows picasso's README: say only what is already
@@ -240,8 +240,8 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   rather than reverting to `@latest`. Upstream is unmaintained (v3.34 is
   from 2023); its activity plugin no longer works with GitHub's events API.
   The profile used to carry a recent-activity list and a nix labs table,
-  each rewritten by its own bot; both were removed, so the marola
-  section is the place that says what the user is working on.
+  each rewritten by its own bot; both were removed; the me section
+  says what the user is working on.
 - The languages step runs the in-depth analyzer, which clones every owned
   repository over plain https without a token. Private repositories fail to
   clone silently, so the card covers **public repositories only**. It

@@ -9,14 +9,14 @@
 
 <sub><b>the aquatic prometheus</b> · the art of the maintenance of apps · <a href="https://h0ffmann.github.io/h0ffmann/">the site</a></sub>
 
-<sub>the stack now: <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> and <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a></sub>
+<sub>the stack now: <a href="https://www.python.org"><img src="https://www.python.org/static/favicon.ico" alt="" width="16" height="16" /> python</a> for prototypes · <a href="https://www.scala-lang.org"><img src="https://www.scala-lang.org/resources/favicon.ico" alt="" width="16" height="16" /> scala</a> for fun · <a href="https://www.rust-lang.org"><img src="https://www.rust-lang.org/static/images/favicon.svg" alt="" width="16" height="16" /> rust</a> for low-level libraries · <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> for static hosting · <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a> (sometimes <a href="https://opencode.ai"><img src="https://opencode.ai/favicon-96x96.png" alt="" width="16" height="16" /> opencode</a>) · simple prs, kept simple</sub>
 
 </div>
 <!-- cv:end -->
 
 ## 👋 me
 
-sr. software engineer & jr. researcher with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting. my research topics are wave modelling, game theory and self-improving apps. i'm currently writing and doing research for **[marola-dev](https://github.com/marola-dev)** and **ouroboric-dev**, and i'm open to commercial offers.
+sr. software engineer & jr. researcher with **8 years** of experience building scalable (and occasionally clever) solutions mainly for payment processing & fraud-fighting. my research topics are wave modelling, game theory and self-improving apps. i'm currently [writing](https://github.com/h0ffmann/ptbr-writter) and doing research for **[marola-dev](https://github.com/marola-dev)** (volunteer), and i'm open to commercial offers.
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -24,12 +24,10 @@ sr. software engineer & jr. researcher with **8 years** of experience building s
 </p>
 <!-- cv:end -->
 
+<!-- cv:only
 ## 🌊 marola
 
 <a href="https://marola.dev" target="_blank"><img src="marola-qr.svg" alt="QR code for marola.dev" title="scan for marola.dev" align="right" width="120" /></a>
-<!-- cv:skip -->
-<a href="https://lnt.org" target="_blank"><img src="https://img.shields.io/badge/Leave_No_Trace-affiliate-4B7F3A?style=for-the-badge" alt="Leave No Trace affiliate" title="Leave No Trace: outdoor ethics" align="right" /></a>
-<!-- cv:end -->
 
 i'm actively building **[marola](https://github.com/marola-dev/marola)** in the open: a citizen-science **ocean intelligence layer**
 for the brazilian coast. it answers *"can i swim tomorrow, and when?"* for every beach around florianópolis, rio de janeiro and salvador:
@@ -59,6 +57,7 @@ the best hour from swell, wind, tide, uv and the official bathing-water bulletin
 </p>
 
 > 🔓 contributors welcome, humans and ai agents alike — no code needed: use the map and tell us where it's wrong, share local sea knowledge, or open an issue or a PR at **[marola-dev/marola](https://github.com/marola-dev/marola)**. or mail me: **mhoffmannfs[at]gmail.com**
+cv:end -->
 
 <!-- cv:only
 ## ⚡ research — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
