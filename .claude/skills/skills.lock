@@ -3,3 +3,4 @@
 # that commit, and its licence. Read the skill at the link before a task that names it; never paste it here.
 # name	upstream	commit	path	skill_md_blob	licence
 humanizer-pt-br	mackswendhell/humanizer-pt-br	ada3599ae2732725585f1d93770eeae98c922ff0	SKILL.md	d66f4a0765	MIT
+archify	tt-a1i/archify	2ab3cae7ac2c2a55d7386ca789d03c4fcd31816c	archify/SKILL.md	7efc61bd70	MIT

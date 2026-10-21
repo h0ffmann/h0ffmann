@@ -12,3 +12,6 @@ site/src/h0ffmann_site/content.gleam
 .lycheecache
 # What `just cv` and `just current` build, before it is copied to pdf/.
 build/
+
+# What `just cover` builds.
+cover/target/

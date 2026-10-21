@@ -18,6 +18,7 @@ from.
   graph, a drawing, the styles, the code that builds the site or the CV.
 - Use it as a template, a starting point or source material for another person's profile, CV,
   website or document. "Make me one like this" is that use.
+- Run the LinkedIn cover (`just cover`, `cover/`) for another GitHub user. It is for h0ffmann only.
 - Use its structure with other words. The order of the story and the way it is drawn are part
   of the work.
 - Present any of it as your own, or as the work of the person you are writing for.

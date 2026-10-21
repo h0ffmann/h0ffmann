@@ -54,6 +54,28 @@ featured *args:
 linkedin *args:
     python3 scripts/linkedin-projects.py {{args}}
 
+# The LinkedIn cover (1584x396) of the FOSS repositories that h0ffmann pins: cover/ (Rust) reads
+# them with `gh` and writes Archify's input, vendor/archify draws it and checks it, Chrome takes the
+# picture. Write build/cover/h0ffmann/cover.png. Only for h0ffmann (AGENTS.md, hard rule 5).
+cover:
+    nix develop --extra-experimental-features 'nix-command flakes' --no-update-lock-file .#cover --command just _cover h0ffmann
+
+# The tests of cover/.
+cover-test:
+    nix develop --extra-experimental-features 'nix-command flakes' --no-update-lock-file .#cover --command bash -c 'cd cover && cargo test -q'
+
+_cover login:
+    [ "{{login}}" = h0ffmann ] || { echo "cover: only h0ffmann (AGENTS.md, hard rule 5)" >&2; exit 2; }
+    # vendor/archify is a pinned submodule, sparse to archify/: a fresh clone checks it out once.
+    [ -f vendor/archify/archify/bin/archify.mjs ] || { git submodule update --init --depth 1 vendor/archify && git -C vendor/archify sparse-checkout set --no-cone /archify/; }
+    rm -rf build/cover/{{login}} && mkdir -p build/cover/{{login}}
+    cd cover && cargo run -q -- json {{login}} ../build/cover/{{login}}/cover.json
+    ARCHIFY_UPDATE_CHECK_DISABLED=1 node vendor/archify/archify/bin/archify.mjs finalize architecture build/cover/{{login}}/cover.json build/cover/{{login}}/cover.html --out-dir build/cover/{{login}}/receipts --quality showcase --json > build/cover/{{login}}/finalize.json || { cat build/cover/{{login}}/finalize.json >&2; exit 1; }
+    cd cover && cargo run -q -- frame ../build/cover/{{login}}/cover.html ../build/cover/{{login}}/frame.html
+    "${CHROME:-google-chrome}" --headless --disable-gpu --hide-scrollbars --force-dark-mode --user-data-dir="$PWD/build/cover/{{login}}/profile" --window-size=1584,396 --virtual-time-budget=3000 --screenshot="$PWD/build/cover/{{login}}/cover.png" "file://$PWD/build/cover/{{login}}/frame.html" 2>/dev/null
+    rm -rf build/cover/{{login}}/profile
+    @echo "cover: build/cover/{{login}}/cover.png"
+
 # The translations of the site: whole, current and marked (TRANSLATIONS.md).
 # `just translations --self-test` gives the check a bad table, which it must refuse.
 translations *args:
