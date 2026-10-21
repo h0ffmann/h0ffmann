@@ -40,6 +40,11 @@
           packages = with gleam-website.inputs.nixpkgs.legacyPackages.${system};
             [ markdownlint-cli2 vale lychee reuse git python3 ];
         };
+        # `just cover <login>`: the Rust of cover/ and the node that runs vendor/archify. Chrome
+        # and gh come from the host.
+        cover = gleam-website.inputs.nixpkgs.legacyPackages.${system}.mkShell {
+          packages = with gleam-website.inputs.nixpkgs.legacyPackages.${system}; [ cargo rustc nodejs ];
+        };
         default = pkgs.mkShell {
           name = "cv";
           packages = publisher.lib.${system}.tools;
