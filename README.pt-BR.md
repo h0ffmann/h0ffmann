@@ -20,7 +20,6 @@ engenheiro de software sênior e pesquisador júnior com **8 anos** de experiên
 <!-- cv:skip -->
 <p align="left">
 <a href="https://www.linkedin.com/in/mhoffmannbr/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="me/ways-of-working.md"><img src="https://img.shields.io/badge/como%20eu%20trabalho-555555?style=for-the-badge" alt="como eu trabalho" /></a>
 </p>
 <!-- cv:end -->
 
