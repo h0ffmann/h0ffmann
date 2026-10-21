@@ -20,7 +20,9 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
      fewer when the line would not fit its box. A description longer than 64 characters is cut
      with "…".
    - The middle box: the account's age in whole years, its contributions this year (GitHub's
-     calendar, which counts private ones only if the profile shows them), and the three languages
+     calendar, which counts private ones only if the profile shows them), its commits this year
+     with the official trailer "Co-Authored-By: Claude ... <noreply@anthropic.com>" (GitHub's
+     commit search: default branches of public repositories only), and the three languages
      of the last 30 days: the main language of each public repository committed to, weighed by
      its commits.
    - [`vendor/archify`](../archify/SKILL.md) draws it and checks it (`finalize`); Chrome takes the

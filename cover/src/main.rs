@@ -15,11 +15,11 @@ const QUERY: &str = "query($login: String!, $year: DateTime!, $month: DateTime!)
     licenseInfo { spdxId } primaryLanguage { name }
     repositoryTopics(first: 10) { nodes { topic { name } } } } } } } }";
 
-const NODE_W: i64 = 380;
+const NODE_W: i64 = 360;
 const NODE_H: i64 = 64;
 const ROW: i64 = 92;
 const USER_X: i64 = 40 + NODE_W + 100;
-const USER_W: i64 = 300;
+const USER_W: i64 = 360;
 const LANGUAGES: usize = 3;
 const SKILLS: usize = 5;
 const TAG: usize = 66;
@@ -77,14 +77,14 @@ fn years(since: &str, today: &str) -> i64 {
 }
 
 /// The user in the middle, the pins in two columns of up to three: the first half on the left.
-fn diagram(user: &Value, today: &str) -> Value {
+fn diagram(user: &Value, today: &str, claude: i64) -> Value {
     let login = user["login"].as_str().unwrap_or("");
     let repos: Vec<&Value> = user["pinnedItems"]["nodes"].as_array().into_iter().flatten().filter(|r| public(r)).collect();
     let left = repos.len().div_ceil(2);
     let rows = left.max(1) as i64;
     let mut components = vec![json!({
         "id": "user", "type": "external", "label": login,
-        "sublabel": format!("{} years on github · {} contributions in {}",
+        "sublabel": format!("{} years · {} contributions · {claude} commits with claude in {}",
             years(user["createdAt"].as_str().unwrap_or(today), today),
             user["thisYear"]["contributionCalendar"]["totalContributions"].as_i64().unwrap_or(0), &today[..4]),
         "tag": format!("last 30 days: {}", languages(user).join(" · ")),
@@ -113,6 +113,20 @@ fn diagram(user: &Value, today: &str) -> Value {
                   "output": "cover.html", "quality_profile": "showcase" },
         "components": components, "connections": connections,
     })
+}
+
+/// This year's commits by `login` with the official trailer, "Co-Authored-By: Claude ...
+/// <noreply@anthropic.com>": GitHub's commit search, which covers the default branches of public
+/// repositories only.
+fn claude(login: &str, year: &str) -> i64 {
+    let q = format!("author:{login} author-date:>={year}-01-01 \"noreply@anthropic.com\"");
+    let got = Command::new("gh").args(["api", "-X", "GET", "search/commits", "-f", &format!("q={q}"), "-f", "per_page=1", "--jq", ".total_count"])
+        .output().expect("cover: gh is not on PATH");
+    if !got.status.success() {
+        eprintln!("cover: gh search: {}", String::from_utf8_lossy(&got.stderr));
+        exit(1);
+    }
+    String::from_utf8_lossy(&got.stdout).trim().parse().expect("cover: gh search did not answer a count")
 }
 
 /// Hide everything but the drawing (and its legend), show every detail (the tags) and fit it to the viewport, leaving the left quarter empty:
@@ -146,7 +160,7 @@ fn main() {
                 eprintln!("cover: no GitHub user {login}");
                 exit(1);
             }
-            let d = diagram(user, &today);
+            let d = diagram(user, &today, claude(login, &today[..4]));
             if d["connections"].as_array().map_or(true, |c| c.is_empty()) {
                 eprintln!("cover: {login} pins no public repository");
                 exit(1);
@@ -175,7 +189,7 @@ mod tests {
             { "nameWithOwner": "a/other", "isPrivate": false, "licenseInfo": { "spdxId": "NOASSERTION" } },
             { "nameWithOwner": "a/hidden", "isPrivate": true, "licenseInfo": { "spdxId": "MIT" } },
         ] } });
-        let d = diagram(&user, "2026-10-20");
+        let d = diagram(&user, "2026-10-20", 0);
         let c = d["components"].as_array().unwrap();
         let labels: Vec<_> = c.iter().map(|c| c["label"].as_str().unwrap()).collect();
         assert_eq!(labels, ["a", "a/open", "a/none", "a/other"]);
