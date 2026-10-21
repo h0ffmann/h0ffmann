@@ -118,19 +118,36 @@ fn claude(login: &str, year: &str) -> i64 {
     String::from_utf8_lossy(&got.stdout).trim().parse().expect("cover: gh search did not answer a count")
 }
 
+/// picasso's look (h0ffmann/picasso, site/static/style.css: the ouroboric-dev tokens): its dark
+/// palette, one orange accent for the owner's box, Fjalla One for names and Inter for the rest.
+/// Archify keeps the geometry; the type is set larger here than Archify's own, since a cover is
+/// read from afar and Fjalla One is narrow enough to fit.
+const PICASSO: &str = "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@400;600&display=block\">\
+    <style>\
+    html,body{background:radial-gradient(60rem 20rem at 10% -40%,color-mix(in srgb,#FF4F00 22%,transparent),transparent 70%),#0B0D12!important}\
+    body *{visibility:hidden!important}\
+    .diagram-container svg,.diagram-container svg *{visibility:visible!important}\
+    .diagram-container svg [data-legend],.diagram-container svg [data-legend] *,\
+    .diagram-container svg .semantic-sigil,.diagram-container svg .semantic-sigil *{visibility:hidden!important}\
+    .diagram-container svg [fill=\"url(#grid)\"]{display:none}\
+    .diagram-container svg [data-detail]{opacity:1!important}\
+    .diagram-container svg{position:fixed!important;left:0;top:0;width:100vw!important;height:100vh!important;background:none!important}\
+    .diagram-container svg rect.c-mask{fill:#14171F!important}\
+    .diagram-container svg rect[class^=c-]:not(.c-mask){fill:#14171F!important;stroke:#2A303C!important;rx:5px}\
+    .diagram-container svg rect.c-external:not(.c-mask):not(.c-grid){stroke:#FF4F00!important}\
+    .diagram-container svg text.t-primary{font:400 17px 'Fjalla One',sans-serif!important;fill:#EDEFF3!important}\
+    .diagram-container svg text.t-muted{font:400 10.5px Inter,sans-serif!important;fill:#9AA3B2!important}\
+    .diagram-container svg text.t-external{font:600 8px Inter,sans-serif!important;fill:#FF4F00!important}\
+    </style>";
+
 /// The drawing's own bounds, cut to 4:1: Archify will not draw a canvas under 240 units high,
 /// and leaves room for its legend below the boxes.
 const CROP: (i64, i64) = (GRID_X + COLS * (CELL_W + GAP) + GAP, (GRID_X + COLS * (CELL_W + GAP) + GAP) / 4);
 
-/// Hide everything but the drawing (and its legend), show every detail (the tags), crop it to
-/// CROP and fit it to the whole viewport; the layout keeps the photo's corner free.
+/// Keep only the drawing, in picasso's look, cropped to CROP and fitted to the whole viewport; the
+/// layout keeps the photo's corner free.
 fn frame(html: &str) -> String {
-    let css = "<style>body *{visibility:hidden!important}\
-        .diagram-container svg,.diagram-container svg *{visibility:visible!important}\
-        .diagram-container svg [data-legend],.diagram-container svg [data-legend] *{visibility:hidden!important}\
-        .diagram-container svg [data-detail]{opacity:1!important}\
-        .diagram-container svg{position:fixed!important;left:0;top:0;width:100vw!important;height:100vh!important}</style>";
-    let html = html.replacen("</head>", &format!("{css}</head>"), 1);
+    let html = html.replacen("</head>", &format!("{PICASSO}</head>"), 1);
     match html.find("<svg viewBox=\"") {
         Some(at) => {
             let start = at + "<svg viewBox=\"".len();

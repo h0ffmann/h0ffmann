@@ -28,6 +28,10 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
      commits). The cell below it stays empty for the profile photo.
    - [`vendor/archify`](../archify/SKILL.md) draws it and checks it (`finalize`); Chrome takes the
      picture of the drawing cropped to 4:1.
+   - The frame sets picasso's look over Archify's geometry (h0ffmann/picasso,
+     `site/static/style.css`): its dark palette, orange for the owner's box only, Fjalla One for
+     names and Inter for the rest, both from Google Fonts while Chrome takes the picture, larger
+     than Archify's own type.
 2. **Look at** `build/cover/h0ffmann/cover.png` before you hand it over, and at a copy shrunk to
    804 px wide, about the size of the profile page. Text that touches a box's edge, or that you
    cannot read at 804 px, is a fault: say so.
