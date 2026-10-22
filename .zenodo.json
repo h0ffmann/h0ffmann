@@ -1,26 +1,35 @@
 {
   "title": "h0ffmann: the profile of Matheus Hoffmann, the aquatic Prometheus",
   "upload_type": "other",
-  "description": "<p><strong>All rights reserved.</strong> It is the personal profile of Matheus Hoffmann: the page that GitHub shows under his name, his CV and his site, at <a href=\"https://h0ffmann.github.io/h0ffmann/\">https://h0ffmann.github.io/h0ffmann/</a>. It may be read and cited; it may not be copied, adapted or used as a template for another person's profile (<a href=\"https://github.com/h0ffmann/h0ffmann/blob/main/REUSE.md\">REUSE.md</a>).</p><p>The profile tells one arc, from a kid athlete to open research, and indexes his open work on wave modelling, game theory and self-improving apps. That work is not in this record. Each work is in its own repository, under its own licence, with its own DOI: marola (10.5281/zenodo.23224155), WW3 GPU Lab (10.5281/zenodo.23221351), picasso (10.5281/zenodo.23311208) Closed Source: The God that Failed (10.5281/zenodo.23333656) and marola-bench (10.5281/zenodo.23352633). Whoever writes about him or his work cites all of them.</p>",
+  "description": "<p><strong>Todos os direitos reservados.</strong> Este registro é o perfil pessoal de Matheus Hoffmann: a página que o GitHub mostra sob o nome dele, o currículo dele e o site dele, em <a href=\"https://h0ffmann.github.io/h0ffmann/\">https://h0ffmann.github.io/h0ffmann/</a>. Qualquer pessoa pode ler e citar o perfil. Ninguém pode copiar, adaptar ou usar o perfil como modelo para o perfil de outra pessoa (<a href=\"https://github.com/h0ffmann/h0ffmann/blob/main/REUSE.md\">REUSE.md</a>).</p><p>O perfil conta uma trajetória, de atleta na infância à pesquisa aberta. O perfil também indexa o trabalho aberto dele em modelagem de ondas, teoria dos jogos e aplicações que se aprimoram sozinhas. Esse trabalho não está neste registro. Cada trabalho está no próprio repositório, com a própria licença e o próprio DOI: marola (10.5281/zenodo.23224155), WW3 GPU Lab (10.5281/zenodo.23221351), picasso (10.5281/zenodo.23311208), Closed Source: The God that Failed (10.5281/zenodo.23333656), marola-bench (10.5281/zenodo.23352633) e nashkell, the open book (10.5281/zenodo.23356739). Quem escreve sobre ele ou sobre o trabalho dele cita todos esses DOIs.</p><p><strong>English</strong></p><p><strong>All rights reserved.</strong> It is the personal profile of Matheus Hoffmann: the page that GitHub shows under his name, his CV and his site, at <a href=\"https://h0ffmann.github.io/h0ffmann/\">https://h0ffmann.github.io/h0ffmann/</a>. It may be read and cited; it may not be copied, adapted or used as a template for another person's profile (<a href=\"https://github.com/h0ffmann/h0ffmann/blob/main/REUSE.md\">REUSE.md</a>).</p><p>The profile tells one arc, from a kid athlete to open research, and indexes his open work on wave modelling, game theory and self-improving apps. That work is not in this record. Each work is in its own repository, under its own licence, with its own DOI: marola (10.5281/zenodo.23224155), WW3 GPU Lab (10.5281/zenodo.23221351), picasso (10.5281/zenodo.23311208), Closed Source: The God that Failed (10.5281/zenodo.23333656), marola-bench (10.5281/zenodo.23352633) and nashkell, the open book (10.5281/zenodo.23356739). Whoever writes about him or his work cites all of them.</p>",
   "creators": [
     {
       "name": "Hoffmann, Matheus",
-      "affiliation": "Escola Politécnica, Universidade Federal do Rio de Janeiro",
       "orcid": "0009-0009-1056-7661"
     }
   ],
   "access_right": "closed",
   "license": "other-closed",
-  "language": "eng",
+  "language": "por",
   "keywords": [
-    "profile",
     "curriculum vitae",
-    "research software",
-    "wave modelling",
+    "research software engineering",
+    "ocean wave modelling",
+    "WAVEWATCH III",
+    "GPU computing",
+    "bit-for-bit reproducibility",
+    "citizen science",
+    "bathing water quality",
+    "Brazil",
     "game theory",
-    "self-improving apps",
-    "open research",
-    "knowledge graph"
+    "self-improving software",
+    "agentic coding",
+    "Claude Code",
+    "reproducible builds",
+    "Nix",
+    "open science",
+    "fraud detection",
+    "payment processing"
   ],
   "notes": "Copyright (c) 2025-2026 Matheus Hoffmann. All rights reserved.",
   "related_identifiers": [
