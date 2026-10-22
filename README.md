@@ -99,7 +99,7 @@ cv:end -->
 
 ## 🏅 certs
 
-**aws certified 4x** (Cloud Practitioner, Machine Learning Specialty, Machine Learning Engineer Associate, Data Engineer Associate) · **padi certified 3x** (Advanced Open Water Diver, Enriched Air Nitrox Diver, Rescue Diver)
+**aws certified 4x** (Cloud Practitioner, Machine Learning Specialty, Machine Learning Engineer Associate, Data Engineer Associate) · **padi certified 4x** (Open Water, Advanced Open Water Diver, Enriched Air Nitrox Diver, Rescue Diver)
 
 ## 🏊 misc
 <a href="https://strava.com/athletes/144282698" target="_blank"><img src="https://img.shields.io/badge/Strava-open_water_swimming-FC4C02?style=for-the-badge&logo=strava&logoColor=white" alt="strava (open water swimming)" /></a>
