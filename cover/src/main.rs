@@ -1,7 +1,7 @@
 //! The LinkedIn cover: the public repositories that h0ffmann pins on GitHub, as an Archify architecture diagram.
 //!
 //!     cover json <login> <out.json>     read the pinned repositories with `gh`, write Archify's input
-//!     cover frame <in.html> <out.html>  keep only the drawing, sized for a 1584x396 capture
+//!     cover frame <login> <in.html> <out.html>  keep only the drawing, sized for a 1584x396 capture
 use serde_json::{json, Value};
 use std::process::{exit, Command};
 use std::{env, fs};
@@ -15,7 +15,7 @@ const QUERY: &str = "query($login: String!, $year: DateTime!, $month: DateTime!)
     defaultBranchRef { target { ... on Commit { history { totalCount } } } }
     repositoryTopics(first: 10) { nodes { topic { name } } } } } } } }";
 
-// The canvas, in Archify's units: small, so that Archify's own type comes out about 2.3 times
+// The canvas, in Archify's units: small, so that Archify's own type comes out about 2.2 times
 // larger when Chrome stretches it to 1584x396, and LinkedIn's profile page (about 800 px wide)
 // still shows the names at some 19 px. The pins take a grid of 3x2 on the right; the user's box
 // sits top left, above where LinkedIn puts the profile photo.
@@ -23,7 +23,7 @@ const COLS: i64 = 3;
 const CELL_W: i64 = 152;
 const CELL_H: i64 = 60;
 const GAP: i64 = 10;
-const USER_W: i64 = 172;
+const USER_W: i64 = 204;
 const GRID_X: i64 = USER_W + 2 * GAP;
 const LANGUAGES: usize = 3;
 // The skills share the sublabel line of a box: 9px type, 5.4 units a character (Archify's
@@ -80,6 +80,11 @@ fn languages(user: &Value) -> Vec<String> {
     count.into_iter().take(LANGUAGES).map(|(l, _)| l.to_lowercase()).collect()
 }
 
+/// "1 commit", "2 commits".
+fn count(n: i64, noun: &str) -> String {
+    format!("{n} {noun}{}", if n == 1 { "" } else { "s" })
+}
+
 /// Whole years from `since` to `today`, both "YYYY-MM-DD...".
 fn years(since: &str, today: &str) -> i64 {
     let year = |d: &str| d.get(..4).and_then(|y| y.parse::<i64>().ok()).unwrap_or(0);
@@ -94,9 +99,9 @@ fn diagram(user: &Value, today: &str, claude: i64) -> Value {
     let mut components = vec![json!({
         "id": "user", "type": "external",
         "label": format!("{login} · {} years", years(user["createdAt"].as_str().unwrap_or(today), today)),
-        "sublabel": format!("{} contribs · {claude} w/ claude",
+        "sublabel": format!("{}: {} contribs · {claude} w/ claude", &today[..4],
             user["thisYear"]["contributionCalendar"]["totalContributions"].as_i64().unwrap_or(0)),
-        "tag": format!("{} · 30d: {}", &today[..4], languages(user).join(" · ")),
+        "tag": format!("30d: {}", languages(user).join(" · ")),
         "pos": [GAP, GAP], "size": [USER_W, CELL_H],
     })];
     for (i, r) in repos.iter().enumerate() {
@@ -106,7 +111,8 @@ fn diagram(user: &Value, today: &str, claude: i64) -> Value {
             "id": format!("repo-{i}"), "type": "backend",
             "label": name.rsplit('/').next(),
             "sublabel": skills(r).join(" · "),
-            "tag": format!("{} commits", r["defaultBranchRef"]["target"]["history"]["totalCount"].as_i64().unwrap_or(0)),
+            "tag": format!("{} · {}", count(r["defaultBranchRef"]["target"]["history"]["totalCount"].as_i64().unwrap_or(0), "commit"),
+                count(r["contributors"].as_i64().unwrap_or(0), "contributor")),
             "pos": [GRID_X + col * (CELL_W + GAP), GAP + row * (CELL_H + GAP)], "size": [CELL_W, CELL_H],
         }));
     }
@@ -130,6 +136,21 @@ fn claude(login: &str, year: &str) -> i64 {
         exit(1);
     }
     String::from_utf8_lossy(&got.stdout).trim().parse().expect("cover: gh search did not answer a count")
+}
+
+/// The people who committed to a repository's default branch, as GitHub links them to accounts:
+/// its accounts of type User, less the account "claude", whose commits the owner's box counts.
+fn contributors(repo: &str) -> i64 {
+    // shortcut: one page of 100 contributors, enough for every pin today; paginate if a pin passes it.
+    let got = Command::new("gh").args(["api", &format!("repos/{repo}/contributors?per_page=100"),
+            "--jq", "[.[] | select(.type == \"User\" and .login != \"claude\")] | length"])
+        .output().expect("cover: gh is not on PATH");
+    if !got.status.success() {
+        eprintln!("cover: gh contributors {repo}: {}", String::from_utf8_lossy(&got.stderr));
+        exit(1);
+    }
+    // An empty repository answers nothing.
+    String::from_utf8_lossy(&got.stdout).trim().parse().unwrap_or(0)
 }
 
 /// picasso's look (h0ffmann/picasso, site/static/style.css: the ouroboric-dev tokens): its dark
@@ -162,10 +183,20 @@ const PICASSO: &str = "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.
 /// and leaves room for its legend below the boxes.
 const CROP: (i64, i64) = (GRID_X + COLS * (CELL_W + GAP) + GAP, (GRID_X + COLS * (CELL_W + GAP) + GAP) / 4);
 
-/// Keep only the drawing, in picasso's look, cropped to CROP and fitted to the whole viewport; the
-/// layout keeps the photo's corner free.
-fn frame(html: &str) -> String {
-    let html = html.replacen("</head>", &format!("{PICASSO}</head>"), 1);
+/// A pill with the account's address on GitHub, astride the top edge of the owner's box: a cover
+/// is a picture, and its reader types the address. Text, not GitHub's mark (AGENTS.md, hard rule 4).
+fn pill(login: &str) -> String {
+    let text = format!("github.com/{login}");
+    let w = text.chars().count() as i64 * 4 + 10;
+    format!("<g class=\"gh-pill\"><rect x=\"{}\" y=\"{}\" width=\"{w}\" height=\"12\" rx=\"6\" fill=\"#0B0D12\" stroke=\"#FF4F00\"/>\
+        <text x=\"{}\" y=\"{}\" text-anchor=\"middle\" style=\"font:600 7px Inter,sans-serif;fill:#FF4F00\">{text}</text></g>",
+        GAP + 10, GAP - 6, GAP + 10 + w / 2, GAP + 2)
+}
+
+/// Keep only the drawing, in picasso's look, cropped to CROP and fitted to the whole viewport, with
+/// the GitHub pill; the layout keeps the photo's corner free.
+fn frame(html: &str, login: &str) -> String {
+    let html = html.replacen("</head>", &format!("{PICASSO}</head>"), 1).replacen("</svg>", &format!("{}</svg>", pill(login)), 1);
     match html.find("<svg viewBox=\"") {
         Some(at) => {
             let start = at + "<svg viewBox=\"".len();
@@ -193,6 +224,12 @@ fn main() {
                 exit(1);
             }
             let data: Value = serde_json::from_slice(&got.stdout).expect("cover: gh did not answer JSON");
+            let mut data = data;
+            for r in data["data"]["user"]["pinnedItems"]["nodes"].as_array_mut().into_iter().flatten() {
+                if public(r) {
+                    r["contributors"] = json!(contributors(r["nameWithOwner"].as_str().unwrap_or("")));
+                }
+            }
             let user = &data["data"]["user"];
             if user.is_null() {
                 eprintln!("cover: no GitHub user {login}");
@@ -205,9 +242,9 @@ fn main() {
             }
             fs::write(out, serde_json::to_string_pretty(&d).unwrap() + "\n").unwrap();
         }
-        ["frame", input, out] => fs::write(out, frame(&fs::read_to_string(input).unwrap())).unwrap(),
+        ["frame", login, input, out] => fs::write(out, frame(&fs::read_to_string(input).unwrap(), login)).unwrap(),
         _ => {
-            eprintln!("usage: cover json <login> <out.json> | cover frame <in.html> <out.html>");
+            eprintln!("usage: cover json <login> <out.json> | cover frame <login> <in.html> <out.html>");
             exit(2);
         }
     }
@@ -223,7 +260,7 @@ mod tests {
             { "nameWithOwner": "a/open", "isPrivate": false, "primaryLanguage": { "name": "Rust" }, "repositoryTopics": { "nodes": [
                 { "topic": { "name": "t1" } }, { "topic": { "name": "t2" } }, { "topic": { "name": "t3" } },
                 { "topic": { "name": "t4" } }, { "topic": { "name": "t5" } } ] } },
-            { "nameWithOwner": "a/none", "isPrivate": false, "defaultBranchRef": { "target": { "history": { "totalCount": 42 } } } },
+            { "nameWithOwner": "a/none", "isPrivate": false, "contributors": 3, "defaultBranchRef": { "target": { "history": { "totalCount": 42 } } } },
             { "nameWithOwner": "a/other", "isPrivate": false },
             { "nameWithOwner": "b/fourth", "isPrivate": false },
             { "nameWithOwner": "a/hidden", "isPrivate": true },
@@ -232,9 +269,11 @@ mod tests {
         let c = d["components"].as_array().unwrap();
         let labels: Vec<_> = c.iter().map(|c| c["label"].as_str().unwrap()).collect();
         assert_eq!(labels, ["a · 10 years", "open", "none", "other", "fourth"]);
-        assert_eq!(c[0]["sublabel"], "0 contribs · 7 w/ claude");
+        assert_eq!(c[0]["sublabel"], "2026: 0 contribs · 7 w/ claude");
         assert_eq!(c[1]["sublabel"], "rust · t1 · t2 · t3 · t4");
-        assert_eq!(c[2]["tag"], "42 commits");
+        assert_eq!(c[2]["tag"], "42 commits · 3 contributors");
+        assert_eq!(c[3]["tag"], "0 commits · 0 contributors");
+        assert_eq!(count(1, "commit"), "1 commit");
         assert_eq!(c[4]["pos"], json!([GRID_X, GAP + CELL_H + GAP]));
         assert!(d.get("connections").is_none());
     }
@@ -274,9 +313,10 @@ mod tests {
 
     #[test]
     fn frame_injects_once_and_crops_the_drawing() {
-        let got = frame("<head></head><head></head><svg viewBox=\"0 0 646 208\" role=\"img\">");
+        let got = frame("<head></head><head></head><svg viewBox=\"0 0 646 208\" role=\"img\"></svg>", "a");
         assert_eq!(got.matches("<style>").count(), 1);
+        assert!(got.contains(">github.com/a</text></g></svg>"), "{got}");
         let top = (CROP.1 - (3 * GAP + 2 * CELL_H)) / 2;
-        assert!(got.ends_with(&format!("<svg viewBox=\"0 {} {} {}\" role=\"img\">", -top, CROP.0, CROP.1)), "{got}");
+        assert!(got.contains(&format!("<svg viewBox=\"0 {} {} {}\" role=\"img\">", -top, CROP.0, CROP.1)));
     }
 }

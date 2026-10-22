@@ -15,19 +15,21 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
 1. **Run** `just cover`. It needs `gh`, signed in, and Chrome (`CHROME` names another).
    - [`cover/`](../../../cover/src/main.rs), in Rust, reads his pins with `gh api graphql`
      and keeps every public one, as GitHub lists them.
-   - It writes Archify's input on a small canvas (about 626x156 units), so that Archify's own type
-     comes out about 2.5 times larger at 1584x396 and stays readable on LinkedIn's profile page
+   - It writes Archify's input on a small canvas (about 720x180 units), so that Archify's own type
+     comes out about 2.2 times larger at 1584x396 and stays readable on LinkedIn's profile page
      without opening the cover. The pins are a grid of 3x2, each with its name and the skills
      that fit on one line: the owner's choice in
      [`site/data/cover.tsv`](../../../site/data/cover.tsv), or else its language, then its GitHub
-     topics in GitHub's order. Under them, the commits of its default branch, read by `just cover`. There are no
+     topics in GitHub's order. Under them, the commits of its default branch and its contributors (GitHub's accounts of
+     type User, less `claude`, whose commits the owner's box counts; no bots), read by `just cover`. There are no
      lines between boxes.
-   - The top-left box: the account's age in whole years, its contributions this year (GitHub's
+   - The top-left box: the account's age in whole years, its contributions this year, after the year (GitHub's
      calendar, which counts private ones only if the profile shows them), its commits this year
      with the official trailer "Co-Authored-By: Claude ... <noreply@anthropic.com>" (GitHub's
      commit search: default branches of public repositories only), and the three languages of
      the last 30 days (the main language of each public repository committed to, weighed by its
-     commits). The cell below it stays empty for the profile photo.
+     commits). A pill on its top edge gives the address on GitHub, in text: no logo is drawn (hard rule 4).
+     The cell below it stays empty for the profile photo.
    - `vendor/archify` (its skill is `.claude/skills/archify`, once checked out) draws it and checks it (`finalize`); Chrome takes the
      picture of the drawing cropped to 4:1.
    - The frame sets picasso's look over Archify's geometry (h0ffmann/picasso,

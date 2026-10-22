@@ -71,7 +71,7 @@ _cover login:
     rm -rf build/cover/{{login}} && mkdir -p build/cover/{{login}}
     cd cover && cargo run -q -- json {{login}} ../build/cover/{{login}}/cover.json
     ARCHIFY_UPDATE_CHECK_DISABLED=1 node vendor/archify/archify/bin/archify.mjs finalize architecture build/cover/{{login}}/cover.json build/cover/{{login}}/cover.html --out-dir build/cover/{{login}}/receipts --quality showcase --json > build/cover/{{login}}/finalize.json || { cat build/cover/{{login}}/finalize.json >&2; exit 1; }
-    cd cover && cargo run -q -- frame ../build/cover/{{login}}/cover.html ../build/cover/{{login}}/frame.html
+    cd cover && cargo run -q -- frame {{login}} ../build/cover/{{login}}/cover.html ../build/cover/{{login}}/frame.html
     "${CHROME:-google-chrome}" --headless --disable-gpu --hide-scrollbars --force-dark-mode --user-data-dir="$PWD/build/cover/{{login}}/profile" --window-size=1584,396 --virtual-time-budget=3000 --screenshot="$PWD/build/cover/{{login}}/cover.png" "file://$PWD/build/cover/{{login}}/frame.html" 2>/dev/null
     rm -rf build/cover/{{login}}/profile
     @echo "cover: build/cover/{{login}}/cover.png"
