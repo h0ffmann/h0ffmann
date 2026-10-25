@@ -19,6 +19,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 NOTO = "https://raw.githubusercontent.com/googlefonts/noto-emoji/v2.051/svg/{name}.svg"
+# Noto keeps the flags apart, in the waved style it draws them in.
+NOTO_FLAG = "https://raw.githubusercontent.com/googlefonts/noto-emoji/v2.051/third_party/region-flags/waved-svg/{name}.svg"
 
 BASE = "☀-➿⬀-⯿\U0001F000-\U0001F1E5\U0001F200-\U0001F3FA\U0001F400-\U0001FAFF"
 FLAG = "[\U0001F1E6-\U0001F1FF]{2}"
@@ -53,7 +55,8 @@ def main(argv) -> int:
         if argv[1] == "--list":
             print(sequence, target.name, "" if target.exists() else "(missing)")
         elif not target.exists():
-            with urllib.request.urlopen(NOTO.format(name=name(sequence))) as response:
+            url = NOTO_FLAG if re.fullmatch(FLAG, sequence) else NOTO
+            with urllib.request.urlopen(url.format(name=name(sequence))) as response:
                 target.write_bytes(response.read())
             print(f"fetched {target.relative_to(HERE.parent)}")
     return 0
