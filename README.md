@@ -1,6 +1,6 @@
 <sub>~1 min read</sub>
 
-mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/)
+mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/) · [github.com/h0ffmann](https://github.com/h0ffmann)
 
 | repository                                                                                                                                                                                                                                                            | areas                                          | people                                               | role                          | license                                    |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|------------------------------------------------------|-------------------------------|--------------------------------------------|
