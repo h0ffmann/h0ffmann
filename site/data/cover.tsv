@@ -1,11 +1,13 @@
 # The skills that the LinkedIn cover shows for a pin (just cover), in their order, when the owner
 # chose them; a pin with no skills shows its language and GitHub topics. skills: separated by ", ".
 # marks: what else the owner put on the box, separated by ", ": br (Brazil's flag), doi (the
-# DOI of the work of the same name in site/data/works.tsv). Or empty.
+# DOI of the work of the same name in site/data/works.tsv), lock (a padlock beside the name: the
+# repository is private, and the cover shows it all the same), org (the box stands for the
+# organisation that owns the repository, with its counts). Or empty.
 # repository	skills	marks	source
-marola-dev/marola	agentic coding, civic tech	br, doi	the owner, 21 October 2026 (the marks: 22 October 2026)
-h0ffmann/ww3-gpu		doi	the owner, 22 October 2026
-h0ffmann/picasso	nix, rust		the owner, 21 October 2026
+marola-dev/marola	agentic coding, civic tech	br, doi, org	the owner, 21 October 2026 (the marks: 22 October 2026; org: 28 October 2026)
+h0ffmann/ww3-gpu		doi, lock	the owner, 22 October 2026 (lock: 28 October 2026)
 h0ffmann/closed-source	open-book, paper research		the owner, 21 October 2026
 h0ffmann/ptbr-writer	claude plugin, browser ext.	br	the owner, 22 October 2026
-h0ffmann/smart-notes	foss, 2nd brain		the owner, 21 October 2026
+ouroboric-dev/zettelkasten			the owner, 28 October 2026
+piabrota/alerts			the owner, 28 October 2026
