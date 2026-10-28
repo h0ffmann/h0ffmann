@@ -491,14 +491,14 @@ mod tests {
         let user = json!({ "login": "a", "pinnedItems": { "nodes": [
             { "nameWithOwner": "h0ffmann/ww3-gpu", "isPrivate": true },
             { "nameWithOwner": "a/hidden", "isPrivate": true },
-            { "nameWithOwner": "ouroboric-dev/zettelkasten", "isPrivate": false } ] } });
+            { "nameWithOwner": "o/r", "isPrivate": false } ] } });
         let c = diagram(&user, "2026-10-28", 0)["components"].as_array().unwrap().clone();
         let labels: Vec<_> = c.iter().map(|c| c["label"].as_str().unwrap()).collect();
-        assert_eq!(&labels[1..], ["ww3-gpu", "zettelkasten"], "an organisation's repository without `org` keeps its own name");
+        assert_eq!(&labels[1..], ["ww3-gpu", "r"], "an organisation's repository without `org` keeps its own name");
         let p = pills(&user);
         assert_eq!(p.matches("class=\"lock\"").count(), 1, "{p}");
         assert_eq!(p.matches("<?xml").count(), 0);
-        assert!(marked(CHOSEN, "marola-dev/marola", "org") && !marked(CHOSEN, "ouroboric-dev/zettelkasten", "org"));
+        assert!(marked(CHOSEN, "marola-dev/marola", "org") && !marked(CHOSEN, "piabrota/alerts", "org"));
     }
 
     #[test]

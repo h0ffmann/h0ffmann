@@ -12,9 +12,8 @@ status: open
 The owner asked for a new cover: zettelkasten in place of picasso, alerts in place of
 smart-notes, and a small padlock beside ww3-gpu. Three things stood in the way. `cover/` reads the
 pins with GitHub's GraphQL API, which a cloud session cannot call. ww3-gpu is now private, and
-`cover/` dropped every private pin. zettelkasten belongs to ouroboric-dev and alerts to piabrota,
-and `cover/` drew any pin of an organisation as the organisation, so the boxes would have said
-"ouroboric-dev" and "piabrota".
+`cover/` dropped every private pin. alerts belongs to piabrota, and `cover/` drew any pin of an
+organisation as the organisation, so the box would have said "piabrota".
 
 ## Options
 
