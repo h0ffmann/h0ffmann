@@ -40,6 +40,11 @@ fn public(repo: &Value) -> bool {
     !repo["isPrivate"].as_bool().unwrap_or(true)
 }
 
+/// The pins the cover draws: every public one, and a private one the owner marked `lock`.
+fn shown(repo: &Value) -> bool {
+    public(repo) || marked(CHOSEN, repo["nameWithOwner"].as_str().unwrap_or(""), "lock")
+}
+
 /// The skills the owner chose, by repository (site/data/cover.tsv).
 const CHOSEN: &str = include_str!("../../site/data/cover.tsv");
 
@@ -183,7 +188,7 @@ fn place(i: usize) -> [i64; 2] {
 /// No lines: on a cover every box is read on its own, and six lines from one box are noise.
 fn diagram(user: &Value, today: &str, claude: i64) -> Value {
     let login = user["login"].as_str().unwrap_or("");
-    let repos: Vec<&Value> = user["pinnedItems"]["nodes"].as_array().into_iter().flatten().filter(|r| public(r)).collect();
+    let repos: Vec<&Value> = user["pinnedItems"]["nodes"].as_array().into_iter().flatten().filter(|r| shown(r)).collect();
     let mut components = vec![json!({
         "id": "user", "type": "external",
         "label": format!("{login} · {} years", years(user["createdAt"].as_str().unwrap_or(today), today)),
@@ -194,7 +199,7 @@ fn diagram(user: &Value, today: &str, claude: i64) -> Value {
     })];
     for (i, r) in repos.iter().enumerate() {
         let name = r["nameWithOwner"].as_str().unwrap_or("");
-        // A pin of an organisation stands for the organisation: its name, its counts.
+        // A pin the owner marked `org` stands for its organisation: its name, its counts.
         let (label, commits, people) = match r.get("org") {
             Some(org) => (org["login"].as_str().unwrap_or(""), &org["commits"], &org["contributors"]),
             None => (name.rsplit('/').next().unwrap_or(""), &r["defaultBranchRef"]["target"]["history"]["totalCount"], &r["contributors"]),
@@ -313,15 +318,33 @@ fn brazil(at: [i64; 2]) -> String {
         x as f64 + 7.5, y + 1, x + 14, y as f64 + 5.0, x as f64 + 7.5, y + 9, x + 1, y as f64 + 5.0, x as f64 + 7.5, y as f64 + 5.0)
 }
 
+/// Noto Emoji's padlock (cv/emoji, Apache-2.0), LOCK units square, after the name of the box at
+/// `at`, whose label Archify centres: the name's width is guessed at NAME_W units a character of
+/// Fjalla One at 17px, the size the frame sets.
+const NOTO_LOCK: &str = include_str!("../../cv/emoji/emoji_u1f512.svg");
+const LOCK: f64 = 13.0;
+const NAME_W: f64 = 8.8;
+
+fn padlock(name: &str, at: [i64; 2]) -> String {
+    let x = at[0] as f64 + CELL_W as f64 / 2.0 + name.chars().count() as f64 * NAME_W / 2.0 + 3.0;
+    let y = at[1] as f64 + 9.0;
+    let svg = &NOTO_LOCK[NOTO_LOCK.find("<svg").unwrap_or(0)..];
+    format!("<g class=\"lock\">{}</g>", svg.replacen("x=\"0px\" y=\"0px\"", &format!("x=\"{x}\" y=\"{y}\" width=\"{LOCK}\" height=\"{LOCK}\""), 1))
+}
+
 /// The pills: the owner's address in the accent, and each organisation's, with its repositories, in
 /// grey; and the flags the owner gave the pins.
 fn pills(user: &Value) -> String {
-    let repos = user["pinnedItems"]["nodes"].as_array().into_iter().flatten().filter(|r| public(r));
+    let repos = user["pinnedItems"]["nodes"].as_array().into_iter().flatten().filter(|r| shown(r));
     let mut out = pill(&format!("github.com/{}", user["login"].as_str().unwrap_or("")), [GAP, GAP], "#1BADC5");
     for (i, r) in repos.enumerate() {
         let name = r["nameWithOwner"].as_str().unwrap_or("");
         if marked(CHOSEN, name, "br") {
             out += &brazil(place(i));
+        }
+        if marked(CHOSEN, name, "lock") {
+            let label = r.get("org").and_then(|o| o["login"].as_str()).unwrap_or(name.rsplit('/').next().unwrap_or(""));
+            out += &padlock(label, place(i));
         }
         // Below the box's bottom edge, clear of its last line: the DOI on the left, the stars on the right.
         let [x, y] = place(i);
@@ -378,9 +401,10 @@ fn main() {
                 exit(1);
             }
             for r in data["data"]["user"]["pinnedItems"]["nodes"].as_array_mut().into_iter().flatten() {
-                if public(r) {
-                    r["contributors"] = json!(contributors(r["nameWithOwner"].as_str().unwrap_or("")).len());
-                    if r["owner"]["__typename"] == "Organization" {
+                if shown(r) {
+                    let name = r["nameWithOwner"].as_str().unwrap_or("").to_string();
+                    r["contributors"] = json!(contributors(&name).len());
+                    if r["owner"]["__typename"] == "Organization" && marked(CHOSEN, &name, "org") {
                         r["org"] = org(r["owner"]["login"].as_str().unwrap_or(""));
                     }
                 }
@@ -455,11 +479,26 @@ mod tests {
         assert_eq!(p.matches("flag-br").count(), 1, "ptbr-writer carries the flag (site/data/cover.tsv)");
         assert!(p.contains(">★ 9</text>") && !p.contains(">★ 0<"), "the organisation's stars, none for 0: {p}");
         assert!(marked(CHOSEN, "marola-dev/marola", "br") && marked(CHOSEN, "marola-dev/marola", "doi"));
-        assert!(!marked(CHOSEN, "h0ffmann/picasso", "doi"));
+        assert!(!marked(CHOSEN, "h0ffmann/ptbr-writer", "doi"));
         assert_eq!(doi(WORKS, "h0ffmann/ww3-gpu"), Some("10.5281/zenodo.23221351"));
         assert_eq!(doi(WORKS, "h0ffmann/ptbr-writer"), None);
         // A row with no skills keeps the topics.
         assert_eq!(chosen(CHOSEN, "h0ffmann/ww3-gpu"), None);
+    }
+
+    #[test]
+    fn a_private_pin_shows_only_with_its_lock() {
+        let user = json!({ "login": "a", "pinnedItems": { "nodes": [
+            { "nameWithOwner": "h0ffmann/ww3-gpu", "isPrivate": true },
+            { "nameWithOwner": "a/hidden", "isPrivate": true },
+            { "nameWithOwner": "o/r", "isPrivate": false } ] } });
+        let c = diagram(&user, "2026-10-28", 0)["components"].as_array().unwrap().clone();
+        let labels: Vec<_> = c.iter().map(|c| c["label"].as_str().unwrap()).collect();
+        assert_eq!(&labels[1..], ["ww3-gpu", "r"], "an organisation's repository without `org` keeps its own name");
+        let p = pills(&user);
+        assert_eq!(p.matches("class=\"lock\"").count(), 1, "{p}");
+        assert_eq!(p.matches("<?xml").count(), 0);
+        assert!(marked(CHOSEN, "marola-dev/marola", "org") && !marked(CHOSEN, "piabrota/alerts", "org"));
     }
 
     #[test]
@@ -483,7 +522,7 @@ mod tests {
         let table = "# repository\tskills\tsource\nb/x\tnix, rust\tthe owner\n";
         assert_eq!(chosen(table, "b/x"), Some(vec!["nix".to_string(), "rust".to_string()]));
         assert_eq!(chosen(table, "b/y"), None);
-        assert_eq!(skills(&json!({ "nameWithOwner": "h0ffmann/picasso" })), ["nix", "rust"]);
+        assert_eq!(skills(&json!({ "nameWithOwner": "h0ffmann/closed-source" })), ["open-book", "paper research"]);
     }
 
     #[test]

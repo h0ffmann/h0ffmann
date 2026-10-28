@@ -14,7 +14,9 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
 
 1. **Run** `just cover`. It needs `gh`, signed in, and Chrome (`CHROME` names another).
    - [`cover/`](../../../cover/src/main.rs), in Rust, reads his pins with `gh api graphql`
-     and keeps every public one, as GitHub lists them.
+     and keeps every public one, as GitHub lists them, and a private one that the owner marked
+     `lock` in [`site/data/cover.tsv`](../../../site/data/cover.tsv) (Noto Emoji's padlock,
+     `cv/emoji/`, beside its name).
    - It writes Archify's input on a small canvas (about 720x180 units), so that Archify's own type
      comes out about 2.2 times larger at 1584x396 and stays readable on LinkedIn's profile page
      without opening the cover. The pins are a grid of 3x2, each with its name and the skills
@@ -22,7 +24,7 @@ All rights reserved ([`REUSE.md`](../../../REUSE.md)).
      [`site/data/cover.tsv`](../../../site/data/cover.tsv), or else its language, then its GitHub
      topics in GitHub's order. Under them, the commits of its default branch and its contributors
      (GitHub's accounts of type User, less `claude`, whose commits the owner's box counts; no
-     bots), read by `just cover`. A pin of an organisation shows the organisation: its name, and
+     bots), read by `just cover`. A pin the owner marked `org` shows its organisation: its name, and
      the commits, the contributors and the stars of all its public source repositories, with a
      pill of its address and its count of repositories. A small pill under each box gives its
      stars, when it has any. The `marks` of `site/data/cover.tsv` add Brazil's flag (`br`, drawn,
