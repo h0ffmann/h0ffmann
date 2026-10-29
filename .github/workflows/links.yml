@@ -4,14 +4,19 @@
 # because a page on the web can go away with no change here.
 name: live links
 
+# CI is off (the owner, 29 October 2026): the workflow runs only when started by hand.
+# To turn it back on, replace this block with the commented triggers below.
 on:
-  pull_request:
-  push:
-    branches: [main]
-    paths-ignore: ["metrics.*.svg", "pdf/**"]
-  schedule:
-    - cron: "11 7 * * 1"
   workflow_dispatch:
+
+# on:
+#   pull_request:
+#   push:
+#     branches: [main]
+#     paths-ignore: ["metrics.*.svg", "pdf/**"]
+#   schedule:
+#     - cron: "11 7 * * 1"
+#   workflow_dispatch:
 
 permissions:
   contents: read

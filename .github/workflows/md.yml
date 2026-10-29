@@ -6,10 +6,15 @@
 # refuse it. The same checks as h0ffmann/closed-source and marola-dev/marola-research.
 name: .md
 
+# CI is off (the owner, 29 October 2026): the workflow runs only when started by hand.
+# To turn it back on, replace this block with the commented triggers below.
 on:
-  pull_request:
-  push:
-    branches: [main]
+  workflow_dispatch:
+
+# on:
+#   pull_request:
+#   push:
+#     branches: [main]
 
 permissions:
   contents: read

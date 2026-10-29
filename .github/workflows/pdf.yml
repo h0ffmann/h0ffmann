@@ -5,11 +5,16 @@
 # request, and is not first seen on main. The PDFs are kept as an artifact.
 name: pdf
 
+# CI is off (the owner, 29 October 2026): the workflow runs only when started by hand.
+# To turn it back on, replace this block with the commented triggers below.
 on:
-  pull_request:
-  push:
-    branches: [main]
-    paths-ignore: ["metrics.*.svg"]
+  workflow_dispatch:
+
+# on:
+#   pull_request:
+#   push:
+#     branches: [main]
+#     paths-ignore: ["metrics.*.svg"]
 
 permissions:
   contents: read
