@@ -5,20 +5,25 @@ name: cv
 # commits its own PDFs (`just cv`) and `pdf / build` checks them, so this job changes one line of
 # one PDF. Built in the Nix sandbox by nix-config's labs/publisher. Bot pushes use the Actions
 # token and never trigger this; only hand edits to the README, cv/ or the flake do.
+# CI is off (the owner, 29 October 2026): the workflow runs only when started by hand.
+# To turn it back on, replace this block with the commented triggers below.
 on:
-  push:
-    branches: [main]
-    paths:
-      - README.md
-      - README.pt-BR.md
-      - README.ja.md
-      - me/**
-      - site/data/**
-      - cv/**
-      - flake.nix
-      - flake.lock
-      - .github/workflows/cv.yml
   workflow_dispatch:
+
+# on:
+#   push:
+#     branches: [main]
+#     paths:
+#       - README.md
+#       - README.pt-BR.md
+#       - README.ja.md
+#       - me/**
+#       - site/data/**
+#       - cv/**
+#       - flake.nix
+#       - flake.lock
+#       - .github/workflows/cv.yml
+#   workflow_dispatch:
 
 permissions:
   contents: write

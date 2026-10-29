@@ -1,12 +1,17 @@
 name: metrics
 
+# CI is off (the owner, 29 October 2026): the workflow runs only when started by hand.
+# To turn it back on, replace this block with the commented triggers below.
 on:
-  schedule:
-    - cron: "0 6 * * *"          # daily, 06:00 UTC
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [".github/workflows/metrics.yml"]
+
+# on:
+#   schedule:
+#     - cron: "0 6 * * *"          # daily, 06:00 UTC
+#   workflow_dispatch:
+#   push:
+#     branches: [main]
+#     paths: [".github/workflows/metrics.yml"]
 
 permissions:
   contents: write

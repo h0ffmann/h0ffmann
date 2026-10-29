@@ -4,16 +4,21 @@
 # through flake.nix. It commits nothing, so it is not in the `readme-bots` group.
 name: site
 
+# CI is off (the owner, 29 October 2026): the workflow runs only when started by hand.
+# To turn it back on, replace this block with the commented triggers below.
 on:
-  pull_request:
-  push:
-    branches: [main]
-    paths: ["site/**", "README.md", "me/**", "flake.nix", "flake.lock", "justfile", ".github/workflows/site.yml"]
-  # Each morning, after the metrics workflow wrote its two cards (06:00 UTC): the page reads its
-  # numbers from them, and that workflow's commits do not start this one.
-  schedule:
-    - cron: "40 6 * * *"
   workflow_dispatch:
+
+# on:
+#   pull_request:
+#   push:
+#     branches: [main]
+#     paths: ["site/**", "README.md", "me/**", "flake.nix", "flake.lock", "justfile", ".github/workflows/site.yml"]
+#   # Each morning, after the metrics workflow wrote its two cards (06:00 UTC): the page reads its
+#   # numbers from them, and that workflow's commits do not start this one.
+#   schedule:
+#     - cron: "40 6 * * *"
+#   workflow_dispatch:
 
 permissions:
   contents: read

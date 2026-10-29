@@ -43,6 +43,11 @@ The discipline of h0ffmann/closed-source and marola-dev/marola-research, here. C
 checks on a pull request and on `main`: a check that can fail on `main` runs on the pull request
 first. Run `just check` before you open one.
 
+**CI is off** since 29 October 2026 (the owner): every workflow in `.github/workflows/` runs only
+when started by hand (`workflow_dispatch`), so no check runs on a pull request or on `main`, the
+metrics cards are not refreshed and the site is not deployed. Each file keeps its old triggers in a
+comment; restore that block to turn one back on. Run the checks below locally.
+
 | Command | What it checks | In CI |
 |---|---|---|
 | `just md-quality` | the structure (markdownlint-cli2), plain words and no selling (Vale), and the links to files (lychee) of every Markdown file. `--self-test` gives each analyser a bad file | `.md / quality` |
