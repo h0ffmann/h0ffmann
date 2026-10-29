@@ -9,7 +9,7 @@ read from GitHub on 14 October 2026 ([FEATURED_REPO.md](FEATURED_REPO.md)), and 
 |---|---|---|---|
 | 🇧🇷 [marola-dev/marola](https://github.com/marola-dev/marola) | ocean intelligence layer | oceanography, water quality, citizen science | 5 |
 | [h0ffmann/picasso](https://github.com/h0ffmann/picasso) (profitable?) | me + nix + whitepaper | nix, reproducible toolchains, rust | 1 |
-| 🇧🇷 [h0ffmann/ptbr-writer](https://github.com/h0ffmann/ptbr-writer) | 🇧🇷 portuguese (Brazil) on rails | portuguese, writing tools, multi-platform (claude, browser, mobile, desktop) | 2: [@robkler](https://github.com/robkler) |
+| 🇧🇷 [h0ffmann/ptbr-writer](https://github.com/h0ffmann/ptbr-writer) ([site](https://h0ffmann.github.io/ptbr-writer/)) | 🇧🇷 portuguese (Brazil) on rails | portuguese, writing tools, multi-platform (claude, browser, mobile, desktop) | 2: [@robkler](https://github.com/robkler) |
 | [marola-dev/marola-skills](https://github.com/marola-dev/marola-skills) | marola way of coding | agent skills, claude code, open science | 2: [@brunogbv](https://github.com/brunogbv) |
 | [marola-dev/marola-agents](https://github.com/marola-dev/marola-agents) | marola way of living | ai agents, claude code | 1 |
 | [h0ffmann/nashkell](https://github.com/h0ffmann/nashkell) (PoC) | game theory + haskell | latin, obfuscation, game theory (soon) | 1 |
