@@ -21,3 +21,11 @@ SPDX-License-Identifier = "Apache-2.0"
 
 # The logos that the site and the READMEs show are trademarks of their owners and are not
 # licensed here. No file of them is in this repository (AGENTS.md, hard rule 4).
+
+# The Claude Code mascot GIF that the owner uploaded on 31 October 2026, from Anthropic's video
+# (README.md links it). Anthropic's work, not licensed here.
+[[annotations]]
+path = ["media/claude-code-agents.gif"]
+precedence = "override"
+SPDX-FileCopyrightText = "Anthropic PBC"
+SPDX-License-Identifier = "LicenseRef-Anthropic-All-Rights-Reserved"
