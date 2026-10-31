@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=tRsQsTMvPNg"><img alt="the Claude Code mascot, in pixel art, directing three helpers who type at their monitors" src="media/claude-code-agents.gif" width="384"/></a>
+</p>
+
 <sub>~1 min read</sub>
 
 mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/)

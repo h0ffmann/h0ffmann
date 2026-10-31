@@ -1,0 +1,5 @@
+Copyright (c) Anthropic PBC. All rights reserved.
+
+The Claude Code mascot animation (media/claude-code-agents.gif) is Anthropic's work. It is shown
+in the profile at the owner's request and is not licensed here: no right to copy or reuse it is
+granted by this repository.
