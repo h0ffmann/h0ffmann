@@ -25,7 +25,7 @@ SPDX-License-Identifier = "Apache-2.0"
 # The Claude Code mascot GIF that the owner uploaded on 31 October 2026, from Anthropic's video
 # (README.md links it). Anthropic's work, not licensed here.
 [[annotations]]
-path = ["media/claude-code-agents.gif"]
+path = ["media/claude-code-ci.gif"]
 precedence = "override"
 SPDX-FileCopyrightText = "Anthropic PBC"
 SPDX-License-Identifier = "LicenseRef-Anthropic-All-Rights-Reserved"

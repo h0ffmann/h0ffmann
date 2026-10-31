@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=tRsQsTMvPNg"><img alt="the Claude Code mascot, in pixel art, directing three helpers who type at their monitors" src="media/claude-code-agents.gif" width="384"/></a>
+  <a href="https://www.youtube.com/watch?v=tRsQsTMvPNg"><img alt="the Claude Code mascot, in pixel art, watching a CI pipeline run its steps: a failed build, then all green" src="media/claude-code-ci.gif" width="230"/></a>
 </p>
 
 <sub>~1 min read</sub>
