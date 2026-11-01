@@ -1,3 +1,5 @@
+staff software engineer · open water swimmer · open source maintainer
+
 ## ⭐ [h0ffmann/skills](https://github.com/h0ffmann/skills)
 
 - [piabrota.art](https://piabrota.art): where I vibe code
