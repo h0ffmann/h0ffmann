@@ -1,5 +1,7 @@
 staff software engineer · open water swimmer · open source maintainer
 
+mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/)
+
 ## ⭐ [h0ffmann/skills](https://github.com/h0ffmann/skills)
 
 - [piabrota.art](https://piabrota.art): where I vibe code
