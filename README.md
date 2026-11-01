@@ -1,6 +1,6 @@
 staff software engineer · open water swimmer · open source maintainer
 
-mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/)
+mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/) · [medium.com/@mhoffmann](https://medium.com/@mhoffmann)
 
 ## ⭐ [h0ffmann/skills](https://github.com/h0ffmann/skills)
 
