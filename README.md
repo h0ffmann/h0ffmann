@@ -5,5 +5,5 @@ staff ml/software engineer · open water swimmer · open source maintainer
 mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/) · [medium.com/@mhoffmann](https://medium.com/@mhoffmann)
 
 - [skillset](https://h0ffmann.github.io/skills/): skillset (50, plus few subagents)
-- [piabrota.art](https://piabrota.art): where I vibe code
+- [piabrota.art](https://piabrota.art): where I code with Claude Code and Hermes
 - [marola-dev](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
