@@ -7,3 +7,11 @@ mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin
 - [skillset](https://h0ffmann.github.io/skills/): skillset (50, plus few subagents)
 - [piabrota.art](https://piabrota.art): where I code and research with Claude and Hermes
 - [marola-dev](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=h0ffmann&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="Top Langs" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=h0ffmann&theme=tokyonight" />
+</p>
