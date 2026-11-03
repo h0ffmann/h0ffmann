@@ -9,7 +9,7 @@ mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin
 - [marola-dev](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=h0ffmann&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="Top Langs" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=h0ffmann&theme=tokyonight" alt="Top Langs" />
 </p>
 
 <p align="center">
