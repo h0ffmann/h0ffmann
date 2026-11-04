@@ -4,8 +4,8 @@ staff ml/software engineer · open water swimmer · open source maintainer
 
 mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/) · [medium.com/@mhoffmann](https://medium.com/@mhoffmann)
 
-- [piabrota.art](https://piabrota.art): where I code and research with Open My pi, Hermes and Paperclip.
-- [marola-dev](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
+- [piabrota org](https://github.com/piabrota/nix-os): where I code and learn with [omp](https://github.com/can1357/oh-my-pi), [Hermes](https://github.com/nousresearch/hermes-agent) and [OpenRig -- tryouy](https://github.com/mvschwarz/openrig). org toy [website](https://piabrota.art)
+- [marola-dev org](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=h0ffmann&theme=tokyonight&exclude=TypeScript,HTML" alt="Top Langs" />
