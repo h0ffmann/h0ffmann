@@ -4,7 +4,7 @@ staff ml/software engineer · open water swimmer · open source maintainer
 
 mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/) · [medium.com/@mhoffmann](https://medium.com/@mhoffmann)
 
-- [piabrota org](https://github.com/piabrota/nix-os): where I code and learn with [omp](https://github.com/can1357/oh-my-pi), [Hermes](https://github.com/nousresearch/hermes-agent) and [OpenRig -- tryouy](https://github.com/mvschwarz/openrig). org toy [website](https://piabrota.art)
+- [piabrota org](https://github.com/piabrota/nix-os): where I code and learn with [omp](https://github.com/can1357/oh-my-pi), [Hermes](https://github.com/nousresearch/hermes-agent) and [OpenRig](https://github.com/mvschwarz/openrig). org toy [website](https://piabrota.art)
 - [marola-dev org](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
 
 <p align="center">
