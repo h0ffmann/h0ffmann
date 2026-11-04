@@ -4,7 +4,7 @@ staff ml/software engineer · open water swimmer · open source maintainer
 
 mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/) · [medium.com/@mhoffmann](https://medium.com/@mhoffmann)
 
-- [piabrota.art](https://piabrota.art): where I code and research with Claude and Hermes
+- [piabrota.art](https://piabrota.art): where I code and research with Open My pi, Hermes and Paperclip.
 - [marola-dev](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
 
 <p align="center">
