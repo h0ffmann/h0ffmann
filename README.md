@@ -8,9 +8,7 @@ mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin
 - [marola-dev org](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=h0ffmann&theme=tokyonight&exclude=TypeScript,HTML" alt="Top Langs" />
+  <a href="https://room.piabrota.art"><img src="media/room.webp" alt="the piabrota room: a dark 3D room with framed project glyphs, a shelf of books, a desk with a TV and two small robots, and a night window; the camera moves between shots and the pointer hovers over things" width="720"/></a>
 </p>
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=h0ffmann&theme=tokyonight" />
-</p>
+<p align="center"><sub><a href="https://room.piabrota.art">room.piabrota.art</a>, the piabrota room (<a href="https://github.com/piabrota/room">piabrota/room</a>)</sub></p>
