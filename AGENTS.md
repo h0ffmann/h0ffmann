@@ -202,6 +202,12 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.
+- `media/room.webp` – the piabrota room in motion (room.piabrota.art), shown at the end of
+  `README.md` in place of the summary cards (the owner, 5 November 2026). It is
+  piabrota/room's `docs/record/room.mp4` at `21c0b14` (`just record` there), cut to an animated
+  WebP, 720 px wide at 12 fps, about 2 MB: GitHub does not play an MP4 from the repository in
+  a README. Make it again with `ffmpeg -i room.mp4 -vf "fps=12,hqdn3d=4:3:6:6,scale=720:-1:flags=lanczos"
+  -c:v libwebp -q:v 60 -compression_level 6 -loop 0 -an media/room.webp`.
 - `photos/` – the 2007 and 2025 swimming photos shown side by side, 400 px
   wide each, in a `cv:skip` table at the end of every README.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00
