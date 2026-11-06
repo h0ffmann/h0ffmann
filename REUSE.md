@@ -78,9 +78,9 @@ This repository is the one thing of his that is not for taking.
 | `cv/emoji/` | Google's Noto Emoji | Apache-2.0 (`cv/emoji/README.md`) |
 | the face drawing at the top of the READMEs | his, from h0ffmann/picasso, loaded from that repository | CC BY 4.0 there |
 | `metrics.*.svg` | made by the lowlighter/metrics action | that action's terms |
-| `media/room-ac2662e.webp` | his, a recording of piabrota/room (`docs/record/room.mp4` at `ac2662e`) | all rights reserved here; the piabrota eye on the sign is the org's mark |
-| the view of Rio by day in the window of `media/room-ac2662e.webp` | Arian Zwegers, "Rio de Janeiro, Pão de Açúcar from Cristo Redentor" (Wikimedia Commons), as piabrota/room's `CREDITS.md` lists it | CC BY 2.0 |
-| the view of Rio at night in the window of `media/room-ac2662e.webp` | Wilfredor, "Rio de Janeiro at night from above" (Wikimedia Commons) | CC0 1.0 |
+| `media/room-99fc985.webp` | his, a recording of piabrota/room (`docs/record/room.mp4` at `99fc985`) | all rights reserved here; the piabrota eye on the sign is the org's mark |
+| the view of Rio by day in the window of `media/room-99fc985.webp` | Arian Zwegers, "Rio de Janeiro, Pão de Açúcar from Cristo Redentor" (Wikimedia Commons), as piabrota/room's `CREDITS.md` lists it | CC BY 2.0 |
+| the view of Rio at night in the window of `media/room-99fc985.webp` | Wilfredor, "Rio de Janeiro at night from above" (Wikimedia Commons) | CC0 1.0 |
 | the names and logos of Stone, Broad and Signifyd | those companies | trademarks. They say where he worked. They load from their owners' pages or from Wikimedia Commons, no file of them is here, and none of them endorses these pages |
 | the names and logos of marola and Ouroboric | those projects | trademarks, loaded from their own repositories |
 | the fonts of the site | their foundries, through Google Fonts | their own open licences |
