@@ -202,12 +202,12 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.
-- `media/room.webp` – the piabrota room in motion (room.piabrota.art), shown at the end of
+- `media/room-0da08f1.webp` – the piabrota room in motion (room.piabrota.art), shown at the end of
   `README.md` in place of the summary cards (the owner, 5 November 2026). It is
   piabrota/room's `docs/record/room.mp4` at `0da08f1` (`just record` there), cut to an animated
   WebP, 720 px wide at 10 fps, 26 s, about 3 MB: GitHub does not play an MP4 from the repository in
-  a README. The window shows two photos of Rio, credited in `REUSE.md`. Make it again with `ffmpeg -i room.mp4 -vf "fps=10,hqdn3d=4:3:6:6,scale=720:-1:flags=lanczos"
-  -c:v libwebp -q:v 55 -compression_level 6 -loop 0 -an media/room.webp`.
+  a README. The file name carries the room's commit, so a new recording gets a new name and no browser or GitHub cache shows the old one. The window shows two photos of Rio, credited in `REUSE.md`. Make it again with `ffmpeg -i room.mp4 -vf "fps=10,hqdn3d=4:3:6:6,scale=720:-1:flags=lanczos"
+  -c:v libwebp -q:v 55 -compression_level 6 -loop 0 -an media/room-<commit>.webp`.
 - `photos/` – the 2007 and 2025 swimming photos shown side by side, 400 px
   wide each, in a `cv:skip` table at the end of every README.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00
