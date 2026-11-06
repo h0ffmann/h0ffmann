@@ -8,7 +8,7 @@ mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin
 - [marola-dev org](https://github.com/marola-dev): FOSS non-profit work <sub>(associated with [Leave No Trace](https://lnt.org))</sub>
 
 <p align="center">
-  <a href="https://room.piabrota.art"><img src="media/room-0da08f1.webp" alt="the piabrota room: a dark 3D room with framed project glyphs, a shelf of books, a desk with a TV and two small robots, and a night window; the camera moves between shots and the pointer hovers over things" width="720"/></a>
+  <a href="https://room.piabrota.art"><img src="media/room-ac2662e.webp" alt="the piabrota room: a dark 3D room with framed project glyphs, a shelf of books, a desk with a computer and two small robots, a wide window over Rio, a door; the camera moves between shots and the pointer hovers over things" width="720"/></a>
 </p>
 
 <p align="center"><sub><a href="https://room.piabrota.art">room.piabrota.art</a>, the piabrota room (<a href="https://github.com/piabrota/room">piabrota/room</a>) · Rio by day in the window: Arian Zwegers, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></sub></p>
