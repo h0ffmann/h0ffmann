@@ -208,6 +208,13 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   WebP, 720 px wide at 10 fps, 35 s, about 4.6 MB: GitHub does not play an MP4 from the repository in
   a README. The file name carries the room's commit, so a new recording gets a new name and no browser or GitHub cache shows the old one. The window shows two photos of Rio, credited in `REUSE.md`. Make it again with `ffmpeg -i room.mp4 -vf "fps=10,hqdn3d=4:3:6:6,scale=720:-1:flags=lanczos"
   -c:v libwebp -q:v 55 -compression_level 6 -loop 0 -an media/room-<commit>.webp`.
+- `media/grid-735c77c.webp` – the ▲ grid view of the room (key 0) alone, at the bottom of `README.md`
+  (the owner, 6 November 2026: "a second video at the bottom", "in zoom the animation of the
+  spectrum moving"). It is filmed from piabrota/room at `735c77c` in headless Chromium: the
+  grid view opened, the shot buttons and switches hidden, the map zoomed by the mouse wheel on
+  the coast from Recife to Rio, then 8 s (one 24 h cycle, three hours a second) stepped at
+  1/30 s with `window.__room.step`, cut to an animated WebP at 15 fps, 720 px, about 2 MB. The
+  name carries the room's commit, like the room video's. Its wind data is credited under it.
 - `photos/` – the 2007 and 2025 swimming photos shown side by side, 400 px
   wide each, in a `cv:skip` table at the end of every README.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00

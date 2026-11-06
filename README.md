@@ -12,3 +12,9 @@ mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin
 </p>
 
 <p align="center"><sub><a href="https://room.piabrota.art">room.piabrota.art</a>, the piabrota room (<a href="https://github.com/piabrota/room">piabrota/room</a>) · Rio by day in the window: Arian Zwegers, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></sub></p>
+
+<p align="center">
+  <a href="https://room.piabrota.art"><img src="media/grid-735c77c.webp" alt="the ▲ grid view of the piabrota room, zoomed on the Brazilian coast from Recife to Rio de Janeiro: a triangle mesh over the sea, coloured by wave height, with wind arrows, playing 24 hours of wind and sea hour by hour" width="720"/></a>
+</p>
+
+<p align="center"><sub>▲ grid, key 0 in the room: a triangle mesh of the Brazilian coast, 24 h of sea and wind · wind: NOAA GFS through <a href="https://open-meteo.com">Open-Meteo</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · land: Natural Earth</sub></p>
