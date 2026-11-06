@@ -11,4 +11,4 @@ mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin
   <a href="https://room.piabrota.art"><img src="media/room.webp" alt="the piabrota room: a dark 3D room with framed project glyphs, a shelf of books, a desk with a TV and two small robots, and a night window; the camera moves between shots and the pointer hovers over things" width="720"/></a>
 </p>
 
-<p align="center"><sub><a href="https://room.piabrota.art">room.piabrota.art</a>, the piabrota room (<a href="https://github.com/piabrota/room">piabrota/room</a>)</sub></p>
+<p align="center"><sub><a href="https://room.piabrota.art">room.piabrota.art</a>, the piabrota room (<a href="https://github.com/piabrota/room">piabrota/room</a>) · Rio by day in the window: Arian Zwegers, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></sub></p>
