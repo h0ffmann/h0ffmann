@@ -1,3 +1,7 @@
+<p align="center"><i>And what is good, Phaedrus,<br/>And what is not good—<br/>Need we ask anyone to tell us these things?</i></p>
+
+<p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of Motorcycle Maintenance</i> (1974), the epigraph on its opening page</sub></p>
+
 software engineer · open water swimmer · open2work
 
 currently volunteering at Federal Univ. of SC (UFSC) ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)), accelerating ocean models by porting the Fortran WW3 physics model to Rust/C++ · building Brazilian disaster extensions for AstrBot's [disaster warning plugin](https://github.com/Pancakes-Labs/astrbot_plugin_disaster_warning): [br_south_disaster](https://github.com/h0ffmann/astrbot_dw_ext_br_south_disaster), [br_south_waterq](https://github.com/h0ffmann/astrbot_dw_ext_br_south_waterq) (work in progress)

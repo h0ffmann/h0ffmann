@@ -11,6 +11,10 @@
 
 <sub>a stack agora: <a href="https://www.python.org"><img src="https://www.python.org/static/favicon.ico" alt="" width="16" height="16" /> python</a> para protótipos · <a href="https://www.scala-lang.org"><img src="https://raw.githubusercontent.com/scala/scala-lang/ffea4bd7a2ad206b7a70e838d523c7a0ab841e5f/resources/favicon-32x32.png" alt="" width="16" height="16" /> scala</a> por diversão · <a href="https://www.rust-lang.org"><img src="https://www.rust-lang.org/static/images/favicon.svg" alt="" width="16" height="16" /> rust</a> para bibliotecas de baixo nível · <a href="https://gleam.run"><img src="https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg" alt="" width="16" height="16" /> gleam</a> para hospedagem estática · <a href="https://claude.com/claude-code"><img src="https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png" alt="" width="16" height="16" /> claude code</a> (às vezes <a href="https://opencode.ai"><img src="https://opencode.ai/favicon-96x96.png" alt="" width="16" height="16" /> opencode</a>) · prs simples, tudo simples</sub>
 
+<p><i>And what is good, Phaedrus,<br/>And what is not good—<br/>Need we ask anyone to tell us these things?</i></p>
+
+<sub>Robert M. Pirsig, <i>Zen e a Arte da Manutenção de Motocicletas</i> (1974), a epígrafe da primeira página, no original</sub>
+
 </div>
 <!-- cv:end -->
 
