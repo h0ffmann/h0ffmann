@@ -2,14 +2,30 @@
 
 <p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of Motorcycle Maintenance</i> (1974), the epigraph on its opening page</sub></p>
 
-software engineer · open water swimmer · open2work
+**Staff Software Engineer**
 
-currently volunteering at Federal Univ. of SC (UFSC) ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)), accelerating ocean models by porting the Fortran WW3 physics model to Rust/C++ · building Brazilian disaster extensions for AstrBot's [disaster warning plugin](https://github.com/Pancakes-Labs/astrbot_plugin_disaster_warning): [br_south_disaster](https://github.com/h0ffmann/astrbot_dw_ext_br_south_disaster), [br_south_waterq](https://github.com/h0ffmann/astrbot_dw_ext_br_south_waterq) (work in progress)
+**Code**
+- [github.com/h0ffmann](https://github.com/h0ffmann): my main repositories.
+- [codeberg.org/h0ffmann](https://codeberg.org/h0ffmann): some mirrors.
 
-mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/) · [medium.com/@mhoffmann](https://medium.com/@mhoffmann)
+**Piabrota AI Studio**
+- [room.piabrota.art](https://room.piabrota.art): a 3D room. It uses 3D models, JavaScript and Spotify.
+- [metrics.piabrota.art](https://metrics.piabrota.art): my homelab. It runs NixOS on two Hostinger VPS machines (KVM1 and KVM4).
+- [rig.piabrota.art](https://rig.piabrota.art): an [OpenRig](https://github.com/mvschwarz/openrig) instance. Now, 1 of 4 rigs operates.
+- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, my personal agent. It connects to Obsidian, [OMP](https://github.com/can1357/oh-my-pi), Claude Code, OpenCode and some personal tools.
+- YouTube and Substack: these start in 2027.
 
-- [piabrota org](https://github.com/piabrota/nix-os): FOSS fic company where I code and research with [omp](https://github.com/can1357/oh-my-pi), [Hermes](https://github.com/nousresearch/hermes-agent) and [OpenRig](https://github.com/mvschwarz/openrig). org toy [website](https://piabrota.art)
-- [marola-dev org](https://github.com/marola-dev): FOSS non-profit work associated with [Leave No Trace](https://lnt.org)
+**Technical skills**
+- Software development life cycle (SDLC): 9 years of experience.
+- Machine learning (ML): 5 companies, 4 domains.
+  - Stone (Brazil), 2017: churn prediction with XGBoost.
+  - Elemeno AI (USA), 2021: MLOps consulting for Americanas (B2W, Brazil). I made ML environments with Kubernetes and Kubeflow.
+  - Legiti (Brazil), then Signifyd (USA) after it bought Legiti, 2022 to 2024: fraud prevention.
+  - ITV (UK), 2025 to 2026: forecasts for TV channels, through an indirect contract.
+
+References are available on request.
+
+If you work with ML, ocean applications or agentic software factories, please contact me: mhoffmannfs [at] gmail.com
 
 <p align="center">
   <a href="https://room.piabrota.art"><img src="media/room-587b0f3.webp" alt="the piabrota room by night, its four walls in turn: the desk with a computer, a TV and two small robots under a wide window over Rio at night; framed project glyphs; a wave tank of buoys; a wheel of crates beside a door; the pointer hovers over things and clicks" width="720"/></a>
