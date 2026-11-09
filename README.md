@@ -13,7 +13,7 @@
 
 **Technical skills**
 - Software development: 10 years. Mostly Scala for backend and data; Python for ML and Airflow.
-- 2015 to 2017: LIOC, ocean instrumentation lab, UFRJ. FPGA signal processing (LabVIEW) for Brazilian Navy underwater communication. Real-time GPS boat tracking.
+- 2015 to 2017: LIOC, ocean instrumentation lab, UFRJ. FPGA signal processing (LabVIEW) for Brazilian Navy underwater communication. Real-time GPS boat tracking over 2G, with mobile phone chips.
 - 2017: Stone (Nasdaq: STNE), during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
 - 2018: a model that recommends a mobile carrier from ping history. Apache Flink detects the events; Python does the scoring.
 - 2019: a pre-seed startup. We made an instant transfer between banks. It launched in August 2020, before Pix (November 2020). A company bought us; then Pix made the product unnecessary.
@@ -23,7 +23,7 @@
 - 2025 to 2026: TV audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA (managed Airflow), S3, Lambda and Step Functions.
 
 **Research: UFSC, until mid-2027 (10 hours each week)**
-- A team of 5 persons at the Federal University of Santa Catarina ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
+- A team of 5 persons ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
 - I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust may follow, with help from Prof. Pedro Veras (LabECO).
 - The goal: WW3 runs faster on GPUs and gives the same results as the Fortran. Bit-for-bit parity where possible; the physics stays consistent.
 - We use Z3 solvers. Lean is an option.
