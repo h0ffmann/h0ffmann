@@ -13,7 +13,7 @@
 - [metrics.piabrota.art](https://metrics.piabrota.art): my homelab. It runs NixOS on two Hostinger VPS machines (KVM1 and KVM4).
 - [rig.piabrota.art](https://rig.piabrota.art): an [OpenRig](https://github.com/mvschwarz/openrig) instance. Now, 1 of 4 rigs operates.
 - [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, my personal agent. It connects to Obsidian, [OMP](https://github.com/can1357/oh-my-pi), Claude Code, OpenCode and some personal tools.
-- YouTube and Substack: these start in 2027.
+- Seamless integration with marola.dev, YouTube and Substack: these start in 2027.
 
 **UFSC, until mid-2027**
 - I am a volunteer at the Federal University of Santa Catarina (UFSC) ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
