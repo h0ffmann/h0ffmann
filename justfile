@@ -76,6 +76,23 @@ _cover login:
     rm -rf build/cover/{{login}}/profile
     @echo "cover: build/cover/{{login}}/cover.png"
 
+# Every public source repository of h0ffmann, marola-dev and piabrota (site/data/repos.tsv) and
+# their most used GitHub topics (site/data/topics.tsv), read again from GitHub with `gh`; then the
+# topic cloud: vendor/archify places and checks the boxes, scripts/topics-frame.py sizes each word
+# by its box, Chromium (Playwright) takes the picture of site/static/topics.png.
+# `just topics --self-test` runs the script's own test.
+topics *args:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [ "{{args}}" = --self-test ]; then python3 scripts/repos.py --self-test; exit; fi
+    [ -f vendor/archify/archify/bin/archify.mjs ] || { git submodule update --init --depth 1 vendor/archify && git -C vendor/archify sparse-checkout set --no-cone /archify/; }
+    rm -rf build/topics && mkdir -p build/topics
+    python3 scripts/repos.py --archify build/topics/topics.json
+    cd build/topics
+    ARCHIFY_UPDATE_CHECK_DISABLED=1 node ../../vendor/archify/archify/bin/archify.mjs finalize architecture topics.json topics.html --out-dir receipts --quality showcase --json > finalize.json || { cat finalize.json >&2; exit 1; }
+    python3 ../../scripts/topics-frame.py topics.html cloud.html
+    node ../../scripts/topics-shot.mjs cloud.html ../../site/static/topics.png
+
 # The translations of the site: whole, current and marked (TRANSLATIONS.md).
 # `just translations --self-test` gives the check a bad table, which it must refuse.
 translations *args:

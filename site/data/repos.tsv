@@ -1,51 +1,72 @@
-# Every public source repository of h0ffmann and of marola-dev (no forks), as GitHub listed them on 13 October 2026
-# (`gh repo list <owner> --source --visibility public`). year: the year of the last push. The description is the
-# repository's own; empty when it has none. topic: water | ideas | ouroboric | closed, set by hand.
+# Every public source repository of h0ffmann, marola-dev and piabrota (no forks), as GitHub listed them on 9 November 2026
+# (GitHub's repository search, `user:<owner> fork:false is:public`; made by scripts/repos.py): 43 of h0ffmann, 12 of marola-dev, 12 of piabrota.
+# year: the year of the last push. The description is the repository's own; empty when it has none.
+# topic: water | ideas | ouroboric | closed, set by hand (a new repository gets its account's until the owner sets it).
 # owner	name	topic	year	description	href
-marola-dev	.github	water	2026	Org-wide defaults for marola-dev: community health files and the org profile	https://github.com/marola-dev/.github
-marola-dev	awesome-ocean-science	water	2026	curated list of ocean sciences	https://github.com/marola-dev/awesome-ocean-science
-marola-dev	marola	water	2026	ocean intelligence layer	https://github.com/marola-dev/marola
-marola-dev	marola-agents	water	2026	marola way of living	https://github.com/marola-dev/marola-agents
-marola-dev	marola-app	water	2026	marola backend	https://github.com/marola-dev/marola-app
-marola-dev	marola-corpus	water	2026	marola's knowledge corpus: sourced ocean and marine-safety notes, released as a pinned tarball	https://github.com/marola-dev/marola-corpus
-marola-dev	marola-devkit	water	2026	dev-flow harness for the marola repos: scripts, a Claude Code plugin marketplace and reusable workflows	https://github.com/marola-dev/marola-devkit
-marola-dev	marola-ml	water	2026	marola's ML side: the fine-tune, the DSPy prompt compile, the local model image and the benchmark gate	https://github.com/marola-dev/marola-ml
-marola-dev	marola-oods	water	2026	marola's open ocean data store: Brazilian bathing-water data as versioned files (MIP-0056), empty until the ingest lands	https://github.com/marola-dev/marola-oods
-marola-dev	marola-research	water	2026	[S]cience	https://github.com/marola-dev/marola-research
+h0ffmann	proof	ideas	2026	write what you can do, do what you write	https://github.com/h0ffmann/proof
+piabrota	alerts	water	2026	⚠️ alerts realm	https://github.com/piabrota/alerts
+h0ffmann	swim-sync	water	2026	swim training app	https://github.com/h0ffmann/swim-sync
+piabrota	nix-os	ideas	2026	software and research factory w/ Hermes Agent + OpenRig spec	https://github.com/piabrota/nix-os
+piabrota	gramatico	ideas	2026	🇧🇷 portuguese (Brazil) on rails	https://github.com/piabrota/gramatico
+piabrota	room	ideas	2026	A personal site that is a 3D room: switch camera shots, play VHS tapes on a TV, listen to lofi radio. three.js + Vite, static files.	https://github.com/piabrota/room
+piabrota	.github	ideas	2026	⚖️ piabrota dogma	https://github.com/piabrota/.github
+piabrota	skills	ideas	2026	piabrota skillset	https://github.com/piabrota/skills
+h0ffmann	awesome-neurosymbolic-ai	ideas	2026	when Symbolic AI meets DNN	https://github.com/h0ffmann/awesome-neurosymbolic-ai
+piabrota	agents	ideas	2026	🤖 piabrota's buddies	https://github.com/piabrota/agents
+h0ffmann	h0ffmann	ideas	2026	R E A D M E	https://github.com/h0ffmann/h0ffmann
 marola-dev	marola-site	water	2026	marola.dev frontend	https://github.com/marola-dev/marola-site
+piabrota	dojo	ideas	2026	道場	https://github.com/piabrota/dojo
 marola-dev	marola-skills	water	2026	marola way of coding	https://github.com/marola-dev/marola-skills
-h0ffmann	closed-source	closed	2026	license research & rhizomatic notes	https://github.com/h0ffmann/closed-source
-h0ffmann	forecast-energy-demand	ideas	2026	forecasting algorithms applied to hourly electricity	https://github.com/h0ffmann/forecast-energy-demand
-h0ffmann	gcp-agentic-architect	ideas	2026	learning agents on GCP	https://github.com/h0ffmann/gcp-agentic-architect
+marola-dev	marola	water	2026	water super app	https://github.com/marola-dev/marola
+piabrota	rax	ideas	2026	🦀 agentic runtime on k8s	https://github.com/piabrota/rax
+piabrota	pirsig	ideas	2026	🧠 agentic brain	https://github.com/piabrota/pirsig
+h0ffmann	chaceon	water	2026	CPU/GPU wave modeling in pure agentic rust	https://github.com/h0ffmann/chaceon
+marola-dev	marola-app	water	2026	marola backend	https://github.com/marola-dev/marola-app
+marola-dev	marola-devkit	water	2026	dev-flow harness for the marola repos: scripts, a Claude Code plugin marketplace and reusable workflows	https://github.com/marola-dev/marola-devkit
+h0ffmann	picasso	ideas	2026	deterministic toolchains with just + nix + rust	https://github.com/h0ffmann/picasso
+piabrota	mu	ideas	2026	company chart	https://github.com/piabrota/mu
+piabrota	ihero	ideas	2026	soon	https://github.com/piabrota/ihero
+h0ffmann	astrbot_dw_ext_br_south_waterq	water	2026	🇧🇷 Bathing water quality alerts for the South of Brazil (RS, SC, PR). An extension for astrbot_plugin_disaster_warning.	https://github.com/h0ffmann/astrbot_dw_ext_br_south_waterq
+h0ffmann	astrbot_dw_ext_br_south_disaster	water	2026	🇧🇷 South of Brazil (RS, SC, PR) disaster extension for AstrBot plugin astrbot_plugin_disaster_warning	https://github.com/h0ffmann/astrbot_dw_ext_br_south_disaster
+h0ffmann	closed-source	closed	2026	license research	https://github.com/h0ffmann/closed-source
+marola-dev	marola-ml	water	2026	🇧🇷 marolaGPT + the fine-tune, the DSPy prompt compile, the local model image and the benchmark gate	https://github.com/marola-dev/marola-ml
+h0ffmann	smart-notes	ideas	2026	obsidian for humans	https://github.com/h0ffmann/smart-notes
+h0ffmann	ww3-dia-gpu-v2	water	2026	ww3-dia-gpu-v2: the whole W3SNL1, inside WAVEWATCH III, bit for bit	https://github.com/h0ffmann/ww3-dia-gpu-v2
+h0ffmann	montaigne	ideas	2026	text-to-sound (TTS) experiments	https://github.com/h0ffmann/montaigne
+marola-dev	.github	water	2026	Org-wide defaults for marola-dev: community health files and the org profile	https://github.com/marola-dev/.github
+marola-dev	marola-research	water	2026	[S]cience	https://github.com/marola-dev/marola-research
+marola-dev	marola-oods	water	2026	marola's open ocean data store: Brazilian bathing-water data as versioned files (MIP-0056), empty until the ingest lands	https://github.com/marola-dev/marola-oods
+marola-dev	marola-corpus	water	2026	🇧🇷 marola's knowledge corpus: sourced ocean and marine-safety notes, released as a pinned tarball	https://github.com/marola-dev/marola-corpus
+marola-dev	awesome-ocean-sciences	water	2026	A curated list of ocean-science software, models, data and resources	https://github.com/marola-dev/awesome-ocean-sciences
 h0ffmann	nashkell	ideas	2026	game theory + haskell	https://github.com/h0ffmann/nashkell
-h0ffmann	picasso	ideas	2026	me + nix + whitepaper	https://github.com/h0ffmann/picasso
-h0ffmann	ww3-gpu	water	2026	WW3 GPU Lab: agentic coding and agentic research on a bit-for-bit GPU port of WAVEWATCH III	https://github.com/h0ffmann/ww3-gpu
-h0ffmann	awesome-agentic-ai	ideas	2025		https://github.com/h0ffmann/awesome-agentic-ai
-h0ffmann	fp-gym	ideas	2025	func. programing exercises	https://github.com/h0ffmann/fp-gym
-h0ffmann	hoffmagic	ideas	2025	me + blog + over-engineering	https://github.com/h0ffmann/hoffmagic
-h0ffmann	ihoje	ideas	2025		https://github.com/h0ffmann/ihoje
-h0ffmann	literator	ideas	2025	next gen book analytics	https://github.com/h0ffmann/literator
-h0ffmann	manus-playground	ideas	2025		https://github.com/h0ffmann/manus-playground
-h0ffmann	montaigne	ideas	2025	next level text-to-sound	https://github.com/h0ffmann/montaigne
-h0ffmann	okekara	ideas	2025	synchronized lyrics and karaoke mode to YouTube Music	https://github.com/h0ffmann/okekara
+h0ffmann	hoffmannxd.github.io	ideas	2026	Personal stuff	https://github.com/h0ffmann/hoffmannxd.github.io
+h0ffmann	akka-bank	ideas	2026		https://github.com/h0ffmann/akka-bank
+h0ffmann	zex	ideas	2026		https://github.com/h0ffmann/zex
+h0ffmann	scala-spice	ideas	2026	Circuit analysis using Scala-lang.	https://github.com/h0ffmann/scala-spice
+h0ffmann	che-scala-template	ideas	2026	che test	https://github.com/h0ffmann/che-scala-template
+h0ffmann	scalabase	ideas	2026	My personal skeleton for scala projects	https://github.com/h0ffmann/scalabase
+h0ffmann	bigiot	ideas	2026	data platform implementation for remote monitoring systems using asynchronous messaging	https://github.com/h0ffmann/bigiot
+h0ffmann	chemo-rx	closed	2026	My undergraduate thesis	https://github.com/h0ffmann/chemo-rx
+h0ffmann	go-hello	ideas	2026	Skeleton for GO RESTful API's.	https://github.com/h0ffmann/go-hello
+h0ffmann	js-advanced-es6	ideas	2026	Advanced JavaScript ES6 Alura's course.	https://github.com/h0ffmann/js-advanced-es6
+h0ffmann	mdd-risk-analysis	ideas	2026	Risk analysis using Apache Spark.	https://github.com/h0ffmann/mdd-risk-analysis
+marola-dev	marola-agents	water	2026	marola way of living	https://github.com/marola-dev/marola-agents
+h0ffmann	awesome-ocean-science	water	2026		https://github.com/h0ffmann/awesome-ocean-science
+h0ffmann	gcp-agentic-architect	ideas	2026	learning agents on GCP	https://github.com/h0ffmann/gcp-agentic-architect
+h0ffmann	forecast-energy-demand	ideas	2026	forecasting algorithms applied to hourly electricity	https://github.com/h0ffmann/forecast-energy-demand
 h0ffmann	predictive-content	ideas	2025		https://github.com/h0ffmann/predictive-content
-h0ffmann	swim-sync	water	2025	swim training app	https://github.com/h0ffmann/swim-sync
+h0ffmann	literator	ideas	2025	next gen book analytics	https://github.com/h0ffmann/literator
 h0ffmann	tf-gcp-workspace	ideas	2025	An automated Terraform and Python template for accessing shared Google Workspace documents (Docs, Sheets, Drive) via a service account.	https://github.com/h0ffmann/tf-gcp-workspace
+h0ffmann	fp-gym	ideas	2025	func. programing exercises	https://github.com/h0ffmann/fp-gym
+h0ffmann	okekara	ideas	2025	synchronized lyrics and karaoke mode to YouTube Music	https://github.com/h0ffmann/okekara
+h0ffmann	hoffmagic	ideas	2025	me + blog + over-engineering	https://github.com/h0ffmann/hoffmagic
 h0ffmann	the-garden-of-aflictions	ideas	2025		https://github.com/h0ffmann/the-garden-of-aflictions
-h0ffmann	awesome-prediction-markets	ideas	2024		https://github.com/h0ffmann/awesome-prediction-markets
+h0ffmann	awesome-agentic-ai	ideas	2025		https://github.com/h0ffmann/awesome-agentic-ai
+h0ffmann	manus-playground	ideas	2025		https://github.com/h0ffmann/manus-playground
+h0ffmann	ihoje	ideas	2025		https://github.com/h0ffmann/ihoje
 h0ffmann	sharingan	ideas	2024	when Aider meets a instruction a DSL	https://github.com/h0ffmann/sharingan
-h0ffmann	bigiot	ideas	2021	data platform implementation for remote monitoring systems  using asynchronous messaging	https://github.com/h0ffmann/bigiot
+h0ffmann	awesome-prediction-markets	ideas	2024		https://github.com/h0ffmann/awesome-prediction-markets
 h0ffmann	elyra-fork-test	ideas	2021		https://github.com/h0ffmann/elyra-fork-test
-h0ffmann	ops-cheat-sheet	ideas	2021	---	https://github.com/h0ffmann/ops-cheat-sheet
-h0ffmann	quad-ci	ideas	2021	The Simple Haskell Handbook book suff	https://github.com/h0ffmann/quad-ci
 h0ffmann	scan4s	ideas	2021		https://github.com/h0ffmann/scan4s
-h0ffmann	akka-bank	ideas	2020		https://github.com/h0ffmann/akka-bank
-h0ffmann	che-scala-template	ideas	2020	che test	https://github.com/h0ffmann/che-scala-template
-h0ffmann	scala-spice	ideas	2020	Circuit analysis using Scala-lang.	https://github.com/h0ffmann/scala-spice
-h0ffmann	scalabase	ideas	2020	My personal skeleton for scala projects	https://github.com/h0ffmann/scalabase
-h0ffmann	zex	ideas	2020		https://github.com/h0ffmann/zex
-h0ffmann	hoffmannxd.github.io	ideas	2019	Personal stuff	https://github.com/h0ffmann/hoffmannxd.github.io
-h0ffmann	mdd-risk-analysis	ideas	2019	Risk analysis using Apache Spark.	https://github.com/h0ffmann/mdd-risk-analysis
-h0ffmann	chemo-rx	closed	2018	My undergraduate thesis	https://github.com/h0ffmann/chemo-rx
-h0ffmann	go-hello	ideas	2018	Skeleton for GO RESTful API's.	https://github.com/h0ffmann/go-hello
-h0ffmann	js-advanced-es6	ideas	2018	Advanced JavaScript ES6 Alura's course.	https://github.com/h0ffmann/js-advanced-es6
+h0ffmann	quad-ci	ideas	2021	The Simple Haskell Handbook book suff	https://github.com/h0ffmann/quad-ci
+h0ffmann	ops-cheat-sheet	ideas	2021	---	https://github.com/h0ffmann/ops-cheat-sheet

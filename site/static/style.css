@@ -231,6 +231,7 @@ a.node:focus-visible { outline: none; }
 .counters li.topic-water b { color: var(--water); text-shadow: 0 0 16px rgba(54, 183, 255, .5); }
 .counters li.topic-ouroboric b { color: var(--ouro); text-shadow: 0 0 16px rgba(255, 138, 31, .45); }
 .counters span { display: block; margin-top: 8px; font: 400 13px/1.45 var(--data); color: var(--muted); }
+.topics { display: block; width: 100%; height: auto; margin: 34px 0 0; border-radius: 12px; }
 .languages { list-style: none; margin: 34px 0 0; padding: 0; max-width: 46em; display: grid; gap: 9px; }
 .languages li { display: grid; grid-template-columns: 8.5em minmax(0, 1fr) 4.6em; gap: 12px; align-items: center; font: 500 14px/1.2 var(--data); }
 .languages .name { color: var(--ink); }
