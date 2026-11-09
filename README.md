@@ -22,3 +22,9 @@ mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin
 </p>
 
 <p align="center"><sub>▲ grid, key 0 in the room: a triangle mesh of the Brazilian coast, 24 h of sea and wind · wind: NOAA GFS through <a href="https://open-meteo.com">Open-Meteo</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · temperature: OSTIA, generated using E.U. Copernicus Marine Service information (<a href="https://doi.org/10.48670/moi-00165">doi:10.48670/moi-00165</a>) · land: Natural Earth</sub></p>
+
+<p align="center">
+  <a href="site/data/topics.tsv"><img src="site/static/topics.png" alt="a word cloud of the GitHub topics of the public repositories of h0ffmann, marola-dev and piabrota, drawn with Archify: the more repositories carry a topic, the bigger its word" width="720"/></a>
+</p>
+
+<p align="center"><sub>my GitHub topics, drawn with <a href="https://github.com/tt-a1i/archify">Archify</a> · the index: <a href="site/data/topics.tsv">topics</a>, <a href="site/data/repos.tsv">every repository</a> of h0ffmann, marola-dev and piabrota · <code>just topics</code> draws it again</sub></p>
