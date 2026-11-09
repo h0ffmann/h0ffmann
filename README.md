@@ -12,7 +12,7 @@
 - YouTube and Substack: these start in 2027.
 
 **Technical skills**
-- Software development: 10 years. Mostly Scala for backend and data; Python for ML and Airflow.
+- Software development: +10 years. Mostly Scala for backend and data; Python for ML and Airflow.
 - 2015: LIOC, ocean instrumentation lab, UFRJ. FPGA signal processing in LabVIEW for Brazilian Navy underwater communication.
 - 2016: LIOC. Real-time GPS boat tracking over 2G, with mobile phone chips.
 - 2017: Stone (Nasdaq: STNE), during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
