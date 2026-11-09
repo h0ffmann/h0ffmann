@@ -4,38 +4,37 @@
 
 **Staff Software Engineer & FDE**
 
-**Piabrota AI Studio**
+**Piabrota AI Studio (self-employed, since October 2026)**
 - [room.piabrota.art](https://room.piabrota.art): a 3D room. It uses 3D models, JavaScript and Spotify.
-- [metrics.piabrota.art](https://metrics.piabrota.art): my open homelab. It runs NixOS on two Hostinger VPS machines (KVM1 and KVM4).
-- [rig.piabrota.art](https://rig.piabrota.art): an [OpenRig](https://github.com/mvschwarz/openrig) instance. Now, 1 of 4 rigs operates.
-- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, my personal agent. It connects to Obsidian, [OMP](https://github.com/can1357/oh-my-pi), Claude Code, OpenCode and some personal tools.
-- Seamless integration with [marola.dev](https://marola.dev), YouTube and Substack: these start in 2027.
+- [metrics.piabrota.art](https://metrics.piabrota.art): Piabrota infrastructure numbers.
+- [rig.piabrota.art](https://rig.piabrota.art): an OpenRig instance ([github.com/mvschwarz/openrig](https://github.com/mvschwarz/openrig)). Now, 1 of 4 rigs operates.
+- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, my personal agent. It connects to Obsidian, OMP ([github.com/can1357/oh-my-pi](https://github.com/can1357/oh-my-pi)), Claude Code, OpenCode and some personal tools.
+- YouTube and Substack: these start in 2027.
 
 **Technical skills**
-- Software development life cycle (SDLC): 9 years of experience.
-- Fintech: iUPay (Brazil), for Guiabolso (Brazil, now part of PicPay), 2019 to 2020. I was a core developer of its instant transfer between banks. It launched in August 2020, before Pix (November 2020).
-- Machine learning (ML): 5 companies, 4 domains.
-  - Stone (Brazil), 2017: churn prediction with XGBoost.
-  - Elemeno AI (USA), 2021: MLOps consulting for Americanas (B2W, Brazil). I made ML environments with Kubernetes and Kubeflow.
-  - Legiti (Brazil), then Signifyd (USA) after it bought Legiti, 2022 to 2024: fraud prevention on Databricks.
-  - ITV (UK), 2025 to 2026: forecasts for 4 TV channels, through an indirect contract. I used AWS: SageMaker, MWAA (managed Airflow), S3, Lambda and Step Functions.
+- Software development life cycle (SDLC): 10 years. Mostly Scala for backend and data. Python for ML and Airflow.
+- 2017: Stone (Nasdaq: STNE), during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
+- 2018: a model that recommends a mobile carrier from historical ping signals. Apache Flink detects the events; Python does the scoring.
+- 2019: a pre-seed startup. We made an instant transfer between banks. It launched in August 2020, before Pix (November 2020). A company bought us. Then Pix, the central bank's solution, made the product unnecessary.
+- 2020: an early startup in California. Semantix (Nasdaq: STIX) bought it.
+- 2021: promoted to Lead MLOps, consulting for Americanas (B2W, Brazil). ML environments with Kubernetes and Kubeflow.
+- 2022 to 2024: fraud prevention on Databricks. L5 engineer and subject matter expert of a loss forecasting product. I reported directly to the CFO.
+- 2025 to 2026: TV audience forecasts for 4 channels, through an indirect contract. AWS: SageMaker, MWAA (managed Airflow), S3, Lambda and Step Functions.
 
-**Research**
-
-*UFSC, until mid-2027 (10 hours each week)*
-- I work at the Federal University of Santa Catarina (UFSC) ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)), in a team of 5 persons.
-- I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust is a possible next step, with help from Prof. Pedro Veras ([ORCID 0000-0002-1686-4722](https://orcid.org/0000-0002-1686-4722)).
-- The goal: WW3 runs faster on GPUs and gives the same results as the Fortran. We keep bit-for-bit parity where possible, and the physics stays consistent before and after the port.
-- We also apply Z3 solvers.
-- Partial code: [h0ffmann/chaceon](https://github.com/h0ffmann/chaceon).
+**Research: UFSC, until mid-2027 (10 hours each week)**
+- A team of 5 persons at the Federal University of Santa Catarina ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
+- I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust is a possible next step, with help from Prof. Pedro Veras (LabECO).
+- The goal: WW3 runs faster on GPUs and gives the same results as the Fortran. Bit-for-bit parity where possible; the physics stays consistent.
+- We use Z3 solvers. Lean is an option.
 - My works with a DOI: marola ([10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)), ww3-gpu ([10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)), picasso ([10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208)), closed source ([10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656)), marola-bench ([10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633)), nashkell, the open book ([10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739)).
 
 **Misc**
-- AWS: 4 certifications (Cloud Practitioner, Machine Learning Specialty, Machine Learning Engineer Associate, Data Engineer Associate).
-- PADI: 4 diving certifications.
-- Presentation course at Vox2you Florianópolis: 90 hours.
+- AWS: 4 certifications.
+- PADI: 4 diving certifications (2021, 2022, 2025, 2026).
+- Open water: 2 Oceanman 10 km swims in 2025 (Salvador, March; Rio de Janeiro, September).
+- Vox2you Florianópolis: 90-hour presentation course (2025).
 
-References are available on request. I do not do live-coding interviews. Async communication first.
+References are available on request. I do not do live-coding interviews.
 
 If you work with ML, ocean applications or agentic software factories, please contact me: mhoffmann [at] gmail(.com)
 
