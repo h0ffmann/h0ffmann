@@ -8,18 +8,19 @@
 - [room.piabrota.art](https://room.piabrota.art): a 3D room. It uses 3D models, JavaScript and Spotify.
 - [metrics.piabrota.art](https://metrics.piabrota.art): Piabrota infrastructure numbers.
 - [rig.piabrota.art](https://rig.piabrota.art): an OpenRig instance ([github.com/mvschwarz/openrig](https://github.com/mvschwarz/openrig)). Now, 1 of 4 rigs operates.
-- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, my personal agent. It connects to Obsidian, OMP ([github.com/can1357/oh-my-pi](https://github.com/can1357/oh-my-pi)), Claude Code, OpenCode and some personal tools.
+- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, my personal agent. It connects to Obsidian, OMP ([github.com/can1357/oh-my-pi](https://github.com/can1357/oh-my-pi)), Claude Code, OpenCode and more.
 - YouTube and Substack: these start in 2027.
 
 **Technical skills**
-- Software development life cycle (SDLC): 10 years. Mostly Scala for backend and data. Python for ML and Airflow.
+- Software development: 10 years. Mostly Scala for backend and data; Python for ML and Airflow.
+- 2015 to 2017: LIOC, ocean instrumentation lab, UFRJ. FPGA signal processing (LabVIEW) for Brazilian Navy underwater communication. Real-time GPS boat tracking.
 - 2017: Stone (Nasdaq: STNE), during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
-- 2018: a model that recommends a mobile carrier from historical ping signals. Apache Flink detects the events; Python does the scoring.
-- 2019: a pre-seed startup. We made an instant transfer between banks. It launched in August 2020, before Pix (November 2020). A company bought us. Then Pix, the central bank's solution, made the product unnecessary.
+- 2018: a model that recommends a mobile carrier from ping history. Apache Flink detects the events; Python does the scoring.
+- 2019: a pre-seed startup. We made an instant transfer between banks. It launched in August 2020, before Pix (November 2020). A company bought us; then Pix made the product unnecessary.
 - 2020: an early startup in California. Semantix (Nasdaq: STIX) bought it.
 - 2021: promoted to Lead MLOps, consulting for Americanas (B2W, Brazil). ML environments with Kubernetes and Kubeflow.
 - 2022 to 2024: fraud prevention on Databricks. L5 engineer and subject matter expert of a loss forecasting product. I reported directly to the CFO.
-- 2025 to 2026: TV audience forecasts for 4 channels, through an indirect contract. AWS: SageMaker, MWAA (managed Airflow), S3, Lambda and Step Functions.
+- 2025 to 2026: TV audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA (managed Airflow), S3, Lambda and Step Functions.
 
 **Research: UFSC, until mid-2027 (10 hours each week)**
 - A team of 5 persons at the Federal University of Santa Catarina ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
@@ -31,7 +32,7 @@
 **Misc**
 - AWS: 4 certifications.
 - PADI: 4 diving certifications (2021, 2022, 2025, 2026).
-- Open water: 2 Oceanman 10 km swims in 2025 (Salvador, March; Rio de Janeiro, September).
+- Open water: 2 Oceanman 10 km swims, 2025 (Salvador, Rio).
 - Vox2you Florianópolis: 90-hour presentation course (2025).
 
 References are available on request. I do not do live-coding interviews.
