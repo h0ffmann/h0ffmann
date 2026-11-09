@@ -5,23 +5,26 @@
 **Staff Software Engineer & FDE**
 
 **Piabrota AI Studio (self-employed, since October 2026)**
-- [room.piabrota.art](https://room.piabrota.art): a 3D room. 3D models, JavaScript and Spotify.
+- [room.piabrota.art](https://room.piabrota.art): a 3D room (JavaScript, Spotify).
 - [metrics.piabrota.art](https://metrics.piabrota.art): Piabrota infrastructure numbers.
-- [rig.piabrota.art](https://rig.piabrota.art): an OpenRig instance ([github.com/mvschwarz/openrig](https://github.com/mvschwarz/openrig)). 1 of 4 rigs operates now.
-- Partnership or white-label requests: whitelabel [at] piabrota.art
+- [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast.
+- [skills.piabrota.art](https://skills.piabrota.art): a skill collection.
+- [pirsig.piabrota.art](https://pirsig.piabrota.art): a second brain.
+- [proof.piabrota.art](https://proof.piabrota.art): Lean 4, Z3 and other formal verification tools.
+- Partnerships or white-label requests: whitelabel [at] piabrota.art
 
 **Technical skills and background**
 - Software development: 10+ years. Mostly Scala for backend and data; Python for ML and Airflow.
-- 2015: [LIOC](http://www.lioc.oceanica.ufrj.br/), the Oceanographic Instrumentation Laboratory of UFRJ. FPGA signal processing in LabVIEW for Brazilian Navy underwater communication.
-- 2016: LIOC. Real-time GPS boat tracking over 2G, with mobile phone chips.
+- 2015: LIOC, ocean instrumentation lab, UFRJ ([lioc.oceanica.ufrj.br](http://www.lioc.oceanica.ufrj.br/), in Portuguese). FPGA signal processing in LabVIEW for Brazilian Navy underwater communication.
+- 2016: [LIOC](http://www.lioc.oceanica.ufrj.br/) (in Portuguese). Real-time GPS boat tracking over 2G, with mobile phone chips.
 - 2017: Stone, during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
-- 2018: a model that recommends a mobile carrier from ping history. Apache Flink detects the events; Python does the scoring.
+- 2018: a model that recommends a mobile carrier from ping history. Flink detects events; Python scores.
 - 2019: a pre-seed startup. We made an instant transfer between banks. It launched in August 2020, before Pix. A company bought us; then Pix made the product unnecessary.
 - \[UK\] 2020: an early startup based in London, in overseas banking. I worked mainly on the Scala backend and the FX APIs.
-- \[US\] 2021: an early startup in California. Semantix bought it.
+- \[US\] 2021: a California startup. Semantix bought it.
 - \[US\] 2022: promoted to Lead MLOps, consulting for Americanas (B2W, Brazil). ML environments with Kubernetes and Kubeflow.
-- \[US\] 2023 to 2024: fraud prevention on Databricks. L5 engineer and subject matter expert of a loss forecasting product. I reported to the CFO. "Values VIP: Tenacious" award, February 2024.
-- \[UK\] 2025 to 2026: TV audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA (managed Airflow), S3, Lambda and Step Functions.
+- \[US\] 2023 to 2024: fraud prevention on Databricks. L5 engineer and SME of a loss forecasting product. I reported to the CFO. "Values VIP: Tenacious" award, February 2024.
+- \[UK\] 2025 to 2026: TV audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA, S3, Lambda and Step Functions.
 
 **Research: UFSC, until mid-2027**
 - A team of 5 persons ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
@@ -36,7 +39,7 @@
 
 References on request. I do not do live-coding interviews.
 
-If you work with ML, ocean applications or agentic software factories, please contact me: mhoffmann [at] gmail(.com)
+If you work with ML, ocean applications or agentic software factories, contact me: mhoffmann [at] gmail(.com)
 
 <p align="center">
   <a href="https://room.piabrota.art"><img src="media/room-587b0f3.webp" alt="the piabrota room by night, its four walls in turn: the desk with a computer, a TV and two small robots under a wide window over Rio at night; framed project glyphs; a wave tank of buoys; a wheel of crates beside a door; the pointer hovers over things and clicks" width="720"/></a>
