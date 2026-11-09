@@ -13,7 +13,8 @@
 
 **Technical skills**
 - Software development: 10 years. Mostly Scala for backend and data; Python for ML and Airflow.
-- 2015 to 2017: LIOC, ocean instrumentation lab, UFRJ. FPGA signal processing (LabVIEW) for Brazilian Navy underwater communication. Real-time GPS boat tracking over 2G, with mobile phone chips.
+- 2015: LIOC, ocean instrumentation lab, UFRJ. FPGA signal processing in LabVIEW for Brazilian Navy underwater communication.
+- 2016: LIOC. Real-time GPS boat tracking over 2G, with mobile phone chips.
 - 2017: Stone (Nasdaq: STNE), during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
 - 2018: a model that recommends a mobile carrier from ping history. Apache Flink detects the events; Python does the scoring.
 - 2019: a pre-seed startup. We made an instant transfer between banks. It launched in August 2020, before Pix (November 2020). A company bought us; then Pix made the product unnecessary.
