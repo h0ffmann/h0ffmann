@@ -2,14 +2,43 @@
 
 <p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of Motorcycle Maintenance</i> (1974), the epigraph on its opening page</sub></p>
 
-software engineer · open water swimmer · open2work
+**Staff Software Engineer & FDE**
 
-currently volunteering at Federal Univ. of SC (UFSC) ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)), accelerating ocean models by porting the Fortran WW3 physics model to Rust/C++ · building Brazilian disaster extensions for AstrBot's [disaster warning plugin](https://github.com/Pancakes-Labs/astrbot_plugin_disaster_warning): [br_south_disaster](https://github.com/h0ffmann/astrbot_dw_ext_br_south_disaster), [br_south_waterq](https://github.com/h0ffmann/astrbot_dw_ext_br_south_waterq) (work in progress)
+**Piabrota AI Studio (self-employed, since October 2026)**
+- [room.piabrota.art](https://room.piabrota.art): a 3D room. 3D models, JavaScript and Spotify.
+- [metrics.piabrota.art](https://metrics.piabrota.art): Piabrota infrastructure numbers.
+- [rig.piabrota.art](https://rig.piabrota.art): an OpenRig instance ([github.com/mvschwarz/openrig](https://github.com/mvschwarz/openrig)). 1 of 4 rigs operates now.
+- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, my personal agent. It connects to Obsidian, OMP ([github.com/can1357/oh-my-pi](https://github.com/can1357/oh-my-pi)), Claude Code, OpenCode and more.
+- YouTube and Substack: these start in 2027.
 
-mhoffmannfs [at] gmail.com · [linkedin.com/in/mhoffmannbr](https://www.linkedin.com/in/mhoffmannbr/) · [medium.com/@mhoffmann](https://medium.com/@mhoffmann)
+**Technical skills**
+- Software development: 10 years. Mostly Scala for backend and data; Python for ML and Airflow.
+- 2015: LIOC, ocean instrumentation lab, UFRJ. FPGA signal processing in LabVIEW for Brazilian Navy underwater communication.
+- 2016: LIOC. Real-time GPS boat tracking over 2G, with mobile phone chips.
+- 2017: Stone (Nasdaq: STNE), during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
+- 2018: a model that recommends a mobile carrier from ping history. Apache Flink detects the events; Python does the scoring.
+- 2019: a pre-seed startup. We made an instant transfer between banks. It launched in August 2020, before Pix (November 2020). A company bought us; then Pix made the product unnecessary.
+- 2020: an early startup in California. Semantix (Nasdaq: STIX) bought it.
+- 2021: promoted to Lead MLOps, consulting for Americanas (B2W, Brazil). ML environments with Kubernetes and Kubeflow.
+- 2022 to 2024: fraud prevention on Databricks. L5 engineer and subject matter expert of a loss forecasting product. I reported to the CFO. "Values VIP: Tenacious" award, February 2024.
+- 2025 to 2026: TV audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA (managed Airflow), S3, Lambda and Step Functions.
 
-- [piabrota org](https://github.com/piabrota/nix-os): FOSS fic company where I code and research with [omp](https://github.com/can1357/oh-my-pi), [Hermes](https://github.com/nousresearch/hermes-agent) and [OpenRig](https://github.com/mvschwarz/openrig). org toy [website](https://piabrota.art)
-- [marola-dev org](https://github.com/marola-dev): FOSS non-profit work associated with [Leave No Trace](https://lnt.org)
+**Research: UFSC, until mid-2027 (10 hours each week)**
+- A team of 5 persons ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
+- I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust may follow, with help from Prof. Pedro Veras (LabECO).
+- The goal: WW3 runs faster on GPUs and gives the same results as the Fortran. Bit-for-bit parity where possible; the physics stays consistent.
+- We use Z3 solvers. Lean is an option.
+- My works with a DOI: marola ([10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)), ww3-gpu ([10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)), picasso ([10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208)), closed source ([10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656)), marola-bench ([10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633)), nashkell, the open book ([10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739)).
+
+**Misc**
+- AWS: 4 certifications.
+- PADI: 4 diving certifications (2021, 2022, 2025, 2026).
+- Open water: 2 Oceanman 10 km swims, 2025 (Salvador, Rio).
+- Vox2you Florianópolis: 90-hour presentation course (2025).
+
+References on request. I do not do live-coding interviews.
+
+If you work with ML, ocean applications or agentic software factories, please contact me: mhoffmann [at] gmail(.com)
 
 <p align="center">
   <a href="https://room.piabrota.art"><img src="media/room-587b0f3.webp" alt="the piabrota room by night, its four walls in turn: the desk with a computer, a TV and two small robots under a wide window over Rio at night; framed project glyphs; a wave tank of buoys; a wheel of crates beside a door; the pointer hovers over things and clicks" width="720"/></a>
