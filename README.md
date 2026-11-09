@@ -37,7 +37,7 @@
 
 References on request. I do not do live-coding interviews.
 
-If you work with ML, ocean applications or agentic software factories, please contact me: mhoffmann [at] gmail(.com)
+If you work with ML, ocean applications or agentic software factories, contact me: [whitelabel@piabrota.art](mailto:whitelabel@piabrota.art) or [mhoffmannfs@gmail.com](mailto:mhoffmannfs@gmail.com)
 
 <p align="center">
   <a href="https://room.piabrota.art"><img src="media/room-587b0f3.webp" alt="the piabrota room by night, its four walls in turn: the desk with a computer, a TV and two small robots under a wide window over Rio at night; framed project glyphs; a wave tank of buoys; a wheel of crates beside a door; the pointer hovers over things and clicks" width="720"/></a>
