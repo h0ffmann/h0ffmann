@@ -4,6 +4,10 @@
 # topic: water | ideas | ouroboric | closed, set by hand (a new repository gets its account's until the owner sets it).
 # owner	name	topic	year	description	href
 h0ffmann	proof	ideas	2026	write what you can do, do what you write	https://github.com/h0ffmann/proof
+piabrota	mu	ideas	2026	company chart	https://github.com/piabrota/mu
+h0ffmann	h0ffmann	ideas	2026	R E A D M E	https://github.com/h0ffmann/h0ffmann
+piabrota	rax	ideas	2026	🦀 agentic runtime on k8s	https://github.com/piabrota/rax
+h0ffmann	chaceon	water	2026	CPU/GPU wave modeling in pure agentic rust	https://github.com/h0ffmann/chaceon
 piabrota	alerts	water	2026	⚠️ alerts realm	https://github.com/piabrota/alerts
 h0ffmann	swim-sync	water	2026	swim training app	https://github.com/h0ffmann/swim-sync
 piabrota	nix-os	ideas	2026	software and research factory w/ Hermes Agent + OpenRig spec	https://github.com/piabrota/nix-os
@@ -13,18 +17,14 @@ piabrota	.github	ideas	2026	⚖️ piabrota dogma	https://github.com/piabrota/.g
 piabrota	skills	ideas	2026	piabrota skillset	https://github.com/piabrota/skills
 h0ffmann	awesome-neurosymbolic-ai	ideas	2026	when Symbolic AI meets DNN	https://github.com/h0ffmann/awesome-neurosymbolic-ai
 piabrota	agents	ideas	2026	🤖 piabrota's buddies	https://github.com/piabrota/agents
-h0ffmann	h0ffmann	ideas	2026	R E A D M E	https://github.com/h0ffmann/h0ffmann
 marola-dev	marola-site	water	2026	marola.dev frontend	https://github.com/marola-dev/marola-site
 piabrota	dojo	ideas	2026	道場	https://github.com/piabrota/dojo
 marola-dev	marola-skills	water	2026	marola way of coding	https://github.com/marola-dev/marola-skills
 marola-dev	marola	water	2026	water super app	https://github.com/marola-dev/marola
-piabrota	rax	ideas	2026	🦀 agentic runtime on k8s	https://github.com/piabrota/rax
 piabrota	pirsig	ideas	2026	🧠 agentic brain	https://github.com/piabrota/pirsig
-h0ffmann	chaceon	water	2026	CPU/GPU wave modeling in pure agentic rust	https://github.com/h0ffmann/chaceon
 marola-dev	marola-app	water	2026	marola backend	https://github.com/marola-dev/marola-app
 marola-dev	marola-devkit	water	2026	dev-flow harness for the marola repos: scripts, a Claude Code plugin marketplace and reusable workflows	https://github.com/marola-dev/marola-devkit
 h0ffmann	picasso	ideas	2026	deterministic toolchains with just + nix + rust	https://github.com/h0ffmann/picasso
-piabrota	mu	ideas	2026	company chart	https://github.com/piabrota/mu
 piabrota	ihero	ideas	2026	soon	https://github.com/piabrota/ihero
 h0ffmann	astrbot_dw_ext_br_south_waterq	water	2026	🇧🇷 Bathing water quality alerts for the South of Brazil (RS, SC, PR). An extension for astrbot_plugin_disaster_warning.	https://github.com/h0ffmann/astrbot_dw_ext_br_south_waterq
 h0ffmann	astrbot_dw_ext_br_south_disaster	water	2026	🇧🇷 South of Brazil (RS, SC, PR) disaster extension for AstrBot plugin astrbot_plugin_disaster_warning	https://github.com/h0ffmann/astrbot_dw_ext_br_south_disaster

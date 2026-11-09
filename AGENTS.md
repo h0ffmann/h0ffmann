@@ -191,9 +191,12 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   `site/data/repos.tsv` is one of `water`, `ideas`, `ouroboric`, `closed`; do not add a fifth.
   `site/data/repos.tsv` lists every public source repository of h0ffmann, marola-dev and piabrota
   (the owner, 9 November 2026), as GitHub listed them on its date of record, and
-  `site/data/topics.tsv` their most used GitHub topics; `just topics` reads both again
-  (`scripts/repos.py`) and draws the topic cloud of the site, `site/static/topics.png`, with
-  `vendor/archify`. A row keeps its topic; a new one gets its account's until it is set by hand.
+  `site/data/topics.tsv` their most used GitHub topics; `site/data/forks.tsv` lists every public
+  fork of the three accounts and `site/data/fork_topics.tsv` the topics of the forks' parents.
+  `just topics` reads all four again (`scripts/repos.py`) and draws the two topic clouds, "how I
+  fork, how I play" (direct interests, `site/static/topics.png`) and indirect interests
+  (`site/static/fork-topics.png`), with `vendor/archify`. A row of repos.tsv keeps its topic; a
+  new one gets its account's until it is set by hand.
 - `notes/`, `journal/`, `NOTES.md` – the slip box, the journal, and their rules.
 - `REUSE.toml`, `LICENSES/` – licence and copyright for every file, with no header in any file.
 - `CITATION.cff` – **generated** from `.zenodo.json` by `scripts/citation.py`. Never edit it.

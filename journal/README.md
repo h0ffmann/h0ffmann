@@ -12,3 +12,4 @@ Decision, Result, Lessons. [`NOTES.md`](../NOTES.md) has the rules.
 | 2026-10-14 | [the lit mark was off the screen](2026-10-14-the-lit-mark-was-off-the-screen.md) | site, arc, motion | closed |
 | 2026-10-20 | [the cover was tried on another user](2026-10-20-the-cover-was-tried-on-another-user.md) | cover, rules, tooling | closed |
 | 2026-11-09 | [archify draws one size of word](2026-11-09-archify-draws-one-size-of-word.md) | site, topics, tooling | closed |
+| 2026-11-09 | [search does not name a fork's parent](2026-11-09-search-does-not-name-a-forks-parent.md) | site, topics, forks, tooling | open |

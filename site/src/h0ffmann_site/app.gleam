@@ -737,11 +737,24 @@ fn forks_section() -> Element(msg) {
       ),
     ),
     html.p([attribute.class("prose")], [
-      tx("every fork under his name: "),
+      tx("every fork under his name, marola and piabrota: "),
       html.text(int.to_string(list.length(content.forks))),
       tx(
         ". each one is PUBLIC, because GitHub keeps a fork of a public repository public. a fork is a copy of somebody else's work, kept to read it, to study it, or to send something back. each line names where it came from, the day he forked it, and the year the project began.",
       ),
+    ]),
+    html.p([attribute.class("prose")], [
+      tx(
+        "his indirect interests: the topics of the repositories he forked, drawn with archify. the bigger the word, the more forks come from a repository with that topic. a fork is somebody else's work, so its words take no light.",
+      ),
+    ]),
+    html.img([
+      attribute.class("topics"),
+      attribute.src("fork-topics.png"),
+      attribute.alt(
+        "a word cloud of the GitHub topics of the repositories he forked: each word is as big as the number of forks that come from a repository with it",
+      ),
+      a("loading", "lazy"),
     ]),
     html.ul(
       [attribute.class("index forks")],
@@ -752,7 +765,7 @@ fn forks_section() -> Element(msg) {
             html.text(string.slice(f.forked, 0, 4)),
           ]),
           html.a([attribute.href(f.href), attribute.rel("noopener")], [
-            html.span([attribute.class("owner")], [tx("h0ffmann/")]),
+            html.span([attribute.class("owner")], [html.text(f.owner <> "/")]),
             tx(f.name),
           ]),
           html.span([attribute.class("says")], [
@@ -834,7 +847,7 @@ fn topics_section() -> Element(msg) {
     ),
     html.p([attribute.class("prose")], [
       tx(
-        "the topics that his own repositories carry on GitHub, under his name, marola and piabrota, drawn with archify. the bigger the word, the more repositories carry it. its light is the light of most of those repositories.",
+        "his direct interests: the topics that his own repositories carry on GitHub, under his name, marola and piabrota, drawn with archify. the bigger the word, the more repositories carry it. its light is the light of most of those repositories.",
       ),
     ]),
     html.img([
