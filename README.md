@@ -23,7 +23,7 @@
 - 2022 to 2024: fraud prevention on Databricks. L5 engineer and subject matter expert of a loss forecasting product. I reported to the CFO. "Values VIP: Tenacious" award, February 2024.
 - 2025 to 2026: TV audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA (managed Airflow), S3, Lambda and Step Functions.
 
-**Research: UFSC, until mid-2027 (10 hours each week)**
+**Research: UFSC, until mid-2027**
 - A team of 5 persons ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
 - I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust may follow, with help from Prof. Pedro Veras (LabECO).
 - The goal: WW3 runs faster on GPUs and gives the same results as the Fortran. Bit-for-bit parity where possible; the physics stays consistent.
@@ -32,7 +32,7 @@
 
 **Misc**
 - AWS: 4 certifications.
-- PADI: 4 diving certifications (2021, 2022, 2025, 2026).
+- PADI: 4 scuba diving certifications (2021, 2022, 2025, 2026).
 - Open water: 2 Oceanman 10 km swims, 2025 (Salvador, Rio).
 - Vox2you Florianópolis: 90-hour presentation course (2025).
 
