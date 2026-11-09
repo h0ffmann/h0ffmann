@@ -259,15 +259,17 @@ pub fn main() -> Nil {
     rows(read("../data/forks.tsv"))
     |> list.filter_map(fn(r) {
       case r {
-        [name, parent, started, forked, description, href] ->
+        [owner, name, parent, started, forked, description, href, parent_read] ->
           Ok(
             record("Fork", [
+              #("owner", lit(owner)),
               #("name", lit(name)),
               #("parent", lit(parent)),
               #("started", lit(started)),
               #("forked", lit(forked)),
               #("description", lit(description)),
               #("href", lit(href)),
+              #("parent_read", lit(parent_read)),
             ]),
           )
         _ -> Error(Nil)
@@ -385,15 +387,18 @@ pub type Friend {
   Friend(name: String, what: String, href: String)
 }
 
-/// One fork under h0ffmann, as GitHub listed it on the date of record of site/data/forks.tsv.
+/// One public fork of h0ffmann, marola-dev or piabrota, as GitHub listed it on the date of record
+/// of site/data/forks.tsv. parent_read: how its parent was found (scripts/repos.py).
 pub type Fork {
   Fork(
+    owner: String,
     name: String,
     parent: String,
     started: String,
     forked: String,
     description: String,
     href: String,
+    parent_read: String,
   )
 }
 
