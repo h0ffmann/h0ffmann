@@ -15,6 +15,14 @@
 - [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, my personal agent. It connects to Obsidian, [OMP](https://github.com/can1357/oh-my-pi), Claude Code, OpenCode and some personal tools.
 - YouTube and Substack: these start in 2027.
 
+**UFSC, until mid-2027**
+- I am a volunteer at the Federal University of Santa Catarina (UFSC) ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
+- I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust is a possible next step.
+- The goal: WW3 runs faster on GPUs and gives the same results as the Fortran.
+- This work is also the final project of my degree at UFRJ.
+- Code: [h0ffmann/ww3-gpu](https://github.com/h0ffmann/ww3-gpu) ([10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)).
+- My other works with a DOI: marola ([10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)), picasso ([10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208)), closed source ([10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656)), marola-bench ([10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633)), nashkell, the open book ([10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739)).
+
 **Technical skills**
 - Software development life cycle (SDLC): 9 years of experience.
 - Machine learning (ML): 5 companies, 4 domains.
