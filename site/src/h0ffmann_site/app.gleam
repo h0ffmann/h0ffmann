@@ -181,6 +181,7 @@ pub fn view(model: Model) -> Element(Msg) {
       index_section(model),
       forks_section(),
       numbers_section(),
+      topics_section(),
       stars_section(),
       history_section(),
       friends_section(),
@@ -277,6 +278,7 @@ fn cover(model: Model) -> Element(Msg) {
       link("#index", "everything"),
       link("#forks", "forks"),
       link("#numbers", "numbers"),
+      link("#topics", "topics"),
       link("#stars", "stars"),
       link("#history", "the readme"),
       link("#friends", "friends"),
@@ -705,12 +707,14 @@ fn index_section(model: Model) -> Element(msg) {
       ),
     ),
     html.p([attribute.class("prose")], [
+      tx("every public repository that is his own work, and not a fork: "),
+      html.text(int.to_string(count("h0ffmann"))),
+      tx(" under his name, "),
+      html.text(int.to_string(count("marola-dev"))),
+      tx(" under marola and "),
+      html.text(int.to_string(count("piabrota"))),
       tx(
-        "every public repository that is his own work, and not a fork: "
-        <> int.to_string(count("h0ffmann"))
-        <> " under his name and "
-        <> int.to_string(count("marola-dev"))
-        <> " under marola, newest first, each with the words its own page gives it. the old ones stay: a list that hides its first steps is a list that lies.",
+        " under piabrota, newest first, each with the words its own page gives it. the old ones stay: a list that hides its first steps is a list that lies.",
       ),
     ]),
     html.ul(
@@ -813,6 +817,34 @@ fn counter(value: String, label: String, class: String) -> Element(msg) {
   html.li([attribute.class(class)], [
     html.b([], [tx(value)]),
     html.span([], [tx(label)]),
+  ])
+}
+
+/// The topics of his own repositories, as a word cloud drawn with Archify (`just topics`): the
+/// picture is static/topics.png, its numbers site/data/topics.tsv.
+fn topics_section() -> Element(msg) {
+  html.section([], [
+    head(
+      "topics",
+      "topics, by size",
+      external(
+        content.repo <> "/blob/main/site/data/topics.tsv",
+        "the count, with its date",
+      ),
+    ),
+    html.p([attribute.class("prose")], [
+      tx(
+        "the topics that his own repositories carry on GitHub, under his name, marola and piabrota, drawn with archify. the bigger the word, the more repositories carry it. its light is the light of most of those repositories.",
+      ),
+    ]),
+    html.img([
+      attribute.class("topics"),
+      attribute.src("topics.png"),
+      attribute.alt(
+        "a word cloud of the GitHub topics of his repositories: each word is as big as the number of repositories that carry it",
+      ),
+      a("loading", "lazy"),
+    ]),
   ])
 }
 

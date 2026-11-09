@@ -189,9 +189,11 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   2026): **blue** is the sea and what is made for it, **green** is an idea, **orange** is
   Ouroboric, **red** is closed source. The `topic` column of `site/data/works.tsv` and
   `site/data/repos.tsv` is one of `water`, `ideas`, `ouroboric`, `closed`; do not add a fifth.
-  `site/data/repos.tsv` lists every public source repository of h0ffmann and of marola-dev, as
-  GitHub listed them on its date of record; refresh it with
-  `gh repo list <owner> --source --visibility public` and set the topic of a new one by hand.
+  `site/data/repos.tsv` lists every public source repository of h0ffmann, marola-dev and piabrota
+  (the owner, 9 November 2026), as GitHub listed them on its date of record, and
+  `site/data/topics.tsv` their most used GitHub topics; `just topics` reads both again
+  (`scripts/repos.py`) and draws the topic cloud of the site, `site/static/topics.png`, with
+  `vendor/archify`. A row keeps its topic; a new one gets its account's until it is set by hand.
 - `notes/`, `journal/`, `NOTES.md` – the slip box, the journal, and their rules.
 - `REUSE.toml`, `LICENSES/` – licence and copyright for every file, with no header in any file.
 - `CITATION.cff` – **generated** from `.zenodo.json` by `scripts/citation.py`. Never edit it.
