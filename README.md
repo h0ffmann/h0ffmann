@@ -28,7 +28,6 @@
 - I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust may follow, with help from Prof. Pedro Veras (LabECO).
 - The goal: WW3 runs faster on GPUs and gives the same results as the Fortran. Bit-for-bit parity where possible; the physics stays consistent.
 - We use Z3 solvers. Lean is an option.
-- My works with a DOI: marola ([10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)), ww3-gpu ([10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)), picasso ([10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208)), closed source ([10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656)), marola-bench ([10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633)), nashkell, the open book ([10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739)).
 
 **Misc**
 - AWS: 4 certifications.
