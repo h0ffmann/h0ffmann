@@ -4,7 +4,7 @@
 
 <p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of Motorcycle Maintenance</i> (1974), the epigraph on its opening page</sub></p>
 
-**Staff Software Engineer & FDE**
+**Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
 - [room.piabrota.art](https://room.piabrota.art): a 3D room (JavaScript, Spotify).
