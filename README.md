@@ -19,7 +19,7 @@
 - Software development: 10+ years. Mostly Scala for backend and data; Python for ML and Airflow.
 - 2015: LIOC, ocean instrumentation lab. FPGA signal processing in LabVIEW (low code) for Brazilian Navy underwater communication.
 - 2016: [LIOC](http://www.lioc.oceanica.ufrj.br/) (in Portuguese). Real-time GPS boat tracking over 2G, with mobile phone chips.
-- 2017: Stone, during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
+- 2017: [StoneCo](https://www.stoneco.com.br/), during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
 - 2018: a model that recommends a mobile carrier from ping history. Flink detects events; Python scores.
 - 2019: a pre-seed startup. [We made an instant transfer between banks](https://www.cnnbrasil.com.br/economia/seu-bolso/meu-dinheiro/guiabolso-se-antecipa-ao-pix-com-transferencias-bancarias-instantaneas/). It launched in August 2020, before Pix. A company bought us; then Pix made the product unnecessary.
 - \[UK\] 2020: an early startup based in London, in overseas banking. I worked mainly on the Scala backend and the FX APIs.
