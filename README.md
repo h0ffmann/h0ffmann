@@ -21,7 +21,7 @@
 - 2016: [LIOC](http://www.lioc.oceanica.ufrj.br/) (in Portuguese). Real-time GPS boat tracking over 2G, with mobile phone chips.
 - 2017: Stone, during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
 - 2018: a model that recommends a mobile carrier from ping history. Flink detects events; Python scores.
-- 2019: a pre-seed startup. We made an instant transfer between banks. It launched in August 2020, before Pix. A company bought us; then Pix made the product unnecessary.
+- 2019: a pre-seed startup. [We made an instant transfer between banks](https://www.cnnbrasil.com.br/economia/seu-bolso/meu-dinheiro/guiabolso-se-antecipa-ao-pix-com-transferencias-bancarias-instantaneas/). It launched in August 2020, before Pix. A company bought us; then Pix made the product unnecessary.
 - \[UK\] 2020: an early startup based in London, in overseas banking. I worked mainly on the Scala backend and the FX APIs.
 - \[US\] 2021: a California startup. Semantix bought it.
 - \[US\] 2022: promoted to Lead MLOps, consulting for Americanas (B2W, Brazil). ML environments with Kubernetes and Kubeflow.
