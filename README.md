@@ -1,4 +1,4 @@
-<p align="center"><sub><a href="https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt">llms.txt</a>: an index of my work for language models</sub></p>
+<p align="center"><sub><a href="https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt">llms.txt</a>: an index of my work for language models · CV: <a href="pdf/Matheus_Hoffmann_CV_2026-11.pdf">English (PDF)</a>, <a href="pdf/Matheus_Hoffmann_CV_2026-11.ja.pdf">日本語・簡易版 (PDF)</a></sub></p>
 
 <p align="center"><i>And what is good, Phaedrus,<br/>And what is not good—<br/>Need we ask anyone to tell us these things?</i></p>
 
@@ -30,6 +30,7 @@
 - \[US\] 2023 to 2024: fraud prevention on Databricks. L5 engineer and SME of a loss forecasting product. I reported to the CFO. "Values VIP: Tenacious" award, [February 2024](https://www.linkedin.com/in/mhoffmannbr/overlay/Honor/296067482/treasury/?profileId=ACoAABRG_1kBEWvIwVR2h1bvBys5jFmEBGGv4rw).
 - \[UK\] 2025: [TV](https://www.itv.com) audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA, S3, Lambda and Step Functions.
 - \[UK\] 2026: I redesigned, with DS Lead, all 34 long-term models (2 channels × 17 demographics) as heuristic rules. I took them to production on AWS (SageMaker, MLflow). I resigned on early September 2026.
+
 
 **Research: UFSC, until mid-2027**
 - A team of 5 persons ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
