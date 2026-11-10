@@ -24,7 +24,7 @@
 - 2017: [StoneCo](https://www.stoneco.com.br/), during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
 - 2018: a model that recommends a mobile carrier from ping history. Flink detects events; Python scores.
 - 2019: a pre-seed startup. [We made an instant transfer between banks](https://www.cnnbrasil.com.br/economia/seu-bolso/meu-dinheiro/guiabolso-se-antecipa-ao-pix-com-transferencias-bancarias-instantaneas/). It launched in August 2020, before Pix. A company bought us; then Pix made the product unnecessary.
-- \[UK\] 2020: an early startup based in London, in overseas banking. I worked mainly on the Scala backend and the FX APIs.
+- \[UK\] 2020: an early startup based in [London](https://www.ycombinator.com/companies/broad), in overseas banking. I worked mainly on the Scala backend and the FX APIs.
 - \[US\] 2021: a California startup. [Semantix](https://valor.globo.com/empresas/noticia/2023/01/05/semantix-compra-a-startup-americana-elemeno-em-sua-primeira-aquisicao-internacional.ghtml) bought it.
 - \[US\] 2022: promoted to Lead MLOps, consulting for Americanas (B2W, Brazil). ML environments with Kubernetes and Kubeflow.
 - \[US\] 2023 to 2024: fraud prevention on Databricks. L5 engineer and SME of a loss forecasting product. I reported to the CFO. "Values VIP: Tenacious" award, [February 2024](https://www.linkedin.com/in/mhoffmannbr/overlay/Honor/296067482/treasury/?profileId=ACoAABRG_1kBEWvIwVR2h1bvBys5jFmEBGGv4rw).
