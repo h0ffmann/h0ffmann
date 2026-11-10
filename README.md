@@ -26,7 +26,7 @@
 - \[US\] 2021: a California startup. Semantix bought it.
 - \[US\] 2022: promoted to Lead MLOps, consulting for Americanas (B2W, Brazil). ML environments with Kubernetes and Kubeflow.
 - \[US\] 2023 to 2024: fraud prevention on Databricks. L5 engineer and SME of a loss forecasting product. I reported to the CFO. "Values VIP: Tenacious" award, [February 2024](https://www.linkedin.com/in/mhoffmannbr/overlay/Honor/296067482/treasury/?profileId=ACoAABRG_1kBEWvIwVR2h1bvBys5jFmEBGGv4rw).
-- \[UK\] 2025 to 2026: TV audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA, S3, Lambda and Step Functions.
+- \[UK\] 2025 to 2026: [TV](https://www.itv.com) audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA, S3, Lambda and Step Functions.
 
 **Research: UFSC, until mid-2027**
 - A team of 5 persons ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
