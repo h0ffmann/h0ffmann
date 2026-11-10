@@ -207,23 +207,14 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.
-- `media/room-587b0f3.webp` – the piabrota room in motion (room.piabrota.art), shown in
-  `README.md` in place of the summary cards (the owner, 5 November 2026). Since 7 November 2026
-  (the owner) it shows the night only, and the four walls in turn, each on screen for 5 s or more,
-  with the pointer hovering and clicking. It is piabrota/room's `docs/record/room.webp` at
-  `587b0f3` (`just record` there makes it from `room.mp4`, and fails when `scripts/blow_light.sh` finds a frame burnt to white): an animated WebP, 720 px wide at
-  10 fps, 39 s, about 5.5 MB, since GitHub does not play an MP4 from the repository in
-  a README. The file name carries the room's commit, so a new recording gets a new name and no browser or GitHub cache shows the old one. The window shows the night photo of Rio, credited in `REUSE.md`. Make it again with `ffmpeg -i room.mp4 -vf "fps=10,hqdn3d=4:3:6:6,scale=720:-1:flags=lanczos"
-  -c:v libwebp -q:v 55 -compression_level 6 -loop 0 -an media/room-<commit>.webp`.
-- `media/grid-587b0f3.webp` – the ▲ grid view of the room (key 0) alone, at the bottom of `README.md`
-  (the owner, 6 November 2026: "a second video at the bottom", "in zoom the animation of the
-  spectrum moving"). It is filmed from piabrota/room at `587b0f3` in headless Chromium, by night:
-  the grid view opened, the shot buttons and switches hidden, the map zoomed by the mouse wheel on
-  the coast from Recife to Rio, then 8 s (one 24 h cycle, three hours a second) stepped at
-  1/30 s with `window.__room.step`, while a drawn pointer moves over the sea from Salvador to Rio
-  and the hover card gives each node's wave height, temperature and wind (the owner, 7 November
-  2026: "also update the Grid video"). Cut to an animated WebP at 15 fps, 720 px, about 2.9 MB. The
-  name carries the room's commit, like the room video's. Its wind and temperature data are credited under it.
+- `media/room-screenshot-2026-11-10.webp` – a screenshot of the piabrota room (room.piabrota.art) by
+  night, the desk under the window over Rio, linked to the room and shown at 80% of the page's
+  width at the bottom of `README.md`. It replaced the two animated WebPs of the room and of its
+  ▲ grid view (the owner, 10 November 2026: "remove videos from README md, add this image
+  instead"). The owner's PNG, 1780 × 1454, converted with
+  `convert <png> -strip -quality 85 -define webp:method=6 media/room-screenshot-<date>.webp`
+  (about 86 kB). The window shows the night photo of Rio, credited under the image and in
+  `REUSE.md`.
 - `photos/` – the 2007 and 2025 swimming photos shown side by side, 400 px
   wide each, in a `cv:skip` table at the end of every README.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00
