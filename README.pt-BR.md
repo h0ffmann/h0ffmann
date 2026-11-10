@@ -5,7 +5,7 @@
 
 # h0ffmann
 
-<sub>matheus hoffmann · currículo: <a href="pdf/cv.pt-BR.pdf">pt-BR</a>, <a href="pdf/cv.pdf">en</a>, <a href="pdf/cv.ja.pdf">ja</a> · <a href="README.md">🇬🇧 english</a> · <a href="README.ja.md">🇯🇵 日本語</a></sub>
+<sub>matheus hoffmann · currículo: <a href="pdf/cv.pt-BR.pdf">pt-BR</a>, <a href="pdf/cv.pdf">en</a>, <a href="pdf/cv.ja.pdf">ja</a> · <a href="README.md">🇬🇧 english</a> · <a href="README.ja.md">🇯🇵 日本語</a> · <a href="llms.txt">llms.txt</a></sub>
 
 <sub><b>o prometeu aquático</b> · a arte da manutenção de apps · <a href="https://h0ffmann.github.io/h0ffmann/">o site</a></sub>
 

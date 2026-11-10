@@ -1,3 +1,5 @@
+<p align="center"><sub><a href="https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt">llms.txt</a>: an index of my work for language models</sub></p>
+
 <p align="center"><i>And what is good, Phaedrus,<br/>And what is not good—<br/>Need we ask anyone to tell us these things?</i></p>
 
 <p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of Motorcycle Maintenance</i> (1974), the epigraph on its opening page</sub></p>
