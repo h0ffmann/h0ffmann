@@ -4,6 +4,8 @@
 
 <p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of Motorcycle Maintenance</i> (1974), the epigraph on its opening page</sub></p>
 
+[![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/h0ffmann/badge.svg)](https://hub.xerj.org/contributors/h0ffmann)
+
 **Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
