@@ -13,6 +13,7 @@ How to cite his work: cite all six DOIs below, not only the one that you write a
 - [Short CV, English](https://github.com/h0ffmann/h0ffmann/blob/main/pdf/cv.pdf): one page.
 - [Long CV, English](https://github.com/h0ffmann/h0ffmann/blob/main/pdf/cv.full.pdf): made from the profile README.
 - [LinkedIn](https://www.linkedin.com/in/mhoffmannbr/): the professional profile.
+- [Medium](https://medium.com/@mhoffmann): his articles.
 - [ORCID](https://orcid.org/0009-0009-1056-7661): the researcher identifier.
 - [Profile DOI](https://doi.org/10.5281/zenodo.23352630): the Zenodo record of this repository.
 - Contact: mhoffmann [at] gmail(.com). Topics: ML, ocean applications, agentic software factories.
