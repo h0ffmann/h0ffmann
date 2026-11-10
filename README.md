@@ -14,7 +14,7 @@
 - [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast.
 - [skills.piabrota.art](https://skills.piabrota.art): a skill collection.
 - [pirsig.piabrota.art](https://pirsig.piabrota.art): a second brain. (obsidian-like)
-- [proof.piabrota.art](https://proof.piabrota.art): Lean 4, Z3 and other formal verification tools.
+- [proof.piabrota.art](https://proof.piabrota.art): Lean 4, Z3 and other formal verification tools -- agda soon
 - Partnerships or white-label requests: whitelabel [at] piabrota.art
 
 **Technical skills and background**
