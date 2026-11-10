@@ -5,7 +5,7 @@
 
 # h0ffmann
 
-<sub>matheus hoffmann · 履歴書: <a href="pdf/cv.ja.pdf">ja</a>, <a href="pdf/cv.pdf">en</a>, <a href="pdf/cv.pt-BR.pdf">pt-BR</a> · <a href="README.md">🇬🇧 english</a> · <a href="README.pt-BR.md">🇧🇷 português</a></sub>
+<sub>matheus hoffmann · 履歴書: <a href="pdf/cv.ja.pdf">ja</a>, <a href="pdf/cv.pdf">en</a>, <a href="pdf/cv.pt-BR.pdf">pt-BR</a> · <a href="README.md">🇬🇧 english</a> · <a href="README.pt-BR.md">🇧🇷 português</a> · <a href="llms.txt">llms.txt</a></sub>
 
 <sub><b>水のプロメテウス</b> · アプリを保守する技術 · <a href="https://h0ffmann.github.io/h0ffmann/">サイト</a></sub>
 
