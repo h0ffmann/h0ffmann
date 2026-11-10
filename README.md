@@ -9,11 +9,11 @@
 **Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
-- [room.piabrota.art](https://room.piabrota.art): a 3D room (JavaScript, Spotify).
-- [metrics.piabrota.art](https://metrics.piabrota.art): Piabrota infrastructure numbers.
-- [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast.
-- [skills.piabrota.art](https://skills.piabrota.art): a skill collection.
-- [pirsig.piabrota.art](https://pirsig.piabrota.art): a second brain. (obsidian-like)
+- [room.piabrota.art](https://room.piabrota.art): a 3D room (JavaScript, Spotify)
+- [metrics.piabrota.art](https://metrics.piabrota.art): infrastructure numbers - vcpu / ram
+- [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast. wind/temp now, swell later
+- [skills.piabrota.art](https://skills.piabrota.art): my skill collection
+- [pirsig.piabrota.art](https://pirsig.piabrota.art): a second brain - obsidian-like
 - [proof.piabrota.art](https://proof.piabrota.art): Lean 4, Z3 and other formal verification tools -- agda soon
 - Partnerships or white-label requests: whitelabel [at] piabrota.art
 
