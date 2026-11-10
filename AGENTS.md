@@ -207,14 +207,6 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 - `marola-qr.svg` – static QR code for https://marola.dev, generated once
   with `qrencode -t SVG -l M -m 2` and shown at 120 px beside the marola
   section. Regenerate only if the URL changes.
-- `media/room-screenshot-2026-11-10.webp` – a screenshot of the piabrota room (room.piabrota.art) by
-  night, the desk under the window over Rio, linked to the room and shown at 80% of the page's
-  width at the bottom of `README.md`. It replaced the two animated WebPs of the room and of its
-  ▲ grid view (the owner, 10 November 2026: "remove videos from README md, add this image
-  instead"). The owner's PNG, 1780 × 1454, converted with
-  `convert <png> -strip -quality 85 -define webp:method=6 media/room-screenshot-<date>.webp`
-  (about 86 kB). The window shows the night photo of Rio, credited under the image and in
-  `REUSE.md`.
 - `photos/` – the 2007 and 2025 swimming photos shown side by side, 400 px
   wide each, in a `cv:skip` table at the end of every README.
 - `.github/workflows/metrics.yml` – runs `lowlighter/metrics` daily at 06:00
