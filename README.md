@@ -1,4 +1,4 @@
-<p align="center"><sub><a href="https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt">llms.txt</a>: an index of my work for language models</sub></p>
+<p align="center"><sub><a href="https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt">llms.txt</a>: an index of my work for language models · CV: <a href="pdf/Matheus_Hoffmann_CV_2026-11.pdf">English (PDF)</a>, <a href="pdf/Matheus_Hoffmann_CV_2026-11.ja.pdf">日本語・簡易版 (PDF)</a></sub></p>
 
 <p align="center"><i>And what is good, Phaedrus,<br/>And what is not good—<br/>Need we ask anyone to tell us these things?</i></p>
 
