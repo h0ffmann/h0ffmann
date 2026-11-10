@@ -45,12 +45,6 @@
 - Open water: 2 Oceanman 10 km swims, 2025 (Salvador, Rio).
 
 <p align="center">
-  <a href="https://room.piabrota.art"><img src="media/room-screenshot-2026-11-10.webp" alt="the piabrota room by night, at the desk: an old TV that says no signal, insert a tape, under a wide window over Rio de Janeiro at night with Sugarloaf Mountain; a lamp, a plant, a radio and a stack of tapes; the room's keys along the bottom, 1 overview to 0 grid" width="80%"/></a>
-</p>
-
-<p align="center"><sub><a href="https://room.piabrota.art">room.piabrota.art</a>, the piabrota room (<a href="https://github.com/piabrota/room">piabrota/room</a>) · Rio at night in the window: "Rio de Janeiro at night from above" by Wilfredor, Wikimedia Commons, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></sub></p>
-
-<p align="center">
   <img src="media/reading-2026-11-10.webp" alt="h0ffmann - how I read: ten technical ebooks from my library on a dark shelf, each cover with its title, author and language: Certainty by Construction (Agda), The DevOps Toolkit, Rust From the Ground Up, The Python Master, Clean Architectures in Python, Functional Event-Driven Architecture (Scala), The Simple Haskell Handbook, Production Haskell, Functional Design and Architecture (Haskell), Practical FP in Scala" width="720"/>
 </p>
 
@@ -60,10 +54,4 @@
   <a href="site/data/topics.tsv"><img src="site/static/topics.png" alt="h0ffmann - how I fork, how I play: a word cloud of the GitHub topics of my public repositories of h0ffmann, marola-dev and piabrota, drawn with Archify; the more repositories carry a topic, the bigger its word" width="720"/></a>
 </p>
 
-<p align="center"><sub>direct interests: the topics of <a href="site/data/repos.tsv">my repositories</a> (<a href="site/data/topics.tsv">the index</a>)</sub></p>
-
-<p align="center">
-  <a href="site/data/fork_topics.tsv"><img src="site/static/fork-topics.png" alt="indirect interests: a word cloud of the GitHub topics of the repositories behind my public forks, drawn with Archify; the more forks come from a repository with a topic, the bigger its word" width="720"/></a>
-</p>
-
-<p align="center"><sub>indirect interests: the topics of what <a href="site/data/forks.tsv">my public forks</a> come from (<a href="site/data/fork_topics.tsv">the index</a>) · drawn with <a href="https://github.com/tt-a1i/archify">Archify</a>; <code>just topics</code> draws both again</sub></p>
+<p align="center"><sub>direct interests: the topics of <a href="site/data/repos.tsv">my repositories</a> (<a href="site/data/topics.tsv">the index</a>) · drawn with <a href="https://github.com/tt-a1i/archify">Archify</a></sub></p>
