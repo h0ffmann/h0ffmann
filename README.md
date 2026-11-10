@@ -35,13 +35,8 @@
 
 **Misc**
 - AWS: 4 certifications.
-- PADI: 4 scuba diving certifications (2021, 2022, 2025, 2026).
+- PADI Rescue Diver: 4 scuba diving certifications.
 - Open water: 2 Oceanman 10 km swims, 2025 (Salvador, Rio).
-- Vox2you Florianópolis: 90-hour presentation course (2025).
-
-References on request. I do not do live-coding interviews.
-
-If you work with ML, ocean applications or agentic software factories, contact me: mhoffmann [at] gmail(.com)
 
 <p align="center">
   <a href="https://room.piabrota.art"><img src="media/room-screenshot-2026-11-10.webp" alt="the piabrota room by night, at the desk: an old TV that says no signal, insert a tape, under a wide window over Rio de Janeiro at night with Sugarloaf Mountain; a lamp, a plant, a radio and a stack of tapes; the room's keys along the bottom, 1 overview to 0 grid" width="80%"/></a>
