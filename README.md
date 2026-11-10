@@ -17,7 +17,7 @@
 
 **Technical skills and background**
 - Software development: 10+ years. Mostly Scala for backend and data; Python for ML and Airflow.
-- 2015: LIOC, ocean instrumentation lab, UFRJ ([lioc.oceanica.ufrj.br](http://www.lioc.oceanica.ufrj.br/), in Portuguese). FPGA signal processing in LabVIEW for Brazilian Navy underwater communication.
+- 2015: LIOC, ocean instrumentation lab. FPGA signal processing in LabVIEW (low code) for Brazilian Navy underwater communication.
 - 2016: [LIOC](http://www.lioc.oceanica.ufrj.br/) (in Portuguese). Real-time GPS boat tracking over 2G, with mobile phone chips.
 - 2017: Stone, during its IPO. Churn prediction with XGBoost, to replace Bayesian networks.
 - 2018: a model that recommends a mobile carrier from ping history. Flink detects events; Python scores.
