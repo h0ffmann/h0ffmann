@@ -40,16 +40,10 @@ References on request. I do not do live-coding interviews.
 If you work with ML, ocean applications or agentic software factories, please contact me: mhoffmann [at] gmail(.com)
 
 <p align="center">
-  <a href="https://room.piabrota.art"><img src="media/room-587b0f3.webp" alt="the piabrota room by night, its four walls in turn: the desk with a computer, a TV and two small robots under a wide window over Rio at night; framed project glyphs; a wave tank of buoys; a wheel of crates beside a door; the pointer hovers over things and clicks" width="720"/></a>
+  <a href="https://room.piabrota.art"><img src="media/room-screenshot-2026-11-10.webp" alt="the piabrota room by night, at the desk: an old TV that says no signal, insert a tape, under a wide window over Rio de Janeiro at night with Sugarloaf Mountain; a lamp, a plant, a radio and a stack of tapes; the room's keys along the bottom, 1 overview to 0 grid" width="80%"/></a>
 </p>
 
-<p align="center"><sub><a href="https://room.piabrota.art">room.piabrota.art</a>, the piabrota room (<a href="https://github.com/piabrota/room">piabrota/room</a>) · Rio at night in the window: Wilfredor, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></sub></p>
-
-<p align="center">
-  <a href="https://room.piabrota.art"><img src="media/grid-587b0f3.webp" alt="the ▲ grid view of the piabrota room, zoomed on the Brazilian coast from Recife to Rio de Janeiro: a triangle mesh over the sea, coloured by wave height, with lines flowing where the waves travel, playing 24 hours of wind and sea hour by hour, while the pointer hovers over the sea and a card gives each node's wave height, temperature and wind" width="720"/></a>
-</p>
-
-<p align="center"><sub>▲ grid, key 0 in the room: a triangle mesh of the Brazilian coast, 24 h of sea and wind · wind: NOAA GFS through <a href="https://open-meteo.com">Open-Meteo</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · temperature: OSTIA, generated using E.U. Copernicus Marine Service information (<a href="https://doi.org/10.48670/moi-00165">doi:10.48670/moi-00165</a>) · land: Natural Earth</sub></p>
+<p align="center"><sub><a href="https://room.piabrota.art">room.piabrota.art</a>, the piabrota room (<a href="https://github.com/piabrota/room">piabrota/room</a>) · Rio at night in the window: "Rio de Janeiro at night from above" by Wilfredor, Wikimedia Commons, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></sub></p>
 
 <p align="center">
   <a href="site/data/topics.tsv"><img src="site/static/topics.png" alt="h0ffmann - how I fork, how I play: a word cloud of the GitHub topics of my public repositories of h0ffmann, marola-dev and piabrota, drawn with Archify; the more repositories carry a topic, the bigger its word" width="720"/></a>
