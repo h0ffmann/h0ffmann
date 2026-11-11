@@ -11,8 +11,8 @@
 **Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
-- [wave.piabrota.art](https://wave.piabrota.art): Science, [>2k views](https://zenodo.org/records/24130909) on Zenodo
-- [room.piabrota.art](https://room.piabrota.art): a 3D room - three.js, 3d model, ambience
+- [wave.piabrota.art](https://wave.piabrota.art): Science, [>2k views](https://zenodo.org/records/24130909) on Zenodo, [fresh](https://aixiv.online/abs/2611.01104) on aiXiv
+- [room.piabrota.art](https://room.piabrota.art): a 3D room - three.js, 3d model, ambience. [idea](https://felixrieseberg.com)
 - [metrics.piabrota.art](https://metrics.piabrota.art): homelab numbers - vcpu / ram
 - [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast - wind/temp now, swell later
 - [skills.piabrota.art](https://skills.piabrota.art): my skill collection - DYOR
