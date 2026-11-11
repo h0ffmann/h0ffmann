@@ -11,6 +11,7 @@
 **Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
+- [wave.piabrota.art](https://wave.piabrota.art): Science
 - [room.piabrota.art](https://room.piabrota.art): a 3D room - three.js, 3d model, ambience
 - [metrics.piabrota.art](https://metrics.piabrota.art): infrastructure numbers - vcpu / ram
 - [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast - wind/temp now, swell later
