@@ -87,11 +87,11 @@ pub fn view(model: Model) -> Element(Msg) {
   html.div([], [
     top(model),
     html.main([attribute.class("wrap")], [
-      cards(),
-      works_section(),
-      reading_section(),
+      think_section(),
+      write_section(),
+      read_section(),
+      fun_section(),
       song_section(),
-      links_section(),
     ]),
     footer(),
   ])
@@ -126,9 +126,10 @@ fn top(model: Model) -> Element(Msg) {
         html.text("h0ffmann"),
       ]),
       html.nav([attribute.class("nav")], [
-        html.a([attribute.href("#now")], [tx("now")]),
-        html.a([attribute.href("#works")], [tx("works")]),
-        html.a([attribute.href("#reading")], [tx("reading")]),
+        html.a([attribute.href("#think")], [tx("think")]),
+        html.a([attribute.href("#write")], [tx("write")]),
+        html.a([attribute.href("#read")], [tx("read")]),
+        html.a([attribute.href("#fun")], [tx("have fun")]),
         tongues(model),
       ]),
     ]),
@@ -145,7 +146,7 @@ fn top(model: Model) -> Element(Msg) {
         html.p(
           [attribute.class("actions")],
           list.flatten([
-            // The CVs the README links (its first line).
+            // Only the CVs the README links (the owner, 11 November 2026).
             list.map(content.cvs, fn(cv) {
               button(
                 content.repo <> "/blob/main/" <> cv.1,
@@ -153,15 +154,7 @@ fn top(model: Model) -> Element(Msg) {
                 "primary",
               )
             }),
-            [
-              // The research CV for the ocean, in English (the owner, 14 October 2026).
-              button(
-                content.repo <> "/blob/main/pdf/cv.en.OCEAN.pdf",
-                "cv-water (PDF)",
-                "quiet",
-              ),
-              button(content.repo, "the readme on GitHub", "quiet"),
-            ],
+            [button(content.repo, "the readme on GitHub", "quiet")],
           ]),
         ),
       ]),
@@ -173,15 +166,33 @@ fn top(model: Model) -> Element(Msg) {
   ])
 }
 
-/// What he does now, in the README's words: two cards, the studio and the research.
-fn cards() -> Element(msg) {
-  html.section([attribute.class("cards"), attribute.id("now")], [
-    html.p([attribute.class("label")], [tx("now")]),
-    html.div([attribute.class("grid")], [
-      html.article([attribute.class("card")], [
-        html.h2([], [tx(content.studio_title)]),
-        html.ul(
-          [attribute.class("sites")],
+/// The page has three parts, think, write and read, each with only what the owner named for it
+/// (11 November 2026): piabrota; the two aiXiv papers and the DOIs of marola and closed source;
+/// Goodreads. The other four DOIs are not on the page, his exception to AGENTS.md's hard rule 2.
+pub const written = ["marola", "closed-source"]
+
+fn badges_starting(prefix: String) -> List(#(String, String)) {
+  list.filter(content.badges, fn(b) { string.starts_with(b.0, prefix) })
+}
+
+fn part(id: String, label: String, body: List(Element(msg))) -> Element(msg) {
+  html.section([attribute.class("cards"), attribute.id(id)], [
+    html.p([attribute.class("label")], [tx(label)]),
+    ..body
+  ])
+}
+
+/// think: the studio, piabrota, with its sites in the README's words.
+fn think_section() -> Element(msg) {
+  part("think", "think", [
+    html.article([attribute.class("card")], [
+      html.h2([], [tx(content.studio_title)]),
+      html.ul(
+        [attribute.class("sites")],
+        list.flatten([
+          list.map(badges_starting("piabrota"), fn(b) {
+            html.li([], [external(b.1, "github.com/piabrota")])
+          }),
           list.map(content.studio, fn(item) {
             let #(name, href, text) = item
             case href {
@@ -190,16 +201,8 @@ fn cards() -> Element(msg) {
                 html.li([], [external(href, name), html.span([], [tx(text)])])
             }
           }),
-        ),
-      ]),
-      html.article([attribute.class("card")], [
-        html.h2([], [tx(content.research_title)]),
-        // The README's line of DOIs is the list of works below, with each DOI as a link.
-        ..list.filter(content.research, fn(r) {
-          !string.starts_with(r, "My works with a DOI")
-        })
-        |> list.map(fn(r) { html.p([], [tx(r)]) })
-      ]),
+        ]),
+      ),
     ]),
   ])
 }
@@ -212,43 +215,60 @@ pub fn starred(w: Work) -> String {
   }
 }
 
-/// The works with a DOI, each with its DOI as a link (AGENTS.md, hard rule 2).
-fn works_section() -> Element(msg) {
-  let works = list.filter(content.works, fn(w: Work) { w.doi != "" })
-  html.section([attribute.class("cards"), attribute.id("works")], [
-    html.p([attribute.class("label")], [tx("works with a DOI")]),
-    html.ul(
-      [attribute.class("works")],
-      list.map(works, fn(w: Work) {
-        html.li([], [
-          case w.href {
-            "" -> html.strong([], [tx(starred(w))])
-            href -> external(href, starred(w))
-          },
-          html.span([], [tx(w.text)]),
-          external("https://doi.org/" <> w.doi, w.doi),
-        ])
+/// write: the two aiXiv papers, then marola and closed source with their DOIs.
+fn write_section() -> Element(msg) {
+  let papers =
+    list.map(badges_starting("aiXiv"), fn(b) {
+      html.li([], [
+        external(b.1, b.0),
+        html.span([], [tx("a paper on aiXiv")]),
+        html.span([], []),
+      ])
+    })
+  let works =
+    list.filter(content.works, fn(w: Work) {
+      w.doi != "" && list.contains(written, w.id)
+    })
+    |> list.map(fn(w: Work) {
+      html.li([], [
+        case w.href {
+          "" -> html.strong([], [tx(starred(w))])
+          href -> external(href, starred(w))
+        },
+        html.span([], [tx(w.text)]),
+        external("https://doi.org/" <> w.doi, w.doi),
+      ])
+    })
+  part("write", "write", [
+    html.ul([attribute.class("works")], list.append(papers, works)),
+  ])
+}
+
+/// read: Goodreads.
+fn read_section() -> Element(msg) {
+  part("read", "read", [
+    html.p(
+      [attribute.class("links")],
+      list.map(badges_starting("Goodreads"), fn(b) {
+        external(b.1, "goodreads.com/piabrota")
       }),
     ),
   ])
 }
 
-/// How he reads: the README's picture of his library (media/, copied into the site by `just site`).
-fn reading_section() -> Element(msg) {
-  let #(src, alt) = content.reading
-  case src {
-    "" -> element.none()
-    _ ->
-      html.section([attribute.class("cards"), attribute.id("reading")], [
-        html.p([attribute.class("label")], [tx("how i read")]),
-        html.img([
-          attribute.class("shelf"),
-          attribute.src(src),
-          attribute.alt(alt),
-          a("loading", "lazy"),
-        ]),
-      ])
-  }
+/// have fun: in the water (site/data/fun.tsv), each as a badge with its count.
+fn fun_section() -> Element(msg) {
+  part("fun", "have fun", [
+    html.p(
+      [attribute.class("pills")],
+      list.map(content.fun, fn(f) {
+        html.span([attribute.class("pill")], [
+          html.span([attribute.class("pill-what")], [tx(f.0)]),
+          html.span([attribute.class("pill-count")], [tx(f.1)]),
+        ])
+      }),
+    ),
+  ])
 }
 
 /// The song (site/data/music.tsv), in Spotify's own player. Browsers do not start sound on their
@@ -257,8 +277,7 @@ fn song_section() -> Element(msg) {
   case content.song {
     "" -> element.none()
     track ->
-      html.section([attribute.class("cards"), attribute.id("song")], [
-        html.p([attribute.class("label")], [tx("a song")]),
+      part("song", "a song", [
         html.iframe([
           attribute.class("song"),
           attribute.src(
@@ -274,17 +293,6 @@ fn song_section() -> Element(msg) {
         ]),
       ])
   }
-}
-
-/// The README's badges, as plain links.
-fn links_section() -> Element(msg) {
-  html.section([attribute.class("cards")], [
-    html.p([attribute.class("label")], [tx("elsewhere")]),
-    html.p(
-      [attribute.class("links")],
-      list.map(content.badges, fn(b) { external(b.1, b.0) }),
-    ),
-  ])
 }
 
 fn footer() -> Element(msg) {
