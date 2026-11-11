@@ -6,6 +6,8 @@
 
 [![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/h0ffmann/badge.svg)](https://hub.xerj.org/contributors/h0ffmann) [![piabrota contributor](https://img.shields.io/badge/piabrota-contributor-7c3aed?labelColor=11120f)](https://github.com/piabrota) [![marola-dev contributor](https://img.shields.io/badge/marola--dev-contributor-7c3aed?labelColor=11120f)](https://github.com/marola-dev)
 
+[![Goodreads piabrota](https://img.shields.io/badge/goodreads-piabrota-7c3aed?labelColor=11120f)](https://www.goodreads.com/user/show/206337057-piabrota) [![Substack hoffmagic](https://img.shields.io/badge/substack-hoffmagic-7c3aed?labelColor=11120f)](https://hoffmagic.substack.com)
+
 **Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
