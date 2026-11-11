@@ -1,9 +1,15 @@
-# Every public fork of h0ffmann, marola-dev and piabrota, as GitHub listed them on 9 November 2026 (GitHub's repository
-# search, `user:<owner> fork:only is:public`; made by scripts/repos.py): 94 of h0ffmann, 2 of marola-dev, 27 of piabrota. Each one is PUBLIC, because GitHub keeps
+# Every public fork of h0ffmann, marola-dev and piabrota, as GitHub listed them on 11 November 2026 (GitHub's repository
+# search, `user:<owner> fork:only is:public`; made by scripts/repos.py): 96 of h0ffmann, 2 of marola-dev, 31 of piabrota. Each one is PUBLIC, because GitHub keeps
 # a fork of a public repository public. forked: the day the fork was made. started: the year its parent was created on
 # GitHub, the closest record of when that project began. parent: the repository it was forked from; parent_read: how the
 # parent was found (scripts/repos.py). The description is the fork's own, which GitHub usually copies from its parent.
 # owner	name	parent	started	forked	description	href	parent_read
+piabrota	open-predico	arnaud-vs/open-predico	2026	2026-11-11	Open-source energy forecasting with TSFMs.	https://github.com/piabrota/open-predico	search: same name and description
+piabrota	ww3-gpu	h0ffmann/ww3-gpu	2026	2026-11-11	WW3 GPU Lab: agentic coding and agentic research on a bit-for-bit GPU port of WAVEWATCH III	https://github.com/piabrota/ww3-gpu	search: same name, one of his accounts
+piabrota	marola-site	marola-dev/marola-site	2026	2026-11-11	marola.dev frontend	https://github.com/piabrota/marola-site	search: same name and description
+h0ffmann	opendiving	opendiving/opendiving	2026	2026-11-10	Dive logbook for scuba divers: multi-gas dives, dive-computer imports, trips, gear and one-click export in open formats. This repository is the install bundle and the product release; the app lives in opendiving-api and opendiving-web.	https://github.com/h0ffmann/opendiving	search: same name and description
+piabrota	formw8	yuripulga/formw8	2026	2026-11-10	formw8 helper	https://github.com/piabrota/formw8	search: same name and description
+h0ffmann	xerj	xerj-org/xerj	2026	2026-11-10	AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.	https://github.com/h0ffmann/xerj	search: same name and description
 piabrota	verus	verus-lang/verus	2021	2026-11-09	Verified Rust for low-level systems code	https://github.com/piabrota/verus	search: same name and description
 piabrota	Leo-III	leoprover/Leo-III	2014	2026-11-09	An Automated Theorem Prover for Classical Higher-Order Logic with Henkin Semantics	https://github.com/piabrota/Leo-III	search: same name and description
 h0ffmann	manim	3b1b/manim	2015	2026-11-09	Animation engine for explanatory math videos	https://github.com/h0ffmann/manim	search: same name and description

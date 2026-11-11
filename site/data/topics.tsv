@@ -1,35 +1,35 @@
-# The GitHub topics of the 67 repositories of site/data/repos.tsv, as GitHub gave them on 9 November 2026: 38 of them
+# The GitHub topics of the 68 repositories of site/data/repos.tsv, as GitHub gave them on 11 November 2026: 39 of them
 # carry at least one topic. count: how many of them carry the topic; repos: which. Made by scripts/repos.py; the 30
 # most used topics, the most used first. Topics that say the same thing are merged (awesome-*, rust-lang: ALIASES in
 # scripts/repos.py). A number here is read, never typed.
 # topic	count	repos
-claude-code	12	h0ffmann/h0ffmann, h0ffmann/okekara, h0ffmann/picasso, marola-dev/marola-devkit, marola-dev/marola-skills, piabrota/agents, piabrota/dojo, piabrota/gramatico, piabrota/mu, piabrota/rax, piabrota/room, piabrota/skills
+claude-code	13	h0ffmann/chaceon, h0ffmann/h0ffmann, h0ffmann/okekara, h0ffmann/picasso, marola-dev/marola-devkit, marola-dev/marola-skills, piabrota/agents, piabrota/dojo, piabrota/gramatico, piabrota/mu, piabrota/rax, piabrota/room, piabrota/skills
 piabrota	10	piabrota/agents, piabrota/alerts, piabrota/dojo, piabrota/gramatico, piabrota/mu, piabrota/nix-os, piabrota/pirsig, piabrota/rax, piabrota/room, piabrota/skills
+agentic-coding	8	h0ffmann/chaceon, h0ffmann/ww3-gpu, marola-dev/marola-devkit, marola-dev/marola-skills, piabrota/dojo, piabrota/mu, piabrota/room, piabrota/skills
 ai-agents	8	h0ffmann/closed-source, marola-dev/marola-skills, piabrota/agents, piabrota/dojo, piabrota/mu, piabrota/nix-os, piabrota/rax, piabrota/skills
 nix	8	h0ffmann/h0ffmann, h0ffmann/hoffmagic, h0ffmann/picasso, h0ffmann/proof, marola-dev/marola-devkit, piabrota/agents, piabrota/nix-os, piabrota/room
 rust	8	h0ffmann/chaceon, h0ffmann/picasso, h0ffmann/proof, h0ffmann/smart-notes, marola-dev/marola, piabrota/alerts, piabrota/pirsig, piabrota/rax
-agentic-coding	7	h0ffmann/chaceon, marola-dev/marola-devkit, marola-dev/marola-skills, piabrota/dojo, piabrota/mu, piabrota/room, piabrota/skills
 marola	7	marola-dev/marola, marola-dev/marola-app, marola-dev/marola-devkit, marola-dev/marola-ml, marola-dev/marola-oods, marola-dev/marola-site, marola-dev/marola-skills
+agentic-ai	6	h0ffmann/chaceon, h0ffmann/gcp-agentic-architect, h0ffmann/h0ffmann, piabrota/agents, piabrota/pirsig, piabrota/rax
 brazil	6	marola-dev/marola, marola-dev/marola-app, marola-dev/marola-corpus, marola-dev/marola-oods, marola-dev/marola-site, piabrota/alerts
-agentic-ai	5	h0ffmann/gcp-agentic-architect, h0ffmann/h0ffmann, piabrota/agents, piabrota/pirsig, piabrota/rax
+agent-skills	5	h0ffmann/ww3-dia-gpu-v2, marola-dev/marola, marola-dev/marola-skills, piabrota/gramatico, piabrota/skills
+agentic-harness	5	h0ffmann/chaceon, h0ffmann/ww3-dia-gpu-v2, h0ffmann/ww3-gpu, marola-dev/marola, piabrota/nix-os
 developer-tools	5	h0ffmann/picasso, marola-dev/marola-devkit, marola-dev/marola-skills, piabrota/dojo, piabrota/skills
 portuguese	5	h0ffmann/the-garden-of-aflictions, marola-dev/marola-ml, marola-dev/marola-skills, piabrota/gramatico, piabrota/skills
 python	5	h0ffmann/hoffmagic, h0ffmann/montaigne, h0ffmann/proof, h0ffmann/swim-sync, marola-dev/marola-ml
 swimming	5	h0ffmann/swim-sync, marola-dev/marola, marola-dev/marola-app, marola-dev/marola-oods, marola-dev/marola-site
-beaches	4	marola-dev/marola, marola-dev/marola-app, marola-dev/marola-oods, marola-dev/marola-site
 brazilian-portuguese	4	marola-dev/marola-corpus, marola-dev/marola-ml, piabrota/gramatico, piabrota/skills
 cli	4	h0ffmann/montaigne, marola-dev/marola-app, piabrota/mu, piabrota/pirsig
 llm	4	h0ffmann/awesome-neurosymbolic-ai, marola-dev/marola-ml, marola-dev/marola-skills, piabrota/skills
+oceanography	4	h0ffmann/chaceon, h0ffmann/ww3-gpu, marola-dev/awesome-ocean-sciences, marola-dev/marola
+research-software	4	h0ffmann/chaceon, h0ffmann/closed-source, h0ffmann/picasso, h0ffmann/ww3-gpu
 water-quality	4	marola-dev/marola, marola-dev/marola-app, marola-dev/marola-oods, marola-dev/marola-site
 2nd-brain	3	h0ffmann/h0ffmann, piabrota/mu, piabrota/pirsig
-agent-skills	3	marola-dev/marola-skills, piabrota/gramatico, piabrota/skills
 awesome	3	h0ffmann/awesome-neurosymbolic-ai, marola-dev/awesome-ocean-sciences, marola-dev/marola-skills
-bathing-water	3	marola-dev/marola, marola-dev/marola-oods, marola-dev/marola-site
+beaches	3	marola-dev/marola-app, marola-dev/marola-oods, marola-dev/marola-site
 chrome-extension	3	h0ffmann/okekara, h0ffmann/smart-notes, piabrota/gramatico
 citizen-science	3	marola-dev/marola, marola-dev/marola-oods, marola-dev/marola-site
 dev-environment	3	h0ffmann/picasso, marola-dev/marola-devkit, piabrota/dojo
 doi	3	h0ffmann/closed-source, h0ffmann/h0ffmann, h0ffmann/picasso
+gpu	3	h0ffmann/chaceon, h0ffmann/ww3-dia-gpu-v2, h0ffmann/ww3-gpu
 just	3	h0ffmann/picasso, marola-dev/marola-devkit, piabrota/dojo
-kubernetes	3	h0ffmann/hoffmagic, piabrota/agents, piabrota/rax
-llm-agents	3	marola-dev/marola-app, piabrota/agents, piabrota/rax
-machine-learning	3	h0ffmann/awesome-neurosymbolic-ai, h0ffmann/forecast-energy-demand, marola-dev/marola-ml

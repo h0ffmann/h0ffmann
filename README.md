@@ -11,7 +11,7 @@
 **Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
-- [wave.piabrota.art](https://wave.piabrota.art): Science, [>2k views](https://zenodo.org/records/23600920) on Zenodo 
+- [wave.piabrota.art](https://wave.piabrota.art): Science, [>2k views](https://zenodo.org/records/23600920) on Zenodo
 - [room.piabrota.art](https://room.piabrota.art): a 3D room - three.js, 3d model, ambience
 - [metrics.piabrota.art](https://metrics.piabrota.art): homelab numbers - vcpu / ram
 - [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast - wind/temp now, swell later
@@ -36,11 +36,10 @@
 - \[UK\] 2025: [TV](https://www.itv.com) audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA, S3, Lambda and Step Functions.
 - \[UK\] 2026: I redesigned, with DS Lead, all 34 long-term models (2 channels × 17 demographics) as heuristic rules. I took them to production on AWS (SageMaker, MLflow). I resigned on early September 2026.
 
-
 **Research: UFSC, until mid-2027**
 - A team of 5 persons ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
 - I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust may follow, with help from Prof. Pedro Veras (LabECO). The goal: WW3 runs faster on GPUs and gives the same results as the Fortran. Bit-for-bit parity where possible; the physics stays consistent.
-- My works with a DOI: marola ([10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)), ww3-gpu ([10.5281/zenodo.23221351]
+- My works with a DOI: marola ([10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)), ww3-gpu ([10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)), picasso ([10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208)), closed source ([10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656)), marola-bench ([10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633)), nashkell, the open book ([10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739)).
 
 **Misc**
 - AWS: 4 certifications.

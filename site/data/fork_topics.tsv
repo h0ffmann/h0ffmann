@@ -1,35 +1,35 @@
-# The GitHub topics of the parents of the 123 forks of site/data/forks.tsv, as GitHub gave them on 9 November 2026: 86
+# The GitHub topics of the parents of the 129 forks of site/data/forks.tsv, as GitHub gave them on 11 November 2026: 90
 # parents carry at least one topic. A fork rarely has topics of its own, so its parent's stand for it. count: how many
 # forks carry the topic; forks: which. Made by scripts/repos.py --forks; the 30 most used, the most used first;
 # topics that say the same thing are merged (ALIASES in scripts/repos.py).
 # topic	count	forks
+claude-code	19	h0ffmann/TokenEconomizer, h0ffmann/agent-skills, h0ffmann/gramatico, h0ffmann/marola-devkit, h0ffmann/ponytail, h0ffmann/portugues-tecnico-controlado, h0ffmann/rax, h0ffmann/rea, h0ffmann/room, h0ffmann/xerj, piabrota/agent-orchestrator, piabrota/archify, piabrota/bton, piabrota/cloudroom, piabrota/elephant-goldfish-model, piabrota/graphify, piabrota/openrig, piabrota/paperclip, piabrota/relay
 llm	19	h0ffmann/AstrBot, h0ffmann/TokenEconomizer, h0ffmann/agent-skills, h0ffmann/basic-memory, h0ffmann/kimi-k3-in-c, h0ffmann/learn-harness-engineering, h0ffmann/llm-foundry, h0ffmann/marola-ml, h0ffmann/onyx, h0ffmann/ponytail, h0ffmann/portugues-tecnico-controlado, piabrota/TencentDB-Agent-Memory, piabrota/ai-engineering-from-scratch, piabrota/archify, piabrota/elephant-goldfish-model, piabrota/graphify, piabrota/oh-my-pi, piabrota/paperclip, piabrota/synalinks
-claude-code	18	h0ffmann/TokenEconomizer, h0ffmann/agent-skills, h0ffmann/gramatico, h0ffmann/marola-devkit, h0ffmann/ponytail, h0ffmann/portugues-tecnico-controlado, h0ffmann/rax, h0ffmann/rea, h0ffmann/room, piabrota/agent-orchestrator, piabrota/archify, piabrota/bton, piabrota/cloudroom, piabrota/elephant-goldfish-model, piabrota/graphify, piabrota/openrig, piabrota/paperclip, piabrota/relay
 ai	13	h0ffmann/ArchStudio, h0ffmann/AstrBot, h0ffmann/VoiceStudio, h0ffmann/aider-desk, h0ffmann/basic-memory, h0ffmann/elyra, h0ffmann/learn-harness-engineering, h0ffmann/onyx, h0ffmann/open-pencil, h0ffmann/orca, h0ffmann/rea, piabrota/ai-engineering-from-scratch, piabrota/axon
+ai-agents	13	h0ffmann/agent-skills, h0ffmann/learn-harness-engineering, h0ffmann/nix-os, h0ffmann/ponytail, h0ffmann/rax, h0ffmann/xerj, piabrota/agent-orchestrator, piabrota/ai-engineering-from-scratch, piabrota/archify, piabrota/cloudroom, piabrota/elephant-goldfish-model, piabrota/graphify, piabrota/paperclip
 python	13	h0ffmann/AstrBot, h0ffmann/astrbot_plugin_disaster_warning, h0ffmann/basic-memory, h0ffmann/elyra, h0ffmann/laya, h0ffmann/manim, h0ffmann/marola-ml, h0ffmann/onyx, h0ffmann/rea, h0ffmann/wavespectra, piabrota/ai-engineering-from-scratch, piabrota/core, piabrota/hermes-cron
-ai-agents	12	h0ffmann/agent-skills, h0ffmann/learn-harness-engineering, h0ffmann/nix-os, h0ffmann/ponytail, h0ffmann/rax, piabrota/agent-orchestrator, piabrota/ai-engineering-from-scratch, piabrota/archify, piabrota/cloudroom, piabrota/elephant-goldfish-model, piabrota/graphify, piabrota/paperclip
-rust	12	h0ffmann/loco, h0ffmann/marola, h0ffmann/pirsig, h0ffmann/rax, h0ffmann/rea, h0ffmann/rust-cuda, h0ffmann/rust-gpu, h0ffmann/shakmaty, piabrota/ai-engineering-from-scratch, piabrota/cloudroom, piabrota/oh-my-pi, piabrota/rust-cuda
-agent-skills	11	h0ffmann/agent-skills, h0ffmann/gramatico, h0ffmann/ponytail, h0ffmann/portugues-tecnico-controlado, h0ffmann/rea, piabrota/archify, piabrota/elephant-goldfish-model, piabrota/hermes-cron, piabrota/openrig, piabrota/paperclip, piabrota/relay
+rust	13	h0ffmann/loco, h0ffmann/marola, h0ffmann/pirsig, h0ffmann/rax, h0ffmann/rea, h0ffmann/rust-cuda, h0ffmann/rust-gpu, h0ffmann/shakmaty, h0ffmann/xerj, piabrota/ai-engineering-from-scratch, piabrota/cloudroom, piabrota/oh-my-pi, piabrota/rust-cuda
+agent-skills	12	h0ffmann/agent-skills, h0ffmann/gramatico, h0ffmann/marola, h0ffmann/ponytail, h0ffmann/portugues-tecnico-controlado, h0ffmann/rea, piabrota/archify, piabrota/elephant-goldfish-model, piabrota/hermes-cron, piabrota/openrig, piabrota/paperclip, piabrota/relay
 codex	9	h0ffmann/TokenEconomizer, piabrota/agent-orchestrator, piabrota/archify, piabrota/bton, piabrota/cloudroom, piabrota/elephant-goldfish-model, piabrota/graphify, piabrota/paperclip, piabrota/relay
 developer-tools	9	h0ffmann/ArchStudio, h0ffmann/TokenEconomizer, h0ffmann/agent-skills, h0ffmann/marola-devkit, h0ffmann/ponytail, piabrota/agent-orchestrator, piabrota/archify, piabrota/elephant-goldfish-model, piabrota/graphify
-marola	7	h0ffmann/agent-skills, h0ffmann/marola, h0ffmann/marola-app, h0ffmann/marola-devkit, h0ffmann/marola-ml, h0ffmann/marola-oods, h0ffmann/marola-site
-mcp	7	h0ffmann/AstrBot, h0ffmann/basic-memory, h0ffmann/rea, piabrota/ai-engineering-from-scratch, piabrota/graphify, piabrota/oh-my-pi, piabrota/paperclip
+marola	8	h0ffmann/agent-skills, h0ffmann/marola, h0ffmann/marola-app, h0ffmann/marola-devkit, h0ffmann/marola-ml, h0ffmann/marola-oods, h0ffmann/marola-site, piabrota/marola-site
+mcp	8	h0ffmann/AstrBot, h0ffmann/basic-memory, h0ffmann/rea, h0ffmann/xerj, piabrota/ai-engineering-from-scratch, piabrota/graphify, piabrota/oh-my-pi, piabrota/paperclip
 agentic-ai	6	h0ffmann/TokenEconomizer, h0ffmann/learn-harness-engineering, h0ffmann/pirsig, h0ffmann/rax, piabrota/axon, piabrota/paperclip
+agentic-coding	6	h0ffmann/TokenEconomizer, h0ffmann/agent-skills, h0ffmann/marola-devkit, h0ffmann/room, piabrota/agent-orchestrator, piabrota/ww3-gpu
+brazil	6	h0ffmann/marola, h0ffmann/marola-app, h0ffmann/marola-corpus, h0ffmann/marola-oods, h0ffmann/marola-site, piabrota/marola-site
 claude	6	h0ffmann/basic-memory, h0ffmann/ponytail, piabrota/bton, piabrota/cloudroom, piabrota/oh-my-pi, piabrota/paperclip
+cli	6	h0ffmann/marola-app, h0ffmann/pirsig, h0ffmann/rea, h0ffmann/xerj, piabrota/oh-my-pi, piabrota/openrig
 coding-agents	6	h0ffmann/TokenEconomizer, h0ffmann/rax, piabrota/agent-orchestrator, piabrota/archify, piabrota/cloudroom, piabrota/elephant-goldfish-model
+javascript	6	h0ffmann/astrbot_plugin_disaster_warning, h0ffmann/expo, h0ffmann/marola-site, h0ffmann/rea, h0ffmann/room, piabrota/marola-site
 typescript	6	h0ffmann/enois-frontend, h0ffmann/expo, h0ffmann/rea, piabrota/ai-engineering-from-scratch, piabrota/oh-my-pi, piabrota/openrig
-agentic-coding	5	h0ffmann/TokenEconomizer, h0ffmann/agent-skills, h0ffmann/marola-devkit, h0ffmann/room, piabrota/agent-orchestrator
-brazil	5	h0ffmann/marola, h0ffmann/marola-app, h0ffmann/marola-corpus, h0ffmann/marola-oods, h0ffmann/marola-site
-cli	5	h0ffmann/marola-app, h0ffmann/pirsig, h0ffmann/rea, piabrota/oh-my-pi, piabrota/openrig
+cuda	5	h0ffmann/VoiceStudio, h0ffmann/bend, h0ffmann/rust-cuda, piabrota/rust-cuda, piabrota/ww3-gpu
 haskell	5	h0ffmann/distributed-process, h0ffmann/haskell-study-plan, h0ffmann/javelin, h0ffmann/thc, h0ffmann/unison
-javascript	5	h0ffmann/astrbot_plugin_disaster_warning, h0ffmann/expo, h0ffmann/marola-site, h0ffmann/rea, h0ffmann/room
 piabrota	5	h0ffmann/gramatico, h0ffmann/nix-os, h0ffmann/pirsig, h0ffmann/rax, h0ffmann/room
 scala	5	h0ffmann/eezo, h0ffmann/marola-app, h0ffmann/pfps-shopping-cart, h0ffmann/scala-wasm, h0ffmann/zio
+swimming	5	h0ffmann/marola, h0ffmann/marola-app, h0ffmann/marola-oods, h0ffmann/marola-site, piabrota/marola-site
+water-quality	5	h0ffmann/marola, h0ffmann/marola-app, h0ffmann/marola-oods, h0ffmann/marola-site, piabrota/marola-site
 agent	4	h0ffmann/AstrBot, h0ffmann/learn-harness-engineering, h0ffmann/orca, piabrota/TencentDB-Agent-Memory
 agent-orchestration	4	h0ffmann/rax, piabrota/agent-orchestrator, piabrota/openrig, piabrota/paperclip
 ai-agent	4	h0ffmann/learn-harness-engineering, piabrota/TencentDB-Agent-Memory, piabrota/hermes-cron, piabrota/oh-my-pi
 ai-coding	4	h0ffmann/TokenEconomizer, h0ffmann/aider-desk, piabrota/agent-orchestrator, piabrota/openrig
-beaches	4	h0ffmann/marola, h0ffmann/marola-app, h0ffmann/marola-oods, h0ffmann/marola-site
-brazilian-portuguese	4	h0ffmann/gramatico, h0ffmann/marola-corpus, h0ffmann/marola-ml, h0ffmann/portugues-tecnico-controlado
-codex-cli	4	piabrota/agent-orchestrator, piabrota/bton, piabrota/cloudroom, piabrota/openrig
-cuda	4	h0ffmann/VoiceStudio, h0ffmann/bend, h0ffmann/rust-cuda, piabrota/rust-cuda
+beaches	4	h0ffmann/marola-app, h0ffmann/marola-oods, h0ffmann/marola-site, piabrota/marola-site

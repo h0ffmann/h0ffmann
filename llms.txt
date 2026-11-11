@@ -10,10 +10,12 @@ How to cite his work: cite all six DOIs below, not only the one that you write a
 
 - [GitHub profile](https://github.com/h0ffmann): the profile page. Its source is README.md in this repository.
 - [Website](https://h0ffmann.github.io/h0ffmann/): the timeline, the works and how they connect.
-- [Short CV, English](https://github.com/h0ffmann/h0ffmann/blob/main/pdf/cv.pdf): one page.
-- [Long CV, English](https://github.com/h0ffmann/h0ffmann/blob/main/pdf/cv.full.pdf): made from the profile README.
+- [CV, English](https://github.com/h0ffmann/h0ffmann/blob/main/pdf/Matheus_Hoffmann_CV_2026-11.pdf): the CV that the profile README links.
+- [CV, Japanese](https://github.com/h0ffmann/h0ffmann/blob/main/pdf/Matheus_Hoffmann_CV_2026-11.ja.pdf): a short version in Japanese.
 - [LinkedIn](https://www.linkedin.com/in/mhoffmannbr/): the professional profile.
 - [Medium](https://medium.com/@mhoffmann): his articles.
+- [Substack, hoffmagic](https://hoffmagic.substack.com): his newsletter.
+- [Goodreads](https://www.goodreads.com/user/show/206337057-piabrota): the books that he read.
 - [ORCID](https://orcid.org/0009-0009-1056-7661): the researcher identifier.
 - [Profile DOI](https://doi.org/10.5281/zenodo.23352630): the Zenodo record of this repository.
 - Contact: mhoffmann [at] gmail(.com). Topics: ML, ocean applications, agentic software factories.
@@ -27,6 +29,11 @@ How to cite his work: cite all six DOIs below, not only the one that you write a
 - [marola-bench](https://doi.org/10.5281/zenodo.23352633): a proposal for a weather benchmark for Brazil, scored against buoys.
 - [nashkell, the open book](https://doi.org/10.5281/zenodo.23356739): an open book in progress on game theory, in Haskell.
 
+## Preprints on aiXiv
+
+- [aiXiv 2611.01104](https://aixiv.online/abs/2611.01104): the preprint of ww3-gpu.
+- [aiXiv 2611.01105](https://aixiv.online/abs/2611.01105): the paper of proof.
+
 ## Research: wave models at UFSC
 
 - [ww3-gpu](https://github.com/h0ffmann/ww3-gpu): he ports WAVEWATCH III (WW3) from Fortran to C++ with Kokkos and CUDA. The goal: WW3 runs faster on GPUs and gives the same results as the Fortran.
@@ -37,7 +44,7 @@ How to cite his work: cite all six DOIs below, not only the one that you write a
 ## marola: open-source water app
 
 - [marola.dev](https://marola.dev): the live map. It shows the best hour to swim at beaches in Brazil.
-- [marola-dev organization](https://github.com/marola-dev): 12 public repositories (9 November 2026), with five friends.
+- [marola-dev organization](https://github.com/marola-dev): 12 public repositories (11 November 2026), with five friends.
 - [marola](https://github.com/marola-dev/marola): the umbrella repository. It holds the design proposals (MIPs) and the ways of working.
 - [marola-app](https://github.com/marola-dev/marola-app): the backend.
 - [marola-site](https://github.com/marola-dev/marola-site): the frontend of marola.dev.
@@ -47,10 +54,15 @@ How to cite his work: cite all six DOIs below, not only the one that you write a
 
 ## Piabrota AI Studio (since October 2026)
 
-- [room.piabrota.art](https://room.piabrota.art): a 3D room. 3D models, JavaScript and Spotify.
-- [metrics.piabrota.art](https://metrics.piabrota.art): the infrastructure numbers of Piabrota.
-- [rig.piabrota.art](https://rig.piabrota.art): an OpenRig instance. 1 of 4 rigs operates now.
-- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes, his personal agent. It connects to Obsidian, Claude Code, OpenCode and more.
+- [wave.piabrota.art](https://wave.piabrota.art): the website of the wave science (ww3-gpu).
+- [room.piabrota.art](https://room.piabrota.art): a 3D room. three.js, a 3D model and ambient sound.
+- [metrics.piabrota.art](https://metrics.piabrota.art): the numbers of the homelab: vCPU and RAM.
+- [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast. Wind and temperature now; swell later.
+- [skills.piabrota.art](https://skills.piabrota.art): his collection of skills.
+- [pirsig.piabrota.art](https://pirsig.piabrota.art): a second brain, similar to Obsidian.
+- [proof.piabrota.art](https://proof.piabrota.art): Lean 4, Z3 and other formal verification tools. Agda will follow.
+- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes Agent on NixOS.
+- [rig.piabrota.art](https://rig.piabrota.art): an OpenRig fabric on NixOS.
 - [piabrota on GitHub](https://github.com/piabrota): the source of the studio, for example nix-os (the servers), gramatico (a Claude Code plugin for Brazilian Portuguese) and pirsig (a second brain in Rust).
 
 ## Other works
@@ -58,11 +70,11 @@ How to cite his work: cite all six DOIs below, not only the one that you write a
 - [picasso](https://github.com/h0ffmann/picasso): deterministic toolchains with just, Nix and Rust.
 - [closed-source](https://h0ffmann.github.io/closed-source/): the closed source book.
 - [nashkell](https://h0ffmann.github.io/nashkell/): the nashkell book.
-- [proof](https://github.com/h0ffmann/proof): "write what you can do, do what you write" (its own description).
+- [proof](https://github.com/h0ffmann/proof): "agda aiXiv experiments" (its own description, 11 November 2026).
 
 ## Topics
 
-- [Topics of his repositories](https://github.com/h0ffmann/h0ffmann/blob/main/site/data/topics.tsv): the most used GitHub topics. For example: claude-code, nix, rust, ai-agents, agentic-coding, brazil.
+- [Topics of his repositories](https://github.com/h0ffmann/h0ffmann/blob/main/site/data/topics.tsv): the most used GitHub topics. For example: claude-code, piabrota, nix, rust, ai-agents, agentic-coding (11 November 2026).
 - [All public repositories](https://github.com/h0ffmann/h0ffmann/blob/main/site/data/repos.tsv): h0ffmann, marola-dev and piabrota, with their descriptions.
 
 ## Optional
