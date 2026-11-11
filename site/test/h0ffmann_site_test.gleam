@@ -75,8 +75,12 @@ pub fn read_is_goodreads_and_the_song_plays_test() {
   assert content.song != ""
   assert string.contains(
     html,
-    "https://open.spotify.com/embed/track/" <> content.song,
+    "https://open.spotify.com/embed/" <> content.song,
   )
+  assert string.starts_with(content.song, "album/")
+  assert string.contains(html, "id=\"hear\"")
+  assert string.starts_with(content.lyrics, "https://genius.com/")
+  assert !string.contains(html, ">a song<")
 }
 
 pub fn have_fun_is_the_diver_and_the_swims_test() {

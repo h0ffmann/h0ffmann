@@ -102,6 +102,7 @@ main .cards:last-child { padding-bottom: 80px; }
 
 .shelf { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 12px; }
 .song { display: block; width: 100%; max-width: 640px; border: 0; border-radius: 12px; }
+.lyrics { margin-top: 12px; }
 .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; font: 400 14px/1.6 var(--mono); }
 
 .pills { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; }

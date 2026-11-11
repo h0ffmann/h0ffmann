@@ -585,18 +585,15 @@ pub const me = "
     )
     <> "
 
-/// The Spotify id of the song the site plays (site/data/music.tsv); empty when there is none.
+/// What the site plays, as Spotify's embed path (`album/<id>` or `track/<id>`, site/data/music.tsv);
+/// empty when there is none.
 pub const song = "
-    <> lit(
-      rows(read("../data/music.tsv"))
-      |> list.find_map(fn(r) {
-        case r {
-          [track, _source] -> Ok(track)
-          _ -> Error(Nil)
-        }
-      })
-      |> result.unwrap(""),
-    )
+    <> lit(music_cell(0))
+    <> "
+
+/// Where the lyrics of what the site plays are (site/data/music.tsv).
+pub const lyrics = "
+    <> lit(music_cell(1))
     <> "
 
 /// The \"have fun\" part of the page (site/data/fun.tsv): #(what, count).
@@ -717,4 +714,19 @@ pub const forks = "
 "
   write(out, text)
   io.println("profile_content: wrote site/src/h0ffmann_site/content.gleam")
+}
+
+fn music_cell(i: Int) -> String {
+  rows(read("../data/music.tsv"))
+  |> list.find_map(fn(r) {
+    case r {
+      [embed, lyrics, _source] ->
+        case i {
+          0 -> Ok(embed)
+          _ -> Ok(lyrics)
+        }
+      _ -> Error(Nil)
+    }
+  })
+  |> result.unwrap("")
 }
