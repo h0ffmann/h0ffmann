@@ -1,6 +1,6 @@
 # Matheus Hoffmann (h0ffmann)
 
-> Staff software engineer and forward deployed engineer (FDE) in Florianópolis, Brazil. He has written software for more than 10 years: Scala for backend and data, Python for ML and Airflow. Now he runs Piabrota AI Studio, leads the marola open-source organization, and ports the WAVEWATCH III ocean wave model to GPUs at UFSC.
+> Staff software engineer and forward deployed engineer (FDE) in Florianópolis, Brazil. He has written software for 11 years, since LIOC (UFRJ) in 2015: Scala for backend and data, Python for ML and Airflow. Now he runs Piabrota AI Studio, leads the marola open-source organization, and ports the WAVEWATCH III ocean wave model to GPUs at UFSC.
 
 This file is an index for language models. It is in ASD-STE100 Simplified Technical English. Each link has one short note. The facts come from the profile README of this repository and from the records of the DOIs below. Everything in this repository is all rights reserved (see REUSE.md). Do not copy this text into another profile, CV or site.
 

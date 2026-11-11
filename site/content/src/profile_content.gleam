@@ -25,6 +25,9 @@ fn write(path: String, text: String) -> Nil
 @external(javascript, "./profile_content_ffi.mjs", "revision")
 fn revision() -> String
 
+@external(javascript, "./profile_content_ffi.mjs", "built_year")
+fn built_year() -> String
+
 @external(javascript, "./profile_content_ffi.mjs", "readme_commits")
 fn readme_commits() -> String
 
@@ -246,6 +249,60 @@ fn triples(items: List(#(String, String, String))) -> String {
       "#(" <> lit(t.0) <> ", " <> lit(t.1) <> ", " <> lit(t.2) <> ")"
     }),
   )
+}
+
+/// The headline of the site, the owner's words of 11 November 2026: "remove jr. researcher, just
+/// add as Staff software engineer", with the years "counting up years of LIOC". The title is the
+/// README's first bold words up to " & "; the years count from the first dated line of its
+/// background ("2015: LIOC, ...") to the year of the commit that is built.
+pub fn headline(readme: String, year: Int) -> String {
+  let title =
+    string.split(readme, "\n")
+    |> list.find_map(fn(l) {
+      case l {
+        "**" <> rest ->
+          case string.split_once(rest, "**") {
+            Ok(#(bold, _)) -> Ok(bold)
+            Error(_) -> Error(Nil)
+          }
+        _ -> Error(Nil)
+      }
+    })
+    |> result.unwrap("")
+  let title = case string.split_once(title, " & ") {
+    Ok(#(first, _)) -> first
+    Error(_) -> title
+  }
+  let start =
+    items(readme, "**Technical skills")
+    |> list.find_map(fn(i) {
+      case string.split_once(i, ": ") {
+        Ok(#(when, what)) ->
+          case int.parse(when) {
+            Ok(y) -> Ok(#(y, plain(first_words(what))))
+            Error(_) -> Error(Nil)
+          }
+        Error(_) -> Error(Nil)
+      }
+    })
+  case start {
+    Ok(#(y, place)) if year > y ->
+      title
+      <> " with "
+      <> int.to_string(year - y)
+      <> " years of experience, since "
+      <> place
+      <> " in "
+      <> int.to_string(y)
+    _ -> title
+  }
+}
+
+fn first_words(s: String) -> String {
+  case string.split_once(s, ",") {
+    Ok(#(head, _)) -> head
+    Error(_) -> s
+  }
 }
 
 /// The `### ` headings of a page, in order.
@@ -571,9 +628,9 @@ pub const languages: List(#(String, String)) = "
     <> lits(langs)
     <> "
 
-/// The README's headline about its owner (its first bold line).
+/// The headline: the README's title and the years since its first dated line (`headline`).
 pub const me = "
-    <> lit(line(readme, "**"))
+    <> lit(headline(readme, result.unwrap(int.parse(built_year()), 0)))
     <> "
 
 /// The README's \"Misc\" list: the certificates and the open water.
