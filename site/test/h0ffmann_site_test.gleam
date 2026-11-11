@@ -20,7 +20,16 @@ pub fn the_page_says_who_he_is_in_the_readmes_words_test() {
   assert content.me != ""
   assert string.contains(html, "the aquatic prometheus")
   assert string.contains(html, "the art of the maintenance of apps")
-  assert string.contains(html, string.replace(content.me, "&", "&amp;"))
+  assert string.contains(
+    html,
+    content.me |> string.replace("&", "&amp;") |> string.replace("'", "&#39;"),
+  )
+  assert string.starts_with(content.me, "staff software engineer")
+  assert !string.contains(content.me, "jr. researcher")
+  assert string.contains(
+    content.me,
+    "wave modelling, game theory and self-improving apps",
+  )
 }
 
 pub fn the_readmes_studio_research_and_badges_are_on_the_page_test() {

@@ -858,7 +858,6 @@ fn now_section() -> Element(msg) {
       "now",
       external(content.repo <> "/blob/main/llms.txt", "llms.txt"),
     ),
-    html.p([attribute.class("prose")], [tx(content.me)]),
     html.h3([], [tx(content.studio_title)]),
     html.ul(
       [attribute.class("friends")],
