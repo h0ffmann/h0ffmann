@@ -1,20 +1,14 @@
-//// The page of Matheus Hoffmann. Every fact (the sentence about him, the timeline, the works
-//// and their ties, the README's history) comes from `content.gleam`, which site/content writes
-//// from README.md, me/ and site/data/. The sentences that tell the story are written here.
+//// The page of Matheus Hoffmann: one short page, in piabrota's colours (the owner, 11 November
+//// 2026: "minimal like https://exitnode.dev/ but with piabrota colors"; DESIGN.md). Every fact
+//// comes from `content.gleam`, which site/content writes from README.md and site/data/.
 
-import gleam/float
-import gleam/int
 import gleam/list
 import gleam/string
-import h0ffmann_site/content.{
-  type Edge, type Event, type Fork, type Friend, type Repo, type Snapshot,
-  type Work,
-}
+import h0ffmann_site/content.{type Work}
 import lustre/attribute.{type Attribute}
 import lustre/effect.{type Effect}
 import lustre/element.{type Element}
 import lustre/element/html
-import lustre/element/svg
 import lustre/event
 
 /// The language of the page, kept outside the model as well, so that every sentence can ask for
@@ -47,148 +41,57 @@ fn tx(source: String) -> Element(msg) {
   html.text(t(source))
 }
 
-/// The topic of the knowledge graph that is lit; "" lights every work.
 pub type Model {
-  Model(topic: String, lang: String)
+  Model(lang: String)
 }
 
 pub type Msg {
-  Light(String)
   /// The reader chose a language.
   Speak(String)
 }
 
 pub fn initial() -> Model {
-  Model(topic: "", lang: language())
+  Model(lang: language())
 }
 
 pub fn init(_: Nil) -> #(Model, Effect(Msg)) {
-  #(initial(), effect.from(fn(_) { watch(arc_frame) }))
+  #(initial(), effect.none())
 }
 
-/// The arc runs sideways while the reader scrolls down, as a pinned chapter of a data story
-/// does: the section is as tall as the timeline is wide, its stage stays on the screen, and how
-/// far the reader is through the section moves the timeline. arc_ffi.mjs only reads the page and
-/// writes what is decided here. With no JavaScript, or with reduced motion, the arc stays a list.
-@external(javascript, "./arc_ffi.mjs", "watch")
-fn watch(frame: fn(Float, Float, Float, Float, Float, Float) -> Nil) -> Nil
-
-@external(javascript, "./arc_ffi.mjs", "place")
-fn place(length: Float, x: Float, now: Int, era: String) -> Nil
-
-/// How far the reader is through the arc, from 0 to 1: the share of the section's extra height
-/// that has scrolled past the top of the screen.
-pub fn progress(top: Float, height: Float, viewport: Float) -> Float {
-  let run = height -. viewport
-  case run <=. 0.0 {
-    True -> 0.0
-    False -> float.clamp(0.0 -. top /. run, min: 0.0, max: 1.0)
-  }
-}
-
-/// The mark at the reader's place in the arc, and its era. Every mark is `step` wide, and the
-/// place crosses the stage from its left edge to its right one, so the first mark is the place at
-/// the start and the last one at the end.
-pub fn mark_at(p: Float, track: Float, step: Float) -> #(Int, String) {
-  let now = case step <=. 0.0 {
-    True -> 0
-    False ->
-      float.truncate(p *. track /. step)
-      |> int.clamp(min: 0, max: list.length(content.timeline) - 1)
-  }
-  case list.drop(content.timeline, now) {
-    [e, ..] -> #(now, e.era)
-    [] -> #(0, "")
-  }
-}
-
-/// One frame: the section is one screen plus the timeline's extra width, so a pixel down is a
-/// pixel sideways.
-fn arc_frame(
-  top: Float,
-  height: Float,
-  viewport: Float,
-  stage: Float,
-  track: Float,
-  step: Float,
-) -> Nil {
-  let travel = float.max(track -. stage, 0.0)
-  let p = progress(top, height, viewport)
-  let #(now, era) = mark_at(p, track, step)
-  place(viewport +. travel, 0.0 -. p *. travel, now, era)
-}
-
-pub fn update(model: Model, msg: Msg) -> #(Model, Effect(Msg)) {
+pub fn update(_model: Model, msg: Msg) -> #(Model, Effect(Msg)) {
   case msg {
-    // A second press on the lit topic lights every work again.
-    Light(topic) if topic == model.topic -> #(
-      Model(..model, topic: ""),
-      effect.none(),
-    )
-    Light(topic) -> #(Model(..model, topic:), effect.none())
-    Speak(lang) -> #(Model(..model, lang: speak(lang)), effect.none())
+    Speak(lang) -> #(Model(lang: speak(lang)), effect.none())
   }
-}
-
-/// The four colours of the page, as the owner set them: water is blue, ideas are green,
-/// Ouroboric is orange and closed source is red. The key of each is the `topic` of site/data.
-pub const topics = [
-  #("water", "the sea"),
-  #("ideas", "ideas"),
-  #("ouroboric", "ouroboric"),
-  #("closed", "closed source"),
-]
-
-/// The arc, in the owner's words: the eras of site/data/timeline.tsv and the name of each.
-pub const eras = [
-  #("athlete", "a kid athlete"),
-  #("school", "the technical school"),
-  #("university", "the university"),
-  #("backend", "backend"),
-  #("mlops", "MLOps"),
-  #("ml", "ML"),
-  #("journey", "a journey"),
-  #("sea", "back to the sea"),
-  #("research", "research & FOSS"),
-  #("prophecy", "a prophecy"),
-]
-
-fn link(href: String, label: String) -> Element(msg) {
-  html.a([attribute.href(href)], [tx(label)])
 }
 
 fn external(href: String, label: String) -> Element(msg) {
   html.a([attribute.href(href), attribute.rel("noopener")], [tx(label)])
 }
 
-fn head(id: String, title: String, aside: Element(msg)) -> Element(msg) {
-  html.div([attribute.class("head")], [
-    html.h2([attribute.id(id)], [tx(title)]),
-    aside,
-  ])
-}
-
 fn a(name: String, value: String) -> Attribute(msg) {
   attribute.attribute(name, value)
 }
 
+fn button(href: String, label: String, class: String) -> Element(msg) {
+  html.a(
+    [
+      attribute.class("button " <> class),
+      attribute.href(href),
+      attribute.rel("noopener"),
+    ],
+    [tx(label)],
+  )
+}
+
 pub fn view(model: Model) -> Element(Msg) {
   html.div([], [
-    cover(model),
+    top(model),
     html.main([attribute.class("wrap")], [
-      now_section(),
-      arc_section(),
-      graph_section(model),
-      index_section(model),
-      forks_section(),
-      numbers_section(),
-      topics_section(),
+      cards(),
+      works_section(),
       reading_section(),
-      stars_section(),
-      history_section(),
-      friends_section(),
-      ways_section(),
-      notice_section(),
+      song_section(),
+      links_section(),
     ]),
     footer(),
   ])
@@ -196,12 +99,12 @@ pub fn view(model: Model) -> Element(Msg) {
 
 /// The two languages of the page. Each button names its language in that language.
 fn tongues(model: Model) -> Element(Msg) {
-  let button = fn(lang: String, name: String) {
+  let choice = fn(lang: String, name: String) {
     html.button(
       [
         attribute.class("tongue"),
-        attribute.attribute("lang", lang),
-        attribute.attribute("aria-pressed", case model.lang == lang {
+        a("lang", lang),
+        a("aria-pressed", case model.lang == lang {
           True -> "true"
           False -> "false"
         }),
@@ -210,30 +113,31 @@ fn tongues(model: Model) -> Element(Msg) {
       [html.text(name)],
     )
   }
-  html.div(
-    [attribute.class("tongues"), attribute.attribute("aria-label", "language")],
-    [button("en", "english"), button("pt-BR", "português")],
-  )
+  html.div([attribute.class("tongues"), a("aria-label", "language")], [
+    choice("en", "english"),
+    choice("pt-BR", "português"),
+  ])
 }
 
-fn cover(model: Model) -> Element(Msg) {
-  html.header([attribute.class("cover")], [
-    html.div([attribute.class("wrap cover-grid")], [
+fn top(model: Model) -> Element(Msg) {
+  html.header([attribute.class("top")], [
+    html.div([attribute.class("wrap bar")], [
+      html.a([attribute.class("brand"), attribute.href("#")], [
+        html.text("h0ffmann"),
+      ]),
+      html.nav([attribute.class("nav")], [
+        html.a([attribute.href("#now")], [tx("now")]),
+        html.a([attribute.href("#works")], [tx("works")]),
+        html.a([attribute.href("#reading")], [tx("reading")]),
+        tongues(model),
+      ]),
+    ]),
+    html.div([attribute.class("wrap hero")], [
       html.div([], [
-        html.p([attribute.class("imprint")], [
+        html.p([attribute.class("eyebrow")], [
           tx("matheus hoffmann / rio de janeiro"),
         ]),
-        tongues(model),
         html.h1([], [tx("h0ffmann")]),
-        html.p([attribute.class("epithet")], [
-          tx("the aquatic prometheus"),
-        ]),
-        // The owner's sentence, 14 October 2026, in the light of Ouroboric (DESIGN.md, rule 3).
-        html.p([attribute.class("ouro-line")], [
-          tx(
-            "i'm always reverse engineering my own interests. that is what makes me ouroboric.",
-          ),
-        ]),
         html.p([attribute.class("motto")], [
           tx("the art of the maintenance of apps"),
         ]),
@@ -241,42 +145,22 @@ fn cover(model: Model) -> Element(Msg) {
         html.p(
           [attribute.class("actions")],
           list.flatten([
-            [
-              html.a([attribute.class("button"), attribute.href("#graph")], [
-                tx("see the works"),
-              ]),
-              html.a(
-                [
-                  attribute.class("button quiet"),
-                  attribute.href(content.repo),
-                  attribute.rel("noopener"),
-                ],
-                [tx("the readme on GitHub")],
-              ),
-            ],
             // The CVs the README links (its first line).
             list.map(content.cvs, fn(cv) {
-              html.a(
-                [
-                  attribute.class("button quiet"),
-                  attribute.href(content.repo <> "/blob/main/" <> cv.1),
-                  attribute.rel("noopener"),
-                ],
-                [tx("cv, " <> cv.0)],
+              button(
+                content.repo <> "/blob/main/" <> cv.1,
+                "cv, " <> cv.0,
+                "primary",
               )
             }),
             [
               // The research CV for the ocean, in English (the owner, 14 October 2026).
-              html.a(
-                [
-                  attribute.class("button quiet"),
-                  attribute.href(
-                    content.repo <> "/blob/main/pdf/cv.en.OCEAN.pdf",
-                  ),
-                  attribute.rel("noopener"),
-                ],
-                [tx("cv-water (PDF)")],
+              button(
+                content.repo <> "/blob/main/pdf/cv.en.OCEAN.pdf",
+                "cv-water (PDF)",
+                "quiet",
               ),
+              button(content.repo, "the readme on GitHub", "quiet"),
             ],
           ]),
         ),
@@ -286,164 +170,41 @@ fn cover(model: Model) -> Element(Msg) {
         [],
       ),
     ]),
-    html.nav([attribute.class("jump wrap")], [
-      link("#now", "now"),
-      link("#arc", "the arc"),
-      link("#graph", "the works"),
-      link("#index", "everything"),
-      link("#forks", "forks"),
-      link("#numbers", "numbers"),
-      link("#topics", "topics"),
-      link("#reading", "reading"),
-      link("#stars", "stars"),
-      link("#history", "the readme"),
-      link("#friends", "friends"),
-      link("#ways", "how i work"),
-      link("#notice", "not a template"),
-    ]),
   ])
 }
 
-fn era_name(key: String) -> String {
-  case list.key_find(eras, key) {
-    Ok(name) -> name
-    Error(_) -> key
-  }
-}
-
-fn event_item(e: Event) -> Element(msg) {
-  let mark = case e.mark, e.glyph, e.logo {
-    // A glyph is a number or a word in its own script: the medal, the kanji, the question.
-    "big", glyph, _ ->
-      html.span([attribute.class("medal"), a("aria-hidden", "true")], [
-        tx(glyph),
-      ])
-    _, glyph, _ if glyph != "" ->
-      html.span([attribute.class("glyph"), a("aria-hidden", "true")], [
-        tx(glyph),
-      ])
-    _, _, "" ->
-      html.span([attribute.class("dot"), a("aria-hidden", "true")], [])
-    _, _, logo ->
-      html.span([attribute.class("logo")], [
-        html.img([
-          attribute.src(logo),
-          attribute.alt(e.title <> " logo"),
-          attribute.height(28),
-          a("loading", "lazy"),
-          // A logo that is gone leaves its place empty; the name is beside it.
-          a("onerror", "this.style.display='none'"),
-        ]),
-      ])
-  }
-  let title = case e.href {
-    "" -> tx(e.title)
-    href -> external(href, e.title)
-  }
-  html.li([attribute.class("event is-" <> e.mark <> " era-" <> e.era)], [
-    html.span([attribute.class("when")], [tx(e.when)]),
-    mark,
-    html.div([attribute.class("what")], [
-      html.h3([], [title]),
-      html.p([], [tx(e.text)]),
-      html.span([attribute.class("era")], [tx(era_name(e.era))]),
-    ]),
-  ])
-}
-
-/// The arc as one line: the last era is a look ahead, so it is not in it.
-fn era_line() -> List(#(String, String)) {
-  list.filter(eras, fn(e) { e.0 != "prophecy" })
-}
-
-fn arc_section() -> Element(msg) {
-  html.section([], [
-    head(
-      "arc",
-      "the arc",
-      external(
-        content.repo <> "/blob/main/site/data/timeline.tsv",
-        "each line, with its source",
-      ),
-    ),
-    html.p([attribute.class("prose")], [
-      tx(
-        "a boy who swam for medals went to the university in rio, wrote the code behind payments, learned to keep machine-learning systems alive, and then went back to the sea. the title of the trade changed four times. the work did not: keep a thing running, and leave it better than it was found.",
-      ),
-    ]),
-    html.div([attribute.class("arc-scroll")], [
-      html.div([attribute.class("arc-stage")], [
-        html.ol(
-          [attribute.class("eras")],
-          list.map(era_line(), fn(e) {
-            html.li([a("data-era", e.0)], [tx(e.1)])
+/// What he does now, in the README's words: two cards, the studio and the research.
+fn cards() -> Element(msg) {
+  html.section([attribute.class("cards"), attribute.id("now")], [
+    html.p([attribute.class("label")], [tx("now")]),
+    html.div([attribute.class("grid")], [
+      html.article([attribute.class("card")], [
+        html.h2([], [tx(content.studio_title)]),
+        html.ul(
+          [attribute.class("sites")],
+          list.map(content.studio, fn(item) {
+            let #(name, href, text) = item
+            case href {
+              "" -> html.li([], [html.span([], [tx(text)])])
+              _ ->
+                html.li([], [external(href, name), html.span([], [tx(text)])])
+            }
           }),
         ),
-        html.ol(
-          [attribute.class("timeline")],
-          list.map(content.timeline, event_item),
-        ),
+      ]),
+      html.article([attribute.class("card")], [
+        html.h2([], [tx(content.research_title)]),
+        // The README's line of DOIs is the list of works below, with each DOI as a link.
+        ..list.filter(content.research, fn(r) {
+          !string.starts_with(r, "My works with a DOI")
+        })
+        |> list.map(fn(r) { html.p([], [tx(r)]) })
       ]),
     ]),
   ])
 }
 
-fn find(id: String) -> Result(Work, Nil) {
-  list.find(content.works, fn(w: Work) { w.id == id })
-}
-
-fn lit(model: Model, topic: String) -> Bool {
-  model.topic == "" || model.topic == topic
-}
-
-fn edge_shape(model: Model, e: Edge) -> Element(msg) {
-  case find(e.from), find(e.to) {
-    Ok(from), Ok(to) -> {
-      let mx = { from.x + to.x } / 2
-      let my = { from.y + to.y } / 2
-      let on = lit(model, from.topic) || lit(model, to.topic)
-      svg.g(
-        [
-          attribute.class(case on {
-            True -> "edge"
-            False -> "edge is-dim"
-          }),
-        ],
-        [
-          svg.path([
-            a(
-              "d",
-              "M"
-                <> int.to_string(from.x)
-                <> " "
-                <> int.to_string(from.y)
-                <> " L"
-                <> int.to_string(mx)
-                <> " "
-                <> int.to_string(my)
-                <> " L"
-                <> int.to_string(to.x)
-                <> " "
-                <> int.to_string(to.y),
-            ),
-            a("marker-mid", "url(#arrow)"),
-          ]),
-          svg.text(
-            [
-              a("x", int.to_string(mx)),
-              a("y", int.to_string(my - 9)),
-              a("text-anchor", "middle"),
-            ],
-            e.relation,
-          ),
-        ],
-      )
-    }
-    _, _ -> element.none()
-  }
-}
-
-/// A book has a star before its name, on the graph and in the list (site/data/works.tsv, `form`).
+/// A book has a star before its name (site/data/works.tsv, `form`).
 pub fn starred(w: Work) -> String {
   case w.book {
     True -> "★ " <> w.name
@@ -451,443 +212,22 @@ pub fn starred(w: Work) -> String {
   }
 }
 
-/// The second line of a node: its DOI, or why it has none.
-pub fn standing(w: Work) -> String {
-  case w.doi, w.licence {
-    "", "private" -> "private"
-    "", _ -> "no DOI yet"
-    doi, _ -> "doi " <> string.replace(doi, "10.5281/", "")
-  }
-}
-
-/// 無 (mu, "nothing"), in kanji at the centre of the graph: the owner's word, 14 October 2026.
-/// Orange, and tied to no work (the owner, 15 October 2026).
-pub const mu = "無"
-
-// The centre of the 1000 by 620 canvas, 15 px left and 10 px up, clear of the label of the tie
-// closed source -> picasso.
-const mu_x = 485
-
-const mu_y = 300
-
-fn mu_mark() -> Element(msg) {
-  svg.g([attribute.class("mu")], [
-    svg.title([], [
-      html.text(t("無 (mu): nothing.")),
-    ]),
-    svg.rect([
-      a("x", int.to_string(mu_x - 32)),
-      a("y", int.to_string(mu_y - 28)),
-      a("width", "64"),
-      a("height", "56"),
-      a("rx", "12"),
-    ]),
-    svg.text(
-      [
-        a("x", int.to_string(mu_x)),
-        a("y", int.to_string(mu_y + 11)),
-        a("text-anchor", "middle"),
-      ],
-      mu,
-    ),
-  ])
-}
-
-fn node_shape(model: Model, w: Work) -> Element(msg) {
-  let class =
-    "node topic-"
-    <> w.topic
-    <> " kind-"
-    <> w.kind
-    <> case lit(model, w.topic) {
-      True -> ""
-      False -> " is-dim"
-    }
-  let box = [
-    svg.rect([
-      a("x", int.to_string(w.x - 92)),
-      a("y", int.to_string(w.y - 34)),
-      a("width", "184"),
-      a("height", "68"),
-      a("rx", "34"),
-    ]),
-    svg.text(
-      [
-        attribute.class("name"),
-        a("x", int.to_string(w.x)),
-        a("y", int.to_string(w.y - 3)),
-        a("text-anchor", "middle"),
-      ],
-      starred(w),
-    ),
-    svg.text(
-      [
-        attribute.class("standing"),
-        a("x", int.to_string(w.x)),
-        a("y", int.to_string(w.y + 17)),
-        a("text-anchor", "middle"),
-      ],
-      standing(w),
-    ),
-  ]
-  case w.href {
-    "" -> svg.g([attribute.class(class)], box)
-    href ->
-      svg.a(
-        [attribute.class(class), attribute.href(href), a("rel", "noopener")],
-        box,
-      )
-  }
-}
-
-fn work_item(w: Work) -> Element(msg) {
-  let name = case w.href {
-    "" -> tx(starred(w))
-    href -> external(href, starred(w))
-  }
-  html.li([attribute.class("topic-" <> w.topic)], [
-    html.h3([], [name]),
-    html.p([], [tx(w.text)]),
-    html.p([attribute.class("facts")], [
-      case w.doi {
-        "" -> tx(standing(w))
-        doi -> external("https://doi.org/" <> doi, "doi " <> doi)
-      },
-      tx(" / licence: " <> w.licence),
-    ]),
-  ])
-}
-
-fn pressed(on: Bool) -> Attribute(msg) {
-  a("aria-pressed", case on {
-    True -> "true"
-    False -> "false"
-  })
-}
-
-/// One area of research, as the README names it: its light, what it asks, and where it lives.
-pub type Question {
-  Question(
-    topic: String,
-    name: String,
-    asks: String,
-    href: String,
-    where: String,
-  )
-}
-
-/// The three areas of research of the README's first sentence.
-pub const questions = [
-  Question(
-    "water",
-    "wave modelling",
-    "how the sea moves, and what it will do tomorrow at one beach.",
-    "https://github.com/marola-dev",
-    "github.com/marola-dev",
-  ),
-  Question(
-    "ideas",
-    "game theory",
-    "how people and programs choose, when each one watches the other.",
-    "https://github.com/h0ffmann/nashkell",
-    "github.com/h0ffmann/nashkell",
-  ),
-  Question(
-    "ouroboric",
-    "self-improving apps",
-    "how an app can mend itself, and write down how it did. this is Ouroboric, with bruno valério.",
-    "https://github.com/ouroboric-dev",
-    "github.com/ouroboric-dev",
-  ),
-]
-
-fn question_item(q: Question) -> Element(msg) {
-  html.li([attribute.class("topic-" <> q.topic)], [
-    html.h3([], [tx(q.name)]),
-    html.p([], [tx(q.asks)]),
-    external(q.href, q.where),
-  ])
-}
-
-fn graph_section(model: Model) -> Element(Msg) {
-  let dois = list.count(content.works, fn(w: Work) { w.doi != "" })
-  html.section([], [
-    head(
-      "graph",
-      "the works, and how they hold each other",
-      external(
-        content.repo <> "/blob/main/site/data/edges.tsv",
-        "each tie, with its source",
-      ),
-    ),
-    html.p([attribute.class("prose")], [
-      tx(
-        "three questions run through all of it: how the sea moves (wave modelling), how people and programs choose (game theory), and how an app can mend itself (self-improving apps). "
-        <> int.to_string(list.length(content.works))
-        <> " works, "
-        <> int.to_string(dois)
-        <> " of them with a permanent DOI. an arrow is a tie that an index or a file states: this work cites, or needs, that one. the colours are the same on the whole page: blue is the sea, green is an idea, orange is Ouroboric, red is closed source. press a colour to light its works.",
-      ),
-    ]),
-    html.ul([attribute.class("questions")], list.map(questions, question_item)),
-    html.div(
-      [attribute.class("filters")],
-      list.map(topics, fn(t) {
-        html.button(
-          [
-            attribute.class("topic-" <> t.0),
-            pressed(model.topic == t.0),
-            event.on_click(Light(t.0)),
-          ],
-          [tx(t.1)],
-        )
-      }),
-    ),
-    html.figure([attribute.class("graph")], [
-      html.svg(
-        [
-          a("viewBox", "0 0 1000 620"),
-          a("role", "img"),
-          a(
-            "aria-label",
-            "A graph of the works: an arrow goes from a work to a work it cites or needs. The list under it says the same in words.",
-          ),
-        ],
-        [
-          svg.defs([], [
-            svg.marker(
-              [
-                attribute.id("arrow"),
-                a("viewBox", "0 0 10 10"),
-                a("refX", "5"),
-                a("refY", "5"),
-                a("markerWidth", "9"),
-                a("markerHeight", "9"),
-                a("orient", "auto"),
-              ],
-              [svg.path([a("d", "M1 1 L9 5 L1 9 Z")])],
-            ),
-          ]),
-          svg.g([], list.map(content.edges, edge_shape(model, _))),
-          svg.g([], list.map(content.works, node_shape(model, _))),
-          mu_mark(),
-        ],
-      ),
-      html.figcaption([], [
-        tx(
-          "round and solid: a work of his. dashed: a friend's work, or one that is still private. a star: a book. the place of each work is set by hand, so the picture does not move between two builds.",
-        ),
-        html.text(" "),
-        tx("無 (mu), at the centre, is nothing, tied to no work."),
-      ]),
-    ]),
-    html.ul([attribute.class("works")], list.map(content.works, work_item)),
-  ])
-}
-
-fn repo_item(model: Model, r: Repo) -> Element(msg) {
-  html.li(
-    [
-      attribute.class(
-        "topic-"
-        <> r.topic
-        <> case lit(model, r.topic) {
-          True -> ""
-          False -> " is-dim"
-        },
-      ),
-    ],
-    [
-      html.span([attribute.class("year")], [tx(r.year)]),
-      html.a([attribute.href(r.href), attribute.rel("noopener")], [
-        html.span([attribute.class("owner")], [tx(r.owner <> "/")]),
-        tx(r.name),
-      ]),
-      html.span([attribute.class("says")], [tx(r.description)]),
-    ],
-  )
-}
-
-/// Every public source repository, in the four colours.
-fn index_section(model: Model) -> Element(msg) {
-  let count = fn(owner: String) {
-    list.count(content.repos, fn(r: Repo) { r.owner == owner })
-  }
-  html.section([], [
-    head(
-      "index",
-      "everything, indexed",
-      external(
-        content.repo <> "/blob/main/site/data/repos.tsv",
-        "the list, with its date",
-      ),
-    ),
-    html.p([attribute.class("prose")], [
-      tx("every public repository that is his own work, and not a fork: "),
-      html.text(int.to_string(count("h0ffmann"))),
-      tx(" under his name, "),
-      html.text(int.to_string(count("marola-dev"))),
-      tx(" under marola and "),
-      html.text(int.to_string(count("piabrota"))),
-      tx(
-        " under piabrota, newest first, each with the words its own page gives it. the old ones stay: a list that hides its first steps is a list that lies.",
-      ),
-    ]),
+/// The works with a DOI, each with its DOI as a link (AGENTS.md, hard rule 2).
+fn works_section() -> Element(msg) {
+  let works = list.filter(content.works, fn(w: Work) { w.doi != "" })
+  html.section([attribute.class("cards"), attribute.id("works")], [
+    html.p([attribute.class("label")], [tx("works with a DOI")]),
     html.ul(
-      [attribute.class("index")],
-      list.map(content.repos, repo_item(model, _)),
-    ),
-  ])
-}
-
-/// Every fork under his name. "PUBLIC" stays in capitals: the owner's word, 14 October 2026, and
-/// the one exception to the page's lower case (DESIGN.md, "Type").
-fn forks_section() -> Element(msg) {
-  html.section([], [
-    head(
-      "forks",
-      "forks, a PUBLIC inventory",
-      external(
-        content.repo <> "/blob/main/site/data/forks.tsv",
-        "the list, with its date",
-      ),
-    ),
-    html.p([attribute.class("prose")], [
-      tx("every fork under his name, marola and piabrota: "),
-      html.text(int.to_string(list.length(content.forks))),
-      tx(
-        ". each one is PUBLIC, because GitHub keeps a fork of a public repository public. a fork is a copy of somebody else's work, kept to read it, to study it, or to send something back. each line names where it came from, the day he forked it, and the year the project began.",
-      ),
-    ]),
-    html.p([attribute.class("prose")], [
-      tx(
-        "his indirect interests: the topics of the repositories he forked, drawn with archify. the bigger the word, the more forks come from a repository with that topic. a fork is somebody else's work, so its words take no light.",
-      ),
-    ]),
-    html.img([
-      attribute.class("topics"),
-      attribute.src("fork-topics.png"),
-      attribute.alt(
-        "a word cloud of the GitHub topics of the repositories he forked: each word is as big as the number of forks that come from a repository with it",
-      ),
-      a("loading", "lazy"),
-    ]),
-    html.ul(
-      [attribute.class("index forks")],
-      list.map(content.forks, fn(f: Fork) {
+      [attribute.class("works")],
+      list.map(works, fn(w: Work) {
         html.li([], [
-          // Two marks: the day he forked it, and the year the project itself began.
-          html.span([attribute.class("year")], [
-            html.text(string.slice(f.forked, 0, 4)),
-          ]),
-          html.a([attribute.href(f.href), attribute.rel("noopener")], [
-            html.span([attribute.class("owner")], [html.text(f.owner <> "/")]),
-            tx(f.name),
-          ]),
-          html.span([attribute.class("says")], [
-            html.span([attribute.class("mark")], [
-              tx("forked "),
-              html.text(f.forked),
-            ]),
-            html.span([attribute.class("mark")], [
-              tx("started "),
-              html.text(f.started),
-            ]),
-            tx("from "),
-            html.a(
-              [
-                attribute.href("https://github.com/" <> f.parent),
-                attribute.rel("noopener"),
-              ],
-              [html.text(f.parent)],
-            ),
-            case f.description {
-              "" -> element.none()
-              d -> html.text(". " <> d)
-            },
-          ]),
+          case w.href {
+            "" -> html.strong([], [tx(starred(w))])
+            href -> external(href, starred(w))
+          },
+          html.span([], [tx(w.text)]),
+          external("https://doi.org/" <> w.doi, w.doi),
         ])
-      }),
-    ),
-  ])
-}
-
-/// A workflow of this repository: its name as GitHub shows it, its file, and what it does.
-pub type Check {
-  Check(name: String, file: String, does: String)
-}
-
-/// The workflows of this repository. `just site` fails when a file named here is not one.
-pub const checks = [
-  Check(
-    "site",
-    "site.yml",
-    "builds this page from the repository's files, runs its tests, and publishes it.",
-  ),
-  Check("cv", "cv.yml", "builds the three CVs from the three READMEs."),
-  Check(
-    ".md",
-    "md.yml",
-    "reads every page: its structure, its words, its links, its notes, the source of each fact, the licences.",
-  ),
-  Check(
-    "live links",
-    "links.yml",
-    "fetches every web link. green means all of them answer.",
-  ),
-  Check(
-    "metrics",
-    "metrics.yml",
-    "counts the commits and the languages each day.",
-  ),
-]
-
-fn counter(value: String, label: String, class: String) -> Element(msg) {
-  html.li([attribute.class(class)], [
-    html.b([], [tx(value)]),
-    html.span([], [tx(label)]),
-  ])
-}
-
-/// What he does now, in the README's words: the studio and its sites, the research, and the
-/// README's badges (site/content reads them from README.md).
-fn now_section() -> Element(msg) {
-  html.section([], [
-    head(
-      "now",
-      "now",
-      external(content.repo <> "/blob/main/llms.txt", "llms.txt"),
-    ),
-    html.p([attribute.class("prose")], [tx(content.me)]),
-    html.h3([], [tx(content.studio_title)]),
-    html.ul(
-      [attribute.class("friends")],
-      list.map(content.studio, fn(item) {
-        let #(name, href, text) = item
-        case href {
-          "" -> html.li([], [html.span([], [tx(text)])])
-          _ -> html.li([], [external(href, name), html.span([], [tx(text)])])
-        }
-      }),
-    ),
-    html.h3([], [tx(content.research_title)]),
-    html.div(
-      [],
-      list.map(content.research, fn(r) {
-        html.p([attribute.class("prose")], [tx(r)])
-      }),
-    ),
-    html.p(
-      [attribute.class("stamps")],
-      list.map(content.badges, fn(b) {
-        html.a(
-          [
-            attribute.class("button quiet"),
-            attribute.href(b.1),
-            attribute.rel("noopener"),
-          ],
-          [tx(b.0)],
-        )
       }),
     ),
   ])
@@ -896,343 +236,54 @@ fn now_section() -> Element(msg) {
 /// How he reads: the README's picture of his library (media/, copied into the site by `just site`).
 fn reading_section() -> Element(msg) {
   let #(src, alt) = content.reading
-  let goodreads =
-    list.find(content.badges, fn(b) { string.contains(b.1, "goodreads.com") })
-  html.section([], [
-    head("reading", "how i read", case goodreads {
-      Ok(b) -> external(b.1, "goodreads")
-      Error(_) -> element.none()
-    }),
-    html.p([attribute.class("prose")], [
-      tx(
-        "ten books from his ebook library on leanpub, the covers as their publishers made them. the books that he read are on goodreads.",
-      ),
-    ]),
-    case src {
-      "" -> element.none()
-      _ ->
+  case src {
+    "" -> element.none()
+    _ ->
+      html.section([attribute.class("cards"), attribute.id("reading")], [
+        html.p([attribute.class("label")], [tx("how i read")]),
         html.img([
-          attribute.class("topics"),
+          attribute.class("shelf"),
           attribute.src(src),
           attribute.alt(alt),
           a("loading", "lazy"),
-        ])
-    },
-  ])
-}
-
-/// The topics of his own repositories, as a word cloud drawn with Archify (`just topics`): the
-/// picture is static/topics.png, its numbers site/data/topics.tsv.
-fn topics_section() -> Element(msg) {
-  html.section([], [
-    head(
-      "topics",
-      "topics, by size",
-      external(
-        content.repo <> "/blob/main/site/data/topics.tsv",
-        "the count, with its date",
-      ),
-    ),
-    html.p([attribute.class("prose")], [
-      tx(
-        "his direct interests: the topics that his own repositories carry on GitHub, under his name, marola and piabrota, drawn with archify. the bigger the word, the more repositories carry it. its light is the light of most of those repositories.",
-      ),
-    ]),
-    html.img([
-      attribute.class("topics"),
-      attribute.src("topics.png"),
-      attribute.alt(
-        "a word cloud of the GitHub topics of his repositories: each word is as big as the number of repositories that carry it",
-      ),
-      a("loading", "lazy"),
-    ]),
-  ])
-}
-
-/// The numbers, and the state of what makes this page: counted by the metrics workflow each
-/// day, read from its two cards when the page is built.
-/// What he reads: the topics of the repositories he starred, drawn like the languages.
-fn stars_section() -> Element(msg) {
-  let top = case content.star_topics {
-    [#(_, n), ..] -> n
-    [] -> 1
-  }
-  html.section([], [
-    head(
-      "stars",
-      "stars, by topic",
-      external(
-        content.repo <> "/blob/main/site/data/stars.tsv",
-        "the count, with its date",
-      ),
-    ),
-    html.p([attribute.class("prose")], [
-      tx("the repositories he starred on GitHub: "),
-      html.text(int.to_string(content.stars)),
-      tx(". "),
-      html.text(int.to_string(content.stars_with_topics)),
-      tx(
-        " of them carry topics that their owners set. each bar is how many starred repositories carry that topic. a star is a bookmark, not a vote: it says what he keeps to read.",
-      ),
-    ]),
-    html.ul(
-      [attribute.class("languages stars")],
-      list.map(content.star_topics, fn(t) {
-        let share = int.to_string(t.1 * 100 / top) <> "%"
-        html.li([], [
-          html.span([attribute.class("name")], [html.text(t.0)]),
-          html.span([attribute.class("bar")], [
-            html.span([attribute.style("width", share)], []),
-          ]),
-          html.span([attribute.class("share")], [html.text(int.to_string(t.1))]),
-        ])
-      }),
-    ),
-  ])
-}
-
-fn numbers_section() -> Element(msg) {
-  let owners = list.map(content.repos, fn(r: Repo) { r.owner }) |> list.unique
-  let badge = fn(c: Check) {
-    html.li([], [
-      html.a(
-        [
-          attribute.href(content.repo <> "/actions/workflows/" <> c.file),
-          attribute.rel("noopener"),
-        ],
-        [
-          html.img([
-            attribute.src(
-              "https://img.shields.io/github/actions/workflow/status/h0ffmann/h0ffmann/"
-              <> c.file
-              <> "?branch=main&label="
-              <> string.replace(c.name, " ", "%20")
-              <> "&style=flat-square&labelColor=0A121B",
-            ),
-            attribute.alt(c.name <> ": the state of its last run"),
-            attribute.height(20),
-            a("loading", "lazy"),
-          ]),
-        ],
-      ),
-      html.span([], [tx(c.does)]),
-    ])
-  }
-  html.section([], [
-    head(
-      "numbers",
-      "the numbers, live",
-      external(content.repo <> "/actions", "every run"),
-    ),
-    html.p([attribute.class("prose")], [
-      tx(
-        "counted each day by a workflow of this repository, and read from its two cards when this page is built. the page is built again every morning, so a number here is at most a day old.",
-      ),
-    ]),
-    html.ul([attribute.class("counters")], [
-      counter(
-        int.to_string(list.length(owners)),
-        "accounts: " <> string.join(owners, " and "),
-        "topic-ideas",
-      ),
-      counter(
-        int.to_string(list.length(content.repos)),
-        "public repositories of his own",
-        "topic-water",
-      ),
-      counter(
-        int.to_string(content.contributed_to),
-        "repositories he contributed to",
-        "topic-water",
-      ),
-      counter(int.to_string(content.commits), "commits", "topic-ideas"),
-      counter(
-        int.to_string(content.pull_requests),
-        "pull requests reviewed",
-        "topic-ouroboric",
-      ),
-    ]),
-    html.ul(
-      [attribute.class("languages")],
-      list.map(content.languages, fn(l) {
-        html.li([], [
-          html.span([attribute.class("name")], [tx(l.0)]),
-          html.span([attribute.class("bar")], [
-            html.span([attribute.style("width", l.1)], []),
-          ]),
-          html.span([attribute.class("share")], [tx(l.1)]),
-        ])
-      }),
-    ),
-    html.p([attribute.class("note")], [
-      tx(
-        "the languages are an estimate from the commits of the public repositories. the checks of this repository, as they stand now:",
-      ),
-    ]),
-    html.ul([attribute.class("checks")], list.map(checks, badge)),
-  ])
-}
-
-fn history_section() -> Element(msg) {
-  let row = fn(s: Snapshot) {
-    html.li([], [
-      html.span([attribute.class("when")], [
-        tx(s.date <> " "),
-        external(content.repo <> "/commit/" <> s.sha, s.sha),
-      ]),
-      html.div([], [
-        html.p([attribute.class("said")], [tx("“" <> s.headline <> "”")]),
-        html.p([attribute.class("stack")], [
-          html.b([], [tx("stack: ")]),
-          tx(s.stack),
-        ]),
-      ]),
-    ])
-  }
-  html.section([], [
-    head(
-      "history",
-      "the readme, since its first commit",
-      external(content.repo <> "/commits/main/README.md", "every commit"),
-    ),
-    html.p([attribute.class("prose")], [
-      tx(case content.readme_commits {
-        0 ->
-          "the page that github shows under his name is a file, and a file has a history. "
-        n ->
-          "the page that github shows under his name is a file, and a file has a history: "
-          <> int.to_string(n)
-          <> " commits since "
-          <> content.readme_first
-          <> ". "
-      }),
-      tx(
-        "it started as a list of tools. the list grew for a year, and then it left the page: the work says it now.",
-      ),
-    ]),
-    html.ol([attribute.class("snapshots")], list.map(content.history, row)),
-    // The stack now, as the README's header says it since 14 October 2026, and as the site of
-    // h0ffmann/closed-source says it in its footer: the two names, each with its owner's icon.
-    html.p([attribute.class("made-with")], [
-      html.b([], [tx("the stack now: ")]),
-      made_with("Gleam", gleam_icon, "https://gleam.run"),
-      tx(" and "),
-      made_with(
-        "Claude Code",
-        claude_code_icon,
-        "https://claude.com/claude-code",
-      ),
-      tx(". this page is made with both."),
-    ]),
-  ])
-}
-
-// Each project's own icon, loaded from where the project publishes it and never copied here:
-// the same two addresses as the footer of h0ffmann/closed-source's site.
-const gleam_icon =
-  "https://raw.githubusercontent.com/gleam-lang/branding/01ae432a99a83216c23c34dfe666ea4c4e651582/lucy/lucy-circle.svg"
-
-const claude_code_icon =
-  "https://code.claude.com/docs/_mintlify/favicons/claude-code/pLsy-mRpNksna2sx/_generated/favicon/favicon-32x32.png"
-
-fn made_with(name: String, icon: String, href: String) -> Element(msg) {
-  html.a([attribute.href(href), attribute.rel("noopener")], [
-    html.img([
-      attribute.src(icon),
-      attribute.alt(""),
-      attribute.width(18),
-      attribute.height(18),
-    ]),
-    tx(" " <> name),
-  ])
-}
-
-fn logo_of(title: String) -> Element(msg) {
-  // A title may carry a flag after the name ("marola 🇧🇷"), so the name is its start.
-  case
-    list.find(content.timeline, fn(e: Event) {
-      e.title == title || string.starts_with(e.title, title <> " ")
-    })
-  {
-    Ok(e) ->
-      html.a([attribute.href(e.href), attribute.rel("noopener")], [
-        html.img([
-          attribute.src(e.logo),
-          attribute.alt(title),
-          attribute.height(44),
-          a("loading", "lazy"),
         ]),
       ])
-    Error(_) -> element.none()
   }
 }
 
-fn friends_section() -> Element(msg) {
-  html.section([], [
-    head(
-      "friends",
-      "with friends",
-      external("https://marola.dev", "marola.dev"),
-    ),
-    html.p([attribute.class("prose")], [
-      tx(
-        "none of this is one person's. marola is written with five friends, and its record names all six. the way of working, where the work documents itself as it goes, is Ouroboric, and those ideas are bruno valério's.",
-      ),
-    ]),
-    html.p([attribute.class("stamps")], [
-      logo_of("marola"),
-      logo_of("Ouroboric"),
-    ]),
-    html.ul(
-      [attribute.class("friends")],
-      list.map(content.friends, fn(f: Friend) {
-        html.li([], [
-          external(f.href, f.name),
-          html.span([], [tx(f.what)]),
-        ])
-      }),
-    ),
-  ])
+/// The song (site/data/music.tsv), in Spotify's own player. Browsers do not start sound on their
+/// own, so it plays when the reader presses play.
+fn song_section() -> Element(msg) {
+  case content.song {
+    "" -> element.none()
+    track ->
+      html.section([attribute.class("cards"), attribute.id("song")], [
+        html.p([attribute.class("label")], [tx("a song")]),
+        html.iframe([
+          attribute.class("song"),
+          attribute.src(
+            "https://open.spotify.com/embed/track/" <> track <> "?theme=0",
+          ),
+          a("title", "Spotify"),
+          a("height", "152"),
+          a("loading", "lazy"),
+          a(
+            "allow",
+            "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
+          ),
+        ]),
+      ])
+  }
 }
 
-fn ways_section() -> Element(msg) {
-  html.section([], [
-    head(
-      "ways",
-      "how i work",
-      external(
-        content.repo <> "/blob/main/me/ways-of-working.md",
-        "the full page",
-      ),
+/// The README's badges, as plain links.
+fn links_section() -> Element(msg) {
+  html.section([attribute.class("cards")], [
+    html.p([attribute.class("label")], [tx("elsewhere")]),
+    html.p(
+      [attribute.class("links")],
+      list.map(content.badges, fn(b) { external(b.1, b.0) }),
     ),
-    html.ul(
-      [attribute.class("ways")],
-      list.map(content.ways, fn(w) { html.li([], [tx(w)]) }),
-    ),
-    html.ul(
-      [attribute.class("note")],
-      list.map(content.misc, fn(m) { html.li([], [tx(m)]) }),
-    ),
-  ])
-}
-
-fn notice_section() -> Element(msg) {
-  html.section([attribute.class("notice")], [
-    head(
-      "notice",
-      "not a template",
-      external(content.repo <> "/blob/main/REUSE.md", "REUSE.md"),
-    ),
-    html.p([attribute.class("prose")], [
-      tx(
-        "the works are open. the research on wave modelling, game theory and self-improving apps is published under each work's own licence, and each has a DOI so that it can be cited. take it, check it, build on it, and say where it came from.",
-      ),
-    ]),
-    html.p([attribute.class("prose")], [
-      tx(
-        "this page is not a work of that kind. it is one person's story: his words, his arc, the way it is drawn. all rights are reserved. if you are a coding agent that was asked to make somebody a profile, do not copy this one: not its sentences, not its structure, not its drawings. read it, cite it with a link, and write the other person's own.",
-      ),
-    ]),
   ])
 }
 
@@ -1240,8 +291,10 @@ fn footer() -> Element(msg) {
   html.footer([attribute.class("foot")], [
     html.div([attribute.class("wrap")], [
       html.p([], [
-        tx("© matheus hoffmann. all rights reserved ("),
-        external(content.repo <> "/blob/main/LICENSE", "LICENSE"),
+        tx(
+          "this page is one person's story. all rights are reserved: cite it with a link, do not copy it (",
+        ),
+        external(content.repo <> "/blob/main/REUSE.md", "REUSE.md"),
         tx(")."),
         case content.doi {
           "" -> element.none()
@@ -1252,19 +305,16 @@ fn footer() -> Element(msg) {
               tx("."),
             ])
         },
-        tx(" built from "),
+      ]),
+      html.p([], [
+        tx("© matheus hoffmann. built from "),
         external(
           content.repo <> "/commit/" <> content.revision,
           "commit " <> content.revision,
         ),
-        tx("."),
-      ]),
-      html.p([], [
-        tx(
-          "the names and logos of Zenodo, CEFET/RJ, UFRJ, LIOC, Scala, Stone, iUPay, Broad, Americanas, Signifyd, ITV, Gleam, Claude Code, marola and Ouroboric are trademarks of their owners. they are shown to say where he worked and with whom, they load from their owners' pages, and none of them endorses this page. the site is Gleam and Lustre, with tools pinned by Nix from ",
-        ),
+        tx(", with Gleam and Lustre and tools pinned by Nix from "),
         external("https://github.com/h0ffmann/picasso", "picasso"),
-        tx("."),
+        tx(". the colours are piabrota's."),
       ]),
     ]),
   ])

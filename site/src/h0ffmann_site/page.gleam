@@ -17,7 +17,7 @@ pub fn document(body: Element(msg)) -> Element(msg) {
   let stylesheet = fn(href) {
     html.link([attribute.rel("stylesheet"), attribute.href(href)])
   }
-  let title = "h0ffmann: matheus hoffmann, the aquatic prometheus"
+  let title = "h0ffmann: matheus hoffmann"
   let description =
     "the art of the maintenance of apps. open research on wave modelling, game theory and self-improving apps, from an ex kid athlete."
   html.html([attribute.lang("en")], [
@@ -48,7 +48,7 @@ pub fn document(body: Element(msg)) -> Element(msg) {
       property("og:image:height", "627"),
       property(
         "og:image:alt",
-        "h0ffmann, the aquatic prometheus: the art of the maintenance of apps. wave modelling, game theory, self-improving apps.",
+        "h0ffmann: the art of the maintenance of apps. wave modelling, game theory, self-improving apps.",
       ),
       meta("twitter:card", "summary_large_image"),
       meta("twitter:title", title),
@@ -69,7 +69,7 @@ pub fn document(body: Element(msg)) -> Element(msg) {
         attribute.crossorigin(""),
       ]),
       stylesheet(
-        "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+JP:wght@600&display=swap",
+        "https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@400;600&family=JetBrains+Mono&display=swap",
       ),
       stylesheet("style.css"),
       // A module script is deferred, so <body> is parsed before the app mounts on it.

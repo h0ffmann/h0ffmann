@@ -187,6 +187,10 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   of the knowledge graph, their ties, the README's history, the friends), each row with its
   source. Never write a date, an employer, a DOI or a count in `site/src` by hand. The
   sentences that tell the story are written in `site/src/h0ffmann_site/app.gleam`.
+  Since 11 November 2026 the site is one short page in piabrota's colours (the owner;
+  [`DESIGN.md`](DESIGN.md), "The site since 11 November 2026"): the headline of
+  `site/data/headline.tsv`, the README's studio, research, badges and library, the works with a
+  DOI, and the song of `site/data/music.tsv`. The other tables of `site/data/` stay as data.
   `site/preview/` has pictures of the site and of the README for pull requests.
   `site/static/og.png` is the link preview (LinkedIn, WhatsApp), made from `site/og/card.html`;
   the page names it with whole addresses. Make it again when the cover changes

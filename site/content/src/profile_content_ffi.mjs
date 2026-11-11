@@ -43,8 +43,3 @@ export function card_text(path) {
     .trim();
 }
 
-// The year of the commit that is built, so the same commit always gives the same page; this
-// year outside a Git checkout.
-export function built_year() {
-  return git("log -1 --format=%as", String(new Date().getFullYear())).slice(0, 4);
-}

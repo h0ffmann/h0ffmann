@@ -7,6 +7,29 @@ that changes the look reads this page first, and changes this page in the same c
 All rights reserved, like the rest of this repository ([`REUSE.md`](REUSE.md)): these rules are
 for this profile and are not a kit for another one.
 
+## The site since 11 November 2026
+
+The owner, 11 November 2026: "in fact I want h0ffmann/h0ffmann to be minimal like this one
+https://exitnode.dev/ but with piabrota colors", and, of the choices put to him, "one short
+page". The site is now that page. Its rules win over the sections below where they disagree;
+the sections below still hold for the CV, the README's pictures and the `topic` column of the
+data.
+
+- **One short page.** A bar (the name, three anchors, the two languages), a hero, two cards
+  (the studio and the research, in the README's words), the works with a DOI, how he reads, a
+  song, the README's links, and a foot with the notice. The arc, the graph, the indexes, the
+  numbers, the clouds, the stars, the history and the friends left the page; their tables stay
+  in `site/data/`.
+- **piabrota's colours and faces**, from `piabrota.art/style.css` (the owner's studio): dark by
+  default (`--bg` `#0B0D12`, `--surface` `#14171F`, `--border` `#2A303C`), light when the
+  reader's system asks for it; one red (`--accent` `#BC2318`, `--accent-text` `#FF6B5E`) for
+  what can be pressed and for the small labels; one blue (`--sea`) for the drawing. Fjalla One
+  for the name and the headings, Inter for the text, JetBrains Mono for data and labels.
+- **exitnode's calm**, not its code or its words: a faint grid and a glow behind the top, a
+  large name with one italic line under it in red, a short lede behind a red rule, cards with a
+  red tab on their top edge. Nothing moves by itself.
+- No neon glow, no four lights on the page, no epithet.
+
 ## One sentence
 
 A dark sea at night, and four lights on it.
@@ -28,8 +51,9 @@ Rules:
 1. **Four, and no fifth.** A thing that fits none of them is neutral: `--ink` or `--muted`.
 2. **One thing, one light.** A work, a repository or a mark has one `topic`. It is set in
    `site/data/`, by hand, never in the code and never by a guess of the build.
-3. **The name is green and the epithet is blue.** `h0ffmann` is knowledge; "the aquatic
-   prometheus" is water. Under them one sentence is orange: "i'm always reverse engineering my
+3. **The name is green.** `h0ffmann` is knowledge. The site has no epithet since 11 November 2026
+   (the owner: "remove aquatic prometheus from website, this is too fancy"). Under the name one
+   sentence is orange: "i'm always reverse engineering my
    own interests. that is what makes me ouroboric." It is the owner's (14 October 2026), and
    it is orange because it says what makes him Ouroboric. Nothing else on the cover takes a
    light.
@@ -59,7 +83,7 @@ behind a logo, and for nothing else.
 
 A light may glow, like a tube of neon: a soft shadow of its own colour.
 
-- **It may glow:** the name, the epithet, a mark of the timeline, a node of the graph, a counter,
+- **It may glow:** the name, a mark of the timeline, a node of the graph, a counter,
   a pressed button, the bar of a language.
 - **It never glows:** a paragraph, a caption, a link in a sentence, a logo.
 - One glow has one colour, the colour of the thing. No rainbow, no white glow.
