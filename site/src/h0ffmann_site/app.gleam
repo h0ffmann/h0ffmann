@@ -176,12 +176,14 @@ pub fn view(model: Model) -> Element(Msg) {
   html.div([], [
     cover(model),
     html.main([attribute.class("wrap")], [
+      now_section(),
       arc_section(),
       graph_section(model),
       index_section(model),
       forks_section(),
       numbers_section(),
       topics_section(),
+      reading_section(),
       stars_section(),
       history_section(),
       friends_section(),
@@ -236,36 +238,48 @@ fn cover(model: Model) -> Element(Msg) {
           tx("the art of the maintenance of apps"),
         ]),
         html.p([attribute.class("lede")], [tx(content.me)]),
-        html.p([attribute.class("actions")], [
-          html.a([attribute.class("button"), attribute.href("#graph")], [
-            tx("see the works"),
+        html.p(
+          [attribute.class("actions")],
+          list.flatten([
+            [
+              html.a([attribute.class("button"), attribute.href("#graph")], [
+                tx("see the works"),
+              ]),
+              html.a(
+                [
+                  attribute.class("button quiet"),
+                  attribute.href(content.repo),
+                  attribute.rel("noopener"),
+                ],
+                [tx("the readme on GitHub")],
+              ),
+            ],
+            // The CVs the README links (its first line).
+            list.map(content.cvs, fn(cv) {
+              html.a(
+                [
+                  attribute.class("button quiet"),
+                  attribute.href(content.repo <> "/blob/main/" <> cv.1),
+                  attribute.rel("noopener"),
+                ],
+                [tx("cv, " <> cv.0)],
+              )
+            }),
+            [
+              // The research CV for the ocean, in English (the owner, 14 October 2026).
+              html.a(
+                [
+                  attribute.class("button quiet"),
+                  attribute.href(
+                    content.repo <> "/blob/main/pdf/cv.en.OCEAN.pdf",
+                  ),
+                  attribute.rel("noopener"),
+                ],
+                [tx("cv-water (PDF)")],
+              ),
+            ],
           ]),
-          html.a(
-            [
-              attribute.class("button quiet"),
-              attribute.href(content.repo),
-              attribute.rel("noopener"),
-            ],
-            [tx("the readme on GitHub")],
-          ),
-          html.a(
-            [
-              attribute.class("button quiet"),
-              attribute.href(content.repo <> "/blob/main/pdf/cv.pdf"),
-              attribute.rel("noopener"),
-            ],
-            [tx("cv (PDF)")],
-          ),
-          // The research CV for the ocean, in English (the owner, 14 October 2026).
-          html.a(
-            [
-              attribute.class("button quiet"),
-              attribute.href(content.repo <> "/blob/main/pdf/cv.en.OCEAN.pdf"),
-              attribute.rel("noopener"),
-            ],
-            [tx("cv-water (PDF)")],
-          ),
-        ]),
+        ),
       ]),
       html.span(
         [attribute.class("drawing prometheus"), a("aria-hidden", "true")],
@@ -273,12 +287,14 @@ fn cover(model: Model) -> Element(Msg) {
       ),
     ]),
     html.nav([attribute.class("jump wrap")], [
+      link("#now", "now"),
       link("#arc", "the arc"),
       link("#graph", "the works"),
       link("#index", "everything"),
       link("#forks", "forks"),
       link("#numbers", "numbers"),
       link("#topics", "topics"),
+      link("#reading", "reading"),
       link("#stars", "stars"),
       link("#history", "the readme"),
       link("#friends", "friends"),
@@ -833,6 +849,78 @@ fn counter(value: String, label: String, class: String) -> Element(msg) {
   ])
 }
 
+/// What he does now, in the README's words: the studio and its sites, the research, and the
+/// README's badges (site/content reads them from README.md).
+fn now_section() -> Element(msg) {
+  html.section([], [
+    head(
+      "now",
+      "now",
+      external(content.repo <> "/blob/main/llms.txt", "llms.txt"),
+    ),
+    html.p([attribute.class("prose")], [tx(content.me)]),
+    html.h3([], [tx(content.studio_title)]),
+    html.ul(
+      [attribute.class("friends")],
+      list.map(content.studio, fn(item) {
+        let #(name, href, text) = item
+        case href {
+          "" -> html.li([], [html.span([], [tx(text)])])
+          _ -> html.li([], [external(href, name), html.span([], [tx(text)])])
+        }
+      }),
+    ),
+    html.h3([], [tx(content.research_title)]),
+    html.div(
+      [],
+      list.map(content.research, fn(r) {
+        html.p([attribute.class("prose")], [tx(r)])
+      }),
+    ),
+    html.p(
+      [attribute.class("stamps")],
+      list.map(content.badges, fn(b) {
+        html.a(
+          [
+            attribute.class("button quiet"),
+            attribute.href(b.1),
+            attribute.rel("noopener"),
+          ],
+          [tx(b.0)],
+        )
+      }),
+    ),
+  ])
+}
+
+/// How he reads: the README's picture of his library (media/, copied into the site by `just site`).
+fn reading_section() -> Element(msg) {
+  let #(src, alt) = content.reading
+  let goodreads =
+    list.find(content.badges, fn(b) { string.contains(b.1, "goodreads.com") })
+  html.section([], [
+    head("reading", "how i read", case goodreads {
+      Ok(b) -> external(b.1, "goodreads")
+      Error(_) -> element.none()
+    }),
+    html.p([attribute.class("prose")], [
+      tx(
+        "ten books from his ebook library on leanpub, the covers as their publishers made them. the books that he read are on goodreads.",
+      ),
+    ]),
+    case src {
+      "" -> element.none()
+      _ ->
+        html.img([
+          attribute.class("topics"),
+          attribute.src(src),
+          attribute.alt(alt),
+          a("loading", "lazy"),
+        ])
+    },
+  ])
+}
+
 /// The topics of his own repositories, as a word cloud drawn with Archify (`just topics`): the
 /// picture is static/topics.png, its numbers site/data/topics.tsv.
 fn topics_section() -> Element(msg) {
@@ -1121,7 +1209,10 @@ fn ways_section() -> Element(msg) {
       [attribute.class("ways")],
       list.map(content.ways, fn(w) { html.li([], [tx(w)]) }),
     ),
-    html.p([attribute.class("note")], [tx(content.certs)]),
+    html.ul(
+      [attribute.class("note")],
+      list.map(content.misc, fn(m) { html.li([], [tx(m)]) }),
+    ),
   ])
 }
 

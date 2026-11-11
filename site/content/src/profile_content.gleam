@@ -1,6 +1,6 @@
 //// profile_content: write `site/src/h0ffmann_site/content.gleam` from the files of this
-//// repository, so the site never repeats a fact by hand. It reads README.md (the sentence about
-//// the owner, the certificates), me/ways-of-working.md (its headings) and the tables of
+//// repository, so the site never repeats a fact by hand. It reads README.md (the headline, the
+//// studio, the research, the misc list, the badges, the CVs, the picture of the library), me/ways-of-working.md (its headings) and the tables of
 //// site/data/ (the timeline, the works, their ties, every repository, the README's history, the
 //// friends).
 ////
@@ -126,6 +126,126 @@ pub fn paragraph(readme: String, start: String) -> String {
   })
   |> string.join(" ")
   |> plain
+}
+
+/// The list items ("- ") under the first line that starts with `start` ("**Misc**"), as written:
+/// the list ends at an empty line, a tag or the next bold heading.
+pub fn items(readme: String, start: String) -> List(String) {
+  string.split(readme, "\n")
+  |> list.drop_while(fn(l) { !string.starts_with(l, start) })
+  |> list.drop(1)
+  |> list.take_while(fn(l) {
+    string.trim(l) != ""
+    && !string.starts_with(l, "<")
+    && !string.starts_with(l, "**")
+  })
+  |> list.filter_map(fn(l) {
+    case l {
+      "- " <> item -> Ok(string.trim(item))
+      _ -> Error(Nil)
+    }
+  })
+}
+
+/// The first line that starts with `start`, marks out.
+pub fn line(readme: String, start: String) -> String {
+  string.split(readme, "\n")
+  |> list.find(string.starts_with(_, start))
+  |> result.map(plain)
+  |> result.unwrap("")
+}
+
+/// An item that opens with a link, "[name](href): text", as #(name, href, text). An item with no
+/// link first is #("", "", item).
+pub fn split_link(item: String) -> #(String, String, String) {
+  let none = #("", "", plain(item))
+  case item {
+    "[" <> rest ->
+      case string.split_once(rest, "](") {
+        Ok(#(name, after)) ->
+          case string.split_once(after, ")") {
+            Ok(#(href, text)) -> #(name, href, plain(drop_colon(text)))
+            Error(_) -> none
+          }
+        Error(_) -> none
+      }
+    _ -> none
+  }
+}
+
+fn drop_colon(s: String) -> String {
+  case string.trim(s) {
+    ":" <> rest -> rest
+    other -> other
+  }
+}
+
+/// The badges of the README, "[![alt](picture)](href)", in order, as #(alt, href).
+pub fn badges(readme: String) -> List(#(String, String)) {
+  string.split(readme, "[![")
+  |> list.drop(1)
+  |> list.filter_map(fn(part) {
+    case string.split_once(part, "](") {
+      Ok(#(alt, after)) ->
+        case string.split_once(after, ")](") {
+          Ok(#(_, link)) ->
+            case string.split_once(link, ")") {
+              Ok(#(href, _)) -> Ok(#(alt, href))
+              Error(_) -> Error(Nil)
+            }
+          Error(_) -> Error(Nil)
+        }
+      Error(_) -> Error(Nil)
+    }
+  })
+}
+
+/// The links of the README's HTML whose address starts with `prefix`, as #(words, href).
+pub fn anchors(readme: String, prefix: String) -> List(#(String, String)) {
+  string.split(readme, "<a href=\"" <> prefix)
+  |> list.drop(1)
+  |> list.filter_map(fn(part) {
+    case string.split_once(part, "\">") {
+      Ok(#(rest, after)) ->
+        case string.split_once(after, "</a>") {
+          Ok(#(words, _)) -> Ok(#(words, prefix <> rest))
+          Error(_) -> Error(Nil)
+        }
+      Error(_) -> Error(Nil)
+    }
+  })
+}
+
+/// The first picture of the README whose address starts with `prefix`, as #(src, alt).
+pub fn picture(readme: String, prefix: String) -> #(String, String) {
+  case string.split_once(readme, "<img src=\"" <> prefix) {
+    Ok(#(_, rest)) ->
+      case string.split_once(rest, "\"") {
+        Ok(#(src, after)) ->
+          case string.split_once(after, "alt=\"") {
+            Ok(#(_, a)) ->
+              case string.split_once(a, "\"") {
+                Ok(#(alt, _)) -> #(prefix <> src, alt)
+                Error(_) -> #(prefix <> src, "")
+              }
+            Error(_) -> #(prefix <> src, "")
+          }
+        Error(_) -> #("", "")
+      }
+    Error(_) -> #("", "")
+  }
+}
+
+fn pairs(items: List(#(String, String))) -> String {
+  lits(list.map(items, fn(p) { "#(" <> lit(p.0) <> ", " <> lit(p.1) <> ")" }))
+}
+
+fn triples(items: List(#(String, String, String))) -> String {
+  lits(
+    list.map(items, fn(t) {
+      "#(" <> lit(t.0) <> ", " <> lit(t.1) <> ", " <> lit(t.2) <> ")"
+    }),
+  )
 }
 
 /// The `### ` headings of a page, in order.
@@ -451,14 +571,51 @@ pub const languages: List(#(String, String)) = "
     <> lits(langs)
     <> "
 
-/// The README's own sentence about its owner (the section \"me\").
+/// The README's headline about its owner (its first bold line).
 pub const me = "
-    <> lit(paragraph(readme, "## 👋 me"))
+    <> lit(line(readme, "**"))
     <> "
 
-/// The README's line of certificates.
-pub const certs = "
-    <> lit(paragraph(readme, "## 🏅 certs"))
+/// The README's \"Misc\" list: the certificates and the open water.
+pub const misc = "
+    <> lits(list.map(items(readme, "**Misc**"), fn(i) { lit(plain(i)) }))
+    <> "
+
+/// The heading of the README's studio and its list: #(name, href, text); a line with no link
+/// has an empty name and href.
+pub const studio_title = "
+    <> lit(line(readme, "**Piabrota"))
+    <> "
+
+pub const studio = "
+    <> triples(list.map(items(readme, "**Piabrota"), split_link))
+    <> "
+
+/// The heading of the README's research and its lines.
+pub const research_title = "
+    <> lit(line(readme, "**Research"))
+    <> "
+
+pub const research = "
+    <> lits(list.map(items(readme, "**Research"), fn(i) { lit(plain(i)) }))
+    <> "
+
+/// The README's badges: #(alt, href), in order.
+pub const badges = "
+    <> pairs(badges(readme))
+    <> "
+
+/// The README's CVs: #(words, path in this repository).
+pub const cvs = "
+    <> pairs(anchors(readme, "pdf/"))
+    <> "
+
+/// The README's picture of how he reads: #(path in this repository, alt).
+pub const reading = "
+    <> {
+      let #(src, alt) = picture(readme, "media/")
+      "#(" <> lit(src) <> ", " <> lit(alt) <> ")"
+    }
     <> "
 
 /// The headings of me/ways-of-working.md.

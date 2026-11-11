@@ -20,10 +20,31 @@ pub fn the_page_says_who_he_is_in_the_readmes_words_test() {
   assert content.me != ""
   assert string.contains(html, "the aquatic prometheus")
   assert string.contains(html, "the art of the maintenance of apps")
-  assert string.contains(
-    content.me,
-    "wave modelling, game theory and self-improving apps",
-  )
+  assert string.contains(html, string.replace(content.me, "&", "&amp;"))
+}
+
+pub fn the_readmes_studio_research_and_badges_are_on_the_page_test() {
+  let html = page()
+  assert content.studio != []
+  assert list.all(content.studio, fn(i) {
+    i.1 == "" || string.contains(html, "href=\"" <> i.1 <> "\"")
+  })
+  assert content.research != []
+  assert content.badges != []
+  assert list.all(content.badges, fn(b) {
+    string.contains(html, "href=\"" <> b.1 <> "\"")
+  })
+  assert content.cvs != []
+  assert list.all(content.cvs, fn(cv) {
+    string.contains(html, "/blob/main/" <> cv.1 <> "\"")
+  })
+  assert content.misc != []
+}
+
+pub fn the_library_is_on_the_page_test() {
+  let html = page()
+  assert string.starts_with(content.reading.0, "media/")
+  assert string.contains(html, "src=\"" <> content.reading.0 <> "\"")
 }
 
 pub fn every_mark_of_the_timeline_is_on_the_page_test() {
@@ -121,10 +142,9 @@ pub fn the_page_names_its_own_doi_test() {
 
 pub fn the_three_areas_of_research_are_on_the_page_test() {
   let html = page()
-  // The README names them, and the page gives each its light and its home.
+  // The page gives each its light and its home.
   assert list.all(app.questions, fn(q: app.Question) {
-    string.contains(content.me, q.name)
-    && string.contains(html, "href=\"" <> q.href <> "\"")
+    string.contains(html, "href=\"" <> q.href <> "\"")
   })
   assert string.contains(
     html,

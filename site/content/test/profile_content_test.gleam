@@ -1,3 +1,4 @@
+import gleam/list
 import gleeunit
 import profile_content as generate
 
@@ -45,4 +46,28 @@ pub fn languages_are_read_from_a_card_test() {
   assert generate.languages(card)
     == [#("Scala", "44.2%"), #("Jupyter Notebook", "17.38%"), #("Nix", "0.71%")]
   assert generate.languages("no card") == []
+}
+
+pub fn the_readme_lists_are_read_test() {
+  let readme =
+    "**Staff Engineer** 31yo\n\n**Studio (since 2026)**\n- [a.art](https://a.art): one, [x](https://x) more\n- mail [at] a.art\n\n**Misc**\n- AWS: 4.\n- Diver.\n<p>x</p>\n"
+  assert generate.line(readme, "**") == "Staff Engineer 31yo"
+  assert generate.line(readme, "**Studio") == "Studio (since 2026)"
+  assert generate.items(readme, "**Misc**") == ["AWS: 4.", "Diver."]
+  assert list.map(generate.items(readme, "**Studio"), generate.split_link)
+    == [
+      #("a.art", "https://a.art", "one, x more"),
+      #("", "", "mail [at] a.art"),
+    ]
+  assert generate.items(readme, "**Missing") == []
+}
+
+pub fn badges_cvs_and_pictures_are_read_test() {
+  let readme =
+    "<sub><a href=\"pdf/cv.pdf\">English (PDF)</a>, <a href=\"https://x\">x</a></sub>\n[![a b](https://img/1)](https://one) [![c](https://img/2)](https://two)\n<img src=\"media/r.webp\" alt=\"books\" width=\"720\"/>\n"
+  assert generate.badges(readme)
+    == [#("a b", "https://one"), #("c", "https://two")]
+  assert generate.anchors(readme, "pdf/") == [#("English (PDF)", "pdf/cv.pdf")]
+  assert generate.picture(readme, "media/") == #("media/r.webp", "books")
+  assert generate.picture(readme, "nope/") == #("", "")
 }

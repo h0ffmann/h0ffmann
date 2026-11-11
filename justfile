@@ -21,7 +21,8 @@ _site:
     cd site && rm -rf dist && mkdir -p dist && gleam build \
       && esbuild entry.mjs --bundle --minify --format=esm --outfile=dist/app.js --log-level=warning \
       && gleam run -m h0ffmann_site/prerender --no-print-progress > dist/index.html \
-      && cp -R static/. dist/
+      && cp -R static/. dist/ \
+      && cp -R ../media dist/
     @echo "site: site/dist"
 
 nixb := "nix --extra-experimental-features 'nix-command flakes'"
