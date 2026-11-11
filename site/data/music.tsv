@@ -1,3 +1,4 @@
-# The song the site plays (a Spotify embed; it starts when the reader presses play). One row.
-# track	source
-750rGcrtBGUlPWh16o0r9D	the owner, 11 November 2026: "quero que toque essa musica no meu site", https://open.spotify.com/intl-pt/track/750rGcrtBGUlPWh16o0r9D
+# What the site plays (a Spotify embed; it starts when the reader presses play), and where its lyrics are. One row.
+# The lyrics are not copied here: they are the authors' (copyright); the page links to them.
+# embed	lyrics	source
+album/2eawgQvAxZ5Laen9KDuRaX	https://genius.com/search?q=Marcelo%20D2%20Assim%20Tocam%20os%20Meus%20Tambores	the owner, 11 November 2026: "change to this music, add embeded lyrics, instead of a song, put HEAR", https://open.spotify.com/intl-pt/album/2eawgQvAxZ5Laen9KDuRaX (Assim Tocam os Meus Tambores, Marcelo D2, Spotify's oEmbed)

@@ -130,6 +130,7 @@ fn top(model: Model) -> Element(Msg) {
         html.a([attribute.href("#write")], [tx("write")]),
         html.a([attribute.href("#read")], [tx("read")]),
         html.a([attribute.href("#fun")], [tx("have fun")]),
+        html.a([attribute.href("#hear")], [tx("hear")]),
         tongues(model),
       ]),
     ]),
@@ -271,26 +272,34 @@ fn fun_section() -> Element(msg) {
   ])
 }
 
-/// The song (site/data/music.tsv), in Spotify's own player. Browsers do not start sound on their
-/// own, so it plays when the reader presses play.
+/// hear: what the site plays (site/data/music.tsv), in Spotify's own player, and a link to its
+/// lyrics. Browsers do not start sound on their own, so it plays when the reader presses play.
+/// The lyrics are the authors', not copied here.
 fn song_section() -> Element(msg) {
   case content.song {
     "" -> element.none()
-    track ->
-      part("song", "a song", [
+    embed ->
+      part("hear", "hear", [
         html.iframe([
           attribute.class("song"),
           attribute.src(
-            "https://open.spotify.com/embed/track/" <> track <> "?theme=0",
+            "https://open.spotify.com/embed/" <> embed <> "?theme=0",
           ),
           a("title", "Spotify"),
-          a("height", "152"),
+          a("height", "352"),
           a("loading", "lazy"),
           a(
             "allow",
             "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
           ),
         ]),
+        case content.lyrics {
+          "" -> element.none()
+          href ->
+            html.p([attribute.class("links lyrics")], [
+              external(href, "the lyrics, on Genius"),
+            ])
+        },
       ])
   }
 }
