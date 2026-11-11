@@ -18,7 +18,7 @@ fn page() -> String {
 pub fn the_page_says_who_he_is_in_the_readmes_words_test() {
   let html = page()
   assert content.me != ""
-  assert string.contains(html, "the aquatic prometheus")
+  assert !string.contains(html, "aquatic prometheus")
   assert string.contains(html, "the art of the maintenance of apps")
   assert string.contains(
     html,
@@ -200,7 +200,6 @@ pub fn the_page_offers_its_languages_test() {
   let html = page()
   assert string.contains(html, ">português</button>")
   assert string.contains(html, "aria-pressed=\"true\"")
-  assert string.contains(html, "the aquatic prometheus")
 }
 
 // The forks: every one on the page, and PUBLIC in capitals, the one exception to lower case.

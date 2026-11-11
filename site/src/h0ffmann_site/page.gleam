@@ -17,7 +17,7 @@ pub fn document(body: Element(msg)) -> Element(msg) {
   let stylesheet = fn(href) {
     html.link([attribute.rel("stylesheet"), attribute.href(href)])
   }
-  let title = "h0ffmann: matheus hoffmann, the aquatic prometheus"
+  let title = "h0ffmann: matheus hoffmann"
   let description =
     "the art of the maintenance of apps. open research on wave modelling, game theory and self-improving apps, from an ex kid athlete."
   html.html([attribute.lang("en")], [
@@ -48,7 +48,7 @@ pub fn document(body: Element(msg)) -> Element(msg) {
       property("og:image:height", "627"),
       property(
         "og:image:alt",
-        "h0ffmann, the aquatic prometheus: the art of the maintenance of apps. wave modelling, game theory, self-improving apps.",
+        "h0ffmann: the art of the maintenance of apps. wave modelling, game theory, self-improving apps.",
       ),
       meta("twitter:card", "summary_large_image"),
       meta("twitter:title", title),

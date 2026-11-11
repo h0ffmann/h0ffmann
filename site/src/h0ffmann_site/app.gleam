@@ -225,9 +225,6 @@ fn cover(model: Model) -> Element(Msg) {
         ]),
         tongues(model),
         html.h1([], [tx("h0ffmann")]),
-        html.p([attribute.class("epithet")], [
-          tx("the aquatic prometheus"),
-        ]),
         // The owner's sentence, 14 October 2026, in the light of Ouroboric (DESIGN.md, rule 3).
         html.p([attribute.class("ouro-line")], [
           tx(
