@@ -71,3 +71,11 @@ pub fn badges_cvs_and_pictures_are_read_test() {
   assert generate.picture(readme, "media/") == #("media/r.webp", "books")
   assert generate.picture(readme, "nope/") == #("", "")
 }
+
+pub fn the_headline_counts_the_years_from_the_first_dated_line_test() {
+  let readme =
+    "**Staff Software Engineer & FDE** 31yo\n\n**Technical skills and background**\n- Software development: 10+ years.\n- 2015: LIOC, ocean lab.\n- 2016: [LIOC](https://x) again.\n"
+  assert generate.headline(readme, 2026)
+    == "Staff Software Engineer with 11 years of experience, since LIOC in 2015"
+  assert generate.headline("**Staff Engineer** x\n", 2026) == "Staff Engineer"
+}
