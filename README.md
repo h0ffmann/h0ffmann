@@ -43,12 +43,6 @@
 **Research: UFSC, until mid-2027**
 - A team of 5 persons ([ondaseventos.ufsc.br](https://ondaseventos.ufsc.br)).
 - I port the WAVEWATCH III (WW3) ocean wave model from old Fortran to C++ (Kokkos and CUDA). Rust may follow, with help from Prof. Pedro Veras (LabECO). The goal: WW3 runs faster on GPUs and gives the same results as the Fortran. Bit-for-bit parity where possible; the physics stays consistent.
-- My works with a DOI: marola ([10.5281/zenodo.23224155](https://doi.org/10.5281/zenodo.23224155)), ww3-gpu ([10.5281/zenodo.23221351](https://doi.org/10.5281/zenodo.23221351)), picasso ([10.5281/zenodo.23311208](https://doi.org/10.5281/zenodo.23311208)), closed source ([10.5281/zenodo.23333656](https://doi.org/10.5281/zenodo.23333656)), marola-bench ([10.5281/zenodo.23352633](https://doi.org/10.5281/zenodo.23352633)), nashkell, the open book ([10.5281/zenodo.23356739](https://doi.org/10.5281/zenodo.23356739)).
-
-**Misc**
-- AWS: 4 certifications.
-- PADI Rescue Diver: 5 scuba diving courses.
-- Open water: 2 Oceanman 10 km swims, 2025 (Salvador, Rio).
 
 <p align="center">
   <img src="media/reading-2026-11-11.webp" alt="h0ffmann - how I read: ten technical ebooks from my library on a dark shelf, each cover with its title, author and language: Certainty by Construction (Agda), The DevOps Toolkit, Rust From the Ground Up, The Python Master, Clean Architectures in Python, Functional Event-Driven Architecture (Scala), The Simple Haskell Handbook, Production Haskell, Functional Design and Architecture (Haskell), Practical FP in Scala; a card under them names where I read: Leanpub, my ebook library, and Goodreads, the books that I read" width="720"/>
