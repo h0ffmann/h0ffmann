@@ -4,9 +4,13 @@
 
 <p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of Motorcycle Maintenance</i> (1974), the epigraph on its opening page</sub></p>
 
-[![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/h0ffmann/badge.svg)](https://hub.xerj.org/contributors/h0ffmann) [![piabrota author](https://img.shields.io/badge/piabrota-author-7c3aed?labelColor=11120f)](https://github.com/piabrota) [![marola-dev author](https://img.shields.io/badge/marola--dev-author-7c3aed?labelColor=11120f)](https://github.com/marola-dev) [![ww3-gpu author](https://img.shields.io/badge/ww3--gpu-author-7c3aed?labelColor=11120f)](https://github.com/h0ffmann/ww3-gpu) [![aiXiv 2611.01104](https://img.shields.io/badge/aiXiv-2611.01104-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01104) [![aiXiv 2611.01105](https://img.shields.io/badge/aiXiv-2611.01105-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01105)
+**think** [![piabrota author](https://img.shields.io/badge/piabrota-author-7c3aed?labelColor=11120f)](https://github.com/piabrota) [![marola-dev author](https://img.shields.io/badge/marola--dev-author-7c3aed?labelColor=11120f)](https://github.com/marola-dev) <a href="https://github.com/marola-dev/marola/blob/main/PARTNERS.en.md"><img src="https://raw.githubusercontent.com/marola-dev/marola/a4c2af1b106a3ea50c3ae8783bcd91550f7d9377/docs/assets/sponsors/lnt-proud-partner.png" alt="marola-dev is a Leave No Trace Proud Partner" height="20"></a> [![ww3-gpu author](https://img.shields.io/badge/ww3--gpu-author-7c3aed?labelColor=11120f)](https://github.com/h0ffmann/ww3-gpu) [![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/h0ffmann/badge.svg)](https://hub.xerj.org/contributors/h0ffmann)
 
-[![Goodreads piabrota](https://img.shields.io/badge/goodreads-piabrota-7c3aed?labelColor=11120f)](https://www.goodreads.com/user/show/206337057-piabrota) [![Substack hoffmagic](https://img.shields.io/badge/substack-hoffmagic-7c3aed?labelColor=11120f)](https://hoffmagic.substack.com)
+**write** [![aiXiv 2611.01104](https://img.shields.io/badge/aiXiv-2611.01104-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01104) [![aiXiv 2611.01105](https://img.shields.io/badge/aiXiv-2611.01105-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01105) [![DOI marola](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23224155) [![DOI closed source](https://img.shields.io/badge/closed%20source-10.5281%2Fzenodo.23333656-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23333656) [![Substack hoffmagic](https://img.shields.io/badge/substack-hoffmagic-7c3aed?labelColor=11120f)](https://hoffmagic.substack.com)
+
+**read** [![Goodreads piabrota](https://img.shields.io/badge/goodreads-piabrota-7c3aed?labelColor=11120f)](https://www.goodreads.com/user/show/206337057-piabrota)
+
+**have fun** ![PADI diver: 5 courses](https://img.shields.io/badge/PADI%20diver-5%20courses-0B5FA5?labelColor=11120f) ![water marathons: 2](https://img.shields.io/badge/water%20marathons-2-0B5FA5?labelColor=11120f)
 
 **Staff Software Engineer & FDE** 31yo
 
@@ -43,7 +47,7 @@
 
 **Misc**
 - AWS: 4 certifications.
-- PADI Rescue Diver: 4 scuba diving certifications.
+- PADI Rescue Diver: 5 scuba diving courses.
 - Open water: 2 Oceanman 10 km swims, 2025 (Salvador, Rio).
 
 <p align="center">
