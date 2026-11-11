@@ -32,44 +32,59 @@ pub fn the_page_says_who_he_is_in_his_words_test() {
   assert !string.contains(html, "aquatic prometheus")
 }
 
-pub fn the_readmes_studio_research_and_badges_are_on_the_page_test() {
+pub fn think_is_piabrota_test() {
   let html = page()
   assert content.studio != []
   assert list.all(content.studio, fn(i) {
     i.1 == "" || string.contains(html, "href=\"" <> i.1 <> "\"")
   })
-  assert content.research != []
-  assert content.badges != []
-  assert list.all(content.badges, fn(b) {
-    string.contains(html, "href=\"" <> b.1 <> "\"")
-  })
+  assert string.contains(html, "href=\"https://github.com/piabrota\"")
   assert content.cvs != []
   assert list.all(content.cvs, fn(cv) {
     string.contains(html, "/blob/main/" <> cv.1 <> "\"")
   })
+  assert !string.contains(html, "cv-water")
 }
 
-pub fn every_work_with_a_doi_is_linked_test() {
+// The owner, 11 November 2026: write is the two aiXiv papers and the DOIs of marola and closed
+// source, and no other DOI.
+pub fn write_is_two_papers_and_two_dois_test() {
   let html = page()
-  let dois = list.filter(content.works, fn(w) { w.doi != "" })
-  assert list.length(dois) >= 6
-  assert list.all(dois, fn(w) {
-    string.contains(html, "https://doi.org/" <> w.doi)
+  let papers =
+    list.filter(content.badges, fn(b) { string.starts_with(b.0, "aiXiv") })
+  assert list.length(papers) == 2
+  assert list.all(papers, fn(b) {
+    string.contains(html, "href=\"" <> b.1 <> "\"")
   })
-  assert list.all(dois, fn(w) {
-    !w.book || string.contains(html, "★ " <> w.name)
+  list.each(content.works, fn(w) {
+    case w.doi {
+      "" -> Nil
+      doi -> {
+        let shown = string.contains(html, "https://doi.org/" <> doi)
+        assert shown == list.contains(app.written, w.id)
+      }
+    }
   })
+  assert list.length(app.written) == 2
 }
 
-pub fn the_library_and_the_song_are_on_the_page_test() {
+pub fn read_is_goodreads_and_the_song_plays_test() {
   let html = page()
-  assert string.starts_with(content.reading.0, "media/")
-  assert string.contains(html, "src=\"" <> content.reading.0 <> "\"")
+  assert string.contains(html, "goodreads.com/user/show/")
+  assert !string.contains(html, "substack")
   assert content.song != ""
   assert string.contains(
     html,
     "https://open.spotify.com/embed/track/" <> content.song,
   )
+}
+
+pub fn have_fun_is_the_diver_and_the_swims_test() {
+  let html = page()
+  assert content.fun
+    == [#("PADI diver", "5 courses"), #("water marathons", "2")]
+  assert string.contains(html, "id=\"fun\"")
+  assert string.contains(html, ">5 courses<")
 }
 
 pub fn the_notice_and_its_doi_are_on_the_page_test() {
@@ -97,11 +112,11 @@ pub fn a_link_to_the_site_has_a_preview_test() {
 
 // One source, and a table for each other language: a sentence is looked up by its English.
 pub fn a_sentence_is_translated_by_its_source_test() {
-  assert app.translate("pt-BR", "now") == "agora"
-  assert app.translate("en", "now") == "now"
+  assert app.translate("pt-BR", "think") == "penso"
+  assert app.translate("en", "think") == "think"
   assert app.translate("pt-BR", "a sentence with no row")
     == "a sentence with no row"
-  assert app.translate("xx", "now") == "now"
+  assert app.translate("xx", "think") == "think"
 }
 
 pub fn the_page_offers_its_languages_test() {

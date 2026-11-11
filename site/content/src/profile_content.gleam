@@ -599,6 +599,20 @@ pub const song = "
     )
     <> "
 
+/// The \"have fun\" part of the page (site/data/fun.tsv): #(what, count).
+pub const fun = "
+    <> lits(
+      rows(read("../data/fun.tsv"))
+      |> list.filter_map(fn(r) {
+        case r {
+          [what, count, _source] ->
+            Ok("#(" <> lit(what) <> ", " <> lit(count) <> ")")
+          _ -> Error(Nil)
+        }
+      }),
+    )
+    <> "
+
 /// The README's \"Misc\" list: the certificates and the open water.
 pub const misc = "
     <> lits(list.map(items(readme, "**Misc**"), fn(i) { lit(plain(i)) }))
