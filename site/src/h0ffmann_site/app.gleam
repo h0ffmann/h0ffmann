@@ -153,15 +153,8 @@ fn top(model: Model) -> Element(Msg) {
                 "primary",
               )
             }),
-            [
-              // The research CV for the ocean, in English (the owner, 14 October 2026).
-              button(
-                content.repo <> "/blob/main/pdf/cv.en.OCEAN.pdf",
-                "cv-water (PDF)",
-                "quiet",
-              ),
-              button(content.repo, "the readme on GitHub", "quiet"),
-            ],
+            // Only the CVs the README links (the owner, 11 November 2026).
+            [button(content.repo, "the readme on GitHub", "quiet")],
           ]),
         ),
       ]),
