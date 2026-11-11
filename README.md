@@ -45,10 +45,10 @@
 - Open water: 2 Oceanman 10 km swims, 2025 (Salvador, Rio).
 
 <p align="center">
-  <img src="media/reading-2026-11-10.webp" alt="h0ffmann - how I read: ten technical ebooks from my library on a dark shelf, each cover with its title, author and language: Certainty by Construction (Agda), The DevOps Toolkit, Rust From the Ground Up, The Python Master, Clean Architectures in Python, Functional Event-Driven Architecture (Scala), The Simple Haskell Handbook, Production Haskell, Functional Design and Architecture (Haskell), Practical FP in Scala" width="720"/>
+  <img src="media/reading-2026-11-11.webp" alt="h0ffmann - how I read: ten technical ebooks from my library on a dark shelf, each cover with its title, author and language: Certainty by Construction (Agda), The DevOps Toolkit, Rust From the Ground Up, The Python Master, Clean Architectures in Python, Functional Event-Driven Architecture (Scala), The Simple Haskell Handbook, Production Haskell, Functional Design and Architecture (Haskell), Practical FP in Scala; a card under them names where I read: Leanpub, my ebook library, and Goodreads, the books that I read" width="720"/>
 </p>
 
-<p align="center"><sub>how I read: ten books from my ebook library, the covers as their publishers made them</sub></p>
+<p align="center"><sub>how I read: ten books from my ebook library on <a href="https://leanpub.com">leanpub</a>, the covers as their publishers made them · the books that I read on <a href="https://www.goodreads.com/user/show/206337057-piabrota">goodreads</a></sub></p>
 
 <p align="center">
   <a href="site/data/topics.tsv"><img src="site/static/topics.png" alt="h0ffmann - how I fork, how I play: a word cloud of the GitHub topics of my public repositories of h0ffmann, marola-dev and piabrota, drawn with Archify; the more repositories carry a topic, the bigger its word" width="720"/></a>
