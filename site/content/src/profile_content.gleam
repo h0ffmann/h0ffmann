@@ -585,6 +585,20 @@ pub const me = "
     )
     <> "
 
+/// The Spotify id of the song the site plays (site/data/music.tsv); empty when there is none.
+pub const song = "
+    <> lit(
+      rows(read("../data/music.tsv"))
+      |> list.find_map(fn(r) {
+        case r {
+          [track, _source] -> Ok(track)
+          _ -> Error(Nil)
+        }
+      })
+      |> result.unwrap(""),
+    )
+    <> "
+
 /// The README's \"Misc\" list: the certificates and the open water.
 pub const misc = "
     <> lits(list.map(items(readme, "**Misc**"), fn(i) { lit(plain(i)) }))

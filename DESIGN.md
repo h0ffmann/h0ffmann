@@ -7,6 +7,29 @@ that changes the look reads this page first, and changes this page in the same c
 All rights reserved, like the rest of this repository ([`REUSE.md`](REUSE.md)): these rules are
 for this profile and are not a kit for another one.
 
+## The site since 11 November 2026
+
+The owner, 11 November 2026: "in fact I want h0ffmann/h0ffmann to be minimal like this one
+https://exitnode.dev/ but with piabrota colors", and, of the choices put to him, "one short
+page". The site is now that page. Its rules win over the sections below where they disagree;
+the sections below still hold for the CV, the README's pictures and the `topic` column of the
+data.
+
+- **One short page.** A bar (the name, three anchors, the two languages), a hero, two cards
+  (the studio and the research, in the README's words), the works with a DOI, how he reads, a
+  song, the README's links, and a foot with the notice. The arc, the graph, the indexes, the
+  numbers, the clouds, the stars, the history and the friends left the page; their tables stay
+  in `site/data/`.
+- **piabrota's colours and faces**, from `piabrota.art/style.css` (the owner's studio): dark by
+  default (`--bg` `#0B0D12`, `--surface` `#14171F`, `--border` `#2A303C`), light when the
+  reader's system asks for it; one red (`--accent` `#BC2318`, `--accent-text` `#FF6B5E`) for
+  what can be pressed and for the small labels; one blue (`--sea`) for the drawing. Fjalla One
+  for the name and the headings, Inter for the text, JetBrains Mono for data and labels.
+- **exitnode's calm**, not its code or its words: a faint grid and a glow behind the top, a
+  large name with one italic line under it in red, a short lede behind a red rule, cards with a
+  red tab on their top edge. Nothing moves by itself.
+- No neon glow, no four lights on the page, no epithet.
+
 ## One sentence
 
 A dark sea at night, and four lights on it.
