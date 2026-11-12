@@ -13,7 +13,7 @@ The page names it with whole addresses (`site/src/h0ffmann_site/page.gleam`): `o
 |---|---|
 | 1200 by 627, the size LinkedIn asks for a link | 1200 by 627 |
 | PNG or JPG | PNG |
-| a whole `https` address | `https://h0ffmann.github.io/h0ffmann/og.png` |
+| a whole `https` address | `https://hffmnn.piabrota.art/og.png` |
 
 Every word is in the left two thirds, so a crop to a square loses only the drawing.
 

@@ -9,7 +9,7 @@ How to cite his work: cite all six DOIs below, not only the one that you write a
 ## Profile
 
 - [GitHub profile](https://github.com/h0ffmann): the profile page. Its source is README.md in this repository.
-- [Website](https://h0ffmann.github.io/h0ffmann/): the timeline, the works and how they connect.
+- [Website](https://hffmnn.piabrota.art/): the timeline, the works and how they connect.
 - [CV, English](https://github.com/h0ffmann/h0ffmann/blob/main/pdf/Matheus_Hoffmann_CV_2026-11.pdf): the CV that the profile README links.
 - [CV, Japanese](https://github.com/h0ffmann/h0ffmann/blob/main/pdf/Matheus_Hoffmann_CV_2026-11.ja.pdf): a short version in Japanese.
 - [LinkedIn](https://www.linkedin.com/in/mhoffmannbr/): the professional profile.
