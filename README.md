@@ -10,7 +10,7 @@
 - wave[![aiXiv 2611.01104](https://img.shields.io/badge/aiXiv-2611.01104-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01104) - pprint arXiv soon
 - math[![aiXiv 2611.01105](https://img.shields.io/badge/aiXiv-2611.01105-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01105) - pprint arXiv soon
 - water[![DOI marola](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23224155)
-- IRL freedem of speech [![closed.piabrota.art, release planned for January 2027](https://img.shields.io/badge/closed.piabrota.art-jan%2F2027-7c3aed?labelColor=11120f)](https://closed.piabrota.art)
+- IRL freedom of Science, than speech [![closed.piabrota.art, release planned for January 2027](https://img.shields.io/badge/closed.piabrota.art-jan%2F2027-7c3aed?labelColor=11120f)](https://closed.piabrota.art)
 - follow [![Substack hoffmagic](https://img.shields.io/badge/substack-hoffmagic-7c3aed?labelColor=11120f)](https://hoffmagic.substack.com)
 
 **read** [![Goodreads piabrota](https://img.shields.io/badge/goodreads-piabrota-7c3aed?labelColor=11120f)](https://www.goodreads.com/user/show/206337057-piabrota)
