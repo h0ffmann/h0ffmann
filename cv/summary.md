@@ -15,7 +15,7 @@ offers.
 [mhoffmannfs@gmail.com](mailto:mhoffmannfs@gmail.com)
 [linkedin](https://www.linkedin.com/in/mhoffmannbr/)
 [github](https://github.com/h0ffmann)
-[the site](https://h0ffmann.github.io/h0ffmann/)
+[the site](https://me.piabrota.art/)
 [ways of working](../me/ways-of-working.md)
 :::
 

@@ -5,7 +5,7 @@ import lustre/element.{type Element}
 import lustre/element/html
 
 /// Where the site is published. A link preview needs whole addresses, not relative ones.
-pub const address = "https://h0ffmann.github.io/h0ffmann/"
+pub const address = "https://me.piabrota.art/"
 
 pub fn document(body: Element(msg)) -> Element(msg) {
   let meta = fn(name, value) {
