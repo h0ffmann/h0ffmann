@@ -178,8 +178,8 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   checks it out in a fresh clone. A commit that moves the pin is read by a person first, since an
   agent loads its `SKILL.md` as instructions. The PNG is built into `build/cover/`; a copy for
   pull requests is `site/preview/linkedin-cover.png`.
-- `site/` – the website, at https://me.piabrota.art/, served from piabrota2 by
-  piabrota/nix-os (`me.nix`, `me-site/`) at a pinned commit of this repository; GitHub Pages
+- `site/` – the website, at https://hffmnn.piabrota.art/, served from piabrota2 by
+  piabrota/nix-os (`hffmnn.nix`, `hffmnn-site/`) at a pinned commit of this repository; GitHub Pages
   (`.github/workflows/site.yml`) still publishes the same files at h0ffmann.github.io/h0ffmann.
   The one address of the site is `address` in `site/src/h0ffmann_site/page.gleam`. Gleam and Lustre, the stack of h0ffmann/closed-source's
   site; `just site` builds it with picasso's gleam-website lab (`flake.nix`, `devShells.site`).

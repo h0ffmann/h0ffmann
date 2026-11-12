@@ -73,7 +73,7 @@ def cff(meta: dict, doi: str) -> str:
         if c.get("affiliation"):
             lines.append("    affiliation: " + quote(c["affiliation"]))
     lines.append('repository-code: "https://github.com/h0ffmann/h0ffmann"')
-    lines.append('url: "https://me.piabrota.art/"')
+    lines.append('url: "https://hffmnn.piabrota.art/"')
     if doi:
         lines.append("doi: " + doi)
     lines.append("keywords:")
