@@ -65,7 +65,7 @@ cv:end -->
 <!-- cv:only
 ## ⚡ pesquisa — [ww3-gpu](https://github.com/h0ffmann/ww3-gpu)
 
-meu projeto de graduação na ufrj (escola politécnica), coorientado no labeco/ufsc: o **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, um laboratório aberto e um livro em andamento sobre programação agêntica e pesquisa agêntica, em torno de um problema: levar os kernels mais caros do modelo de ondas **WAVEWATCH III** da noaa para gpus *sem mudar a resposta*.
+meu projeto de graduação na ufrj (escola politécnica), coorientado no labeco/ufsc pelo PhD P. V. Guimarães: o **[ww3 gpu lab](https://github.com/h0ffmann/ww3-gpu)**, um laboratório aberto e um livro em andamento sobre programação agêntica e pesquisa agêntica, em torno de um problema: levar os kernels mais caros do modelo de ondas **WAVEWATCH III** da noaa para gpus *sem mudar a resposta*.
 um toolchain fortran/mpi/netcdf fixado com nix, do **[picasso](https://github.com/h0ffmann/picasso)** (meus labs nix), compila o ww3 e roda um teste de regressão em um comando. o kernel de interação não linear dia (`W3SNL1`), portado para c++/**kokkos**, reproduz o fortran bit a bit em serial, openmp e cuda, e roda 1.000 pontos de mar em 0,047 ms numa rtx 4090 contra 24,96 ms em serial.
 as 17 lições, do espectro de ondas ao port de kernels com agentes de código, são os capítulos do livro, gerados em pdf e num [site](https://h0ffmann.github.io/ww3-gpu/) a cada merge.
 
