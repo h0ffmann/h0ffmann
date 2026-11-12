@@ -6,7 +6,7 @@
 
 **think**  <a href="https://github.com/marola-dev/marola/blob/main/PARTNERS.en.md"><img src="https://raw.githubusercontent.com/marola-dev/marola/a4c2af1b106a3ea50c3ae8783bcd91550f7d9377/docs/assets/sponsors/lnt-proud-partner.png" alt="marola-dev is a Leave No Trace Proud Partner" height="20"></a> [![piabrota.art author](https://img.shields.io/badge/piabrota-author-7c3aed?labelColor=11120f)](https://github.com/piabrota) [![marola author](https://img.shields.io/badge/marola--dev-author-7c3aed?labelColor=11120f)](https://github.com/marola-dev)  [![ww3-gpu author](https://img.shields.io/badge/ww3--gpu-author-7c3aed?labelColor=11120f)](https://github.com/h0ffmann/ww3-gpu) [![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/h0ffmann/badge.svg)](https://hub.xerj.org/contributors/h0ffmann)
 
-**write** [![aiXiv 2611.01104](https://img.shields.io/badge/aiXiv-2611.01104-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01104) [![aiXiv 2611.01105](https://img.shields.io/badge/aiXiv-2611.01105-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01105) [![DOI marola](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23224155) [![closed-source Ⓐ open-book, DOI](https://img.shields.io/badge/closed--source%20%E2%92%B6%20open--book-10.5281%2Fzenodo.23333656-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23333656) [![closed.piabrota.art, release planned for January 2027](https://img.shields.io/badge/closed.piabrota.art-jan%2F2027-7c3aed?labelColor=11120f)](https://closed.piabrota.art) [![Substack hoffmagic](https://img.shields.io/badge/substack-hoffmagic-7c3aed?labelColor=11120f)](https://hoffmagic.substack.com)
+**write** [![aiXiv 2611.01104](https://img.shields.io/badge/aiXiv-2611.01104-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01104) [![aiXiv 2611.01105](https://img.shields.io/badge/aiXiv-2611.01105-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01105) [![DOI marola](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23224155)[![closed.piabrota.art, release planned for January 2027](https://img.shields.io/badge/closed.piabrota.art-jan%2F2027-7c3aed?labelColor=11120f)](https://closed.piabrota.art) [![Substack hoffmagic](https://img.shields.io/badge/substack-hoffmagic-7c3aed?labelColor=11120f)](https://hoffmagic.substack.com)
 
 **read** [![Goodreads piabrota](https://img.shields.io/badge/goodreads-piabrota-7c3aed?labelColor=11120f)](https://www.goodreads.com/user/show/206337057-piabrota)
 
@@ -16,14 +16,12 @@
 
 **Piabrota AI Studio (self-employed, since October 2026)**
 - [wave.piabrota.art](https://wave.piabrota.art): Science, [>2k views](https://zenodo.org/records/24130909) on Zenodo, [fresh](https://aixiv.online/abs/2611.01104) on aiXiv
+- [me](https://room.piabrota.art)
+- [piabrota home](https://piabrota.art): home
 - [room.piabrota.art](https://room.piabrota.art): a 3D room - three.js, 3d model, ambience. [idea](https://felixrieseberg.com)
 - [metrics.piabrota.art](https://metrics.piabrota.art): homelab numbers - vcpu / ram
 - [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast - wind/temp now, swell later
 - [skills.piabrota.art](https://skills.piabrota.art): my skill collection - DYOR
-- [pirsig.piabrota.art](https://pirsig.piabrota.art): a second brain - obsidian-like
-- [proof.piabrota.art](https://proof.piabrota.art): Lean 4, Z3 and other formal verification tools -- agda soon
-- [hermes.piabrota.art](https://hermes.piabrota.art): Hermes Agent on NixOS
-- [rig.piabrota.art](https://rig.piabrota.art): OpenRig fabric on NixOS
 - Partnerships or white-label requests: whitelabel [at] piabrota.art
 
 **Technical skills and background**
@@ -40,6 +38,4 @@
 - \[UK\] 2025: [TV](https://www.itv.com) audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA, S3, Lambda and Step Functions
 - \[UK\] 2026: I redesigned, with DS Lead, all 34 long-term models (2 channels × 17 demographics) as heuristic rules. I took them to production on AWS (SageMaker, MLflow). I resigned on early September 2026
 
-**Research: [UFSC](https://ondaseventos.ufsc.br/) with PhD P. V. Guimarães, until mid-2027**
-- A team of 5
-- h0ffmann/ww3-gpu
+mhoffmannfs [at] gmail (.com)
