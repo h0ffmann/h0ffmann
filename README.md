@@ -12,6 +12,8 @@
 - open & clean water [![DOI marola](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23224155) - 6 BR authors in 2 countries
 - open-science [![closed.piabrota.art, release planned for January 2027](https://img.shields.io/badge/closed.piabrota.art-jan%2F2027-7c3aed?labelColor=11120f)](https://closed.piabrota.art)
 - follow [![Substack hoffmagic](https://img.shields.io/badge/substack-hoffmagic-7c3aed?labelColor=11120f)](https://hoffmagic.substack.com)
+- [personal, wip](https://hffmnn.piabrota.art/)
+
 
 **read** [![Goodreads piabrota](https://img.shields.io/badge/goodreads-piabrota-7c3aed?labelColor=11120f)](https://www.goodreads.com/user/show/206337057-piabrota)
 
