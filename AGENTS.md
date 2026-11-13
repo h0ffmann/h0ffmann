@@ -216,7 +216,7 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 - `www/` – the new website (the owner, 13 November 2026): one short dark page, in the plain look
   of hayyoth.org with the colours inverted, in four languages (en, pt-BR, ja, es) with a locale
   switch in the foot. The content is Markdown, `www/content/<lang>.md`, one per language;
-  `www/build.py` (Python, no dependencies) writes `www/dist/`, with a copy of `llms.txt` that every page links (`just www`), and `www/dist/` is
+  `www/build.py` (Python, no dependencies) writes `www/dist/`, with a copy of `llms.txt` that every page links and the files of `www/static/` (the owner's pixel avatar, top left; given by the owner on 13 November 2026) (`just www`), and `www/dist/` is
   committed because CI is off (`just www --check` says whether it is stale); `.github/workflows/site.yml`, started by hand, publishes it to GitHub Pages. It replaces `site/`
   once piabrota/nix-os serves `www/dist/` instead of building the Gleam site; until then `site/`
   stays as it is.

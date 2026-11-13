@@ -3,7 +3,7 @@
 
 The Markdown is a small subset: front matter, `# heading`, `---` and paragraphs with
 [links](url); a link that starts with ./ is relative to the site root. The repository's llms.txt
-is copied beside the pages. Everything before the first `---` is the centred header. `--check` fails when the
+is copied beside the pages, and so is every file of www/static. Everything before the first `---` is the centred header. `--check` fails when the
 committed www/dist is not what the content makes (CI is off, so the output is committed).
 """
 import html
@@ -16,12 +16,14 @@ CONTENT, DIST = ROOT / "content", ROOT / "dist"
 ORDER = ["en", "pt-BR", "ja", "es"]
 
 STYLE = """html { background: #000; color: #fff; }
-body { max-width: 650px; margin: 0 auto; padding: 12px; font-family: serif; }
+body { max-width: 650px; margin: 0 auto; padding: 12px; font-family: serif; position: relative; }
 h1 { margin: 0; }
 p { margin: 0.25em 0; }
 header, footer { text-align: center; }
+header { padding: 0 76px; min-height: 64px; }
 a { color: #fff; }
-hr { border: 0; border-top: 1px solid #fff; }"""
+hr { border: 0; border-top: 1px solid #fff; }
+.avatar { position: absolute; top: 12px; left: 12px; width: 64px; height: 64px; }"""
 
 
 def parse(path):
@@ -84,6 +86,7 @@ def page(meta, md, pages):
 </head>
 <body>
   <header>
+    <img class="avatar" src="{up}avatar.png" width="64" height="64" alt="">
     {chr(10).join(body[:cut])}
   </header>
   {chr(10).join(body[cut:])}
@@ -110,11 +113,16 @@ def build():
     return files
 
 
+STATIC = ROOT / "static"  # copied into dist as they are (the avatar)
+
+
 def main():
     files = build()
     if "--check" in sys.argv:
         stale = [f for f, s in files.items()
                  if not (DIST / f).exists() or (DIST / f).read_text(encoding="utf-8") != s]
+        stale += [f.name for f in sorted(STATIC.iterdir())
+                  if not (DIST / f.name).exists() or (DIST / f.name).read_bytes() != f.read_bytes()]
         if stale:
             sys.exit("www: stale, run `just www`: " + ", ".join(stale))
         print("www: dist is current")
@@ -123,6 +131,9 @@ def main():
         (DIST / f).parent.mkdir(parents=True, exist_ok=True)
         (DIST / f).write_text(s, encoding="utf-8")
         print(f"www: dist/{f}")
+    for f in sorted(STATIC.iterdir()):
+        (DIST / f.name).write_bytes(f.read_bytes())
+        print(f"www: dist/{f.name}")
 
 
 if __name__ == "__main__":
