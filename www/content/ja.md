@@ -7,7 +7,7 @@ description: マテウス・ホフマン、31歳、ブラジル
 ---
 # hffmnn
 
-[gh](https://github.com/h0ffmann) - [codeberg](https://codeberg.org/h0ffmann) - [yt](https://www.youtube.com/@h0ffmann) - [メール](mailto:mhoffmannfs@gmail.com) - [linkedin](https://www.linkedin.com/in/mhoffmannbr/)
+[gh](https://github.com/h0ffmann) - [codeberg](https://codeberg.org/h0ffmann) - [yt](https://www.youtube.com/@mh0ffmannbr) - [メール](mailto:mhoffmannfs@gmail.com) - [linkedin](https://www.linkedin.com/in/mhoffmannbr/)
 
 ---
 
