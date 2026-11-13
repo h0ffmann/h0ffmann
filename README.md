@@ -22,6 +22,7 @@
 **Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
+- [marola.piabrota.art](https://marola.piabrota.art): marola v2, G R E A T news soon
 - [wave.piabrota.art](https://wave.piabrota.art): wave forecast in GPUs, [>3k views](https://zenodo.org/records/24130909) on Zenodo, [fresh](https://aixiv.online/abs/2611.01104) on aiXiv
 - [piabrota](https://piabrota.art): home
 - [room.piabrota.art](https://room.piabrota.art): PC only, a 3D room - three.js, 3d model, ambience. [idea](https://felixrieseberg.com)
