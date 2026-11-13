@@ -7,7 +7,7 @@ description: マテウス・ホフマン、31歳、ブラジル
 ---
 # hffmnn
 
-[gh](https://github.com/h0ffmann) - [codeberg](https://codeberg.org/h0ffmann) - [yt](https://www.youtube.com/@h0ffmann) - [メール](mailto:mhoffmannfs@gmail.com) - [linkedin](https://www.linkedin.com/in/mhoffmannbr/)
+[gh](https://github.com/h0ffmann) - [codeberg](https://codeberg.org/h0ffmann) - [yt](https://www.youtube.com/@mh0ffmannbr) - [メール](mailto:mhoffmannfs@gmail.com) - [linkedin](https://www.linkedin.com/in/mhoffmannbr/)
 
 ---
 
@@ -15,4 +15,4 @@ description: マテウス・ホフマン、31歳、ブラジル
 
 31歳 ブラジル
 
-[piabrota の索引](https://piabrota.art) - [marola の索引](https://github.com/marola-dev) - [私の索引](https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt)
+[piabrota の索引](https://piabrota.art) - [marola の索引](https://github.com/marola-dev) - [私の索引](./llms.txt)

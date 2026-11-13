@@ -2,7 +2,8 @@
 """Build www/dist from www/content/*.md: one page per language, no dependencies.
 
 The Markdown is a small subset: front matter, `# heading`, `---` and paragraphs with
-[links](url). Everything before the first `---` is the centred header. `--check` fails when the
+[links](url); a link that starts with ./ is relative to the site root. The repository's llms.txt
+is copied beside the pages. Everything before the first `---` is the centred header. `--check` fails when the
 committed www/dist is not what the content makes (CI is off, so the output is committed).
 """
 import html
@@ -32,32 +33,33 @@ def parse(path):
     return meta, m.group(2).strip()
 
 
-def inline(s):
+def inline(s, up=""):
     out, last = [], 0
     for m in re.finditer(r"\[([^\]]+)\]\(([^)\s]+)\)", s):
         out.append(html.escape(s[last:m.start()]))
-        out.append(f'<a href="{html.escape(m.group(2))}">{html.escape(m.group(1))}</a>')
+        href = up + m.group(2)[2:] if m.group(2).startswith("./") else m.group(2)
+        out.append(f'<a href="{html.escape(href)}">{html.escape(m.group(1))}</a>')
         last = m.end()
     out.append(html.escape(s[last:]))
     return "".join(out)
 
 
-def blocks(md):
+def blocks(md, up):
     out = []
     for b in re.split(r"\n\s*\n", md):
         b = b.strip()
         if b == "---":
             out.append("<hr>")
         elif b.startswith("# "):
-            out.append(f"<h1>{inline(b[2:])}</h1>")
+            out.append(f"<h1>{inline(b[2:], up)}</h1>")
         else:
-            out.append("<p>" + "<br>\n".join(inline(l) for l in b.splitlines()) + "</p>")
+            out.append("<p>" + "<br>\n".join(inline(l, up) for l in b.splitlines()) + "</p>")
     return out
 
 
 def page(meta, md, pages):
     up = "" if meta["dir"] == "." else "../"
-    body = blocks(md)
+    body = blocks(md, up)
     cut = body.index("<hr>") if "<hr>" in body else len(body)
     switch = " - ".join(
         f"<b>{p['locale']}</b>" if p is meta
@@ -75,6 +77,7 @@ def page(meta, md, pages):
   <title>{html.escape(meta['title'])}</title>
   <meta name="description" content="{html.escape(meta['description'])}">
 {alternates}
+  <link rel="alternate" type="text/plain" title="llms.txt" href="{up}llms.txt">
   <style>
 {STYLE}
   </style>
@@ -86,7 +89,7 @@ def page(meta, md, pages):
   {chr(10).join(body[cut:])}
   <br>
   <hr>
-  <footer>{switch}</footer>
+  <footer>{switch} · <a href="{up}llms.txt">llms.txt</a></footer>
 </body>
 </html>
 """
@@ -98,10 +101,13 @@ def build():
         meta, md = parse(CONTENT / f"{name}.md")
         pages.append(meta)
         mds[id(meta)] = md
-    return {
+    files = {
         (Path(p["dir"]) / "index.html").as_posix(): page(p, mds[id(p)], pages)
         for p in pages
     }
+    # The index for language models is the repository's own, served beside the pages.
+    files["llms.txt"] = (ROOT.parent / "llms.txt").read_text(encoding="utf-8")
+    return files
 
 
 def main():
