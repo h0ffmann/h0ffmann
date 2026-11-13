@@ -39,7 +39,7 @@
 - \[US\] 2021: a California startup. [Semantix](https://valor.globo.com/empresas/noticia/2023/01/05/semantix-compra-a-startup-americana-elemeno-em-sua-primeira-aquisicao-internacional.ghtml) bought it
 - \[US\] 2022: promoted to Lead [MLOps](https://github.com/elemeno-ai/elabs-mlflow), consulting for Americanas (B2W, Brazil). ML environments with Kubernetes and Kubeflow
 - \[US\] 2023 to 2024: fraud prevention on Databricks. L5 engineer and Subject Matter Expert of a loss forecasting product. I reported to the CFO. "Values VIP: Tenacious" award, [February 2024](https://www.linkedin.com/in/mhoffmannbr/overlay/Honor/296067482/treasury/?profileId=ACoAABRG_1kBEWvIwVR2h1bvBys5jFmEBGGv4rw)
-- \[UK\] 2025: [TV](https://www.itv.com) audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA, S3, Lambda and Step Functions
-- \[UK\] 2026: I redesigned, with DS Lead, all 34 long-term models (2 channels × 17 demographics) as heuristic rules. I took them to production on AWS (SageMaker, MLflow). I resigned on early September 2026
+- \[UK\] 2025: ML/MLOps in [TV](https://www.itv.com), rearchitect audience timeseries forecasts for 4 channels, >100 models run by day, indirect contract w/ TXP/UK. SageMaker, MWAA, S3, MLflow, XGBoost and symbolic AI
+- \[UK\] 2026: I redesigned, with DS Lead, all 34 long-term models (2 channels × 17 demographics) as many heuristic rules. I took them to production on AWS. I resigned on early September 2026
 
-open2real-work mhoffmannfs [at] gmail (.com)
+open2work mhoffmannfs [at] gmail (.com)
