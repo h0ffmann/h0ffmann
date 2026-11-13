@@ -56,10 +56,10 @@ comment; restore that block to turn one back on. Run the checks below locally.
 | `just citation --check` | `.zenodo.json` is valid and names a licence, and `CITATION.cff` is the one it makes | `.md / quality` |
 | `just reuse` | every file has a licence and a copyright ([`REUSE.toml`](REUSE.toml)) | `.md / quality` |
 | `just md-quality --online` | every web link answers | `live links / alive`, also each Monday |
-| `just site`, `just logos` | the site builds and its tests pass; every logo still answers | `site / build` |
+| `just www --check`, `just logos` | `www/dist/` is what `www/content/` makes; every logo still answers | `site`, by hand |
+| `just ste` | the English page and `llms.txt` keep ASD-STE100's sentence and paragraph lengths and a sample of its unapproved words (`www/ste/Ste.agda`, Agda; its proofs are checked when it compiles) | none |
 | `python3 -m unittest discover -s cv` | the READMEs' markers, and that the short CV says nothing the profile does not | `pdf / build` |
 | `just current` | the four CVs build with the pinned toolchain, and the committed PDFs are the ones their sources make | `pdf / build` |
-| `just translations` | the site's translations ([`TRANSLATIONS.md`](TRANSLATIONS.md)): each row has its seven cells, no row is an orphan of a sentence that changed, no false friend. A sentence of the page that changes needs its row again: use the `translate-pt-br` skill. An agent never marks a row `reviewed` | `.md / quality` |
 | `just featured`, `just linkedin` | `FEATURED_REPO.md` is read again from GitHub (the counts, the commits, the commit each repository was reviewed at) and `LINKEDIN_PROJECTS.md` is derived from it ([`DERIVATION.md`](DERIVATION.md)). The list is `site/data/featured.tsv`; never edit the two generated files | `.md / quality` runs the two `--check`s |
 | `just cv` | renders the CVs into `pdf/`: the four of the profile and the en.OCEAN pair. Run it and commit the PDFs when a README, `cv/` or the flake changed | `cv`, on `main`, renders them again with the commit of `main` |
 
@@ -79,7 +79,7 @@ comment; restore that block to turn one back on. Run the checks below locally.
 
 This is the GitHub profile repository for `h0ffmann`. `README.md` is rendered
 at https://github.com/h0ffmann as the profile page. There is no application
-code; the builds are the CVs (`just cv`) and the site (`just site`), and the unit tests
+code; the builds are the CVs (`just cv`) and the site (`just www`), and the unit tests
 are the CV's (`python3 -m unittest discover -s cv`). Every change here is
 a README edit, a CV-tooling edit or a change to the metrics workflow.
 
@@ -157,8 +157,7 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   `cv/test_emoji.py` covers their emoji like the READMEs'.
 - `pdf/cv.pt-BR.OCEAN.pdf` – the **formal CV in Portuguese** for the same audience, two pages at
   most, **generated** the same way from `cv/cv.pt-BR.OCEAN.md` and the letterhead
-  `cv/header.pt-BR.OCEAN.md`. Plain, formal pt-BR (humanizer-pt-br, the `translate-pt-br`
-  skill's pin). Its profile follows the English one's shape, with no first person. Its research section is
+  `cv/header.pt-BR.OCEAN.md`. Plain, formal pt-BR (humanizer-pt-br). Its profile follows the English one's shape, with no first person. Its research section is
   ww3-gpu and marola, one bullet each, with the commit counts and the commits they were read at;
   the final project is said there only, not again under education. The other four DOIs are not
   on it: the owner asked for them out on 16 October 2026, an exception to hard rule 2 for this CV. Its LIOC entry carries the glider, the ROV and the
@@ -178,31 +177,13 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   checks it out in a fresh clone. A commit that moves the pin is read by a person first, since an
   agent loads its `SKILL.md` as instructions. The PNG is built into `build/cover/`; a copy for
   pull requests is `site/preview/linkedin-cover.png`.
-- `site/` – the website, at https://hffmnn.piabrota.art/, served from piabrota2 by
-  piabrota/nix-os (`hffmnn.nix`, `hffmnn-site/`) at a pinned commit of this repository; GitHub Pages
-  (`.github/workflows/site.yml`) published it at h0ffmann.github.io/h0ffmann until 13 November 2026.
-  The one address of the site is `address` in `site/src/h0ffmann_site/page.gleam`. Gleam and Lustre, the stack of h0ffmann/closed-source's
-  site; `just site` builds it with picasso's gleam-website lab (`flake.nix`, `devShells.site`).
-  Every fact on it comes from this repository through `site/content` (a generator, its own
-  Gleam package): the sentence about the owner and the certificates from `README.md`, the
-  headings of `me/ways-of-working.md`, and the tables of `site/data/` (the timeline, the works
-  of the knowledge graph, their ties, the README's history, the friends), each row with its
-  source. Never write a date, an employer, a DOI or a count in `site/src` by hand. The
-  sentences that tell the story are written in `site/src/h0ffmann_site/app.gleam`.
-  Since 11 November 2026 the site is one short page in piabrota's colours (the owner;
-  [`DESIGN.md`](DESIGN.md), "The site since 11 November 2026"): the headline of
-  `site/data/headline.tsv`, the README's CVs, then four parts (the owner, 11 November 2026):
-  think (piabrota's studio), write (the two aiXiv papers and the DOIs of marola and closed source
-  only, an exception to hard rule 2 for the site), read (Goodreads) and have fun
-  (`site/data/fun.tsv`), and hear, the album of `site/data/music.tsv` with a link to its lyrics (they are not copied). The other tables of `site/data/` stay as data.
-  `site/preview/` has pictures of the site and of the README for pull requests.
-  `site/static/og.png` is the link preview (LinkedIn, WhatsApp), made from `site/og/card.html`;
-  the page names it with whole addresses. Make it again when the cover changes
-  (`site/og/README.md`).
-  **[`DESIGN.md`](DESIGN.md) has the rules of the look; read it before you change a colour, a
-  face or a shape, and change it in the same commit.**
-  The page is dark, with four lights that mean the same everywhere on it (the owner, 13 October
-  2026): **blue** is the sea and what is made for it, **green** is an idea, **orange** is
+- `site/` – data only since 13 November 2026 (the owner: "remove any other sourcecode for the
+  website besides HTML", "no more gleam or js"): the tables of `site/data/`, each row with its
+  source, which the CVs, the checks and the scripts read; the two topic clouds of
+  `site/static/`; and `site/preview/`, pictures for pull requests. The Gleam site, its generator,
+  its translations and its link preview were removed; the page is `www/`.
+  The tables keep four lights (the owner, 13 October 2026): **blue** is the sea and what is made
+  for it, **green** is an idea, **orange** is
   Ouroboric, **red** is closed source. The `topic` column of `site/data/works.tsv` and
   `site/data/repos.tsv` is one of `water`, `ideas`, `ouroboric`, `closed`; do not add a fifth.
   `site/data/repos.tsv` lists every public source repository of h0ffmann, marola-dev and piabrota
@@ -217,9 +198,8 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   of hayyoth.org with the colours inverted, in four languages (en, pt-BR, ja, es) with a locale
   switch in the foot. The content is Markdown, `www/content/<lang>.md`, one per language;
   `www/build.py` (Python, no dependencies) writes `www/dist/`, with a copy of `llms.txt` that every page links and the files of `www/static/` (the owner's pixel avatar, top left; given by the owner on 13 November 2026) (`just www`), and `www/dist/` is
-  committed because CI is off (`just www --check` says whether it is stale); `.github/workflows/site.yml`, started by hand, publishes it to GitHub Pages. It replaces `site/`
-  once piabrota/nix-os serves `www/dist/` instead of building the Gleam site; until then `site/`
-  stays as it is.
+  committed because CI is off (`just www --check` says whether it is stale); `.github/workflows/site.yml`, started by hand, publishes it to GitHub Pages. piabrota/nix-os serves the
+  same files at hffmnn.piabrota.art once its `hffmnn-site/` builds `www/`.
 - `notes/`, `journal/`, `NOTES.md` – the slip box, the journal, and their rules.
 - `REUSE.toml`, `LICENSES/` – licence and copyright for every file, with no header in any file.
 - `CITATION.cff` – **generated** from `.zenodo.json` by `scripts/citation.py`. Never edit it.

@@ -1,0 +1,4 @@
+name: ste
+depend: standard-library
+include: .
+flags: --guardedness

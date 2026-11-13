@@ -23,7 +23,7 @@ header, footer { text-align: center; }
 header { padding: 0 76px; min-height: 64px; }
 a { color: #fff; }
 hr { border: 0; border-top: 1px solid #fff; }
-.avatar { position: absolute; top: 12px; left: 12px; width: 64px; height: 64px; }"""
+.avatar { position: absolute; top: 12px; left: 12px; width: 64px; height: 64px; border-radius: 50%; }"""
 
 
 def parse(path):

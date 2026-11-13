@@ -2,12 +2,6 @@ __pycache__/
 result
 result-*
 
-# The site: the build, the bundle and the generated content.
-site/build/
-site/dist/
-site/content/build/
-site/src/h0ffmann_site/content.gleam
-
 # lychee's answers during `just md-quality --online`
 .lycheecache
 # What `just cv` and `just current` build, before it is copied to pdf/.
@@ -15,3 +9,6 @@ build/
 
 # What `just cover` builds.
 cover/target/
+
+# What Agda writes beside www/ste/Ste.agda.
+www/ste/_build/
