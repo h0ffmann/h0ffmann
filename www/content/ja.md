@@ -15,4 +15,4 @@ description: マテウス・ホフマン、31歳、ブラジル
 
 31歳 ブラジル
 
-[piabrota の索引](https://piabrota.art) - [marola の索引](https://github.com/marola-dev) - [私の索引](https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt)
+[piabrota の索引](https://piabrota.art) - [marola の索引](https://github.com/marola-dev) - [私の索引](./llms.txt)

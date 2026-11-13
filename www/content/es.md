@@ -15,4 +15,4 @@ escritura - [publicaciones](https://medium.com/@mhoffmann) - [ensayos](https://h
 
 31 años, Brasil
 
-[índice piabrota](https://piabrota.art) - [índice marola](https://github.com/marola-dev) - [mi índice](https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt)
+[índice piabrota](https://piabrota.art) - [índice marola](https://github.com/marola-dev) - [mi índice](./llms.txt)

@@ -180,7 +180,7 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   pull requests is `site/preview/linkedin-cover.png`.
 - `site/` – the website, at https://hffmnn.piabrota.art/, served from piabrota2 by
   piabrota/nix-os (`hffmnn.nix`, `hffmnn-site/`) at a pinned commit of this repository; GitHub Pages
-  (`.github/workflows/site.yml`) still publishes the same files at h0ffmann.github.io/h0ffmann.
+  (`.github/workflows/site.yml`) published it at h0ffmann.github.io/h0ffmann until 13 November 2026.
   The one address of the site is `address` in `site/src/h0ffmann_site/page.gleam`. Gleam and Lustre, the stack of h0ffmann/closed-source's
   site; `just site` builds it with picasso's gleam-website lab (`flake.nix`, `devShells.site`).
   Every fact on it comes from this repository through `site/content` (a generator, its own
@@ -216,8 +216,8 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 - `www/` – the new website (the owner, 13 November 2026): one short dark page, in the plain look
   of hayyoth.org with the colours inverted, in four languages (en, pt-BR, ja, es) with a locale
   switch in the foot. The content is Markdown, `www/content/<lang>.md`, one per language;
-  `www/build.py` (Python, no dependencies) writes `www/dist/` (`just www`), and `www/dist/` is
-  committed because CI is off (`just www --check` says whether it is stale). It replaces `site/`
+  `www/build.py` (Python, no dependencies) writes `www/dist/`, with a copy of `llms.txt` that every page links (`just www`), and `www/dist/` is
+  committed because CI is off (`just www --check` says whether it is stale); `.github/workflows/site.yml`, started by hand, publishes it to GitHub Pages. It replaces `site/`
   once piabrota/nix-os serves `www/dist/` instead of building the Gleam site; until then `site/`
   stays as it is.
 - `notes/`, `journal/`, `NOTES.md` – the slip box, the journal, and their rules.

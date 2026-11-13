@@ -15,4 +15,4 @@ writing - [posts](https://medium.com/@mhoffmann) - [essays](https://hoffmagic.su
 
 31yo Brazil
 
-[piabrota index](https://piabrota.art) - [marola index](https://github.com/marola-dev) - [my index](https://github.com/h0ffmann/h0ffmann/blob/main/llms.txt)
+[piabrota index](https://piabrota.art) - [marola index](https://github.com/marola-dev) - [my index](./llms.txt)
