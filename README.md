@@ -2,7 +2,7 @@
 
 <p align="center"><i>And what is good, Phaedrus,<br/>And what is not good—<br/>Need we ask anyone to tell us these things?</i></p>
 
-<p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of <del>Motorcycle</del> Maintenance</i> (1974), the epigraph on its opening page</sub></p>
+<p align="center"><sub>Robert M. Pirsig, <i>Zen and the Art of <del>Motorcycle</del> code Maintenance</i> (1974), the epigraph on its opening page</sub></p>
 
 **think**  <a href="https://github.com/marola-dev/marola/blob/main/PARTNERS.en.md"><img src="https://raw.githubusercontent.com/marola-dev/marola/a4c2af1b106a3ea50c3ae8783bcd91550f7d9377/docs/assets/sponsors/lnt-proud-partner.png" alt="marola-dev is a Leave No Trace Proud Partner" height="20"></a> [![piabrota.art author](https://img.shields.io/badge/piabrota-author-7c3aed?labelColor=11120f)](https://github.com/piabrota) [![marola author](https://img.shields.io/badge/marola--dev-author-7c3aed?labelColor=11120f)](https://github.com/marola-dev)  [![ww3-gpu author](https://img.shields.io/badge/ww3--gpu-author-7c3aed?labelColor=11120f)](https://github.com/h0ffmann/ww3-gpu) [![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/h0ffmann/badge.svg)](https://hub.xerj.org/contributors/h0ffmann)
 
