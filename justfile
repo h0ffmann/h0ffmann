@@ -25,6 +25,11 @@ _site:
       && cp -R ../media dist/
     @echo "site: site/dist"
 
+# The website (www/): www/content/*.md, one per language, into www/dist, which is committed
+# because CI is off. `just www --check` fails when www/dist is stale.
+www *args:
+    python3 www/build.py {{args}}
+
 nixb := "nix --extra-experimental-features 'nix-command flakes'"
 
 # The short CV in English (cv/summary.md, the look of the site) and the three long ones (the
