@@ -20,7 +20,6 @@
 **Staff Software Engineer & FDE** 31yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
-- [me](https://h0ffmann.github.io/h0ffmann/)
 - [wave.piabrota.art](https://wave.piabrota.art): Science, [>2k views](https://zenodo.org/records/24130909) on Zenodo, [fresh](https://aixiv.online/abs/2611.01104) on aiXiv
 - [piabrota home](https://piabrota.art): home
 - [room.piabrota.art](https://room.piabrota.art): a 3D room - three.js, 3d model, ambience. [idea](https://felixrieseberg.com)
