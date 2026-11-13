@@ -213,6 +213,13 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   fork, how I play" (direct interests, `site/static/topics.png`) and indirect interests
   (`site/static/fork-topics.png`), with `vendor/archify`. A row of repos.tsv keeps its topic; a
   new one gets its account's until it is set by hand.
+- `www/` – the new website (the owner, 13 November 2026): one short dark page, in the plain look
+  of hayyoth.org with the colours inverted, in four languages (en, pt-BR, ja, es) with a locale
+  switch in the foot. The content is Markdown, `www/content/<lang>.md`, one per language;
+  `www/build.py` (Python, no dependencies) writes `www/dist/` (`just www`), and `www/dist/` is
+  committed because CI is off (`just www --check` says whether it is stale). It replaces `site/`
+  once piabrota/nix-os serves `www/dist/` instead of building the Gleam site; until then `site/`
+  stays as it is.
 - `notes/`, `journal/`, `NOTES.md` – the slip box, the journal, and their rules.
 - `REUSE.toml`, `LICENSES/` – licence and copyright for every file, with no header in any file.
 - `CITATION.cff` – **generated** from `.zenodo.json` by `scripts/citation.py`. Never edit it.
