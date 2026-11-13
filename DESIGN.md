@@ -7,7 +7,15 @@ that changes the look reads this page first, and changes this page in the same c
 All rights reserved, like the rest of this repository ([`REUSE.md`](REUSE.md)): these rules are
 for this profile and are not a kit for another one.
 
-## The site since 11 November 2026
+## The site since 13 November 2026
+
+The owner, 13 November 2026: the page of hayyoth.org, "just dark screen and white letters",
+with a pixel avatar top left; "no more gleam or js". The site is `www/`: black ground (`#000`),
+white text and links, a 650 px column, a centred header, a serif face, white rules, the
+locale switch in the foot. It wins over every section below for the site; the sections below
+still hold for the CV, the README's pictures and the `topic` column of the data.
+
+## The site from 11 to 13 November 2026 (removed)
 
 The owner, 11 November 2026: "in fact I want h0ffmann/h0ffmann to be minimal like this one
 https://exitnode.dev/ but with piabrota colors", and, of the choices put to him, "one short
@@ -107,7 +115,7 @@ A light may glow, like a tube of neon: a soft shadow of its own colour.
 - Mono is for data only. A sentence is never in mono.
 - **Two languages, one page.** Two small pills on the cover name the languages, each in its
   own language; the pressed one is white. The Portuguese keeps the lower case and the short
-  sentences. How a sentence is translated is in [`TRANSLATIONS.md`](TRANSLATIONS.md), not here.
+  sentences.
 
 ## Shapes
 

@@ -7,28 +7,19 @@ set shell := ["bash", "-euo", "pipefail", "-c"]
 default:
     @just --list
 
-# Build site/ into site/dist: the content from this repository's files (site/content), the
-# tests, the bundle and the first render.
-site:
-    nix develop --extra-experimental-features 'nix-command flakes' --no-update-lock-file .#site --command just _site
-
-_site:
-    # The page names workflows: each one must be a file in .github/workflows/.
-    for f in $(grep -oE '"[a-z]+\.yml"' site/src/h0ffmann_site/app.gleam | tr -d '"' | sort -u); do [ -f ".github/workflows/$f" ] || { echo "site: the page names $f, which is not a workflow" >&2; exit 1; }; done
-    cd site/content && gleam format --check src test && gleam test && gleam run --no-print-progress
-    cd site && gleam format src/h0ffmann_site/content.gleam && gleam format --check src test
-    cd site && gleam test
-    cd site && rm -rf dist && mkdir -p dist && gleam build \
-      && esbuild entry.mjs --bundle --minify --format=esm --outfile=dist/app.js --log-level=warning \
-      && gleam run -m h0ffmann_site/prerender --no-print-progress > dist/index.html \
-      && cp -R static/. dist/ \
-      && cp -R ../media dist/
-    @echo "site: site/dist"
-
 # The website (www/): www/content/*.md, one per language, into www/dist, which is committed
 # because CI is off. `just www --check` fails when www/dist is stale.
 www *args:
     python3 www/build.py {{args}}
+
+# The ASD-STE100 check (www/ste/Ste.agda, in Agda): the English page and llms.txt. Its proofs
+# are checked when it compiles. `just ste FILE...` checks other files.
+ste *files:
+    nix develop --extra-experimental-features 'nix-command flakes' --no-update-lock-file .#ste --command just _ste {{files}}
+
+_ste *files:
+    cd www/ste && LC_ALL=C.UTF-8 agda --compile --compile-dir=../../build/ste Ste.agda > /dev/null
+    LC_ALL=C.UTF-8 build/ste/Ste {{ if files == "" { "www/content/en.md llms.txt" } else { files } }}
 
 nixb := "nix --extra-experimental-features 'nix-command flakes'"
 
@@ -103,11 +94,6 @@ topics *args:
        node ../../scripts/topics-shot.mjs cloud.html "../../site/static/${d##*:}.png")
     done
 
-# The translations of the site: whole, current and marked (TRANSLATIONS.md).
-# `just translations --self-test` gives the check a bad table, which it must refuse.
-translations *args:
-    python3 scripts/translations-check.py {{args}}
-
 # Every logo of the timeline still answers at its owner's address. A logo is never a file here.
 logos:
     for u in $(grep -v '^#' site/data/timeline.tsv | cut -f6 | grep -E '^https://' | sort -u); do code="$(curl -s -o /dev/null -L --max-time 30 -A 'Mozilla/5.0' -w '%{http_code}' "$u")"; [ "$code" = 200 ] || { echo "logos: $code $u" >&2; exit 1; }; done
@@ -145,8 +131,6 @@ check:
     just citation --check
     just reuse
     python3 -m unittest discover -s cv
-    just translations --self-test
-    just translations
     just featured --check
     just linkedin --check
 

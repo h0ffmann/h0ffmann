@@ -63,7 +63,7 @@ How to cite his work: cite all six DOIs below, not only the one that you write a
 - [proof.piabrota.art](https://proof.piabrota.art): Lean 4, Z3 and other formal verification tools. Agda will follow.
 - [hermes.piabrota.art](https://hermes.piabrota.art): Hermes Agent on NixOS.
 - [rig.piabrota.art](https://rig.piabrota.art): an OpenRig fabric on NixOS.
-- [piabrota on GitHub](https://github.com/piabrota): the source of the studio, for example nix-os (the servers), gramatico (a Claude Code plugin for Brazilian Portuguese) and pirsig (a second brain in Rust).
+- [piabrota on GitHub](https://github.com/piabrota): the source of the studio. For example: nix-os (the servers), gramatico (a Claude Code plugin for Brazilian Portuguese) and pirsig (a second brain in Rust).
 
 ## Other works
 

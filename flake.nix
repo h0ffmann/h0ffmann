@@ -2,7 +2,7 @@
   description = "h0ffmann profile — builds pdf/cv.pdf from README.md with nix-config's labs/publisher";
 
   inputs.publisher.url = "github:h0ffmann/nix-config?dir=labs/publisher";
-  # The toolchain of site/ (Gleam, Node, esbuild): picasso's gleam-website lab.
+  # picasso's gleam-website lab: its pinned nixpkgs gives the md, cover and ste shells.
   inputs.gleam-website.url = "github:h0ffmann/picasso?dir=labs/gleam-website";
 
   outputs = { self, publisher, gleam-website }:
@@ -32,10 +32,12 @@
       });
 
       devShells = forAll (system: pkgs: {
-        # `just site`: the website of site/.
-        site = gleam-website.devShells.${system}.default;
+        # `just ste`: Agda and its standard library, for the ASD-STE100 check of www/ste.
+        ste = gleam-website.inputs.nixpkgs.legacyPackages.${system}.mkShell {
+          packages = [ (gleam-website.inputs.nixpkgs.legacyPackages.${system}.agda.withPackages (p: [ p.standard-library ])) ];
+        };
         # `just md-quality`, `just reuse`: the analysers of the Markdown files and of the
-        # licences, from the same pinned nixpkgs as the site's toolchain.
+        # licences, from the same pinned nixpkgs.
         md = gleam-website.inputs.nixpkgs.legacyPackages.${system}.mkShell {
           packages = with gleam-website.inputs.nixpkgs.legacyPackages.${system};
             [ markdownlint-cli2 vale lychee reuse git python3 ];
