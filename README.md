@@ -42,4 +42,4 @@
 - \[UK\] 2025: [TV](https://www.itv.com) audience forecasts for 4 channels, indirect contract. AWS: SageMaker, MWAA, S3, Lambda and Step Functions
 - \[UK\] 2026: I redesigned, with DS Lead, all 34 long-term models (2 channels × 17 demographics) as heuristic rules. I took them to production on AWS (SageMaker, MLflow). I resigned on early September 2026
 
-mhoffmannfs [at] gmail (.com)
+open2real-work mhoffmannfs [at] gmail (.com)
