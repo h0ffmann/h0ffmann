@@ -200,6 +200,11 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
   `www/build.py` (Python, no dependencies) writes `www/dist/`, with a copy of `llms.txt` that every page links and the files of `www/static/` (the owner's pixel avatar, top left; given by the owner on 13 November 2026) (`just www`), and `www/dist/` is
   committed because CI is off (`just www --check` says whether it is stale); `.github/workflows/site.yml`, started by hand, publishes it to GitHub Pages. piabrota/nix-os serves the
   same files at hffmnn.piabrota.art once its `hffmnn-site/` builds `www/`.
+  The published posts of `posts/` go on the site too, in English: `www/build.py` renders each
+  post without `status: draft` in its front matter into `www/dist/posts/<slug>/`, in the look of
+  the pages, and lists them at the foot of every language page, newest first
+  (`just post-list` lists all posts with their status). A draft leaves the site when it gets
+  `status: draft`, and comes back when it leaves.
 - `notes/`, `journal/`, `NOTES.md` – the slip box, the journal, and their rules.
 - `REUSE.toml`, `LICENSES/` – licence and copyright for every file, with no header in any file.
 - `CITATION.cff` – **generated** from `.zenodo.json` by `scripts/citation.py`. Never edit it.
