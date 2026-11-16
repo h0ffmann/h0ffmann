@@ -12,3 +12,10 @@ cover/target/
 
 # What Agda writes beside www/ste/Ste.agda.
 www/ste/_build/
+
+# Editor swap and backup files
+*.swp
+*.swo
+*.swn
+*.bak
+*~

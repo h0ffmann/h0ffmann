@@ -134,3 +134,29 @@ check:
     just featured --check
     just linkedin --check
 
+
+# === Post harness (DSH + OMP + Pi) =========================================
+
+# Create a new post scaffold
+post-new slug:
+    ./scripts/post-harness.sh new "{{slug}}"
+
+# Open a post in the editor with the harness active
+post-draft file:
+    ./scripts/post-harness.sh draft "{{file}}"
+
+# Run all checks: STE + snippets + links
+post-check file:
+    ./scripts/post-harness.sh check "{{file}}"
+
+# Mark the post as ready and list publish targets
+post-publish file:
+    ./scripts/post-harness.sh publish "{{file}}"
+
+# List all posts with status
+post-list:
+    ./scripts/post-harness.sh list
+
+# Full pipeline: check, then mark ready
+post-ready file: (post-check file)
+    ./scripts/post-harness.sh publish "{{file}}"
