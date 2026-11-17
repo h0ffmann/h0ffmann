@@ -28,7 +28,8 @@
 - [metrics.piabrota.art](https://metrics.piabrota.art): homelab numbers - vcpu / ram
 - [grid.piabrota.art](https://grid.piabrota.art): unstructured grids of the Brazilian coast - wind/temp now, swell later
 - [skills.piabrota.art](https://skills.piabrota.art): my skill collection - DYOR
-- [hermes.piabrota.art](https://skills.piabrota.art): Private Hermes enterprise instance
+- [hermes.piabrota.art](https://skills.piabrota.art): Private Hermes Agent (FOSS) instance
+- [rig.piabrota.art](https://rig.piabrota.art): Private OpenRig (FOSS) instance
 - Partnerships or white-label requests: whitelabel [at] piabrota.art
 
 **Technical skills and background**
