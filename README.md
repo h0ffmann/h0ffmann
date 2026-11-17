@@ -9,7 +9,7 @@
 **write** 
 - wave + math + physics [![aiXiv 2611.01104](https://img.shields.io/badge/aiXiv-2611.01104-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01104) - feat. Federal Univ. of Santa Catarina and [Ph.D](https://orcid.org/0000-0002-1686-4722) P.V. Guimaraes
 - math + DS + Lean4/Z3/Agda[![aiXiv 2611.01105](https://img.shields.io/badge/aiXiv-2611.01105-7c3aed?labelColor=11120f)](https://aixiv.online/abs/2611.01105) - decision algos, a/b tests generalization, pprint arXiv soon, [repo](https://github.com/h0ffmann/proof/tree/main/contextual-bandits)
-- open & clean water [![DOI marola](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23224155) - 6 BR authors in 2 countries
+- open + clean + science water [![DOI marola](https://img.shields.io/badge/marola-10.5281%2Fzenodo.23224155-7c3aed?labelColor=11120f)](https://doi.org/10.5281/zenodo.23224155) - 6 BR authors in 2 countries
 - open-science [![closed.piabrota.art, release planned for January 2027](https://img.shields.io/badge/closed.piabrota.art-jan%2F2027-7c3aed?labelColor=11120f)](https://closed.piabrota.art)
 - follow [![Substack hoffmagic](https://img.shields.io/badge/substack-hoffmagic-7c3aed?labelColor=11120f)](https://hoffmagic.substack.com)
 - [no AI, personal, wip](https://hffmnn.piabrota.art/)
