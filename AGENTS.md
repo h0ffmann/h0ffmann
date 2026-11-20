@@ -301,6 +301,9 @@ a README edit, a CV-tooling edit or a change to the metrics workflow.
 ## Git conventions
 
 - Work on a branch and open a PR; do not push straight to `main`.
+- **Hard rule: English only in pull requests.** A PR title, a PR description and every commit
+  message are in English, even when the request is in Portuguese. The README mirrors still change
+  in their own languages. The owner, 3 November 2026.
 - Commits made by the metrics bot carry `[Skip GitHub Action]`. Leave that
   suffix off human commits; it exists so the bot's own pushes do not retrigger
   the workflow.
