@@ -19,7 +19,7 @@
 
 **have fun** ![PADI diver: 5 courses](https://img.shields.io/badge/PADI%20diver-5%20courses-0B5FA5?labelColor=11120f) ![water marathons: 2](https://img.shields.io/badge/water%20marathons-2-0B5FA5?labelColor=11120f)
 
-** Staff Software Eng. / Sr. MLE ** 31yo
+**Staff Software Eng. / Sr. MLE** 32yo
 
 **Piabrota AI Studio (self-employed, since October 2026)**
 - [wave.piabrota.art](https://wave.piabrota.art): wave forecast in GPUs, [>3k views](https://zenodo.org/records/24130909) on Zenodo, [fresh](https://aixiv.online/abs/2611.01104) on aiXiv
